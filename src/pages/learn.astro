@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'en';
+const tr = t(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={tr.learn.title}
+  description={tr.learn.intro}
+  navCurrent="learn"
+>
+  <h1 class="page-title">{tr.learn.title}</h1>
+  <p class="page-intro">{tr.learn.intro}</p>
+  <ol class="steps">
+    <li>
+      <strong>{tr.learn.step1Title}</strong>
+      <span>{tr.learn.step1Body}</span>
+    </li>
+    <li>
+      <strong>{tr.learn.step2Title}</strong>
+      <span>{tr.learn.step2Body}</span>
+    </li>
+    <li>
+      <strong>{tr.learn.step3Title}</strong>
+      <span>{tr.learn.step3Body}</span>
+    </li>
+  </ol>
+</BaseLayout>

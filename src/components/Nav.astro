@@ -1,0 +1,27 @@
+---
+import type { Locale } from '@/i18n/translations';
+import { t } from '@/i18n/translations';
+import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
+
+interface Props {
+  locale: Locale;
+  current?: 'home' | 'learn' | 'resources';
+}
+
+const { locale, current = 'home' } = Astro.props;
+const tr = t(locale);
+const base = import.meta.env.BASE_URL;
+const prefix = locale === 'zh' ? `${base}zh/` : base;
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={prefix}>{tr.siteName}</a>
+    <nav class="main-nav" aria-label={tr.lang.label}>
+      <a href={prefix} aria-current={current === 'home' ? 'page' : undefined}>{tr.nav.home}</a>
+      <a href={`${prefix}learn`} aria-current={current === 'learn' ? 'page' : undefined}>{tr.nav.learn}</a>
+      <a href={`${prefix}resources`} aria-current={current === 'resources' ? 'page' : undefined}>{tr.nav.resources}</a>
+      <LanguageSwitcher locale={locale} />
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'en';
+const tr = t(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  title={tr.home.title}
+  description={tr.home.subtitle}
+  navCurrent="home"
+>
+  <section class="hero">
+    <h1>{tr.home.title}</h1>
+    <p class="lead">{tr.home.subtitle}</p>
+    <div class="actions">
+      <a class="btn btn-primary" href={`${import.meta.env.BASE_URL}learn`}>{tr.home.ctaLearn}</a>
+      <a class="btn btn-secondary" href={`${import.meta.env.BASE_URL}resources`}>{tr.home.ctaResources}</a>
+    </div>
+  </section>
+  <div class="cards">
+    <article class="card">
+      <h2>{tr.home.cardWhatTitle}</h2>
+      <p>{tr.home.cardWhatBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardWhoTitle}</h2>
+      <p>{tr.home.cardWhoBody}</p>
+    </article>
+  </div>
+</BaseLayout>

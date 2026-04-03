@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'zh';
+const tr = t(locale);
+
+const links = [
+  { href: 'https://canton.network/', label: tr.resources.cantonSite },
+  { href: 'https://docs.daml.com/', label: tr.resources.damlDocs },
+  {
+    href: 'https://www.canton.foundation/',
+    label: tr.resources.foundation,
+  },
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={tr.resources.title}
+  description={tr.resources.intro}
+  navCurrent="resources"
+>
+  <h1 class="page-title">{tr.resources.title}</h1>
+  <p class="page-intro">{tr.resources.intro}</p>
+  <ul class="resource-list">
+    {
+      links.map(({ href, label }) => (
+        <li>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
