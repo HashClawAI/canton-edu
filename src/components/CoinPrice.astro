@@ -1,0 +1,109 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = 'Canton Coin (CC)' } = Astro.props;
+---
+
+<div class="coin-ticker" id="cc-ticker">
+  <span class="coin-label">{label}</span>
+  <span class="coin-price" id="cc-price">--</span>
+  <span class="coin-change" id="cc-change"></span>
+  <span class="coin-extra" id="cc-extra"></span>
+</div>
+
+<script>
+  const API =
+    'https://api.coingecko.com/api/v3/simple/price?ids=canton-network&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true';
+
+  async function fetchPrice() {
+    try {
+      const res = await fetch(API);
+      if (!res.ok) return;
+      const data = await res.json();
+      const cc = data['canton-network'];
+      if (!cc) return;
+
+      const priceEl = document.getElementById('cc-price');
+      const changeEl = document.getElementById('cc-change');
+      const extraEl = document.getElementById('cc-extra');
+      if (!priceEl || !changeEl || !extraEl) return;
+
+      const price = cc.usd;
+      const change = cc.usd_24h_change;
+      const mcap = cc.usd_market_cap;
+      const vol = cc.usd_24h_vol;
+
+      priceEl.textContent = `$${price.toFixed(4)}`;
+
+      if (change !== undefined && change !== null) {
+        const sign = change >= 0 ? '+' : '';
+        changeEl.textContent = `${sign}${change.toFixed(2)}%`;
+        changeEl.classList.add(change >= 0 ? 'up' : 'down');
+      }
+
+      const parts: string[] = [];
+      if (mcap) parts.push(`MCap $${fmt(mcap)}`);
+      if (vol) parts.push(`Vol $${fmt(vol)}`);
+      if (parts.length) extraEl.textContent = parts.join(' · ');
+    } catch {
+      /* silent — ticker stays as "--" */
+    }
+  }
+
+  function fmt(n: number): string {
+    if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+    if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+    return n.toFixed(0);
+  }
+
+  fetchPrice();
+  setInterval(fetchPrice, 60_000);
+</script>
+
+<style>
+  .coin-ticker {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.55rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .coin-label {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .coin-price {
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .coin-change {
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .coin-change.up {
+    color: #4ade80;
+  }
+
+  .coin-change.down {
+    color: #f87171;
+  }
+
+  .coin-extra {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+</style>
