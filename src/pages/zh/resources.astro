@@ -29,6 +29,67 @@ const tr = t(locale);
   </section>
 
   <section class="section">
+    <h2>{tr.resources.forumsTitle}</h2>
+    <div class="cards">
+      {tr.resources.forums.map(({ name, desc, url }) => (
+        <article class="card">
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.channelsTitle}</h2>
+    <p class="page-intro">{tr.resources.channelsIntro}</p>
+    <ul class="resource-list">
+      {tr.resources.channels.map(({ name, desc, url }) => (
+        <li>
+          <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+          {' — '}
+          <span class="inline-muted">{desc}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.newslettersTitle}</h2>
+    <p class="page-intro">{tr.resources.newslettersIntro}</p>
+    <div class="cards">
+      {tr.resources.newsletters.map(({ name, desc, url }) => (
+        <article class="card">
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.podcastTitle}</h2>
+    <ul class="resource-list">
+      {tr.resources.podcasts.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.githubTitle}</h2>
+    <ul class="resource-list">
+      {tr.resources.githubRepos.map(({ name, desc, url }) => (
+        <li>
+          <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+          {' — '}
+          <span class="inline-muted">{desc}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
     <h2>{tr.resources.marketTitle}</h2>
     <ul class="resource-list">
       {tr.resources.market.map(({ name, url }) => (

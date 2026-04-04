@@ -19,6 +19,56 @@ const tr = t(locale);
   </section>
 
   <section class="section">
+    <h2>{tr.community.telegramTitle}</h2>
+    <p class="page-intro">{tr.community.telegramIntro}</p>
+    <ul class="resource-list">
+      {tr.community.telegramGroups.map(({ name, desc, url }) => (
+        <li>
+          <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+          {' — '}
+          <span class="inline-muted">{desc}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.forumsTitle}</h2>
+    <p class="page-intro">{tr.community.forumsIntro}</p>
+    <div class="cards">
+      {tr.community.forums.map(({ name, desc, url }) => (
+        <article class="card">
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.newslettersTitle}</h2>
+    <p class="page-intro">{tr.community.newslettersIntro}</p>
+    <div class="cards">
+      {tr.community.newsletters.map(({ name, desc, url }) => (
+        <article class="card">
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.podcastPlatformsTitle}</h2>
+    <p class="page-intro">{tr.community.podcastPlatformsIntro}</p>
+    <ul class="resource-list">
+      {tr.community.podcastPlatforms.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
     <h2>{tr.community.twitterTitle}</h2>
     <div class="cards cards-3">
       {tr.community.twitterAccounts.map(({ name, desc, url }) => (
