@@ -264,6 +264,19 @@ main {
   }
 }
 
+/* 3-column card grid for community twitter */
+@media (min-width: 560px) {
+  .cards-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Card h3 for ecosystem / community */
 .card h3 {
   margin: 0 0 0.35rem;

@@ -20,10 +20,10 @@ const tr = t(locale);
 
   <section class="section">
     <h2>{tr.community.twitterTitle}</h2>
-    <div class="cards">
-      {tr.community.twitterAccounts.map(({ name, desc }) => (
+    <div class="cards cards-3">
+      {tr.community.twitterAccounts.map(({ name, desc, url }) => (
         <article class="card">
-          <h3><a href={`https://x.com/${name.replace('@', '')}`} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
           <p>{desc}</p>
         </article>
       ))}
