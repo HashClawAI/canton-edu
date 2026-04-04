@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'zh';
+const tr = t(locale);
+---
+
+<BaseLayout locale={locale} title={tr.news.title} description={tr.news.intro} navCurrent="news">
+  <h1 class="page-title">{tr.news.title}</h1>
+  <p class="page-intro">{tr.news.intro}</p>
+  <p class="last-updated">{tr.news.lastUpdated}</p>
+
+  <section class="timeline">
+    {tr.news.items.map(({ date, tag, title, body, url }) => (
+      <article class="timeline-item">
+        <div class="timeline-meta">
+          <time>{date}</time>
+          <span class="news-tag">{tag}</span>
+        </div>
+        <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{title}</a> : title}</h3>
+        <p>{body}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="section">
+    <h2>{tr.news.cipWatchTitle}</h2>
+    <div class="topic-list">
+      {tr.news.cipWatchItems.map(({ id, title, status, summary }) => (
+        <article class="topic-item">
+          <h3>
+            <a href={`https://github.com/canton-foundation/cips/blob/main/${id.toLowerCase().replace('-', '-')}`} target="_blank" rel="noopener noreferrer">
+              {id}
+            </a>
+            {' — '}{title}
+          </h3>
+          <p><span class="status">{status}</span> · {summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

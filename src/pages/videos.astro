@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'en';
+const tr = t(locale);
+---
+
+<BaseLayout locale={locale} title={tr.videos.title} description={tr.videos.intro} navCurrent="videos">
+  <h1 class="page-title">{tr.videos.title}</h1>
+  <p class="page-intro">{tr.videos.intro}</p>
+
+  <section class="section">
+    <h2>{tr.videos.interviewsTitle}</h2>
+    <div class="video-grid">
+      {tr.videos.interviews.map(({ title, channel, date, duration, summary, youtubeId }) => (
+        <article class="video-card">
+          <a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer" class="video-thumb">
+            <img src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`} alt={title} loading="lazy" />
+            <span class="play-icon">▶</span>
+          </a>
+          <div class="video-info">
+            <h3><a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer">{title}</a></h3>
+            <div class="video-meta">{channel} · {date}{duration ? ` · ${duration}` : ''}</div>
+            <p>{summary}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.videos.podcastTitle}</h2>
+    <p class="page-intro">{tr.videos.podcastIntro}</p>
+    <p><a href={tr.videos.podcastSite} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Podcast site ↗</a></p>
+    <div class="video-grid">
+      {tr.videos.episodes.map(({ ep, title, youtubeId }) => (
+        <article class="video-card compact">
+          <a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer" class="video-thumb">
+            <img src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`} alt={`${ep}: ${title}`} loading="lazy" />
+            <span class="play-icon">▶</span>
+          </a>
+          <div class="video-info">
+            <h3><a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer">{ep}: {title}</a></h3>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
