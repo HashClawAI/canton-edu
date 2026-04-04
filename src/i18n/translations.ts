@@ -71,10 +71,13 @@ export const translations = {
         { name: 'Cypherock', desc: 'Hardware wallet' },
         { name: 'Ledger', desc: 'Hardware wallet' },
       ],
-      dexTitle: 'Trading & DeFi',
+      dexTitle: 'Trading, DeFi & lending',
       dexes: [
         { name: 'CantonSwap', desc: 'Atomic multi-currency swaps for CIP-56 tokens', url: 'https://www.canton.network/ecosystem/cantonswap' },
         { name: 'Cantex', desc: 'Native DEX with AMM pools and CLOB', url: '' },
+        { name: 'ACME', desc: 'Overcollateralized lending & instant yield', url: 'https://acmemarkets.cc/' },
+        { name: 'Alpend', desc: 'Private money markets — lending, borrowing, yield', url: 'https://alpend.com/' },
+        { name: 'HydrAX', desc: 'Liquidity infrastructure with cross-protocol routing', url: '' },
       ],
       infraTitle: 'Infrastructure & dev tools',
       infra: [
@@ -83,6 +86,16 @@ export const translations = {
         { name: 'LayerZero', desc: 'Omnichain interoperability — 165+ chain bridges' },
         { name: 'Chainlink', desc: 'Oracle and data feeds' },
         { name: 'AppsFactory', desc: 'Developer gateway for Canton apps' },
+      ],
+      namingTitle: 'Naming & identity',
+      naming: [
+        { name: 'CC Tag', desc: 'Human-readable Canton names — $1/month', url: 'https://cctag.io/' },
+        { name: 'XNS (Axymos)', desc: 'Reserve and verify .canton names', url: 'https://xns.axymos.com/' },
+      ],
+      earnTitle: 'Earn & rewards',
+      earn: [
+        { name: 'CantonEarn', desc: 'Hub to earn CC via wallets, trading, and DeFi', url: 'https://www.cantonearn.network/' },
+        { name: 'Pulsar', desc: 'CC price prediction game by Console Wallet', url: 'https://pulsar.consolewallet.io/' },
       ],
       institutionalTitle: 'Institutional projects',
       institutional: [
@@ -199,13 +212,6 @@ export const translations = {
           url: '',
         },
         {
-          date: '2026-02-19',
-          tag: 'Governance',
-          title: 'Canton Foundation launches Protocol Development Fund',
-          body: 'CIP-0082 establishes a 5% development fund from network rewards, governed by the Canton Foundation.',
-          url: 'https://canton.foundation/canton-foundation-launches-protocol-development-fund/',
-        },
-        {
           date: '2026-02-12',
           tag: 'Ecosystem',
           title: 'OKX lists Canton Coin (CC/USDT)',
@@ -240,6 +246,14 @@ export const translations = {
           duration: '37 min',
           summary: 'How Canton moves hundreds of billions onchain — tokenized treasuries, Broadridge repo, JPMorgan, DTCC, and token economics.',
           youtubeId: 'b_vc9SgQGZo',
+        },
+        {
+          title: 'Why Goldman Sachs and DTCC Chose Canton Over Everything Else',
+          channel: 'DHN Crypto',
+          date: '2026',
+          duration: '29 min',
+          summary: 'Goldman Sachs $135M investment, sub-transaction privacy, DAML composability, and why DTCC picked Canton for Treasury tokenization.',
+          youtubeId: '2TO78xsJDIs',
         },
         {
           title: 'Did L2s Fragment Ethereum?',
@@ -298,21 +312,6 @@ export const translations = {
         { name: 'Canton Network Forum', desc: 'Official forum — validators, apps, integrations', url: 'https://forum.canton.network/' },
         { name: 'Daml Developers (discuss.daml.com)', desc: 'Daml & Canton — PQS, Canton 3, Ledger API', url: 'https://discuss.daml.com/' },
       ],
-      newslettersTitle: 'Newsletters, blog & email',
-      newslettersIntro: 'No single mandatory list — follow official sites. See Resources for RSS, Substack examples, and developer Slack requests.',
-      newsletters: [
-        { name: 'Canton Network blog', desc: 'Insights & announcements; RSS-friendly for many readers', url: 'https://www.canton.network/blog' },
-        { name: 'Join the Canton Foundation', desc: 'Membership & programs', url: 'https://canton.foundation/join-the-foundation/' },
-        { name: 'Developer Slack (request access)', desc: 'Ecosystem docs reference app-dev Slack; contact operations@sync.global where offered', url: 'https://sync.global/' },
-        { name: 'Ecosystem Substack (example)', desc: 'Cantor8 newsletter — search Substack for more Canton teams', url: 'https://cantor8.substack.com/' },
-      ],
-      podcastPlatformsTitle: 'Podcasts (audio apps)',
-      podcastPlatformsIntro: 'Quadrillions also appears on Blockworks Empire in podcast players.',
-      podcastPlatforms: [
-        { name: 'Quadrillions — official site', url: 'https://quadrillionspod.com/' },
-        { name: 'Apple Podcasts — Empire', url: 'https://podcasts.apple.com/us/podcast/empire/id1554930038' },
-        { name: 'Blockworks — Empire hub', url: 'https://blockworks.co/podcast/empire' },
-      ],
       twitterTitle: 'X / Twitter',
       twitterAccounts: [
         { name: '@CantonNetwork', desc: 'Official Canton Network — 96K+ followers', url: 'https://x.com/CantonNetwork' },
@@ -338,21 +337,12 @@ export const translations = {
       governanceTitle: 'Governance',
       governanceBody: 'On-chain governance happens through CIP votes among Super Validators. Off-chain discussion starts on Discord and the CIP GitHub repo.',
       governanceLinks: [
-        { name: 'CIP GitHub Repository', url: 'https://github.com/canton-foundation/cips' },
-        { name: 'Canton Network Forum', url: 'https://forum.canton.network/' },
         { name: 'Canton Foundation membership', url: 'https://canton.foundation/membership/' },
       ],
       devFundTitle: 'Protocol Development Fund',
       devFundBody: 'Established via CIP-0082, the fund is open to external builders. Three paths: committee-led proposals, open community proposals (with a sponsor), or targeted RFPs. Evaluated on merit and network alignment.',
       devFundUrl: 'https://canton.foundation/canton-foundation-launches-protocol-development-fund/',
-      hotTopicsTitle: 'Recent discussions',
-      hotTopics: [
-        { title: 'CIP-0105 — SV Locking Framework', desc: 'Voluntary reward locking with 365-day vesting to prove long-term commitment. Approved March 2026.' },
-        { title: 'CIP-0107 — 24h Submission Delay', desc: 'Safety mechanism for end-user CC transactions. Under implementation.' },
-        { title: 'CIP-0111 — Reducing SV Weight', desc: 'Process for decreasing a Super Validator\'s weight. Currently Proposed.' },
-        { title: 'Protocol Development Fund applications', desc: 'Open call for proposals — anyone can apply with a sponsor.' },
-        { title: 'ERC-20 Middleware (CIP-0086)', desc: 'Bringing EVM compatibility to Canton for broader developer access.' },
-      ],
+      seeNewsNote: 'For CIP discussions and latest developments, see the News page.',
       wikiTitle: 'Community resources',
       wikiLinks: [
         { name: 'Canton Wiki', url: 'https://canton.wiki/', desc: 'Community-maintained knowledge base' },
@@ -371,6 +361,8 @@ export const translations = {
         { name: 'Canton Foundation — Apps & Ecosystem', url: 'https://canton.foundation/canton-apps/' },
         { name: 'Global Synchronizer / sync.global', url: 'https://sync.global/' },
         { name: 'Canton Network Roadmap (community wiki)', url: 'https://canton.wiki/learn/canton-network-roadmap' },
+        { name: 'Canton Network Whitepapers', url: 'https://www.canton.network/whitepapers' },
+        { name: 'Canton Network — Wikipedia', url: 'https://en.wikipedia.org/wiki/Canton_Network' },
       ],
       devTitle: 'Developer documentation & hubs',
       dev: [
@@ -378,7 +370,6 @@ export const translations = {
         { name: 'Splice docs (Global Synchronizer app dev)', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice & ops — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
         { name: 'Digital Asset — Canton / Daml build docs', url: 'https://docs.digitalasset.com/build/' },
-        { name: 'CIP GitHub repository', url: 'https://github.com/canton-foundation/cips' },
         { name: 'Hyperledger Splice (GitHub)', url: 'https://github.com/hyperledger-labs/splice' },
         { name: 'Digital Asset — Canton (GitHub)', url: 'https://github.com/digital-asset/canton' },
         { name: 'Canton Wallet Demo (community)', url: 'https://github.com/stablecoinxyz/canton-wallet-demo' },
@@ -389,7 +380,7 @@ export const translations = {
         { name: 'discuss.daml.com', desc: 'Daml Developers Community — Canton 3, PQS, Ledger API, compatibility threads', url: 'https://discuss.daml.com/' },
       ],
       channelsTitle: 'Real-time chat',
-      channelsIntro: 'Same rules apply: verify links in official bios before trusting DMs or “support”.',
+      channelsIntro: 'Same rules apply: verify links in official bios before trusting DMs or "support".',
       channels: [
         { name: 'Discord — Canton Network', desc: 'Primary real-time hub', url: 'https://discord.gg/canton' },
         { name: 'Telegram — @CantonNetworkOfficialtg', desc: 'High-traffic channel', url: 'https://t.me/CantonNetworkOfficialtg' },
@@ -422,6 +413,7 @@ export const translations = {
         { name: 'CC on CoinGecko', url: 'https://www.coingecko.com/en/coins/canton' },
         { name: 'CC on CoinMarketCap', url: 'https://coinmarketcap.com/currencies/canton/' },
         { name: 'The Tie — Canton Dashboard', url: 'https://canton.thetie.io/' },
+        { name: 'CoinCarp — Canton socials & data', url: 'https://www.coincarp.com/currencies/canton-network/' },
       ],
       exchangeTitle: 'Exchanges (CC trading)',
       exchanges: [
@@ -432,6 +424,7 @@ export const translations = {
         { name: 'MEXC', pairs: 'CC/USDT' },
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
+        { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
       ],
     },
     lang: {
@@ -505,10 +498,13 @@ export const translations = {
         { name: 'Cypherock', desc: '硬件钱包' },
         { name: 'Ledger', desc: '硬件钱包' },
       ],
-      dexTitle: '交易与 DeFi',
+      dexTitle: '交易、DeFi 与借贷',
       dexes: [
         { name: 'CantonSwap', desc: '原子多币种兑换，支持所有 CIP-56 代币', url: 'https://www.canton.network/ecosystem/cantonswap' },
         { name: 'Cantex', desc: '原生 DEX，含 AMM 池和中央限价订单簿', url: '' },
+        { name: 'ACME', desc: '超额抵押借贷与即时收益', url: 'https://acmemarkets.cc/' },
+        { name: 'Alpend', desc: '隐私货币市场——借贷与收益', url: 'https://alpend.com/' },
+        { name: 'HydrAX', desc: '流动性基础设施与跨协议路由', url: '' },
       ],
       infraTitle: '基础设施与开发工具',
       infra: [
@@ -517,6 +513,16 @@ export const translations = {
         { name: 'LayerZero', desc: '全链互操作性——165+ 条链桥接' },
         { name: 'Chainlink', desc: '预言机与数据源' },
         { name: 'AppsFactory', desc: 'Canton 应用开发入口' },
+      ],
+      namingTitle: '命名与身份',
+      naming: [
+        { name: 'CC Tag', desc: '可读 Canton 名称——$1/月', url: 'https://cctag.io/' },
+        { name: 'XNS (Axymos)', desc: '预留与验证 .canton 名称', url: 'https://xns.axymos.com/' },
+      ],
+      earnTitle: '赚取与奖励',
+      earn: [
+        { name: 'CantonEarn', desc: '通过钱包、交易和 DeFi 赚取 CC 的入口', url: 'https://www.cantonearn.network/' },
+        { name: 'Pulsar', desc: 'Console Wallet 出品的 CC 价格预测游戏', url: 'https://pulsar.consolewallet.io/' },
       ],
       institutionalTitle: '机构项目',
       institutional: [
@@ -590,7 +596,6 @@ export const translations = {
         { date: '2026-03-23', tag: '治理', title: 'Visa 获批成为超级验证者（权重 10）', body: 'CIP-0109 通过——Visa 以最高权重加入 Canton 超级验证者，这是其首个正式区块链治理角色。', url: 'https://coincentral.com/visa-wins-canton-super-validator-status-after-first-onchain-governance-proposal/' },
         { date: '2026-03-14', tag: 'CIP', title: 'CIP-0105 通过——SV 锁仓框架', body: '自愿锁定 SV 奖励，365 天线性释放。三档：70%/45%/35% 锁仓对应 100%/60%/40% 权重。9 票赞成，4 票弃权。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0105/cip-0105.md' },
         { date: '2026-03', tag: '生态', title: 'LayerZero 集成上线', body: 'Canton 成为首个集成 LayerZero 全链互操作性的机构级区块链——代币化资产可在 165+ 条公链之间流通。', url: '' },
-        { date: '2026-02-19', tag: '治理', title: 'Canton Foundation 设立协议发展基金', body: 'CIP-0082 从网络奖励中拨出 5% 建立发展基金，由 Canton Foundation 管理。', url: 'https://canton.foundation/canton-foundation-launches-protocol-development-fund/' },
         { date: '2026-02-12', tag: '生态', title: 'OKX 上线 Canton Coin（CC/USDT）', body: 'CC/USDT 现货交易在全球头部交易所 OKX 开放。', url: 'https://www.okx.com/help/okx-to-list-cc-canton-for-spot-trading' },
         { date: '2025-12-17', tag: '机构', title: 'DTCC 宣布在 Canton 上代币化美国国债', body: 'DTCC 将通过 ComposerX 在 Canton Network 上代币化美国国债。MVP 计划 2026 上半年。SEC 于 12 月 11 日发出无异议函。', url: 'https://canton.wiki/dtcc-canton-network' },
       ],
@@ -608,6 +613,7 @@ export const translations = {
       interviewsTitle: 'Yuval Rooz 采访（Digital Asset CEO）',
       interviews: [
         { title: 'Canton 能否成为全球最大的区块链？', channel: 'Milk Road', date: '2026 年 2 月', duration: '37 分钟', summary: 'Canton 如何将数千亿美元搬上链——代币化国债、Broadridge 回购、JPMorgan、DTCC、代币经济。', youtubeId: 'b_vc9SgQGZo' },
+        { title: '为什么 Goldman Sachs 和 DTCC 选择了 Canton', channel: 'DHN Crypto', date: '2026', duration: '29 分钟', summary: 'Goldman Sachs 1.35 亿美元投资、子交易隐私、DAML 可组合性，以及 DTCC 为何选择 Canton 做国债代币化。', youtubeId: '2TO78xsJDIs' },
         { title: 'L2 是否割裂了以太坊？', channel: 'The Defiant', date: '2026 年 2 月', duration: '51 分钟', summary: '网络的网络架构、隐私 vs. 匿名、可组合性、DTCC 代币化。', youtubeId: 'o7Pb91nmmQg' },
         { title: 'Canton 的隐私区块链是游戏规则改变者', channel: 'Thinking Crypto', date: '2025 年 9 月', duration: '56 分钟', summary: '面向机构的隐私设计、1.35 亿美元融资、资产代币化、7×24 市场。', youtubeId: '7i8T-qo3EcU' },
         { title: '为什么隐私是机构区块链的关键', channel: 'Inside Canton Network', date: '2025', duration: '', summary: '深入探讨为什么隐私是机构采用区块链的缺失一环。', youtubeId: '32IvuhZpjk4' },
@@ -644,21 +650,6 @@ export const translations = {
         { name: 'Canton Network Forum', desc: '官方论坛——验证者、应用、集成', url: 'https://forum.canton.network/' },
         { name: 'Daml 开发者社区（discuss.daml.com）', desc: 'Daml 与 Canton——PQS、Canton 3、Ledger API', url: 'https://discuss.daml.com/' },
       ],
-      newslettersTitle: '通讯、博客与邮件',
-      newslettersIntro: '没有唯一「官方邮件列表」——以官网订阅与资源页为准。',
-      newsletters: [
-        { name: 'Canton Network 博客', desc: '观点与公告；可用 RSS 阅读器订阅（若站点提供 feed）', url: 'https://www.canton.network/blog' },
-        { name: '加入 Canton Foundation', desc: '会员与项目入口', url: 'https://canton.foundation/join-the-foundation/' },
-        { name: '开发者 Slack（申请加入）', desc: '生态文档提及应用开发 Slack；可向 operations@sync.global 咨询', url: 'https://sync.global/' },
-        { name: '生态 Substack 示例', desc: 'Cantor8 等团队的通讯——可在 Substack 搜索更多 Canton 项目', url: 'https://cantor8.substack.com/' },
-      ],
-      podcastPlatformsTitle: '播客（音频平台）',
-      podcastPlatformsIntro: 'Quadrillions 亦在 Blockworks Empire 播客源中更新。',
-      podcastPlatforms: [
-        { name: 'Quadrillions 官网', url: 'https://quadrillionspod.com/' },
-        { name: 'Apple Podcasts — Empire', url: 'https://podcasts.apple.com/us/podcast/empire/id1554930038' },
-        { name: 'Blockworks — Empire 专题页', url: 'https://blockworks.co/podcast/empire' },
-      ],
       twitterTitle: 'X / Twitter',
       twitterAccounts: [
         { name: '@CantonNetwork', desc: 'Canton Network 官方——96K+ 关注者', url: 'https://x.com/CantonNetwork' },
@@ -684,21 +675,12 @@ export const translations = {
       governanceTitle: '治理',
       governanceBody: '链上治理通过超级验证者之间的 CIP 投票进行。链下讨论从 Discord 和 CIP GitHub 仓库开始。',
       governanceLinks: [
-        { name: 'CIP GitHub 仓库', url: 'https://github.com/canton-foundation/cips' },
-        { name: 'Canton Network 官方论坛', url: 'https://forum.canton.network/' },
         { name: 'Canton Foundation 会员', url: 'https://canton.foundation/membership/' },
       ],
       devFundTitle: '协议发展基金',
       devFundBody: '由 CIP-0082 设立，面向外部建设者开放。三条路径：委员会主导提案、社区公开提案（需担保人）、定向 RFP。按价值与网络契合度评估。',
       devFundUrl: 'https://canton.foundation/canton-foundation-launches-protocol-development-fund/',
-      hotTopicsTitle: '近期讨论热点',
-      hotTopics: [
-        { title: 'CIP-0105 — SV 锁仓框架', desc: '自愿锁定奖励、365 天线性释放以证明长期承诺。2026 年 3 月已通过。' },
-        { title: 'CIP-0107 — 24 小时提交延迟', desc: '终端用户 CC 交易的安全机制，实施中。' },
-        { title: 'CIP-0111 — 降低 SV 权重流程', desc: '减少超级验证者权重的流程提案，当前为「提议中」状态。' },
-        { title: '协议发展基金申请', desc: '面向所有人的公开征集——任何人可通过担保人提交申请。' },
-        { title: 'ERC-20 中间件（CIP-0086）', desc: '为 Canton 引入 EVM 兼容性，扩大开发者覆盖。' },
-      ],
+      seeNewsNote: 'CIP 讨论与最新动态详见「动态」页面。',
       wikiTitle: '社区资源',
       wikiLinks: [
         { name: 'Canton Wiki', url: 'https://canton.wiki/', desc: '社区维护的知识库' },
@@ -717,6 +699,8 @@ export const translations = {
         { name: 'Canton Foundation — 应用与生态', url: 'https://canton.foundation/canton-apps/' },
         { name: 'Global Synchronizer / sync.global', url: 'https://sync.global/' },
         { name: 'Canton Network 路线图（社区 wiki）', url: 'https://canton.wiki/learn/canton-network-roadmap' },
+        { name: 'Canton Network 白皮书', url: 'https://www.canton.network/whitepapers' },
+        { name: 'Canton Network — 维基百科', url: 'https://en.wikipedia.org/wiki/Canton_Network' },
       ],
       devTitle: '开发者文档与入口',
       dev: [
@@ -724,7 +708,6 @@ export const translations = {
         { name: 'Splice 文档（Global Synchronizer 应用开发）', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice 与运维 — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
         { name: 'Digital Asset — Canton / Daml 构建文档', url: 'https://docs.digitalasset.com/build/' },
-        { name: 'CIP GitHub 仓库', url: 'https://github.com/canton-foundation/cips' },
         { name: 'Hyperledger Splice（GitHub）', url: 'https://github.com/hyperledger-labs/splice' },
         { name: 'Digital Asset — Canton（GitHub）', url: 'https://github.com/digital-asset/canton' },
         { name: 'Canton Wallet Demo（社区）', url: 'https://github.com/stablecoinxyz/canton-wallet-demo' },
@@ -768,6 +751,7 @@ export const translations = {
         { name: 'CC — CoinGecko', url: 'https://www.coingecko.com/en/coins/canton' },
         { name: 'CC — CoinMarketCap', url: 'https://coinmarketcap.com/currencies/canton/' },
         { name: 'The Tie — Canton 看板', url: 'https://canton.thetie.io/' },
+        { name: 'CoinCarp — Canton 数据', url: 'https://www.coincarp.com/currencies/canton-network/' },
       ],
       exchangeTitle: '交易所（CC 交易）',
       exchanges: [
@@ -778,6 +762,7 @@ export const translations = {
         { name: 'MEXC', pairs: 'CC/USDT' },
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
+        { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
       ],
     },
     lang: {

@@ -4,6 +4,7 @@ import { t } from '@/i18n/translations';
 
 const locale = 'zh';
 const tr = t(locale);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout locale={locale} title={tr.community.title} description={tr.community.intro} navCurrent="community">
@@ -46,29 +47,6 @@ const tr = t(locale);
   </section>
 
   <section class="section">
-    <h2>{tr.community.newslettersTitle}</h2>
-    <p class="page-intro">{tr.community.newslettersIntro}</p>
-    <div class="cards">
-      {tr.community.newsletters.map(({ name, desc, url }) => (
-        <article class="card">
-          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
-          <p>{desc}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>{tr.community.podcastPlatformsTitle}</h2>
-    <p class="page-intro">{tr.community.podcastPlatformsIntro}</p>
-    <ul class="resource-list">
-      {tr.community.podcastPlatforms.map(({ name, url }) => (
-        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
-      ))}
-    </ul>
-  </section>
-
-  <section class="section">
     <h2>{tr.community.twitterTitle}</h2>
     <div class="cards cards-3">
       {tr.community.twitterAccounts.map(({ name, desc, url }) => (
@@ -98,17 +76,11 @@ const tr = t(locale);
     </a>
   </section>
 
-  <section class="section">
-    <h2>{tr.community.hotTopicsTitle}</h2>
-    <div class="topic-list">
-      {tr.community.hotTopics.map(({ title, desc }) => (
-        <article class="topic-item">
-          <h3>{title}</h3>
-          <p>{desc}</p>
-        </article>
-      ))}
-    </div>
-  </section>
+  <p class="disclaimer">
+    {tr.community.seeNewsNote} <a href={`${base}zh/news`}>动态 →</a>
+    {' · '}
+    <a href={`${base}zh/resources`}>资源 →</a>
+  </p>
 
   <section class="section">
     <h2>{tr.community.wikiTitle}</h2>
