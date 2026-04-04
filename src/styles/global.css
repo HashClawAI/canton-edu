@@ -432,6 +432,60 @@ main {
   font-size: 0.95rem;
 }
 
+/* Contribute section (homepage) */
+.contribute-section {
+  margin-top: 3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+}
+
+.contribute-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+}
+
+.contribute-section > p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  max-width: 44rem;
+}
+
+.contribute-commands {
+  margin-top: 1.25rem;
+}
+
+.contribute-manual {
+  margin-top: 1rem;
+}
+
+.contribute-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.command-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.command-item {
+  display: block;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--accent);
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Code', Menlo, monospace;
+  word-break: break-word;
+}
+
 /* Report list (research page) */
 .report-list {
   display: flex;

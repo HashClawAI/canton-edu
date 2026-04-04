@@ -36,4 +36,26 @@ const base = import.meta.env.BASE_URL;
       <p>{tr.home.cardCommunityBody}</p>
     </article>
   </div>
+
+  <section class="contribute-section">
+    <h2>{tr.home.contributeTitle}</h2>
+    <p>{tr.home.contributeBody}</p>
+    <a class="btn btn-secondary" href={tr.home.contributeRepo} target="_blank" rel="noopener noreferrer">
+      {tr.home.contributeRepoLabel} ↗
+    </a>
+
+    <div class="contribute-commands">
+      <p class="contribute-label">{tr.home.contributeCommandsLabel}</p>
+      <div class="command-list">
+        {tr.home.contributeCommands.map((cmd) => (
+          <code class="command-item">{cmd}</code>
+        ))}
+      </div>
+    </div>
+
+    <div class="contribute-manual">
+      <p class="contribute-label">{tr.home.contributeManualLabel}</p>
+      <code class="command-item">{tr.home.contributeManualSteps}</code>
+    </div>
+  </section>
 </BaseLayout>
