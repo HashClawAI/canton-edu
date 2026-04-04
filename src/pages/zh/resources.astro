@@ -4,34 +4,48 @@ import { t } from '@/i18n/translations';
 
 const locale = 'zh';
 const tr = t(locale);
-
-const links = [
-  { href: 'https://canton.network/', label: tr.resources.cantonSite },
-  { href: 'https://docs.daml.com/', label: tr.resources.damlDocs },
-  {
-    href: 'https://www.canton.foundation/',
-    label: tr.resources.foundation,
-  },
-];
 ---
 
-<BaseLayout
-  locale={locale}
-  title={tr.resources.title}
-  description={tr.resources.intro}
-  navCurrent="resources"
->
+<BaseLayout locale={locale} title={tr.resources.title} description={tr.resources.intro} navCurrent="resources">
   <h1 class="page-title">{tr.resources.title}</h1>
   <p class="page-intro">{tr.resources.intro}</p>
-  <ul class="resource-list">
-    {
-      links.map(({ href, label }) => (
-        <li>
-          <a href={href} target="_blank" rel="noopener noreferrer">
-            {label}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+
+  <section class="section">
+    <h2>{tr.resources.officialTitle}</h2>
+    <ul class="resource-list">
+      {tr.resources.official.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.devTitle}</h2>
+    <ul class="resource-list">
+      {tr.resources.dev.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.marketTitle}</h2>
+    <ul class="resource-list">
+      {tr.resources.market.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.resources.exchangeTitle}</h2>
+    <table class="exchange-table">
+      <thead><tr><th>交易所</th><th>交易对</th></tr></thead>
+      <tbody>
+        {tr.resources.exchanges.map(({ name, pairs }) => (
+          <tr><td>{name}</td><td>{pairs}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
 </BaseLayout>

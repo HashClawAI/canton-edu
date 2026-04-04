@@ -253,6 +253,182 @@ main {
   border-bottom: none;
 }
 
+/* 4-column card grid for homepage */
+.cards-4 {
+  margin-top: 2.75rem;
+}
+
+@media (min-width: 560px) {
+  .cards-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card h3 for ecosystem / community */
+.card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+/* Section spacing */
+.section {
+  margin-top: 2.5rem;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.section .cards {
+  margin-top: 1rem;
+}
+
+/* Stats row */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  font-size: 0.95rem;
+  flex: 1 1 200px;
+}
+
+/* CIP table */
+.cip-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.cip-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cip-table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.cip-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.status {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.status-final { color: #4ade80; }
+.status-approved { color: #60a5fa; }
+.status-active { color: #fbbf24; }
+.status-proposed { color: var(--muted); }
+
+/* SV list */
+.sv-list {
+  padding: 0 0 0 1.25rem;
+  margin: 0;
+}
+
+.sv-list li {
+  padding: 0.35rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Exchange table */
+.exchange-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.exchange-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--muted);
+}
+
+.exchange-table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.exchange-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Topic list (community hot topics) */
+.topic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.topic-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+}
+
+.topic-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+.topic-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Full list link */
+.full-list-link {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive table scroll */
+@media (max-width: 640px) {
+  .cip-table,
+  .exchange-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 footer.site-footer {
   border-top: 1px solid var(--border);
   padding: 1.5rem 0;

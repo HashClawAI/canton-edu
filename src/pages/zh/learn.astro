@@ -6,26 +6,15 @@ const locale = 'zh';
 const tr = t(locale);
 ---
 
-<BaseLayout
-  locale={locale}
-  title={tr.learn.title}
-  description={tr.learn.intro}
-  navCurrent="learn"
->
+<BaseLayout locale={locale} title={tr.learn.title} description={tr.learn.intro} navCurrent="learn">
   <h1 class="page-title">{tr.learn.title}</h1>
   <p class="page-intro">{tr.learn.intro}</p>
   <ol class="steps">
-    <li>
-      <strong>{tr.learn.step1Title}</strong>
-      <span>{tr.learn.step1Body}</span>
-    </li>
-    <li>
-      <strong>{tr.learn.step2Title}</strong>
-      <span>{tr.learn.step2Body}</span>
-    </li>
-    <li>
-      <strong>{tr.learn.step3Title}</strong>
-      <span>{tr.learn.step3Body}</span>
-    </li>
+    <li><strong>{tr.learn.step1Title}</strong><span>{tr.learn.step1Body}</span></li>
+    <li><strong>{tr.learn.step2Title}</strong><span>{tr.learn.step2Body}</span></li>
+    <li><strong>{tr.learn.step3Title}</strong><span>{tr.learn.step3Body}</span></li>
+    <li><strong>{tr.learn.step4Title}</strong><span>{tr.learn.step4Body}</span></li>
+    <li><strong>{tr.learn.step5Title}</strong><span>{tr.learn.step5Body}</span></li>
+    <li><strong>{tr.learn.step6Title}</strong><span>{tr.learn.step6Body}</span></li>
   </ol>
 </BaseLayout>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'zh';
+const tr = t(locale);
+---
+
+<BaseLayout locale={locale} title={tr.cips.title} description={tr.cips.intro} navCurrent="cips">
+  <h1 class="page-title">{tr.cips.title}</h1>
+  <p class="page-intro">{tr.cips.intro}</p>
+
+  <p>
+    <a href={tr.cips.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+      {tr.cips.repoLink} ↗
+    </a>
+  </p>
+
+  <section class="section">
+    <h2>{tr.cips.statsTitle}</h2>
+    <div class="stats-row">
+      <div class="stat-card"><strong>{tr.cips.statsTotal}</strong></div>
+      <div class="stat-card"><strong>{tr.cips.statsContributors}</strong></div>
+      <div class="stat-card"><strong>{tr.cips.statsCategories}</strong></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.cips.highlightsTitle}</h2>
+    <table class="cip-table">
+      <thead>
+        <tr><th>CIP</th><th>标题</th><th>类型</th><th>状态</th><th>摘要</th></tr>
+      </thead>
+      <tbody>
+        {tr.cips.highlights.map(({ id, title, type, status, summary }) => (
+          <tr>
+            <td>
+              <a href={`${tr.cips.repoUrl}/blob/main/${id.toLowerCase().replace('-', '-')}`} target="_blank" rel="noopener noreferrer">
+                {id}
+              </a>
+            </td>
+            <td>{title}</td>
+            <td><span class="badge">{type}</span></td>
+            <td><span class="status">{status}</span></td>
+            <td>{summary}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>{tr.cips.svTitle}</h2>
+    <p class="page-intro">{tr.cips.svIntro}</p>
+    <ul class="sv-list">
+      {tr.cips.svList.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

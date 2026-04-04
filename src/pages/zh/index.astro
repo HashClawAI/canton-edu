@@ -7,21 +7,16 @@ const tr = t(locale);
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout
-  locale={locale}
-  title={tr.home.title}
-  description={tr.home.subtitle}
-  navCurrent="home"
->
+<BaseLayout locale={locale} title={tr.home.title} description={tr.home.subtitle} navCurrent="home">
   <section class="hero">
     <h1>{tr.home.title}</h1>
     <p class="lead">{tr.home.subtitle}</p>
     <div class="actions">
       <a class="btn btn-primary" href={`${base}zh/learn`}>{tr.home.ctaLearn}</a>
-      <a class="btn btn-secondary" href={`${base}zh/resources`}>{tr.home.ctaResources}</a>
+      <a class="btn btn-secondary" href={`${base}zh/ecosystem`}>{tr.home.ctaEcosystem}</a>
     </div>
   </section>
-  <div class="cards">
+  <div class="cards cards-4">
     <article class="card">
       <h2>{tr.home.cardWhatTitle}</h2>
       <p>{tr.home.cardWhatBody}</p>
@@ -29,6 +24,14 @@ const base = import.meta.env.BASE_URL;
     <article class="card">
       <h2>{tr.home.cardWhoTitle}</h2>
       <p>{tr.home.cardWhoBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardCIPTitle}</h2>
+      <p>{tr.home.cardCIPBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardCommunityTitle}</h2>
+      <p>{tr.home.cardCommunityBody}</p>
     </article>
   </div>
 </BaseLayout>

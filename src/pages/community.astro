@@ -1,0 +1,74 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/translations';
+
+const locale = 'en';
+const tr = t(locale);
+---
+
+<BaseLayout locale={locale} title={tr.community.title} description={tr.community.intro} navCurrent="community">
+  <h1 class="page-title">{tr.community.title}</h1>
+  <p class="page-intro">{tr.community.intro}</p>
+
+  <section class="section">
+    <h2>{tr.community.discordTitle}</h2>
+    <p>{tr.community.discordBody}</p>
+    <a class="btn btn-primary" href={tr.community.discordUrl} target="_blank" rel="noopener noreferrer">
+      Join Discord ↗
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.twitterTitle}</h2>
+    <div class="cards">
+      {tr.community.twitterAccounts.map(({ name, desc }) => (
+        <article class="card">
+          <h3><a href={`https://x.com/${name.replace('@', '')}`} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.governanceTitle}</h2>
+    <p>{tr.community.governanceBody}</p>
+    <ul class="resource-list">
+      {tr.community.governanceLinks.map(({ name, url }) => (
+        <li><a href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.devFundTitle}</h2>
+    <p>{tr.community.devFundBody}</p>
+    <a class="btn btn-secondary" href={tr.community.devFundUrl} target="_blank" rel="noopener noreferrer">
+      Learn more ↗
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.hotTopicsTitle}</h2>
+    <div class="topic-list">
+      {tr.community.hotTopics.map(({ title, desc }) => (
+        <article class="topic-item">
+          <h3>{title}</h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{tr.community.wikiTitle}</h2>
+    <div class="cards">
+      {tr.community.wikiLinks.map(({ name, url, desc }) => (
+        <article class="card">
+          <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

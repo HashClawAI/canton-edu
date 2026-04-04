@@ -5,22 +5,31 @@ import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
 
 interface Props {
   locale: Locale;
-  current?: 'home' | 'learn' | 'resources';
+  current?: 'home' | 'learn' | 'ecosystem' | 'cips' | 'community' | 'resources';
 }
 
 const { locale, current = 'home' } = Astro.props;
 const tr = t(locale);
 const base = import.meta.env.BASE_URL;
 const prefix = locale === 'zh' ? `${base}zh/` : base;
+
+const navItems = [
+  { key: 'home' as const, href: prefix, label: tr.nav.home },
+  { key: 'learn' as const, href: `${prefix}learn`, label: tr.nav.learn },
+  { key: 'ecosystem' as const, href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
+  { key: 'cips' as const, href: `${prefix}cips`, label: tr.nav.cips },
+  { key: 'community' as const, href: `${prefix}community`, label: tr.nav.community },
+  { key: 'resources' as const, href: `${prefix}resources`, label: tr.nav.resources },
+];
 ---
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href={prefix}>{tr.siteName}</a>
     <nav class="main-nav" aria-label={tr.lang.label}>
-      <a href={prefix} aria-current={current === 'home' ? 'page' : undefined}>{tr.nav.home}</a>
-      <a href={`${prefix}learn`} aria-current={current === 'learn' ? 'page' : undefined}>{tr.nav.learn}</a>
-      <a href={`${prefix}resources`} aria-current={current === 'resources' ? 'page' : undefined}>{tr.nav.resources}</a>
+      {navItems.map(({ key, href, label }) => (
+        <a href={href} aria-current={current === key ? 'page' : undefined}>{label}</a>
+      ))}
       <LanguageSwitcher locale={locale} />
     </nav>
   </div>
