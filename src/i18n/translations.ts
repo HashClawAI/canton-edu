@@ -36,6 +36,9 @@ export const translations = {
       contributeBody: 'This site is open source and includes a Cursor AI Skill that auto-scans for Canton updates. Clone the repo, open in Cursor, and ask the Agent to refresh content — or edit manually and open a PR.',
       contributeRepo: 'https://github.com/HashClawAI/canton-edu',
       contributeRepoLabel: 'GitHub repo',
+      contributeInstallLabel: 'Install the Skill (run in terminal):',
+      contributeInstallCmd: 'git clone https://github.com/HashClawAI/canton-edu.git && cd canton-edu && npm install',
+      contributeInstallNote: 'Then open the canton-edu folder in Cursor — the Skill at .cursor/skills/ is auto-detected.',
       contributeCommands: [
         'Scan for Canton updates and refresh the site',
         'Add recent Canton news to the News page',
@@ -517,6 +520,9 @@ export const translations = {
       contributeBody: '本站开源，内置 Cursor AI Skill，可自动扫描 Canton 动态并更新内容。克隆仓库、用 Cursor 打开，让 Agent 刷新内容——或手动编辑后提 PR。',
       contributeRepo: 'https://github.com/HashClawAI/canton-edu',
       contributeRepoLabel: 'GitHub 仓库',
+      contributeInstallLabel: '安装 Skill（在终端运行）：',
+      contributeInstallCmd: 'git clone https://github.com/HashClawAI/canton-edu.git && cd canton-edu && npm install',
+      contributeInstallNote: '然后用 Cursor 打开 canton-edu 文件夹——.cursor/skills/ 下的 Skill 会自动识别。',
       contributeCommands: [
         '扫描 Canton 最新动态，更新站点',
         '把近期 Canton 新闻加到动态页',
