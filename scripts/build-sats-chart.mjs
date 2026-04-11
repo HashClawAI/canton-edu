@@ -20,20 +20,24 @@ const IH = H - PAD.t - PAD.b;
 const CHART_MAX_POINTS = 950;
 
 /** Marker geometry (SVG user units, scales with W/H). */
+/** Marker dots / nudge — keep modest vs ~14px chart labels. */
 const MK = {
-  r: 5.5,
-  lineStroke: 2.25,
-  mkStroke: 2.75,
-  dyHi1: -12,
-  dyHi2: -28,
-  dyLo1: 15,
-  dyLo2: 32,
+  r: 4.5,
+  lineStroke: 2,
+  mkStroke: 2.25,
+  dyHi1: -10,
+  dyHi2: -24,
+  dyLo1: 13,
+  dyLo2: 27,
+  /** Right-aligned “最新数据”: title above value (smaller y first). */
+  dyLtTitle: -24,
+  dyLtValue: -10,
 };
 const DAY_TRIES = ['max', '365', '180', '90'];
 
 const LABELS = {
-  en: { high: 'Raw high', low: 'Raw low', latest: 'Latest' },
-  zh: { high: 'Raw最高点', low: 'Raw最低点', latest: '最新' },
+  en: { high: 'Raw high', low: 'Raw low', latest: 'Latest data' },
+  zh: { high: 'Raw最高点', low: 'Raw最低点', latest: '最新数据' },
 };
 
 function esc(s) {
@@ -166,11 +170,17 @@ function pathFromTimeSeries(plot, tMin, tMax, ymin, ymax) {
   return { line: d, area };
 }
 
-function markerXml(x, y, label, valueLine, kind, labelNudgeX) {
-  const tx = x + labelNudgeX;
-  const anchor = tx < PAD.l + IW * 0.22 ? 'start' : tx > PAD.l + IW * 0.78 ? 'end' : 'middle';
-  const dy1 = kind === 'lo' ? MK.dyLo1 : MK.dyHi1;
-  const dy2 = kind === 'lo' ? MK.dyLo2 : MK.dyHi2;
+/**
+ * @param labelNudgeX  offset from dot x for auto anchor (hi/lo)
+ * @param anchorEnd     if true, label lines align to chart right (for “最新数据”)
+ */
+function markerXml(x, y, label, valueLine, kind, labelNudgeX, anchorEnd = false) {
+  const tx = anchorEnd ? W - PAD.r : x + labelNudgeX;
+  const anchor = anchorEnd ? 'end' : tx < PAD.l + IW * 0.22 ? 'start' : tx > PAD.l + IW * 0.78 ? 'end' : 'middle';
+  const dy1 =
+    kind === 'lo' ? MK.dyLo1 : kind === 'lt' && anchorEnd ? MK.dyLtTitle : MK.dyHi1;
+  const dy2 =
+    kind === 'lo' ? MK.dyLo2 : kind === 'lt' && anchorEnd ? MK.dyLtValue : MK.dyHi2;
   const cls = kind === 'hi' ? 'm-hi' : kind === 'lo' ? 'm-lo' : 'm-lt';
   return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${MK.r}" class="mk ${cls}" />
 <text x="${tx.toFixed(1)}" y="${(y + dy1).toFixed(1)}" text-anchor="${anchor}" class="m-t">${esc(label)}</text>
@@ -227,7 +237,8 @@ async function buildSvgForLocale(locale) {
       labels.latest,
       `${fmtSats(raw[iLast])} · ${df(series[iLast].t)}`,
       'lt',
-      -Math.round(IW * 0.052),
+      0,
+      true,
     );
   } else {
     const hiLine =
@@ -242,17 +253,14 @@ async function buildSvgForLocale(locale) {
     markers += markerXml(xLo, yLo, labels.low, loLine, 'lo', loNudge);
     if (iLast !== iMax && iLast !== iMin) {
       const xLt = xOf(series[iLast].t);
-      const ltNudge =
-        Math.abs(xLt - xHi) < IW * 0.12 || Math.abs(xLt - xLo) < IW * 0.12
-          ? -Math.round(IW * 0.065)
-          : -Math.round(IW * 0.028);
       markers += markerXml(
         xLt,
         ySvg(raw[iLast], ymin, ymax),
         labels.latest,
         `${fmtSats(raw[iLast])} · ${df(series[iLast].t)}`,
         'lt',
-        ltNudge,
+        0,
+        true,
       );
     }
   }
@@ -277,8 +285,8 @@ async function buildSvgForLocale(locale) {
     .m-hi { stroke: #4ade80; }
     .m-lo { stroke: #f87171; }
     .m-lt { stroke: #3d8bfd; }
-    .m-t { font: 600 15px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf4; }
-    .m-s { font: 400 13px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(232,237,244,0.92); font-variant-numeric: tabular-nums; }
+    .m-t { font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf4; }
+    .m-s { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(232,237,244,0.9); font-variant-numeric: tabular-nums; }
     .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #8b9cb3; font-variant-numeric: tabular-nums; }
   ]]></style>
   <path class="c-area" d="${area}" fill="url(#${gid})"/>
