@@ -295,6 +295,8 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     t1.setAttribute('y', String(y + dy1));
     t1.setAttribute('text-anchor', anchor);
     t1.setAttribute('class', 'chart-marker-text');
+    /* SVG nodes from script do not get Astro scoped attributes — set fill explicitly */
+    t1.setAttribute('fill', '#e8edf4');
     t1.textContent = label;
     g.appendChild(t1);
     const t2 = document.createElementNS(NS, 'text');
@@ -302,6 +304,7 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     t2.setAttribute('y', String(y + dy2));
     t2.setAttribute('text-anchor', anchor);
     t2.setAttribute('class', 'chart-marker-sub');
+    t2.setAttribute('fill', 'rgba(232, 237, 244, 0.9)');
     t2.textContent = valueLine;
     g.appendChild(t2);
   }
@@ -650,32 +653,32 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     overflow: visible;
   }
 
-  .chart-marker {
+  /* :global — markers are created in client script, outside Astro scoped selectors */
+  :global(#coin-chart-markers .chart-marker) {
     fill: var(--bg);
     stroke-width: 2;
     vector-effect: non-scaling-stroke;
   }
 
-  .chart-marker-hi {
+  :global(#coin-chart-markers .chart-marker-hi) {
     stroke: #4ade80;
   }
 
-  .chart-marker-lo {
+  :global(#coin-chart-markers .chart-marker-lo) {
     stroke: #f87171;
   }
 
-  .chart-marker-text {
+  :global(#coin-chart-markers .chart-marker-text) {
     font-size: 0.82rem;
     font-weight: 600;
-    fill: var(--text);
+    fill: #e8edf4;
     font-family: var(--font-sans);
   }
 
-  .chart-marker-sub {
+  :global(#coin-chart-markers .chart-marker-sub) {
     font-size: 0.72rem;
     font-weight: 400;
-    fill: var(--text);
-    fill-opacity: 0.88;
+    fill: rgba(232, 237, 244, 0.9);
     font-family: var(--font-sans);
     font-variant-numeric: tabular-nums;
   }
