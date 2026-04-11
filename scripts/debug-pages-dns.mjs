@@ -40,14 +40,17 @@ function apexMatchesGithub(ips) {
   return ips.every((ip) => GITHUB_A.has(ip));
 }
 
-/** First NS hostname without trailing dot, for @ns queries (GoDaddy-specific; may be null for other registrars). */
-function firstNsHost(nsRaw) {
+/** First zone NS from `dig +short NS` (any registrar), trailing dot stripped, for `@ns` apex queries. */
+function firstZoneNsHost(nsRaw) {
+  if (!nsRaw || nsRaw.startsWith('ERROR:')) return null;
   const line = nsRaw
     .split(/\n/)
     .map((s) => s.trim())
-    .find((s) => s.includes('domaincontrol'));
+    .filter((s) => s && !s.startsWith(';'))[0];
   if (!line) return null;
-  return line.replace(/\.$/, '').trim() || null;
+  const host = line.replace(/\.$/, '').trim();
+  if (!/^[a-z0-9.-]+$/i.test(host)) return null;
+  return host || null;
 }
 
 async function curlHead(url, forceIpv4) {
@@ -79,7 +82,7 @@ async function main() {
   const httpsV4 = await curlHead('https://canton.tools/', true);
 
   const ns = await dig(['@8.8.8.8', 'canton.tools', '+short', 'NS']);
-  const nsHost = firstNsHost(ns);
+  const nsHost = firstZoneNsHost(ns);
   let apexAuthRaw = '';
   if (nsHost) {
     apexAuthRaw = await dig(['@' + nsHost, 'canton.tools', '+short', 'A']);
@@ -104,6 +107,7 @@ async function main() {
   let apexAuthOk = !nsHost;
   if (nsHost) {
     if (apexAuthRaw.startsWith('ERROR:')) apexAuthOk = apexOk;
+    else if (!apexAuthRaw.trim()) apexAuthOk = apexOk;
     else apexAuthOk = apexMatchesGithub(apexAuthIps);
   }
 
