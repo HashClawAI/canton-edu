@@ -25,6 +25,8 @@ export const translations = {
       coinPriceCcBtcLabel: 'CC / BTC',
       coinPriceCcBtcFootnote: 'Implied from CoinGecko USD prices — not an on-chain pair.',
       coinPriceSatPerCcUnit: 'sats / CC',
+      coinPriceChartTitle: 'Implied sats per CC (USD cross)',
+      coinPriceChartSubtitle: 'CoinGecko ~5 min samples, past 24h · EMA-smoothed curve',
       cardWhatTitle: 'What is Canton?',
       cardWhatBody:
         'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 45+ Super Validators.',
@@ -559,6 +561,8 @@ export const translations = {
       coinPriceCcBtcLabel: 'CC / BTC',
       coinPriceCcBtcFootnote: '由 CoinGecko 美元价交叉推算，非链上交易对。',
       coinPriceSatPerCcUnit: '聪 / CC',
+      coinPriceChartTitle: '推算 聪 / CC（美元交叉）',
+      coinPriceChartSubtitle: 'CoinGecko 约 5 分钟采样，近 24 小时 · EMA 平滑曲线',
       cardWhatTitle: 'Canton 是什么？',
       cardWhatBody:
         '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 45+ Super Validator 支撑。',

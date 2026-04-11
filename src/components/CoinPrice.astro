@@ -6,6 +6,8 @@ interface Props {
   ccBtcLabel: string;
   ccBtcFootnote: string;
   satPerCcUnit: string;
+  chartTitle: string;
+  chartSubtitle: string;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
   ccBtcLabel,
   ccBtcFootnote,
   satPerCcUnit,
+  chartTitle,
+  chartSubtitle,
 } = Astro.props;
 const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
 ---
@@ -42,11 +46,52 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     </div>
     <p class="coin-footnote">{ccBtcFootnote}</p>
   </div>
+
+  <div
+    class="coin-chart"
+    id="coin-chart"
+    hidden
+    data-range-label={locale === 'zh' ? '24 小时' : '24h'}
+  >
+    <div class="coin-chart-head">
+      <span class="coin-chart-title">{chartTitle}</span>
+      <span class="coin-chart-sub">{chartSubtitle}</span>
+    </div>
+    <svg
+      class="coin-chart-svg"
+      id="coin-chart-svg"
+      viewBox="0 0 420 132"
+      preserveAspectRatio="none"
+      role="img"
+      aria-labelledby="coin-chart-aria-title"
+    >
+      <title id="coin-chart-aria-title">{chartTitle}</title>
+      <defs>
+        <linearGradient id="coin-chart-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3d8bfd" stop-opacity="0.28"></stop>
+          <stop offset="100%" stop-color="#3d8bfd" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <path id="coin-chart-area" class="coin-chart-area" d="" fill="url(#coin-chart-fill)"></path>
+      <path id="coin-chart-line" class="coin-chart-line" d="" fill="none"></path>
+    </svg>
+    <div class="coin-chart-axis" id="coin-chart-axis" aria-hidden="true"></div>
+  </div>
 </div>
 
 <script>
   const API =
     'https://api.coingecko.com/api/v3/simple/price?ids=canton-network,bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true';
+  const CHART_CC =
+    'https://api.coingecko.com/api/v3/coins/canton-network/market_chart?vs_currency=usd&days=1';
+  const CHART_BTC =
+    'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1';
+
+  const W = 420;
+  const H = 132;
+  const PAD = { t: 14, r: 10, b: 22, l: 10 };
+  const IW = W - PAD.l - PAD.r;
+  const IH = H - PAD.t - PAD.b;
 
   function fmtUsdLarge(n: number): string {
     return (
@@ -76,6 +121,133 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
       prefix,
       value: `${sats.toExponential(3)} (${btcPerCc.toExponential(3)} BTC)`,
     };
+  }
+
+  function fmt(n: number): string {
+    if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+    if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+    return n.toFixed(0);
+  }
+
+  type Pt = [number, number];
+
+  function sortByTime(pairs: Pt[]): Pt[] {
+    return [...pairs].sort((a, b) => a[0] - b[0]);
+  }
+
+  function interpolateY(points: Pt[], x: number): number | null {
+    if (points.length === 0) return null;
+    if (x <= points[0][0]) return points[0][1];
+    const last = points[points.length - 1];
+    if (x >= last[0]) return last[1];
+    let lo = 0;
+    let hi = points.length - 1;
+    while (hi - lo > 1) {
+      const mid = (lo + hi) >> 1;
+      if (points[mid][0] <= x) lo = mid;
+      else hi = mid;
+    }
+    const [x0, y0] = points[lo];
+    const [x1, y1] = points[hi];
+    if (x1 <= x0) return y0;
+    return y0 + ((x - x0) / (x1 - x0)) * (y1 - y0);
+  }
+
+  function emaSeries(values: number[], alpha: number): number[] {
+    const out: number[] = [];
+    let e = values[0];
+    for (const v of values) {
+      e = alpha * v + (1 - alpha) * e;
+      out.push(e);
+    }
+    return out;
+  }
+
+  function buildSatsSeries(ccPrices: Pt[], btcPrices: Pt[]): { t: number; sats: number }[] {
+    const cc = sortByTime(ccPrices);
+    const btc = sortByTime(btcPrices);
+    const out: { t: number; sats: number }[] = [];
+    for (const [t, ccUsd] of cc) {
+      if (typeof ccUsd !== 'number' || ccUsd <= 0) continue;
+      const btcUsd = interpolateY(btc, t);
+      if (btcUsd == null || btcUsd <= 0) continue;
+      out.push({ t, sats: (ccUsd / btcUsd) * 1e8 });
+    }
+    return out;
+  }
+
+  function smoothCurve(sats: number[]): number[] {
+    const a = 0.16;
+    const b = 0.22;
+    return emaSeries(emaSeries(sats, a), b);
+  }
+
+  function toPath(ys: number[], ymin: number, ymax: number): { line: string; area: string } {
+    if (ys.length < 2) return { line: '', area: '' };
+    const xScale = (i: number) => PAD.l + (i / (ys.length - 1)) * IW;
+    const yScale = (v: number) => {
+      const span = ymax - ymin || 1;
+      const n = (v - ymin) / span;
+      return PAD.t + (1 - n) * IH;
+    };
+    const pts = ys.map((_, i) => [xScale(i), yScale(ys[i])] as const);
+    let d = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < pts.length; i++) {
+      d += ` L ${pts[i][0].toFixed(1)} ${pts[i][1].toFixed(1)}`;
+    }
+    const y0 = PAD.t + IH;
+    const area = `${d} L ${pts[pts.length - 1][0].toFixed(1)} ${y0} L ${pts[0][0].toFixed(1)} ${y0} Z`;
+    return { line: d, area };
+  }
+
+  async function fetchChart(): Promise<void> {
+    const wrap = document.getElementById('coin-chart');
+    const root = document.getElementById('coin-ticker');
+    const localeTag = root?.dataset.locale || 'en-US';
+    const lineEl = document.getElementById('coin-chart-line');
+    const areaEl = document.getElementById('coin-chart-area');
+    const axisEl = document.getElementById('coin-chart-axis');
+    if (!wrap || !lineEl || !areaEl || !axisEl) return;
+
+    try {
+      const [rCc, rBtc] = await Promise.all([fetch(CHART_CC), fetch(CHART_BTC)]);
+      if (!rCc.ok || !rBtc.ok) return;
+      const jCc = (await rCc.json()) as { prices?: Pt[] };
+      const jBtc = (await rBtc.json()) as { prices?: Pt[] };
+      const ccP = jCc.prices;
+      const btcP = jBtc.prices;
+      if (!Array.isArray(ccP) || !Array.isArray(btcP) || ccP.length < 8 || btcP.length < 8) return;
+
+      const series = buildSatsSeries(ccP, btcP);
+      if (series.length < 8) return;
+
+      const raw = series.map((s) => s.sats);
+      const smoothed = smoothCurve(raw);
+    let ymin = Math.min(...smoothed);
+    let ymax = Math.max(...smoothed);
+    const pad = (ymax - ymin) * 0.08 || ymin * 0.002;
+    ymin -= pad;
+    ymax += pad;
+
+      const { line, area } = toPath(smoothed, ymin, ymax);
+      lineEl.setAttribute('d', line);
+      areaEl.setAttribute('d', area);
+
+      const rangeLabel = wrap.dataset.rangeLabel || '24h';
+      const fmtLo = smoothed[0].toLocaleString(localeTag, { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+      const fmtHi = smoothed[smoothed.length - 1].toLocaleString(localeTag, {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2,
+      });
+      const minStr = Math.min(...smoothed).toLocaleString(localeTag, { maximumFractionDigits: 2 });
+      const maxStr = Math.max(...smoothed).toLocaleString(localeTag, { maximumFractionDigits: 2 });
+      axisEl.textContent = `${minStr} — ${maxStr} · ${rangeLabel}: ${fmtLo} → ${fmtHi}`;
+
+      wrap.hidden = false;
+    } catch {
+      /* silent */
+    }
   }
 
   async function fetchPrice() {
@@ -144,15 +316,10 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     }
   }
 
-  function fmt(n: number): string {
-    if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
-    if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
-    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
-    return n.toFixed(0);
-  }
-
   fetchPrice();
   setInterval(fetchPrice, 60_000);
+  fetchChart();
+  setInterval(fetchChart, 300_000);
 </script>
 
 <style>
@@ -254,5 +421,57 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     font-size: 0.75rem;
     line-height: 1.35;
     color: var(--muted);
+  }
+
+  .coin-chart {
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .coin-chart-head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .coin-chart-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--text);
+  }
+
+  .coin-chart-sub {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+
+  .coin-chart-svg {
+    display: block;
+    width: 100%;
+    height: 140px;
+    overflow: visible;
+  }
+
+  .coin-chart-line {
+    stroke: var(--accent);
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .coin-chart-area {
+    stroke: none;
+  }
+
+  .coin-chart-axis {
+    margin-top: 0.35rem;
+    font-size: 0.7rem;
+    line-height: 1.35;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
   }
 </style>
