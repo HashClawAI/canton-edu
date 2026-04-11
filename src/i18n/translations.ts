@@ -22,7 +22,7 @@ export const translations = {
       ctaEcosystem: 'Explore ecosystem',
       cardWhatTitle: 'What is Canton?',
       cardWhatBody:
-        'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 40+ Super Validators.',
+        'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 45+ Super Validators.',
       cardWhoTitle: 'Who is this for?',
       cardWhoBody:
         'Developers, researchers, and teams who want a structured entry point into Canton before reading primary sources.',
@@ -72,7 +72,7 @@ export const translations = {
     },
     ecosystem: {
       title: 'Ecosystem overview',
-      intro: '950+ validators, 40+ Super Validators, and 90+ projects across institutional finance, DeFi, developer tools, and infrastructure.',
+      intro: '950+ validators, 45+ Super Validators, and 90+ projects across institutional finance, DeFi, developer tools, and infrastructure.',
       explorersTitle: 'Block explorers',
       explorers: [
         { name: 'CantScan', desc: 'General-purpose explorer with validator dashboards and API access', url: 'https://cantscan.com' },
@@ -181,6 +181,27 @@ export const translations = {
       intro: 'Major developments, governance votes, and ecosystem milestones. Most recent first.',
       lastUpdated: 'Last updated: April 2026',
       items: [
+        {
+          date: '2026-04-07',
+          tag: 'Ecosystem',
+          title: 'Transcend connects to Canton for tokenized asset mobility',
+          body: 'Transcend announced integration with Canton Network to optimize and move tokenized assets in real time across traditional and DeFi rails.',
+          url: 'https://www.prnewswire.com/news-releases/transcend-connects-to-canton-network-to-enable-real-time-optimization-and-mobility-of-tokenized-assets-302735540.html',
+        },
+        {
+          date: '2026-04-04',
+          tag: 'Governance',
+          title: 'Super Validator set expands past 45 nodes',
+          body: 'Network update: the Global Synchronizer is secured by 45+ Super Validators spanning TradFi institutions and crypto-native operators.',
+          url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-super-validators-45-plus-2026-04-04/',
+        },
+        {
+          date: '2026-04-03',
+          tag: 'Protocol',
+          title: 'Canton 3.4 → 3.5 transition roadmap published',
+          body: 'Phased rollout across DevNet, TestNet, and MainNet — including Splice milestones and Logical Synchronizers (Splice 0.6) for upgrades without pausing Daml traffic.',
+          url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-network-3-4-to-3-5-transition-2026-04-03/',
+        },
         {
           date: '2026-03-31',
           tag: 'Ecosystem',
@@ -509,7 +530,7 @@ export const translations = {
       ctaEcosystem: '探索生态',
       cardWhatTitle: 'Canton 是什么？',
       cardWhatBody:
-        '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 40+ Super Validator 支撑。',
+        '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 45+ Super Validator 支撑。',
       cardWhoTitle: '适合谁？',
       cardWhoBody: '希望在阅读一手资料前，先建立结构认知的开发者、研究者与团队。',
       cardCIPTitle: 'CIP 治理',
@@ -555,7 +576,7 @@ export const translations = {
     },
     ecosystem: {
       title: '生态概览',
-      intro: '950+ 验证者、40+ 超级验证者、90+ 项目，覆盖机构金融、DeFi、开发工具与基础设施。',
+      intro: '950+ 验证者、45+ 超级验证者、90+ 项目，覆盖机构金融、DeFi、开发工具与基础设施。',
       explorersTitle: '区块浏览器',
       explorers: [
         { name: 'CantScan', desc: '通用浏览器，含验证者面板和 API', url: 'https://cantscan.com' },
@@ -664,6 +685,9 @@ export const translations = {
       intro: '重大进展、治理投票与生态里程碑。按时间倒序排列。',
       lastUpdated: '最后更新：2026 年 4 月',
       items: [
+        { date: '2026-04-07', tag: '生态', title: 'Transcend 接入 Canton，优化代币化资产流动', body: 'Transcend 宣布接入 Canton Network，在传统金融与 DeFi 基础设施间实时优化与迁移代币化资产。', url: 'https://www.prnewswire.com/news-releases/transcend-connects-to-canton-network-to-enable-real-time-optimization-and-mobility-of-tokenized-assets-302735540.html' },
+        { date: '2026-04-04', tag: '治理', title: '超级验证者节点数突破 45', body: '网络动态：Global Synchronizer 由 45+ 家超级验证者共同保障，覆盖传统金融机构与加密原生运营方。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-super-validators-45-plus-2026-04-04/' },
+        { date: '2026-04-03', tag: '协议', title: 'Canton 3.4 → 3.5 迁移路线图公布', body: 'DevNet、TestNet、MainNet 分阶段推进——含 Splice 里程碑与 Logical Synchronizers（Splice 0.6），目标是在不停滞 Daml 交易的情况下完成协议级升级。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-network-3-4-to-3-5-transition-2026-04-03/' },
         { date: '2026-03-31', tag: '生态', title: 'Transak 为 Canton 开通法币入金', body: '用户可通过信用卡、银行转账和本地支付方式直接购买 CC。', url: 'https://finbold.com/transak-enables-fiat-access-to-canton-network-expanding-institutional-access-to-on-chain-finance/' },
         { date: '2026-03-30', tag: '生态', title: 'BitGo 推出 Canton Coin 托管与结算', body: 'BitGo 成为首家提供 CC 托管、交易和即时结算的美国持牌机构。', url: '' },
         { date: '2026-03-29', tag: '治理', title: '协议发展基金——开放申请', body: 'Canton Foundation 向外部开发者开放 CIP-0082 发展基金。三条路径：委员会主导、社区提案（需担保人）、定向 RFP。', url: 'https://canton.foundation/canton-foundation-launches-protocol-development-fund/' },
