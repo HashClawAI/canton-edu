@@ -16,7 +16,14 @@ const base = import.meta.env.BASE_URL;
       <a class="btn btn-primary" href={`${base}zh/learn`}>{tr.home.ctaLearn}</a>
       <a class="btn btn-secondary" href={`${base}zh/ecosystem`}>{tr.home.ctaEcosystem}</a>
     </div>
-    <CoinPrice label="Canton Coin (CC)" />
+    <CoinPrice
+      locale="zh"
+      bitcoinLabel={tr.home.coinPriceBitcoinLabel}
+      ccLabel={tr.home.coinPriceCcLabel}
+      ccBtcLabel={tr.home.coinPriceCcBtcLabel}
+      ccBtcFootnote={tr.home.coinPriceCcBtcFootnote}
+      satPerCcUnit={tr.home.coinPriceSatPerCcUnit}
+    />
   </section>
   <div class="cards cards-4">
     <article class="card">

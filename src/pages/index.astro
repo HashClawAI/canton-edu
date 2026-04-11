@@ -15,7 +15,14 @@ const tr = t(locale);
       <a class="btn btn-primary" href={`${import.meta.env.BASE_URL}learn`}>{tr.home.ctaLearn}</a>
       <a class="btn btn-secondary" href={`${import.meta.env.BASE_URL}ecosystem`}>{tr.home.ctaEcosystem}</a>
     </div>
-    <CoinPrice label="Canton Coin (CC)" />
+    <CoinPrice
+      locale="en"
+      bitcoinLabel={tr.home.coinPriceBitcoinLabel}
+      ccLabel={tr.home.coinPriceCcLabel}
+      ccBtcLabel={tr.home.coinPriceCcBtcLabel}
+      ccBtcFootnote={tr.home.coinPriceCcBtcFootnote}
+      satPerCcUnit={tr.home.coinPriceSatPerCcUnit}
+    />
   </section>
   <div class="cards cards-4">
     <article class="card">

@@ -1,54 +1,146 @@
 ---
 interface Props {
-  label?: string;
+  locale?: 'en' | 'zh';
+  bitcoinLabel: string;
+  ccLabel: string;
+  ccBtcLabel: string;
+  ccBtcFootnote: string;
+  satPerCcUnit: string;
 }
 
-const { label = 'Canton Coin (CC)' } = Astro.props;
+const {
+  locale = 'en',
+  bitcoinLabel,
+  ccLabel,
+  ccBtcLabel,
+  ccBtcFootnote,
+  satPerCcUnit,
+} = Astro.props;
+const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
 ---
 
-<div class="coin-ticker" id="cc-ticker">
-  <span class="coin-label">{label}</span>
-  <span class="coin-price" id="cc-price">--</span>
-  <span class="coin-change" id="cc-change"></span>
-  <span class="coin-extra" id="cc-extra"></span>
+<div class="coin-ticker" id="coin-ticker" data-locale={loc}>
+  <div class="coin-block">
+    <div class="coin-row">
+      <span class="coin-label">{bitcoinLabel}</span>
+      <span class="coin-price" id="btc-price">--</span>
+      <span class="coin-change" id="btc-change"></span>
+    </div>
+    <div class="coin-row">
+      <span class="coin-label">{ccLabel}</span>
+      <span class="coin-price" id="cc-price">--</span>
+      <span class="coin-change" id="cc-change"></span>
+      <span class="coin-extra" id="cc-extra"></span>
+    </div>
+    <div class="coin-row coin-row-pair">
+      <span class="coin-label coin-label-muted">{ccBtcLabel}</span>
+      <span class="coin-pair-wrap" id="ccbtc-wrap">
+        <span class="coin-pair-prefix" id="ccbtc-prefix"></span>
+        <span class="coin-pair-value" id="ccbtc-value">--</span>
+        <span class="coin-pair-unit">{satPerCcUnit}</span>
+      </span>
+    </div>
+    <p class="coin-footnote">{ccBtcFootnote}</p>
+  </div>
 </div>
 
 <script>
   const API =
-    'https://api.coingecko.com/api/v3/simple/price?ids=canton-network&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true';
+    'https://api.coingecko.com/api/v3/simple/price?ids=canton-network,bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true';
+
+  function fmtUsdLarge(n: number): string {
+    return (
+      '$' +
+      n.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })
+    );
+  }
+
+  function formatSatsPerCc(sats: number, btcPerCc: number, localeTag: string): { prefix: string; value: string } {
+    if (!Number.isFinite(sats) || sats <= 0 || !Number.isFinite(btcPerCc) || btcPerCc <= 0) {
+      return { prefix: '', value: '--' };
+    }
+    const prefix = '≈ ';
+    if (sats >= 0.01) {
+      return {
+        prefix,
+        value: sats.toLocaleString(localeTag, { maximumFractionDigits: 4, minimumFractionDigits: 2 }),
+      };
+    }
+    if (sats >= 1e-6) {
+      return { prefix, value: sats.toFixed(8).replace(/\.?0+$/, '') || '0' };
+    }
+    return {
+      prefix,
+      value: `${sats.toExponential(3)} (${btcPerCc.toExponential(3)} BTC)`,
+    };
+  }
 
   async function fetchPrice() {
+    const root = document.getElementById('coin-ticker');
+    const localeTag = root?.dataset.locale || 'en-US';
+
+    const btcPriceEl = document.getElementById('btc-price');
+    const btcChangeEl = document.getElementById('btc-change');
+    const ccPriceEl = document.getElementById('cc-price');
+    const ccChangeEl = document.getElementById('cc-change');
+    const ccExtraEl = document.getElementById('cc-extra');
+    const ccbtcPrefixEl = document.getElementById('ccbtc-prefix');
+    const ccbtcValueEl = document.getElementById('ccbtc-value');
+    if (!btcPriceEl || !btcChangeEl || !ccPriceEl || !ccChangeEl || !ccExtraEl || !ccbtcPrefixEl || !ccbtcValueEl) return;
+
     try {
       const res = await fetch(API);
       if (!res.ok) return;
       const data = await res.json();
       const cc = data['canton-network'];
-      if (!cc) return;
+      const btc = data['bitcoin'];
+      if (!cc || !btc) return;
 
-      const priceEl = document.getElementById('cc-price');
-      const changeEl = document.getElementById('cc-change');
-      const extraEl = document.getElementById('cc-extra');
-      if (!priceEl || !changeEl || !extraEl) return;
+      const ccUsd = cc.usd;
+      const btcUsd = btc.usd;
+      if (typeof ccUsd !== 'number' || typeof btcUsd !== 'number' || btcUsd <= 0) return;
 
-      const price = cc.usd;
+      btcPriceEl.textContent = fmtUsdLarge(btcUsd);
+      const btcChg = btc.usd_24h_change;
+      if (btcChg !== undefined && btcChg !== null) {
+        const sign = btcChg >= 0 ? '+' : '';
+        btcChangeEl.textContent = `${sign}${btcChg.toFixed(2)}%`;
+        btcChangeEl.classList.remove('up', 'down');
+        btcChangeEl.classList.add(btcChg >= 0 ? 'up' : 'down');
+      } else {
+        btcChangeEl.textContent = '';
+        btcChangeEl.classList.remove('up', 'down');
+      }
+
+      ccPriceEl.textContent = `$${ccUsd.toFixed(4)}`;
       const change = cc.usd_24h_change;
-      const mcap = cc.usd_market_cap;
-      const vol = cc.usd_24h_vol;
-
-      priceEl.textContent = `$${price.toFixed(4)}`;
-
       if (change !== undefined && change !== null) {
         const sign = change >= 0 ? '+' : '';
-        changeEl.textContent = `${sign}${change.toFixed(2)}%`;
-        changeEl.classList.add(change >= 0 ? 'up' : 'down');
+        ccChangeEl.textContent = `${sign}${change.toFixed(2)}%`;
+        ccChangeEl.classList.remove('up', 'down');
+        ccChangeEl.classList.add(change >= 0 ? 'up' : 'down');
+      } else {
+        ccChangeEl.textContent = '';
+        ccChangeEl.classList.remove('up', 'down');
       }
 
       const parts: string[] = [];
+      const mcap = cc.usd_market_cap;
+      const vol = cc.usd_24h_vol;
       if (mcap) parts.push(`MCap $${fmt(mcap)}`);
       if (vol) parts.push(`Vol $${fmt(vol)}`);
-      if (parts.length) extraEl.textContent = parts.join(' · ');
+      ccExtraEl.textContent = parts.length ? parts.join(' · ') : '';
+
+      const btcPerCc = ccUsd / btcUsd;
+      const satsPerCc = btcPerCc * 1e8;
+      const { prefix, value } = formatSatsPerCc(satsPerCc, btcPerCc, localeTag);
+      ccbtcPrefixEl.textContent = prefix;
+      ccbtcValueEl.textContent = value;
     } catch {
-      /* silent — ticker stays as "--" */
+      /* silent */
     }
   }
 
@@ -65,21 +157,46 @@ const { label = 'Canton Coin (CC)' } = Astro.props;
 
 <style>
   .coin-ticker {
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 0.55rem 1rem;
+    padding: 0.65rem 1rem 0.55rem;
     font-size: 0.95rem;
     margin-top: 1.5rem;
+    max-width: 36rem;
+  }
+
+  .coin-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .coin-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .coin-row-pair {
+    padding-top: 0.25rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.88rem;
   }
 
   .coin-label {
     font-weight: 600;
     color: var(--text);
+  }
+
+  .coin-label-muted {
+    font-weight: 600;
+    color: var(--muted);
   }
 
   .coin-price {
@@ -104,6 +221,38 @@ const { label = 'Canton Coin (CC)' } = Astro.props;
 
   .coin-extra {
     font-size: 0.82rem;
+    color: var(--muted);
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .coin-pair-wrap {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+
+  .coin-pair-prefix {
+    color: var(--muted);
+  }
+
+  .coin-pair-value {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .coin-pair-unit {
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+
+  .coin-footnote {
+    margin: 0.15rem 0 0;
+    font-size: 0.75rem;
+    line-height: 1.35;
     color: var(--muted);
   }
 </style>
