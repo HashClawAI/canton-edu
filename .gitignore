@@ -5,3 +5,5 @@ dist
 *.log
 .env
 .env.*
+# Built at `npm run build` (CoinGecko); not committed — CI regenerates.
+public/generated/*.svg

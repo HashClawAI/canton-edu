@@ -58,7 +58,7 @@ All text lives in **one file**: `src/i18n/translations.ts`
 | Page layout / new sections | `src/pages/*.astro` (EN) + `src/pages/zh/*.astro` (ZH) |
 | Styles | `src/styles/global.css` |
 | Navigation | Auto-generated from `translations.nav` via `src/components/Nav.astro` |
-| Live CC price + implied sats/CC history chart | `src/components/CoinPrice.astro` (CoinGecko `simple/price` + `market_chart`, no key) |
+| Live CC price + static implied sats/CC chart | `CoinPrice.astro` (browser: CoinGecko `simple/price` only). Chart SVG is **`npm run chart:build`** → `public/generated/cc-sats-chart-*.svg` before `astro build`. |
 
 ---
 

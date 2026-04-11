@@ -27,10 +27,9 @@ export const translations = {
       coinPriceSatPerCcUnit: 'sats / CC',
       coinPriceChartTitle: 'Implied sats per CC (USD cross)',
       coinPriceChartSubtitle:
-        'Full CoinGecko history for CC (longest available range vs BTC USD) · EMA-smoothed · markers = historical raw implied min & max',
-      coinPriceChartHigh: 'High',
-      coinPriceChartLow: 'Low',
-      coinPriceLiveSatsLabel: 'Live implied sats / CC (now)',
+        'Pre-rendered at each site build from CoinGecko (longest available range vs BTC USD) · EMA-smoothed curve · markers: Raw high / Raw low (unsmoothed implied series) and series end (build-time). Live BTC/CC row above refreshes in the browser.',
+      coinPriceChartBuildHint:
+        'Chart SVG is generated at build time. Run `npm run chart:build` locally, or `npm run build`, then refresh.',
       cardWhatTitle: 'What is Canton?',
       cardWhatBody:
         'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 45+ Super Validators.',
@@ -567,10 +566,9 @@ export const translations = {
       coinPriceSatPerCcUnit: '聪 / CC',
       coinPriceChartTitle: '推算 聪 / CC（美元交叉）',
       coinPriceChartSubtitle:
-        'CoinGecko 上 CC 可取得的最长历史（相对 BTC 美元价交叉）· EMA 平滑 · 圆点标注历史 raw 推算最高 / 最低',
-      coinPriceChartHigh: '最高',
-      coinPriceChartLow: '最低',
-      coinPriceLiveSatsLabel: '实时推算 聪 / CC（当前）',
+        '每次站点构建时由 CoinGecko 预渲染（相对 BTC 美元价交叉的最长可用区间）· EMA 平滑曲线 · 图上圆点：Raw 最高点 / Raw 最低点（未平滑推算）与序列末端（构建时刻）。上方 BTC/CC 行仍在浏览器内刷新。',
+      coinPriceChartBuildHint:
+        '走势图在构建时生成 SVG。本地可运行 `npm run chart:build` 或 `npm run build` 后刷新页面。',
       cardWhatTitle: 'Canton 是什么？',
       cardWhatBody:
         '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 45+ Super Validator 支撑。',

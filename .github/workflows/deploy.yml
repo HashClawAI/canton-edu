@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Daily ~08:00 UTC — rebuild static chart + Pages so implied sats/CC history stays current without client crunch.
+    - cron: '0 8 * * *'
 
 permissions:
   contents: read

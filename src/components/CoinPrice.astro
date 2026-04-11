@@ -8,9 +8,7 @@ interface Props {
   satPerCcUnit: string;
   chartTitle: string;
   chartSubtitle: string;
-  chartHighLabel: string;
-  chartLowLabel: string;
-  liveSatsLabel: string;
+  chartBuildHint: string;
 }
 
 const {
@@ -22,11 +20,10 @@ const {
   satPerCcUnit,
   chartTitle,
   chartSubtitle,
-  chartHighLabel,
-  chartLowLabel,
-  liveSatsLabel,
+  chartBuildHint,
 } = Astro.props;
 const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
+const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale === 'zh' ? 'zh' : 'en'}.svg`;
 ---
 
 <div class="coin-ticker" id="coin-ticker" data-locale={loc}>
@@ -53,48 +50,26 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     <p class="coin-footnote">{ccBtcFootnote}</p>
   </div>
 
-  <div class="coin-live-strip" id="coin-live-strip" hidden>
-    <div class="coin-live-strip-inner">
-      <span class="coin-chart-title coin-live-strip-label">{liveSatsLabel}</span>
-      <span class="coin-live-strip-nums">
-        <span class="coin-live-strip-prefix" id="coin-live-sats-prefix"></span>
-        <span class="coin-live-strip-value" id="coin-live-sats-value">--</span>
-        <span class="coin-live-strip-unit">{satPerCcUnit}</span>
-      </span>
-    </div>
-  </div>
-
-  <div
-    class="coin-chart"
-    id="coin-chart"
-    hidden
-    data-label-high={chartHighLabel}
-    data-label-low={chartLowLabel}
-  >
+  <div class="coin-chart" id="coin-chart">
     <div class="coin-chart-head">
       <span class="coin-chart-title">{chartTitle}</span>
       <span class="coin-chart-sub">{chartSubtitle}</span>
     </div>
-    <svg
-      class="coin-chart-svg"
-      id="coin-chart-svg"
-      viewBox="0 0 420 156"
-      preserveAspectRatio="none"
-      role="img"
-      aria-labelledby="coin-chart-aria-title"
-    >
-      <title id="coin-chart-aria-title">{chartTitle}</title>
-      <defs>
-        <linearGradient id="coin-chart-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#3d8bfd" stop-opacity="0.28"></stop>
-          <stop offset="100%" stop-color="#3d8bfd" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-      <path id="coin-chart-area" class="coin-chart-area" d="" fill="url(#coin-chart-fill)"></path>
-      <path id="coin-chart-line" class="coin-chart-line" d="" fill="none"></path>
-      <g id="coin-chart-markers" class="coin-chart-markers" aria-hidden="true"></g>
-    </svg>
-    <div class="coin-chart-axis" id="coin-chart-axis" aria-hidden="true"></div>
+    <div class="coin-chart-img-wrap">
+      <img
+        id="coin-chart-img"
+        class="coin-chart-img"
+        src={chartSrc}
+        alt={chartTitle}
+        width="420"
+        height="156"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="coin-chart-fallback" id="coin-chart-fallback" hidden>
+        {chartBuildHint}
+      </p>
+    </div>
   </div>
 </div>
 
@@ -102,13 +77,11 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
   const API =
     'https://api.coingecko.com/api/v3/simple/price?ids=canton-network,bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true';
 
-  const W = 420;
-  const H = 156;
-  const PAD = { t: 22, r: 10, b: 26, l: 10 };
-  const IW = W - PAD.l - PAD.r;
-  const IH = H - PAD.t - PAD.b;
-  const CHART_MAX_POINTS = 850;
-  const DAY_TRIES = ['max', '365', '180', '90'] as const;
+  document.getElementById('coin-chart-img')?.addEventListener('error', (ev) => {
+    const img = ev.currentTarget;
+    if (img instanceof HTMLImageElement) img.style.display = 'none';
+    document.getElementById('coin-chart-fallback')?.removeAttribute('hidden');
+  });
 
   function fmtUsdLarge(n: number): string {
     return (
@@ -147,252 +120,6 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     return n.toFixed(0);
   }
 
-  type Pt = [number, number];
-
-  function sortByTime(pairs: Pt[]): Pt[] {
-    return [...pairs].sort((a, b) => a[0] - b[0]);
-  }
-
-  function interpolateY(points: Pt[], x: number): number | null {
-    if (points.length === 0) return null;
-    if (x <= points[0][0]) return points[0][1];
-    const last = points[points.length - 1];
-    if (x >= last[0]) return last[1];
-    let lo = 0;
-    let hi = points.length - 1;
-    while (hi - lo > 1) {
-      const mid = (lo + hi) >> 1;
-      if (points[mid][0] <= x) lo = mid;
-      else hi = mid;
-    }
-    const [x0, y0] = points[lo];
-    const [x1, y1] = points[hi];
-    if (x1 <= x0) return y0;
-    return y0 + ((x - x0) / (x1 - x0)) * (y1 - y0);
-  }
-
-  function emaSeries(values: number[], alpha: number): number[] {
-    const out: number[] = [];
-    let e = values[0];
-    for (const v of values) {
-      e = alpha * v + (1 - alpha) * e;
-      out.push(e);
-    }
-    return out;
-  }
-
-  function smoothCurveAdaptive(sats: number[]): number[] {
-    const n = sats.length;
-    const a = Math.max(0.03, Math.min(0.14, 95 / n));
-    const b = Math.max(0.05, Math.min(0.22, 130 / n));
-    return emaSeries(emaSeries(sats, a), b);
-  }
-
-  function argMinMax(arr: number[]): { iMin: number; iMax: number } {
-    let iMin = 0;
-    let iMax = 0;
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i] < arr[iMin]) iMin = i;
-      if (arr[i] > arr[iMax]) iMax = i;
-    }
-    return { iMin, iMax };
-  }
-
-  function pickPlotIndices(n: number, maxPts: number, iMin: number, iMax: number): number[] {
-    const s = new Set<number>();
-    s.add(0);
-    s.add(n - 1);
-    s.add(iMin);
-    s.add(iMax);
-    const k = Math.max(1, Math.ceil(n / maxPts));
-    for (let i = 0; i < n; i += k) s.add(i);
-    return [...s].sort((a, b) => a - b).filter((i) => i >= 0 && i < n);
-  }
-
-  async function fetchMarketChart(coinId: string, days: string): Promise<Pt[] | null> {
-    const url = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`;
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const j = (await res.json()) as { prices?: Pt[] };
-    const p = j.prices;
-    if (!Array.isArray(p) || p.length < 4) return null;
-    return p;
-  }
-
-  async function fetchAlignedCharts(): Promise<{ cc: Pt[]; btc: Pt[]; days: string } | null> {
-    for (const days of DAY_TRIES) {
-      const [cc, btc] = await Promise.all([
-        fetchMarketChart('canton-network', days),
-        fetchMarketChart('bitcoin', days),
-      ]);
-      if (cc && btc) return { cc, btc, days };
-    }
-    return null;
-  }
-
-  function buildSatsSeries(ccPrices: Pt[], btcPrices: Pt[]): { t: number; sats: number }[] {
-    const cc = sortByTime(ccPrices);
-    const btc = sortByTime(btcPrices);
-    const out: { t: number; sats: number }[] = [];
-    for (const [t, ccUsd] of cc) {
-      if (typeof ccUsd !== 'number' || ccUsd <= 0) continue;
-      const btcUsd = interpolateY(btc, t);
-      if (btcUsd == null || btcUsd <= 0) continue;
-      out.push({ t, sats: (ccUsd / btcUsd) * 1e8 });
-    }
-    return out;
-  }
-
-  function ySvg(v: number, ymin: number, ymax: number): number {
-    const span = ymax - ymin || 1;
-    const n = (v - ymin) / span;
-    return PAD.t + (1 - n) * IH;
-  }
-
-  function pathFromTimeSeries(
-    plot: { t: number; y: number }[],
-    tMin: number,
-    tMax: number,
-    ymin: number,
-    ymax: number,
-  ): { line: string; area: string } {
-    if (plot.length < 2) return { line: '', area: '' };
-    const spanT = tMax - tMin || 1;
-    const xOf = (t: number) => PAD.l + ((t - tMin) / spanT) * IW;
-    const pts = plot.map((p) => [xOf(p.t), ySvg(p.y, ymin, ymax)] as const);
-    let d = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
-    for (let i = 1; i < pts.length; i++) {
-      d += ` L ${pts[i][0].toFixed(1)} ${pts[i][1].toFixed(1)}`;
-    }
-    const y0 = PAD.t + IH;
-    const area = `${d} L ${pts[pts.length - 1][0].toFixed(1)} ${y0} L ${pts[0][0].toFixed(1)} ${y0} Z`;
-    return { line: d, area };
-  }
-
-  function svgMarker(
-    g: SVGGElement,
-    x: number,
-    y: number,
-    label: string,
-    valueLine: string,
-    kind: 'hi' | 'lo',
-    labelNudgeX = 0,
-  ): void {
-    const NS = 'http://www.w3.org/2000/svg';
-    const tx = x + labelNudgeX;
-    const anchor =
-      tx < PAD.l + IW * 0.22 ? 'start' : tx > PAD.l + IW * 0.78 ? 'end' : 'middle';
-    const dy1 = kind === 'hi' ? -10 : 12;
-    const dy2 = kind === 'hi' ? -22 : 24;
-    const c = document.createElementNS(NS, 'circle');
-    c.setAttribute('cx', String(x));
-    c.setAttribute('cy', String(y));
-    c.setAttribute('r', '4');
-    c.setAttribute('class', kind === 'hi' ? 'chart-marker chart-marker-hi' : 'chart-marker chart-marker-lo');
-    g.appendChild(c);
-    const t1 = document.createElementNS(NS, 'text');
-    t1.setAttribute('x', String(tx));
-    t1.setAttribute('y', String(y + dy1));
-    t1.setAttribute('text-anchor', anchor);
-    t1.setAttribute('class', 'chart-marker-text');
-    /* SVG nodes from script do not get Astro scoped attributes — set fill explicitly */
-    t1.setAttribute('fill', '#e8edf4');
-    t1.textContent = label;
-    g.appendChild(t1);
-    const t2 = document.createElementNS(NS, 'text');
-    t2.setAttribute('x', String(tx));
-    t2.setAttribute('y', String(y + dy2));
-    t2.setAttribute('text-anchor', anchor);
-    t2.setAttribute('class', 'chart-marker-sub');
-    t2.setAttribute('fill', 'rgba(232, 237, 244, 0.9)');
-    t2.textContent = valueLine;
-    g.appendChild(t2);
-  }
-
-  async function fetchChart(): Promise<void> {
-    const wrap = document.getElementById('coin-chart');
-    const root = document.getElementById('coin-ticker');
-    const localeTag = root?.dataset.locale || 'en-US';
-    const lineEl = document.getElementById('coin-chart-line');
-    const areaEl = document.getElementById('coin-chart-area');
-    const axisEl = document.getElementById('coin-chart-axis');
-    const markersG = document.getElementById('coin-chart-markers') as SVGGElement | null;
-    if (!wrap || !lineEl || !areaEl || !axisEl || !markersG) return;
-
-    try {
-      const pack = await fetchAlignedCharts();
-      if (!pack) return;
-      const { cc: ccP, btc: btcP, days } = pack;
-
-      const series = buildSatsSeries(ccP, btcP);
-      if (series.length < 6) return;
-
-      const tMin = series[0].t;
-      const tMax = series[series.length - 1].t;
-      const raw = series.map((s) => s.sats);
-      const { iMin, iMax } = argMinMax(raw);
-      const smoothed = smoothCurveAdaptive(raw);
-
-      let ymin = Math.min(...smoothed);
-      let ymax = Math.max(...smoothed);
-      const pad = (ymax - ymin) * 0.1 || Math.abs(ymin) * 0.002 || 1e-6;
-      ymin -= pad;
-      ymax += pad;
-
-      const spanT = tMax - tMin || 1;
-      const xOf = (t: number) => PAD.l + ((t - tMin) / spanT) * IW;
-
-      const ix = pickPlotIndices(series.length, CHART_MAX_POINTS, iMin, iMax);
-      const plot = ix.map((i) => ({ t: series[i].t, y: smoothed[i] }));
-      const { line, area } = pathFromTimeSeries(plot, tMin, tMax, ymin, ymax);
-      lineEl.setAttribute('d', line);
-      areaEl.setAttribute('d', area);
-
-      markersG.replaceChildren();
-      const hiLbl = wrap.dataset.labelHigh || 'High';
-      const loLbl = wrap.dataset.labelLow || 'Low';
-      const dfmt: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
-
-      const fmtSats = (v: number) =>
-        v.toLocaleString(localeTag, { maximumFractionDigits: 4, minimumFractionDigits: 2 });
-
-      const xHi = xOf(series[iMax].t);
-      const xLo = xOf(series[iMin].t);
-      const yHi = ySvg(smoothed[iMax], ymin, ymax);
-      const yLo = ySvg(smoothed[iMin], ymin, ymax);
-      const loNudge = iMin !== iMax && Math.abs(xHi - xLo) < 42 ? 26 : 0;
-
-      svgMarker(
-        markersG,
-        xHi,
-        yHi,
-        hiLbl,
-        `${fmtSats(raw[iMax])} · ${new Date(series[iMax].t).toLocaleDateString(localeTag, dfmt)}`,
-        'hi',
-        0,
-      );
-      if (iMin !== iMax) {
-        svgMarker(
-          markersG,
-          xLo,
-          yLo,
-          loLbl,
-          `${fmtSats(raw[iMin])} · ${new Date(series[iMin].t).toLocaleDateString(localeTag, dfmt)}`,
-          'lo',
-          loNudge,
-        );
-      }
-
-      const t0 = new Date(tMin).toLocaleDateString(localeTag, dfmt);
-      const t1 = new Date(tMax).toLocaleDateString(localeTag, dfmt);
-      axisEl.textContent = `${t0} — ${t1} · ${series.length} pts · CoinGecko days=${days}`;
-
-      wrap.hidden = false;
-    } catch {
-      /* silent */
-    }
-  }
-
   async function fetchPrice() {
     const root = document.getElementById('coin-ticker');
     const localeTag = root?.dataset.locale || 'en-US';
@@ -404,9 +131,6 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     const ccExtraEl = document.getElementById('cc-extra');
     const ccbtcPrefixEl = document.getElementById('ccbtc-prefix');
     const ccbtcValueEl = document.getElementById('ccbtc-value');
-    const liveStrip = document.getElementById('coin-live-strip');
-    const livePrefixEl = document.getElementById('coin-live-sats-prefix');
-    const liveValueEl = document.getElementById('coin-live-sats-value');
     if (!btcPriceEl || !btcChangeEl || !ccPriceEl || !ccChangeEl || !ccExtraEl || !ccbtcPrefixEl || !ccbtcValueEl) return;
 
     try {
@@ -457,12 +181,6 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
       const { prefix, value } = formatSatsPerCc(satsPerCc, btcPerCc, localeTag);
       ccbtcPrefixEl.textContent = prefix;
       ccbtcValueEl.textContent = value;
-
-      if (liveStrip && livePrefixEl && liveValueEl) {
-        livePrefixEl.textContent = prefix;
-        liveValueEl.textContent = value;
-        liveStrip.hidden = false;
-      }
     } catch {
       /* silent */
     }
@@ -470,8 +188,6 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
 
   fetchPrice();
   setInterval(fetchPrice, 60_000);
-  fetchChart();
-  setInterval(fetchChart, 1_800_000);
 </script>
 
 <style>
@@ -575,52 +291,6 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     color: var(--muted);
   }
 
-  .coin-live-strip {
-    margin-top: 0.85rem;
-    padding-top: 0.65rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .coin-live-strip-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .coin-live-strip-label {
-    display: block;
-    line-height: 1.35;
-  }
-
-  .coin-live-strip-nums {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.25rem 0.45rem;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .coin-live-strip-prefix {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--text);
-    opacity: 0.88;
-  }
-
-  .coin-live-strip-value {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  .coin-live-strip-unit {
-    font-size: 0.72rem;
-    line-height: 1.35;
-    font-weight: 400;
-    color: var(--text);
-    opacity: 0.88;
-  }
-
   .coin-chart {
     margin-top: 0.85rem;
     padding-top: 0.75rem;
@@ -646,60 +316,24 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     color: var(--muted);
   }
 
-  .coin-chart-svg {
+  .coin-chart-img-wrap {
+    margin-top: 0.15rem;
+  }
+
+  .coin-chart-img {
     display: block;
     width: 100%;
-    height: 168px;
-    overflow: visible;
+    height: auto;
+    max-height: 168px;
+    object-fit: contain;
+    object-position: left center;
+    background: transparent;
   }
 
-  /* :global — markers are created in client script, outside Astro scoped selectors */
-  :global(#coin-chart-markers .chart-marker) {
-    fill: var(--bg);
-    stroke-width: 2;
-    vector-effect: non-scaling-stroke;
-  }
-
-  :global(#coin-chart-markers .chart-marker-hi) {
-    stroke: #4ade80;
-  }
-
-  :global(#coin-chart-markers .chart-marker-lo) {
-    stroke: #f87171;
-  }
-
-  :global(#coin-chart-markers .chart-marker-text) {
-    font-size: 0.82rem;
-    font-weight: 600;
-    fill: #e8edf4;
-    font-family: var(--font-sans);
-  }
-
-  :global(#coin-chart-markers .chart-marker-sub) {
+  .coin-chart-fallback {
+    margin: 0.35rem 0 0;
     font-size: 0.72rem;
-    font-weight: 400;
-    fill: rgba(232, 237, 244, 0.9);
-    font-family: var(--font-sans);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .coin-chart-line {
-    stroke: var(--accent);
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    vector-effect: non-scaling-stroke;
-  }
-
-  .coin-chart-area {
-    stroke: none;
-  }
-
-  .coin-chart-axis {
-    margin-top: 0.35rem;
-    font-size: 0.7rem;
     line-height: 1.35;
     color: var(--muted);
-    font-variant-numeric: tabular-nums;
   }
 </style>

@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "chart:build": "node scripts/build-sats-chart.mjs",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run chart:build && astro build",
     "preview": "astro preview",
     "debug:pages-dns": "node scripts/debug-pages-dns.mjs"
   },
