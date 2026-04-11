@@ -1,0 +1,516 @@
+---
+/**
+ * Standalone visual preview — Linear-ish, blue-tinted dark theme.
+ * Not linked from nav. Does NOT import global.css; safe to delete this file to remove.
+ * Merge later by copying :root tokens from <style> into src/styles/global.css gradually.
+ */
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>主题 Demo（蓝调）· 预览专用</title>
+    <meta
+      name="description"
+      content="Canton Tools theme sandbox — not the live site chrome."
+    />
+  </head>
+  <body>
+    <div class="td-wrap">
+      <header class="td-topbar">
+        <a class="td-back" href={`${base}`}>← 返回主站</a>
+        <span class="td-badge">Preview only · 未合并样式</span>
+      </header>
+
+      <p class="td-disclaimer">
+        <strong>全站已合并同款色板与背景渐变</strong>（见 <code>src/styles/global.css</code> 的 <code>:root</code> 与
+        <code>html</code>）。本页仍<strong>不加载</strong>全站 CSS，仅作 A/B：下方色条与主站并排对比；主站实时效果请打开
+        <a href={`${base}`}>首页</a>。
+      </p>
+
+      <div class="td-compare" aria-label="主站与 Demo 底色对比">
+        <div class="td-compare-item">
+          <span class="td-compare-swatch td-compare-live"></span>
+          <div class="td-compare-text">
+            <strong>现全站实心底</strong>
+            <span><code>--bg</code> ≈ <code>#050810</code>（与 global 一致）</span>
+          </div>
+        </div>
+        <div class="td-compare-item">
+          <span class="td-compare-swatch td-compare-demo"></span>
+          <div class="td-compare-text">
+            <strong>本 Demo</strong>
+            <span>蓝月光渐变 + 面板 <code>#121c35</code> 系</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="td-hero">
+        <h1 class="td-hero-title">Canton Tools</h1>
+        <p class="td-hero-lead">
+          与主站的差别主要在：<strong>整屏冷蓝氛围</strong>（顶部光晕）、<strong>更「靛」的面板色</strong>、<strong>更亮的蓝描边</strong>；组件结构仍可与现站对齐，便于日后合并。
+        </p>
+        <div class="td-actions">
+          <a class="td-btn td-btn-primary" href="#">主按钮</a>
+          <a class="td-btn td-btn-ghost" href="#">次要</a>
+        </div>
+      </section>
+
+      <section class="td-section">
+        <h2 class="td-h2">卡片网格</h2>
+        <div class="td-cards">
+          <article class="td-card">
+            <h3 class="td-h3">学习路径</h3>
+            <p class="td-muted">正文与说明使用略冷的灰色，边框极细。</p>
+          </article>
+          <article class="td-card">
+            <h3 class="td-h3">动态 / CIPs</h3>
+            <p class="td-muted">Hover 时边框与背景微亮，不用大阴影。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="td-section">
+        <h2 class="td-h2">价格模块示意</h2>
+        <div class="td-ticker">
+          <div class="td-ticker-row">
+            <span class="td-label">Bitcoin (BTC)</span>
+            <span class="td-value">$98,432.10</span>
+            <span class="td-up">+1.2%</span>
+          </div>
+          <div class="td-ticker-row">
+            <span class="td-label">Canton Coin (CC)</span>
+            <span class="td-value">$0.1420</span>
+            <span class="td-down">−0.4%</span>
+          </div>
+          <div class="td-ticker-row td-ticker-divider">
+            <span class="td-label-soft">CC / BTC</span>
+            <span class="td-value-soft">≈ 144.12 <span class="td-unit">聪 / CC</span></span>
+          </div>
+          <div class="td-chart-placeholder">
+            <span>图表区域（构建时 SVG）</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="td-section">
+        <h2 class="td-h2">导航条示意</h2>
+        <nav class="td-nav" aria-label="Demo nav">
+          <span class="td-nav-brand">Canton Tools</span>
+          <a class="td-nav-link" href="#">学习</a>
+          <a class="td-nav-link td-nav-current" href="#" aria-current="page">首页</a>
+          <a class="td-nav-link" href="#">动态</a>
+        </nav>
+      </section>
+
+      <footer class="td-foot">
+        <p>Token 命名建议：合并到全站时用 <code>--bg</code> 等替换本页 <code>--td-*</code>，并保留一份 Git 提交便于回退。</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  /* Demo-only: entire document uses these rules; page does not use BaseLayout / global.css */
+  html {
+    font-family:
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Roboto,
+      'PingFang SC',
+      'Microsoft YaHei',
+      sans-serif;
+    color: var(--td-text, #e8eef8);
+    line-height: 1.55;
+    min-height: 100vh;
+    /* 与主站 #0c0f14 拉开：多层蓝紫径向 + 深靛底 */
+    background-color: #050811;
+    background-image:
+      radial-gradient(ellipse 130% 85% at 50% -30%, rgba(88, 140, 255, 0.38), transparent 55%),
+      radial-gradient(ellipse 75% 60% at 105% 8%, rgba(60, 100, 220, 0.18), transparent 50%),
+      radial-gradient(ellipse 65% 55% at -8% 75%, rgba(40, 70, 160, 0.12), transparent 42%),
+      linear-gradient(185deg, #0c1530 0%, #070d1c 42%, #050810 100%);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .td-wrap {
+    --td-bg: transparent;
+    --td-bg-elevated: rgba(14, 22, 48, 0.72);
+    --td-surface: #121c35;
+    --td-surface-hover: #182445;
+    --td-border: rgba(140, 185, 255, 0.26);
+    --td-border-strong: rgba(170, 205, 255, 0.45);
+    --td-text: #eef3ff;
+    --td-muted: #94a8cc;
+    --td-accent: #6eb0ff;
+    --td-accent-soft: rgba(100, 160, 255, 0.18);
+    --td-accent-dim: #4a8ae8;
+    --td-radius: 10px;
+    --td-radius-sm: 8px;
+    --td-up: #5eead4;
+    --td-down: #fb923c;
+
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+    box-sizing: border-box;
+  }
+
+  .td-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--td-border);
+  }
+
+  .td-back {
+    color: var(--td-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .td-back:hover {
+    color: var(--td-accent-dim);
+    text-decoration: underline;
+  }
+
+  .td-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--td-muted);
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--td-border);
+    border-radius: 999px;
+    background: var(--td-accent-soft);
+  }
+
+  .td-disclaimer {
+    margin: 0 0 1.75rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--td-muted);
+    background: var(--td-surface);
+    border: 1px solid var(--td-border);
+    border-radius: var(--td-radius-sm);
+    border-left: 3px solid var(--td-accent);
+  }
+
+  .td-disclaimer code {
+    font-size: 0.78em;
+    color: var(--td-accent);
+  }
+
+  .td-disclaimer a {
+    color: var(--td-accent);
+    font-weight: 600;
+  }
+
+  .td-compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .td-compare-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    background: rgba(8, 14, 32, 0.55);
+    border: 1px solid var(--td-border);
+    border-radius: var(--td-radius-sm);
+  }
+
+  .td-compare-swatch {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .td-compare-live {
+    background: #050810;
+  }
+
+  .td-compare-demo {
+    background: linear-gradient(145deg, #1a3270 0%, #121c35 55%, #0d1528 100%);
+  }
+
+  .td-compare-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: var(--td-muted);
+  }
+
+  .td-compare-text strong {
+    color: var(--td-text);
+    font-size: 0.82rem;
+  }
+
+  .td-compare-text code {
+    font-size: 0.74em;
+    color: var(--td-accent);
+  }
+
+  .td-hero {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .td-hero-title {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.65rem, 3.5vw, 2.15rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(105deg, #fff 0%, #d4e6ff 38%, #7eb8ff 88%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .td-hero-lead {
+    margin: 0 0 1.25rem;
+    max-width: 38rem;
+    font-size: 1.02rem;
+    color: var(--td-muted);
+  }
+
+  .td-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .td-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--td-radius-sm);
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      background 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .td-btn-primary {
+    background: linear-gradient(180deg, #5ea0f8 0%, var(--td-accent-dim) 100%);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  }
+
+  .td-btn-primary:hover {
+    filter: brightness(1.05);
+    text-decoration: none;
+  }
+
+  .td-btn-ghost {
+    background: transparent;
+    color: var(--td-text);
+    border: 1px solid var(--td-border-strong);
+  }
+
+  .td-btn-ghost:hover {
+    background: var(--td-surface-hover);
+    border-color: var(--td-accent);
+    text-decoration: none;
+  }
+
+  .td-section {
+    margin-top: 2rem;
+  }
+
+  .td-h2 {
+    margin: 0 0 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--td-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .td-cards {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .td-card {
+    padding: 1.1rem 1.15rem;
+    background: var(--td-surface);
+    border: 1px solid var(--td-border);
+    border-radius: var(--td-radius);
+    transition:
+      border-color 0.15s ease,
+      background 0.15s ease;
+  }
+
+  .td-card:hover {
+    background: var(--td-surface-hover);
+    border-color: var(--td-border-strong);
+    box-shadow: 0 0 0 1px rgba(110, 176, 255, 0.12), 0 12px 40px rgba(0, 20, 60, 0.35);
+  }
+
+  .td-h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--td-text);
+  }
+
+  .td-muted {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--td-muted);
+    line-height: 1.45;
+  }
+
+  .td-ticker {
+    background: var(--td-bg-elevated);
+    border: 1px solid var(--td-border-strong);
+    border-radius: var(--td-radius);
+    padding: 0.75rem 1rem 1rem;
+    box-shadow: 0 0 32px rgba(60, 120, 220, 0.08) inset;
+  }
+
+  .td-ticker-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
+    padding: 0.35rem 0;
+    font-size: 0.92rem;
+  }
+
+  .td-ticker-divider {
+    margin-top: 0.35rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--td-border);
+  }
+
+  .td-label {
+    font-weight: 600;
+    color: var(--td-text);
+    min-width: 8rem;
+  }
+
+  .td-value {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--td-text);
+  }
+
+  .td-up,
+  .td-down {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .td-up {
+    color: var(--td-up);
+  }
+
+  .td-down {
+    color: var(--td-down);
+  }
+
+  .td-label-soft {
+    font-weight: 600;
+    color: var(--td-muted);
+    min-width: 8rem;
+  }
+
+  .td-value-soft {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--td-muted);
+  }
+
+  .td-unit {
+    font-weight: 500;
+    font-size: 0.85em;
+  }
+
+  .td-chart-placeholder {
+    margin-top: 0.75rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--td-muted);
+    background: var(--td-surface);
+    border: 1px dashed var(--td-border-strong);
+    border-radius: var(--td-radius-sm);
+  }
+
+  .td-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.1rem;
+    padding: 0.65rem 1rem;
+    background: var(--td-bg-elevated);
+    border: 1px solid var(--td-border);
+    border-radius: var(--td-radius);
+  }
+
+  .td-nav-brand {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    color: var(--td-text);
+  }
+
+  .td-nav-link {
+    font-size: 0.9rem;
+    color: var(--td-muted);
+    text-decoration: none;
+    padding: 0.25rem 0.15rem;
+    border-radius: 4px;
+  }
+
+  .td-nav-link:hover {
+    color: var(--td-text);
+  }
+
+  .td-nav-current {
+    color: var(--td-text);
+    font-weight: 600;
+    box-shadow: 0 1px 0 var(--td-accent);
+  }
+
+  .td-foot {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--td-border);
+    font-size: 0.78rem;
+    color: var(--td-muted);
+  }
+
+  .td-foot code {
+    color: var(--td-accent);
+    font-size: 0.92em;
+  }
+</style>

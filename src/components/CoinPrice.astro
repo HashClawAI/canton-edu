@@ -200,11 +200,14 @@ const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale ==
     max-width: none;
     box-sizing: border-box;
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius);
     padding: 0.75rem 1.1rem 0.65rem;
     font-size: 0.95rem;
     margin-top: 1.5rem;
+    box-shadow:
+      0 0 0 1px rgba(0, 255, 100, 0.06),
+      0 0 28px rgba(0, 40, 20, 0.35) inset;
   }
 
   .coin-block {

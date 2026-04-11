@@ -14,6 +14,7 @@ interface Props {
 const { locale, title, description, navCurrent = 'home' } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -22,18 +23,22 @@ const siteTitle = `${title} · ${tr.siteName}`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <title>{siteTitle}</title>
   </head>
-  <body>
-    <Nav locale={locale} current={navCurrent} />
-    <main class="wrap">
-      <slot />
-    </main>
-    <footer class="site-footer">
-      <div class="wrap">
-        {tr.home.disclaimer}
-      </div>
-    </footer>
+  <body class="matrix-site">
+    <canvas id="mx-rain-canvas" class="mx-rain-layer" aria-hidden="true"></canvas>
+    <div class="site-layer">
+      <Nav locale={locale} current={navCurrent} />
+      <main class="wrap">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="wrap">
+          {tr.home.disclaimer}
+        </div>
+      </footer>
+    </div>
+    <script src={`${base}matrix-rain.js`} defer></script>
   </body>
 </html>

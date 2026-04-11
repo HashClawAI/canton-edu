@@ -1,0 +1,23 @@
+---
+/**
+ * Matrix 主题说明页：与全站共用 BaseLayout（同一套字符雨 + 样式）。
+ * 保留路由便于书签；主体验请直接访问首页。
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout locale="zh" title="Matrix 主题" description="全站终端雨与配色说明" navCurrent="home">
+  <section class="hero">
+    <h1>Matrix 风格已全站启用</h1>
+    <p class="lead">
+      背景为全页 Canvas 字符雨（系统开启「减少动态效果」时自动关闭）。正文使用等宽栈 + 磷光绿强调色；卡片与顶栏为半透明深绿底。
+    </p>
+    <p class="lead">
+      <a href={`${base}`}>返回中文首页</a>
+      ·
+      <a href={`${base}learn`}>学习路径</a>
+    </p>
+  </section>
+</BaseLayout>

@@ -47,6 +47,16 @@ const base = import.meta.env.BASE_URL;
     </article>
   </div>
 
+  <section class="build-sync-section" aria-labelledby="build-sync-heading">
+    <h2 id="build-sync-heading">{tr.home.buildSyncTitle}</h2>
+    <p class="build-sync-intro">{tr.home.buildSyncIntro}</p>
+    <ul class="build-sync-list">
+      {tr.home.buildSyncItems.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
   <section class="contribute-section">
     <h2>{tr.home.contributeTitle}</h2>
     <p>{tr.home.contributeBody}</p>

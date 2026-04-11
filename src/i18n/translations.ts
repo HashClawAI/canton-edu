@@ -30,6 +30,15 @@ export const translations = {
         'Pre-rendered at each site build from CoinGecko (longest available range vs BTC USD) · EMA-smoothed curve · markers: Raw high / Raw low (unsmoothed implied series) and latest data (series end, build-time; label right-aligned on chart). Live BTC/CC row above refreshes in the browser.',
       coinPriceChartBuildHint:
         'Chart SVG is generated at build time. Run `npm run chart:build` locally, or `npm run build`, then refresh.',
+      buildSyncTitle: 'Daily automated refresh',
+      buildSyncIntro:
+        'Each day at 20:00 China Standard Time (GMT+8), GitHub Actions runs a full build and deploy (runs may start up to about an hour later). Build-time refreshes below; narrative pages still follow the repo until you edit them or run the Cursor Skill.',
+      buildSyncItems: [
+        'Home: implied sats/CC chart (CoinGecko → static SVG) and live price row logic in the browser',
+        'CIPs: “hot topics” list from the public cip-discuss feed (Jina reader; optional Groups.io API key)',
+        'News: “Last updated” timestamp from the build clock',
+        'Site-wide: every static HTML route is regenerated on deploy',
+      ],
       cardWhatTitle: 'What is Canton?',
       cardWhatBody:
         'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 45+ Super Validators.',
@@ -569,6 +578,15 @@ export const translations = {
         '每次站点构建时由 CoinGecko 预渲染（相对 BTC 美元价交叉的最长可用区间）· EMA 平滑曲线 · 图上圆点：Raw 最高点 / Raw 最低点（未平滑推算）与「最新数据」（序列末端·构建时；文案在图右侧对齐）。上方 BTC/CC 行仍在浏览器内刷新。',
       coinPriceChartBuildHint:
         '走势图在构建时生成 SVG。本地可运行 `npm run chart:build` 或 `npm run build` 后刷新页面。',
+      buildSyncTitle: '定时同步说明',
+      buildSyncIntro:
+        '每日北京时间 20:00（GMT+8）由 GitHub Actions 触发一次完整构建与 Pages 部署（实际排队开始时间可能比计划晚约 1 小时内）。下列内容会在该次构建中自动拉取或刷新；其余栏目正文仍以仓库内容为准，可通过 Cursor Skill 或手动 PR 更新。',
+      buildSyncItems: [
+        '首页：聪 / CC 推算走势图（CoinGecko → 构建时 SVG）；BTC/CC 现价行仍在浏览器内请求',
+        'CIPs：公开 cip-discuss 邮件列表的热门话题（Jina 抓取；可选配置 Groups.io API）',
+        '动态：「上次更新时间」随本次构建时间刷新',
+        '全站：所有静态页面在部署时重新生成',
+      ],
       cardWhatTitle: 'Canton 是什么？',
       cardWhatBody:
         '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 45+ Super Validator 支撑。',
