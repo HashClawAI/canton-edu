@@ -1,14 +1,42 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { t } from '@/i18n/translations';
+import { fetchCipDiscussTopics } from '@/lib/fetchCipDiscussTopics';
 
 const locale = 'zh';
 const tr = t(locale);
+const discussTopics = await fetchCipDiscussTopics().catch(() => []);
 ---
 
 <BaseLayout locale={locale} title={tr.cips.title} description={tr.cips.intro} navCurrent="cips">
   <h1 class="page-title">{tr.cips.title}</h1>
   <p class="page-intro">{tr.cips.intro}</p>
+
+  <section class="section cip-discuss-section">
+    <h2>{tr.cips.discussTitle}</h2>
+    <p class="page-intro">{tr.cips.discussIntro}</p>
+    {
+      discussTopics.length > 0 ? (
+        <ul class="cip-discuss-list">
+          {discussTopics.map((topic) => (
+            <li>
+              <a href={topic.url} target="_blank" rel="noopener noreferrer">
+                {topic.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="cip-discuss-fallback">{tr.cips.discussUnavailable}</p>
+      )
+    }
+    <p class="cip-discuss-actions">
+      <a href={tr.cips.discussUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        {tr.cips.discussViewAll}
+      </a>
+    </p>
+    <p class="cip-discuss-footnote">{tr.cips.discussFootnote}</p>
+  </section>
 
   <p>
     <a href={tr.cips.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">

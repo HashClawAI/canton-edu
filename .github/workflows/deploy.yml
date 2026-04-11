@@ -30,6 +30,8 @@ jobs:
         env:
           BASE_PATH: /
           PUBLIC_SITE_URL: https://canton.tools
+          # Optional repo secret: Groups.io API key (Bearer) for cip-discuss topics at build time.
+          GROUPSIO_API_KEY: ${{ secrets.GROUPSIO_API_KEY }}
         run: |
           npm ci
           npm run build

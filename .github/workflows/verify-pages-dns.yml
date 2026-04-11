@@ -1,0 +1,27 @@
+# Manual: run from Actions tab to see DNS/HTTPS from GitHub-hosted runners (same class of network as Pages checks).
+name: Verify Pages DNS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dig
+        run: sudo apt-get update -qq && sudo apt-get install -y dnsutils
+
+      - name: Apex A (@8.8.8.8)
+        run: dig canton.tools A +short @8.8.8.8
+
+      - name: Apex A (authoritative @GoDaddy NS)
+        run: |
+          NS=$(dig canton.tools NS +short @8.8.8.8 | head -1 | sed 's/\.$//')
+          echo "Using NS=$NS"
+          dig canton.tools A +short "@$NS"
+
+      - name: www CNAME (@8.8.8.8)
+        run: dig www.canton.tools CNAME +short @8.8.8.8
+
+      - name: HTTPS HEAD
+        run: curl -sI -m 20 -L --max-redirs 5 https://canton.tools/ | head -20

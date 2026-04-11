@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "debug:pages-dns": "node scripts/debug-pages-dns.mjs"
   },
   "dependencies": {
     "astro": "^5.2.0"

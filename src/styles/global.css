@@ -221,11 +221,34 @@ main {
   gap: 1rem;
 }
 
+/* Learn path: one numbering layer (CSS counter), not <ol> + title text. */
+.steps.learn-steps {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: learn-step;
+}
+
 .steps li {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.1rem 1.25rem;
+}
+
+.steps.learn-steps > li {
+  counter-increment: learn-step;
+  position: relative;
+  padding: 1.1rem 1.25rem 1.1rem 2.75rem;
+}
+
+.steps.learn-steps > li::before {
+  content: counter(learn-step) '.';
+  position: absolute;
+  left: 0.9rem;
+  top: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
 }
 
 .steps strong {
@@ -293,6 +316,50 @@ main {
   margin: 0 0 1rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
+}
+
+.cip-discuss-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin-top: 1.75rem;
+}
+
+.cip-discuss-section h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.35rem;
+}
+
+.cip-discuss-section > .page-intro {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.cip-discuss-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.cip-discuss-list li {
+  margin-bottom: 0.45rem;
+}
+
+.cip-discuss-fallback {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.cip-discuss-actions {
+  margin: 1rem 0 0.75rem;
+}
+
+.cip-discuss-footnote {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.45;
 }
 
 .section .cards {
