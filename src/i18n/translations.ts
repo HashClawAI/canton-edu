@@ -276,7 +276,7 @@ export const translations = {
     },
     videos: {
       title: 'Interviews & videos',
-      intro: 'Key interviews, panel discussions, and the official Quadrillions podcast series.',
+      intro: 'Key interviews, panel discussions, the official Quadrillions podcast series, and selected independent voices on X.',
       interviewsTitle: 'Interviews with Yuval Rooz (CEO, Digital Asset)',
       interviews: [
         {
@@ -331,6 +331,16 @@ export const translations = {
         { ep: 'Ep 4.2', title: 'How to Win the World', youtubeId: 'jNfPxtKZDUc' },
         { ep: 'Ep 5', title: 'Stablecoins: We\'ve Only Just Begun', youtubeId: 'ZKs-j2WSAks' },
         { ep: 'Ep 6', title: 'The New Wall Street', youtubeId: '7zbaLbJlnPI' },
+      ],
+      creatorsTitle: 'Independent creators (X)',
+      creatorsIntro:
+        'Short-form video, recaps, and threads from community accounts. Not affiliated with Canton Foundation or this site — verify claims against primary sources.',
+      creators: [
+        {
+          name: '@TrenchWeb3',
+          desc: 'X-first market commentary and clips; frequent Canton Network coverage alongside broader crypto topics.',
+          url: 'https://x.com/TrenchWeb3',
+        },
       ],
     },
     research: {
@@ -410,6 +420,7 @@ export const translations = {
         { name: '@HeslinKim', desc: 'Heslin Kim — Canton community builder', url: 'https://x.com/HeslinKim' },
         { name: '@therealobafemi_', desc: 'Obafemi — Canton community voice', url: 'https://x.com/therealobafemi_' },
         { name: '@Captain_Snowboy', desc: 'Captain Snowboy — Canton content creator', url: 'https://x.com/Captain_Snowboy' },
+        { name: '@TrenchWeb3', desc: 'Short video & threads on markets — frequent Canton Network angles', url: 'https://x.com/TrenchWeb3' },
       ],
       governanceTitle: 'Governance',
       governanceBody: 'On-chain governance happens through CIP votes among Super Validators. Off-chain discussion starts on Discord and the CIP GitHub repo.',
@@ -425,6 +436,7 @@ export const translations = {
         { name: 'Canton Wiki', url: 'https://canton.wiki/', desc: 'Community-maintained knowledge base' },
         { name: 'Canton Army', url: 'https://cantonarmy.com/', desc: 'Fan community hub (110K+ members)' },
         { name: 'CommunityOne — Canton', url: 'https://communityone.io/servers/1379531004116471878/canton-network/', desc: 'Discord analytics and news feed' },
+        { name: '@TrenchWeb3 (X)', url: 'https://x.com/TrenchWeb3', desc: 'Video-oriented takes and threads; Canton often featured' },
       ],
     },
     resources: {
@@ -462,6 +474,7 @@ export const translations = {
         { name: 'Discord — Canton Network', desc: 'Primary real-time hub', url: 'https://discord.gg/canton' },
         { name: 'Telegram — @CantonNetworkOfficialtg', desc: 'High-traffic channel', url: 'https://t.me/CantonNetworkOfficialtg' },
         { name: 'Telegram — Cantor8 hub', desc: 'Ecosystem-focused', url: 'https://t.me/cantor8hub' },
+        { name: 'X — @TrenchWeb3', desc: 'Video clips & market commentary (independent; not official)', url: 'https://x.com/TrenchWeb3' },
       ],
       newslettersTitle: 'Blog, RSS & mailing lists',
       newslettersIntro: 'Use official pages for subscriptions. Many readers follow canton.network/blog via RSS; foundation and ecosystem teams may offer email lists separately.',
@@ -708,7 +721,7 @@ export const translations = {
     },
     videos: {
       title: '采访与视频',
-      intro: '重要采访、圆桌讨论与官方 Quadrillions 播客系列。',
+      intro: '重要采访、圆桌讨论、官方 Quadrillions 播客系列，以及 X 上精选的独立创作者。',
       interviewsTitle: 'Yuval Rooz 采访（Digital Asset CEO）',
       interviews: [
         { title: 'Canton 能否成为全球最大的区块链？', channel: 'Milk Road', date: '2026 年 2 月', duration: '37 分钟', summary: 'Canton 如何将数千亿美元搬上链——代币化国债、Broadridge 回购、JPMorgan、DTCC、代币经济。', youtubeId: 'b_vc9SgQGZo' },
@@ -728,6 +741,16 @@ export const translations = {
         { ep: 'Ep 4.2', title: 'How to Win the World', youtubeId: 'jNfPxtKZDUc' },
         { ep: 'Ep 5', title: 'Stablecoins: We\'ve Only Just Begun', youtubeId: 'ZKs-j2WSAks' },
         { ep: 'Ep 6', title: 'The New Wall Street', youtubeId: '7zbaLbJlnPI' },
+      ],
+      creatorsTitle: '独立创作者（X）',
+      creatorsIntro:
+        '来自社区账号的短视频、复盘与话题串。与 Canton Foundation 及本站无关联——请以一手资料核实观点。',
+      creators: [
+        {
+          name: '@TrenchWeb3',
+          desc: '以 X 为主的市场观点与剪辑；除 Canton Network 外也覆盖更广的加密话题。',
+          url: 'https://x.com/TrenchWeb3',
+        },
       ],
     },
     research: {
@@ -807,6 +830,7 @@ export const translations = {
         { name: '@HeslinKim', desc: 'Heslin Kim——Canton 社区建设者', url: 'https://x.com/HeslinKim' },
         { name: '@therealobafemi_', desc: 'Obafemi——Canton 社区声音', url: 'https://x.com/therealobafemi_' },
         { name: '@Captain_Snowboy', desc: 'Captain Snowboy——Canton 内容创作者', url: 'https://x.com/Captain_Snowboy' },
+        { name: '@TrenchWeb3', desc: '短视频与话题串——常从市场角度讨论 Canton Network', url: 'https://x.com/TrenchWeb3' },
       ],
       governanceTitle: '治理',
       governanceBody: '链上治理通过超级验证者之间的 CIP 投票进行。链下讨论从 Discord 和 CIP GitHub 仓库开始。',
@@ -822,6 +846,7 @@ export const translations = {
         { name: 'Canton Wiki', url: 'https://canton.wiki/', desc: '社区维护的知识库' },
         { name: 'Canton Army', url: 'https://cantonarmy.com/', desc: '粉丝社区中心（110K+ 成员）' },
         { name: 'CommunityOne — Canton', url: 'https://communityone.io/servers/1379531004116471878/canton-network/', desc: 'Discord 数据分析与新闻' },
+        { name: '@TrenchWeb3（X）', url: 'https://x.com/TrenchWeb3', desc: '偏视频向的观点与话题串；常涉及 Canton' },
       ],
     },
     resources: {
@@ -859,6 +884,7 @@ export const translations = {
         { name: 'Discord — Canton Network', desc: '主阵地', url: 'https://discord.gg/canton' },
         { name: 'Telegram — @CantonNetworkOfficialtg', desc: '高流量频道', url: 'https://t.me/CantonNetworkOfficialtg' },
         { name: 'Telegram — Cantor8 hub', desc: '生态向', url: 'https://t.me/cantor8hub' },
+        { name: 'X — @TrenchWeb3', desc: '视频剪辑与市场观点（独立账号，非官方）', url: 'https://x.com/TrenchWeb3' },
       ],
       newslettersTitle: '博客、RSS 与邮件列表',
       newslettersIntro: '以官网订阅为准；博客可用 RSS；基金会与生态团队可能另有邮件列表。',

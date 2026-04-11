@@ -47,4 +47,18 @@ const tr = t(locale);
       ))}
     </div>
   </section>
+
+  <section class="section">
+    <h2>{tr.videos.creatorsTitle}</h2>
+    <p class="page-intro">{tr.videos.creatorsIntro}</p>
+    <ul class="resource-list">
+      {tr.videos.creators.map(({ name, desc, url }) => (
+        <li>
+          <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+          {' — '}
+          <span class="inline-muted">{desc}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
 </BaseLayout>
