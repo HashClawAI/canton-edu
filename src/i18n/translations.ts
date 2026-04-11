@@ -2,7 +2,7 @@ export type Locale = 'en' | 'zh';
 
 export const translations = {
   en: {
-    siteName: 'Canton Learn',
+    siteName: 'Canton Tools',
     nav: {
       home: 'Home',
       learn: 'Learn',
@@ -523,7 +523,7 @@ export const translations = {
     },
   },
   zh: {
-    siteName: 'Canton 学习站',
+    siteName: 'Canton Tools',
     nav: {
       home: '首页',
       learn: '学习路径',

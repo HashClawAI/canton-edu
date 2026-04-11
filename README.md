@@ -1,4 +1,4 @@
-# Canton Learn — bilingual static site (EN / 中文)
+# Canton Tools — bilingual static site (EN / 中文)
 
 Independent Canton Network education hub: **English** at `/`, **Chinese** at `/zh/`.
 
