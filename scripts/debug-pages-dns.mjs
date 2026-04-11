@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * DNS + HTTPS checks for canton.tools ↔ GitHub Pages.
- * GitHub's NotServedByPagesError follows DNS; apex A must be the four 185.199.*.153.
- * curl -4 catches IPv4-only failures when wrong A records exist but AAAA still points to GitHub.
+ * DNS + HTTPS checks for a custom domain ↔ GitHub Pages.
+ * Default domain: canton.tools (override with DOMAIN=example.com).
+ * Apex A must be the four 185.199.*.153; curl -4 catches IPv4-only TLS issues.
  */
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -53,6 +53,26 @@ function firstZoneNsHost(nsRaw) {
   return host || null;
 }
 
+/**
+ * www OK if: no records, error (ignored), CNAME to github.io / apex, or A flattening to GitHub Pages IPs.
+ */
+function wwwDnsOk(cnameRaw, aRaw, domain) {
+  const lines = [...cnameRaw.trim().split(/\n/), ...aRaw.trim().split(/\n/)]
+    .map((l) => l.trim().replace(/\.$/, ''))
+    .filter(Boolean);
+  if (lines.length === 0) return true;
+  if (lines.every((l) => l.startsWith('ERROR:'))) return true;
+  const esc = domain.replace(/\./g, '\\.');
+  const reApex = new RegExp(`^${esc}$`, 'i');
+  return lines.some(
+    (line) =>
+      line.startsWith('ERROR:') ||
+      /\.github\.io$/i.test(line) ||
+      reApex.test(line) ||
+      GITHUB_A.has(line),
+  );
+}
+
 async function curlHead(url, forceIpv4) {
   const args = ['-sI', '-m', '20', '-L', '--max-redirs', '5', url];
   if (forceIpv4) args.splice(1, 0, '-4');
@@ -71,31 +91,34 @@ async function curlHead(url, forceIpv4) {
 }
 
 async function main() {
-  const apexSys = await dig(['canton.tools', '+short', 'A']);
-  const apex8888 = await dig(['@8.8.8.8', 'canton.tools', '+short', 'A']);
-  const aaaa8888 = await dig(['@8.8.8.8', 'canton.tools', '+short', 'AAAA']);
-  const wwwCname = await dig(['@8.8.8.8', 'www.canton.tools', '+short', 'CNAME']);
+  const DOMAIN = (process.env.DOMAIN || 'canton.tools').replace(/[^a-z0-9.-]/gi, '');
+  if (!DOMAIN || !DOMAIN.includes('.')) {
+    console.error('Invalid or missing DOMAIN (expected a hostname like canton.tools).');
+    process.exit(1);
+  }
+  const wwwHost = `www.${DOMAIN}`;
+  const siteUrl = `https://${DOMAIN}/`;
+
+  const apexSys = await dig([DOMAIN, '+short', 'A']);
+  const apex8888 = await dig(['@8.8.8.8', DOMAIN, '+short', 'A']);
+  const aaaa8888 = await dig(['@8.8.8.8', DOMAIN, '+short', 'AAAA']);
+  const wwwCname = await dig(['@8.8.8.8', wwwHost, '+short', 'CNAME']);
+  const wwwA = await dig(['@8.8.8.8', wwwHost, '+short', 'A']);
   const ipsSys = parseShortA(apexSys).sort().join(',');
   const ipsPub = parseShortA(apex8888).sort().join(',');
 
-  const httpsAny = await curlHead('https://canton.tools/', false);
-  const httpsV4 = await curlHead('https://canton.tools/', true);
+  const httpsAny = await curlHead(siteUrl, false);
+  const httpsV4 = await curlHead(siteUrl, true);
 
-  const ns = await dig(['@8.8.8.8', 'canton.tools', '+short', 'NS']);
+  const ns = await dig(['@8.8.8.8', DOMAIN, '+short', 'NS']);
   const nsHost = firstZoneNsHost(ns);
   let apexAuthRaw = '';
   if (nsHost) {
-    apexAuthRaw = await dig(['@' + nsHost, 'canton.tools', '+short', 'A']);
+    apexAuthRaw = await dig(['@' + nsHost, DOMAIN, '+short', 'A']);
   }
 
   const apexOk = apexMatchesGithub(parseShortA(apex8888));
-  /** www → *.github.io (recommended) OR www → apex (GitHub documents apex+www together) */
-  const wwwLine = (wwwCname.trim().split(/\n/)[0] || '').replace(/\.$/, '').trim();
-  const wwwOk =
-    !wwwLine ||
-    wwwLine.startsWith('ERROR:') ||
-    /\.github\.io$/i.test(wwwLine) ||
-    /^canton\.tools$/i.test(wwwLine);
+  const wwwOk = wwwDnsOk(wwwCname, wwwA, DOMAIN);
   /** Only flag split DNS when both resolvers returned at least one A (avoid false FAIL on local dig timeout/empty). */
   const splitDns =
     parseShortA(apex8888).length > 0 &&
@@ -103,7 +126,7 @@ async function main() {
     ipsSys !== ipsPub;
 
   const apexAuthIps = parseShortA(apexAuthRaw);
-  /** Authoritative check is best-effort: skip if we cannot identify GoDaddy NS, or if auth query errored. */
+  /** Authoritative check is best-effort: skip if we cannot identify NS, or if auth query errored/empty. */
   let apexAuthOk = !nsHost;
   if (nsHost) {
     if (apexAuthRaw.startsWith('ERROR:')) apexAuthOk = apexOk;
@@ -112,6 +135,7 @@ async function main() {
   }
 
   const summary = {
+    domain: DOMAIN,
     apexDig8888Error: apex8888.startsWith('ERROR:') ? apex8888 : null,
     apexGithubOk8888: apexOk,
     apexIps8888: parseShortA(apex8888),
@@ -120,7 +144,8 @@ async function main() {
     apexAuthOk,
     apexAuthIps,
     apexAaaa8888Raw: aaaa8888,
-    wwwCnameRaw: wwwCname,
+    wwwCnameDig: wwwCname,
+    wwwADig: wwwA,
     wwwPointsToPagesHost: wwwOk,
     splitDns,
     httpsOkDualStack: httpsAny.ok200,
@@ -132,7 +157,7 @@ async function main() {
 
   console.log(JSON.stringify(summary, null, 2));
 
-  /** IPv4 HTTPS is the gate (matches browser path when IPv6 is flaky); dual-stack is advisory only. */
+  /** IPv4 HTTPS is the gate; dual-stack is advisory only. */
   const fail =
     !apexOk ||
     !apexAuthOk ||
@@ -140,8 +165,15 @@ async function main() {
     splitDns ||
     !httpsV4.ok200;
   if (fail) {
+    const reasons = [];
+    if (!apexOk) reasons.push(`apex A via 8.8.8.8 is not exactly the four GitHub Pages IPs (got: ${ipsPub || '(none)'})`);
+    if (!apexAuthOk) reasons.push('authoritative apex A at zone NS does not match GitHub Pages');
+    if (!wwwOk) reasons.push(`www DNS (${wwwHost}) is not CNAME to *.github.io / apex / flattened GitHub A`);
+    if (splitDns) reasons.push(`resolver mismatch: system A (${ipsSys || 'empty'}) vs 8.8.8.8 (${ipsPub || 'empty'})`);
+    if (!httpsV4.ok200) reasons.push(`IPv4 HTTPS HEAD to ${siteUrl} did not reach HTTP 200`);
+    console.error('\nFAIL — checks that did not pass:\n- ' + reasons.join('\n- ') + '\n');
     console.error(
-      '\nFAIL: Fix GoDaddy DNS — apex @ must be ONLY the four GitHub A records (185.199.108–111.153). Turn off domain forwarding. If apexAuthOk is false, authoritative NS still serves wrong A. If httpsOkIpv4Only is false, TLS or routing is still wrong on IPv4. See https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain\n',
+      'Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain\n',
     );
     process.exit(1);
   }
