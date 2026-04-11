@@ -1,153 +1,92 @@
 ---
 name: canton-edu-updater
 description: >-
-  Scan the web for Canton Network updates and add them to the canton-edu site
-  (Canton Tools). Use when asked to update, refresh, or add new content to the
-  Canton Tools / Canton education site, or when asked to scan for Canton news, CIPs, ecosystem projects,
-  research reports, videos, or community accounts.
+  On each run: fetch the latest Canton Network information from the web, merge
+  updates into the existing canton-edu site (Canton Tools) without wiping prior
+  content. Use when asked to update, refresh, or add content; scan for Canton news,
+  CIPs, ecosystem, research, videos, or community sources.
 ---
 
 # Canton Tools Site Updater
 
-Automates content updates for the Canton Network bilingual site (Canton Tools).
+Automates **incremental** content updates for the Canton Network bilingual site (Canton Tools): **read what is already published → scan for what is new → apply changes on top of the old version** (append, prepend, or targeted edits). Do **not** replace whole sections unless the user explicitly asks for a rewrite.
 
 ## Site Architecture
 
 - **Framework**: Astro 5 static site, GitHub Pages
 - **Repo**: `https://github.com/HashClawAI/canton-edu`
-- **All text content** lives in ONE file: `src/i18n/translations.ts`
-- **Pages** are in `src/pages/*.astro` (EN) and `src/pages/zh/*.astro` (ZH)
+- **Primary content file**: `src/i18n/translations.ts` (EN + ZH in one file, `as const`)
+- **Pages**: `src/pages/*.astro` (EN) and `src/pages/zh/*.astro` (ZH)
 - **Styles**: `src/styles/global.css`
-- **Both EN and ZH** must always be updated together (same structure, translated content)
-- For full file tree and external APIs, see [site-map.md](site-map.md)
+- **Live / build-time data** (usually **no** `translations.ts` edit unless fixing copy):
+  - `src/components/CoinPrice.astro` — CC/BTC prices + 24h implied sats/CC chart (CoinGecko in the browser)
+  - `src/lib/fetchCipDiscussTopics.ts` — CIPs page topic list at **build** time (Jina reader; optional `GROUPSIO_API_KEY` for Groups.io API — see `.env.example`)
+- **News “Last updated”** on the News pages comes from `src/lib/siteBuildTimestamp.ts` at build time; it advances when you deploy, not when you edit strings alone.
+- For file tree and external links, see [site-map.md](site-map.md)
 
-## Content Sections (in `translations.ts`)
+## Incremental update rules (every run)
+
+1. **Read first** — Open `src/i18n/translations.ts` (and any `.astro` you might extend) and note current entries in the sections you will touch (lengths, latest dates, URLs).
+2. **Fetch latest** — Use the web (and repo links below) with **current month/year** in queries; prefer primary sources (Foundation, GitHub CIPs, official blogs) over aggregators when possible.
+3. **Merge, don’t reset** — Add new rows where lists grow; insert news at the **top** (reverse-chronological). **Do not remove** existing items unless they are **verified wrong** or the user asked to delete them.
+4. **Dedupe** — Before adding: same `url` → skip; for news, same title + same week → skip; for ecosystem rows, same `name` or same canonical URL → skip or merge description if strictly better.
+5. **Bilingual parity** — Every EN change needs the matching ZH structure **at the same array index** (or same object keys). Never leave one language half-updated.
+6. **Types** — Keep TypeScript valid; preserve the file’s `as const` export pattern.
+7. **Verify** — `npm run build` (expect **18** static routes). Fix errors before commit.
+8. **Ship** — `git add`, `git commit`, `git push` so GitHub Actions deploys to **`https://canton.tools/`**.
+
+## Content sections (in `translations.ts`)
 
 | Section key | Nav label | What belongs here |
 |-------------|-----------|-------------------|
-| `home` | Home | Hero text, 4 feature cards, CoinPrice component |
-| `learn` | Learn | 7-step learning path (step1–step7) |
-| `ecosystem` | Ecosystem | Explorers, wallets, DEX/DeFi/lending, infra, naming, earn, institutional |
-| `cips` | CIPs | Key CIP highlights table, SV onboarding list, stats |
-| `news` | News | Timeline of major events (date/tag/title/body/url), CIP watch items |
-| `videos` | Videos | Interview cards (youtubeId), Quadrillions podcast episodes |
-| `research` | Research | Reports from Blockworks/Solus/Finadium/CoinMetrics/TheTie/DAIC/official |
-| `community` | Community | Discord, Telegram, forums, X accounts, governance, dev fund, wiki links |
-| `resources` | Resources | Official links, dev docs, forums, chat, newsletters, podcasts, GitHub, market data, exchanges |
+| `home` | Home | Hero, cards, contribute block; CoinPrice labels |
+| `learn` | Learn | 7-step path (step titles + bodies) |
+| `ecosystem` | Ecosystem | Explorers, wallets, DEX/DeFi, infra, naming, earn, institutional |
+| `cips` | CIPs | Highlights table, SV list, stats, **mailing-list copy** (topic list is build-fetched) |
+| `news` | News | `items[]` timeline; optional `cipWatchItems` |
+| `videos` | Videos | Interviews (`youtubeId`), podcast links |
+| `research` | Research | Reports by publisher |
+| `community` | Community | Discord, Telegram, X, governance, dev fund, wiki |
+| `resources` | Resources | Official links, dev docs, forums, newsletters, GitHub, markets, exchanges |
 
-## Update Workflow
-
-### Step 1 — Scan
-
-Search the web for new Canton content. Useful queries:
+## Scan queries (examples — adjust dates)
 
 ```
-Canton Network news [current month] [current year]
-Canton CIP approved proposed [current year]
-Canton Network ecosystem new app project
-Canton coin CC exchange listing [current year]
-Canton Network interview video YouTube [current year]
-Canton Network research report analysis
-@CantonNetwork OR @CantonFdn site:x.com
+Canton Network news April 2026
+Canton CIP approved OR proposed 2026
 site:github.com/canton-foundation/cips
+Canton Network ecosystem new project 2026
+Canton coin CC listing exchange 2026
+Canton Network interview YouTube 2026
+@CantonNetwork OR @CantonFdn site:x.com
 ```
 
-### Step 2 — Classify
+## Classify → where to add
 
-Map each finding to the correct section:
+| Finding type | Target | How to merge |
+|--------------|--------|----------------|
+| New milestone / press | `news.items` | **Prepend** one object EN + one ZH |
+| CIP in discussion | `news.cipWatchItems` or later `cips.highlights` when final | Append or update that row only |
+| New SV line in governance story | `cips.svList` | Append if not already listed |
+| New app / infra | `ecosystem.*` | Append to best sub-array |
+| New CC pair | `resources.exchanges` | Append if new venue |
+| New X / Telegram | `community.twitterAccounts` / `telegramGroups` | Append if not duplicate |
+| New interview | `videos.interviews` | Append with valid `youtubeId` |
+| New PDF / report | `research.*` | Append under matching publisher group |
+| Official URL | `resources.official` or `resources.dev` | Append |
 
-| Finding type | Target section | Key to add to |
-|---|---|---|
-| New event/milestone | `news.items` | Insert at top (array is reverse-chronological) |
-| CIP approved/proposed | `news.cipWatchItems` or `cips.highlights` | Watch = in-discussion; highlights = important final/approved |
-| New SV onboarded | `cips.svList` | Append |
-| New DeFi/wallet/explorer/app | `ecosystem.*` | Match sub-section |
-| New exchange listing | `resources.exchanges` | Append with pairs |
-| New X account (5K+ followers) | `community.twitterAccounts` | Append with url |
-| New Telegram group | `community.telegramGroups` | Append |
-| New YouTube interview | `videos.interviews` | Append; needs `youtubeId` |
-| New research report | `research.*` | Match sub-section by source |
-| New official doc/link | `resources.official` or `resources.dev` | Append |
+## Edit checklist
 
-### Step 3 — Edit `translations.ts`
+- [ ] Existing content in touched sections **reviewed** (not blindly overwritten)
+- [ ] New items **deduped** by URL / name / obvious duplicate story
+- [ ] EN + ZH **same shape and order**
+- [ ] `npm run build` succeeds (**18** pages)
+- [ ] Commit message states what was **added or corrected** (incremental)
 
-1. Read `src/i18n/translations.ts`
-2. Add items to the EN section
-3. Add corresponding translated items to the ZH section (same array index, same structure)
-4. For news items: `{ date: 'YYYY-MM-DD', tag: 'Ecosystem|Governance|CIP|Institutional', title: '...', body: '...', url: '...' }`
-5. For X accounts: `{ name: '@handle', desc: '...', url: 'https://x.com/handle' }`
+## Data shapes (reminder)
 
-**Rules:**
-- Never remove existing entries unless they are confirmed wrong
-- Keep arrays in their expected order (news = reverse-chronological, others = logical grouping)
-- Every EN entry must have a ZH counterpart at the same position
-- Preserve all TypeScript types and `as const` assertion
+See previous skill version for full examples: `news.items` use `{ date, tag, title, body, url }`; ecosystem `{ name, desc, url? }`; X `{ name, desc, url }`; videos `{ title, channel, date, duration, summary, youtubeId }`; research `{ source, title, date, desc, url }`.
 
-### Step 4 — Update page templates (only if new section types added)
+## When to touch `.astro` files
 
-If a new ecosystem sub-section or new page section is added, update the corresponding `.astro` page files (both EN and ZH) to render it. Existing sections auto-render from data.
-
-### Step 5 — Build & verify
-
-```bash
-npm run build
-```
-
-All pages must build without errors. Check the page count in output matches expected (currently 18 pages = 9 pages × 2 languages).
-
-### Step 6 — Commit & push
-
-```bash
-git add .
-git commit -m "Update: [brief description of what was added]"
-git push
-```
-
-GitHub Actions will auto-deploy to **`https://canton.tools/`** (GitHub project URL: `https://hashclawai.github.io/canton-edu/`).
-
-## Data Format Reference
-
-### News item
-
-```typescript
-{ date: '2026-04-01', tag: 'Ecosystem', title: 'Example title', body: 'One-sentence description.', url: 'https://...' }
-```
-
-### Ecosystem entry
-
-```typescript
-{ name: 'ProjectName', desc: 'Short description', url: 'https://...' }
-```
-
-### X account
-
-```typescript
-{ name: '@handle', desc: 'Role — follower count if notable', url: 'https://x.com/handle' }
-```
-
-### Video interview
-
-```typescript
-{ title: 'Video title', channel: 'Channel', date: 'Mon YYYY', duration: 'NN min', summary: 'Brief summary.', youtubeId: 'xxxxxxxxxxx' }
-```
-
-### Research report
-
-```typescript
-{ source: 'Publisher', title: 'Report title', date: 'Mon YYYY', desc: 'Key findings summary.', url: 'https://...' }
-```
-
-### CIP watch item
-
-```typescript
-{ id: 'CIP-NNNN', title: 'Short title', status: 'Proposed|Approved — implementing', summary: 'What it does.' }
-```
-
-## Checklist Before Finishing
-
-- [ ] EN and ZH have identical array lengths for every section touched
-- [ ] `npm run build` succeeds with expected page count
-- [ ] News items are in reverse chronological order
-- [ ] No duplicate entries (check by URL or name)
-- [ ] Commit message describes what was added
-- [ ] `git push` succeeded
+Only if you add a **new** subsection key that pages do not yet render, or fix layout/accessibility. Most updates are **`translations.ts` only**.

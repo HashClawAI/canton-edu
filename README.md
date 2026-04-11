@@ -64,15 +64,15 @@ All text lives in **one file**: `src/i18n/translations.ts`
 
 ## AI-powered content updates (Cursor Skill)
 
-This repo includes a **Cursor Agent Skill** that lets an AI agent scan the web for Canton updates and add them to the site automatically.
+This repo includes a **Cursor Agent Skill** that, on **each run**, fetches the latest Canton-related information from the web and **merges** it into the site **on top of the existing content** (additive updates, dedupe by URL/name, no mass deletion unless verified).
 
 ### What it does
 
 The skill teaches any Cursor Agent to:
 
-1. **Scan** the web for Canton news, CIPs, ecosystem projects, videos, reports, X accounts
-2. **Classify** each finding into the correct site section
-3. **Edit** `translations.ts` with proper data format (EN + ZH together)
+1. **Read** the current `translations.ts` (and related pages) for the sections being updated
+2. **Scan** the web for new Canton news, CIPs, ecosystem projects, videos, reports, X accounts
+3. **Classify** each finding and **merge** (prepend news, append lists, patch rows) — bilingual EN + ZH in lockstep
 4. **Build** and verify all 18 pages compile
 5. **Commit & push** — GitHub Actions deploys automatically
 
@@ -87,7 +87,7 @@ The skill teaches any Cursor Agent to:
    - *"Add recent Canton news to the News page"*
    - *"Check for new CIPs and update the CIPs page"*
    - *"Find new Canton ecosystem projects"*
-4. The Agent reads the skill, searches the web, edits `translations.ts`, builds, and pushes
+4. The Agent reads the skill, compares against what is already published, searches the web, edits `translations.ts` incrementally, builds, and pushes
 
 #### For contributors without Cursor
 

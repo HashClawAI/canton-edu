@@ -1,54 +1,43 @@
 # Canton Tools — Site Map Reference
 
-Quick reference for the agent when it needs to understand the file layout.
+Quick reference for the agent when updating the repo **incrementally** (merge new findings into existing `translations.ts` and related files).
 
-## File tree
+## File tree (high level)
 
 ```
 canton-edu/
-├── src/
-│   ├── i18n/translations.ts        ← ALL text content (EN + ZH)
-│   ├── components/
-│   │   ├── Nav.astro                ← navigation (auto from translations.nav)
-│   │   ├── CoinPrice.astro          ← live CC price ticker (CoinGecko API)
-│   │   └── LanguageSwitcher.astro
-│   ├── layouts/BaseLayout.astro     ← shared HTML shell
-│   ├── styles/global.css            ← all CSS
-│   └── pages/
-│       ├── index.astro              ← EN home
-│       ├── learn.astro
-│       ├── ecosystem.astro
-│       ├── cips.astro
-│       ├── news.astro
-│       ├── videos.astro
-│       ├── research.astro
-│       ├── community.astro
-│       ├── resources.astro
-│       └── zh/                      ← ZH mirrors (same filenames)
-├── .cursor/skills/canton-edu-updater/  ← this skill
-├── public/favicon.svg
-├── .github/workflows/deploy.yml     ← GitHub Actions → Pages
-├── astro.config.mjs
-├── package.json
-└── README.md
+├── src/i18n/translations.ts     ← primary copy: all EN + ZH strings & lists
+├── src/components/
+│   ├── CoinPrice.astro          ← live CoinGecko price + 24h sats/CC chart (client)
+│   ├── Nav.astro
+│   └── LanguageSwitcher.astro
+├── src/lib/
+│   ├── fetchCipDiscussTopics.ts ← CIPs page: topics at build (Jina / optional Groups.io)
+│   └── siteBuildTimestamp.ts    ← News pages “last updated” at build
+├── src/pages/                   ← EN *.astro
+├── src/pages/zh/                ← ZH mirrors
+├── src/styles/global.css
+├── .env.example                 ← optional GROUPSIO_* for CIP discuss API
+├── .github/workflows/deploy.yml
+└── .cursor/skills/canton-edu-updater/
 ```
 
-## Key external APIs
+## URLs
 
-- **CoinGecko** (client-side, no key): `canton-network` coin ID
-- **GitHub Actions**: auto-deploys on push to `main`
-- **Primary site URL**: `https://canton.tools/`
-- **GitHub Pages project URL**: `https://hashclawai.github.io/canton-edu/`
+- **Live site**: `https://canton.tools/`
+- **Repo**: `https://github.com/HashClawAI/canton-edu`
+- **CIP discuss (topics)**: `https://lists.sync.global/g/cip-discuss/topics` (wired via build fetch in `fetchCipDiscussTopics.ts`)
 
-## Useful search sources for updates
+## Scan sources (non-exhaustive)
 
-| Source | URL | What to look for |
-|--------|-----|-------------------|
-| Canton Foundation news | https://canton.foundation/ | SV additions, fund announcements |
-| CIP repo | https://github.com/canton-foundation/cips | New/updated CIPs |
-| Canton blog | https://www.canton.network/blog | Official articles |
-| CommunityOne | https://communityone.io/servers/1379531004116471878/canton-network/ | Discord news feed |
-| Canton Wiki | https://canton.wiki/ | Ecosystem updates |
-| CoinGecko Canton | https://www.coingecko.com/en/coins/canton | Market data changes |
-| X @CantonNetwork | https://x.com/CantonNetwork | Announcements |
-| X @CantonFdn | https://x.com/CantonFdn | Foundation updates |
+| Source | URL | Typical updates |
+|--------|-----|-----------------|
+| Canton Foundation | https://canton.foundation/ | SV, fund, announcements |
+| CIP repo | https://github.com/canton-foundation/cips | New / merged CIPs |
+| Canton blog | https://www.canton.network/blog | Official posts |
+| CommunityOne feed | communityone.io (Canton server) | Ecosystem / governance blurbs |
+| CoinGecko | coingecko.com coin canton | Listings / labels in resources if needed |
+
+## Agent reminder
+
+**Each run:** read current `translations.ts` → web scan → add or patch rows → EN/ZH parity → `npm run build` → commit + push. Prefer **additive** edits; remove only when verified or requested.
