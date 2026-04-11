@@ -58,7 +58,7 @@ async function curlHead(url, forceIpv4) {
       timeout: 25_000,
       maxBuffer: 256 * 1024,
     });
-    const lines = stdout.split(/\r\n/).filter(Boolean);
+    const lines = stdout.split(/\r?\n/).filter(Boolean);
     const statusLines = lines.filter((l) => /^HTTP\//i.test(l));
     const ok200 = statusLines.some((l) => /200/.test(l));
     return { ok200, statusLines, error: null };
@@ -108,6 +108,7 @@ async function main() {
   }
 
   const summary = {
+    apexDig8888Error: apex8888.startsWith('ERROR:') ? apex8888 : null,
     apexGithubOk8888: apexOk,
     apexIps8888: parseShortA(apex8888),
     apexAuthNs: nsHost,
@@ -127,16 +128,16 @@ async function main() {
 
   console.log(JSON.stringify(summary, null, 2));
 
+  /** IPv4 HTTPS is the gate (matches browser path when IPv6 is flaky); dual-stack is advisory only. */
   const fail =
     !apexOk ||
     !apexAuthOk ||
     !wwwOk ||
     splitDns ||
-    !httpsV4.ok200 ||
-    !httpsAny.ok200;
+    !httpsV4.ok200;
   if (fail) {
     console.error(
-      '\nFAIL: Fix GoDaddy DNS — apex @ must be ONLY the four GitHub A records (185.199.108–111.153). Turn off domain forwarding. If apexAuthOk is false, authoritative NS still serves wrong A. See https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain\n',
+      '\nFAIL: Fix GoDaddy DNS — apex @ must be ONLY the four GitHub A records (185.199.108–111.153). Turn off domain forwarding. If apexAuthOk is false, authoritative NS still serves wrong A. If httpsOkIpv4Only is false, TLS or routing is still wrong on IPv4. See https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain\n',
     );
     process.exit(1);
   }
