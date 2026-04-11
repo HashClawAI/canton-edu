@@ -5,8 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Daily ~08:00 UTC — rebuild static chart + Pages so implied sats/CC history stays current without client crunch.
-    - cron: '0 8 * * *'
+    # Daily 00:00 UTC — full site rebuild and deploy: sats/CC chart (CoinGecko), CIPs discuss topics,
+    # news “last updated” stamp, and every static page. GitHub may start runs within ~1h of the cron.
+    - cron: '0 0 * * *'
 
 permissions:
   contents: read
