@@ -8,7 +8,7 @@ Quick reference for the agent when updating the repo **incrementally** (merge ne
 canton-edu/
 ├── src/i18n/translations.ts     ← primary copy: all EN + ZH strings & lists
 ├── src/components/
-│   ├── CoinPrice.astro          ← live CoinGecko price + 24h sats/CC chart (client)
+│   ├── CoinPrice.astro          ← live CoinGecko price + full-history implied sats/CC chart (client)
 │   ├── Nav.astro
 │   └── LanguageSwitcher.astro
 ├── src/lib/
