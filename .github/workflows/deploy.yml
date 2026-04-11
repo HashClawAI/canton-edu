@@ -25,10 +25,11 @@ jobs:
           node-version: '22'
           cache: npm
 
+      # Custom domain https://canton.tools/ — see public/CNAME and GitHub Pages settings.
       - name: Install and build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
-          PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          BASE_PATH: /
+          PUBLIC_SITE_URL: https://canton.tools
         run: |
           npm ci
           npm run build
