@@ -179,7 +179,7 @@ export const translations = {
     news: {
       title: 'News & updates',
       intro: 'Major developments, governance votes, and ecosystem milestones. Most recent first.',
-      lastUpdated: 'Last updated: April 2026',
+      lastUpdatedLabel: 'Last updated:',
       items: [
         {
           date: '2026-04-07',
@@ -696,7 +696,7 @@ export const translations = {
     news: {
       title: '动态与新闻',
       intro: '重大进展、治理投票与生态里程碑。按时间倒序排列。',
-      lastUpdated: '最后更新：2026 年 4 月',
+      lastUpdatedLabel: '最后更新：',
       items: [
         { date: '2026-04-07', tag: '生态', title: 'Transcend 接入 Canton，优化代币化资产流动', body: 'Transcend 宣布接入 Canton Network，在传统金融与 DeFi 基础设施间实时优化与迁移代币化资产。', url: 'https://www.prnewswire.com/news-releases/transcend-connects-to-canton-network-to-enable-real-time-optimization-and-mobility-of-tokenized-assets-302735540.html' },
         { date: '2026-04-04', tag: '治理', title: '超级验证者节点数突破 45', body: '网络动态：Global Synchronizer 由 45+ 家超级验证者共同保障，覆盖传统金融机构与加密原生运营方。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-super-validators-45-plus-2026-04-04/' },

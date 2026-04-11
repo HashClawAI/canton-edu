@@ -1,15 +1,20 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteBuildTimestampUtc } from '@/lib/siteBuildTimestamp';
 import { t } from '@/i18n/translations';
 
 const locale = 'en';
 const tr = t(locale);
+const { iso, en: lastUpdatedDisplay } = siteBuildTimestampUtc();
 ---
 
 <BaseLayout locale={locale} title={tr.news.title} description={tr.news.intro} navCurrent="news">
   <h1 class="page-title">{tr.news.title}</h1>
   <p class="page-intro">{tr.news.intro}</p>
-  <p class="last-updated">{tr.news.lastUpdated}</p>
+  <p class="last-updated">
+    {tr.news.lastUpdatedLabel}{' '}
+    <time datetime={iso}>{lastUpdatedDisplay}</time>
+  </p>
 
   <section class="timeline">
     {tr.news.items.map(({ date, tag, title, body, url }) => (
