@@ -11,12 +11,24 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, '..', 'public', 'generated');
 
-const W = 420;
-const H = 156;
-const PAD = { t: 22, r: 10, b: 26, l: 10 };
+/** ViewBox size — keep in sync with CoinPrice.astro img width/height hints. */
+const W = 800;
+const H = 280;
+const PAD = { t: 40, r: 16, b: 40, l: 16 };
 const IW = W - PAD.l - PAD.r;
 const IH = H - PAD.t - PAD.b;
-const CHART_MAX_POINTS = 850;
+const CHART_MAX_POINTS = 950;
+
+/** Marker geometry (SVG user units, scales with W/H). */
+const MK = {
+  r: 5.5,
+  lineStroke: 2.25,
+  mkStroke: 2.75,
+  dyHi1: -12,
+  dyHi2: -28,
+  dyLo1: 15,
+  dyLo2: 32,
+};
 const DAY_TRIES = ['max', '365', '180', '90'];
 
 const LABELS = {
@@ -157,10 +169,10 @@ function pathFromTimeSeries(plot, tMin, tMax, ymin, ymax) {
 function markerXml(x, y, label, valueLine, kind, labelNudgeX) {
   const tx = x + labelNudgeX;
   const anchor = tx < PAD.l + IW * 0.22 ? 'start' : tx > PAD.l + IW * 0.78 ? 'end' : 'middle';
-  const dy1 = kind === 'lo' ? 12 : -10;
-  const dy2 = kind === 'lo' ? 24 : -22;
+  const dy1 = kind === 'lo' ? MK.dyLo1 : MK.dyHi1;
+  const dy2 = kind === 'lo' ? MK.dyLo2 : MK.dyHi2;
   const cls = kind === 'hi' ? 'm-hi' : kind === 'lo' ? 'm-lo' : 'm-lt';
-  return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" class="mk ${cls}" />
+  return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${MK.r}" class="mk ${cls}" />
 <text x="${tx.toFixed(1)}" y="${(y + dy1).toFixed(1)}" text-anchor="${anchor}" class="m-t">${esc(label)}</text>
 <text x="${tx.toFixed(1)}" y="${(y + dy2).toFixed(1)}" text-anchor="${anchor}" class="m-s">${esc(valueLine)}</text>`;
 }
@@ -203,7 +215,7 @@ async function buildSvgForLocale(locale) {
   const xLo = xOf(series[iMin].t);
   const yHi = ySvg(raw[iMax], ymin, ymax);
   const yLo = ySvg(raw[iMin], ymin, ymax);
-  const loNudge = iMin !== iMax && Math.abs(xHi - xLo) < 42 ? 26 : 0;
+  const loNudge = iMin !== iMax && Math.abs(xHi - xLo) < IW * 0.11 ? Math.round(IW * 0.065) : 0;
   const df = (t) => new Date(t).toLocaleDateString(localeTag, dfmt);
   const latestParen = locale === 'zh' ? `（${labels.latest}）` : ` (${labels.latest})`;
 
@@ -215,7 +227,7 @@ async function buildSvgForLocale(locale) {
       labels.latest,
       `${fmtSats(raw[iLast])} · ${df(series[iLast].t)}`,
       'lt',
-      -22,
+      -Math.round(IW * 0.052),
     );
   } else {
     const hiLine =
@@ -230,7 +242,10 @@ async function buildSvgForLocale(locale) {
     markers += markerXml(xLo, yLo, labels.low, loLine, 'lo', loNudge);
     if (iLast !== iMax && iLast !== iMin) {
       const xLt = xOf(series[iLast].t);
-      const ltNudge = Math.abs(xLt - xHi) < 48 || Math.abs(xLt - xLo) < 48 ? -28 : -12;
+      const ltNudge =
+        Math.abs(xLt - xHi) < IW * 0.12 || Math.abs(xLt - xLo) < IW * 0.12
+          ? -Math.round(IW * 0.065)
+          : -Math.round(IW * 0.028);
       markers += markerXml(
         xLt,
         ySvg(raw[iLast], ymin, ymax),
@@ -257,19 +272,19 @@ async function buildSvgForLocale(locale) {
   </defs>
   <style><![CDATA[
     .c-area { stroke: none; }
-    .c-line { stroke: #3d8bfd; stroke-width: 1.75; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .mk { fill: #0c0f14; stroke-width: 2; }
+    .c-line { stroke: #3d8bfd; stroke-width: ${MK.lineStroke}; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .mk { fill: #0c0f14; stroke-width: ${MK.mkStroke}; }
     .m-hi { stroke: #4ade80; }
     .m-lo { stroke: #f87171; }
     .m-lt { stroke: #3d8bfd; }
-    .m-t { font: 600 13px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf4; }
-    .m-s { font: 400 11.5px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(232,237,244,0.9); font-variant-numeric: tabular-nums; }
-    .c-axis { font: 400 11px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #8b9cb3; font-variant-numeric: tabular-nums; }
+    .m-t { font: 600 15px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf4; }
+    .m-s { font: 400 13px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(232,237,244,0.92); font-variant-numeric: tabular-nums; }
+    .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #8b9cb3; font-variant-numeric: tabular-nums; }
   ]]></style>
   <path class="c-area" d="${area}" fill="url(#${gid})"/>
   <path class="c-line" d="${line}"/>
   <g>${markers}</g>
-  <text x="${PAD.l}" y="${H - 6}" class="c-axis">${esc(axisText)}</text>
+  <text x="${PAD.l}" y="${H - 12}" class="c-axis">${esc(axisText)}</text>
 </svg>`;
 }
 

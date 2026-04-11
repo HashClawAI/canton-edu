@@ -61,8 +61,8 @@ const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale ==
         class="coin-chart-img"
         src={chartSrc}
         alt={chartTitle}
-        width="420"
-        height="156"
+        width="800"
+        height="280"
         loading="lazy"
         decoding="async"
       />
@@ -196,13 +196,15 @@ const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale ==
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.65rem 1rem 0.55rem;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.1rem 0.65rem;
     font-size: 0.95rem;
     margin-top: 1.5rem;
-    max-width: 36rem;
   }
 
   .coin-block {
@@ -306,27 +308,28 @@ const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale ==
 
   .coin-chart-title {
     font-weight: 600;
-    font-size: 0.82rem;
+    font-size: 0.88rem;
     color: var(--text);
   }
 
   .coin-chart-sub {
-    font-size: 0.72rem;
-    line-height: 1.35;
+    font-size: 0.78rem;
+    line-height: 1.4;
     color: var(--muted);
   }
 
   .coin-chart-img-wrap {
-    margin-top: 0.15rem;
+    margin-top: 0.25rem;
+    width: 100%;
   }
 
   .coin-chart-img {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 168px;
+    max-width: 100%;
     object-fit: contain;
-    object-position: left center;
+    object-position: left top;
     background: transparent;
   }
 
