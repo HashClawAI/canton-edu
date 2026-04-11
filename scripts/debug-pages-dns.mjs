@@ -177,8 +177,6 @@ async function main() {
     );
     process.exit(1);
   }
-
-  console.log(`CHECK_OK ${DOMAIN}`);
 }
 
 main().catch((e) => {
