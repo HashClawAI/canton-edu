@@ -1,4 +1,4 @@
-# Canton Edu — Site Map Reference
+# Canton Tools — Site Map Reference
 
 Quick reference for the agent when it needs to understand the file layout.
 
@@ -37,7 +37,8 @@ canton-edu/
 
 - **CoinGecko** (client-side, no key): `canton-network` coin ID
 - **GitHub Actions**: auto-deploys on push to `main`
-- **GitHub Pages URL**: `https://hashclawai.github.io/canton-edu/`
+- **Primary site URL**: `https://canton.tools/`
+- **GitHub Pages project URL**: `https://hashclawai.github.io/canton-edu/`
 
 ## Useful search sources for updates
 

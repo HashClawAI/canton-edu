@@ -536,7 +536,7 @@ export const translations = {
       resources: '资源',
     },
     home: {
-      title: 'Canton Network 学习',
+      title: '了解 Canton Network',
       subtitle:
         '关于 Canton Network、DAML 智能合约与机构级区块链生态的独立教育资源（Canton Tools）。请务必以官方文档为准进行核对。',
       ctaLearn: '开始学习',

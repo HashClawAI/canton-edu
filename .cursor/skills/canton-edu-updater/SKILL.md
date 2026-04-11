@@ -1,15 +1,15 @@
 ---
 name: canton-edu-updater
 description: >-
-  Scan the web for Canton Network updates and add them to the canton-edu site.
-  Use when asked to update, refresh, or add new content to the Canton education
-  site, or when asked to scan for Canton news, CIPs, ecosystem projects,
+  Scan the web for Canton Network updates and add them to the canton-edu site
+  (Canton Tools). Use when asked to update, refresh, or add new content to the
+  Canton Tools / Canton education site, or when asked to scan for Canton news, CIPs, ecosystem projects,
   research reports, videos, or community accounts.
 ---
 
-# Canton Edu Site Updater
+# Canton Tools Site Updater
 
-Automates content updates for the Canton Network bilingual education site.
+Automates content updates for the Canton Network bilingual site (Canton Tools).
 
 ## Site Architecture
 
@@ -103,7 +103,7 @@ git commit -m "Update: [brief description of what was added]"
 git push
 ```
 
-GitHub Actions will auto-deploy to `https://hashclawai.github.io/canton-edu/`.
+GitHub Actions will auto-deploy to **`https://canton.tools/`** (GitHub project URL: `https://hashclawai.github.io/canton-edu/`).
 
 ## Data Format Reference
 

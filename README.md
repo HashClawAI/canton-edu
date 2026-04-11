@@ -2,7 +2,7 @@
 
 Independent Canton Network education hub: **English** at `/`, **Chinese** at `/zh/`.
 
-Built with [Astro](https://astro.build) · Deployed on [GitHub Pages](https://pages.github.com/) · Live at **[hashclawai.github.io/canton-edu](https://hashclawai.github.io/canton-edu/)**
+Built with [Astro](https://astro.build) · Deployed on [GitHub Pages](https://pages.github.com/) · Live at **[canton.tools](https://canton.tools/)** (project mirror: [hashclawai.github.io/canton-edu](https://hashclawai.github.io/canton-edu/))
 
 ## Site structure
 
