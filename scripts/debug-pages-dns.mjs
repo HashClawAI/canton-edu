@@ -4,17 +4,10 @@
  * GitHub's NotServedByPagesError follows DNS; apex A must be the four 185.199.*.153.
  * curl -4 catches IPv4-only failures when wrong A records exist but AAAA still points to GitHub.
  */
-import { appendFileSync } from 'node:fs';
 import { execFile } from 'node:child_process';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const DEBUG_LOG =
-  process.env.DEBUG_LOG_PATH ||
-  join(__dirname, '../../.cursor/debug-46264c.log');
 
 const GITHUB_A = new Set([
   '185.199.108.153',
@@ -47,7 +40,7 @@ function apexMatchesGithub(ips) {
   return ips.every((ip) => GITHUB_A.has(ip));
 }
 
-/** First NS hostname without trailing dot, for @ns queries */
+/** First NS hostname without trailing dot, for @ns queries (GoDaddy-specific; may be null for other registrars). */
 function firstNsHost(nsRaw) {
   const line = nsRaw
     .split(/\n/)
@@ -100,10 +93,19 @@ async function main() {
     wwwLine.startsWith('ERROR:') ||
     /\.github\.io$/i.test(wwwLine) ||
     /^canton\.tools$/i.test(wwwLine);
-  const splitDns = ipsSys !== ipsPub;
+  /** Only flag split DNS when both resolvers returned at least one A (avoid false FAIL on local dig timeout/empty). */
+  const splitDns =
+    parseShortA(apex8888).length > 0 &&
+    parseShortA(apexSys).length > 0 &&
+    ipsSys !== ipsPub;
 
   const apexAuthIps = parseShortA(apexAuthRaw);
-  const apexAuthOk = apexMatchesGithub(apexAuthIps);
+  /** Authoritative check is best-effort: skip if we cannot identify GoDaddy NS, or if auth query errored. */
+  let apexAuthOk = !nsHost;
+  if (nsHost) {
+    if (apexAuthRaw.startsWith('ERROR:')) apexAuthOk = apexOk;
+    else apexAuthOk = apexMatchesGithub(apexAuthIps);
+  }
 
   const summary = {
     apexGithubOk8888: apexOk,
@@ -122,25 +124,6 @@ async function main() {
     httpsV4Error: httpsV4.error,
     nsRaw: ns,
   };
-
-  // #region agent log
-  try {
-    appendFileSync(
-      DEBUG_LOG,
-      JSON.stringify({
-        sessionId: '46264c',
-        runId: process.env.DEBUG_RUN_ID || 'dns-check',
-        hypothesisId: 'H_AUTH',
-        location: 'debug-pages-dns.mjs',
-        message: 'DNS snapshot',
-        data: summary,
-        timestamp: Date.now(),
-      }) + '\n',
-    );
-  } catch {
-    /* log path may be missing in sandboxes */
-  }
-  // #endregion
 
   console.log(JSON.stringify(summary, null, 2));
 
