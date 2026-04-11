@@ -10,6 +10,7 @@ interface Props {
   chartSubtitle: string;
   chartHighLabel: string;
   chartLowLabel: string;
+  liveSatsLabel: string;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   chartSubtitle,
   chartHighLabel,
   chartLowLabel,
+  liveSatsLabel,
 } = Astro.props;
 const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
 ---
@@ -49,6 +51,17 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
       </span>
     </div>
     <p class="coin-footnote">{ccBtcFootnote}</p>
+  </div>
+
+  <div class="coin-live-strip" id="coin-live-strip" hidden>
+    <div class="coin-live-strip-inner">
+      <span class="coin-chart-title coin-live-strip-label">{liveSatsLabel}</span>
+      <span class="coin-live-strip-nums">
+        <span class="coin-live-strip-prefix" id="coin-live-sats-prefix"></span>
+        <span class="coin-live-strip-value" id="coin-live-sats-value">--</span>
+        <span class="coin-live-strip-unit">{satPerCcUnit}</span>
+      </span>
+    </div>
   </div>
 
   <div
@@ -281,7 +294,7 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     t1.setAttribute('x', String(tx));
     t1.setAttribute('y', String(y + dy1));
     t1.setAttribute('text-anchor', anchor);
-    t1.setAttribute('class', kind === 'hi' ? 'chart-marker-text chart-marker-hi' : 'chart-marker-text chart-marker-lo');
+    t1.setAttribute('class', 'chart-marker-text');
     t1.textContent = label;
     g.appendChild(t1);
     const t2 = document.createElementNS(NS, 'text');
@@ -388,6 +401,9 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     const ccExtraEl = document.getElementById('cc-extra');
     const ccbtcPrefixEl = document.getElementById('ccbtc-prefix');
     const ccbtcValueEl = document.getElementById('ccbtc-value');
+    const liveStrip = document.getElementById('coin-live-strip');
+    const livePrefixEl = document.getElementById('coin-live-sats-prefix');
+    const liveValueEl = document.getElementById('coin-live-sats-value');
     if (!btcPriceEl || !btcChangeEl || !ccPriceEl || !ccChangeEl || !ccExtraEl || !ccbtcPrefixEl || !ccbtcValueEl) return;
 
     try {
@@ -438,6 +454,12 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
       const { prefix, value } = formatSatsPerCc(satsPerCc, btcPerCc, localeTag);
       ccbtcPrefixEl.textContent = prefix;
       ccbtcValueEl.textContent = value;
+
+      if (liveStrip && livePrefixEl && liveValueEl) {
+        livePrefixEl.textContent = prefix;
+        liveValueEl.textContent = value;
+        liveStrip.hidden = false;
+      }
     } catch {
       /* silent */
     }
@@ -550,6 +572,52 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
     color: var(--muted);
   }
 
+  .coin-live-strip {
+    margin-top: 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .coin-live-strip-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .coin-live-strip-label {
+    display: block;
+    line-height: 1.35;
+  }
+
+  .coin-live-strip-nums {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.45rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .coin-live-strip-prefix {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.88;
+  }
+
+  .coin-live-strip-value {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .coin-live-strip-unit {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    font-weight: 400;
+    color: var(--text);
+    opacity: 0.88;
+  }
+
   .coin-chart {
     margin-top: 0.85rem;
     padding-top: 0.75rem;
@@ -597,23 +665,17 @@ const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
   }
 
   .chart-marker-text {
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 600;
+    fill: var(--text);
     font-family: var(--font-sans);
   }
 
-  .chart-marker-text.chart-marker-hi {
-    fill: #86efac;
-  }
-
-  .chart-marker-text.chart-marker-lo {
-    fill: #fca5a5;
-  }
-
   .chart-marker-sub {
-    font-size: 9px;
-    font-weight: 500;
-    fill: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 400;
+    fill: var(--text);
+    fill-opacity: 0.88;
     font-family: var(--font-sans);
     font-variant-numeric: tabular-nums;
   }

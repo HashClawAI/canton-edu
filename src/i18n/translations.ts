@@ -30,6 +30,7 @@ export const translations = {
         'Full CoinGecko history for CC (longest available range vs BTC USD) · EMA-smoothed · markers = historical raw implied min & max',
       coinPriceChartHigh: 'High',
       coinPriceChartLow: 'Low',
+      coinPriceLiveSatsLabel: 'Live implied sats / CC (now)',
       cardWhatTitle: 'What is Canton?',
       cardWhatBody:
         'A privacy-enabled blockchain for institutional finance — tokenized assets, atomic settlement, and DAML smart contracts. Backed by DTCC, Goldman Sachs, Broadridge, and 45+ Super Validators.',
@@ -569,6 +570,7 @@ export const translations = {
         'CoinGecko 上 CC 可取得的最长历史（相对 BTC 美元价交叉）· EMA 平滑 · 圆点标注历史 raw 推算最高 / 最低',
       coinPriceChartHigh: '最高',
       coinPriceChartLow: '最低',
+      coinPriceLiveSatsLabel: '实时推算 聪 / CC（当前）',
       cardWhatTitle: 'Canton 是什么？',
       cardWhatBody:
         '面向机构金融的隐私增强型区块链——资产代币化、原子结算、DAML 智能合约。由 DTCC、Goldman Sachs、Broadridge 等及 45+ Super Validator 支撑。',
