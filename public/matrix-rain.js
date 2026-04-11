@@ -1,5 +1,6 @@
 /**
  * Matrix-style character rain (global site). Targets #mx-rain-canvas.
+ * Charset = mix of Canton “C” + common crypto tickers (₿ BTC, Ξ ETH, …).
  * Skipped when prefers-reduced-motion: reduce.
  */
 (function () {
@@ -7,8 +8,8 @@
   var canvas = document.getElementById('mx-rain-canvas');
   if (!canvas || !canvas.getContext) return;
   var ctx = canvas.getContext('2d');
-  var chars =
-    'ｦｧｨｩｪｫｬｭｮｯｱｲｳｴｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃ0123456789ABCDEFﾊﾋﾌﾍﾎﾏ';
+  /* C · ₿ · Ξ · ⟠ · ₮ · Ł · Ð — user-supplied set (some fonts substitute glyphs). */
+  var chars = 'C₿Ξ⟠₮ŁÐ';
   var fontSize = 15;
   var w = 0;
   var h = 0;
@@ -29,7 +30,9 @@
   function tick() {
     ctx.fillStyle = 'rgba(0, 8, 2, 0.11)';
     ctx.fillRect(0, 0, w, h);
-    ctx.font = fontSize + 'px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+    ctx.font =
+      fontSize +
+      'px ui-monospace, "Segoe UI Symbol", "Noto Sans Symbols", "Apple Symbols", SFMono-Regular, Menlo, Consolas, monospace';
     for (var i = 0; i < columns; i++) {
       var ch = chars[Math.floor(Math.random() * chars.length)];
       var x = i * fontSize;
