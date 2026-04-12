@@ -15,10 +15,10 @@ const prefix = locale === 'zh' ? `${base}zh/` : base;
 
 const navItems = [
   { key: 'home' as const, href: prefix, label: tr.nav.home },
+  { key: 'news' as const, href: `${prefix}news`, label: tr.nav.news },
   { key: 'learn' as const, href: `${prefix}learn`, label: tr.nav.learn },
   { key: 'ecosystem' as const, href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
   { key: 'cips' as const, href: `${prefix}cips`, label: tr.nav.cips },
-  { key: 'news' as const, href: `${prefix}news`, label: tr.nav.news },
   { key: 'videos' as const, href: `${prefix}videos`, label: tr.nav.videos },
   { key: 'research' as const, href: `${prefix}research`, label: tr.nav.research },
   { key: 'community' as const, href: `${prefix}community`, label: tr.nav.community },
