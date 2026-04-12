@@ -124,7 +124,11 @@ export const translations = {
         { name: 'LayerZero', desc: 'Omnichain interoperability — 165+ chain bridges', url: 'https://layerzero.network/' },
         { name: 'Chainlink', desc: 'Oracle and data feeds', url: 'https://www.canton.network/ecosystem/chainlink' },
         { name: 'AppsFactory', desc: 'Developer gateway for Canton apps', url: 'https://www.canton.network/developer-resources' },
-        { name: 'Canpay.ai', desc: 'Canton payments — merchant and user checkout (CanPay)', url: 'https://canpay.ai/' },
+        {
+          name: 'Canpay.ai',
+          desc: 'On-chain payment infrastructure on Canton using payment codes; roadmap extends to agentic payment systems.',
+          url: 'https://canpay.ai/',
+        },
       ],
       namingTitle: 'Naming & identity',
       naming: [
@@ -669,7 +673,11 @@ export const translations = {
         { name: 'LayerZero', desc: '全链互操作性——165+ 条链桥接', url: 'https://layerzero.network/' },
         { name: 'Chainlink', desc: '预言机与数据源', url: 'https://www.canton.network/ecosystem/chainlink' },
         { name: 'AppsFactory', desc: 'Canton 应用开发入口', url: 'https://www.canton.network/developer-resources' },
-        { name: 'Canpay.ai', desc: 'Canton 支付与商户结账（CanPay）', url: 'https://canpay.ai/' },
+        {
+          name: 'Canpay.ai',
+          desc: 'Canton 上基于支付码的纯链上支付基础设施；路线图包含智能体支付系统。',
+          url: 'https://canpay.ai/',
+        },
       ],
       namingTitle: '命名与身份',
       naming: [
