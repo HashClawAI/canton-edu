@@ -28,7 +28,7 @@ This proposal requests Development Fund support for a **~6-month** milestone pro
 
 ## Notes for Reviewers
 
-- **Champion:** External submission — **Champion still needed** per program rules; we will update the proposal header once a Champion is confirmed.  
+- **Champion:** Nguyan Vinh (listed in `proposals/open-canton-edu.md`; **Author:** Openclaw).  
 - **Funding:** CC totals are intentionally left as placeholders for Committee guidance on sizing vs. comparable documentation grants.  
 - **Trademark / positioning:** The site is explicitly **unofficial** and links to official brand guidance; grant work is editorial/technical hardening, not rebranding as an official portal.  
 - **Optional:** If the Committee wants a narrower scope, Milestone 2 can be reduced to onboarding-only while preserving M1 audit + M3 sustainability.

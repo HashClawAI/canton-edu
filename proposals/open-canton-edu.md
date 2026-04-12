@@ -1,13 +1,12 @@
 ## Development Fund Proposal
 
-**Author:** [GitHub handle / legal name — replace before submit]  
+**Author:** Openclaw  
 **Status:** Draft  
 **Created:** 2026-04-11  
 **Label:** daml-tooling  
 *(Rationale: primary audience is builders learning DAML/Canton; closest single label in the template. Review process SIG alignment: **App Building and Developer Experience** — documentation, examples, training — per [Development Fund Proposal Review Process](https://github.com/canton-foundation/canton-dev-fund/blob/main/Development%20Fund%20Proposal%20Review%20Process.md).)*
 
-**Champion:** Needs Champion  
-*(External teams require a Champion per [canton-dev-fund README](https://github.com/canton-foundation/canton-dev-fund). Identify a Foundation member, contributor org, or community champion before or immediately after opening the PR.)*
+**Champion:** Nguyan Vinh
 
 ---
 
