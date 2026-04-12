@@ -16,7 +16,7 @@
 
 **Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source education hub for Canton Network (EN/ZH today), with explicit non-official positioning and links to official documentation.
 
-This proposal requests **Canton Coin (CC)** to **grow an Asia-Pacific developer community** around that hub: **(1)** a **production-grade site launch** milestone, **(2)** **multilingual** support with contributor tooling, **(3)** **at least two (2) developer salons / side events** (边会-style: technical, educational, non-commercial) in the region, and **(4)** **documented ongoing maintenance** with public quarterly updates. Deliverables are **objectively verifiable** (merged repo artifacts, published event pages, recap docs).
+This proposal requests **Canton Coin (CC)** to **grow an Asia-Pacific developer community** around that hub: **(1)** a **production-grade site launch** milestone, **(2)** **multilingual** support including an **i18n helper with separate pipelines for Japanese (`ja`) and Korean (`ko`)** (key coverage, CI/docs per locale—not a single blended “Asian” check), **(3)** **at least two (2) developer salons / side events** (边会-style: technical, educational, non-commercial) in the region, and **(4)** **documented ongoing maintenance** with public quarterly updates. Deliverables are **objectively verifiable** (merged repo artifacts, published event pages, recap docs).
 
 ---
 
@@ -33,7 +33,7 @@ This proposal requests **Canton Coin (CC)** to **grow an Asia-Pacific developer 
 ### 1.2 In scope
 
 - **M1 — Site launch:** Production readiness (see §4): disclaimers, performance/accessibility smoke, deploy reliability, **launch announcement** + baseline metrics.  
-- **M2 — Multilingual:** **i18n helper** (docs + scripts) + **EN + ZH** maintained + **≥1 additional Asian locale** (e.g. **Japanese** or **Korean**—**Champion-selected at kickoff**; partial high-traffic routes acceptable if documented).  
+- **M2 — Multilingual:** **i18n helper** (docs + scripts) with **distinct support for Japanese (`ja`) and Korean (`ko`)**: separate commands or config targets (e.g. `i18n:check:ja` / `i18n:check:ko`), **locale-specific** contributor notes (typography, length, tone placeholders), and **independent** missing-key / parity reports per locale. **EN + ZH** remain canonical for parity checks. **Ship minimum viable UI** for **both** `ja` and `ko` on the **same agreed route set** (home + nav + **Learn** entry minimum); partial keys allowed only if listed in `docs/i18n/gaps-ja.md` and `docs/i18n/gaps-ko.md` with remediation plan.  
 - **M3 — Events:** **≥2** **developer salons** (边会): technical/educational, **non-commercial**, agenda aligned with **official learning resources**; **APAC-friendly** timing; in-person **or** hybrid **or** fully online if travel constraints—**each** with public agenda + **CC-BY** recap in-repo.  
 - **M4 — Maintenance:** **12 months** from M1 acceptance: documented **monthly** content/engineering cadence (min. **≥10** maintenance PRs merged **or** equivalent documented batch releases), **≥4** quarterly public update posts (forum/Discord rules respected), **`docs/grants/final-report.md`**.
 
@@ -55,7 +55,13 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 |------------|----------|---------------------|
 | **Site** | Astro static site, `src/i18n/translations.ts`, GitHub Actions → Pages; open `LICENSE`. | Tag + CI green + live URL in milestone note. |
 | **Launch (M1)** | Checklist: headers, disclaimer copy, broken-link sweep, Lighthouse or equivalent report archived in `docs/grants/m1-launch/`. | Checklist MD + report artifacts on `main`. |
-| **i18n (M2)** | Key coverage vs canonical locale; `docs/i18n.md`; optional CI; pilot **JA** or **KO** (or other Asian locale) pages. | Helper + locale files merged. |
+| **i18n (M2)** | Canonical `en` (or `zh`) key set; **per-locale** checks for **`ja`** and **`ko`**; `docs/i18n.md` + `docs/i18n/ja.md` + `docs/i18n/ko.md`; CI jobs or npm scripts **invoked separately** per locale so Japanese and Korean do not share a single ambiguous report. | Helper merged + **both** `ja` and `ko` route bundles + **two** parity reports (`i18n-report-ja.*`, `i18n-report-ko.*`). |
+
+**i18n helper — Japanese (`ja`) vs Korean (`ko`) (explicit split)**
+
+- **Japanese (`ja`):** Missing-key and **orphan-key** diffs against canonical; optional **line-length / wrapping** hints for UI strings; glossary hook for repeated Canton terms (documented, not normative translations).  
+- **Korean (`ko`):** **Separate** script entrypoint and report file from `ja` (no shared “CJK” bucket); notes on **formal `요`/`습니다` baseline** for UI copy and **postposition length** sensitivity in narrow layouts.  
+- **Shared:** Single source of truth for keys in repo; **fail-closed** CI (or documented manual gate) if either locale falls below agreed coverage threshold for shipped routes.
 | **Events (M3)** | Public RSVP link (Luma / Google Form / GitHub Discussion—**no PII in repo**); agenda `.md` under `docs/grants/events/<slug>/`; photos/slides only with **speaker consent**; recap CC-BY. | **2** event folders + 2 recap files + announcement URLs. |
 | **Maintenance (M4)** | `MAINTAINERS.md`, `docs/sustainability.md`, monthly merge log `docs/grants/maintenance-log.md`. | Log + PR count + quarterly links. |
 
@@ -78,10 +84,14 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 - **Deliverables:** `docs/grants/m1-launch/checklist.md` (all items checked); `docs/grants/m1-launch/lighthouse.pdf` or HTML export; **link sweep** summary (`m1-links.md`); **public launch post** URL (forum / X / Discord announcement—**one** minimum); `docs/grants/m1-traffic.md` baseline methodology.  
 - **Verification:** Git tag `milestone-m1` (or release) + merged paths on `main`.
 
-### Milestone 2 — Multilingual support & i18n helper (Week 18)
+### Milestone 2 — Multilingual support & i18n helper (`ja` + `ko`) (Week 18)
 
-- **Deliverables:** `docs/i18n.md` + scripts; **pilot Asian locale** complete for agreed routes (home + nav + **Learn** entry minimum); EN/ZH regression-free per CI.  
-- **Verification:** CI + screenshot or staging URL in milestone note.
+- **Deliverables:**  
+  - `docs/i18n.md` plus **`docs/i18n/ja.md`** and **`docs/i18n/ko.md`** (contributor + reviewer guidance).  
+  - **i18n helper** implementing **separate** checks for **Japanese** and **Korean** (distinct CLI flags or config keys; **two** generated reports on `main`).  
+  - **Shipped UI** for **`ja`** and **`ko`** each on: home + nav + **Learn** entry (minimum); gaps documented in **`docs/i18n/gaps-ja.md`** / **`docs/i18n/gaps-ko.md`** if any keys deferred.  
+  - EN/ZH regression-free per CI.  
+- **Verification:** CI logs show **both** `ja` and `ko` checks executed; staging or production URLs for `/ja/...` and `/ko/...` routes **or** locale switch behavior documented in milestone note (exact URL pattern follows repo routing at ship time).
 
 ### Milestone 3 — Asia-Pacific developer salons (**≥2** events) (Week 30)
 
@@ -98,7 +108,7 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 ## 5. Acceptance criteria
 
 1. **M1:** All §4 M1 files on `main`; live site matches disclaimer requirements; launch URL valid.  
-2. **M2:** i18n helper merged; **third locale** meets agreed route list; EN/ZH CI passes.  
+2. **M2:** i18n helper merged with **separate `ja` and `ko` validation**; **both** locales meet agreed route list (or documented gaps files with plan); EN/ZH CI passes.  
 3. **M3:** **≥2** events; each has agenda + announcement + recap; **combined RSVP ≥20** documented **without** storing personal data in-repo.  
 4. **M4:** Maintenance log + 4 quarterly posts + final report.  
 5. **No false authority** throughout.  
@@ -112,14 +122,14 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 
 The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repository **does not publish** a typical approved grant size or median. **Amounts are Committee decisions** and must be **justified by deliverables, risk, and comparables** (if the Committee shares benchmarks).
 
-**120,000 CC** here is an **ask**, not a guarantee. It is **defensible** if line items reflect: **part-time maintainer/editor**, **translation + review** for an Asian locale, **two quality events** (venue or A/V, travel within Asia, recordings, volunteer stipends **if allowed** under program rules), and **12 months** of documented maintenance. If the Committee prefers a **smaller first tranche**, the same milestones can be **re-priced** (e.g. fewer travel events → more online salons).
+**120,000 CC** here is an **ask**, not a guarantee. It is **defensible** if line items reflect: **part-time maintainer/editor**, **translation + professional or community review** for **both Japanese and Korean** surfaces, **two quality events** (venue or A/V, travel within Asia, recordings, volunteer stipends **if allowed** under program rules), and **12 months** of documented maintenance. If the Committee prefers a **smaller first tranche**, the same milestones can be **re-priced** (e.g. fewer travel events → more online salons).
 
 ### 6.2 Requested CC (illustrative split — **sum = 120,000 CC**)
 
 | Milestone | CC | Rationale (high level) |
 |-----------|-----|-------------------------|
 | M1 — Site launch | 18,000 | Launch QA, link sweep, analytics setup, announcement pack. |
-| M2 — Multilingual + i18n | 32,000 | i18n engineering + **professional review** for pilot Asian locale. |
+| M2 — Multilingual + i18n (`ja` + `ko`) | 32,000 | i18n engineering + **separate `ja` / `ko` helper paths** + **review** for both locales’ shipped strings. |
 | M3 — **≥2** developer events | 45,000 | APAC logistics (hybrid/in-person or high-quality online), A/V, recap editing, **no alcohol/marketing fluff**. |
 | M4 — 12-month maintenance | 25,000 | Monthly cadence + quarterly posts + final report. |
 | **Total** | **120,000** | |
@@ -132,7 +142,7 @@ The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repo
 
 | Channel | Action |
 |---------|--------|
-| **Asia-Pacific** | Events promoted in **English + Chinese** + pilot Asian locale; times **APAC-evening** friendly. |
+| **Asia-Pacific** | Events and site updates promoted in **English + Chinese + Japanese + Korean** (as shipped); times **APAC-evening** friendly. |
 | **Official-adjacent** | Every event recap links **official docs first**; CIP links for technical claims. |
 | **Repository** | Event materials + maintenance log = **reuse** for other chapters. |
 | **Foundation** | Co-marketing when offered (newsletter / social). |

@@ -8,7 +8,7 @@
 
 ## Summary
 
-**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support to grow an **Asia-Pacific developer community** through **open education**: **(M1)** production **site launch**, **(M2)** **multilingual** support (EN/ZH + **≥1** pilot Asian locale + i18n helper), **(M3)** **≥2** **developer salons / 边会** (technical, non-commercial, APAC-friendly), and **(M4)** **12 months** of **documented ongoing maintenance** with quarterly public updates.
+**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support to grow an **Asia-Pacific developer community** through **open education**: **(M1)** production **site launch**, **(M2)** **multilingual** support (EN/ZH + **Japanese `ja` + Korean `ko`**) with an **i18n helper that validates each locale separately** (not one combined “CJK” check), **(M3)** **≥2** **developer salons / 边会** (technical, non-commercial, APAC-friendly), and **(M4)** **12 months** of **documented ongoing maintenance** with quarterly public updates.
 
 The proposal maps to the program README structure: **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, **Funding request and milestone breakdown**, plus adoption plan, capability evidence, and open-source outputs.
 
