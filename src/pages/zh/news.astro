@@ -30,21 +30,4 @@ const { iso, zh: lastUpdatedDisplay } = siteBuildTimestampUtc();
       </article>
     ))}
   </section>
-
-  <section class="section">
-    <h2>{tr.news.cipWatchTitle}</h2>
-    <div class="topic-list">
-      {tr.news.cipWatchItems.map(({ id, title, status, summary }) => (
-        <article class="topic-item">
-          <h3>
-            <a href={`https://github.com/canton-foundation/cips/blob/main/${id.toLowerCase().replace('-', '-')}`} target="_blank" rel="noopener noreferrer">
-              {id}
-            </a>
-            {' — '}{title}
-          </h3>
-          <p><span class="status">{status}</span> · {summary}</p>
-        </article>
-      ))}
-    </div>
-  </section>
 </BaseLayout>

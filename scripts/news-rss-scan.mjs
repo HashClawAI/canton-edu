@@ -61,7 +61,7 @@ function extractNewsItemsBlocks(source) {
   const zhIdx = source.indexOf('\n  zh:');
   const enPart = zhIdx === -1 ? source : source.slice(0, zhIdx);
   const zhPart = zhIdx === -1 ? '' : source.slice(zhIdx);
-  const re = /news:\s*\{[\s\S]*?items:\s*\[([\s\S]*?)\]\s*,\s*cipWatchTitle/s;
+  const re = /news:\s*\{[\s\S]*?items:\s*\[([\s\S]*?)\]\s*,\s*\n    \},\n    videos:/s;
   const enM = enPart.match(re);
   const zhM = zhPart.match(re);
   return [enM?.[1] ?? '', zhM?.[1] ?? ''];

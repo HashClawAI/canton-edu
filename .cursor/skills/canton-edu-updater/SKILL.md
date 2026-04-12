@@ -43,7 +43,7 @@ Automates **incremental** content updates for the Canton Network bilingual site 
 | `learn` | Learn | 7-step path (step titles + bodies) |
 | `ecosystem` | Ecosystem | Explorers, wallets, DEX/DeFi, **Payment** (`payments`), infra, naming, earn, institutional |
 | `cips` | CIPs | Highlights table, SV list, stats, **mailing-list copy** (topic list is build-fetched) |
-| `news` | News | `items[]` timeline; optional `cipWatchItems` |
+| `news` | News | `items[]` timeline only (CIP discussion lives on **CIPs** page) |
 | `videos` | Videos | Interviews (`youtubeId`), podcast links |
 | `research` | Research | Reports by publisher |
 | `community` | Community | Discord, Telegram, X, governance, dev fund, wiki |
@@ -66,7 +66,7 @@ Canton Network interview YouTube 2026
 | Finding type | Target | How to merge |
 |--------------|--------|----------------|
 | New milestone / press | `news.items` | **Prepend** one object EN + one ZH |
-| CIP in discussion | `news.cipWatchItems` or later `cips.highlights` when final | Append or update that row only |
+| CIP in discussion | `cips.highlights` / mailing list (CIPs page); not duplicated on News | Update highlights or rely on build-fetched discuss list |
 | New SV line in governance story | `cips.svList` | Append if not already listed |
 | New app / infra | `ecosystem.*` | Append to best sub-array (`payments` for payment rails) |
 | New CC pair | `resources.exchanges` | Append if new venue |

@@ -322,13 +322,6 @@ export const translations = {
           url: 'https://canton.wiki/dtcc-canton-network',
         },
       ],
-      cipWatchTitle: 'CIP watch — currently in discussion',
-      cipWatchItems: [
-        { id: 'CIP-0111', title: 'Process for Reducing Super Validator Weight', status: 'Proposed', summary: 'Defines how and when an SV\'s weight can be decreased. Actively debated.' },
-        { id: 'CIP-0108', title: 'Add Merkle Science as Weight 1 SV', status: 'Proposed', summary: 'Predictive analytics provider seeking SV status.' },
-        { id: 'CIP-0107', title: '24h Submission Delay for End-User CC Transactions', status: 'Approved — implementing', summary: 'Safety delay for CC transactions. Approved, now being implemented on-chain.' },
-        { id: 'CIP-0104', title: 'Traffic-Based App Rewards', status: 'Approved — implementing', summary: 'Shifts app rewards from flat allocation to traffic-based distribution.' },
-      ],
     },
     videos: {
       title: 'Interviews & videos',
@@ -804,13 +797,6 @@ export const translations = {
         { date: '2026-03', tag: '生态', title: 'LayerZero 集成上线', body: 'Canton 成为首个集成 LayerZero 全链互操作性的机构级区块链——代币化资产可在 165+ 条公链之间流通。', url: 'https://layerzero.network/blog/canton-network-goes-live' },
         { date: '2026-02-12', tag: '生态', title: 'OKX 上线 Canton Coin（CC/USDT）', body: 'CC/USDT 现货交易在全球头部交易所 OKX 开放。', url: 'https://www.okx.com/help/okx-to-list-cc-canton-for-spot-trading' },
         { date: '2025-12-17', tag: '机构', title: 'DTCC 宣布在 Canton 上代币化美国国债', body: 'DTCC 将通过 ComposerX 在 Canton Network 上代币化美国国债。MVP 计划 2026 上半年。SEC 于 12 月 11 日发出无异议函。', url: 'https://canton.wiki/dtcc-canton-network' },
-      ],
-      cipWatchTitle: 'CIP 观察——正在讨论中',
-      cipWatchItems: [
-        { id: 'CIP-0111', title: '降低超级验证者权重的流程', status: '提议中', summary: '定义何时以及如何降低 SV 权重。正在积极讨论。' },
-        { id: 'CIP-0108', title: '添加 Merkle Science 为权重 1 SV', status: '提议中', summary: '预测分析提供商申请超级验证者资格。' },
-        { id: 'CIP-0107', title: '终端用户 CC 交易 24 小时提交延迟', status: '已通过——实施中', summary: 'CC 交易的安全延迟机制。已通过，正在链上实施。' },
-        { id: 'CIP-0104', title: '基于流量的应用奖励', status: '已通过——实施中', summary: '将应用奖励从固定分配转向基于流量的分发。' },
       ],
     },
     videos: {
