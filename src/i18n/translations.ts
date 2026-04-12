@@ -215,6 +215,12 @@ export const translations = {
       title: 'News & updates',
       intro: 'Major developments, governance votes, and ecosystem milestones. Most recent first.',
       lastUpdatedLabel: 'Last updated:',
+      archiveTableTitle: 'All entries (table)',
+      archiveTableIntro: 'Same timeline entries in a compact table — easier to scan on wide screens.',
+      archiveColDate: 'Date',
+      archiveColTag: 'Category',
+      archiveColTitle: 'Headline',
+      archiveColSummary: 'Summary',
       items: [
         {
           date: '2026-04-10',
@@ -788,6 +794,12 @@ export const translations = {
       title: '动态与新闻',
       intro: '重大进展、治理投票与生态里程碑。按时间倒序排列。',
       lastUpdatedLabel: '最后更新：',
+      archiveTableTitle: '全部条目（表格）',
+      archiveTableIntro: '与上方时间线相同；置于半透明面板内，便于宽幅下扫读。',
+      archiveColDate: '日期',
+      archiveColTag: '类别',
+      archiveColTitle: '标题',
+      archiveColSummary: '摘要',
       items: [
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },
         { date: '2026-04-09', tag: '媒体', title: 'Canton Network CEO 谈去中心化与「加密意识形态」争议', body: 'DLNews 对 Yuval Rooz 的报道：回应外界对网络开放性、链上真实量级及机构范式与意识形态批评之间关系的讨论。', url: 'https://www.dlnews.com/articles/defi/canton-network-ceo-addresses-criticism-from-crypto-ideologues/' },
