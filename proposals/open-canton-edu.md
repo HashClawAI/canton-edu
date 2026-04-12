@@ -14,11 +14,11 @@
 
 | Label | When it fits Open Canton Edu |
 |-------|------------------------------|
-| **`dapp-integration`** | You foreground **ecosystem app surfaces**—wallets, explorers, DEXes, dApp standards—and the site as an **integration map + learning path** into those systems. |
-| **`canton-apis`** | You foreground **Ledger API / JSON API / gRPC** onboarding, examples, and troubleshooting content as a **core** deliverable (heavier than today’s general hub). |
-| **`dar-app-management`** | Usually **weak fit**: only if you pivot milestones toward **DAR build, versioning, distribution, and upgrade** workflows for application authors. |
+| **`dapp-integration`** | You foreground **ecosystem app surfaces**—wallets, explorers, DEXes—and the site as an **integration map** fed by aggregation pipelines. |
+| **`canton-apis`** | You foreground **Ledger API / JSON API** examples and troubleshooting as **generated** learning aids alongside official docs. |
+| **`dar-app-management`** | Usually **weak fit** unless milestones emphasize **DAR** packaging and distribution. |
 
-**Recommendation:** keep **`daml-tooling`** for a DAML/Canton **developer education** hub, i18n for builder UI, and Foundation-coordinated **dev community** events; in the PR thread, cite **SIG / Review Process** alignment (*App Building and Developer Experience — documentation, examples, training*) so reviewers do not over-index on the label alone.
+**Recommendation:** keep **`daml-tooling`** for **Canton / DAML learning surfaces**, i18n for builder-facing UI, and **tooling for aggregation + educational content generation**; cite **SIG / Review Process** alignment (*App Building and Developer Experience — documentation, examples, training*) in the PR thread.
 
 **Champion:** Nguyan Vinh  
 *(Add GitHub handle / affiliation in the PR thread if not already public.)*
@@ -27,9 +27,9 @@
 
 ## Abstract
 
-**Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source education hub for Canton Network (EN/ZH today), with explicit non-official positioning and links to official documentation.
+**Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source hub for **Canton Network** learning material (EN/ZH today), with explicit **non-official** positioning and links to **official** documentation.
 
-This proposal requests **Canton Coin (CC)** to **grow an Asia-Pacific developer community** around that hub: **(1)** a **production-grade site launch** milestone, **(2)** **multilingual** support including an **i18n helper with separate pipelines for Japanese (`ja`) and Korean (`ko`)** (key coverage, CI/docs per locale—not a single blended “Asian” check), **(3)** **at least three (3) developer gatherings / salons** (开发者聚会) run as **community technical sessions** with **pre-alignment and operational support coordinated with Canton Foundation** (timing, format, naming, and optional amplification—**without** implying co-hosting or endorsement unless **separately agreed in writing**), and **(4)** **documented ongoing maintenance** with public quarterly updates. Deliverables are **objectively verifiable** (merged repo artifacts, published event pages, recap docs, coordination logs).
+This proposal requests **Canton Coin (CC)** to deepen **two tracks**—**(1) information aggregation** (documented sources, dedup, build-time or scheduled refresh within ToS/rate limits) and **(2) Canton education content generation** (structured, **human-reviewed** drafts assisted by tooling/AI, every substantive block traceable to **primary sources**). Milestones also cover **(3)** **multilingual** delivery via an **i18n helper** with **separate `ja` and `ko` pipelines**, **(4)** a **production-grade launch** baseline, and **(5)** **12 months** of **documented maintenance** with quarterly public updates. **Developer-community event series, meetups, and Foundation-coordinated salons are explicitly out of scope** for this grant (see §1.3). Deliverables are **objectively verifiable** in the public repository.
 
 ---
 
@@ -39,26 +39,28 @@ This proposal requests **Canton Coin (CC)** to **grow an Asia-Pacific developer 
 
 | Dimension | Problem | Ecosystem value |
 |-----------|---------|-----------------|
-| **Asia-Pacific onboarding** | Time zones and languages differ from US/EU defaults; many builders first encounter Canton through **fragmented** English-only or ad-hoc chat. | A **neutral, open hub** plus **local-language surfaces** and **live events** lowers friction to **official docs** and **CIPs**. |
-| **Trust** | Unofficial education can be mistaken for “official.” | Hardened **disclaimers**, **verify-at-source** patterns, and **transparent** funding credit. |
-| **Sustainability** | Volunteer sites stall after launch. | A **12-month maintenance SLA** with measurable merge cadence keeps the hub **current**. |
+| **Signal vs noise** | Official and community Canton signals are **scattered** (CIPs, forums, blogs, APIs); learners lack a **single neutral index** that still **points upstream**. | **Aggregation** with transparent sources reduces duplicate hunting and improves **CIP / doc literacy**. |
+| **Education throughput** | Turning raw updates into **structured explainers** (EN/ZH, later JA/KO) is **labor-intensive**; quality drops without checklists. | A **repeatable generation + review** pipeline produces **consistent** educational snippets without posing as authoritative specs. |
+| **Trust** | Unofficial summaries can read “official.” | **Disclaimers**, **verify-at-source** links, and **Development Fund** credit. |
+| **Sustainability** | Aggregators rot when feeds break. | **12-month maintenance SLA**, monitoring, and documented runbooks. |
 
 ### 1.2 In scope
 
-- **M1 — Site launch:** Production readiness (see §4): disclaimers, performance/accessibility smoke, deploy reliability, **launch announcement** + baseline metrics.  
-- **M2 — Multilingual:** **i18n helper** (docs + scripts) with **distinct support for Japanese (`ja`) and Korean (`ko`)**: separate commands or config targets (e.g. `i18n:check:ja` / `i18n:check:ko`), **locale-specific** contributor notes (typography, length, tone placeholders), and **independent** missing-key / parity reports per locale. **EN + ZH** remain canonical for parity checks. **Ship minimum viable UI** for **both** `ja` and `ko` on the **same agreed route set** (home + nav + **Learn** entry minimum); partial keys allowed only if listed in `docs/i18n/gaps-ja.md` and `docs/i18n/gaps-ko.md` with remediation plan.  
-- **M3 — Events (Foundation-coordinated support):** **≥3** **developer gatherings** (开发者聚会 / 边会-style salons): technical/educational, **non-commercial**, agendas anchored in **official learning resources**. **Before each session**, the grantee **coordinates with Canton Foundation** (or its designated community / developer-relations channel) on **calendar windows, city vs online vs hybrid mix, speaker sourcing norms, and brand-kit compliance** ([Canton brand & trademark use](https://www.canton.network/brand-kit-trademark-use)); Foundation may provide **optional** programme alignment, comms support, or amplification **when it elects to**. **Execution and budget accountability** remain with the grantee; **speaker selection** follows a **published, merit-based** call + Champion review, **without** suggesting Foundation pre-approval of talk content unless explicitly documented. **Each** event ships public agenda + **CC-BY** recap + **redacted coordination summary** in-repo (see §4).  
-- **M4 — Maintenance:** **12 months** from M1 acceptance: documented **monthly** content/engineering cadence (min. **≥10** maintenance PRs merged **or** equivalent documented batch releases), **≥4** quarterly public update posts (forum/Discord rules respected), **`docs/grants/final-report.md`**.
+- **M1 — Site launch & IA for aggregation:** Production readiness (§4): disclaimers, performance/accessibility smoke, deploy reliability, **information architecture** notes for which surfaces are **aggregated vs hand-authored**, **launch announcement** + baseline metrics.  
+- **M2 — Multilingual:** **i18n helper** (docs + scripts) with **distinct `ja` and `ko`** checks (e.g. `i18n:check:ja` / `i18n:check:ko`), `docs/i18n.md` + `docs/i18n/ja.md` + `docs/i18n/ko.md`, **two** parity reports; **ship** `ja` + `ko` UI on home + nav + **Learn** entry (minimum) or documented **`gaps-ja.md` / `gaps-ko.md`**.  
+- **M3 — Aggregation pipeline & education content generation:** **Aggregation:** documented **allow-list sources**, fetch/transform scripts (or CI steps), dedup/idempotency rules, `docs/aggregation/runbook.md`, and **≥8** merged integration PRs refreshing agreed surfaces (e.g. news/CIP-watch/ecosystem indices—exact list fixed at kickoff). **Generation:** `docs/content-generation/workflow.md` (human-in-the-loop, AI where appropriate), quality checklist, and **≥18** merged **education content units** (e.g. new/expanded learn blurbs, glossary entries, digest rows—each PR lists **≥1 canonical URL** per unit); no ship without reviewer sign-off in PR template.  
+- **M4 — Maintenance:** **12 months** from M1: **≥10** maintenance PRs (or batched equivalents), **≥4** quarterly public update posts, `docs/grants/final-report.md` covering **aggregation reliability** and **generation quality** metrics.
 
 ### 1.3 Out of scope (explicit)
 
 - **Not** protocol, node, or synchronizer engineering. **Not** custody, trading, or token sales.  
-- **Not** implying Canton Foundation / Digital Asset / Canton Network **endorsement**. **Coordination with Canton Foundation on M3 does not**, by itself, constitute co-branding, co-hosting, or content pre-approval.  
-- **Not** paid “pay-to-attend” training; events are **community / educational** (sponsorship transparency in recap if any).
+- **Not** implying Canton Foundation / Digital Asset / Canton Network **endorsement**.  
+- **Not in this proposal:** **Developer-community event programs** (meetups, salons, conferences, travel budgets, RSVP campaigns, or **Canton Foundation–coordinated** physical/hybrid event series). Those may be a **separate** initiative if desired later.  
+- **Not** fully automated “write production DAML” systems; generation stays **educational**, **source-linked**, and **human-gated**.
 
 ### 1.4 Optional future phase (not in this funding ask)
 
-Video course series, DAML AI-assist MVP, and deep agent refactors may be proposed **separately** if this grant succeeds—keeps scope **auditable** against the four milestones below.
+In-person or hybrid **community events**, long-form video curricula, and **DAML AI-assist MVP** tooling may be proposed **separately**.
 
 ---
 
@@ -67,16 +69,17 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 | Workstream | Approach | Verifiable outputs |
 |------------|----------|---------------------|
 | **Site** | Astro static site, `src/i18n/translations.ts`, GitHub Actions → Pages; open `LICENSE`. | Tag + CI green + live URL in milestone note. |
-| **Launch (M1)** | Checklist: headers, disclaimer copy, broken-link sweep, Lighthouse or equivalent report archived in `docs/grants/m1-launch/`. | Checklist MD + report artifacts on `main`. |
-| **i18n (M2)** | Canonical `en` (or `zh`) key set; **per-locale** checks for **`ja`** and **`ko`**; `docs/i18n.md` + `docs/i18n/ja.md` + `docs/i18n/ko.md`; CI jobs or npm scripts **invoked separately** per locale so Japanese and Korean do not share a single ambiguous report. | Helper merged + **both** `ja` and `ko` route bundles + **two** parity reports (`i18n-report-ja.*`, `i18n-report-ko.*`). |
-| **Events (M3)** | **Foundation coordination:** documented touchpoints (e.g. kickoff sync, brand-kit checklist) **without** confidential threads in-repo; then public RSVP (Luma / Form / Discussion—**no PII in repo**); agenda `.md` under `docs/grants/events/<slug>/`; photos/slides only with **speaker consent**; recap CC-BY. | **≥3** event folders + **≥3** recaps + **≥3** **`coordination-summary.md`** (redacted) + announcement URLs. |
-| **Maintenance (M4)** | `MAINTAINERS.md`, `docs/sustainability.md`, monthly merge log `docs/grants/maintenance-log.md`. | Log + PR count + quarterly links. |
+| **Launch (M1)** | Checklist + link sweep + **IA doc** `docs/grants/m1-aggregation-ia.md` listing which pages are **aggregated feeds** vs static narrative. | Artifacts under `docs/grants/m1-launch/` + IA doc on `main`. |
+| **i18n (M2)** | Per-locale **`ja` / `ko`** checks; reports `i18n-report-ja.*`, `i18n-report-ko.*`. | Helper + routes + reports merged. |
+| **Aggregation (M3a)** | Allow-listed HTTP/RSS/mail-public sources; rate limits; normalize to typed entries; fail-soft with logged errors in CI artifact. | `docs/aggregation/runbook.md` + scripts + **≥8** merge PRs touching agreed data paths. |
+| **Education generation (M3b)** | Templates + optional LLM/editor assist → **PR per batch** with reviewer checklist + **primary-source URL list**; EN/ZH parity for generated UI strings where applicable. | `docs/content-generation/workflow.md` + **≥18** merged units (counted in milestone note). |
+| **Maintenance (M4)** | `MAINTAINERS.md`, `docs/sustainability.md`, `docs/grants/maintenance-log.md`. | Log + quarterly links + final report. |
 
 **i18n helper — Japanese (`ja`) vs Korean (`ko`) (explicit split)**
 
-- **Japanese (`ja`):** Missing-key and **orphan-key** diffs against canonical; optional **line-length / wrapping** hints for UI strings; glossary hook for repeated Canton terms (documented, not normative translations).  
-- **Korean (`ko`):** **Separate** script entrypoint and report file from `ja` (no shared “CJK” bucket); notes on **formal `요`/`습니다` baseline** for UI copy and **postposition length** sensitivity in narrow layouts.  
-- **Shared:** Single source of truth for keys in repo; **fail-closed** CI (or documented manual gate) if either locale falls below agreed coverage threshold for shipped routes.
+- **Japanese (`ja`):** Missing-key / orphan-key diffs; optional line-length hints.  
+- **Korean (`ko`):** **Separate** entrypoint and report from `ja`; formal-register UI baseline notes.  
+- **Shared:** Fail-closed or documented manual gate under agreed coverage thresholds.
 
 **Backward compatibility:** *No Canton protocol / node / SDK changes.*
 
@@ -85,51 +88,44 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 ## 3. Architectural alignment
 
 - **Developer experience & training** — per [Development Fund Proposal Review Process](https://github.com/canton-foundation/canton-dev-fund/blob/main/Development%20Fund%20Proposal%20Review%20Process.md).  
-- **CIP / official docs literacy** — site links to [canton-foundation/cips](https://github.com/canton-foundation/cips) and official docs; events **must** cite primary reading.  
-- **Program fit** — [Canton Development Fund](https://github.com/canton-foundation/canton-dev-fund): public good, transparent milestones, CC-denominated reporting (**CIP-0082**, **CIP-0100** as context).
+- **CIP / official docs literacy** — [canton-foundation/cips](https://github.com/canton-foundation/cips) and official docs are **cited**, not replaced.  
+- **Program fit** — [Canton Development Fund](https://github.com/canton-foundation/canton-dev-fund): public good, transparent milestones, CC reporting (**CIP-0082**, **CIP-0100** as context).
 
 ---
 
 ## 4. Milestones and deliverables
 
-### Milestone 1 — Site launch & production readiness (Week 8)
+### Milestone 1 — Site launch, IA & production readiness (Week 8)
 
-- **Deliverables:** `docs/grants/m1-launch/checklist.md` (all items checked); `docs/grants/m1-launch/lighthouse.pdf` or HTML export; **link sweep** summary (`m1-links.md`); **public launch post** URL (forum / X / Discord announcement—**one** minimum); `docs/grants/m1-traffic.md` baseline methodology.  
-- **Verification:** Git tag `milestone-m1` (or release) + merged paths on `main`.
+- **Deliverables:** `docs/grants/m1-launch/checklist.md`; Lighthouse or equivalent export; `m1-links.md`; **`docs/grants/m1-aggregation-ia.md`**; public launch post URL; `docs/grants/m1-traffic.md` baseline.  
+- **Verification:** Tag `milestone-m1` + paths on `main`.
 
 ### Milestone 2 — Multilingual support & i18n helper (`ja` + `ko`) (Week 18)
 
-- **Deliverables:**  
-  - `docs/i18n.md` plus **`docs/i18n/ja.md`** and **`docs/i18n/ko.md`** (contributor + reviewer guidance).  
-  - **i18n helper** implementing **separate** checks for **Japanese** and **Korean** (distinct CLI flags or config keys; **two** generated reports on `main`).  
-  - **Shipped UI** for **`ja`** and **`ko`** each on: home + nav + **Learn** entry (minimum); gaps documented in **`docs/i18n/gaps-ja.md`** / **`docs/i18n/gaps-ko.md`** if any keys deferred.  
-  - EN/ZH regression-free per CI.  
-- **Verification:** CI logs show **both** `ja` and `ko` checks executed; staging or production URLs for `/ja/...` and `/ko/...` routes **or** locale switch behavior documented in milestone note (exact URL pattern follows repo routing at ship time).
+- **Deliverables:** `docs/i18n.md`, `docs/i18n/ja.md`, `docs/i18n/ko.md`; helper + **two** reports; shipped **`ja`/`ko`** routes (or gap files + plan); EN/ZH CI clean.  
+- **Verification:** CI logs + URLs in milestone note.
 
-### Milestone 3 — Asia-Pacific developer gatherings (**≥3** sessions), **Canton Foundation–coordinated support** (Week 30)
+### Milestone 3 — Aggregation pipeline & education content generation (Week 32)
 
-- **Deliverables:** **≥3** directories `docs/grants/events/<event-slug>/`, each containing:  
-  - `agenda.md`, `announcement-url.txt`, `recap.md` (CC-BY), optional `slides/` only with license file if redistributable.  
-  - **`coordination-summary.md`**: dates and **topics** of alignment with **Canton Foundation** (or designated contact), agreed **format** (in-person city **or** hybrid **or** online), **brand-kit** checklist outcome, and whether **optional Foundation amplification** was used (**yes/no**). **Do not** paste private email bodies; redact as needed.  
-  - **`speaker-provenance.md`**: how speakers were chosen (open call link, invite list criteria, conflict-of-interest note).  
-- **Participation:** **≥30** unique participants **combined** across all sessions (RSVP aggregate in recaps—**no PII in-repo**).  
-- **Verification:** Paths on `main`; Champion may add a short PR-thread note confirming Foundation coordination occurred **for each** session.
+- **Aggregation deliverables:** `docs/aggregation/sources.md` (allow list), `docs/aggregation/runbook.md`, scripts/CI as designed, **≥8** merged PRs updating agreed aggregated surfaces.  
+- **Generation deliverables:** `docs/content-generation/workflow.md` + checklist; **≥18** merged **education content units** with **primary-source URLs** recorded in PR bodies or `sources.md` sidecars.  
+- **Verification:** Milestone note links PR numbers + counts; spot-check **3** random units for source links.
 
 ### Milestone 4 — Ongoing maintenance & annual close-out (Month 12 from M1)
 
-- **Deliverables:** `docs/grants/maintenance-log.md` with **≥10** documented maintenance cycles; **≥4** quarterly update links; `docs/grants/final-report.md` (metrics, events outcomes, lessons).  
-- **Verification:** Merged files + link list.
+- **Deliverables:** `docs/grants/maintenance-log.md` (**≥10** cycles), **≥4** quarterly update links, `docs/grants/final-report.md` (**aggregation uptime / error budgets**, **generation throughput**, lessons).  
+- **Verification:** Merged files + links.
 
 ---
 
 ## 5. Acceptance criteria
 
-1. **M1:** All §4 M1 files on `main`; live site matches disclaimer requirements; launch URL valid.  
-2. **M2:** i18n helper merged with **separate `ja` and `ko` validation**; **both** locales meet agreed route list (or documented gaps files with plan); EN/ZH CI passes.  
-3. **M3:** **≥3** sessions; each has agenda + announcement + recap + **`coordination-summary.md`** + **`speaker-provenance.md`**; **combined RSVP ≥30** without PII in-repo; materials **respect** [Canton brand & trademark use](https://www.canton.network/brand-kit-trademark-use) per coordination log.  
-4. **M4:** Maintenance log + 4 quarterly posts + final report.  
+1. **M1:** All §4 M1 artifacts on `main`; disclaimers accurate; **IA doc** lists aggregation boundaries.  
+2. **M2:** Separate **`ja`/`ko` validation**; shipped routes or documented gaps + plan.  
+3. **M3:** **≥8** aggregation PRs + **≥18** generation units merged; **every** generation PR lists **canonical sources**; **no** aggregation source outside **`sources.md` allow list** without Champion-approved amendment note.  
+4. **M4:** Maintenance log + quarterly posts + final report.  
 5. **No false authority** throughout.  
-6. **Public good:** repo public; event materials **CC-BY** unless speaker IP requires redaction (then recap text-only).
+6. **Public good:** repo public; new prose defaults **CC-BY 4.0** where not otherwise constrained by third-party quotes.
 
 ---
 
@@ -137,34 +133,33 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 
 ### 6.1 Is **120,000 CC** “usual”?
 
-The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repository **does not publish** a typical approved grant size or median. **Amounts are Committee decisions** and must be **justified by deliverables, risk, and comparables** (if the Committee shares benchmarks).
+The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repository **does not publish** a typical approved grant size or median. **Amounts are Committee decisions.**
 
-**120,000 CC** here is an **ask**, not a guarantee. It is **defensible** if line items reflect: **part-time maintainer/editor**, **translation + professional or community review** for **both Japanese and Korean** surfaces, **≥3 developer gatherings** delivered **with Canton Foundation–coordinated support** (see §6.3 for **illustrative** cost mapping: venue/platform, A/V, interpretation, materials—**actual mix** follows Foundation alignment; **re-price M3** with the Committee if three sessions materially exceed this tranche), and **12 months** of documented maintenance. If the Committee prefers a **smaller first tranche**, the same milestones can be **re-priced**.
+**120,000 CC** is an **ask**. It is **defensible** for **part-time engineering + editorial/fact-check**, **JA/KO review**, **aggregation infra** (APIs within vendor ToS), **optional LLM/tooling costs** for **draft-only** generation under human review, and **12 months** maintenance. **Re-price** with the Committee if scope shifts.
 
 ### 6.2 Requested CC (illustrative split — **sum = 120,000 CC**)
 
 | Milestone | CC | Rationale (high level) |
 |-----------|-----|-------------------------|
-| M1 — Site launch | 18,000 | Launch QA, link sweep, analytics setup, announcement pack. |
-| M2 — Multilingual + i18n (`ja` + `ko`) | 32,000 | i18n engineering + **separate `ja` / `ko` helper paths** + **review** for both locales’ shipped strings. |
-| M3 — **≥3** developer gatherings (**Foundation-coordinated**) | 45,000 | **Event support bundle** for **≥3** sessions per §6.3; **adjust with Committee** if scope exceeds tranche. |
-| M4 — 12-month maintenance | 25,000 | Monthly cadence + quarterly posts + final report. |
+| M1 — Launch + aggregation IA | 18,000 | Hardening, IA, analytics baseline. |
+| M2 — Multilingual + i18n (`ja` + `ko`) | 32,000 | Helper + **separate locale QA** + review. |
+| M3 — Aggregation + education generation | 45,000 | Pipelines, scripts, **editorial time**, optional **tooling/API** spend (see §6.3). |
+| M4 — 12-month maintenance | 25,000 | Ops, quarterly posts, final report. |
 | **Total** | **120,000** | |
 
-### 6.3 M3 budget — illustrative mapping to **Foundation-coordinated** activity support
+### 6.3 M3 budget — illustrative mapping (**aggregation + generation**)
 
-*The following table **illustrates** how the **45,000 CC** M3 tranche **may** be allocated across **≥3** sessions after **Canton Foundation** and the grantee agree on **format and scope** per session. Figures are **not binding** until coordination notes are filed; unused balances (if any) roll into **maintenance / recap quality** or **refund / return per Committee policy**.*
+*Illustrative only; **not binding** until kickoff sourcing plan is fixed.*
 
-| Sub-item (illustrative) | CC (example) | Notes |
-|-------------------------|--------------|--------|
-| Venue **or** professional webinar platform | 8,000–15,000 | Depends on in-person city vs online-first per Foundation window |
-| A/V, recording, post-production | 6,000–12,000 | Brand-safe lower thirds per brand kit |
-| Interpretation / captions (**EN↔ZH**, **JA**/**KO** as needed) | 5,000–12,000 | Only if agreed agenda warrants |
-| Speaker honoraria / travel (if policy-allowed) | 0–10,000 | **Transparency** in recap; zero if all-volunteer |
-| Materials, signage, community moderation | 3,000–6,000 | Link packs → official docs |
-| Contingency / Foundation-requested adjustments | remainder | Buffer for schedule or format changes |
+| Sub-item | CC (example band) | Notes |
+|----------|-------------------|--------|
+| Aggregation engineering (scripts, CI, monitoring) | 12,000–18,000 | Rate limits, retries, structured logs |
+| Human editorial + fact-check for generated units | 10,000–18,000 | **≥18** units × review depth |
+| Optional AI/tooling API (draft assist only) | 0–8,000 | **Zero** if Committee prefers no third-party LLM spend |
+| Source hygiene / legal spot-check (quotes, logos) | 3,000–6,000 | Brand-kit compliance for on-site graphics |
+| Contingency | remainder | Feed/API changes |
 
-**Payment:** Per milestone **acceptance** against §5 (Committee process per program README). **>6 months** → **6-month re-evaluation** for CC volatility and any **descope** (e.g. all sessions **online-first** if Foundation programme alignment favors it).
+**Payment:** Per milestone **acceptance** against §5. **>6 months** → **6-month re-evaluation** for CC volatility.
 
 ---
 
@@ -172,18 +167,18 @@ The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repo
 
 | Channel | Action |
 |---------|--------|
-| **Asia-Pacific** | Events and site updates promoted in **English + Chinese + Japanese + Korean** (as shipped); times **APAC-evening** friendly. |
-| **Official-adjacent** | Every event recap links **official docs first**; CIP links for technical claims. |
-| **Repository** | Event materials + maintenance log = **reuse** for other chapters. |
-| **Foundation** | **M3:** pre-align on **dates, format, naming, optional amplification**; **ongoing:** co-marketing when offered (newsletter / social). |
+| **Site** | RSS/sitemap where applicable; clear **“last refreshed”** on aggregated sections. |
+| **Repository** | Runbooks + workflows reusable by forks. |
+| **Public venues** | **≥4** quarterly posts (forum / X / Discord—**follow channel rules**) pointing **first** to official docs for normative claims. |
+| **Foundation** | Co-marketing when offered; **no** event-series obligations in this grant. |
 
 ---
 
 ## Evidence of technical capability
 
-- Shipped stack: [HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu) — Astro, bilingual content, GitHub Actions.  
-- **Live site** URL cited at submission.  
-- Maintainer experience landing large `translations.ts` PRs with parity.
+- Shipped stack: [HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu) — Astro, bilingual `translations.ts`, GitHub Actions.  
+- **Live site** URL at submission.  
+- Prior **incremental** content and automation patterns (e.g. build-time charts, optional feed-based pages) demonstrate ability to extend **aggregation** safely.
 
 ---
 
@@ -191,23 +186,23 @@ The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repo
 
 | Output | License |
 |--------|---------|
-| Site | Repo `LICENSE` |
-| Event agendas & recaps | **CC-BY 4.0** (default) |
-| i18n scripts | Same as repo |
+| Site + scripts | Repo `LICENSE` |
+| Runbooks, workflow docs, templates | **CC-BY 4.0** (default) |
+| i18n helper | Same as repo |
 
 ---
 
 ## Co-Marketing
 
 - Milestone notes suitable for Foundation channels.  
-- **Canton Development Fund** credit in contribute / about for grant period (wording per brand guidance).
+- **Canton Development Fund** credit in contribute / about (wording per brand guidance).
 
 ---
 
 ## Rationale (summary)
 
-- **Focused ask:** Launch + language + **real-world Asia dev community** touchpoints + **sustained maintenance** — all **easy to verify**.  
-- **Why CC:** Converts volunteer time into **accountable** community infrastructure aligned with the fund’s **public-good** mission.
+- **Focused ask:** **Aggregation + education generation + multilingual reach + maintenance**—no parallel **dev-community event** program in this tranche, reducing operational risk and keeping verification **repo-centric**.  
+- **Why CC:** Converts volunteer bandwidth into **measurable** public-good documentation infrastructure.
 
 ---
 
@@ -215,4 +210,5 @@ The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repo
 
 - [github.com/canton-foundation/canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund)  
 - **CIP-0082**, **CIP-0100**  
-- **grants-discuss@lists.sync.global** · **dev-fund@canton.foundation**
+- **grants-discuss@lists.sync.global** · **dev-fund@canton.foundation**  
+- [Canton brand & trademark use](https://www.canton.network/brand-kit-trademark-use)

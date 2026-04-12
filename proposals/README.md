@@ -4,6 +4,8 @@ Official program repo: [canton-foundation/canton-dev-fund](https://github.com/ca
 
 To submit: fork that repo, add the proposal file under `proposals/` on a branch, open a PR titled `Proposal: <Project Name>`, and fill in the GitHub PR body using the checklist in `.github/pull_request_template.md`.
 
-The Markdown file in this folder is ready to copy into your fork. Adjust **Champion contact** (e.g. GitHub @), **dates**, **CC totals**, and **event cities / format** after Committee feedback. The current draft centers **Asia-Pacific developer community**, **≥3 developer gatherings** with **Canton Foundation–coordinated support** (timing, format, brand compliance; see §6.3 for illustrative M3 cost mapping), **multilingual + i18n** (helper with **separate Japanese `ja` and Korean `ko`** checks and shipped routes for both), **site launch**, and **12-month maintenance**, with an **illustrative 120,000 CC** split (see §6.1 in the proposal on funding realism).
+The Markdown file in this folder is ready to copy into your fork. Adjust **Champion contact** (e.g. GitHub @), **dates**, and **CC totals** after Committee feedback.
+
+The current draft focuses **Open Canton Edu** on **information aggregation**, **Canton education content generation** (human-reviewed, source-linked), **multilingual i18n** (`ja` / `ko` **separate** helper paths), **production launch + aggregation IA**, and **12-month maintenance**—**not** a developer-community event program. Illustrative **120,000 CC** split; see **§6.1–§6.3** in the proposal.
 
 Proposal sections mirror the [program README](https://github.com/canton-foundation/canton-dev-fund): **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, **Funding request and milestone breakdown**, plus adoption plan, capability evidence, and open-source outputs.
