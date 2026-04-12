@@ -68,7 +68,7 @@ export const translations = {
       contributeManualLabel: 'Or edit manually:',
       contributeManualSteps: 'Fork → edit src/i18n/translations.ts (EN + ZH) → npm run build → open a PR',
       disclaimer:
-        'This site is not affiliated with Canton Foundation, Digital Asset, or network participants. Content is for education only, not financial or legal advice.',
+        'Canton Tools is an independent, open-source community education project (non-commercial, public-good style). It is not affiliated with, sponsored by, or endorsed by Canton Foundation, Digital Asset (Switzerland) GmbH, the Canton Network, or its participants. References to “Canton” are descriptive only and do not imply a trademark license or partnership. Official Canton marks and use rules: https://www.canton.network/brand-kit-trademark-use — Content is for education only; not financial or legal advice.',
     },
     learn: {
       title: 'Learning path',
@@ -613,7 +613,7 @@ export const translations = {
       contributeManualLabel: '或手动编辑：',
       contributeManualSteps: 'Fork → 编辑 src/i18n/translations.ts（EN + ZH）→ npm run build → 提 PR',
       disclaimer:
-        '本站与 Canton Foundation、Digital Asset 及网络参与方无隶属关系。内容仅供学习，不构成投资或法律建议。',
+        'Canton Tools 由社区独立维护的开源教育资源站：非官方、非商业，以公益科普与知识分享为目的；与 Canton Foundation、Digital Asset（瑞士）有限公司、Canton Network 及其参与方无任何隶属、赞助或背书关系。文中「Canton」等称谓仅作描述性引用，不代表获得商标许可或商业合作。官方标识与商标使用规范见 https://www.canton.network/brand-kit-trademark-use 。内容仅供学习，不构成投资或法律建议。',
     },
     learn: {
       title: '学习路径',
