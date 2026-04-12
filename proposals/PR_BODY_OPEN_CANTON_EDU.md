@@ -12,7 +12,7 @@
 
 The proposal maps to the program README structure: **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, **Funding request and milestone breakdown**, plus adoption plan, capability evidence, and open-source outputs.
 
-**Author:** Hashclaw.AI · **Champion:** Nguyan Vinh · **Label:** `daml-tooling`
+**Author:** Hashclaw.AI · **Champion:** Nguyan Vinh · **Label:** `daml-tooling` *(official template has **no** `education` label—must pick one from [closed list](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md); alternatives discussed in proposal header)*  
 
 ---
 

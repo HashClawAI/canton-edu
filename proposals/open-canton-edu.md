@@ -5,7 +5,20 @@
 **Created:** 2026-04-11  
 **Suggested SIG (for reviewers):** Application developers / developer-experience adjacent (documentation, examples, training)  
 **Label:** daml-tooling  
-*(Closest single label in the [proposal template](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md); this grant focuses on **open education**, **multilingual reach**, and **in-person or hybrid developer events** in Asia—not protocol changes.)*
+
+*(The [proposal template](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md) requires **exactly one** label from a **closed list**. There is **no** `education`, `documentation`, or `community` label—those themes must be described in the body and SIG alignment instead.)*
+
+**Full label enum (pick only one):** `dapp-integration`, `wallet-apps`, `attestor-pools-daos-multisig`, `defi-liquidity`, `party-portability-data-resilience`, `token-asset-standards`, `tokenomics`, `onchain-governance`, `daml-tooling`, `dar-app-management`, `canton-protocol-multi-synchronizer`, `canton-apis`, `node-deployment-operations`, `global-synchronizer-scaling`, `financial-workflows-composability`, `regulatory-compliance`.
+
+**Reasonable alternatives to `daml-tooling` for this project (if you retune one paragraph of the narrative):**
+
+| Label | When it fits Open Canton Edu |
+|-------|------------------------------|
+| **`dapp-integration`** | You foreground **ecosystem app surfaces**—wallets, explorers, DEXes, dApp standards—and the site as an **integration map + learning path** into those systems. |
+| **`canton-apis`** | You foreground **Ledger API / JSON API / gRPC** onboarding, examples, and troubleshooting content as a **core** deliverable (heavier than today’s general hub). |
+| **`dar-app-management`** | Usually **weak fit**: only if you pivot milestones toward **DAR build, versioning, distribution, and upgrade** workflows for application authors. |
+
+**Recommendation:** keep **`daml-tooling`** for a DAML/Canton **developer education** hub, i18n for builder UI, and Foundation-coordinated **dev community** events; in the PR thread, cite **SIG / Review Process** alignment (*App Building and Developer Experience — documentation, examples, training*) so reviewers do not over-index on the label alone.
 
 **Champion:** Nguyan Vinh  
 *(Add GitHub handle / affiliation in the PR thread if not already public.)*
