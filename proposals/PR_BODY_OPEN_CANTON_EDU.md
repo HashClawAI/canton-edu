@@ -8,27 +8,38 @@
 
 ## Summary
 
-**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source, bilingual educational hub for Canton Network, DAML, and the institutional ecosystem — learning paths, CIPs, ecosystem listings, news/research indexes, and explicit non-official / AI-assisted maintenance disclosures.
+**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support for a **~50-week**, **six-milestone** program: documentation alignment, builder onboarding + **i18n helper v1**, sustainability runbooks, **six multilingual public tutorials** (captions EN+ZH, open license), **maintainer-agent** refinement, and a **feasibility-gated DAML-assist** spike (optional MVP). The proposal body is reorganized to match the program README’s required elements: **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, and **Funding request and milestone breakdown**. It also explicitly covers **problem/ecosystem value**, **objectively verifiable deliverables**, **realistic timelines**, **open-source outputs**, **evidence of technical capability**, and an **adoption/distribution plan**.
 
-This proposal requests Development Fund support for a **~12-month** milestone program (six milestones, **>6 months** → 6-month CC/volatility re-evaluation per program rules): **(1)** official-source alignment; **(2)** developer onboarding + **i18n helper v1** and pilot extra locale; **(3)** sustainability / handoff / quarterly SLA + tutorial RACI; **(4)** **recorded multilingual public tutorials** (captions EN+ZH minimum, open licensing); **(5)** **general-purpose maintainer Agent** refinement (guardrails, reuse); **(6)** **feasibility-gated AI-assisted DAML tooling** (spike → MVP or documented no-go + effort shift) **+ final grant report**. Deliverables are mergeable artifacts in the public repo with documented locale and tutorial acceptance rules.
-
-**SIG alignment (per Review Process):** App Building and Developer Experience (documentation, examples, training).  
-**Template label used in proposal:** `daml-tooling` (closest single label; happy to relabel if the Committee prefers).
+**Author:** Openclaw · **Champion:** Nguyan Vinh  
+**Suggested SIG:** Application developers / developer experience (documentation & training) · **Label:** `daml-tooling`
 
 ---
 
-## Checklist
+## Mapping to program README (“What makes a strong proposal”)
 
-- [x] Proposal file added under `/proposals/` (in this PR: `open-canton-edu.md`)
-- [ ] Milestones and funding amounts defined *(replace `[TOTAL]`, `[M1]`–`[M6]` CC placeholders in the proposal before final review)*
-- [x] Acceptance criteria included
-- [x] Alignment with Canton priorities described (developer experience, CIP literacy, public good)
+| Strong-proposal item | Where addressed in `open-canton-edu.md` |
+|----------------------|----------------------------------------|
+| Clear problem & ecosystem value | §1.1 table |
+| Objectively verifiable deliverables | §2 table, §4 paths/tags, §5 checklist |
+| Realistic timelines & scope | §1.2–1.3, §4 week targets, quantified **20 / 12 / 6** |
+| Open-source / reusable outputs | **Open-source and reusable outputs** |
+| Evidence of technical capability | **Evidence of technical capability** |
+| Adoption or distribution plan | **Adoption and distribution plan** |
+
+---
+
+## Checklist (PR template)
+
+- [x] Proposal file added under `/proposals/` (`open-canton-edu.md`)
+- [x] Milestones and funding amounts defined *(illustrative **120,000 CC** total with M1–M6 split — **subject to Committee calibration**)*
+- [x] Acceptance criteria included (§5)
+- [x] Alignment with Canton priorities described (§3)
 
 ---
 
 ## Notes for Reviewers
 
-- **Champion:** Nguyan Vinh (listed in `proposals/open-canton-edu.md`; **Author:** Openclaw).  
-- **Funding:** CC totals are intentionally left as placeholders for Committee guidance on sizing vs. comparable documentation grants.  
-- **Trademark / positioning:** The site is explicitly **unofficial** and links to official brand guidance; grant work is editorial/technical hardening, not rebranding as an official portal.  
-- **Scope flexibility:** If the Committee prefers a **narrower first phase**, M4–M6 (tutorials, agent refinement, DAML-assist gate) can be deferred or descoped in favor of M1–M3, with CC split adjusted accordingly. **DAML-assist** remains explicitly **spike-gated** to avoid open-ended R&D.
+- **Funding:** **120,000 CC** is an **indicative** total for discussion; weights favor **M4 tutorials** and **M6 gated R&D**; happy to revise after benchmark grants.  
+- **Champion:** Confirm **GitHub @ / affiliation** for Nguyan Vinh in PR discussion if helpful for assignment.  
+- **Scope flexibility:** Committee may **phase-split** (e.g. fund M1–M3 first); M6 **no-go** path is pre-documented.  
+- **Trademark:** Site remains **unofficial** with existing brand-kit link pattern.
