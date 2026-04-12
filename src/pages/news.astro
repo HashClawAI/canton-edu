@@ -19,51 +19,16 @@ const { iso, en: lastUpdatedDisplay } = siteBuildTimestampUtc();
   <section class="timeline">
     {tr.news.items.map(({ date, tag, title, body, url }) => (
       <article class="timeline-item">
-        <div class="timeline-meta">
-          <time>{date}</time>
-          <span class="news-tag">{tag}</span>
+        <div class="timeline-item-card">
+          <div class="timeline-meta">
+            <time>{date}</time>
+            <span class="news-tag">{tag}</span>
+          </div>
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{title}</a> : title}</h3>
+          <p>{body}</p>
         </div>
-        <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{title}</a> : title}</h3>
-        <p>{body}</p>
       </article>
     ))}
-  </section>
-
-  <section class="section news-archive-section">
-    <h2>{tr.news.archiveTableTitle}</h2>
-    <p class="page-intro news-archive-intro">{tr.news.archiveTableIntro}</p>
-    <div class="news-table-panel">
-      <div class="news-table-scroll">
-        <table class="cip-table news-archive-table">
-          <thead>
-            <tr>
-              <th>{tr.news.archiveColDate}</th>
-              <th>{tr.news.archiveColTag}</th>
-              <th>{tr.news.archiveColTitle}</th>
-              <th>{tr.news.archiveColSummary}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tr.news.items.map(({ date, tag, title, body, url }) => (
-              <tr>
-                <td class="news-archive-date">{date}</td>
-                <td><span class="badge">{tag}</span></td>
-                <td class="news-archive-title">
-                  {url ? (
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {title}
-                    </a>
-                  ) : (
-                    title
-                  )}
-                </td>
-                <td class="news-archive-summary">{body}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
   </section>
 
   <section class="section">

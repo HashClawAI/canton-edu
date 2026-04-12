@@ -679,7 +679,7 @@ main {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 1rem;
   border-left: 2px solid var(--border);
   padding-left: 1.5rem;
   margin-left: 0.5rem;
@@ -687,19 +687,31 @@ main {
 
 .timeline-item {
   position: relative;
-  padding-bottom: 1.75rem;
+  padding-bottom: 0;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
   left: -1.75rem;
-  top: 0.35rem;
+  top: 1.1rem;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--bg);
+}
+
+.timeline-item-card {
+  background: rgba(0, 18, 8, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem 1.1rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 100, 0.06),
+    0 4px 20px rgba(0, 20, 10, 0.35);
 }
 
 .timeline-meta {
@@ -736,68 +748,6 @@ main {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
-}
-
-/* News page — table panel (same spirit as CIPs: readable on matrix rain) */
-.news-archive-section {
-  margin-top: 2.75rem;
-}
-
-.news-archive-intro {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-.news-table-panel {
-  background: rgba(0, 18, 8, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
-  padding: 1rem 1.1rem 1.15rem;
-  box-shadow:
-    0 0 0 1px rgba(0, 255, 100, 0.06),
-    0 8px 28px rgba(0, 20, 10, 0.42);
-}
-
-.news-table-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.news-archive-section .cip-table {
-  margin-top: 0;
-}
-
-.news-archive-date {
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.news-archive-title {
-  min-width: 10rem;
-  max-width: 18rem;
-}
-
-.news-archive-title a {
-  font-weight: 600;
-}
-
-.news-archive-summary {
-  max-width: 22rem;
-  min-width: 12rem;
-  font-size: 0.86rem;
-  color: var(--muted);
-  line-height: 1.45;
-}
-
-@media (max-width: 640px) {
-  .news-archive-summary {
-    max-width: 14rem;
-    min-width: 8rem;
-  }
 }
 
 /* Video grid */
