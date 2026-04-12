@@ -17,7 +17,7 @@
 
 **Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source hub for **Canton Network** learning material (EN/ZH today), with explicit **non-official** positioning and links to **official** documentation.
 
-This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual units (**news / 大事记**, **research reader guides**, **video cards**, glossary & explainers—§1.5), **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.5, **`docs/agentic-education/**`).
+This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual units (**news / 大事记**, **research reader guides**, **video cards**, glossary & explainers—§1.5), **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.5, **`docs/agentic-education/**`). **Funding request: 200,000 CC** (§6.2).
 
 ---
 
@@ -148,27 +148,27 @@ In-person or hybrid **community events**, long-form video curricula, **learner-f
 
 ## 6. Funding request and milestone breakdown
 
-### 6.1 Is **220,000 CC** “usual”?
+### 6.1 Grant sizing context
 
-The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repository **does not publish** a typical approved grant size or median. **Amounts are Committee decisions.**
+The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) program does **not** publish a typical approved grant size; **amounts are Committee decisions**.
 
-**220,000 CC** is the **total ask** here (**not** 200,000 CC): **50,000 + 20,000 + 30,000 + 120,000**. It reflects **front-loaded launch (M1)**, a **leaner M2/M3** slice for i18n + pipelines, and **M4** as **12 × 10,000 CC** reserved for **year-long** ops (deps/CI, aggregation health, quarterly posts, final report). **Re-price** with the Committee if scope or payout cadence shifts.
+**Total ask: 200,000 CC** = **30,000 (M1) + 20,000 (M2) + 30,000 (M3) + 120,000 (M4)**. **M1** covers launch and aggregation IA; **M2/M3** cover i18n and agentic pipelines; **M4** reserves **12 × 10,000 CC** for twelve months of maintenance (ops, quarterly posts, final report). Scope or payout cadence may be **adjusted with the Committee** if needed.
 
-### 6.2 Requested CC (**sum = 220,000 CC**)
+### 6.2 Requested CC (**sum = 200,000 CC**)
 
 | Milestone | CC | Rationale (high level) |
 |-----------|-----|-------------------------|
-| M1 — Launch + aggregation IA | **50,000** | Production hardening, IA, analytics baseline, first public cut of **daily** + agentic stubs. |
+| M1 — Launch + aggregation IA | **30,000** | Production hardening, IA, analytics baseline, first public cut of **daily** + agentic stubs. |
 | M2 — Multilingual + i18n (`ja` + `ko`) | **20,000** | Helper + **separate `ja`/`ko` QA** + shipped routes or documented gaps. |
 | M3 — Agentic aggregation + assisted generation + on-chain | **30,000** | Pipelines, **playbooks/eval**, editorial + optional **agent API** within envelope (§6.3). |
 | M4 — 12-month maintenance (**12 × 10,000 CC**) | **120,000** | **Monthly** ops budget envelope; **CC disbursement preference** below (gates at **month 1** and **month 6**). |
-| **Total** | **220,000** | |
+| **Total** | **200,000** | |
 
-**M4 — CC disbursement preference (maintenance months 1 and 6):** The **120,000 CC** M4 line is **planned as twelve 10,000 CC** monthly slices for **accounting and reporting**. **Requested Canton Coin payout:** **(A)** after acceptance of **maintenance month 1** evidence (`maintenance-log.md` started, **weekly** daily-build rollup, no regressions on §5 M4 spirit), and **(B)** after acceptance of **maintenance month 6** evidence (mid-grant review)—**illustrative split** **60,000 CC + 60,000 CC** at **(A)** and **(B)** respectively (together covering the full **120,000 CC** M4 envelope). If the Foundation prefers **more granular** releases, the **same 120,000 CC** budget applies; mapping to invoices is **Committee / treasury** mechanics.
+**M4 — CC disbursement (maintenance months 1 and 6):** **120,000 CC** is budgeted as **12 × 10,000 CC** for the maintenance year (reporting may reference monthly slices). **Requested CC releases:** **60,000 CC** after acceptance of **maintenance month 1** evidence (`maintenance-log.md` underway, **weekly** daily-build rollup, §5 M4 criteria on track), and **60,000 CC** after acceptance of **maintenance month 6** evidence (mid-grant review). **Invoicing and any alternate cadence** follow **Canton Development Fund / Committee** process within the same **120,000 CC** envelope.
 
-### 6.3 M3 budget — illustrative mapping (**30,000 CC** envelope)
+### 6.3 M3 budget — example mapping (**30,000 CC** envelope)
 
-*Illustrative only; sub-bands must **reconcile** to the **30,000 CC** M3 milestone total; **not binding** until kickoff.*
+*Example split within the **30,000 CC** M3 milestone; line items finalized at kickoff.*
 
 | Sub-item | CC (example band) | Notes |
 |----------|-------------------|--------|
@@ -176,7 +176,7 @@ The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repo
 | **Agentic education** (playbooks, guardrails, **eval-log**, Skill wiring) | 3,000–5,000 | Maintainer-facing; **no** unsupervised prod bots |
 | Human editorial + fact-check for generated units | 6,000–9,000 | **≥18** units × review depth (**includes** agentic rows) |
 | **On-chain / explorer API** usage & snapshot storage | 2,000–5,000 | Public indexers only; ToS-respecting quotas |
-| Optional **agent** LLM/API (draft assist only) | 0–5,000 | **Zero** if Committee prefers no third-party LLM spend |
+| Optional **agent** LLM/API (draft assist only) | 0–5,000 | Omit if no third-party LLM budget |
 | Source hygiene / legal spot-check (quotes, logos) | 2,000–4,000 | Brand-kit compliance for on-site graphics |
 | Contingency | remainder | Feed/API or upstream schema changes |
 
