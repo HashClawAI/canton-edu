@@ -8,11 +8,9 @@
 
 ## Summary
 
-**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support for: **(1)** **information aggregation** with **allow-listed sources** and **≥1×/calendar-day** scheduled rebuild/deploy; **(2)** **Canton education content generation** (**≥18** manifest-listed **units**, §1.5 definition, human-reviewed, mandatory primary URLs); **(3)** **analysis using public Canton-related on-chain / explorer-indexer data** (**≥4** units flagged `onchain:true`, **`docs/onchain/methodology.md`**); **(4)** **`ja`/`ko` i18n** with separate validation pipelines; **(5)** **production launch + IA**; **(6)** **12 months** maintenance with **weekly daily-build** rollups in the log.
+**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support for **Agentic Education**—**maintainer-facing agents** (e.g. Cursor **Skills**, scripted flows) that **propose** aggregation refreshes, **draft** bilingual learning units, **preflight** i18n gaps, and **help interpret** public on-chain/indexer data—while **every merge to `main` stays human-reviewed** and **PR-based**.
 
-**Counting:** **`docs/grants/m3-aggregation-prs.md`** (≥8) vs **`docs/grants/m3-generation-units.md`** (≥18)—see **§1.5** to avoid double-count. **Developer events remain out of scope** (§1.3).
-
-The proposal maps to the program README structure plus **Definitions (§1.5)**, **Evidence** (existing daily build + chart precedent), and **quantitative** daily-job success criteria for M3.
+Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `guardrails.md`, **`eval-log.md` ≥10 scenarios**), **daily** Actions rebuild, **≥8** aggregation PRs (manifest), **≥18** generation units (**≥6** flagged **`agentic: true`** + `playbook_id`, **≥4** **`onchain:true`**), **`ja`/`ko`** i18n, **12-month** maintenance with **weekly daily-build** rollups. **Developer events out of scope** (§1.3).
 
 **Author:** Hashclaw.AI · **Champion:** Nguyan Vinh · **Label:** `daml-tooling` *(closed list [here](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md))*  
 
@@ -20,7 +18,7 @@ The proposal maps to the program README structure plus **Definitions (§1.5)**, 
 
 ## Funding note (120,000 CC)
 
-**120,000 CC** illustrative total; **§6.3** includes **explorer/API** and **daily CI** bands. **Committee calibration** applies.
+**120,000 CC** illustrative total; **§6.3** includes **agent playbook/eval** + optional **agent LLM/API** bands. **Committee calibration** applies.
 
 ---
 
@@ -38,16 +36,16 @@ The proposal maps to the program README structure plus **Definitions (§1.5)**, 
 | Item | Location in proposal |
 |------|----------------------|
 | Problem & ecosystem value | §1.1 |
-| Objectively verifiable deliverables | §1.5 manifests, §4, §5 |
+| Objectively verifiable deliverables | §1.5 manifests, **`docs/agentic-education/eval-log.md`**, §4–§5 |
 | Realistic timelines | §4 |
 | Open-source outputs | **Open-source and reusable outputs** |
-| Technical capability | **Evidence of technical capability** (daily build + chart precedent) |
-| Adoption / distribution | **Adoption and distribution plan** (+ quantitative daily-build habit) |
+| Technical capability | **Evidence** (daily build + **`.cursor/skills/`** precedent) |
+| Adoption / distribution | **Adoption and distribution plan** |
 
 ---
 
 ## Notes for Reviewers
 
-- **M3:** **≥30** consecutive calendar days of **daily** workflow **≥95%** green (documented); **≥4** `onchain:true` generation rows; manifests **`m3-aggregation-prs.md`** / **`m3-generation-units.md`**.  
-- **On-chain:** **Public** explorer/API only; **not** validator or private participant data.  
-- **Champion:** **≥4** spot-checks of generation PRs; **≥2** named merge approvers in `MAINTAINERS.md` (per §1.5).
+- **Human gate:** **`guardrails.md`** + acceptance §5 — **no** unsupervised agent merge to `main`.  
+- **M3:** **≥6** `agentic:true` + **≥4** `onchain:true` rows in **`m3-generation-units.md`**; **`eval-log.md` ≥10** scenarios.  
+- **Champion:** ≥4 spot-checks on **agent-assisted** PRs.
