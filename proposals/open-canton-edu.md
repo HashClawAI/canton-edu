@@ -13,7 +13,7 @@
 
 **Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source hub for **Canton Network** learning material (EN/ZH today), with explicit **non-official** positioning and links to **official** documentation.
 
-This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual units (**news / 大事记**, **research reader guides**, **video cards**, glossary & explainers—§1.4), **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.4, **`docs/agentic-education/`**). **Funding request: 200,000 CC** (§6.2).
+This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual units (**news / digest / chronicle**, **research reader guides**, **video cards**, glossary & explainers—§1.4), **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.4, **`docs/agentic-education/`**). **Funding request: 200,000 CC** (§6.2).
 
 ---
 
@@ -51,8 +51,8 @@ This proposal requests **Canton Coin (CC)** to implement **Agentic Education** f
 **Education content unit** — counts toward **≥18** only if the row is in **`docs/grants/m3-generation-units.md`** *after* human merge. **One row = one shipped learning artifact** (site or agreed `docs/education/` surface), any of the shapes below; same mechanical rules for all.
 
 | Shape | One unit |
-|------------------|----------------------------------|
-| **News / digest / 大事记** | Dated item or digest block: **what changed**, **why it matters to builders**, **≥1 primary URL** (official post, CIP, repo release). |
+|-------|----------|
+| **News / digest / chronicle** | Dated item or digest block: **what changed**, **why it matters to builders**, **≥1 primary URL** (official post, CIP, repo release). |
 | **Research / long reads** | Short **reader guide** (not a full reprint): thesis in plain language, **link to PDF / repo / canonical page**. |
 | **Video** | **Curated card**: title, **≤2 sentence** context, **canonical watch URL** (official or allow-listed channel); transcript pull-quote optional if permitted by source. |
 | **Glossary / Learn blurb / explainer** | As today: coherent paragraph(s) with **verify-at-source** links. |
@@ -147,7 +147,7 @@ This proposal requests **Canton Coin (CC)** to implement **Agentic Education** f
 ### 6.2 Requested CC (**200,000 CC**)
 
 | Milestone | CC | Rationale |
-|-----------|-----|-------------------------|
+|-----------|-----|-----------|
 | M1 — Launch + aggregation IA | **30,000** | Production hardening, IA, analytics baseline, first public cut of **daily** + agentic stubs. |
 | M2 — Multilingual + i18n (`ja` + `ko`) | **20,000** | Helper + **separate `ja`/`ko` QA** + shipped routes or documented gaps. |
 | M3 — Agentic aggregation + assisted generation + on-chain | **30,000** | Pipelines, **playbooks/eval**, editorial, **agent API** if used (§6.3). |
@@ -159,7 +159,7 @@ This proposal requests **Canton Coin (CC)** to implement **Agentic Education** f
 ### 6.3 M3 budget — example mapping (**30,000 CC**)
 
 | Sub-item | CC (band) | Notes |
-|----------|-------------------|--------|
+|----------|------------|-------|
 | Aggregation + **daily** CI engineering (scripts, workflows, monitoring) | 7,000–11,000 | Rate limits, retries, **per-day** job reliability |
 | **Agentic education** (playbooks, guardrails, **eval-log**, Skill wiring) | 3,000–5,000 | Maintainer-facing; **no** unsupervised prod bots |
 | Human editorial + fact-check for generated units | 6,000–9,000 | **≥18** units × review depth (**includes** agentic rows) |
@@ -213,6 +213,24 @@ Milestone notes for Foundation channels where appropriate; **Canton Development 
 ## Rationale (summary)
 
 **Agentic Education** for maintainers (**agents propose**, **humans merge**): aggregation, **daily** refresh, on-chain explainers, assisted generation, **`ja`/`ko`**, **12-month** maintenance—verified via **manifests**, **`eval-log.md`**, and repo artifacts. **CC** funds **playbooks, evaluation, and guardrails** for auditable public-good delivery.
+
+---
+
+## Mapping to `proposals/_template.md`
+
+| `_template.md` section | Location in this proposal |
+|------------------------|---------------------------|
+| Abstract | Abstract |
+| Specification — Objective | §1 Objective and scope |
+| Specification — Implementation | §2 Technical approach |
+| Specification — Architectural alignment | §3 Architectural alignment |
+| Specification — Backward compatibility | §2 (footer) |
+| Milestones and deliverables | §4 |
+| Acceptance criteria | §5 |
+| Funding | §6 |
+| Co-Marketing | Co-Marketing |
+| Motivation | Abstract; §1.1 |
+| Rationale | Rationale (summary) |
 
 ---
 
