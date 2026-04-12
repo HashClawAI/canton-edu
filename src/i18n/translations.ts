@@ -17,7 +17,7 @@ export const translations = {
     home: {
       title: 'Learn Canton Network',
       subtitle:
-        'Independent educational hub for Canton Network, DAML smart contracts, and the institutional blockchain ecosystem. Always verify against official documentation.',
+        'Independent, unofficial educational hub for Canton Network, DAML smart contracts, and the institutional blockchain ecosystem — open source and maintained by the community. Some materials are aggregated or refreshed using editor-assisted workflows, including AI agents and automation, which may introduce errors or omissions. Always verify against official documentation.',
       ctaLearn: 'Start learning',
       ctaEcosystem: 'Explore ecosystem',
       coinPriceBitcoinLabel: 'Bitcoin (BTC)',
@@ -565,7 +565,7 @@ export const translations = {
     home: {
       title: '了解 Canton Network',
       subtitle:
-        '关于 Canton Network、DAML 智能合约与机构级区块链生态的独立教育资源（Open Canton Edu）。请务必以官方文档为准进行核对。',
+        '面向 Canton Network、DAML 智能合约与机构级区块链生态的非官方、开源、由社区维护的独立教育资源（Open Canton Edu）。部分内容经人工辅助与人工智能体（AI Agent）及自动化工具进行汇集或更新，可能存在错漏；请务必以官方文档为准进行核对。',
       ctaLearn: '开始学习',
       ctaEcosystem: '探索生态',
       coinPriceBitcoinLabel: '比特币（BTC）',
