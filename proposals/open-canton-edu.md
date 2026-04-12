@@ -56,14 +56,14 @@ Video course series, DAML AI-assist MVP, and deep agent refactors may be propose
 | **Site** | Astro static site, `src/i18n/translations.ts`, GitHub Actions → Pages; open `LICENSE`. | Tag + CI green + live URL in milestone note. |
 | **Launch (M1)** | Checklist: headers, disclaimer copy, broken-link sweep, Lighthouse or equivalent report archived in `docs/grants/m1-launch/`. | Checklist MD + report artifacts on `main`. |
 | **i18n (M2)** | Canonical `en` (or `zh`) key set; **per-locale** checks for **`ja`** and **`ko`**; `docs/i18n.md` + `docs/i18n/ja.md` + `docs/i18n/ko.md`; CI jobs or npm scripts **invoked separately** per locale so Japanese and Korean do not share a single ambiguous report. | Helper merged + **both** `ja` and `ko` route bundles + **two** parity reports (`i18n-report-ja.*`, `i18n-report-ko.*`). |
+| **Events (M3)** | Public RSVP link (Luma / Google Form / GitHub Discussion—**no PII in repo**); agenda `.md` under `docs/grants/events/<slug>/`; photos/slides only with **speaker consent**; recap CC-BY. | **2** event folders + 2 recap files + announcement URLs. |
+| **Maintenance (M4)** | `MAINTAINERS.md`, `docs/sustainability.md`, monthly merge log `docs/grants/maintenance-log.md`. | Log + PR count + quarterly links. |
 
 **i18n helper — Japanese (`ja`) vs Korean (`ko`) (explicit split)**
 
 - **Japanese (`ja`):** Missing-key and **orphan-key** diffs against canonical; optional **line-length / wrapping** hints for UI strings; glossary hook for repeated Canton terms (documented, not normative translations).  
 - **Korean (`ko`):** **Separate** script entrypoint and report file from `ja` (no shared “CJK” bucket); notes on **formal `요`/`습니다` baseline** for UI copy and **postposition length** sensitivity in narrow layouts.  
 - **Shared:** Single source of truth for keys in repo; **fail-closed** CI (or documented manual gate) if either locale falls below agreed coverage threshold for shipped routes.
-| **Events (M3)** | Public RSVP link (Luma / Google Form / GitHub Discussion—**no PII in repo**); agenda `.md` under `docs/grants/events/<slug>/`; photos/slides only with **speaker consent**; recap CC-BY. | **2** event folders + 2 recap files + announcement URLs. |
-| **Maintenance (M4)** | `MAINTAINERS.md`, `docs/sustainability.md`, monthly merge log `docs/grants/maintenance-log.md`. | Log + PR count + quarterly links. |
 
 **Backward compatibility:** *No Canton protocol / node / SDK changes.*
 
