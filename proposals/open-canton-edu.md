@@ -2,7 +2,7 @@
 
 **Author:** Hashclaw.AI  
 **Created:** 2026-04-11  
-**Suggested SIG (for reviewers):** Application developers / developer-experience adjacent (documentation, examples, training)  
+**SIG alignment:** **Application developers** — **App Building and Developer Experience** (documentation, examples, training), per [Development Fund Proposal Review Process](https://github.com/canton-foundation/canton-dev-fund/blob/main/Development%20Fund%20Proposal%20Review%20Process.md).  
 **Label:** daml-tooling  
 
 **Champion:** Nguyan Vinh — **@v9n**
