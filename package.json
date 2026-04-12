@@ -9,7 +9,8 @@
     "start": "astro dev",
     "build": "npm run chart:build && astro build",
     "preview": "astro preview",
-    "debug:pages-dns": "node scripts/debug-pages-dns.mjs"
+    "debug:pages-dns": "node scripts/debug-pages-dns.mjs",
+    "news:rss-scan": "node scripts/news-rss-scan.mjs"
   },
   "dependencies": {
     "astro": "^5.2.0"

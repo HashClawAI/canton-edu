@@ -3,6 +3,8 @@ dist
 .astro
 .DS_Store
 *.log
+# RSS scan output (CI / local triage; do not commit)
+news-candidates.md
 .env
 .env.*
 # Built at `npm run build` (CoinGecko); not committed — CI regenerates.
