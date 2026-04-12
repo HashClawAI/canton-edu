@@ -2,14 +2,14 @@
 name: canton-edu-updater
 description: >-
   On each run: fetch the latest Canton Network information from the web, merge
-  updates into the existing canton-edu site (Canton Tools) without wiping prior
+  updates into the existing canton-edu site (Canton Edu) without wiping prior
   content. Use when asked to update, refresh, or add content; scan for Canton news,
   CIPs, ecosystem, research, videos, or community sources.
 ---
 
-# Canton Tools Site Updater
+# Canton Edu Site Updater
 
-Automates **incremental** content updates for the Canton Network bilingual site (Canton Tools): **read what is already published → scan for what is new → apply changes on top of the old version** (append, prepend, or targeted edits). Do **not** replace whole sections unless the user explicitly asks for a rewrite.
+Automates **incremental** content updates for the Canton Network bilingual site (Canton Edu): **read what is already published → scan for what is new → apply changes on top of the old version** (append, prepend, or targeted edits). Do **not** replace whole sections unless the user explicitly asks for a rewrite.
 
 ## Site Architecture
 

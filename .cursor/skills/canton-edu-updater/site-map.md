@@ -1,4 +1,4 @@
-# Canton Tools — Site Map Reference
+# Canton Edu — Site Map Reference
 
 Quick reference for the agent when updating the repo **incrementally** (merge new findings into existing `translations.ts` and related files).
 
