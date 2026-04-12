@@ -6,7 +6,7 @@
 
 ## Summary
 
-**Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an open-source Canton learning hub (EN/ZH, expanding **ja**/**ko**). This request funds **Agentic Education**: maintainer-facing agents (e.g. Cursor **Skills**) that open **draft PRs** for aggregation, bilingual content units, i18n checks, and on-chain explainers—**human merge only** to `main`.
+**HashClaw Academy** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an open-source Canton learning hub (EN/ZH, expanding **ja**/**ko**). This request funds **Agentic Education**: maintainer-facing agents (e.g. Cursor **Skills**) that open **draft PRs** for aggregation, bilingual content units, i18n checks, and on-chain explainers—**human merge only** to `main`.
 
 **Author:** Hashclaw.AI · **Champion:** Nguyan Vinh (**@v9n**) · **Label:** `daml-tooling` ([closed label list](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md)) · **SIG:** Application developers / App Building and Developer Experience ([review process](https://github.com/canton-foundation/canton-dev-fund/blob/main/Development%20Fund%20Proposal%20Review%20Process.md)).
 

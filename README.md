@@ -1,4 +1,4 @@
-# Open Canton Edu — bilingual static site (EN / 中文)
+# HashClaw Academy — bilingual static site (EN / 中文)
 
 Independent Canton Network education hub: **English** at `/`, **Chinese** at `/zh/`.
 

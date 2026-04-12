@@ -1,4 +1,4 @@
-# Open Canton Edu — Site Map Reference
+# HashClaw Academy — Site Map Reference
 
 Quick reference for the agent when updating the repo **incrementally** (merge new findings into existing `translations.ts` and related files).
 
