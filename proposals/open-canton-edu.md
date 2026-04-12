@@ -148,37 +148,39 @@ In-person or hybrid **community events**, long-form video curricula, **learner-f
 
 ## 6. Funding request and milestone breakdown
 
-### 6.1 Is **120,000 CC** “usual”?
+### 6.1 Is **220,000 CC** “usual”?
 
 The [canton-dev-fund](https://github.com/canton-foundation/canton-dev-fund) repository **does not publish** a typical approved grant size or median. **Amounts are Committee decisions.**
 
-**120,000 CC** is an **ask**. It is **defensible** for **part-time engineering + editorial/fact-check**, **JA/KO review**, **aggregation + daily CI** infra, **agent playbook + evaluation** work, **public explorer/API** usage within ToS, **optional LLM/tooling costs** for **agent draft assist** under human review, **on-chain snapshot** compute, and **12 months** maintenance. **Re-price** with the Committee if scope shifts.
+**220,000 CC** is the **total ask** here (**not** 200,000 CC): **50,000 + 20,000 + 30,000 + 120,000**. It reflects **front-loaded launch (M1)**, a **leaner M2/M3** slice for i18n + pipelines, and **M4** as **12 × 10,000 CC** reserved for **year-long** ops (deps/CI, aggregation health, quarterly posts, final report). **Re-price** with the Committee if scope or payout cadence shifts.
 
-### 6.2 Requested CC (illustrative split — **sum = 120,000 CC**)
+### 6.2 Requested CC (**sum = 220,000 CC**)
 
 | Milestone | CC | Rationale (high level) |
 |-----------|-----|-------------------------|
-| M1 — Launch + aggregation IA | 18,000 | Hardening, IA, analytics baseline. |
-| M2 — Multilingual + i18n (`ja` + `ko`) | 32,000 | Helper + **separate locale QA** + review. |
-| M3 — Agentic aggregation + assisted generation + on-chain | 45,000 | Pipelines, **playbooks/eval**, **editorial time**, optional **agent API** spend (see §6.3). |
-| M4 — 12-month maintenance | 25,000 | Ops, quarterly posts, final report. |
-| **Total** | **120,000** | |
+| M1 — Launch + aggregation IA | **50,000** | Production hardening, IA, analytics baseline, first public cut of **daily** + agentic stubs. |
+| M2 — Multilingual + i18n (`ja` + `ko`) | **20,000** | Helper + **separate `ja`/`ko` QA** + shipped routes or documented gaps. |
+| M3 — Agentic aggregation + assisted generation + on-chain | **30,000** | Pipelines, **playbooks/eval**, editorial + optional **agent API** within envelope (§6.3). |
+| M4 — 12-month maintenance (**12 × 10,000 CC**) | **120,000** | **Monthly** ops budget envelope; **CC disbursement preference** below (gates at **month 1** and **month 6**). |
+| **Total** | **220,000** | |
 
-### 6.3 M3 budget — illustrative mapping (**agentic aggregation + generation**)
+**M4 — CC disbursement preference (maintenance months 1 and 6):** The **120,000 CC** M4 line is **planned as twelve 10,000 CC** monthly slices for **accounting and reporting**. **Requested Canton Coin payout:** **(A)** after acceptance of **maintenance month 1** evidence (`maintenance-log.md` started, **weekly** daily-build rollup, no regressions on §5 M4 spirit), and **(B)** after acceptance of **maintenance month 6** evidence (mid-grant review)—**illustrative split** **60,000 CC + 60,000 CC** at **(A)** and **(B)** respectively (together covering the full **120,000 CC** M4 envelope). If the Foundation prefers **more granular** releases, the **same 120,000 CC** budget applies; mapping to invoices is **Committee / treasury** mechanics.
 
-*Illustrative only; **not binding** until kickoff sourcing plan is fixed.*
+### 6.3 M3 budget — illustrative mapping (**30,000 CC** envelope)
+
+*Illustrative only; sub-bands must **reconcile** to the **30,000 CC** M3 milestone total; **not binding** until kickoff.*
 
 | Sub-item | CC (example band) | Notes |
 |----------|-------------------|--------|
-| Aggregation + **daily** CI engineering (scripts, workflows, monitoring) | 10,000–16,000 | Rate limits, retries, **per-day** job reliability |
-| **Agentic education** (playbooks, guardrails, **eval-log**, Skill wiring) | 4,000–8,000 | Maintainer-facing; **no** unsupervised prod bots |
-| Human editorial + fact-check for generated units | 8,000–12,000 | **≥18** units × review depth (**includes** agentic rows) |
-| **On-chain / explorer API** usage & snapshot storage | 3,000–8,000 | Public indexers only; ToS-respecting quotas |
-| Optional **agent** LLM/API (draft assist only) | 0–8,000 | **Zero** if Committee prefers no third-party LLM spend |
-| Source hygiene / legal spot-check (quotes, logos) | 3,000–6,000 | Brand-kit compliance for on-site graphics |
+| Aggregation + **daily** CI engineering (scripts, workflows, monitoring) | 7,000–11,000 | Rate limits, retries, **per-day** job reliability |
+| **Agentic education** (playbooks, guardrails, **eval-log**, Skill wiring) | 3,000–5,000 | Maintainer-facing; **no** unsupervised prod bots |
+| Human editorial + fact-check for generated units | 6,000–9,000 | **≥18** units × review depth (**includes** agentic rows) |
+| **On-chain / explorer API** usage & snapshot storage | 2,000–5,000 | Public indexers only; ToS-respecting quotas |
+| Optional **agent** LLM/API (draft assist only) | 0–5,000 | **Zero** if Committee prefers no third-party LLM spend |
+| Source hygiene / legal spot-check (quotes, logos) | 2,000–4,000 | Brand-kit compliance for on-site graphics |
 | Contingency | remainder | Feed/API or upstream schema changes |
 
-**Payment:** Per milestone **acceptance** against §5. **>6 months** → **6-month re-evaluation** for CC volatility.
+**Payment (M1–M3):** CC released on milestone **acceptance** against §5. **Grant length >6 months** → **6-month re-evaluation** for CC volatility where the program requires it. **M4:** see **§6.2** disbursement preference (month **1** and month **6** gates).
 
 ---
 

@@ -16,9 +16,9 @@ Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `g
 
 ---
 
-## Funding note (120,000 CC)
+## Funding note (**220,000 CC** total ask)
 
-**120,000 CC** illustrative total; **§6.3** includes **agent playbook/eval** + optional **agent LLM/API** bands. **Committee calibration** applies.
+**M1 50,000 · M2 20,000 · M3 30,000 · M4 120,000** (= **12 × 10,000 CC** maintenance envelope). **Total = 220,000 CC** (二十二万), **not** 200,000 CC. **M4 CC payout preference:** tranches tied to **maintenance month 1** and **maintenance month 6** acceptance (illustrative **60,000 + 60,000 CC**); see **§6.2** in the proposal. **§6.3** maps the **30,000 CC** M3 slice. **Committee calibration** applies.
 
 ---
 
