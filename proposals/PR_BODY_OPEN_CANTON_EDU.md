@@ -10,7 +10,7 @@
 
 **Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support for **Agentic Education**—**maintainer-facing agents** (e.g. Cursor **Skills**, scripted flows) that **propose** aggregation refreshes, **draft** bilingual learning units, **preflight** i18n gaps, and **help interpret** public on-chain/indexer data—while **every merge to `main` stays human-reviewed** and **PR-based**.
 
-Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `guardrails.md`, **`eval-log.md` ≥10 scenarios**), **daily** Actions rebuild, **≥8** aggregation PRs (manifest), **≥18** generation units (**≥6** flagged **`agentic: true`** + `playbook_id`, **≥4** **`onchain:true`**), **`ja`/`ko`** i18n, **12-month** maintenance with **weekly daily-build** rollups. **Developer events out of scope** (§1.3).
+Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `guardrails.md`, **`eval-log.md` ≥10 scenarios**), **daily** Actions rebuild, **≥8** aggregation PRs (manifest), **≥18** generation units covering **news / 大事记**, **research**, **video** curation, and core Learn copy (**≥6** **`agentic: true`** + `playbook_id`, **≥4** **`onchain:true`**), **`ja`/`ko`** i18n, **12-month** maintenance (**weekly** daily-build rollups **+** routine **GitHub** upkeep per §1.5). **Developer events out of scope** (§1.3).
 
 **Author:** Hashclaw.AI · **Champion:** Nguyan Vinh (**@v9n**) · **Label:** `daml-tooling` *(closed list [here](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md))*  
 
@@ -48,4 +48,5 @@ Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `g
 
 - **Human gate:** **`guardrails.md`** + acceptance §5 — **no** unsupervised agent merge to `main`.  
 - **M3:** **≥6** `agentic:true` + **≥4** `onchain:true` rows in **`m3-generation-units.md`**; **`eval-log.md` ≥10** scenarios.  
-- **Champion:** ≥4 spot-checks on **agent-assisted** PRs.
+- **§1.5 unit shapes:** **news / 大事记**, **research guides** (link-out), **video cards** (curate + canonical URL), plus glossary/Learn blurbs; **GitHub routine maintenance** (deps, CI, triage) counts toward **M4 log only**, not the **8**/**18** manifests.  
+- **Champion @v9n:** ≥4 spot-checks on **agent-assisted** generation PRs.

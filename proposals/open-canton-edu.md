@@ -17,7 +17,7 @@
 
 **Open Canton Edu** ([HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) is an independent, open-source hub for **Canton Network** learning material (EN/ZH today), with explicit **non-official** positioning and links to **official** documentation.
 
-This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual learning snippets, **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.5, **`docs/agentic-education/**`).
+This proposal requests **Canton Coin (CC)** to implement **Agentic Education** for Canton: **software agents** (e.g. Cursor **Skills**, scripted bots, or CI companions) that **assist maintainers**—**proposing** aggregation refreshes, **drafting** bilingual units (**news / 大事记**, **research reader guides**, **video cards**, glossary & explainers—§1.5), **preflighting** i18n key coverage, and **summarizing** public on-chain/indexer series—while **every publish path** stays **human-reviewed**, **PR-based**, and **source-anchored**. Concretely, **(1) agent-orchestrated aggregation** (allow-listed sources, dedup, **daily** rebuild/deploy), **(2) agent-assisted education generation** (draft → checklist → maintainer merge, **primary-source URLs**), and **(3) agent-informed on-chain / explorer analysis** (reproducible snapshots, **explicit methodology**, **not** official statistics). Milestones also cover **`ja`/`ko` i18n**, **production launch + IA**, **agent playbooks + evaluation logs**, and **12 months** maintenance with quarterly updates. **Developer-community event series are out of scope** (§1.3). Deliverables are **objectively verifiable** (manifests §1.5, **`docs/agentic-education/**`).
 
 ---
 
@@ -56,18 +56,24 @@ In-person or hybrid **community events**, long-form video curricula, **learner-f
 
 ### 1.5 Definitions & counting rules (clarity for reviewers)
 
-**Education content unit** (counts toward **≥18** only when listed in **`docs/grants/m3-generation-units.md`** *after* merge):  
-- One coherent learning artifact: Learn-path blurb, glossary entry, news digest expansion, or short explainer **embedded in the shipped site** (typically `translations.ts` or an agreed `docs/education/` page).  
-- **English body ≥90 characters** (excluding URLs) **or** equivalent substantive ZH copy in the same row.  
-- **≥1 canonical primary-source URL** per shipped language (defer ZH in same milestone if documented in the manifest row).  
-- **≥6** of the **18** rows set **`agentic: true`**, including **`playbook_id`** (anchor in **`docs/agentic-education/playbooks.md`**) and **merge SHA** of the human-approved PR (agents **never** self-merge).  
-- **≥4** of the **18** units must **include at least one chart, table, or numeric call-out** derived from **allow-listed explorer/API** data defined in **`docs/onchain/sources.md`**, with interpretation tied to **`docs/onchain/methodology.md`** (indexer lag, reorgs disclaimer, non-official status). *(`onchain:true` rows may overlap `agentic:true`.)*
+**Education content unit** — counts toward **≥18** only if the row is in **`docs/grants/m3-generation-units.md`** *after* human merge. **One row = one shipped learning artifact** (site or agreed `docs/education/` surface), any of the shapes below; same mechanical rules for all.
 
-**Aggregation integration PR** (counts toward **≥8** only when listed in **`docs/grants/m3-aggregation-prs.md`**): merged PR whose **primary diff** is confined to allow-listed globs in **`docs/aggregation/sources.md`** (e.g. `scripts/**`, `.github/workflows/**`, `docs/aggregation/**`, designated `public/generated/**` or `src/data/**`). **≤2** PRs may include **trivial** `translations.ts` label-only changes if flagged `aggregation+labels` in the manifest; they count toward **8**, **not** toward **18**, unless a **separate** generation-unit row is added.
+| Shape (examples) | What “one unit” means (concise) |
+|------------------|----------------------------------|
+| **News / digest / 大事记** | Dated item or digest block: **what changed**, **why it matters to builders**, **≥1 primary URL** (official post, CIP, repo release). |
+| **Research / long reads** | Short **reader guide** (not a full reprint): thesis in plain language, **link to PDF / repo / canonical page**. |
+| **Video** | **Curated card**: title, **≤2 sentence** context, **canonical watch URL** (official or allow-listed channel); transcript pull-quote optional if permitted by source. |
+| **Glossary / Learn blurb / explainer** | As today: coherent paragraph(s) with **verify-at-source** links. |
 
-**Double-count rule:** one merge line may not increment both counts unless it matches the **`aggregation+labels`** exception above and **adds** a distinct generation-unit row.
+**Mechanical thresholds (every unit row):** **EN ≥90 characters** (excluding URLs) **or** substantive **ZH** equivalent in the same row; **≥1 canonical primary-source URL** per shipped language (ZH deferral allowed if noted in the row). **≥6** / **18** rows: **`agentic: true`** + **`playbook_id`** (anchor in **`playbooks.md`**) + **merge SHA** (agents **never** self-merge). **≥4** / **18** rows: **`onchain:true`** — includes a **chart, table, or numeric call-out** from **`docs/onchain/sources.md`**, interpreted per **`docs/onchain/methodology.md`** (lag, reorgs, non-official). *`onchain:true` may overlap `agentic:true`.*
 
-**Reviewer sign-off:** **`MAINTAINERS.md`** names **≥2** individuals with merge rights for **generation** PRs; **Champion** performs **≥4** spot-checks of merged **generation** PRs (**including agent-opened or agent-assisted drafts**) across the grant (notes in the milestone PR thread or `docs/grants/champion-spotchecks.md`).
+**Aggregation integration PR** — counts toward **≥8** only in **`docs/grants/m3-aggregation-prs.md`**: merged PR whose **primary diff** stays inside allow-listed paths in **`docs/aggregation/sources.md`** (e.g. `scripts/**`, `.github/workflows/**`, `docs/aggregation/**`, agreed `public/generated/**` or `src/data/**`). **≤2** PRs may add **trivial** `translations.ts` **labels only**, flagged `aggregation+labels`; they count for **8**, **not** for **18**, unless a **separate** generation-unit row exists.
+
+**GitHub routine maintenance** — **does not** count toward **8** or **18**; it satisfies **M4** when logged in **`docs/grants/maintenance-log.md`**. Examples: **dependency / security updates** within policy, **Actions** or Pages pipeline fixes, **issue / label triage**, README or runbook nips, branch-protection or token hygiene (**GitHub-only** secrets). Net-new learner copy belongs in **generation units** or **aggregation** manifests per rules above, not “maintenance” by label alone.
+
+**Double-count:** one merge may not bump **8** and **18** unless the **`aggregation+labels`** exception applies **and** a **distinct** generation-unit row is added.
+
+**Reviewer sign-off:** **`MAINTAINERS.md`** — **≥2** merge-capable reviewers for **generation** PRs; **Champion @v9n** — **≥4** spot-checks on merged **generation** PRs (**including agent-opened or agent-assisted** drafts); notes in milestone thread or **`docs/grants/champion-spotchecks.md`**.
 
 ---
 
