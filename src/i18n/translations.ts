@@ -2,7 +2,7 @@ export type Locale = 'en' | 'zh';
 
 export const translations = {
   en: {
-    siteName: 'Canton Edu',
+    siteName: 'Open Canton Edu',
     nav: {
       home: 'Home',
       learn: 'Learn',
@@ -68,7 +68,7 @@ export const translations = {
       contributeManualLabel: 'Or edit manually:',
       contributeManualSteps: 'Fork → edit src/i18n/translations.ts (EN + ZH) → npm run build → open a PR',
       disclaimer:
-        'Canton Edu is an open-source, community-maintained educational website. Some materials may be aggregated, summarized, or updated using assisted workflows, including automated tools and AI agents; such processes can produce errors, omissions, or stale information. The site is provided “as is” and “as available,” without warranties of any kind, whether express, implied, or statutory, to the fullest extent permitted by applicable law. Canton Foundation, Digital Asset (Switzerland) GmbH, the Canton Network, and their participants do not sponsor, endorse, review, or assume responsibility for this site; nothing herein creates or implies any affiliation, agency, partnership, or joint venture. Use of the names “Canton” and related terms is for descriptive, educational identification only and does not grant any rights in Canton marks or imply authorization under the official brand and trademark rules at https://www.canton.network/brand-kit-trademark-use Nothing on this site constitutes or substitutes for investment, financial, tax, or legal advice; you are solely responsible for verifying information against primary sources and obtaining advice from qualified professionals.',
+        'Open Canton Edu is an open-source, community-maintained educational website. Some materials may be aggregated, summarized, or updated using assisted workflows, including automated tools and AI agents; such processes can produce errors, omissions, or stale information. The site is provided “as is” and “as available,” without warranties of any kind, whether express, implied, or statutory, to the fullest extent permitted by applicable law. Canton Foundation, Digital Asset (Switzerland) GmbH, the Canton Network, and their participants do not sponsor, endorse, review, or assume responsibility for this site; nothing herein creates or implies any affiliation, agency, partnership, or joint venture. Use of the names “Canton” and related terms is for descriptive, educational identification only and does not grant any rights in Canton marks or imply authorization under the official brand and trademark rules at https://www.canton.network/brand-kit-trademark-use Nothing on this site constitutes or substitutes for investment, financial, tax, or legal advice; you are solely responsible for verifying information against primary sources and obtaining advice from qualified professionals.',
     },
     learn: {
       title: 'Learning path',
@@ -550,7 +550,7 @@ export const translations = {
     },
   },
   zh: {
-    siteName: 'Canton Edu',
+    siteName: 'Open Canton Edu',
     nav: {
       home: '首页',
       learn: '学习路径',
@@ -565,7 +565,7 @@ export const translations = {
     home: {
       title: '了解 Canton Network',
       subtitle:
-        '关于 Canton Network、DAML 智能合约与机构级区块链生态的独立教育资源（Canton Edu）。请务必以官方文档为准进行核对。',
+        '关于 Canton Network、DAML 智能合约与机构级区块链生态的独立教育资源（Open Canton Edu）。请务必以官方文档为准进行核对。',
       ctaLearn: '开始学习',
       ctaEcosystem: '探索生态',
       coinPriceBitcoinLabel: '比特币（BTC）',
@@ -613,7 +613,7 @@ export const translations = {
       contributeManualLabel: '或手动编辑：',
       contributeManualSteps: 'Fork → 编辑 src/i18n/translations.ts（EN + ZH）→ npm run build → 提 PR',
       disclaimer:
-        'Canton Edu 是以开源方式由社区维护的教育类网站。本站部分内容可能经人工辅助及人工智能体（AI Agent）与自动化工具进行汇集、摘要、编排或更新；该等过程不排除存在错误、遗漏或时效滞后。除适用法律强制性规定外，本站内容按「现状」及「可提供」之基础提供，不就其完整性、准确性、时效性、特定用途之适用性或无侵权等，作任何明示或默示之担保。Canton Foundation、Digital Asset（瑞士）有限公司、Canton Network 及其参与方未对本站予以赞助、背书、审查或承担任何责任，亦不因本站内容而与您构成任何隶属、代理、合伙或类似法律关系。对「Canton」及相关名称之使用，仅以教育性、陈述性方式指称第三方项目或生态，不构成对 Canton 相关商标之授权，亦不构成任何商业合作之主张；正式标识与商标使用规则以 https://www.canton.network/brand-kit-trademark-use 为准。本站所载不构成亦不可替代投资、财务、税务或法律意见；您应自行核对一手官方资料并咨询适格专业人士。',
+        'Open Canton Edu 是以开源方式由社区维护的教育类网站。本站部分内容可能经人工辅助及人工智能体（AI Agent）与自动化工具进行汇集、摘要、编排或更新；该等过程不排除存在错误、遗漏或时效滞后。除适用法律强制性规定外，本站内容按「现状」及「可提供」之基础提供，不就其完整性、准确性、时效性、特定用途之适用性或无侵权等，作任何明示或默示之担保。Canton Foundation、Digital Asset（瑞士）有限公司、Canton Network 及其参与方未对本站予以赞助、背书、审查或承担任何责任，亦不因本站内容而与您构成任何隶属、代理、合伙或类似法律关系。对「Canton」及相关名称之使用，仅以教育性、陈述性方式指称第三方项目或生态，不构成对 Canton 相关商标之授权，亦不构成任何商业合作之主张；正式标识与商标使用规则以 https://www.canton.network/brand-kit-trademark-use 为准。本站所载不构成亦不可替代投资、财务、税务或法律意见；您应自行核对一手官方资料并咨询适格专业人士。',
     },
     learn: {
       title: '学习路径',

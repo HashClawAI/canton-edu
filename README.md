@@ -1,4 +1,4 @@
-# Canton Edu — bilingual static site (EN / 中文)
+# Open Canton Edu — bilingual static site (EN / 中文)
 
 Independent Canton Network education hub: **English** at `/`, **Chinese** at `/zh/`.
 
