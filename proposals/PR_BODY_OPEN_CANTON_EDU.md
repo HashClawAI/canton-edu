@@ -1,8 +1,8 @@
-<!-- Copy everything below into the Pull Request description when opening a PR against canton-foundation/canton-dev-fund -->
+<!-- Use this as the PR body when opening a PR on YOUR FORK of canton-dev-fund → base: canton-foundation/canton-dev-fund (not canton-edu). -->
 
 ## Development Fund Proposal Submission
 
-**Proposal file:** `/proposals/open-canton-edu.md`
+**Proposal file (in this PR’s repo):** `proposals/open-canton-edu.md` — **target upstream:** [`canton-foundation/canton-dev-fund`](https://github.com/canton-foundation/canton-dev-fund).
 
 ---
 

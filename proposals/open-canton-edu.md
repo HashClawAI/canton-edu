@@ -1,24 +1,12 @@
 ## Development Fund Proposal
 
+*(**Submission path:** this file must be opened as a **PR to** [`canton-foundation/canton-dev-fund`](https://github.com/canton-foundation/canton-dev-fund) from your **`canton-dev-fund` fork** (e.g. [`HashClawAI/canton-dev-fund`](https://github.com/HashClawAI/canton-dev-fund)), under `proposals/open-canton-edu.md`. The [`canton-edu`](https://github.com/HashClawAI/canton-edu) repo holds a **draft copy** only.)*
+
 **Author:** Hashclaw.AI  
 **Status:** Draft  
 **Created:** 2026-04-11  
 **Suggested SIG (for reviewers):** Application developers / developer-experience adjacent (documentation, examples, training)  
 **Label:** daml-tooling  
-
-*(The [proposal template](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md) requires **exactly one** label from a **closed list**. There is **no** `education`, `documentation`, or `community` label—those themes must be described in the body and SIG alignment instead.)*
-
-**Full label enum (pick only one):** `dapp-integration`, `wallet-apps`, `attestor-pools-daos-multisig`, `defi-liquidity`, `party-portability-data-resilience`, `token-asset-standards`, `tokenomics`, `onchain-governance`, `daml-tooling`, `dar-app-management`, `canton-protocol-multi-synchronizer`, `canton-apis`, `node-deployment-operations`, `global-synchronizer-scaling`, `financial-workflows-composability`, `regulatory-compliance`.
-
-**Reasonable alternatives to `daml-tooling` for this project (if you retune one paragraph of the narrative):**
-
-| Label | When it fits Open Canton Edu |
-|-------|------------------------------|
-| **`dapp-integration`** | You foreground **ecosystem app surfaces**—wallets, explorers, DEXes—and the site as an **integration map** fed by aggregation pipelines. |
-| **`canton-apis`** | You foreground **Ledger API / JSON API** examples and troubleshooting as **generated** learning aids alongside official docs. |
-| **`dar-app-management`** | Usually **weak fit** unless milestones emphasize **DAR** packaging and distribution. |
-
-**Recommendation:** keep **`daml-tooling`** for **Canton / DAML learning surfaces**, i18n for builder-facing UI, and **agentic-education tooling** (maintainer **agents** / Skills that **propose** aggregation updates and **draft** learning copy under **hard guardrails**—**human merge** remains mandatory); cite **SIG / Review Process** alignment (*App Building and Developer Experience — documentation, examples, training*) in the PR thread.
 
 **Champion:** Nguyan Vinh — **@v9n**  
 *(Affiliation or alternate contact can go in the PR thread if useful.)*
