@@ -2,7 +2,6 @@
 import type { Locale } from '@/i18n/translations';
 import { t } from '@/i18n/translations';
 import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
-import SiteLogo from '@/components/SiteLogo.astro';
 
 interface Props {
   locale: Locale;
@@ -29,9 +28,16 @@ const navItems = [
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href={prefix}>
-      <SiteLogo variant="header" alt="" />
-      <span class="brand-text">{tr.siteName}</span>
+    <a class="brand brand-with-floated-mark" href={prefix} aria-label={tr.siteName}>
+      <img
+        class="brand-mark-float"
+        src={`${base}hashclaw-logo.png`}
+        width="140"
+        height="140"
+        alt=""
+        decoding="async"
+        fetchpriority="high"
+      />
     </a>
     <nav class="main-nav" aria-label={tr.lang.label}>
       {navItems.map(({ key, href, label }) => (

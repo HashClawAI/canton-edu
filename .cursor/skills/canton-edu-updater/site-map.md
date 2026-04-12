@@ -1,4 +1,4 @@
-# HashClaw Academy — Site Map Reference
+# CC Privacy Club — Site Map Reference
 
 Quick reference for the agent when updating the repo **incrementally** (merge new findings into existing `translations.ts` and related files).
 
@@ -24,7 +24,7 @@ canton-edu/
 
 ## URLs
 
-- **Live site**: `https://hashclaw.ai/`
+- **Live site**: `https://ccprivacy.club/`
 - **Repo**: `https://github.com/HashClawAI/canton-edu`
 - **CIP discuss (topics)**: `https://lists.sync.global/g/cip-discuss/topics` (wired via build fetch in `fetchCipDiscussTopics.ts`)
 

@@ -1,4 +1,6 @@
 :root {
+  /* Nav mark: half extends below header bar — used for main top padding. */
+  --brand-mark-size: min(min(9rem, 42vw), 140px);
   /* Matrix / terminal aesthetic (site-wide) */
   --bg: #000000;
   --surface: rgba(0, 18, 8, 0.92);
@@ -78,40 +80,53 @@ header.site-header {
   top: 0;
   z-index: 10;
   box-shadow: 0 0 24px rgba(0, 60, 30, 0.25);
+  overflow: visible;
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.75rem;
   padding: 0.85rem 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.55rem;
+  flex-shrink: 0;
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--text);
+  text-align: left;
   text-shadow: 0 0 14px rgba(0, 255, 120, 0.35);
 }
 
-.brand-logo {
-  width: auto;
-  height: 2.15rem;
-  max-height: 40px;
-  object-fit: contain;
+/* Large mark: vertical center on header-inner bottom (= nav underline); home link is logo only. */
+.brand.brand-with-floated-mark {
+  display: block;
+  width: var(--brand-mark-size);
+  min-height: 2.75rem;
+  align-self: center;
   flex-shrink: 0;
-  border-radius: 4px;
-  /* Transparent PNG: light rim so the mark reads on near-black header */
-  filter: drop-shadow(0 0 1px rgba(0, 255, 130, 0.35));
+  padding: 0;
 }
 
-.brand-text {
-  line-height: 1.2;
+.brand-mark-float {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  width: var(--brand-mark-size);
+  height: auto;
+  max-height: var(--brand-mark-size);
+  object-fit: contain;
+  z-index: 1;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 130, 0.45)) drop-shadow(0 0 18px rgba(0, 200, 90, 0.3));
 }
 
 .brand:hover {
@@ -119,20 +134,31 @@ header.site-header {
   color: var(--accent);
 }
 
-.brand:hover .brand-logo {
-  filter: drop-shadow(0 0 2px rgba(0, 255, 170, 0.55));
+.brand:hover .brand-mark-float {
+  filter: drop-shadow(0 0 4px rgba(0, 255, 170, 0.55)) drop-shadow(0 0 22px rgba(0, 220, 100, 0.35));
 }
 
 nav.main-nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: clamp(0.5rem, 1.4vw, 0.95rem);
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  /* Above floating mark so first link (Home) stays clickable; links read L→R from logo. */
+  position: relative;
+  z-index: 2;
 }
 
 nav.main-nav a {
   color: var(--muted);
   font-size: 0.95rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 nav.main-nav a[aria-current='page'] {
@@ -143,6 +169,11 @@ nav.main-nav a[aria-current='page'] {
 }
 
 .lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  white-space: nowrap;
   font-size: 0.9rem;
   padding: 0.35rem 0.75rem;
   border: 1px solid var(--border-strong);
@@ -158,23 +189,12 @@ nav.main-nav a[aria-current='page'] {
   box-shadow: 0 0 12px rgba(0, 255, 100, 0.15);
 }
 
-main {
-  padding: 2.5rem 0 4rem;
-}
-
-.hero-logo-wrap {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 1.25rem;
-}
-
-.hero-logo {
-  width: min(9rem, 42vw);
-  height: auto;
-  max-height: 140px;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 3px rgba(0, 255, 130, 0.45)) drop-shadow(0 0 28px rgba(0, 200, 90, 0.35));
+/* BaseLayout uses <main class="wrap"> — top clears logo tail; pull up ~one line so hero sits tighter under mark. */
+main.wrap {
+  padding-top: max(0.75rem, calc(2.5rem + var(--brand-mark-size) / 2 - 1.5rem));
+  padding-bottom: 4rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .hero h1 {

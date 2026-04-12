@@ -2,14 +2,14 @@
 name: canton-edu-updater
 description: >-
   On each run: fetch the latest Canton Network information from the web, merge
-  updates into the existing canton-edu site (HashClaw Academy) without wiping prior
+  updates into the existing canton-edu site (CC Privacy Club) without wiping prior
   content. Use when asked to update, refresh, or add content; scan for Canton news,
   CIPs, ecosystem, research, videos, or community sources.
 ---
 
-# HashClaw Academy Site Updater
+# CC Privacy Club Site Updater
 
-Automates **incremental** content updates for the Canton Network bilingual site (HashClaw Academy): **read what is already published → scan for what is new → apply changes on top of the old version** (append, prepend, or targeted edits). Do **not** replace whole sections unless the user explicitly asks for a rewrite.
+Automates **incremental** content updates for the Canton Network bilingual site (CC Privacy Club): **read what is already published → scan for what is new → apply changes on top of the old version** (append, prepend, or targeted edits). Do **not** replace whole sections unless the user explicitly asks for a rewrite.
 
 ## Site Architecture
 
@@ -33,7 +33,7 @@ Automates **incremental** content updates for the Canton Network bilingual site 
 5. **Bilingual parity** — Every EN change needs the matching ZH structure **at the same array index** (or same object keys). Never leave one language half-updated.
 6. **Types** — Keep TypeScript valid; preserve the file’s `as const` export pattern.
 7. **Verify** — `npm run build` (expect **18** static routes). Fix errors before commit.
-8. **Ship** — `git add`, `git commit`, `git push` so GitHub Actions deploys to **`https://hashclaw.ai/`**.
+8. **Ship** — `git add`, `git commit`, `git push` so GitHub Actions deploys to **`https://ccprivacy.club/`**.
 
 ## Content sections (in `translations.ts`)
 

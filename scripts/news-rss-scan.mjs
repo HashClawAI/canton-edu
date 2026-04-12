@@ -18,7 +18,7 @@ const RSS_URLS = [
 ];
 
 const UA =
-  'Mozilla/5.0 (compatible; canton-edu-news-scan/1.0; +https://github.com/HashClawAI/canton-edu)';
+  'Mozilla/5.0 (compatible; canton-edu-news-scan/1.0; +https://ccprivacy.club/)';
 
 function extractTag(block, tag) {
   const re = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, 'i');

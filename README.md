@@ -1,8 +1,8 @@
-# HashClaw Academy — bilingual static site (EN / 中文)
+# CC Privacy Club — bilingual static site (EN / 中文)
 
 Independent Canton Network education hub: **English** at `/`, **Chinese** at `/zh/`.
 
-Built with [Astro](https://astro.build) · Deployed on [GitHub Pages](https://pages.github.com/) · Live at **[hashclaw.ai](https://hashclaw.ai/)** (project mirror: [hashclawai.github.io/canton-edu](https://hashclawai.github.io/canton-edu/))
+Built with [Astro](https://astro.build) · Deployed on [GitHub Pages](https://pages.github.com/) · Live at **[ccprivacy.club](https://ccprivacy.club/)** (project mirror: [hashclawai.github.io/canton-edu](https://hashclawai.github.io/canton-edu/)).
 
 ## Site structure
 

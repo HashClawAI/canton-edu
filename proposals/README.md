@@ -9,7 +9,7 @@
 
 ## This draft (summary)
 
-- **HashClaw Academy:** Agentic Education, aggregation, daily build, on-chain explainers, **ja**/**ko** i18n, 12-month maintenance.
+- **CC Privacy Club:** Agentic Education, aggregation, daily build, on-chain explainers, **ja**/**ko** i18n, 12-month maintenance.
 - **Total ask:** **200,000 CC** (M1 30k, M2 20k, M3 30k, M4 12×10k; M4 CC **60k + 60k** at maintenance months **1** and **6** — see proposal **§6.2**).
 - **Champion:** **@v9n** (Nguyan Vinh).
 
