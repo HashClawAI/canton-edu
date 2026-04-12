@@ -85,7 +85,7 @@ Canton Network interview YouTube 2026
 
 ## Data shapes (reminder)
 
-See previous skill version for full examples: `news.items` use `{ date, tag, title, body, url }`; ecosystem `{ name, desc, url? }`; X `{ name, desc, url }`; videos `{ title, channel, date, duration, summary, youtubeId }`; research `{ source, title, date, desc, url }`.
+See previous skill version for full examples: `news.items` use `{ date, tag, title, body, url }`; ecosystem `{ name, desc, url }` — **always set `url`** when a canonical link exists (e.g. `https://www.canton.network/ecosystem/...`, product site, or issuer homepage); X `{ name, desc, url }`; videos `{ title, channel, date, duration, summary, youtubeId }`; research `{ source, title, date, desc, url }`.
 
 ## When to touch `.astro` files
 

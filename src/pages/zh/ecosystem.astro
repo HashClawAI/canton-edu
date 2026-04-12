@@ -25,9 +25,9 @@ const tr = t(locale);
   <section class="section">
     <h2>{tr.ecosystem.walletsTitle}</h2>
     <div class="cards">
-      {tr.ecosystem.wallets.map(({ name, desc }) => (
+      {tr.ecosystem.wallets.map(({ name, desc, url }) => (
         <article class="card">
-          <h3>{name}</h3>
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a> : name}</h3>
           <p>{desc}</p>
         </article>
       ))}
@@ -49,9 +49,9 @@ const tr = t(locale);
   <section class="section">
     <h2>{tr.ecosystem.infraTitle}</h2>
     <div class="cards">
-      {tr.ecosystem.infra.map(({ name, desc }) => (
+      {tr.ecosystem.infra.map(({ name, desc, url }) => (
         <article class="card">
-          <h3>{name}</h3>
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a> : name}</h3>
           <p>{desc}</p>
         </article>
       ))}
@@ -85,9 +85,9 @@ const tr = t(locale);
   <section class="section">
     <h2>{tr.ecosystem.institutionalTitle}</h2>
     <div class="cards">
-      {tr.ecosystem.institutional.map(({ name, desc }) => (
+      {tr.ecosystem.institutional.map(({ name, desc, url }) => (
         <article class="card">
-          <h3>{name}</h3>
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a> : name}</h3>
           <p>{desc}</p>
         </article>
       ))}
