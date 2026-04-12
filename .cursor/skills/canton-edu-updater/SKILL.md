@@ -33,7 +33,7 @@ Automates **incremental** content updates for the Canton Network bilingual site 
 5. **Bilingual parity** — Every EN change needs the matching ZH structure **at the same array index** (or same object keys). Never leave one language half-updated.
 6. **Types** — Keep TypeScript valid; preserve the file’s `as const` export pattern.
 7. **Verify** — `npm run build` (expect **18** static routes). Fix errors before commit.
-8. **Ship** — `git add`, `git commit`, `git push` so GitHub Actions deploys to **`https://canton.tools/`**.
+8. **Ship** — `git add`, `git commit`, `git push` so GitHub Actions deploys to **`https://hashclaw.ai/`**.
 
 ## Content sections (in `translations.ts`)
 

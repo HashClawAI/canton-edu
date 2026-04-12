@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * DNS + HTTPS checks for a custom domain ↔ GitHub Pages.
- * Default domain: canton.tools (override with DOMAIN=example.com).
+ * Default domain: hashclaw.ai (override with DOMAIN=example.com).
  * Apex A must be the four 185.199.*.153; curl -4 catches IPv4-only TLS issues.
  */
 import { execFile } from 'node:child_process';
@@ -91,9 +91,9 @@ async function curlHead(url, forceIpv4) {
 }
 
 async function main() {
-  const DOMAIN = (process.env.DOMAIN || 'canton.tools').replace(/[^a-z0-9.-]/gi, '');
+  const DOMAIN = (process.env.DOMAIN || 'hashclaw.ai').replace(/[^a-z0-9.-]/gi, '');
   if (!DOMAIN || !DOMAIN.includes('.')) {
-    console.error('Invalid or missing DOMAIN (expected a hostname like canton.tools).');
+    console.error('Invalid or missing DOMAIN (expected a hostname like hashclaw.ai).');
     process.exit(1);
   }
   const wwwHost = `www.${DOMAIN}`;

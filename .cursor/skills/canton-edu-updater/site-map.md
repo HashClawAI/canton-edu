@@ -24,7 +24,7 @@ canton-edu/
 
 ## URLs
 
-- **Live site**: `https://canton.tools/`
+- **Live site**: `https://hashclaw.ai/`
 - **Repo**: `https://github.com/HashClawAI/canton-edu`
 - **CIP discuss (topics)**: `https://lists.sync.global/g/cip-discuss/topics` (wired via build fetch in `fetchCipDiscussTopics.ts`)
 

@@ -29,11 +29,11 @@ jobs:
           node-version: '22'
           cache: npm
 
-      # Custom domain https://canton.tools/ — see public/CNAME and GitHub Pages settings.
+      # Custom domain https://hashclaw.ai/ — see public/CNAME and GitHub Pages settings.
       - name: Install and build
         env:
           BASE_PATH: /
-          PUBLIC_SITE_URL: https://canton.tools
+          PUBLIC_SITE_URL: https://hashclaw.ai
           # Optional repo secret: Groups.io API key (Bearer) for cip-discuss topics at build time.
           GROUPSIO_API_KEY: ${{ secrets.GROUPSIO_API_KEY }}
         run: |

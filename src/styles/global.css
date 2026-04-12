@@ -90,15 +90,37 @@ header.site-header {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--text);
   text-shadow: 0 0 14px rgba(0, 255, 120, 0.35);
 }
 
+.brand-logo {
+  width: auto;
+  height: 2.15rem;
+  max-height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+  /* Transparent PNG: light rim so the mark reads on near-black header */
+  filter: drop-shadow(0 0 1px rgba(0, 255, 130, 0.35));
+}
+
+.brand-text {
+  line-height: 1.2;
+}
+
 .brand:hover {
   text-decoration: none;
   color: var(--accent);
+}
+
+.brand:hover .brand-logo {
+  filter: drop-shadow(0 0 2px rgba(0, 255, 170, 0.55));
 }
 
 nav.main-nav {
@@ -138,6 +160,21 @@ nav.main-nav a[aria-current='page'] {
 
 main {
   padding: 2.5rem 0 4rem;
+}
+
+.hero-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.25rem;
+}
+
+.hero-logo {
+  width: min(9rem, 42vw);
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 130, 0.45)) drop-shadow(0 0 28px rgba(0, 200, 90, 0.35));
 }
 
 .hero h1 {
