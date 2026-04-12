@@ -8,38 +8,44 @@
 
 ## Summary
 
-**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support for a **~50-week**, **six-milestone** program: documentation alignment, builder onboarding + **i18n helper v1**, sustainability runbooks, **six multilingual public tutorials** (captions EN+ZH, open license), **maintainer-agent** refinement, and a **feasibility-gated DAML-assist** spike (optional MVP). The proposal body is reorganized to match the program README’s required elements: **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, and **Funding request and milestone breakdown**. It also explicitly covers **problem/ecosystem value**, **objectively verifiable deliverables**, **realistic timelines**, **open-source outputs**, **evidence of technical capability**, and an **adoption/distribution plan**.
+**Open Canton Edu** ([github.com/HashClawAI/canton-edu](https://github.com/HashClawAI/canton-edu)) requests **Canton Development Fund** support to grow an **Asia-Pacific developer community** through **open education**: **(M1)** production **site launch**, **(M2)** **multilingual** support (EN/ZH + **≥1** pilot Asian locale + i18n helper), **(M3)** **≥2** **developer salons / 边会** (technical, non-commercial, APAC-friendly), and **(M4)** **12 months** of **documented ongoing maintenance** with quarterly public updates.
 
-**Author:** Openclaw · **Champion:** Nguyan Vinh  
-**Suggested SIG:** Application developers / developer experience (documentation & training) · **Label:** `daml-tooling`
+The proposal maps to the program README structure: **Objective and scope**, **Technical approach**, **Architectural alignment**, **Milestones and deliverables**, **Acceptance criteria**, **Funding request and milestone breakdown**, plus adoption plan, capability evidence, and open-source outputs.
+
+**Author:** Openclaw · **Champion:** Nguyan Vinh · **Label:** `daml-tooling`
 
 ---
 
-## Mapping to program README (“What makes a strong proposal”)
+## Funding note (120,000 CC)
 
-| Strong-proposal item | Where addressed in `open-canton-edu.md` |
-|----------------------|----------------------------------------|
-| Clear problem & ecosystem value | §1.1 table |
-| Objectively verifiable deliverables | §2 table, §4 paths/tags, §5 checklist |
-| Realistic timelines & scope | §1.2–1.3, §4 week targets, quantified **20 / 12 / 6** |
-| Open-source / reusable outputs | **Open-source and reusable outputs** |
-| Evidence of technical capability | **Evidence of technical capability** |
-| Adoption or distribution plan | **Adoption and distribution plan** |
+The proposal uses **120,000 CC** as an **illustrative total** with a per-milestone split, and **§6.1** explains that the Foundation **does not publish** a “typical” approved amount—**Committee calibration applies**. Line items cover launch QA, locale review, **two regional events**, and **one year** of maintenance.
 
 ---
 
 ## Checklist (PR template)
 
-- [x] Proposal file added under `/proposals/` (`open-canton-edu.md`)
-- [x] Milestones and funding amounts defined *(illustrative **120,000 CC** total with M1–M6 split — **subject to Committee calibration**)*
-- [x] Acceptance criteria included (§5)
-- [x] Alignment with Canton priorities described (§3)
+- [x] Proposal file under `/proposals/` (`open-canton-edu.md`)
+- [x] Milestones and funding amounts defined *(120k CC split — adjustable after Committee feedback)*
+- [x] Acceptance criteria included
+- [x] Alignment with Canton priorities described
+
+---
+
+## Mapping to “What makes a strong proposal”
+
+| Item | Location in proposal |
+|------|----------------------|
+| Problem & ecosystem value | §1.1 |
+| Objectively verifiable deliverables | §2, §4 (paths, tags, RSVP aggregates) |
+| Realistic timelines | §4 (weeks / 12-month maintenance) |
+| Open-source outputs | **Open-source and reusable outputs** |
+| Technical capability | **Evidence of technical capability** |
+| Adoption / distribution | **Adoption and distribution plan** + events |
 
 ---
 
 ## Notes for Reviewers
 
-- **Funding:** **120,000 CC** is an **indicative** total for discussion; weights favor **M4 tutorials** and **M6 gated R&D**; happy to revise after benchmark grants.  
-- **Champion:** Confirm **GitHub @ / affiliation** for Nguyan Vinh in PR discussion if helpful for assignment.  
-- **Scope flexibility:** Committee may **phase-split** (e.g. fund M1–M3 first); M6 **no-go** path is pre-documented.  
-- **Trademark:** Site remains **unofficial** with existing brand-kit link pattern.
+- **Events:** Each salon has **agenda + public announcement + CC-BY recap**; **≥20 combined RSVPs** (aggregate only in-repo for privacy). Format: in-person, hybrid, or online—**APAC-friendly**.  
+- **Champion:** Please confirm **GitHub @** for Nguyan Vinh in the PR thread if useful.  
+- **Scope:** Optional future work (video curriculum, DAML AI tooling) is **explicitly out of this ask** (§1.4) to keep review focused.
