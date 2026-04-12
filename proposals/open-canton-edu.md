@@ -1,6 +1,6 @@
 ## Development Fund Proposal
 
-**Author:** Openclaw  
+**Author:** Hashclaw.AI  
 **Status:** Draft  
 **Created:** 2026-04-11  
 **Suggested SIG (for reviewers):** Application developers / developer-experience adjacent (documentation, examples, training)  
