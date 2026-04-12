@@ -41,7 +41,7 @@ Automates **incremental** content updates for the Canton Network bilingual site 
 |-------------|-----------|-------------------|
 | `home` | Home | Hero, cards, contribute block; CoinPrice labels |
 | `learn` | Learn | 7-step path (step titles + bodies) |
-| `ecosystem` | Ecosystem | Explorers, wallets, DEX/DeFi, infra, naming, earn, institutional |
+| `ecosystem` | Ecosystem | Explorers, wallets, DEX/DeFi, **Payment** (`payments`), infra, naming, earn, institutional |
 | `cips` | CIPs | Highlights table, SV list, stats, **mailing-list copy** (topic list is build-fetched) |
 | `news` | News | `items[]` timeline; optional `cipWatchItems` |
 | `videos` | Videos | Interviews (`youtubeId`), podcast links |
@@ -68,7 +68,7 @@ Canton Network interview YouTube 2026
 | New milestone / press | `news.items` | **Prepend** one object EN + one ZH |
 | CIP in discussion | `news.cipWatchItems` or later `cips.highlights` when final | Append or update that row only |
 | New SV line in governance story | `cips.svList` | Append if not already listed |
-| New app / infra | `ecosystem.*` | Append to best sub-array |
+| New app / infra | `ecosystem.*` | Append to best sub-array (`payments` for payment rails) |
 | New CC pair | `resources.exchanges` | Append if new venue |
 | New X / Telegram | `community.twitterAccounts` / `telegramGroups` | Append if not duplicate |
 | New interview | `videos.interviews` | Append with valid `youtubeId` |

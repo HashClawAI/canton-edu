@@ -47,6 +47,18 @@ const tr = t(locale);
   </section>
 
   <section class="section">
+    <h2>{tr.ecosystem.paymentsTitle}</h2>
+    <div class="cards">
+      {tr.ecosystem.payments.map(({ name, desc, url }) => (
+        <article class="card">
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a> : name}</h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
     <h2>{tr.ecosystem.infraTitle}</h2>
     <div class="cards">
       {tr.ecosystem.infra.map(({ name, desc, url }) => (

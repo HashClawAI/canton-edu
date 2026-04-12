@@ -117,6 +117,14 @@ export const translations = {
         { name: 'Alpend', desc: 'Private money markets — lending, borrowing, yield', url: 'https://alpend.com/' },
         { name: 'HydrAX', desc: 'Liquidity infrastructure with cross-protocol routing', url: 'https://www.canton.network/ecosystem/hydra-x' },
       ],
+      paymentsTitle: 'Payment',
+      payments: [
+        {
+          name: 'Canpay.ai',
+          desc: 'On-chain payment infrastructure on Canton using payment codes; roadmap extends to agentic payment systems.',
+          url: 'https://canpay.ai/',
+        },
+      ],
       infraTitle: 'Infrastructure & dev tools',
       infra: [
         { name: 'Alchemy', desc: 'Developer APIs and node infrastructure', url: 'https://www.canton.network/ecosystem/alchemy' },
@@ -124,11 +132,6 @@ export const translations = {
         { name: 'LayerZero', desc: 'Omnichain interoperability — 165+ chain bridges', url: 'https://layerzero.network/' },
         { name: 'Chainlink', desc: 'Oracle and data feeds', url: 'https://www.canton.network/ecosystem/chainlink' },
         { name: 'AppsFactory', desc: 'Developer gateway for Canton apps', url: 'https://www.canton.network/developer-resources' },
-        {
-          name: 'Canpay.ai',
-          desc: 'On-chain payment infrastructure on Canton using payment codes; roadmap extends to agentic payment systems.',
-          url: 'https://canpay.ai/',
-        },
       ],
       namingTitle: 'Naming & identity',
       naming: [
@@ -666,6 +669,14 @@ export const translations = {
         { name: 'Alpend', desc: '隐私货币市场——借贷与收益', url: 'https://alpend.com/' },
         { name: 'HydrAX', desc: '流动性基础设施与跨协议路由', url: 'https://www.canton.network/ecosystem/hydra-x' },
       ],
+      paymentsTitle: 'Payment',
+      payments: [
+        {
+          name: 'Canpay.ai',
+          desc: 'Canton 上基于支付码的纯链上支付基础设施；路线图包含智能体支付系统。',
+          url: 'https://canpay.ai/',
+        },
+      ],
       infraTitle: '基础设施与开发工具',
       infra: [
         { name: 'Alchemy', desc: '开发者 API 与节点基础设施', url: 'https://www.canton.network/ecosystem/alchemy' },
@@ -673,11 +684,6 @@ export const translations = {
         { name: 'LayerZero', desc: '全链互操作性——165+ 条链桥接', url: 'https://layerzero.network/' },
         { name: 'Chainlink', desc: '预言机与数据源', url: 'https://www.canton.network/ecosystem/chainlink' },
         { name: 'AppsFactory', desc: 'Canton 应用开发入口', url: 'https://www.canton.network/developer-resources' },
-        {
-          name: 'Canpay.ai',
-          desc: 'Canton 上基于支付码的纯链上支付基础设施；路线图包含智能体支付系统。',
-          url: 'https://canpay.ai/',
-        },
       ],
       namingTitle: '命名与身份',
       naming: [

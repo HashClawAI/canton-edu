@@ -10,7 +10,7 @@ Built with [Astro](https://astro.build) · Deployed on [GitHub Pages](https://pa
 |------|---------|---------|
 | Home | `/` | Canton intro, live CC price, feature cards |
 | Learn | `/learn` | 7-step learning path |
-| Ecosystem | `/ecosystem` | Explorers, wallets, DeFi, naming, earn, institutional |
+| Ecosystem | `/ecosystem` | Explorers, wallets, DeFi, **Payment**, infra, naming, earn, institutional |
 | CIPs | `/cips` | Key CIP summaries, SV onboarding, stats |
 | News | `/news` | Event timeline, CIP watch |
 | Videos | `/videos` | Interviews, Quadrillions podcast |
