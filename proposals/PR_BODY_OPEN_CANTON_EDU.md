@@ -12,7 +12,7 @@
 
 Concrete deliverables include: **`docs/agentic-education/`** (`playbooks.md`, `guardrails.md`, **`eval-log.md` ≥10 scenarios**), **daily** Actions rebuild, **≥8** aggregation PRs (manifest), **≥18** generation units (**≥6** flagged **`agentic: true`** + `playbook_id`, **≥4** **`onchain:true`**), **`ja`/`ko`** i18n, **12-month** maintenance with **weekly daily-build** rollups. **Developer events out of scope** (§1.3).
 
-**Author:** Hashclaw.AI · **Champion:** Nguyan Vinh · **Label:** `daml-tooling` *(closed list [here](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md))*  
+**Author:** Hashclaw.AI · **Champion:** Nguyan Vinh (**@v9n**) · **Label:** `daml-tooling` *(closed list [here](https://github.com/canton-foundation/canton-dev-fund/blob/main/proposals/_template.md))*  
 
 ---
 

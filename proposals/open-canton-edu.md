@@ -20,8 +20,8 @@
 
 **Recommendation:** keep **`daml-tooling`** for **Canton / DAML learning surfaces**, i18n for builder-facing UI, and **agentic-education tooling** (maintainer **agents** / Skills that **propose** aggregation updates and **draft** learning copy under **hard guardrails**—**human merge** remains mandatory); cite **SIG / Review Process** alignment (*App Building and Developer Experience — documentation, examples, training*) in the PR thread.
 
-**Champion:** Nguyan Vinh  
-*(Add GitHub handle / affiliation in the PR thread if not already public.)*
+**Champion:** Nguyan Vinh — **@v9n**  
+*(Affiliation or alternate contact can go in the PR thread if useful.)*
 
 ---
 
