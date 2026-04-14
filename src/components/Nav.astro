@@ -12,6 +12,9 @@ const { locale, current = 'home' } = Astro.props;
 const tr = t(locale);
 const base = import.meta.env.BASE_URL;
 const prefix = locale === 'zh' ? `${base}zh/` : base;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const newsHref = `${prefix}news`.replace(/\/$/, '');
+const isNewsActive = current === 'news' && (pathname === newsHref || pathname.startsWith(`${newsHref}/`));
 
 const navItems = [
   { key: 'home' as const, href: prefix, label: tr.nav.home },
@@ -41,7 +44,12 @@ const navItems = [
     </a>
     <nav class="main-nav" aria-label={tr.lang.label}>
       {navItems.map(({ key, href, label }) => (
-        <a href={href} aria-current={current === key ? 'page' : undefined}>{label}</a>
+        <a
+          href={href}
+          aria-current={key === 'news' ? (isNewsActive ? 'page' : undefined) : current === key ? 'page' : undefined}
+        >
+          {label}
+        </a>
       ))}
       <LanguageSwitcher locale={locale} />
     </nav>

@@ -215,6 +215,10 @@ export const translations = {
       title: 'News & updates',
       intro: 'Major developments, governance votes, and ecosystem milestones. Most recent first.',
       lastUpdatedLabel: 'Last updated:',
+      paginationNavLabel: 'News pages',
+      paginationPrev: 'Previous',
+      paginationNext: 'Next',
+      titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
           date: '2026-04-13',
@@ -809,6 +813,10 @@ export const translations = {
       title: '动态与新闻',
       intro: '重大进展、治理投票与生态里程碑。按时间倒序排列。',
       lastUpdatedLabel: '最后更新：',
+      paginationNavLabel: '动态分页',
+      paginationPrev: '上一页',
+      paginationNext: '下一页',
+      titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
         { date: '2026-04-13', tag: '机构', title: '汇丰在 Canton Network 上完成代币化存款试点', body: '汇丰环球支付及现金管理（GPS）在受控环境中模拟在 Canton 上发行、转移并与其他 Canton 应用内数字资产原子结算其代币化存款服务（TDS），并探讨与外部账本互联及未来 DvP 扩展。报道含汇丰与 Digital Asset（Canton 联合创始人）引述。', url: 'https://www.disruptionbanking.com/2026/04/13/hsbc-announces-successful-tokenised-deposit-pilot-on-the-canton-network/' },
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },

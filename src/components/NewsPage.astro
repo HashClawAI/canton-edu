@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteBuildTimestampUtc } from '@/lib/siteBuildTimestamp';
+import type { Locale } from '@/i18n/translations';
+import { t } from '@/i18n/translations';
+import Pagination from '@/components/Pagination.astro';
+import { newsItemsForPage, newsPageCount } from '@/lib/newsPagination';
+
+interface Props {
+  locale: Locale;
+  currentPage: number;
+}
+
+const { locale, currentPage } = Astro.props;
+const tr = t(locale);
+const items = tr.news.items;
+const totalPages = newsPageCount(items.length);
+const pageItems = newsItemsForPage(items, currentPage);
+const { iso, en: enLu, zh: zhLu } = siteBuildTimestampUtc();
+const lastUpdatedDisplay = locale === 'zh' ? zhLu : enLu;
+
+const titleSuffix =
+  currentPage > 1
+    ? tr.news.titlePageSuffix.replace('{page}', String(currentPage)).replace('{total}', String(totalPages))
+    : '';
+const pageTitle = `${tr.news.title}${titleSuffix}`;
+---
+
+<BaseLayout locale={locale} title={pageTitle} description={tr.news.intro} navCurrent="news">
+  <h1 class="page-title">{tr.news.title}</h1>
+  <p class="page-intro">{tr.news.intro}</p>
+  <p class="last-updated">
+    {tr.news.lastUpdatedLabel}{' '}
+    <time datetime={iso}>{lastUpdatedDisplay}</time>
+  </p>
+
+  <section class="timeline">
+    {
+      pageItems.map(({ date, tag, title, body, url }) => (
+        <article class="timeline-item">
+          <div class="timeline-item-card">
+            <div class="timeline-meta">
+              <time>{date}</time>
+              <span class="news-tag">{tag}</span>
+            </div>
+            <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{title}</a> : title}</h3>
+            <p>{body}</p>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+
+  <Pagination locale={locale} currentPage={currentPage} totalPages={totalPages} />
+</BaseLayout>

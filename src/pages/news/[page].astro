@@ -1,0 +1,17 @@
+---
+import NewsPage from '@/components/NewsPage.astro';
+import { t } from '@/i18n/translations';
+import { newsPageCount } from '@/lib/newsPagination';
+
+export function getStaticPaths() {
+  const total = newsPageCount(t('en').news.items.length);
+  if (total < 2) return [];
+  return Array.from({ length: total - 1 }, (_, i) => ({
+    params: { page: String(i + 2) },
+  }));
+}
+
+const page = Number(Astro.params.page);
+---
+
+<NewsPage locale="en" currentPage={page} />
