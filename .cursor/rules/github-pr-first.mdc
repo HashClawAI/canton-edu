@@ -1,0 +1,47 @@
+---
+description: GitHub changes must use PR-first workflow (branch → PR → review → merge), never push to protected default branch directly.
+alwaysApply: true
+---
+
+# GitHub：先提 PR，再 Merge
+
+在**任何**涉及 GitHub 远程仓库的改动（代码、配置、文案）时，按下面顺序执行；**禁止**在默认分支（通常是 `main`）上直接提交并推送来完成功能改动。
+
+## 必须遵守的流程
+
+1. **从最新默认分支拉分支**  
+   `git fetch origin && git checkout main && git pull`，再 `git checkout -b feat/…` 或 `fix/…`。
+
+2. **只在特性分支上开发并推送**  
+   `git push -u origin <branch>`。
+
+3. **先开 PR，再合并**  
+   使用 `gh pr create`（或网页）创建 PR，写清摘要与验证方式（如 `npm run build`）。  
+   **在 PR 合并前**，不把「应通过 PR 进入的改动」直接推到 `main`。
+
+4. **合并**  
+   在 CI/检查通过且满足团队审查要求后，使用 `gh pr merge`（或网页）合并；优先 **squash** 或团队约定的方式。  
+   合并后再 `git checkout main && git pull`。
+
+## 例外（仍应克制）
+
+- **极小、明确允许的维护性操作**（如仅改 typo、仅更新 issue 模板）：若仓库策略允许直接推 `main`，须在对话里**一句话说明例外理由**；否则仍走 PR。
+
+## 与「人类批准」一致
+
+若 PR 由自动化/主账号创建，**不在对话里冒充「已有人类 Approve」**；需要真人审查时，在 PR 描述里 `@` 审查者或按仓库 `CODEOWNERS` / 分支保护执行。
+
+## 命令示例（`gh`）
+
+```bash
+git checkout -b feat/my-change
+# …编辑、commit…
+git push -u origin feat/my-change
+gh pr create --fill
+# 审查与 CI 通过后
+gh pr merge --squash --delete-branch
+```
+
+##  enforcement（仓库侧，强烈建议）
+
+在 GitHub **Branch protection** 中对 `main` 开启：Require PR、Required approvals、Required status checks。这样 Agent 即使用错流程也会被服务器拒绝，与 Cursor 规则双保险。
