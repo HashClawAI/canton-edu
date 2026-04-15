@@ -236,6 +236,13 @@ export const translations = {
         },
         {
           date: '2026-04-09',
+          tag: 'Institutional',
+          title: 'CfC St. Moritz names Canton Network as new main partner',
+          body: 'The CfC St. Moritz conference (Switzerland) announced Canton Network as its new main partner, building on prior years’ collaboration; Digital Asset / Canton co-founder Yuval Rooz is quoted on returning as a speaker. PRNewswire release dated April 9, 2026.',
+          url: 'https://www.prnewswire.com/news-releases/cfc-st-moritz-welcomes-canton-network-as-new-main-partner-302738088.html',
+        },
+        {
+          date: '2026-04-09',
           tag: 'Media',
           title: 'Canton Network CEO on decentralization and “crypto ideologues”',
           body: 'DLNews interviews Yuval Rooz on how Canton frames institutional adoption, real on-chain activity, and criticism of the network’s openness model.',
@@ -345,6 +352,13 @@ export const translations = {
           title: 'OKX lists Canton Coin (CC/USDT)',
           body: 'CC/USDT spot trading goes live on OKX, one of the top global exchanges.',
           url: 'https://www.okx.com/help/okx-to-list-cc-canton-for-spot-trading',
+        },
+        {
+          date: '2026-02-03',
+          tag: 'Ecosystem',
+          title: 'Fireblocks adds Canton Network support for CC custody and settlement',
+          body: 'Fireblocks announced Canton Network integration—including governed custody paths for Canton Coin via Fireblocks Trust—targeted at banks, custodians, and asset managers preparing regulated tokenization and settlement workflows. PRNewswire release dated February 3, 2026.',
+          url: 'https://www.prnewswire.com/news-releases/fireblocks-launches-canton-support-to-expand-its-regulated-tokenization-and-settlement-infrastructure-302677536.html',
         },
         {
           date: '2025-12-17',
@@ -820,6 +834,7 @@ export const translations = {
       items: [
         { date: '2026-04-13', tag: '机构', title: '汇丰在 Canton Network 上完成代币化存款试点', body: '汇丰环球支付及现金管理（GPS）在受控环境中模拟在 Canton 上发行、转移并与其他 Canton 应用内数字资产原子结算其代币化存款服务（TDS），并探讨与外部账本互联及未来 DvP 扩展。报道含汇丰与 Digital Asset（Canton 联合创始人）引述。', url: 'https://www.disruptionbanking.com/2026/04/13/hsbc-announces-successful-tokenised-deposit-pilot-on-the-canton-network/' },
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },
+        { date: '2026-04-09', tag: '机构', title: 'CfC St. Moritz 宣布 Canton Network 为新主合作伙伴', body: '瑞士数字资产会议 CfC St. Moritz 宣布 Canton Network 成为新的主合作伙伴，延续近年合作；Digital Asset / Canton 联合创始人 Yuval Rooz 引述将再度参会发言。PRNewswire 新闻稿日期为 2026-04-09。', url: 'https://www.prnewswire.com/news-releases/cfc-st-moritz-welcomes-canton-network-as-new-main-partner-302738088.html' },
         { date: '2026-04-09', tag: '媒体', title: 'Canton Network CEO 谈去中心化与「加密意识形态」争议', body: 'DLNews 对 Yuval Rooz 的报道：回应外界对网络开放性、链上真实量级及机构范式与意识形态批评之间关系的讨论。', url: 'https://www.dlnews.com/articles/defi/canton-network-ceo-addresses-criticism-from-crypto-ideologues/' },
         { date: '2026-04-08', tag: '生态', title: 'Canton 官方转载：2026「务实隐私」议题', body: 'Canton Network 新闻页聚合 Cointelegraph 杂志专题，讨论合规隐私、Zcash、以太坊基金会动向与监管语境。全文见外链。', url: 'https://www.canton.network/news/2026-is-the-year-of-pragmatic-privacy-in-crypto-canton-zcash-and-more' },
         { date: '2026-04-07', tag: '生态', title: 'Transcend 接入 Canton，优化代币化资产流动', body: 'Transcend 宣布接入 Canton Network，在传统金融与 DeFi 基础设施间实时优化与迁移代币化资产。', url: 'https://www.prnewswire.com/news-releases/transcend-connects-to-canton-network-to-enable-real-time-optimization-and-mobility-of-tokenized-assets-302735540.html' },
@@ -836,6 +851,7 @@ export const translations = {
         { date: '2026-03-14', tag: 'CIP', title: 'CIP-0105 通过——SV 锁仓框架', body: '自愿锁定 SV 奖励，365 天线性释放。三档：70%/45%/35% 锁仓对应 100%/60%/40% 权重。9 票赞成，4 票弃权。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0105/cip-0105.md' },
         { date: '2026-03', tag: '生态', title: 'LayerZero 集成上线', body: 'Canton 成为首个集成 LayerZero 全链互操作性的机构级区块链——代币化资产可在 165+ 条公链之间流通。', url: 'https://layerzero.network/blog/canton-network-goes-live' },
         { date: '2026-02-12', tag: '生态', title: 'OKX 上线 Canton Coin（CC/USDT）', body: 'CC/USDT 现货交易在全球头部交易所 OKX 开放。', url: 'https://www.okx.com/help/okx-to-list-cc-canton-for-spot-trading' },
+        { date: '2026-02-03', tag: '生态', title: 'Fireblocks 增加对 Canton Network 与 CC 托管/结算支持', body: 'Fireblocks 宣布集成 Canton Network，含通过 Fireblocks Trust 等路径对 Canton Coin 的合规托管能力，面向银行、托管行与资管机构布局受监管的代币化与结算流程。PRNewswire 新闻稿日期为 2026-02-03。', url: 'https://www.prnewswire.com/news-releases/fireblocks-launches-canton-support-to-expand-its-regulated-tokenization-and-settlement-infrastructure-302677536.html' },
         { date: '2025-12-17', tag: '机构', title: 'DTCC 宣布在 Canton 上代币化美国国债', body: 'DTCC 将通过 ComposerX 在 Canton Network 上代币化美国国债。MVP 计划 2026 上半年。SEC 于 12 月 11 日发出无异议函。', url: 'https://canton.wiki/dtcc-canton-network' },
       ],
     },
