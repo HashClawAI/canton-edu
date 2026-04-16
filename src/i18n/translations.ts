@@ -221,6 +221,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-04-15',
+          tag: 'Ecosystem',
+          title: 'CredShields joins Canton Network as official audit partner',
+          body: 'CredShields announced it will serve as an official Audit Partner for Canton Network, highlighting Daml-oriented smart contract audits and continuous monitoring for institutional-grade deployments. Press release dated April 15, 2026 (syndicated coverage).',
+          url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/',
+        },
+        {
           date: '2026-04-13',
           tag: 'Institutional',
           title: 'HSBC completes tokenised deposit pilot on Canton Network',
@@ -345,6 +352,13 @@ export const translations = {
           title: 'LayerZero integration goes live',
           body: 'Canton becomes the first major institutional blockchain to integrate LayerZero omnichain interoperability — tokenized assets can now move across 165+ public chains.',
           url: 'https://layerzero.network/blog/canton-network-goes-live',
+        },
+        {
+          date: '2026-02-24',
+          tag: 'Institutional',
+          title: 'Industry working group: cross-border intraday repo with tokenized Gilts on Canton',
+          body: 'Digital Asset announced a fourth set of Canton industry working-group transactions—highlighting cross-border intraday repo using tokenized UK Gilts and expanded participation (e.g. LSEG, Euroclear, Tradeweb, DTCC, Citadel Securities). PRNewswire release dated February 24, 2026.',
+          url: 'https://www.prnewswire.com/news-releases/cantons-industry-working-group-advances-cross-border-collateral-mobility-on-canton-302695138.html',
         },
         {
           date: '2026-02-12',
@@ -832,6 +846,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
         { date: '2026-04-13', tag: '机构', title: '汇丰在 Canton Network 上完成代币化存款试点', body: '汇丰环球支付及现金管理（GPS）在受控环境中模拟在 Canton 上发行、转移并与其他 Canton 应用内数字资产原子结算其代币化存款服务（TDS），并探讨与外部账本互联及未来 DvP 扩展。报道含汇丰与 Digital Asset（Canton 联合创始人）引述。', url: 'https://www.disruptionbanking.com/2026/04/13/hsbc-announces-successful-tokenised-deposit-pilot-on-the-canton-network/' },
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },
         { date: '2026-04-09', tag: '机构', title: 'CfC St. Moritz 宣布 Canton Network 为新主合作伙伴', body: '瑞士数字资产会议 CfC St. Moritz 宣布 Canton Network 成为新的主合作伙伴，延续近年合作；Digital Asset / Canton 联合创始人 Yuval Rooz 引述将再度参会发言。PRNewswire 新闻稿日期为 2026-04-09。', url: 'https://www.prnewswire.com/news-releases/cfc-st-moritz-welcomes-canton-network-as-new-main-partner-302738088.html' },
@@ -850,6 +865,7 @@ export const translations = {
         { date: '2026-03-23', tag: '治理', title: 'Visa 获批成为超级验证者（权重 10）', body: 'CIP-0109 通过——Visa 以最高权重加入 Canton 超级验证者，这是其首个正式区块链治理角色。', url: 'https://coincentral.com/visa-wins-canton-super-validator-status-after-first-onchain-governance-proposal/' },
         { date: '2026-03-14', tag: 'CIP', title: 'CIP-0105 通过——SV 锁仓框架', body: '自愿锁定 SV 奖励，365 天线性释放。三档：70%/45%/35% 锁仓对应 100%/60%/40% 权重。9 票赞成，4 票弃权。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0105/cip-0105.md' },
         { date: '2026-03', tag: '生态', title: 'LayerZero 集成上线', body: 'Canton 成为首个集成 LayerZero 全链互操作性的机构级区块链——代币化资产可在 165+ 条公链之间流通。', url: 'https://layerzero.network/blog/canton-network-goes-live' },
+        { date: '2026-02-24', tag: '机构', title: '行业工作组：Canton 上完成含代币化英国国债的跨境日内回购（第四轮）', body: 'Digital Asset 公布 Canton 行业工作组第四轮链上交易进展，涉及以代币化英国国债等为标的的跨境日内回购等；参与方包括 LSEG、Euroclear、Tradeweb、DTCC、Citadel Securities 等。PRNewswire 新闻稿日期为 2026-02-24。', url: 'https://www.prnewswire.com/news-releases/cantons-industry-working-group-advances-cross-border-collateral-mobility-on-canton-302695138.html' },
         { date: '2026-02-12', tag: '生态', title: 'OKX 上线 Canton Coin（CC/USDT）', body: 'CC/USDT 现货交易在全球头部交易所 OKX 开放。', url: 'https://www.okx.com/help/okx-to-list-cc-canton-for-spot-trading' },
         { date: '2026-02-03', tag: '生态', title: 'Fireblocks 增加对 Canton Network 与 CC 托管/结算支持', body: 'Fireblocks 宣布集成 Canton Network，含通过 Fireblocks Trust 等路径对 Canton Coin 的合规托管能力，面向银行、托管行与资管机构布局受监管的代币化与结算流程。PRNewswire 新闻稿日期为 2026-02-03。', url: 'https://www.prnewswire.com/news-releases/fireblocks-launches-canton-support-to-expand-its-regulated-tokenization-and-settlement-infrastructure-302677536.html' },
         { date: '2025-12-17', tag: '机构', title: 'DTCC 宣布在 Canton 上代币化美国国债', body: 'DTCC 将通过 ComposerX 在 Canton Network 上代币化美国国债。MVP 计划 2026 上半年。SEC 于 12 月 11 日发出无异议函。', url: 'https://canton.wiki/dtcc-canton-network' },
