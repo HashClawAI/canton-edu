@@ -228,6 +228,20 @@ export const translations = {
           url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/',
         },
         {
+          date: '2026-04-14',
+          tag: 'Exchange',
+          title: 'CC expands to Upbit and Crypto.com on Canton rails',
+          body: 'Ecosystem coverage highlights new CC access: Upbit trading across KRW, BTC, and USDT pairs, and Crypto.com App deposits/withdrawals routed via Canton Network — with an official Upbit service notice linked from the roundup.',
+          url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/cc-upbit-crypto-com-canton-network-expansion-2026-04-14/',
+        },
+        {
+          date: '2026-04-14',
+          tag: 'Ecosystem',
+          title: 'Alchemy brings managed node infrastructure and APIs to Canton Network',
+          body: 'Alchemy published a full integration overview for Canton — managed Participant/Validator operation, Ledger API + Utilities API access for CIP-56 workflows, and related institutional onboarding. Blog last updated April 14, 2026.',
+          url: 'https://www.alchemy.com/blog/alchemy-brings-institutional-grade-infrastructure-to-the-canton-network',
+        },
+        {
           date: '2026-04-13',
           tag: 'Institutional',
           title: 'HSBC completes tokenised deposit pilot on Canton Network',
@@ -847,6 +861,8 @@ export const translations = {
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
         { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
+        { date: '2026-04-14', tag: '交易所', title: 'CC 登陆 Upbit 与 Crypto.com（经 Canton 网络存取）', body: '生态侧报道汇总：Upbit 开放 KRW、BTC、USDT 等 CC 交易对；Crypto.com 应用支持经 Canton Network 存取 CC。规则与上架细节以各交易所官方公告为准，韩文公告见社区页链接。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/cc-upbit-crypto-com-canton-network-expansion-2026-04-14/' },
+        { date: '2026-04-14', tag: '生态', title: 'Alchemy 为 Canton Network 提供托管节点与 API 基础设施', body: 'Alchemy 发布长文说明接入范围：托管参与/验证节点、Ledger API 与面向 CIP-56 的 Utilities API、机构侧落地支持等；文章更新于 2026-04-14。', url: 'https://www.alchemy.com/blog/alchemy-brings-institutional-grade-infrastructure-to-the-canton-network' },
         { date: '2026-04-13', tag: '机构', title: '汇丰在 Canton Network 上完成代币化存款试点', body: '汇丰环球支付及现金管理（GPS）在受控环境中模拟在 Canton 上发行、转移并与其他 Canton 应用内数字资产原子结算其代币化存款服务（TDS），并探讨与外部账本互联及未来 DvP 扩展。报道含汇丰与 Digital Asset（Canton 联合创始人）引述。', url: 'https://www.disruptionbanking.com/2026/04/13/hsbc-announces-successful-tokenised-deposit-pilot-on-the-canton-network/' },
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },
         { date: '2026-04-09', tag: '机构', title: 'CfC St. Moritz 宣布 Canton Network 为新主合作伙伴', body: '瑞士数字资产会议 CfC St. Moritz 宣布 Canton Network 成为新的主合作伙伴，延续近年合作；Digital Asset / Canton 联合创始人 Yuval Rooz 引述将再度参会发言。PRNewswire 新闻稿日期为 2026-04-09。', url: 'https://www.prnewswire.com/news-releases/cfc-st-moritz-welcomes-canton-network-as-new-main-partner-302738088.html' },
