@@ -3,6 +3,9 @@ export type Locale = 'en' | 'zh';
 export const translations = {
   en: {
     siteName: 'CC Privacy Club',
+    /** Site-wide search hints (meta keywords); include Canton / Digital Asset / leadership for discoverability. */
+    siteKeywords:
+      'Canton Network, Canton Network blockchain, Digital Asset, Digital Asset company, Digital Asset Holdings, Yuval Rooz, Yuval Rooz founder, Daml, DAML, Canton Coin, CC, institutional blockchain, Super Validator, CIP, Hanwha, Hanwha Investment & Securities, Korea',
     nav: {
       home: 'Home',
       learn: 'Learn',
@@ -220,6 +223,13 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-04-20',
+          tag: 'Institutional',
+          title: 'Hanwha Investment & Securities signs MOU with Digital Asset on Canton Network',
+          body: 'South Korea’s Hanwha Investment & Securities (part of Hanwha Group) signed a memorandum of understanding with Digital Asset Holdings to explore strategic cooperation in digital finance and participate in the Canton Network ecosystem; Digital Asset CEO Yuval Rooz is quoted on Korea’s importance for network expansion. English-language coverage (Sedaily, April 20, 2026).',
+          url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm',
+        },
         {
           date: '2026-04-15',
           tag: 'Ecosystem',
@@ -647,6 +657,8 @@ export const translations = {
   },
   zh: {
     siteName: 'CC Privacy Club',
+    siteKeywords:
+      'Canton Network, Canton Network 区块链, Digital Asset, Digital Asset 公司, Digital Asset Holdings, Yuval Rooz, Yuval Rooz 创始人, Daml, DAML, Canton Coin, CC, 机构区块链, 超级验证者, CIP, 韩华, 韩华投资证券, 韩国',
     nav: {
       home: '首页',
       learn: '学习路径',
@@ -860,6 +872,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-20', tag: '机构', title: '韩华投资证券与 Digital Asset 签署 MOU，参与 Canton Network', body: '韩国韩华投资证券（韩华集团旗下）与 Digital Asset Holdings 签署谅解备忘录，探索数字金融合作并参与 Canton Network，以便与全球主要金融机构在同一基础设施上协作；Digital Asset CEO Yuval Rooz 引述韩国市场对 Canton 扩张的重要性。英文报道见 Sedaily（2026-04-20）。', url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm' },
         { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
         { date: '2026-04-14', tag: '交易所', title: 'CC 登陆 Upbit 与 Crypto.com（经 Canton 网络存取）', body: '生态侧报道汇总：Upbit 开放 KRW、BTC、USDT 等 CC 交易对；Crypto.com 应用支持经 Canton Network 存取 CC。规则与上架细节以各交易所官方公告为准，韩文公告见社区页链接。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/cc-upbit-crypto-com-canton-network-expansion-2026-04-14/' },
         { date: '2026-04-14', tag: '生态', title: 'Alchemy 为 Canton Network 提供托管节点与 API 基础设施', body: 'Alchemy 发布长文说明接入范围：托管参与/验证节点、Ledger API 与面向 CIP-56 的 Utilities API、机构侧落地支持等；文章更新于 2026-04-14。', url: 'https://www.alchemy.com/blog/alchemy-brings-institutional-grade-infrastructure-to-the-canton-network' },

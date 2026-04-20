@@ -15,6 +15,9 @@ const OUT = path.join(ROOT, 'news-candidates.md');
 const RSS_URLS = [
   'https://news.google.com/rss/search?q=Canton+Network&hl=en&gl=US&ceid=US:en',
   'https://news.google.com/rss/search?q=Canton+Coin&hl=en&gl=US&ceid=US:en',
+  'https://news.google.com/rss/search?q=Digital+Asset+Holdings+Canton+Network&hl=en&gl=US&ceid=US:en',
+  'https://news.google.com/rss/search?q=Yuval+Rooz+Digital+Asset+Canton&hl=en&gl=US&ceid=US:en',
+  'https://news.google.com/rss/search?q=Digital+Asset+company+Canton+Network&hl=en&gl=US&ceid=US:en',
 ];
 
 const UA =

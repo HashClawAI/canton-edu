@@ -51,7 +51,12 @@ Automates **incremental** content updates for the Canton Network bilingual site 
 
 ## Scan queries (examples — adjust dates)
 
+Also run queries that surface **Digital Asset (company)**, **Yuval Rooz**, and **Canton Network** together — e.g. partnerships, MOUs, and institutional adoption:
+
 ```
+Digital Asset Holdings Canton Network
+Yuval Rooz Digital Asset Canton Network
+Hanwha Digital Asset MOU Canton
 Canton Network news April 2026
 Canton CIP approved OR proposed 2026
 site:github.com/canton-foundation/cips
