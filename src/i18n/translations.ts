@@ -224,6 +224,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-04-22',
+          tag: 'Media',
+          title: 'Unchained debate: is Canton a “real” blockchain? (Yuval Rooz vs ZK and Dragonfly)',
+          body: 'Laura Shin moderates a public debate on Canton’s “public, permissionless” design with Digital Asset CEO Yuval Rooz, Alex Gluchowski (Matter Labs), and Haseeb Qureshi (Dragonfly). Watch the full live / replay on YouTube; discussion includes CC, validator governance, and how institutional rails map to crypto norms.',
+          url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA',
+        },
+        {
           date: '2026-04-20',
           tag: 'Institutional',
           title: 'Hanwha Investment & Securities signs MOU with Digital Asset on Canton Network',
@@ -264,6 +271,13 @@ export const translations = {
           title: 'Canton Coin moves on upgrade headlines and heavier volume',
           body: 'CC rallied sharply with a large jump in daily turnover as markets digested roadmap commentary (broader language support, planned EVM alignment, eUTXO + need-to-know privacy) and institutional credit narratives (including Programmable Credit Protocol). Treat price reporting as indicative—verify on venues you trust.',
           url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/',
+        },
+        {
+          date: '2026-04-09',
+          tag: 'Ecosystem',
+          title: 'PCP, Digital Asset, and Canton Foundation align on custody-native credit',
+          body: 'Programmable Credit Protocol announced collaboration with Digital Asset and the Canton Foundation to help institutions access credit against tokenized assets while collateral stays in qualified custody, using Canton-native workflows. Republished on Chainwire (April 9, 2026) — cross-check the teams’ own announcements.',
+          url: 'https://chainwire.org/2026/04/09/pcp-partners-with-digital-asset-and-the-canton-foundation-to-enable-custody-native-credit-on-the-network/',
         },
         {
           date: '2026-04-09',
@@ -412,6 +426,14 @@ export const translations = {
       intro: 'Key interviews, panel discussions, the official Quadrillions podcast series, and selected independent voices on X.',
       interviewsTitle: 'Interviews with Yuval Rooz (CEO, Digital Asset)',
       interviews: [
+        {
+          title: 'Is Canton a Real Blockchain? — Yuval Rooz vs Gluchowski & Haseeb (Unchained)',
+          channel: 'Unchained',
+          date: 'Apr 2026',
+          duration: '',
+          summary: 'Laura Shin moderates a debate on whether Canton is meaningfully public and permissionless: Digital Asset’s Yuval Rooz on Canton’s design and CC, with critics Alex Gluchowski (Matter Labs) and Haseeb Qureshi (Dragonfly) pushing back on decentralization and token framing.',
+          youtubeId: '0M3jW-Y-4oA',
+        },
         {
           title: 'The Case for Canton Network as the World\'s Biggest Blockchain',
           channel: 'Milk Road',
@@ -872,12 +894,14 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-22', tag: '媒体', title: 'Unchained 辩论：Canton 算「真公链」吗？', body: 'Laura Shin 主持对谈，Digital Asset 的 Yuval Rooz、Matter Labs 的 Alex Gluchowski 与 Dragonfly 的 Haseeb Qureshi 公开辩论 Canton 的公共性/准入与 CC 等议题。完整录播见 YouTube。', url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA' },
         { date: '2026-04-20', tag: '机构', title: '韩华投资证券与 Digital Asset 签署 MOU，参与 Canton Network', body: '韩国韩华投资证券（韩华集团旗下）与 Digital Asset Holdings 签署谅解备忘录，探索数字金融合作并参与 Canton Network，以便与全球主要金融机构在同一基础设施上协作；Digital Asset CEO Yuval Rooz 引述韩国市场对 Canton 扩张的重要性。英文报道见 Sedaily（2026-04-20）。', url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm' },
         { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
         { date: '2026-04-14', tag: '交易所', title: 'CC 登陆 Upbit 与 Crypto.com（经 Canton 网络存取）', body: '生态侧报道汇总：Upbit 开放 KRW、BTC、USDT 等 CC 交易对；Crypto.com 应用支持经 Canton Network 存取 CC。规则与上架细节以各交易所官方公告为准，韩文公告见社区页链接。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/cc-upbit-crypto-com-canton-network-expansion-2026-04-14/' },
         { date: '2026-04-14', tag: '生态', title: 'Alchemy 为 Canton Network 提供托管节点与 API 基础设施', body: 'Alchemy 发布长文说明接入范围：托管参与/验证节点、Ledger API 与面向 CIP-56 的 Utilities API、机构侧落地支持等；文章更新于 2026-04-14。', url: 'https://www.alchemy.com/blog/alchemy-brings-institutional-grade-infrastructure-to-the-canton-network' },
         { date: '2026-04-13', tag: '机构', title: '汇丰在 Canton Network 上完成代币化存款试点', body: '汇丰环球支付及现金管理（GPS）在受控环境中模拟在 Canton 上发行、转移并与其他 Canton 应用内数字资产原子结算其代币化存款服务（TDS），并探讨与外部账本互联及未来 DvP 扩展。报道含汇丰与 Digital Asset（Canton 联合创始人）引述。', url: 'https://www.disruptionbanking.com/2026/04/13/hsbc-announces-successful-tokenised-deposit-pilot-on-the-canton-network/' },
         { date: '2026-04-10', tag: '市场', title: 'Canton Coin 随升级话题与放量走强', body: 'CC 出现明显上涨、日成交量显著放大；市场关注新白皮书路线（多语言支持、规划中的 EVM 衔接、eUTXO 与按需披露隐私）及机构信贷基础设施叙事（含 Programmable Credit Protocol）。价格报道仅供参考，请以交易所与官方披露为准。', url: 'https://www.cryptonewsz.com/canton-gains-10-as-upgrade-news-sparks-rally/' },
+        { date: '2026-04-09', tag: '生态', title: 'PCP 与 Digital Asset、Canton Foundation 就托管内信贷合作对齐', body: 'Programmable Credit Protocol 宣布与 Digital Asset 与 Canton Foundation 合作，推动在合格托管不迁移抵押品的前提下，为代币化资产提供信贷相关能力。Chainwire 转载日期 2026-04-09；请交叉核对各团队官方声明。', url: 'https://chainwire.org/2026/04/09/pcp-partners-with-digital-asset-and-the-canton-foundation-to-enable-custody-native-credit-on-the-network/' },
         { date: '2026-04-09', tag: '机构', title: 'CfC St. Moritz 宣布 Canton Network 为新主合作伙伴', body: '瑞士数字资产会议 CfC St. Moritz 宣布 Canton Network 成为新的主合作伙伴，延续近年合作；Digital Asset / Canton 联合创始人 Yuval Rooz 引述将再度参会发言。PRNewswire 新闻稿日期为 2026-04-09。', url: 'https://www.prnewswire.com/news-releases/cfc-st-moritz-welcomes-canton-network-as-new-main-partner-302738088.html' },
         { date: '2026-04-09', tag: '媒体', title: 'Canton Network CEO 谈去中心化与「加密意识形态」争议', body: 'DLNews 对 Yuval Rooz 的报道：回应外界对网络开放性、链上真实量级及机构范式与意识形态批评之间关系的讨论。', url: 'https://www.dlnews.com/articles/defi/canton-network-ceo-addresses-criticism-from-crypto-ideologues/' },
         { date: '2026-04-08', tag: '生态', title: 'Canton 官方转载：2026「务实隐私」议题', body: 'Canton Network 新闻页聚合 Cointelegraph 杂志专题，讨论合规隐私、Zcash、以太坊基金会动向与监管语境。全文见外链。', url: 'https://www.canton.network/news/2026-is-the-year-of-pragmatic-privacy-in-crypto-canton-zcash-and-more' },
@@ -905,6 +929,7 @@ export const translations = {
       intro: '重要采访、圆桌讨论、官方 Quadrillions 播客系列，以及 X 上精选的独立创作者。',
       interviewsTitle: 'Yuval Rooz 采访（Digital Asset CEO）',
       interviews: [
+        { title: 'Canton 算「真公链」吗？— Yuval Rooz 对阵 Gluchowski 与 Haseeb（Unchained）', channel: 'Unchained', date: '2026 年 4 月', duration: '', summary: 'Laura Shin 主持：针对 Canton 的公共性与去中心化，Digital Asset 的 Yuval Rooz 与 Alex Gluchowski（Matter Labs）、Haseeb Qureshi（Dragonfly）公开交锋，涉及网络设计、CC 与行业叙事。', youtubeId: '0M3jW-Y-4oA' },
         { title: 'Canton 能否成为全球最大的区块链？', channel: 'Milk Road', date: '2026 年 2 月', duration: '37 分钟', summary: 'Canton 如何将数千亿美元搬上链——代币化国债、Broadridge 回购、JPMorgan、DTCC、代币经济。', youtubeId: 'b_vc9SgQGZo' },
         { title: '为什么 Goldman Sachs 和 DTCC 选择了 Canton', channel: 'DHN Crypto', date: '2026', duration: '29 分钟', summary: 'Goldman Sachs 1.35 亿美元投资、子交易隐私、DAML 可组合性，以及 DTCC 为何选择 Canton 做国债代币化。', youtubeId: '2TO78xsJDIs' },
         { title: 'L2 是否割裂了以太坊？', channel: 'The Defiant', date: '2026 年 2 月', duration: '51 分钟', summary: '网络的网络架构、隐私 vs. 匿名、可组合性、DTCC 代币化。', youtubeId: 'o7Pb91nmmQg' },
