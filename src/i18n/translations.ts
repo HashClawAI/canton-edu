@@ -224,6 +224,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-04-23',
+          tag: 'Ecosystem',
+          title: 'Bitwave links invoices to on-chain payments with native Canton integration',
+          body: 'Bitwave announced completion of a Canton-native payments stack so enterprise finance teams can execute and reconcile invoice-linked, programmable on-chain AP workflows—treating invoices, payment, and settlement as one auditable layer; Digital Asset’s Eric Saraniecki (network strategy) is quoted. GlobeNewswire press release dated April 23, 2026.',
+          url: 'https://www.globenewswire.com/news-release/2026/04/23/3279828/0/en/bitwave-enables-invoice-linked-on-chain-payments-via-canton-integration.html',
+        },
+        {
+          date: '2026-04-22',
+          tag: 'Ecosystem',
+          title: 'WalletConnect adds support for Canton Network',
+          body: 'WalletConnect published a company update announcing Canton support so WalletConnect-enabled wallets can connect to Canton applications—leveraging the existing 700+ wallet ecosystem for institutional apps and tokenized assets without one-off wallet integrations. Blog dated April 22, 2026.',
+          url: 'https://walletconnect.com/blog/building-on-canton-with-walletconnect',
+        },
+        {
           date: '2026-04-22',
           tag: 'Media',
           title: 'Unchained debate: is Canton a “real” blockchain? (Yuval Rooz vs ZK and Dragonfly)',
@@ -231,11 +245,25 @@ export const translations = {
           url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA',
         },
         {
+          date: '2026-04-21',
+          tag: 'Institutional',
+          title: 'HQLAᵡ: Broadridge and Digital Asset invest; planned migration to Canton',
+          body: 'HQLAᵡ (digital collateral mobility) announced strategic minority investments from Broadridge and Digital Asset in a Series C–1 round, citing collaboration with Broadridge’s DLR platform and a planned migration to the Canton Network for regulated securities-finance and repo use cases; completion is subject to CSSF and other approvals. PRNewswire, April 21, 2026.',
+          url: 'https://www.prnewswire.com/news-releases/hqlax-announces-strategic-investments-from-broadridge-and-digital-asset-to-support-its-next-phase-of-growth-on-canton-302748023.html',
+        },
+        {
           date: '2026-04-20',
           tag: 'Institutional',
           title: 'Hanwha Investment & Securities signs MOU with Digital Asset on Canton Network',
           body: 'South Korea’s Hanwha Investment & Securities (part of Hanwha Group) signed a memorandum of understanding with Digital Asset Holdings to explore strategic cooperation in digital finance and participate in the Canton Network ecosystem; Digital Asset CEO Yuval Rooz is quoted on Korea’s importance for network expansion. English-language coverage (Sedaily, April 20, 2026).',
           url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm',
+        },
+        {
+          date: '2026-04-16',
+          tag: 'Institutional',
+          title: 'Northern Trust to build tokenized-asset custody capabilities on Canton',
+          body: 'Northern Trust announced an agreement with Digital Asset Holdings to advance digital-asset strategy and build custody-style capabilities for tokenized financial assets on the Canton Network—framed as connecting digital innovation with traditional asset servicing. Official Northern Trust press page dated April 16, 2026.',
+          url: 'https://www.northerntrust.com/united-states/pr/2026/northern-trust-builds-tokenized-asset-custody-capabilities-on-the-canton-network',
         },
         {
           date: '2026-04-15',
@@ -894,8 +922,12 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-23', tag: '生态', title: 'Bitwave 完成 Canton 原生集成，发票与链上支付联动', body: 'Bitwave 通过 GlobeNewswire 发布：企业级数字资产财资平台将应付账款与可编程链上工作流结合，在 Canton 上把发票、支付与结清算纳入同一可审计层；引述含 Digital Asset 网络战略负责人 Eric Saraniecki。发布日期 2026-04-23。', url: 'https://www.globenewswire.com/news-release/2026/04/23/3279828/0/en/bitwave-enables-invoice-linked-on-chain-payments-via-canton-integration.html' },
+        { date: '2026-04-22', tag: '生态', title: 'WalletConnect 支持 Canton Network', body: 'WalletConnect 公司博客宣布接入 Canton，使支持 WalletConnect 的钱包可连接 Canton 上的应用，复用 700+ 钱包生态，降低机构应用与 RWA 场景的一次性对接成本。博客日期 2026-04-22。', url: 'https://walletconnect.com/blog/building-on-canton-with-walletconnect' },
         { date: '2026-04-22', tag: '媒体', title: 'Unchained 辩论：Canton 算「真公链」吗？', body: 'Laura Shin 主持对谈，Digital Asset 的 Yuval Rooz、Matter Labs 的 Alex Gluchowski 与 Dragonfly 的 Haseeb Qureshi 公开辩论 Canton 的公共性/准入与 CC 等议题。完整录播见 YouTube。', url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA' },
+        { date: '2026-04-21', tag: '机构', title: 'HQLAᵡ：获 Broadridge 与 Digital Asset 投资，并规划迁入 Canton', body: 'HQLAᵡ 宣布在 C–1 轮获 Broadridge 与 Digital Asset 战略投资，并提及与 Broadridge DLR 协同及计划迁移至 Canton Network，以支撑受监管的证券融资与回购场景；板委任命与网络迁移以监管审批为准。PRNewswire 日期 2026-04-21。', url: 'https://www.prnewswire.com/news-releases/hqlax-announces-strategic-investments-from-broadridge-and-digital-asset-to-support-its-next-phase-of-growth-on-canton-302748023.html' },
         { date: '2026-04-20', tag: '机构', title: '韩华投资证券与 Digital Asset 签署 MOU，参与 Canton Network', body: '韩国韩华投资证券（韩华集团旗下）与 Digital Asset Holdings 签署谅解备忘录，探索数字金融合作并参与 Canton Network，以便与全球主要金融机构在同一基础设施上协作；Digital Asset CEO Yuval Rooz 引述韩国市场对 Canton 扩张的重要性。英文报道见 Sedaily（2026-04-20）。', url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm' },
+        { date: '2026-04-16', tag: '机构', title: '北方信托与 Digital Asset 在 Canton 上建设代币化资产托管能力', body: 'Northern Trust 发布新闻稿，宣布与 Digital Asset 推进数字资产战略，在 Canton Network 上构建面向代币化金融资产的托管类能力，衔接传统资产服务。页面日期 2026-04-16。', url: 'https://www.northerntrust.com/united-states/pr/2026/northern-trust-builds-tokenized-asset-custody-capabilities-on-the-canton-network' },
         { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
         { date: '2026-04-14', tag: '交易所', title: 'CC 登陆 Upbit 与 Crypto.com（经 Canton 网络存取）', body: '生态侧报道汇总：Upbit 开放 KRW、BTC、USDT 等 CC 交易对；Crypto.com 应用支持经 Canton Network 存取 CC。规则与上架细节以各交易所官方公告为准，韩文公告见社区页链接。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/cc-upbit-crypto-com-canton-network-expansion-2026-04-14/' },
         { date: '2026-04-14', tag: '生态', title: 'Alchemy 为 Canton Network 提供托管节点与 API 基础设施', body: 'Alchemy 发布长文说明接入范围：托管参与/验证节点、Ledger API 与面向 CIP-56 的 Utilities API、机构侧落地支持等；文章更新于 2026-04-14。', url: 'https://www.alchemy.com/blog/alchemy-brings-institutional-grade-infrastructure-to-the-canton-network' },
