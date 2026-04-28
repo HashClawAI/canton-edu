@@ -253,6 +253,13 @@ export const translations = {
           url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA',
         },
         {
+          date: '2026-04-22',
+          tag: 'Media',
+          title: 'TRM Talks: Shaul Kfir on institutional rails on Canton',
+          body: 'TRM Labs publishes a conversation with Canton Network co-founder Shaul Kfir on privacy-preserving institutional design—why Canton separates authorization from visibility compared with broadcast-first chains. Resource page dated April 22, 2026.',
+          url: 'https://www.trmlabs.com/resources/trm-talks/building-institutional-rails-on-chain-a-conversation-with-canton-co-founder-shaul-kfir',
+        },
+        {
           date: '2026-04-21',
           tag: 'Institutional',
           title: 'HQLAᵡ: Broadridge and Digital Asset invest; planned migration to Canton',
@@ -265,6 +272,13 @@ export const translations = {
           title: 'Hanwha Investment & Securities signs MOU with Digital Asset on Canton Network',
           body: 'South Korea’s Hanwha Investment & Securities (part of Hanwha Group) signed a memorandum of understanding with Digital Asset Holdings to explore strategic cooperation in digital finance and participate in the Canton Network ecosystem; Digital Asset CEO Yuval Rooz is quoted on Korea’s importance for network expansion. English-language coverage (Sedaily, April 20, 2026).',
           url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm',
+        },
+        {
+          date: '2026-04-20',
+          tag: 'Institutional',
+          title: 'Canton Strategic Holdings (NASDAQ: CNTN) publishes Q1 2026 Canton Network ecosystem update',
+          body: 'PRNewswire (April 20, 2026): Canton Strategic Holdings launched its first quarterly Canton Network ecosystem update for Q1 2026—summarizing adoption milestones, on-chain transaction trends, and infrastructure themes—with partner commentary and links to hosted materials; the release scheduled an accompanying webinar on April 22 (verify dial-in / times in the primary notice). DA/Canton trademark disclaimers apply per release footer.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-presents-quarterly-canton-network-ecosystem-update-302747263.html',
         },
         {
           date: '2026-04-16',
@@ -573,6 +587,7 @@ export const translations = {
       officialTitle: 'Official Canton publications',
       officialParts: [
         { title: 'Canton Network Whitepapers (architecture + Canton Coin)', url: 'https://www.canton.network/whitepapers' },
+        { title: 'State of RWA Tokenization 2026 — Canton Network blog overview', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
         { title: 'Canton Network Series — State of the Network (blog recap)', url: 'https://www.canton.network/blog/the-canton-network-series-part-4-of-5' },
         { title: 'Ethereum and Canton: Unifying Public Innovation with Institutional Scale', url: 'https://www.canton.network/blog/ethereum-and-canton-unifying-public-innovation-with-institutional-scale' },
         { title: 'Insights from the Canton Network Pilot', url: 'https://www.canton.network/blog/realizing-connected-synchronized-finance' },
@@ -953,8 +968,10 @@ export const translations = {
         { date: '2026-04-23', tag: '生态', title: 'Bitwave 完成 Canton 原生集成，发票与链上支付联动', body: 'Bitwave 通过 GlobeNewswire 发布：企业级数字资产财资平台将应付账款与可编程链上工作流结合，在 Canton 上把发票、支付与结清算纳入同一可审计层；引述含 Digital Asset 网络战略负责人 Eric Saraniecki。发布日期 2026-04-23。', url: 'https://www.globenewswire.com/news-release/2026/04/23/3279828/0/en/bitwave-enables-invoice-linked-on-chain-payments-via-canton-integration.html' },
         { date: '2026-04-22', tag: '生态', title: 'WalletConnect 支持 Canton Network', body: 'WalletConnect 公司博客宣布接入 Canton，使支持 WalletConnect 的钱包可连接 Canton 上的应用，复用 700+ 钱包生态，降低机构应用与 RWA 场景的一次性对接成本。博客日期 2026-04-22。', url: 'https://walletconnect.com/blog/building-on-canton-with-walletconnect' },
         { date: '2026-04-22', tag: '媒体', title: 'Unchained 辩论：Canton 算「真公链」吗？', body: 'Laura Shin 主持对谈，Digital Asset 的 Yuval Rooz、Matter Labs 的 Alex Gluchowski 与 Dragonfly 的 Haseeb Qureshi 公开辩论 Canton 的公共性/准入与 CC 等议题。完整录播见 YouTube。', url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA' },
+        { date: '2026-04-22', tag: '媒体', title: 'TRM Talks：联合创始人 Shaul Kfir 谈 Canton 机构级基础设施', body: 'TRM Labs 发布与 Canton Network 联合创始人 Shaul Kfir 的对话，讨论面向机构的隐私设计：授权与可见性的区分，以及与「全网广播」路线的差异等。资源页日期 2026-04-22。', url: 'https://www.trmlabs.com/resources/trm-talks/building-institutional-rails-on-chain-a-conversation-with-canton-co-founder-shaul-kfir' },
         { date: '2026-04-21', tag: '机构', title: 'HQLAᵡ：获 Broadridge 与 Digital Asset 投资，并规划迁入 Canton', body: 'HQLAᵡ 宣布在 C–1 轮获 Broadridge 与 Digital Asset 战略投资，并提及与 Broadridge DLR 协同及计划迁移至 Canton Network，以支撑受监管的证券融资与回购场景；板委任命与网络迁移以监管审批为准。PRNewswire 日期 2026-04-21。', url: 'https://www.prnewswire.com/news-releases/hqlax-announces-strategic-investments-from-broadridge-and-digital-asset-to-support-its-next-phase-of-growth-on-canton-302748023.html' },
         { date: '2026-04-20', tag: '机构', title: '韩华投资证券与 Digital Asset 签署 MOU，参与 Canton Network', body: '韩国韩华投资证券（韩华集团旗下）与 Digital Asset Holdings 签署谅解备忘录，探索数字金融合作并参与 Canton Network，以便与全球主要金融机构在同一基础设施上协作；Digital Asset CEO Yuval Rooz 引述韩国市场对 Canton 扩张的重要性。英文报道见 Sedaily（2026-04-20）。', url: 'https://en.sedaily.com/culture/2026/04/20/hanwha-investment-securities-signs-mou-with-blockchain-firm' },
+        { date: '2026-04-20', tag: '机构', title: 'Canton Strategic Holdings（NASDAQ: CNTN）发布 Q1 2026 Canton Network 生态季报', body: 'PRNewswire（2026-04-20）：公司推出首份 Canton Network Q1 2026 季度生态更新，概述采用里程碑、链上交易趋势与基础设施主题，并附合作伙伴视角及线上材料入口；稿件预告配套研讨会时间为 2026-04-22（请以英文原文时间与免责声明为准）。文末含 DA/Canton 商标独立性声明。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-presents-quarterly-canton-network-ecosystem-update-302747263.html' },
         { date: '2026-04-16', tag: '治理', title: 'CIP-0114 通过——Digital Asset Treasury（DAT）超级验证者计划', body: '为以长期持有 CC 为主业、并向第三方提供结构化敞口的上市「数字资产财库」公司设立限时 SV 路径；权重与可验证持仓及季度审核挂钩，设程序上限与释放规则。完整资格、排除条款与托管释放以 CIP 正文为准，不构成投资建议。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0114/cip-0114.md' },
         { date: '2026-04-16', tag: '机构', title: '北方信托与 Digital Asset 在 Canton 上建设代币化资产托管能力', body: 'Northern Trust 发布新闻稿，宣布与 Digital Asset 推进数字资产战略，在 Canton Network 上构建面向代币化金融资产的托管类能力，衔接传统资产服务。页面日期 2026-04-16。', url: 'https://www.northerntrust.com/united-states/pr/2026/northern-trust-builds-tokenized-asset-custody-capabilities-on-the-canton-network' },
         { date: '2026-04-15', tag: '生态', title: 'CredShields 成为 Canton Network 官方审计合作伙伴', body: 'CredShields 宣布担任 Canton Network 官方审计合作伙伴，强调面向 Daml 应用的智能合约审计与持续监控等机构级安全能力。新闻稿日期 2026-04-15（行业媒体转载）。', url: 'https://cryptopotato.com/credshields-joins-canton-network-as-official-audit-partner/' },
@@ -1052,6 +1069,7 @@ export const translations = {
       officialTitle: 'Canton 官方出版物',
       officialParts: [
         { title: 'Canton Network 白皮书（架构 + Canton Coin）', url: 'https://www.canton.network/whitepapers' },
+        { title: 'State of RWA Tokenization 2026 — Canton Network 博客导语', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
         { title: 'Canton Network 系列——网络现状（博客摘要）', url: 'https://www.canton.network/blog/the-canton-network-series-part-4-of-5' },
         { title: '以太坊与 Canton：统一公共创新与机构规模', url: 'https://www.canton.network/blog/ethereum-and-canton-unifying-public-innovation-with-institutional-scale' },
         { title: 'Canton Network 试点的洞察', url: 'https://www.canton.network/blog/realizing-connected-synchronized-finance' },
