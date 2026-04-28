@@ -232,6 +232,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-04-25',
+          tag: 'Media',
+          title: 'Yahoo Finance syndicated recap: Canton Network Q1 webinar on metrics and tokenomics',
+          body: 'Syndicated coverage summarizes Canton Strategic Holdings’ ecosystem webinar framing—including attributed commentary on throughput milestones, issuance schedule shifts, Super Validator additions, and burn/mint mechanics. Figures are reproduced third-hand from conference-style remarks—cross-check Canton Strategic filings and official Canton Network materials before relying on headline metrics.',
+          url: 'https://finance.yahoo.com/markets/crypto/articles/tharimmune-highlights-canton-network-q1-020215096.html',
+        },
+        {
+          date: '2026-04-24',
+          tag: 'Media',
+          title: 'Canton Network official thread on retail access and sequencing',
+          body: 'Official Canton Network social account amplifies perspectives on institutional-first rollout versus broader participation—including pointers to ecosystem wallets/participants for retail-facing pathways (April 24, 2026). Verify claims via independent sources.',
+          url: 'https://x.com/CantonNetwork/status/2047765268076847242',
+        },
+        {
           date: '2026-04-23',
           tag: 'Ecosystem',
           title: 'Bitwave links invoices to on-chain payments with native Canton integration',
@@ -965,6 +979,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-25', tag: '媒体', title: 'Yahoo Finance 转载：Q1 Canton Network 研讨会纪要（用量与代币经济）', body: '第三方财经媒体转载了对 Canton Strategic Holdings 生态研讨会的综述式报道，涉及披露口径下的网络活跃度、增发节奏调整、SV 叙事及燃烧/铸造框架等——多为二次归纳口径；大额数字及前瞻性表述请以 Canton Strategic 披露与 Canton Network 官方材料为准并自行核对。', url: 'https://finance.yahoo.com/markets/crypto/articles/tharimmune-highlights-canton-network-q1-020215096.html' },
+        { date: '2026-04-24', tag: '媒体', title: 'Canton Network 官方动态：零售参与路径与阶段性叙事', body: '官方账号发文讨论「机构先行」与更广泛参与者之间的关系，并指向生态钱包/参与者视角（2026-04-24）；请以官方白皮书与各团队一手公告核实细节，勿单凭帖文做投资判断。', url: 'https://x.com/CantonNetwork/status/2047765268076847242' },
         { date: '2026-04-23', tag: '生态', title: 'Bitwave 完成 Canton 原生集成，发票与链上支付联动', body: 'Bitwave 通过 GlobeNewswire 发布：企业级数字资产财资平台将应付账款与可编程链上工作流结合，在 Canton 上把发票、支付与结清算纳入同一可审计层；引述含 Digital Asset 网络战略负责人 Eric Saraniecki。发布日期 2026-04-23。', url: 'https://www.globenewswire.com/news-release/2026/04/23/3279828/0/en/bitwave-enables-invoice-linked-on-chain-payments-via-canton-integration.html' },
         { date: '2026-04-22', tag: '生态', title: 'WalletConnect 支持 Canton Network', body: 'WalletConnect 公司博客宣布接入 Canton，使支持 WalletConnect 的钱包可连接 Canton 上的应用，复用 700+ 钱包生态，降低机构应用与 RWA 场景的一次性对接成本。博客日期 2026-04-22。', url: 'https://walletconnect.com/blog/building-on-canton-with-walletconnect' },
         { date: '2026-04-22', tag: '媒体', title: 'Unchained 辩论：Canton 算「真公链」吗？', body: 'Laura Shin 主持对谈，Digital Asset 的 Yuval Rooz、Matter Labs 的 Alex Gluchowski 与 Dragonfly 的 Haseeb Qureshi 公开辩论 Canton 的公共性/准入与 CC 等议题。完整录播见 YouTube。', url: 'https://www.youtube.com/watch?v=0M3jW-Y-4oA' },
