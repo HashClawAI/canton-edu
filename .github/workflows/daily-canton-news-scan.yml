@@ -1,9 +1,10 @@
-name: Daily Canton news (RSS scan)
+name: Canton news (RSS scan)
 
-# 20:00 Asia/Shanghai (GMT+8) = 12:00 UTC. GitHub Actions may start within ~1 hour.
+# Twice daily (~08:15 & ~20:15 CST): RSS candidates vs translations.ts.
+# Offset after deploy (:00 UTC) so CI artifacts align with scheduled Pages builds.
 on:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '15 */12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -36,20 +37,25 @@ jobs:
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
+            const d = new Date();
+            const utcHour = d.getUTCHours();
+            const slotHour = utcHour < 12 ? 0 : 12;
+            const dateStr = d.toISOString().slice(0, 10);
+            const title = `[news scan] Canton RSS candidates — ${dateStr} ${String(slotHour).padStart(2, '0')}:00 UTC`;
             const { data: open } = await github.rest.issues.listForRepo({
               owner,
               repo,
               state: 'open',
               per_page: 50,
             });
-            if (open.some((i) => i.title.startsWith('[news scan]'))) {
-              core.info('Skipping: an open [news scan] issue already exists.');
+            if (open.some((i) => i.title === title)) {
+              core.info('Skipping: an issue for this UTC slot already exists.');
               return;
             }
             const body = fs.readFileSync('news-candidates.md', 'utf8');
             await github.rest.issues.create({
               owner,
               repo,
-              title: `[news scan] Canton RSS candidates ${new Date().toISOString().slice(0, 10)}`,
+              title,
               body,
             });

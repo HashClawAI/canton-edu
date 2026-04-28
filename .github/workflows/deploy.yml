@@ -5,9 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Daily 20:00 Asia/Shanghai (GMT+8) = 12:00 UTC — full rebuild + Pages deploy (chart, CIP topics, news stamp, all routes).
+    # Every 12 hours at minute 0 UTC → ~08:00 and ~20:00 China Standard Time (GMT+8).
+    # Full rebuild + Pages deploy (chart, CIP topics, news timestamp, all routes).
     # GitHub Actions scheduled runs may start within ~1 hour after the cron minute.
-    - cron: '0 12 * * *'
+    - cron: '0 */12 * * *'
 
 permissions:
   contents: read

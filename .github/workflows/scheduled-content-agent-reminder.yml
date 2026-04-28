@@ -1,10 +1,10 @@
 # Reminder only: Cursor Agent cannot run on GitHub-hosted runners.
-# 20:30 Asia/Shanghai (GMT+8) ≈ 12:30 UTC — offset from RSS scan at 12:00 UTC.
+# Runs twice daily (~08:45 & ~20:45 CST). Opens one Issue per UTC slot so maintainers run the Agent locally and open a Draft PR.
 name: Scheduled content — agent reminder
 
 on:
   schedule:
-    - cron: '30 12 * * *'
+    - cron: '45 */12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,31 +20,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create reminder issue if none open
+      - name: Create reminder issue if none for this slot
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
+            const d = new Date();
+            const utcHour = d.getUTCHours();
+            const slotHour = utcHour < 12 ? 0 : 12;
+            const dateStr = d.toISOString().slice(0, 10);
+            const title = `[content run] Canton edu — ${dateStr} ${String(slotHour).padStart(2, '0')}:00 UTC`;
             const { data: open } = await github.rest.issues.listForRepo({
               owner,
               repo,
               state: 'open',
               per_page: 100,
             });
-            if (open.some((i) => i.title.startsWith('[content run]'))) {
-              core.info('Skipping: an open [content run] issue already exists.');
+            if (open.some((i) => i.title === title)) {
+              core.info('Skipping: reminder issue for this UTC slot already exists.');
               return;
             }
             let body = fs.readFileSync('.github/SCHEDULED_AGENT_RUN.md', 'utf8');
             body =
               `**Opened (UTC):** ${new Date().toISOString()}\n\n` +
-              '_This issue was opened by the scheduled workflow. Close it after you finish the Cursor agent run and opened a Draft PR._\n\n' +
+              '_Schedule: twice daily (~every 12 hours). Close after you ran the Cursor agent skill and opened a Draft PR._\n\n' +
               body;
             await github.rest.issues.create({
               owner,
               repo,
-              title: `[content run] Canton edu — scheduled agent + human publish (${new Date().toISOString().slice(0, 10)})`,
+              title,
               body,
             });

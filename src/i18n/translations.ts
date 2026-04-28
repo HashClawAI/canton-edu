@@ -33,9 +33,9 @@ export const translations = {
         'Pre-rendered at each site build from CoinGecko (longest available range vs BTC USD) · EMA-smoothed curve · markers: Raw high / Raw low (unsmoothed implied series) and latest data (series end, build-time; label right-aligned on chart). Live BTC/CC row above refreshes in the browser.',
       coinPriceChartBuildHint:
         'Chart SVG is generated at build time. Run `npm run chart:build` locally, or `npm run build`, then refresh.',
-      buildSyncTitle: 'Daily automated refresh',
+      buildSyncTitle: 'Scheduled automated refresh',
       buildSyncIntro:
-        'Each day at 20:00 China Standard Time (GMT+8), GitHub Actions runs a full build and deploy (runs may start up to about an hour later). Build-time refreshes below; narrative pages still follow the repo until you edit them or run the Cursor Skill.',
+        'About every 12 hours (GitHub Actions at minute 0 UTC — roughly 08:00 and 20:00 China Standard Time / GMT+8), this site runs a full build and deploy (runs may start up to about an hour later). Build-time refreshes below; narrative pages still follow the repo until you edit them or run the Cursor Skill.',
       buildSyncItems: [
         'Home: implied sats/CC chart (CoinGecko → static SVG) and live price row logic in the browser',
         'CIPs: “hot topics” list from the public cip-discuss feed (Jina reader; optional Groups.io API key)',
@@ -758,7 +758,7 @@ export const translations = {
         '走势图在构建时生成 SVG。本地可运行 `npm run chart:build` 或 `npm run build` 后刷新页面。',
       buildSyncTitle: '定时同步说明',
       buildSyncIntro:
-        '每日北京时间 20:00（GMT+8）由 GitHub Actions 触发一次完整构建与 Pages 部署（实际排队开始时间可能比计划晚约 1 小时内）。下列内容会在该次构建中自动拉取或刷新；其余栏目正文仍以仓库内容为准，可通过 Cursor Skill 或手动 PR 更新。',
+        '约每 12 小时一次（GitHub Actions 在每 UTC 整点触发——大致对应北京时间 08:00 与 20:00（GMT+8）），本站执行完整构建与 Pages 部署（实际排队开始时间可能比计划晚约 1 小时内）。下列内容会在该次构建中自动拉取或刷新；其余栏目正文仍以仓库内容为准，可通过 Cursor Skill 或手动 PR 更新。',
       buildSyncItems: [
         '首页：聪 / CC 推算走势图（CoinGecko → 构建时 SVG）；BTC/CC 现价行仍在浏览器内请求',
         'CIPs：公开 cip-discuss 邮件列表的热门话题（Jina 抓取；可选配置 Groups.io API）',
