@@ -232,6 +232,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-04-29',
+          tag: 'Institutional',
+          title: 'Visa adds Canton to global stablecoin settlement pilot',
+          body: 'Visa announced it is adding five blockchains — including Canton — to its global stablecoin settlement pilot, bringing the program to nine supported networks. Visa framed Canton as configurable privacy infrastructure for regulated capital markets; Digital Asset / Canton co-founder Eric Saraniecki is quoted in the company release. Decrypt also covered the expansion and $7B annualized settlement run-rate figure.',
+          url: 'https://investor.visa.com/news/news-details/2026/Visa-Accelerates-Stablecoin-Momentum-Adding-Five-Blockchains-for-Settlement/default.aspx',
+        },
+        {
+          date: '2026-04-28',
+          tag: 'Compliance',
+          title: 'Canton blog: TRM Labs and privacy-preserving compliance',
+          body: 'Official Canton Network blog explains how TRM Labs applies blockchain intelligence in Canton’s configurable-privacy model, including selective disclosure, guardian-controlled access, designated observer roles, and risk-based disclosure for AML/CFT workflows.',
+          url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary',
+        },
+        {
+          date: '2026-04-27',
+          tag: 'Ecosystem',
+          title: 'Official Canton blog: WalletConnect is live on Canton Network',
+          body: 'Canton’s official blog follows the WalletConnect announcement with Canton-specific integration guidance: WalletConnect-enabled wallets, custodians, and apps can connect to supported Canton applications while preserving end-to-end encrypted sessions and Canton privacy workflows.',
+          url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network',
+        },
+        {
           date: '2026-04-25',
           tag: 'Media',
           title: 'Yahoo Finance syndicated recap: Canton Network Q1 webinar on metrics and tokenomics',
@@ -601,6 +622,8 @@ export const translations = {
       officialTitle: 'Official Canton publications',
       officialParts: [
         { title: 'Canton Network Whitepapers (architecture + Canton Coin)', url: 'https://www.canton.network/whitepapers' },
+        { title: 'How TRM Labs and Canton Network Make Privacy and Compliance Complementary', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
+        { title: 'WalletConnect is now live on Canton Network', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
         { title: 'State of RWA Tokenization 2026 — Canton Network blog overview', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
         { title: 'Canton Network Series — State of the Network (blog recap)', url: 'https://www.canton.network/blog/the-canton-network-series-part-4-of-5' },
         { title: 'Ethereum and Canton: Unifying Public Innovation with Institutional Scale', url: 'https://www.canton.network/blog/ethereum-and-canton-unifying-public-innovation-with-institutional-scale' },
@@ -979,6 +1002,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-04-29', tag: '机构', title: 'Visa 将 Canton 加入全球稳定币结算试点', body: 'Visa 宣布在全球稳定币结算试点中新增 5 条区块链，其中包括 Canton，使该试点支持的网络增至 9 条。Visa 将 Canton 定位为面向受监管资本市场、具备可配置隐私的基础设施；Digital Asset / Canton 联合创始人 Eric Saraniecki 在公司新闻稿中被引用。Decrypt 亦报道了本次扩展及 70 亿美元年化结算 run-rate 口径。', url: 'https://investor.visa.com/news/news-details/2026/Visa-Accelerates-Stablecoin-Momentum-Adding-Five-Blockchains-for-Settlement/default.aspx' },
+        { date: '2026-04-28', tag: '合规', title: 'Canton 官方博客：TRM Labs 与隐私保护型合规', body: 'Canton Network 官方博客说明 TRM Labs 如何在 Canton 可配置隐私模型中应用链上情报能力，涵盖选择性披露、guardian 控制的数据访问、指定观察者角色，以及面向 AML/CFT 流程的风险分级披露。', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
+        { date: '2026-04-27', tag: '生态', title: 'Canton 官方博客：WalletConnect 已上线 Canton Network', body: 'Canton 官方博客在 WalletConnect 公告后补充 Canton 侧集成说明：支持 WalletConnect 的钱包、托管方与应用可连接受支持的 Canton 应用，同时保留端到端加密会话与 Canton 的隐私工作流。', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
         { date: '2026-04-25', tag: '媒体', title: 'Yahoo Finance 转载：Q1 Canton Network 研讨会纪要（用量与代币经济）', body: '第三方财经媒体转载了对 Canton Strategic Holdings 生态研讨会的综述式报道，涉及披露口径下的网络活跃度、增发节奏调整、SV 叙事及燃烧/铸造框架等——多为二次归纳口径；大额数字及前瞻性表述请以 Canton Strategic 披露与 Canton Network 官方材料为准并自行核对。', url: 'https://finance.yahoo.com/markets/crypto/articles/tharimmune-highlights-canton-network-q1-020215096.html' },
         { date: '2026-04-24', tag: '媒体', title: 'Canton Network 官方动态：零售参与路径与阶段性叙事', body: '官方账号发文讨论「机构先行」与更广泛参与者之间的关系，并指向生态钱包/参与者视角（2026-04-24）；请以官方白皮书与各团队一手公告核实细节，勿单凭帖文做投资判断。', url: 'https://x.com/CantonNetwork/status/2047765268076847242' },
         { date: '2026-04-23', tag: '生态', title: 'Bitwave 完成 Canton 原生集成，发票与链上支付联动', body: 'Bitwave 通过 GlobeNewswire 发布：企业级数字资产财资平台将应付账款与可编程链上工作流结合，在 Canton 上把发票、支付与结清算纳入同一可审计层；引述含 Digital Asset 网络战略负责人 Eric Saraniecki。发布日期 2026-04-23。', url: 'https://www.globenewswire.com/news-release/2026/04/23/3279828/0/en/bitwave-enables-invoice-linked-on-chain-payments-via-canton-integration.html' },
@@ -1085,6 +1111,8 @@ export const translations = {
       officialTitle: 'Canton 官方出版物',
       officialParts: [
         { title: 'Canton Network 白皮书（架构 + Canton Coin）', url: 'https://www.canton.network/whitepapers' },
+        { title: 'TRM Labs 与 Canton Network 如何让隐私和合规相辅相成', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
+        { title: 'WalletConnect 已上线 Canton Network', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
         { title: 'State of RWA Tokenization 2026 — Canton Network 博客导语', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
         { title: 'Canton Network 系列——网络现状（博客摘要）', url: 'https://www.canton.network/blog/the-canton-network-series-part-4-of-5' },
         { title: '以太坊与 Canton：统一公共创新与机构规模', url: 'https://www.canton.network/blog/ethereum-and-canton-unifying-public-innovation-with-institutional-scale' },
