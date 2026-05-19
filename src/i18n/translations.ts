@@ -232,6 +232,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-05-13',
+          tag: 'Institutional',
+          title: 'Canton Strategic Holdings (NASDAQ: CNTN) reports Q1 2026 financial and operational results',
+          body: 'PRNewswire (May 13, 2026): Canton Strategic Holdings reported Q1 2026 results—3.68B CC treasury holdings (~$541.6M fair value as of March 31), $41.5M cash, Super Validator approval, $90.4M in capital markets transactions, and first commercial token-locking solutions launched in April following CIP-0105. Net loss was $47.3M; the company has not yet recognized revenue. Forward-looking statements and CC valuation disclaimers apply per the release.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-reports-first-quarter-2026-financial-and-operational-results-302770829.html',
+        },
+        {
+          date: '2026-05-12',
+          tag: 'Institutional',
+          title: 'Societe Generale scales tokenized finance and CoinVertible stablecoins on Canton',
+          body: 'Societe Generale announced accelerated development of institutional blockchain infrastructure on Canton—deploying SG-FORGE’s regulated EURCV and USDCV stablecoins, accepting tokenized assets as eligible collateral, acting as repo counterparty, and joining as an Ecosystem Super Validator. Builds on its November 2025 U.S. tokenized bond on Canton. Coverage cites BusinessWire (May 12, 2026); quotes include Canton Foundation Head Viv Diwakar.',
+          url: 'https://fxnewsgroup.com/forex-news/institutional/societe-generale-accelerates-development-of-institutional-blockchain-based-fin-infrastructure-on-canton-network/',
+        },
+        {
+          date: '2026-05-12',
+          tag: 'Protocol',
+          title: 'Canton Foundation: Zenith EVM opens atomic composability for Solidity builders',
+          body: 'Canton Foundation blog (May 12, 2026) describes Zenith’s native EVM execution environment on Canton—not a bridge, sidechain, or rollup—enabling Daml contracts to compose atomically with Solidity via external_call(), with Reth-based RPC deployment for EVM developers. Testnet documentation forthcoming.',
+          url: 'https://canton.foundation/canton-opens-door-to-evm-developers-with-zenith/',
+        },
+        {
+          date: '2026-05-01',
+          tag: 'Governance',
+          title: 'CIP-0096 liveness rewards reach zero; CIP-0105 SV lock rules in effect',
+          body: 'Approved CIP-0096’s four-stage liveness-reward phaseout completed April 30—May 1 is the first full day validator CC rewards flow only from active contribution (no passive uptime floor). CIP-0105’s Super Validator reward-lock framework (70%/45%/35% lock tiers) is also in force. See CIP texts for schedules and eligibility.',
+          url: 'https://github.com/canton-foundation/cips/blob/main/cip-0096/cip-0096.md',
+        },
+        {
           date: '2026-04-29',
           tag: 'Institutional',
           title: 'Visa adds Canton to global stablecoin settlement pilot',
@@ -622,6 +650,7 @@ export const translations = {
       officialTitle: 'Official Canton publications',
       officialParts: [
         { title: 'Canton Network Whitepapers (architecture + Canton Coin)', url: 'https://www.canton.network/whitepapers' },
+        { title: 'Canton Opens Door to EVM Developers with Zenith (Canton Foundation)', url: 'https://canton.foundation/canton-opens-door-to-evm-developers-with-zenith/' },
         { title: 'How TRM Labs and Canton Network Make Privacy and Compliance Complementary', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
         { title: 'WalletConnect is now live on Canton Network', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
         { title: 'State of RWA Tokenization 2026 — Canton Network blog overview', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
@@ -1002,6 +1031,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-05-13', tag: '机构', title: 'Canton Strategic Holdings（NASDAQ: CNTN）发布 Q1 2026 财务与运营业绩', body: 'PRNewswire（2026-05-13）：公司披露 Q1 2026 业绩——截至 3 月 31 日持有约 36.8 亿枚 CC（公允价值约 5.416 亿美元）、现金约 4150 万美元、获超级验证者资格、资本市场交易合计约 9040 万美元，并于 4 月随 CIP-0105 推出首批商业化代币锁定方案。净亏损约 4730 万美元；公司尚未确认营业收入。前瞻性表述与 CC 估值口径以原文免责声明为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-reports-first-quarter-2026-financial-and-operational-results-302770829.html' },
+        { date: '2026-05-12', tag: '机构', title: '法国兴业银行扩大 Canton 上代币化金融与 CoinVertible 稳定币布局', body: '法国兴业银行宣布加速在 Canton 上建设机构级链上基础设施——部署 SG-FORGE 受监管 EURCV/USDCV 稳定币、接受部分代币化资产作为合格抵押品、作为回购交易对手方，并以生态超级验证者身份加入网络；延续其 2025 年 11 月在 Canton 上的美国代币化债券实践。媒体报道援引 BusinessWire（2026-05-12）及 Canton Foundation 负责人 Viv Diwakar 等引述。', url: 'https://fxnewsgroup.com/forex-news/institutional/societe-generale-accelerates-development-of-institutional-blockchain-based-fin-infrastructure-on-canton-network/' },
+        { date: '2026-05-12', tag: '协议', title: 'Canton Foundation：Zenith EVM 为 Solidity 开发者打开原子可组合入口', body: 'Canton Foundation 博客（2026-05-12）介绍生态伙伴 Zenith 在 Canton 上的原生 EVM 执行环境——非跨链桥、侧链或 Rollup——通过 external_call() 使 Daml 合约与 Solidity 在同一 Canton 交易中原子组合；EVM 侧基于 Reth，可按常规 RPC 部署合约。测试网文档即将发布。', url: 'https://canton.foundation/canton-opens-door-to-evm-developers-with-zenith/' },
+        { date: '2026-05-01', tag: '治理', title: 'CIP-0096 活跃度奖励归零；CIP-0105 超级验证者锁仓规则生效', body: '已通过的 CIP-0096 四阶段「活跃度奖励」削减于 4 月 30 日完成——5 月 1 日起验证者 CC 奖励仅来自主动贡献（无被动在线保底）。CIP-0105 规定的 SV 奖励锁仓框架（70%/45%/35% 三档）同步适用。具体时间表与资格以 CIP 正文为准。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0096/cip-0096.md' },
         { date: '2026-04-29', tag: '机构', title: 'Visa 将 Canton 加入全球稳定币结算试点', body: 'Visa 宣布在全球稳定币结算试点中新增 5 条区块链，其中包括 Canton，使该试点支持的网络增至 9 条。Visa 将 Canton 定位为面向受监管资本市场、具备可配置隐私的基础设施；Digital Asset / Canton 联合创始人 Eric Saraniecki 在公司新闻稿中被引用。Decrypt 亦报道了本次扩展及 70 亿美元年化结算 run-rate 口径。', url: 'https://investor.visa.com/news/news-details/2026/Visa-Accelerates-Stablecoin-Momentum-Adding-Five-Blockchains-for-Settlement/default.aspx' },
         { date: '2026-04-28', tag: '合规', title: 'Canton 官方博客：TRM Labs 与隐私保护型合规', body: 'Canton Network 官方博客说明 TRM Labs 如何在 Canton 可配置隐私模型中应用链上情报能力，涵盖选择性披露、guardian 控制的数据访问、指定观察者角色，以及面向 AML/CFT 流程的风险分级披露。', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
         { date: '2026-04-27', tag: '生态', title: 'Canton 官方博客：WalletConnect 已上线 Canton Network', body: 'Canton 官方博客在 WalletConnect 公告后补充 Canton 侧集成说明：支持 WalletConnect 的钱包、托管方与应用可连接受支持的 Canton 应用，同时保留端到端加密会话与 Canton 的隐私工作流。', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
@@ -1111,6 +1144,7 @@ export const translations = {
       officialTitle: 'Canton 官方出版物',
       officialParts: [
         { title: 'Canton Network 白皮书（架构 + Canton Coin）', url: 'https://www.canton.network/whitepapers' },
+        { title: 'Canton Foundation：Zenith EVM 向 EVM 开发者开放（官方博客）', url: 'https://canton.foundation/canton-opens-door-to-evm-developers-with-zenith/' },
         { title: 'TRM Labs 与 Canton Network 如何让隐私和合规相辅相成', url: 'https://www.canton.network/blog/how-trm-labs-and-canton-network-make-privacy-and-compliance-complementary' },
         { title: 'WalletConnect 已上线 Canton Network', url: 'https://www.canton.network/blog/walletconnect-is-now-live-on-canton-network' },
         { title: 'State of RWA Tokenization 2026 — Canton Network 博客导语', url: 'https://www.canton.network/blog/state-of-rwa-tokenization-2026' },
