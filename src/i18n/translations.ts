@@ -232,6 +232,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-05-26',
+          tag: 'Markets',
+          title: 'Bitwise lists Canton ETP (BWCC) on Deutsche Börse Xetra',
+          body: 'Bitwise Europe launched the physically backed Bitwise Canton ETP (ticker BWCC, ISIN DE000A4ARTH9) on Deutsche Börse Xetra, seeking to track the Kaiko CANTO Reference Rate with CC held in cold-storage custody and a 0.85% TER. Investors can access via traditional brokerage accounts without a crypto wallet. Issuer press release dated May 26, 2026.',
+          url: 'https://bitwiseinvestments.eu/newsroom/Press_Release_26_05_2026/',
+        },
+        {
+          date: '2026-05-20',
+          tag: 'Governance',
+          title: 'CIP-0116 active: Featured App parties must lock CC on-chain',
+          body: 'CIP-0116 (Featured App Locking) was approved May 20, 2026. Non-issuer Featured App parties must lock 5M CC per PartyId; asset-issuer parties 25M CC, with 60-day vesting unlock rules. Existing Featured Apps have a 30-day grace period to comply. Super Validators must support rapid unfeaturing if thresholds are breached.',
+          url: 'https://github.com/canton-foundation/cips/blob/main/cip-0116/cip-0116.md',
+        },
+        {
+          date: '2026-05-20',
+          tag: 'Research',
+          title: 'Messari publishes Canton Network overview (official blog)',
+          body: 'Canton Network’s official blog highlights a new Messari research overview of Canton—configurable privacy with composability, institutional adoption (Broadridge, DTCC, JPMorgan), 150+ live or emerging apps, and 50+ Super Validators under Canton Foundation governance. Linked from canton.network blog, May 20, 2026.',
+          url: 'https://www.canton.network/blog/messari-report-understanding-canton-network',
+        },
+        {
+          date: '2026-05-18',
+          tag: 'Ecosystem',
+          title: 'Canton Network consolidates developer documentation',
+          body: 'Canton announced a unified developer docs entry point—consolidating Canton Network, Digital Asset, and Foundation documentation with role-based learning paths, Ethereum migration guides, open-source Git contributions, and LLM-friendly markdown views. Official blog dated May 18, 2026.',
+          url: 'https://www.canton.network/blog/introducing-the-new-canton-network-developer-docs',
+        },
+        {
           date: '2026-05-13',
           tag: 'Institutional',
           title: 'Canton Strategic Holdings (NASDAQ: CNTN) reports Q1 2026 financial and operational results',
@@ -1031,6 +1059,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-05-26', tag: '市场', title: 'Bitwise 在德意志交易所 Xetra 上线 Canton ETP（BWCC）', body: 'Bitwise Europe 推出实物支持的 Bitwise Canton ETP（代码 BWCC，ISIN DE000A4ARTH9），在 Xetra 交易，拟跟踪 Kaiko CANTO 参考利率，CC 冷存储托管，年化费率 0.85%。投资者可通过传统证券账户参与，无需加密钱包。新闻稿日期 2026-05-26。', url: 'https://bitwiseinvestments.eu/newsroom/Press_Release_26_05_2026/' },
+        { date: '2026-05-20', tag: '治理', title: 'CIP-0116 生效：精选应用方须链上锁仓 CC', body: 'CIP-0116（Featured App Locking）于 2026-05-20 通过：非发行方精选应用每个 PartyId 须锁仓 500 万 CC；资产发行方 2500 万 CC；解锁按 60 天线性归属。既有精选应用有 30 天宽限期达标。超级验证者须支持快速取消精选资格。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0116/cip-0116.md' },
+        { date: '2026-05-20', tag: '研究', title: 'Messari 发布 Canton Network 综述（官方博客转载）', body: 'Canton Network 官方博客推介 Messari 研究综述：可配置隐私与可组合性、机构采用（Broadridge、DTCC、摩根大通等）、150+ 在运行或筹备中的应用，以及 50+ 超级验证者与基金会治理。链接日期 2026-05-20。', url: 'https://www.canton.network/blog/messari-report-understanding-canton-network' },
+        { date: '2026-05-18', tag: '生态', title: 'Canton Network 统一开发者文档入口', body: 'Canton 宣布整合开发者文档——合并 Canton Network、Digital Asset 与基金会文档，提供按角色划分的学习路径、来自以太坊生态的迁移指南、Git 开源贡献与面向 LLM 的 Markdown 视图。官方博客日期 2026-05-18。', url: 'https://www.canton.network/blog/introducing-the-new-canton-network-developer-docs' },
         { date: '2026-05-13', tag: '机构', title: 'Canton Strategic Holdings（NASDAQ: CNTN）发布 Q1 2026 财务与运营业绩', body: 'PRNewswire（2026-05-13）：公司披露 Q1 2026 业绩——截至 3 月 31 日持有约 36.8 亿枚 CC（公允价值约 5.416 亿美元）、现金约 4150 万美元、获超级验证者资格、资本市场交易合计约 9040 万美元，并于 4 月随 CIP-0105 推出首批商业化代币锁定方案。净亏损约 4730 万美元；公司尚未确认营业收入。前瞻性表述与 CC 估值口径以原文免责声明为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-reports-first-quarter-2026-financial-and-operational-results-302770829.html' },
         { date: '2026-05-12', tag: '机构', title: '法国兴业银行扩大 Canton 上代币化金融与 CoinVertible 稳定币布局', body: '法国兴业银行宣布加速在 Canton 上建设机构级链上基础设施——部署 SG-FORGE 受监管 EURCV/USDCV 稳定币、接受部分代币化资产作为合格抵押品、作为回购交易对手方，并以生态超级验证者身份加入网络；延续其 2025 年 11 月在 Canton 上的美国代币化债券实践。媒体报道援引 BusinessWire（2026-05-12）及 Canton Foundation 负责人 Viv Diwakar 等引述。', url: 'https://fxnewsgroup.com/forex-news/institutional/societe-generale-accelerates-development-of-institutional-blockchain-based-fin-infrastructure-on-canton-network/' },
         { date: '2026-05-12', tag: '协议', title: 'Canton Foundation：Zenith EVM 为 Solidity 开发者打开原子可组合入口', body: 'Canton Foundation 博客（2026-05-12）介绍生态伙伴 Zenith 在 Canton 上的原生 EVM 执行环境——非跨链桥、侧链或 Rollup——通过 external_call() 使 Daml 合约与 Solidity 在同一 Canton 交易中原子组合；EVM 侧基于 Reth，可按常规 RPC 部署合约。测试网文档即将发布。', url: 'https://canton.foundation/canton-opens-door-to-evm-developers-with-zenith/' },
