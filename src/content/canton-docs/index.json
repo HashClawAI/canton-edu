@@ -1,0 +1,690 @@
+{
+  "generatedAt": "2026-06-04T03:41:49.025Z",
+  "sourceIndexUrl": "https://docs.canton.network/llms.txt",
+  "items": [
+    {
+      "slug": "choose-your-path",
+      "locale": "en",
+      "title": "Choose Your Path",
+      "sourceTitle": "Choose Your Path",
+      "summary": "A starting point for choosing the right Canton developer path before diving into Daml, APIs, app rewards, or deployment topics.",
+      "category": "getting-started",
+      "tags": [
+        "onboarding",
+        "learning-path"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/get-started/choose-your-path.md",
+      "localPath": "docs/education/canton-dev/en/choose-your-path.md"
+    },
+    {
+      "slug": "choose-your-path",
+      "locale": "zh",
+      "title": "Choose Your Path（中文学习笔记）",
+      "sourceTitle": "Choose Your Path",
+      "summary": "帮助开发者先判断自己该走哪条 Canton 学习路径：Daml 合约、Ledger/API 集成、应用奖励还是部署运维，避免一开始就迷失在完整文档树里。",
+      "category": "getting-started",
+      "tags": [
+        "onboarding",
+        "learning-path"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/get-started/choose-your-path.md",
+      "localPath": "docs/education/canton-dev/zh/choose-your-path.md"
+    },
+    {
+      "slug": "development-stack",
+      "locale": "en",
+      "title": "The Canton Development Stack",
+      "sourceTitle": "The Canton Development Stack",
+      "summary": "Introduces the Canton development stack, including Daml, participant nodes, APIs, package tooling, and application integration surfaces.",
+      "category": "foundations",
+      "tags": [
+        "stack",
+        "daml",
+        "sdk"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-development-stack.md",
+      "localPath": "docs/education/canton-dev/en/development-stack.md"
+    },
+    {
+      "slug": "development-stack",
+      "locale": "zh",
+      "title": "The Canton Development Stack（中文学习笔记）",
+      "sourceTitle": "The Canton Development Stack",
+      "summary": "概览 Canton 开发栈：Daml、Participant Node、Ledger API、包管理和应用集成边界，是搭建开发环境前最重要的地图。",
+      "category": "foundations",
+      "tags": [
+        "stack",
+        "daml",
+        "sdk"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-development-stack.md",
+      "localPath": "docs/education/canton-dev/zh/development-stack.md"
+    },
+    {
+      "slug": "mental-models",
+      "locale": "en",
+      "title": "Mental Models for Canton",
+      "sourceTitle": "Mental Models for Canton",
+      "summary": "Frames Canton with the core mental models developers need: parties, contracts, privacy, synchronization, and multi-party workflows.",
+      "category": "foundations",
+      "tags": [
+        "mental-models",
+        "architecture"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-mental-models.md",
+      "localPath": "docs/education/canton-dev/en/mental-models.md"
+    },
+    {
+      "slug": "mental-models",
+      "locale": "zh",
+      "title": "Mental Models for Canton（中文学习笔记）",
+      "sourceTitle": "Mental Models for Canton",
+      "summary": "用开发者能理解的模型解释 Canton：Party、合约、隐私、同步层和多方工作流，适合作为后续技术细节的认知底座。",
+      "category": "foundations",
+      "tags": [
+        "mental-models",
+        "architecture"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-mental-models.md",
+      "localPath": "docs/education/canton-dev/zh/mental-models.md"
+    },
+    {
+      "slug": "concept-translation",
+      "locale": "en",
+      "title": "Concept Translation Tables",
+      "sourceTitle": "Concept Translation Tables",
+      "summary": "Maps familiar blockchain and application concepts into Canton and Daml terminology so teams can migrate their mental model safely.",
+      "category": "migration",
+      "tags": [
+        "ethereum",
+        "migration",
+        "concepts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m2-concept-translation.md",
+      "localPath": "docs/education/canton-dev/en/concept-translation.md"
+    },
+    {
+      "slug": "concept-translation",
+      "locale": "zh",
+      "title": "Concept Translation Tables（中文学习笔记）",
+      "sourceTitle": "Concept Translation Tables",
+      "summary": "把以太坊或传统应用开发者熟悉的概念翻译到 Canton/Daml 语境中，帮助团队迁移认知，而不是生搬硬套旧链模型。",
+      "category": "migration",
+      "tags": [
+        "ethereum",
+        "migration",
+        "concepts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m2-concept-translation.md",
+      "localPath": "docs/education/canton-dev/zh/concept-translation.md"
+    },
+    {
+      "slug": "dev-environment",
+      "locale": "en",
+      "title": "Development Environment Setup",
+      "sourceTitle": "Development Environment Setup",
+      "summary": "Covers local development environment setup and the tooling needed before writing, building, and testing Daml applications.",
+      "category": "daml",
+      "tags": [
+        "setup",
+        "sdk",
+        "local-dev"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-dev-environment.md",
+      "localPath": "docs/education/canton-dev/en/dev-environment.md"
+    },
+    {
+      "slug": "dev-environment",
+      "locale": "zh",
+      "title": "Development Environment Setup（中文学习笔记）",
+      "sourceTitle": "Development Environment Setup",
+      "summary": "说明本地开发环境和 SDK 工具链准备，是写 Daml、构建包和跑测试之前的操作入口。",
+      "category": "daml",
+      "tags": [
+        "setup",
+        "sdk",
+        "local-dev"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-dev-environment.md",
+      "localPath": "docs/education/canton-dev/zh/dev-environment.md"
+    },
+    {
+      "slug": "language-fundamentals",
+      "locale": "en",
+      "title": "Language Fundamentals",
+      "sourceTitle": "Language Fundamentals",
+      "summary": "Explains the core Daml language concepts required to model agreements and reason about contract-led workflows.",
+      "category": "daml",
+      "tags": [
+        "daml",
+        "language"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-language-fundamentals.md",
+      "localPath": "docs/education/canton-dev/en/language-fundamentals.md"
+    },
+    {
+      "slug": "language-fundamentals",
+      "locale": "zh",
+      "title": "Language Fundamentals（中文学习笔记）",
+      "sourceTitle": "Language Fundamentals",
+      "summary": "解释 Daml 语言基础，重点是如何用类型和合约表达多方协议，而不只是把它当作另一种智能合约语法。",
+      "category": "daml",
+      "tags": [
+        "daml",
+        "language"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-language-fundamentals.md",
+      "localPath": "docs/education/canton-dev/zh/language-fundamentals.md"
+    },
+    {
+      "slug": "contract-templates",
+      "locale": "en",
+      "title": "Contract Templates",
+      "sourceTitle": "Contract Templates",
+      "summary": "Describes contract templates, signatories, observers, and data fields as the building blocks of Daml applications.",
+      "category": "daml",
+      "tags": [
+        "templates",
+        "contracts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-contract-templates.md",
+      "localPath": "docs/education/canton-dev/en/contract-templates.md"
+    },
+    {
+      "slug": "contract-templates",
+      "locale": "zh",
+      "title": "Contract Templates（中文学习笔记）",
+      "sourceTitle": "Contract Templates",
+      "summary": "说明 Template、Signatory、Observer 和字段如何组成 Daml 合约，是理解 Canton 应用状态模型的核心页面。",
+      "category": "daml",
+      "tags": [
+        "templates",
+        "contracts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-contract-templates.md",
+      "localPath": "docs/education/canton-dev/zh/contract-templates.md"
+    },
+    {
+      "slug": "choices",
+      "locale": "en",
+      "title": "Choices",
+      "sourceTitle": "Choices",
+      "summary": "Explains choices as authorized contract actions and how they encode who may exercise workflow transitions.",
+      "category": "daml",
+      "tags": [
+        "choices",
+        "authorization"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-choices.md",
+      "localPath": "docs/education/canton-dev/en/choices.md"
+    },
+    {
+      "slug": "choices",
+      "locale": "zh",
+      "title": "Choices（中文学习笔记）",
+      "sourceTitle": "Choices",
+      "summary": "解释 Choice 如何表达“谁有权执行什么动作”，是理解 Daml 授权模型和业务流程迁移的关键。",
+      "category": "daml",
+      "tags": [
+        "choices",
+        "authorization"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-choices.md",
+      "localPath": "docs/education/canton-dev/zh/choices.md"
+    },
+    {
+      "slug": "testing-daml-contracts",
+      "locale": "en",
+      "title": "Testing Daml Contracts",
+      "sourceTitle": "Testing Daml Contracts",
+      "summary": "Introduces testing practices for Daml contracts so developers can verify authorization, visibility, and workflow behavior early.",
+      "category": "daml",
+      "tags": [
+        "testing",
+        "daml"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-testing.md",
+      "localPath": "docs/education/canton-dev/en/testing-daml-contracts.md"
+    },
+    {
+      "slug": "testing-daml-contracts",
+      "locale": "zh",
+      "title": "Testing Daml Contracts（中文学习笔记）",
+      "sourceTitle": "Testing Daml Contracts",
+      "summary": "介绍 Daml 合约测试方式，帮助开发者尽早验证授权、可见性和业务流程行为，降低上线后调试成本。",
+      "category": "daml",
+      "tags": [
+        "testing",
+        "daml"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-testing.md",
+      "localPath": "docs/education/canton-dev/zh/testing-daml-contracts.md"
+    },
+    {
+      "slug": "app-architecture",
+      "locale": "en",
+      "title": "Application Architecture",
+      "sourceTitle": "Application Architecture",
+      "summary": "Outlines how Canton applications are structured across smart contracts, backends, frontends, APIs, and network integration.",
+      "category": "application",
+      "tags": [
+        "architecture",
+        "backend",
+        "frontend"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-app-architecture.md",
+      "localPath": "docs/education/canton-dev/en/app-architecture.md"
+    },
+    {
+      "slug": "app-architecture",
+      "locale": "zh",
+      "title": "Application Architecture（中文学习笔记）",
+      "sourceTitle": "Application Architecture",
+      "summary": "梳理 Canton 应用的整体架构：合约、后端、前端、API 与网络集成如何分层协作。",
+      "category": "application",
+      "tags": [
+        "architecture",
+        "backend",
+        "frontend"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-app-architecture.md",
+      "localPath": "docs/education/canton-dev/zh/app-architecture.md"
+    },
+    {
+      "slug": "backend-development",
+      "locale": "en",
+      "title": "Backend Development",
+      "sourceTitle": "Backend Development",
+      "summary": "Focuses on backend services that submit commands, read ledger state, and coordinate application workflows around Canton.",
+      "category": "application",
+      "tags": [
+        "backend",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-backend-dev.md",
+      "localPath": "docs/education/canton-dev/en/backend-development.md"
+    },
+    {
+      "slug": "backend-development",
+      "locale": "zh",
+      "title": "Backend Development（中文学习笔记）",
+      "sourceTitle": "Backend Development",
+      "summary": "聚焦后端服务如何提交命令、读取账本状态，并围绕 Canton 协调应用工作流。",
+      "category": "application",
+      "tags": [
+        "backend",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-backend-dev.md",
+      "localPath": "docs/education/canton-dev/zh/backend-development.md"
+    },
+    {
+      "slug": "frontend-development",
+      "locale": "en",
+      "title": "Frontend Development",
+      "sourceTitle": "Frontend Development",
+      "summary": "Explains frontend responsibilities when presenting Canton application state and actions to end users.",
+      "category": "application",
+      "tags": [
+        "frontend",
+        "user-experience"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-frontend-dev.md",
+      "localPath": "docs/education/canton-dev/en/frontend-development.md"
+    },
+    {
+      "slug": "frontend-development",
+      "locale": "zh",
+      "title": "Frontend Development（中文学习笔记）",
+      "sourceTitle": "Frontend Development",
+      "summary": "说明前端在 Canton 应用中的职责：如何展示合约状态、用户可执行动作和多方流程进度。",
+      "category": "application",
+      "tags": [
+        "frontend",
+        "user-experience"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-frontend-dev.md",
+      "localPath": "docs/education/canton-dev/zh/frontend-development.md"
+    },
+    {
+      "slug": "json-ledger-api",
+      "locale": "en",
+      "title": "Canton and the JSON Ledger API",
+      "sourceTitle": "Canton and the JSON Ledger API",
+      "summary": "Guides developers through using the JSON Ledger API to interact with Canton applications from familiar web stacks.",
+      "category": "api",
+      "tags": [
+        "json-api",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-json-api-tutorial.md",
+      "localPath": "docs/education/canton-dev/en/json-ledger-api.md"
+    },
+    {
+      "slug": "json-ledger-api",
+      "locale": "zh",
+      "title": "Canton and the JSON Ledger API（中文学习笔记）",
+      "sourceTitle": "Canton and the JSON Ledger API",
+      "summary": "指导开发者通过 JSON Ledger API 从常见 Web 技术栈接入 Canton 应用，是前后端集成的实用入口。",
+      "category": "api",
+      "tags": [
+        "json-api",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-json-api-tutorial.md",
+      "localPath": "docs/education/canton-dev/zh/json-ledger-api.md"
+    },
+    {
+      "slug": "query-with-pqs",
+      "locale": "en",
+      "title": "Query Contracts and Transactions with PQS",
+      "sourceTitle": "Query Contracts and Transactions with PQS",
+      "summary": "Covers querying contracts and transactions with PQS, useful for read models, reporting, and application state views.",
+      "category": "api",
+      "tags": [
+        "pqs",
+        "query",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-query-with-pqs.md",
+      "localPath": "docs/education/canton-dev/en/query-with-pqs.md"
+    },
+    {
+      "slug": "query-with-pqs",
+      "locale": "zh",
+      "title": "Query Contracts and Transactions with PQS（中文学习笔记）",
+      "sourceTitle": "Query Contracts and Transactions with PQS",
+      "summary": "介绍用 PQS 查询合约和交易，适合构建 read model、报表和应用状态视图。",
+      "category": "api",
+      "tags": [
+        "pqs",
+        "query",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-query-with-pqs.md",
+      "localPath": "docs/education/canton-dev/zh/query-with-pqs.md"
+    },
+    {
+      "slug": "sdks-and-apis",
+      "locale": "en",
+      "title": "SDKs and APIs",
+      "sourceTitle": "SDKs and APIs",
+      "summary": "Surveys Canton SDKs and APIs so teams can choose the right integration layer for their application architecture.",
+      "category": "api",
+      "tags": [
+        "sdk",
+        "api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-sdks-apis.md",
+      "localPath": "docs/education/canton-dev/en/sdks-and-apis.md"
+    },
+    {
+      "slug": "sdks-and-apis",
+      "locale": "zh",
+      "title": "SDKs and APIs（中文学习笔记）",
+      "sourceTitle": "SDKs and APIs",
+      "summary": "概览 Canton SDK 与 API，帮助团队按应用架构选择合适的集成层。",
+      "category": "api",
+      "tags": [
+        "sdk",
+        "api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-sdks-apis.md",
+      "localPath": "docs/education/canton-dev/zh/sdks-and-apis.md"
+    },
+    {
+      "slug": "privacy-model",
+      "locale": "en",
+      "title": "Privacy Model for App Developers",
+      "sourceTitle": "Privacy Model for App Developers",
+      "summary": "Explains the privacy model for app developers, including how Canton limits transaction visibility to authorized stakeholders.",
+      "category": "deep-dive",
+      "tags": [
+        "privacy",
+        "visibility"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/privacy-model.md",
+      "localPath": "docs/education/canton-dev/en/privacy-model.md"
+    },
+    {
+      "slug": "privacy-model",
+      "locale": "zh",
+      "title": "Privacy Model for App Developers（中文学习笔记）",
+      "sourceTitle": "Privacy Model for App Developers",
+      "summary": "从应用开发者视角解释 Canton 隐私模型：交易细节如何只对被授权的相关方可见。",
+      "category": "deep-dive",
+      "tags": [
+        "privacy",
+        "visibility"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/privacy-model.md",
+      "localPath": "docs/education/canton-dev/zh/privacy-model.md"
+    },
+    {
+      "slug": "authorization",
+      "locale": "en",
+      "title": "Authorization",
+      "sourceTitle": "Authorization",
+      "summary": "Details authorization concepts and how Daml and Canton ensure that only the right parties can approve or exercise actions.",
+      "category": "deep-dive",
+      "tags": [
+        "authorization",
+        "parties"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/authorization.md",
+      "localPath": "docs/education/canton-dev/en/authorization.md"
+    },
+    {
+      "slug": "authorization",
+      "locale": "zh",
+      "title": "Authorization（中文学习笔记）",
+      "sourceTitle": "Authorization",
+      "summary": "深入说明授权概念，以及 Daml/Canton 如何保证只有正确的 Party 能批准或执行特定动作。",
+      "category": "deep-dive",
+      "tags": [
+        "authorization",
+        "parties"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/authorization.md",
+      "localPath": "docs/education/canton-dev/zh/authorization.md"
+    },
+    {
+      "slug": "token-standard",
+      "locale": "en",
+      "title": "Token Standard",
+      "sourceTitle": "Token Standard",
+      "summary": "Introduces the Canton token standard and the contract/interface patterns used for tokenized assets.",
+      "category": "deep-dive",
+      "tags": [
+        "token-standard",
+        "cip-0056"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/token-standard.md",
+      "localPath": "docs/education/canton-dev/en/token-standard.md"
+    },
+    {
+      "slug": "token-standard",
+      "locale": "zh",
+      "title": "Token Standard（中文学习笔记）",
+      "sourceTitle": "Token Standard",
+      "summary": "介绍 Canton Token Standard 及其合约/接口模式，是理解 CIP-0056 和代币化资产实现的入口。",
+      "category": "deep-dive",
+      "tags": [
+        "token-standard",
+        "cip-0056"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/token-standard.md",
+      "localPath": "docs/education/canton-dev/zh/token-standard.md"
+    },
+    {
+      "slug": "app-rewards",
+      "locale": "en",
+      "title": "App Rewards",
+      "sourceTitle": "App Rewards",
+      "summary": "Summarizes app rewards and why application activity, traffic, and reward mechanics matter for Canton builders.",
+      "category": "economics",
+      "tags": [
+        "app-rewards",
+        "traffic",
+        "canton-coin"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/app-rewards.md",
+      "localPath": "docs/education/canton-dev/en/app-rewards.md"
+    },
+    {
+      "slug": "app-rewards",
+      "locale": "zh",
+      "title": "App Rewards（中文学习笔记）",
+      "sourceTitle": "App Rewards",
+      "summary": "概述应用奖励机制，以及应用活跃度、Traffic 与奖励规则为什么会影响 Canton 开发者的产品设计。",
+      "category": "economics",
+      "tags": [
+        "app-rewards",
+        "traffic",
+        "canton-coin"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/app-rewards.md",
+      "localPath": "docs/education/canton-dev/zh/app-rewards.md"
+    },
+    {
+      "slug": "observability",
+      "locale": "en",
+      "title": "Observability",
+      "sourceTitle": "Observability",
+      "summary": "Introduces observability concerns for Canton applications, including what teams should monitor once apps move beyond local development.",
+      "category": "operations",
+      "tags": [
+        "observability",
+        "operations"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-observability.md",
+      "localPath": "docs/education/canton-dev/en/observability.md"
+    },
+    {
+      "slug": "observability",
+      "locale": "zh",
+      "title": "Observability（中文学习笔记）",
+      "sourceTitle": "Observability",
+      "summary": "介绍 Canton 应用的可观测性关注点，帮助团队从本地开发过渡到可运行、可排障的服务。",
+      "category": "operations",
+      "tags": [
+        "observability",
+        "operations"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-observability.md",
+      "localPath": "docs/education/canton-dev/zh/observability.md"
+    },
+    {
+      "slug": "localnet-development",
+      "locale": "en",
+      "title": "LocalNet Development",
+      "sourceTitle": "LocalNet Development",
+      "summary": "Covers LocalNet development as a stepping stone between local coding and deployment into shared Canton environments.",
+      "category": "deployment",
+      "tags": [
+        "localnet",
+        "deployment"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-localnet-development.md",
+      "localPath": "docs/education/canton-dev/en/localnet-development.md"
+    },
+    {
+      "slug": "localnet-development",
+      "locale": "zh",
+      "title": "LocalNet Development（中文学习笔记）",
+      "sourceTitle": "LocalNet Development",
+      "summary": "说明 LocalNet 开发如何连接本地编码和共享网络部署，是上链前验证应用行为的重要阶段。",
+      "category": "deployment",
+      "tags": [
+        "localnet",
+        "deployment"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-localnet-development.md",
+      "localPath": "docs/education/canton-dev/zh/localnet-development.md"
+    },
+    {
+      "slug": "deployment-progression",
+      "locale": "en",
+      "title": "Deployment Progression",
+      "sourceTitle": "Deployment Progression",
+      "summary": "Explains how teams should progress deployments across environments and reduce risk before production use.",
+      "category": "deployment",
+      "tags": [
+        "deployment",
+        "environments"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-deployment-progression.md",
+      "localPath": "docs/education/canton-dev/en/deployment-progression.md"
+    },
+    {
+      "slug": "deployment-progression",
+      "locale": "zh",
+      "title": "Deployment Progression（中文学习笔记）",
+      "sourceTitle": "Deployment Progression",
+      "summary": "解释团队如何逐步推进不同环境的部署，在生产使用前降低集成和运维风险。",
+      "category": "deployment",
+      "tags": [
+        "deployment",
+        "environments"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-deployment-progression.md",
+      "localPath": "docs/education/canton-dev/zh/deployment-progression.md"
+    },
+    {
+      "slug": "smart-contract-upgrades",
+      "locale": "en",
+      "title": "Smart Contract Upgrades Overview",
+      "sourceTitle": "Smart Contract Upgrades Overview",
+      "summary": "Introduces smart contract upgrades and the key constraints Canton developers must plan for before changing deployed packages.",
+      "category": "upgrades",
+      "tags": [
+        "upgrades",
+        "scu"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m6-overview.md",
+      "localPath": "docs/education/canton-dev/en/smart-contract-upgrades.md"
+    },
+    {
+      "slug": "smart-contract-upgrades",
+      "locale": "zh",
+      "title": "Smart Contract Upgrades Overview（中文学习笔记）",
+      "sourceTitle": "Smart Contract Upgrades Overview",
+      "summary": "介绍智能合约升级的整体思路，以及开发者在修改已部署包之前必须考虑的约束。",
+      "category": "upgrades",
+      "tags": [
+        "upgrades",
+        "scu"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m6-overview.md",
+      "localPath": "docs/education/canton-dev/zh/smart-contract-upgrades.md"
+    },
+    {
+      "slug": "common-issues-faq",
+      "locale": "en",
+      "title": "Common Issues FAQ",
+      "sourceTitle": "Common Issues FAQ",
+      "summary": "Collects common application-development issues and troubleshooting pointers for developers working through the Canton stack.",
+      "category": "reference",
+      "tags": [
+        "faq",
+        "troubleshooting"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/faq.md",
+      "localPath": "docs/education/canton-dev/en/common-issues-faq.md"
+    },
+    {
+      "slug": "common-issues-faq",
+      "locale": "zh",
+      "title": "Common Issues FAQ（中文学习笔记）",
+      "sourceTitle": "Common Issues FAQ",
+      "summary": "汇总应用开发中的常见问题和排障入口，适合在学习或集成卡住时快速定位方向。",
+      "category": "reference",
+      "tags": [
+        "faq",
+        "troubleshooting"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/faq.md",
+      "localPath": "docs/education/canton-dev/zh/common-issues-faq.md"
+    }
+  ]
+}

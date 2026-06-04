@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "chart:build": "node scripts/build-sats-chart.mjs",
+    "docs:sync-canton": "node scripts/sync-canton-docs.mjs",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "npm run chart:build && astro build",
