@@ -1,0 +1,49 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { CantonDocPageEntry } from '@/lib/cantonDocPage';
+import { getCantonDoc, getCantonDocs } from '@/lib/cantonDocs';
+import type { Locale } from '@/i18n/translations';
+import { t } from '@/i18n/translations';
+
+interface Props {
+  locale: Locale;
+  entry: CantonDocPageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const tr = t(locale);
+const base = import.meta.env.BASE_URL;
+const docsIndexHref = locale === 'zh' ? `${base}zh/docs/canton` : `${base}docs/canton`;
+const altLocale: Locale = locale === 'zh' ? 'en' : 'zh';
+const altDoc = getCantonDoc(altLocale, entry.data.slug);
+const altHref =
+  altLocale === 'zh' ? `${base}zh/docs/canton/${entry.data.slug}` : `${base}docs/canton/${entry.data.slug}`;
+const indexDoc = getCantonDocs(locale).find((item) => item.slug === entry.data.slug);
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  locale={locale}
+  title={entry.data.title}
+  description={indexDoc?.summary ?? tr.docs.detailIntro}
+  navCurrent="docs"
+>
+  <p class="breadcrumb">
+    <a href={docsIndexHref}>{tr.docs.title}</a> / {entry.data.category}
+  </p>
+
+  <section class="section callout doc-meta">
+    <p class="inline-muted">{tr.docs.detailIntro}</p>
+    {altDoc && (
+      <p>
+        <a class="btn" href={altHref}>{altLocale === 'zh' ? tr.docs.switchToZh : tr.docs.switchToEn}</a>
+      </p>
+    )}
+    <p class="tag-row">{entry.data.tags.map((tag) => <span class="tag">{tag}</span>)}</p>
+  </section>
+
+  <article class="doc-prose">
+    <Content />
+  </article>
+</BaseLayout>

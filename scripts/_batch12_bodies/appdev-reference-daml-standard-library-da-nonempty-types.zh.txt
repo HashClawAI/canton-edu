@@ -1,0 +1,61 @@
+> Daml 模块 DA.NonEmpty.Types 参考文档。
+
+<span id="module-da-nonempty-types-38464" />
+
+# DA.NonEmpty.Types
+
+本模块包含非空列表类型，以便赋予稳定的 package id。
+
+该类型由 DA.NonEmpty 再导出，一般无需直接 import 本模块。
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 数据类型
+
+<span id="type-da-nonempty-types-nonempty-16010" />
+
+### `data NonEmpty a`
+
+`NonEmpty` 为非空列表类型，即至少含一个元素的列表。若 `x` 为非空列表，首元素为 `x.hd`，其余为 `x.tl`。
+
+构造子：
+
+<span id="constr-da-nonempty-types-nonempty-68983" />
+
+* `NonEmpty`
+  \| Field | Type | Description |
+  \| :---- | :--- | :---------- |
+  \| hd | a |  |
+  \| tl | \[a] |  |
+
+实例：
+
+* `instance Foldable NonEmpty`
+* `instance Action NonEmpty`
+* `instance Applicative NonEmpty`
+* `instance Semigroup (NonEmpty a)`
+* `instance GetField hd (NonEmpty a) a`
+* `instance GetField tl (NonEmpty a) [a]`
+* `instance SetField hd (NonEmpty a) a`
+* `instance SetField tl (NonEmpty a) [a]`
+* `instance IsParties (NonEmpty Party)`
+* `instance Traversable NonEmpty`
+* `instance Functor NonEmpty`
+* `instance Eq a => Eq (NonEmpty a)`
+* `instance Ord a => Ord (NonEmpty a)`
+* `instance Show a => Show (NonEmpty a)`

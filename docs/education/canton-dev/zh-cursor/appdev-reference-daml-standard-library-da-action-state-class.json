@@ -1,0 +1,5 @@
+{
+  "zhTitle": "DA.Action.State.Class",
+  "summary": "ActionState 类型类：get、put、modify 及状态变量法则。",
+  "body": "> Daml 标准库模块 DA.Action.State.Class 参考文档。\n\n<span id=\"module-da-action-state-class-12696\" />\n\n# DA.Action.State.Class\n\nDA.Action.State.Class\n\n## 模块快照\n\n<CardGroup cols={2}>\n  <Card title=\"Lifecycle\">\n      Stable.\n  </Card>\n\n  <Card title=\"Notices\">\n    状态：`active`\n    引入于：`3.4.9`\n    删除于：`-`\n    警告：`0`\n    弃用：`0`\n    已弃用自：`-`\n  </Card>\n</CardGroup>\n\n## 类型类\n\n<span id=\"class-da-action-state-class-actionstate-80467\" />\n\n### `class ActionState s m`\n\n动作`m`有一个`s`类型的状态变量。\n\n规则：\n\n* `get *> ma  =  ma`\n* `ma <* get  =  ma`\n* `put a >>= get   =  put a $> a`\n* `put a *> put b  =  put b`\n* `(,) <$> get <*> get  =  get <&> \\a -> (a, a)`\n\n非正式地，这些规则意味着它的行为就像普通的可赋值变量：\n如果你把一个值放在那里，它并不会通过查看它来神奇地改变值\n如果您阅读它并分配一个值，那么这始终是您将获得的值，但是\n从不读取该值没有任何影响，等等。\n\n方法：\n\n* `get : m s`\n  获取状态变量的当前值。\n* `put : s -> m ()`\n  设置状态变量的值。\n* `modify : (s -> s) -> m ()`\n  使用给定函数修改状态变量。\n* `modify : Action m => (s -> s) -> m ()`\n\n实例：\n\n* `instance ActionState s (State s)`"
+}

@@ -1,0 +1,5 @@
+{
+  "zhTitle": "最新动态",
+  "summary": "Canton Network 各组件发布说明入口、版本兼容性看板、升级指引与跟进渠道。",
+  "body": "> 各组件发布说明索引\n\n要了解各组件在每个版本中的变更，请参阅对应发布说明：\n\n* **Splice 与 Global Synchronizer** — [Splice 发布说明](/global-synchronizer/release-notes/splice)、[发布历史](/global-synchronizer/release-notes/release-history)、[每周补丁发布](/global-synchronizer/release-notes/weekly-patch-releases)\n* **Wallet SDK** — [Wallet SDK 发布说明](/integrations/release-notes/wallet-sdk)\n* **Canton 与 Daml SDK** — [Canton 发布说明](/global-synchronizer/release-notes/canton)\n* **CIPs** — [Canton Improvement Proposals](https://github.com/global-synchronizer-foundation/cips)\n\n## 版本兼容性\n\n<Card title=\"版本兼容性看板\" icon=\"table\" href=\"/shared/version-compatibility-dashboard\">\n  Canton Network 各组件之间的兼容版本对照。\n</Card>\n\n## 从旧版本升级\n\n跨 SDK 系列迁移应用时，请参阅[从旧版本升级](/appdev/get-started/upgrading-from-previous-versions)。\n\n## 保持更新\n\n* **GitHub releases** — [github.com/digital-asset](https://github.com/digital-asset)\n* **Slack** — `#gsf-global-synchronizer-appdev`\n* **论坛** — [forum.canton.network](https://forum.canton.network/)"
+}

@@ -1,0 +1,50 @@
+---
+title: "ExercisedEvent"
+slug: "reference-java-com-daml-ledger-javaapi-data-exercisedevent"
+locale: "zh"
+category: "reference"
+source_url: "https://docs.canton.network/reference/java/com-daml-ledger-javaapi-data/exercisedevent.md"
+source_title: "ExercisedEvent"
+tags:
+  - reference
+  - java
+  - com-daml-ledger-javaapi-data
+  - exercisedevent
+---
+
+# ExercisedEvent
+
+> 从本地 Javadoc 快照生成 ExercedEvent 的对象参考页面。
+
+## 锻炼事件 - 稳定
+
+上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html)
+
+**签名**
+
+```text theme={"theme":{"light":"github-light","dark":"github-dark"}}
+public final class ExercisedEvent extends Object implements Event
+```
+
+**会员**|文档 |会员|介绍 |已弃用 |已删除 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ---------- | -------- |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#%3Cinit%3E%28java.util.List,java.lang.Long,java.lang.Integer,com.daml.ledger.javaapi.data.Identifier,jav a.lang.String,java.util.Optional,java.lang.String,java.lang.String,com.daml.ledger.javaapi.data.Value,java.util.List,boolean,java.lang.Integer,com.daml.ledger.javaapi.data.Value,java.util.List,java.lang.Boolean%29) | `ExercisedEvent(List<String>, Long, Integer, Identifier, String, Optional<Identifier>, String, String, Value, List<String>, boolean, Integer, Value, List<Identifier>, Boolean)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#equals%28java.lang.Object%29) | `equals(Object)` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#fromProto%28com.daml.ledger.api.v2.EventOuterClass.ExercisedEvent%29) | `fromProto(EventOuterClass.ExercisedEvent)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getActingParties%28%29) | `getActingParties()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getChoice%28%29) | `getChoice()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getChoiceArgument%28%29) | `getChoiceArgument()` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getContractId%28%29) | `getContractId()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getExerciseResult%28%29) | `getExerciseResult()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getImplementedInterfaces%28%29) | `getImplementedInterfaces()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getInterfaceId%28%29) | `getInterfaceId()` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getLastDescendantNodeId%28%29) | `getLastDescendantNodeId()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getNodeId%28%29) | `getNodeId()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getOffset%28%29) | `getOffset()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getPackageName%28%29) | `getPackageName()` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getTemplateId%28%29) | `getTemplateId()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#getWitnessParties%28%29) | `getWitnessParties()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#hashCode%28%29) | `hashCode()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#isAcsDelta%28%29) | `isAcsDelta()` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#isConsuming%28%29) | `isConsuming()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#toProto%28%29) | `toProto()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/ExercisedEvent.html#toString%28%29) | `toString()` | `3.4.8` | - | - |
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

@@ -1,0 +1,216 @@
+> Daml 模块 DA.Monoid 参考文档。
+
+<span id="module-da-monoid-95505" />
+
+# DA.Monoid
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 数据类型
+
+<span id="type-da-monoid-types-all-38142" />
+
+### `data All`
+
+在合取（`&&`）下的布尔 Monoid。
+
+构造子：
+
+<span id="constr-da-monoid-types-all-18981" />
+
+* `All`
+  \| Field | Type | Description |
+  \| :---- | :--- | :---------- |
+  \| getAll | Bool |  |
+
+实例：
+
+* `instance Monoid All`
+* `instance Semigroup All`
+* `instance GetField getAll All Bool`
+* `instance SetField getAll All Bool`
+* `instance Eq All`
+* `instance Ord All`
+* `instance Show All`
+
+<span id="type-da-monoid-types-any-3989" />
+
+### `data Any`
+
+在析取（`||`）下的布尔 Monoid。
+
+构造子：
+
+<span id="constr-da-monoid-types-any-54474" />
+
+* `Any`
+  \| Field | Type | Description |
+  \| :---- | :--- | :---------- |
+  \| getAny | Bool |  |
+
+实例：
+
+* `instance Monoid Any`
+* `instance Semigroup Any`
+* `instance GetField getAny Any Bool`
+* `instance SetField getAny Any Bool`
+* `instance Eq Any`
+* `instance Ord Any`
+* `instance Show Any`
+
+<span id="type-da-monoid-types-endo-95420" />
+
+### `data Endo a`
+
+在复合下的自同态 Monoid。
+
+构造子：
+
+<span id="constr-da-monoid-types-endo-7873" />
+
+* `Endo`
+  \| Field | Type | Description |
+  \| :---- | :--- | :---------- |
+  \| appEndo | a -> a |  |
+
+实例：
+
+* `instance Monoid (Endo a)`
+* `instance Semigroup (Endo a)`
+* `instance GetField appEndo (Endo a) (a -> a)`
+* `instance SetField appEndo (Endo a) (a -> a)`
+
+<span id="type-da-monoid-types-product-66754" />
+
+### `data Product a`
+
+在（`*`）下的 Monoid。
+
+```
+> Product 2 <> Product 3
+Product 6
+```
+
+构造子：
+
+<span id="constr-da-monoid-types-product-4241" />
+
+* `Product a`
+
+实例：
+
+* `instance Multiplicative a => Monoid (Product a)`
+* `instance Multiplicative a => Semigroup (Product a)`
+* `instance Eq a => Eq (Product a)`
+* `instance Ord a => Ord (Product a)`
+* `instance Additive a => Additive (Product a)`
+* `instance Multiplicative a => Multiplicative (Product a)`
+* `instance Show a => Show (Product a)`
+
+<span id="type-da-monoid-types-sum-76394" />
+
+### `data Sum a`
+
+在（`+`）下的 Monoid。
+
+```
+> Sum 1 <> Sum 2
+Sum 3
+```
+
+构造子：
+
+<span id="constr-da-monoid-types-sum-82289" />
+
+* `Sum a`
+
+实例：
+
+* `instance Additive a => Monoid (Sum a)`
+* `instance Additive a => Semigroup (Sum a)`
+* `instance Eq a => Eq (Sum a)`
+* `instance Ord a => Ord (Sum a)`
+* `instance Additive a => Additive (Sum a)`
+* `instance Multiplicative a => Multiplicative (Sum a)`
+* `instance Show a => Show (Sum a)`
+
+## 孤儿类型类实例
+
+* `instance Eq All`
+
+* `instance Ord All`
+
+* `instance Show All`
+
+* `instance Eq Any`
+
+* `instance Ord Any`
+
+* `instance Show Any`
+
+* `instance Eq a => Eq (Sum a)`
+
+* `instance Ord a => Ord (Sum a)`
+
+* `instance Show a => Show (Sum a)`
+
+* `instance Additive a => Additive (Sum a)`
+
+* `instance Multiplicative a => Multiplicative (Sum a)`
+
+* `instance Eq a => Eq (Product a)`
+
+* `instance Ord a => Ord (Product a)`
+
+* `instance Show a => Show (Product a)`
+
+* `instance Additive a => Additive (Product a)`
+
+* `instance Multiplicative a => Multiplicative (Product a)`
+
+* `instance Semigroup All`
+
+* `instance Monoid All`
+
+* `instance Semigroup Any`
+
+* `instance Monoid Any`
+
+* `instance Semigroup (Endo a)`
+
+* `instance Monoid (Endo a)`
+
+* `instance Additive a => Semigroup (Sum a)`
+
+* `instance Additive a => Monoid (Sum a)`
+
+* `instance Multiplicative a => Semigroup (Product a)`
+
+* `instance Multiplicative a => Monoid (Product a)`
+
+* `instance GetField getAll All Bool`
+
+* `instance SetField getAll All Bool`
+
+* `instance GetField getAny Any Bool`
+
+* `instance SetField getAny Any Bool`
+
+* `instance GetField appEndo (Endo a) (a -> a)`
+
+* `instance SetField appEndo (Endo a) (a -> a)`

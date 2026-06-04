@@ -1,0 +1,67 @@
+---
+title: "Canton Network 全局同步器"
+slug: "global-synchronizer-understand-overview"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/understand/overview.md"
+source_title: "Global Synchronizer for the Canton Network"
+tags:
+  - global-synchronizer
+  - understand
+  - overview
+---
+
+# Canton Network 全局同步器
+
+> 全局同步器及其在 Canton Network 中的角色概览。
+
+## Canton Network
+
+[Canton Network](https://www.canton.network) 是第一个支持隐私的可互操作区块链网络，专为受监管的现实世界资产而设计。Canton Network络中的区块链应用程序可以使用全局同步器来实现跨主权区块链的原子交易，而无需牺牲隐私或控制。
+
+* [全局同步器](https://www.canton.network/global-synchronizer) 是 Canton 网络的去中心化且透明管理的互操作性服务。
+* Canton Network 的原生代币 Canton Coin 是作为 全局同步器 的一部分推出的实用代币。旨在克服其他网络的企业采用障碍，并与受监管的金融企业使用的生态系统兼容。
+
+如果您需要有关任何特定机制（例如费用计算、活动记录结构或铸币轮次）的更多详细信息，以下白皮书提供了进一步的技术规范：[Canton Network 白皮书](https://www.digitalasset.com/hubfs/Canton/Canton%20Network%20-%20White%20Paper.pdf)、[Canton Coin 白皮书](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20(whitepapers%2c%20etc...)/Canton%20Coin_%20A%20Canton-Network-native%20%20payment%20application.pdf)。
+
+## 全局同步器
+
+全局同步器 是一项去中心化运营的服务，使用 2/3 多数拜占庭容错 (`BFT`) 共识协议进行消息排序和确认，并针对治理变更使用 BFT 多数投票。
+
+其基础设施由称为超级验证者的独立组织运营，这些组织运行去中心化基础设施的组件，并通过链上治理应用程序协调活动。其开源代码维护在[Splice](https://github.com/canton-network/splice)。
+
+[全局同步器 基金会（“GSF”）](https://sync.global) 是与 Linux 基金会合作创建的，旨在协调 全局同步器 的治理并领导 全局同步器 生态系统的发展。 GSF 提供超级验证者治理和运营的透明度。 GSF 还运营一个超级验证节点，并代表其成员参与治理投票。
+
+## 超级验证者
+
+超级验证者构成了 全局同步器 去中心化互操作性和同步基础设施的支柱。它们通过以下方式确保全局同步器的完整性、安全性和运行可靠性：
+
+* 运行全局同步器的核心基础设施
+* 对网络上的交易进行排序
+* 验证Canton Coin交易
+* 参与网络治理和决策
+
+## 验证者
+
+验证者在更广泛的 Canton 网络中工作，这是一个“网络的网络”，其中每个节点仅存储其所需的数据，并通过同步器与其他验证者交互。验证者通常连接到一个或多个同步器（可能作为集中式或分散式服务运行）来接收和确认加密消息。
+
+全局同步器 生态系统中验证者的主要角色是：
+
+* 验证交易
+* 记录活动
+* 促进用户和应用程序的网络连接
+* 协调升级和迁移
+
+## 代币经济学
+
+[Canton Coin](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20(whitepapers%2c%20etc...)/Canton%20Coin_%20A%20Canton-Network-native%20%20payment%20application.pdf) 激励应用程序构建者、用户和基础设施提供商使用全局同步器。Canton Coin应用采用销毁-铸造均衡机制，旨在围绕其为网络用户提供的内在价值稳定Canton Coin的兑换率：* 手续费销毁：用户发起Canton Coin转账或创建流量余额时，需要支付费用（以美元计价，通过燃烧Canton Coin支付）。这些代币不是向中央机构支付这些费用，而是被烧毁，即退出流通。
+* 铸造奖励：验证者（以及超级验证者和应用程序提供商）可以铸造新的 Canton Coins 以换取他们的“效用”贡献：
+  * 基础设施运营：运营同步器节点的超级验证者通过为同步服务做出贡献来获得铸币权。
+  * 应用程序服务：应用程序提供商可以在任何时候促进交易时获得奖励。
+  * 使用：当验证者使用网络时，该验证者将获得与其消耗的费用成比例的“铸币权”，网络将其视为该节点生成的活动的代理。
+  * 活跃度激励：验证者因正常运行时间和准备好服务交易流量而获得奖励。如果验证者没有通过直接活动使用其所有铸币配额，则一部分将被分配为“活跃度”奖励。
+*动态平衡：该系统的设计使得从长远来看，燃烧的代币总量（反映实际的网络效用）大致平衡铸造的代币（受预定的最大允许铸造曲线限制）。当使用量较高时，会燃烧更多代币，从而往往会提高代币的转化率；当使用量较低时，供应量会增加，直到恢复平衡。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

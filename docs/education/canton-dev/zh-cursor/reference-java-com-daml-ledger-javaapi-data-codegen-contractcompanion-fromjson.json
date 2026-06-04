@@ -1,0 +1,5 @@
+{
+  "zhTitle": "ContractCompanion.FromJson",
+  "summary": "Canton 参考文档：ContractCompanion.FromJson。",
+  "body": "> 从本地 Javadoc 快照生成 ContractCompanion.FromJson 的对象参考页面。\n\n## ContractCompanion.FromJson - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/ContractCompanion.FromJson.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\n@FunctionalInterface public static interface ContractCompanion.FromJson<T>\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/ContractCompanion.FromJson.html#decode%28java.lang.String%29) | `decode(String)` | `3.4.8` | - | - |"
+}

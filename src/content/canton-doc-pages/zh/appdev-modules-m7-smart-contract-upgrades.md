@@ -1,0 +1,134 @@
+---
+title: "生产环境中的智能合约升级"
+slug: "appdev-modules-m7-smart-contract-upgrades"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/modules/m7-smart-contract-upgrades.md"
+source_title: "Smart Contract Upgrades in Production"
+tags:
+  - appdev
+  - modules
+  - m7-smart-contract-upgrades
+---
+
+# 生产环境中的智能合约升级
+
+> 在生产环境 rollout 智能合约升级的运营考量
+
+在运行中的生产环境升级智能合约不同于开发期升级。合约在多方间共享，常跨组织边界；在你 validator 上有效的升级在对手方混跑版本时可能表现不同。本文涵盖生产 SCU rollout 的运营侧。
+
+## 升级之前
+
+### 升级前检查清单
+
+向生产上传新包版本前：
+
+* 确认升级在 CI 中通过 `dpm build` 与 `dpm test`
+* 确认新包与当前版本 SCU 兼容（本地或 CI 运行兼容性检查）
+* 对照[升级限制](/appdev/modules/m6-limitations)审查变更列表，确保无破坏性修改
+* 在 DevNet 或 TestNet 用接近真实数据量测试
+* 提前与持有受影响合约的对手方沟通（见下）
+* 开始前记录回滚程序
+
+### 与对手方沟通
+
+在 Canton Network 上，你的合约可能在其他 validator 上托管 signatory 或 observer。上传新包版本后，那些 validator 也需新包才能正确解释升级后合约。
+
+步骤：
+
+1. **提前通知对手方**，共享新 DAR 与变更摘要。
+2. **商定 rollout 窗口**。托管受影响合约 party 的所有 validator 应在约定时段内上传新包。
+3. **验证包可用性**。上传后确认所有相关 validator 识别新 package ID。
+
+若对手方尚未上传新包而你的应用在新版本下创建合约，其 validator 无法处理，该对手方交易会失败。
+
+## 升级期间
+
+### 上传包
+
+用 Admin API 或部署工具向 validator 上传新 DAR：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+dpm deploy --target <validator-url> <dar-file>
+```
+
+上传非破坏性。旧包版本仍可用，旧版本下创建的既有合约继续工作。无需停机。
+
+### 混合版本部署
+
+上传新包后系统进入**混合版本状态**：部分活跃合约在旧版创建，新合约将在新版创建。
+
+Canton 处理方式：
+
+* **既有合约** 仍关联创建时的包版本
+* **新合约** 在最新上传版本下创建
+* 对旧版合约 **行使 choice** 时，若模板 SCU 兼容，使用新包的 choice 体；合约载荷按新版类型定义解释
+* 新版 **新增的 Optional 字段** 在读取旧合约时使用默认值
+
+该混合状态持续到所有旧版合约被归档（消费或显式迁移）。无自动批量迁移。
+
+### 监控 rollout
+
+升级期间及之后关注：
+
+* **命令错误率** — 关注 `FAILED_PRECONDITION` 或 `INVALID_ARGUMENT` 激增，可能表示兼容性问题
+* **合约版本分布** — 用 PQS 查询仍有多少活跃合约在旧版 vs 新版
+* **对手方就绪** — 监控涉及对手方的交易是否因缺包失败
+
+检查合约版本分布的 PQS 查询：
+
+```sql theme={"theme":{"light":"github-light","dark":"github-dark"}}
+SELECT package_id, count(*) AS active_count
+FROM active('your-module:YourTemplate')
+GROUP BY package_id;
+```
+
+## 回滚程序
+
+SCU 无内置回滚。包上传后无法删除，「回滚」指管理局面而非撤销上传。
+
+若新版本出问题：
+
+1. **停止** 用有问题版本创建新合约。若工具支持，更新后端在创建时显式引用旧包版本。
+2. **调查并修复** 新包问题，再上传修正版（ effectively v3）。
+3. **与对手方沟通**，使其知晓问题并调整系统。
+
+旧包仍在，其下创建的合约可继续运行。风险主要在新建合约或行使仅新版才有的逻辑。
+
+### 回滚不够时
+
+若新版本引入测试中未发现的破坏性变更（兼容性检查应防此情况，但错误仍可能发生），可能需要：
+
+* 上传修正包版本
+* 用显式迁移 choice 迁移受影响合约
+* 与持有受影响合约的所有对手方对齐迁移
+
+这是最扰动场景，强调在 DevNet/TestNet 充分测试后再上生产。
+
+## 运营检查清单
+
+每次生产升级使用：
+
+* [ ] 新 DAR 通过 `dpm build` 与 `dpm test`
+* [ ] 与当前生产包的兼容性检查通过
+* [ ] 在 DevNet 或 TestNet 用真实数据测试升级
+* [ ] 已通知对手方并商定 rollout 窗口
+* [ ] 已记录回滚程序
+* [ ] 监控面板已更新以跟踪版本相关指标
+* [ ] DAR 已上传到生产 validator
+* [ ] 对手方确认已上传
+* [ ] 升级后 24–48 小时监控错误率
+* [ ] 已制定旧版合约迁移计划（如适用）
+
+## 延伸阅读
+
+* [Upgrade Limitations](/appdev/modules/m6-limitations) — 影响生产 rollout 的约束
+* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — 上线前测试策略
+* [Error Handling](/appdev/modules/m7-error-handling) — 混合版本部署中的错误处理
+* [Deployment Progression](/appdev/modules/m5-deployment-progression) — DevNet → TestNet → MainNet 路径
+* [Smart Contract Upgrading Reference](/appdev/deep-dives/smart-contract-upgrading-reference) — 包验证与运行时升级规则详情
+* [Values in the Ledger API](/appdev/deep-dives/values-in-the-ledger-api) — Ledger API 在命令提交与查询时如何验证与规范化值
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

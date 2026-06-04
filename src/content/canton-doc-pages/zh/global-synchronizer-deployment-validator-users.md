@@ -1,0 +1,70 @@
+---
+title: "验证者用户与钱包"
+slug: "global-synchronizer-deployment-validator-users"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/deployment/validator-users.md"
+source_title: "Validator Users and Wallets"
+tags:
+  - global-synchronizer
+  - deployment
+  - validator-users
+---
+
+# 验证者用户与钱包
+
+> 验证者节点上的用户、Party 与钱包管理。
+
+> 管理验证者节点上的用户、参与方和钱包
+
+Canton 对各方和用户进行了区分，详细记录在 [管理 Daml 各方](/appdev/deep-dives/manage-daml-parties) 中。本质上，一方是账本上的身份，而用户代表可以与一方或多方关联的账外实体。
+
+默认情况下，当用户首次登录钱包并按下“入驻本人”按钮时，验证者会分配一个新的参与方，并使用新的参与方 ID，并将该用户与新分配的参与方关联起来。作为验证者初始化的一部分，会自动为验证者操作员创建一个参与方。安装过程中提供的用户作为`validatorWalletUser`将与该方关联作为其主要方。
+
+除了上述方法之外，验证者 API 端点`/v0/admin/users`还支持两种用于创建用户和参与方关联的附加模式：
+
+1. 与现有方关联：将用户链接到现有方。
+2. 自定义派对提示：使用人类可读的派对提示分配新派对，并将用户与这个新创建的派对相关联。
+
+与现有方关联：可以配置用户，使其主要方是验证者运营商（或任何其他现有方）。实际上，当此类用户登录钱包 UI 时，他们将访问验证者运营商的钱包。请注意，这将是不同用户访问的同一个钱包，目前不支持每个用户更细粒度的权限。
+
+为了将用户与验证者操作者的一方关联起来，需要执行以下步骤：
+
+1. 不要通过 UI 加入用户，以避免验证者为用户分配新的参与方。
+2. 在您的 OIDC 提供商中创建一个新用户，并获取其用户 ID，例如`auth0\|123456789`。将其保存在 USER 环境变量中：`export USER=auth0|123456789`。
+3. 获取用于与验证者 API 交互的验证者操作员凭据。实现此目的的一种方法是，在以操作员身份登录时检查钱包的网络活动日志，并从那里复制用于 API 请求的承载令牌。将其保存在 TOKEN 环境变量中：`export TOKEN=<content of the token you obtained>`
+4. 获取验证人运营商的PartyID。当您以操作员身份登录时，您可以在钱包 UI 的右上角注销按钮旁边找到该信息。将其保存在 PARTY\_ID 环境变量中：`export PARTY_ID=<PartyID of the operator>`
+5. 执行以下命令，将用户与验证人运营方关联：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+curl -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+--data-raw "{\"party_id\":\"$PARTY_ID\",\"name\":\"$USER\"}" \
+https://<URL of your 钱包>/api/验证者/v0/admin/users
+```
+
+6. 用户现在可以登录钱包 UI，并将访问验证者运营商的钱包。请注意，不应向用户显示“自行加入”按钮，因为用户已通过上面的 API 调用加入。如果您确实看到该按钮，则意味着上述过程中出现了问题（请勿单击该按钮！）。
+
+自定义派对提示：此模式允许在为用户创建新派对时提供人类可读的派对提示。这用于创建具有描述性提示的各方（例如，treasury\_dept::...）而不是 OAuth ID。
+
+1. 按照模式`Association with Existing Party`的步骤1-3获取USER和TOKEN。
+2. 确定所需的完整 PartyID `(Hint::Namespace)`，例如 `alice::f3d917....`。使用现有方的命名空间（如验证者操作员的）作为命名空间部分。将完整 ID 保存在 `PARTY_ID` 环境变量中：`export PARTY_ID=alice::f3d917...`。
+3. 运行以下命令创建新方并关联用户：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+curl -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+--data-raw "{\"party_id\":\"$PARTY_ID\",\"name\":\"$USER\",\"createPartyIfMissing\":true}" \
+https://<URL of your 钱包>/api/验证者/v0/admin/users
+```
+
+## 禁用钱包和钱包自动化
+
+要禁用钱包 HTTP 服务器和钱包自动化，请使用 `enable钱包: false` 更新 `验证者-values.yaml` 文件```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# This will disable the 钱包 HTTP server and 钱包 automations when set to false
+enable钱包: true
+```
+
+由于您的钱包被禁用，您的验证者将没有资金来支付流量。因此，您应该删除验证者充值配置，以防止其自动尝试充值流量。更多详情请参见`helm_验证者_topup`。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

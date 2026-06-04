@@ -1,53 +1,58 @@
 # Canton Docs Knowledge Base Runbook
 
-This runbook describes how maintainers and agents refresh and use the Canton developer knowledge base.
+## Cursor batch translation (no API key)
 
-## Refresh Command
-
-Run from the repository root:
+1. Agent writes payloads to `docs/education/canton-dev/zh-cursor/{slug}.json`.
+2. Apply a batch:
 
 ```bash
+npm run docs:apply-cursor-zh -- --batch=1
+```
+
+Progress is tracked in `docs/education/canton-dev/translate-progress.json`. Add new batches under `batches` in that file, then repeat.
+
+## Full sync (English + optional Chinese)
+
+```bash
+# 1) Mirror all pages from docs.canton.network (English)
+npm run docs:sync-canton -- --skip-translate
+
+# 2) Translate to Chinese (requires API key, resumable cache)
+export OPENAI_API_KEY=sk-...
+npm run docs:translate-canton
+
+# Or sync + translate in one pass when the key is set:
 npm run docs:sync-canton
 ```
 
-The command fetches `https://docs.canton.network/llms.txt`, verifies the curated core pages still exist, and regenerates:
+### Flags
 
-- `docs/education/canton-dev/en/*.md`
-- `docs/education/canton-dev/zh/*.md`
-- `docs/education/canton-dev/manifest.json`
-- `docs/education/canton-dev/rag-index.jsonl`
-- `src/content/canton-docs/index.json`
+| Command | Meaning |
+|---------|---------|
+| `npm run docs:sync-canton -- --limit=20` | Process first N pages only (smoke test) |
+| `npm run docs:sync-canton -- --skip-translate` | English mirror only |
+| `npm run docs:translate-canton -- --limit=50` | Translate first N Chinese pages |
+| `npm run docs:translate-canton -- --slug=appdev-modules-m6-overview` | Translate one page |
 
-After a refresh, run:
+### Translation environment
+
+| Variable | Default |
+|----------|---------|
+| `OPENAI_API_KEY` or `DOCS_TRANSLATE_API_KEY` | required for Chinese |
+| `DOCS_TRANSLATE_API_BASE` | `https://api.openai.com/v1` |
+| `DOCS_TRANSLATE_MODEL` | `gpt-4o-mini` |
+| `CANTON_DOCS_FETCH_DELAY_MS` | `80` |
+
+Chinese translations are cached under `docs/education/canton-dev/.translate-cache/`.
+
+## Build
 
 ```bash
 npm run build
 ```
 
-## Source Policy
+## Policy
 
-- Official documentation source: https://docs.canton.network/
-- LLM-friendly source index: https://docs.canton.network/llms.txt
-- Local notes are unofficial and educational.
-- Every local topic must retain the upstream `sourceUrl`.
-- Do not copy large official pages into `translations.ts` or long UI strings.
-
-## Agent and RAG Rules
-
-Agents may use `docs/education/canton-dev/rag-index.jsonl` as the retrieval entry point.
-
-Required behavior:
-
-- Cite the official `source_url` for implementation-sensitive answers.
-- Mention that CC Privacy Club is an unofficial learning hub when there is risk of confusion.
-- Prefer the official page over local summaries for protocol, API, deployment, and security details.
-- Keep EN and ZH slugs aligned.
-- If a source URL disappears from `llms.txt`, stop and ask a maintainer before replacing it with an unrelated page.
-
-## Human Review Checklist
-
-- `manifest.json` includes the intended core documents.
-- EN and ZH generated files have the same slug count.
-- `rag-index.jsonl` has one EN and one ZH chunk for each manifest document.
-- New website routes render locally.
-- The PR summary links back to official Canton documentation and states that the knowledge base is unofficial.
+- Site pages are self-contained; users read EN/ZH on CC Privacy Club.
+- Official attribution appears at the bottom of each article (CC-BY-4.0).
+- Re-run sync when `https://docs.canton.network/llms.txt` changes.

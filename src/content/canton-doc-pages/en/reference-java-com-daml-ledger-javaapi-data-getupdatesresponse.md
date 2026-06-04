@@ -1,0 +1,55 @@
+---
+title: "GetUpdatesResponse"
+slug: "reference-java-com-daml-ledger-javaapi-data-getupdatesresponse"
+locale: "en"
+category: "reference"
+source_url: "https://docs.canton.network/reference/java/com-daml-ledger-javaapi-data/getupdatesresponse.md"
+source_title: "GetUpdatesResponse"
+tags:
+  - reference
+  - java
+  - com-daml-ledger-javaapi-data
+  - getupdatesresponse
+---
+
+# GetUpdatesResponse
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.canton.network/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# GetUpdatesResponse
+
+> Generated object reference page for GetUpdatesResponse from local Javadoc snapshots.
+
+## GetUpdatesResponse - stable
+
+Upstream docs: [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html)
+
+**Signature**
+
+```text theme={"theme":{"light":"github-light","dark":"github-dark"}}
+public final class GetUpdatesResponse extends Object
+```
+
+**Members**
+
+| Docs                                                                                                                                                                                               | Member                                                  | Introduced | Deprecated | Removed |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ---------- | ---------- | ------- |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#%3Cinit%3E%28com.daml.ledger.javaapi.data.OffsetCheckpoint%29)                    | `GetUpdatesResponse(OffsetCheckpoint)`                  | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#%3Cinit%3E%28com.daml.ledger.javaapi.data.Reassignment%29)                        | `GetUpdatesResponse(Reassignment)`                      | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#%3Cinit%3E%28com.daml.ledger.javaapi.data.TopologyTransaction%29)                 | `GetUpdatesResponse(TopologyTransaction)`               | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#%3Cinit%3E%28com.daml.ledger.javaapi.data.Transaction%29)                         | `GetUpdatesResponse(Transaction)`                       | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#equals%28java.lang.Object%29)                                                     | `equals(Object)`                                        | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#fromProto%28com.daml.ledger.api.v2.UpdateServiceOuterClass.GetUpdatesResponse%29) | `fromProto(UpdateServiceOuterClass.GetUpdatesResponse)` | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#getOffsetCheckpoint%28%29)                                                        | `getOffsetCheckpoint()`                                 | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#getReassignment%28%29)                                                            | `getReassignment()`                                     | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#getTopologyTransaction%28%29)                                                     | `getTopologyTransaction()`                              | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#getTransaction%28%29)                                                             | `getTransaction()`                                      | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#hashCode%28%29)                                                                   | `hashCode()`                                            | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#toProto%28%29)                                                                    | `toProto()`                                             | `3.4.8`    | -          | -       |
+| [Open](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/GetUpdatesResponse.html#toString%28%29)                                                                   | `toString()`                                            | `3.4.8`    | -          | -       |
+
+---
+
+> Mirrored from Canton Network official documentation (CC-BY-4.0) by CC Privacy Club for learning purposes.

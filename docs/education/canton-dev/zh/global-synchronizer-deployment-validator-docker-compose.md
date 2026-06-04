@@ -1,0 +1,555 @@
+---
+title: "Docker Compose 验证者部署"
+slug: "global-synchronizer-deployment-validator-docker-compose"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/deployment/validator-docker-compose.md"
+source_title: "Docker Compose Validator Deployment"
+tags:
+  - global-synchronizer
+  - deployment
+  - validator-docker-compose
+---
+
+# Docker Compose 验证者部署
+
+> 使用 Docker Compose 部署 Canton Network 验证者。
+
+> 使用 Docker Compose 部署 Canton Network 验证者
+
+本节介绍如何使用 [Docker Compose](https://docs.docker.com/compose/) 在虚拟机或本地计算机上部署独立验证者节点。该部署由验证者节点以及关联的钱包和 CNS UI 组成，并将验证者节点加载到目标网络。
+
+此部署适用于：
+
+* 应用程序开发，需要一个易于部署的临时验证者。
+* 生产验证者，有以下注意事项：
+  * 默认部署非常不安全。应按照身份验证部分中的说明启用身份验证。
+  * 不支持从计算机外部进入，也不支持 TLS。部署应仅保留在您的计算机本地，而不应暴露在外部。
+  * 可靠性和可扩展性：docker-compose 将重新启动崩溃的容器，并且部署支持备份和恢复，如下所述，但 docker-compose 部署本质上比基于云的 Kubernetes 部署受到更多限制。
+  * 监控：与基于 Kubernetes 的部署不同，该部署不包括监控。
+  * 对于生产环境，您应该致力于保持验证者持续运行，以避免失去奖励，并避免在严重停机后追赶账本状态的问题。
+
+## 要求
+
+<Tabs>
+  <Tab title="DevNet (0.6.4)">
+    1. 一台 linux/MacOS 机器，具有以下配置：
+
+       1. [docker compose](https://docs.docker.com/compose/install/) - 至少版本 2.26.0 或更高版本
+       2. [curl](https://curl.se/)
+       3. [jq](https://jqlang.org/)
+
+       请注意，AMD64 和 ARM64 架构均受支持。
+
+    要验证依赖项是否已正确设置，请运行以下命令。所有命令都应该成功并打印出版本。请注意，您看到的确切版本可能与此处的示例不同。只要您有 docker-compose 2.26.0 或更高版本，就应该没问题。
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > docker compose version
+    Docker Compose version 2.32.1
+    > curl --version
+    curl 8.11.0 (x86_64-pc-linux-gnu) libcurl/8.11.0 OpenSSL/3.3.2 zlib/1.3.1 brotli/1.1.0 zstd/1.5.6 libidn2/2.3.7 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.64.0
+    Release-Date: 2024-11-06
+    Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
+    Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
+    > jq --version
+    jq-1.7.1
+    ```
+
+    2. 您的计算机应该连接到网络上列入白名单的 VPN（请联系您的赞助商 SV 以获得访问权限），或者具有静态出口 IP 地址。在后一种情况下，请将该 IP 地址提供给您的赞助商 SV，以将其添加到防火墙规则中。
+    3. 请从此处下载包含 docker-compose 文件的发布工件：<a href="https://github.com/digital-asset/decentralized-canton-sync/releases/download/v0.6.4/0.6.4_splice-node.tar.gz">下载捆绑包 (DevNet 0.6.4)</a>，并解压捆绑包：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    tar xzvf 0.6.4_splice-node.tar.gz
+    ```
+
+    <Warning>
+      **如果您丢失了钥匙，您就无法使用您的代币**。虽然运行节点不需要定期备份，
+
+      **强烈**建议将它们用于恢复目的。
+
+      您应该定期备份部署中的所有数据库，并确保始终拥有最新的身份备份。
+
+      超级验证者保留必要的信息，以便您从身份备份中恢复您的 Canton Coin。
+
+      另一方面，超级验证者**不会**保留他们不参与的应用程序的交易详细信息。
+
+      这意味着，如果您安装了其他应用程序，超级验证者无法帮助您从这些应用程序中恢复数据；
+
+      您只能依靠自己的备份。
+
+      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+    </Warning>
+
+    ### 所需的网络参数<p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
+
+    <ul>
+      <li>**MIGRATION\_ID** — 您尝试连接的网络 (dev/test/mainnet) 的当前迁移 ID。该值已被冻结，不得更改上一个值。您可以在 [https://sync.global/sv-network/](https://sync.global/sv-network/) 上找到此内容。</li>
+
+      <li>**SPONSOR\_SV\_URL** — SV 赞助商的 SV 应用的 URL。其格式应为 <a href="https://sv.sv-1.dev.global.canton.network.YOUR_SV_SPONSOR">https\://sv.sv-1.dev.global.canton.network.YOUR\_SV\_SPONSOR</a>，例如，如果 全局同步器 基金会是您的赞助商，则使用 <a href="https://sv.sv-1.dev.global.canton.network.sync.global">[https://sv.sv-1.dev.global.canton.network.sync.global](https://sv.sv-1.dev.global.canton.network.sync.global)</a>。</li>
+    </ul>
+
+    <p>**入职\_秘密**<br />
+    您的赞助商提供的入职秘密。如果您还没有，请询​​问您的赞助商。请注意，入职密码是一次性使用的，并在 48 小时后过期。如果您在过期前未加入，则需要向 SV 赞助商请求新的密钥。</p>
+
+    <注意>
+      在 DevNet 上，您可以通过调用任何 SV 上的以下端点（将 `SPONSOR_SV_URL` 替换为上面定义的 SV 应用程序 URL）来自动获取入驻密钥：
+    </注>
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    curl -X POST SPONSOR_SV_URL/api/sv/v0/devnet/onboard/验证者/prepare
+    ```
+
+    <注意>
+      确保使用 **SV 应用程序 URL**（以 `sv.` 开头），而不是扫描 URL（以 `scan.` 开头）。
+    </注>
+
+    <注意>
+      请注意，此自助密钥仅在 1 小时内有效。
+    </注>
+
+    下面描述了描述您自己的设置而不是网络连接的其他参数。
+  </Tabs>
+
+  <Tab title="测试网 (0.6.3)">
+    1. 一台 linux/MacOS 机器，具有以下配置：
+
+       1. [docker compose](https://docs.docker.com/compose/install/) - 至少版本 2.26.0 或更高版本
+       2. [curl](https://curl.se/)
+       3. [jq](https://jqlang.org/)
+
+       请注意，AMD64 和 ARM64 架构均受支持。
+
+    要验证依赖项是否已正确设置，请运行以下命令。所有命令都应该成功并打印出版本。请注意，您看到的确切版本可能与此处的示例不同。只要您有 docker-compose 2.26.0 或更高版本，就应该没问题。
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > docker compose version
+    Docker Compose version 2.32.1
+    > curl --version
+    curl 8.11.0 (x86_64-pc-linux-gnu) libcurl/8.11.0 OpenSSL/3.3.2 zlib/1.3.1 brotli/1.1.0 zstd/1.5.6 libidn2/2.3.7 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.64.0
+    Release-Date: 2024-11-06
+    Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
+    Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
+    > jq --version
+    jq-1.7.1
+    ```
+
+    2. 您的计算机应该连接到网络上列入白名单的 VPN（请联系您的赞助商 SV 以获得访问权限），或者具有静态出口 IP 地址。在后一种情况下，请将该 IP 地址提供给您的赞助商 SV，以将其添加到防火墙规则中。
+    3. 请从此处下载包含 docker-compose 文件的发布工件：<a href="https://github.com/digital-asset/decentralized-canton-sync/releases/download/v0.6.3/0.6.3_splice-node.tar.gz">下载捆绑包 (TestNet 0.6.3)</a>，并解压该捆绑包：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    tar xzvf 0.6.3_splice-node.tar.gz
+    ```
+
+    <Warning>
+      **如果您丢失了钥匙，您就无法使用您的代币**。虽然运行节点不需要定期备份，
+
+      **强烈**建议将它们用于恢复目的。
+
+      您应该定期备份部署中的所有数据库，并确保始终拥有最新的身份备份。
+
+      超级验证者保留必要的信息，以便您从身份备份中恢复您的 Canton Coin。另一方面，超级验证者**不会**保留他们不参与的应用程序的交易详细信息。
+
+      这意味着，如果您安装了其他应用程序，超级验证者无法帮助您从这些应用程序中恢复数据；
+
+      您只能依靠自己的备份。
+
+      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+    </Warning>
+
+    ### 所需的网络参数
+
+    <p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
+
+    <ul>
+      <li>**MIGRATION\_ID** — 您尝试连接的网络 (dev/test/mainnet) 的当前迁移 ID。该值已被冻结，不得更改上一个值。您可以在 [https://sync.global/sv-network/](https://sync.global/sv-network/) 上找到此内容。</li>
+
+      <li>**SPONSOR\_SV\_URL** — SV 赞助商的 SV 应用的 URL。格式应为 <a href="https://sv.sv-1.test.global.canton.network.YOUR_SV_SPONSOR">https\://sv.sv-1.test.global.canton.network.YOUR\_SV\_SPONSOR</a>，例如，如果 全局同步器 基金会是您的赞助商，则使用 <a href="https://sv.sv-1.test.global.canton.network.sync.global">[https://sv.sv-1.test.global.canton.network.sync.global](https://sv.sv-1.test.global.canton.network.sync.global)</a>。</li>
+    </ul>
+
+    <p>**入职\_秘密**<br />
+    您的赞助商提供的入职秘密。如果您还没有，请询​​问您的赞助商。请注意，入职密码是一次性使用的，并在 48 小时后过期。如果您在过期前未加入，则需要向 SV 赞助商请求新的密钥。</p>
+
+    下面描述了描述您自己的设置而不是网络连接的其他参数。
+  </Tabs>
+
+  <Tab title="主网 (0.6.2)">
+    1. 一台 linux/MacOS 机器，具有以下配置：
+
+       1. [docker compose](https://docs.docker.com/compose/install/) - 至少版本 2.26.0 或更高版本
+       2. [curl](https://curl.se/)
+       3. [jq](https://jqlang.org/)
+
+       请注意，AMD64 和 ARM64 架构均受支持。
+
+    要验证依赖项是否已正确设置，请运行以下命令。所有命令都应该成功并打印出版本。请注意，您看到的确切版本可能与此处的示例不同。只要您有 docker-compose 2.26.0 或更高版本，就应该没问题。
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > docker compose version
+    Docker Compose version 2.32.1
+    > curl --version
+    curl 8.11.0 (x86_64-pc-linux-gnu) libcurl/8.11.0 OpenSSL/3.3.2 zlib/1.3.1 brotli/1.1.0 zstd/1.5.6 libidn2/2.3.7 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.64.0
+    Release-Date: 2024-11-06
+    Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
+    Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
+    > jq --version
+    jq-1.7.1
+    ```
+
+    2. 您的计算机应该连接到网络上列入白名单的 VPN（请联系您的赞助商 SV 以获得访问权限），或者具有静态出口 IP 地址。在后一种情况下，请将该 IP 地址提供给您的赞助商 SV，以将其添加到防火墙规则中。
+    3. 请从此处下载包含 docker-compose 文件的发布工件：<a href="https://github.com/digital-asset/decentralized-canton-sync/releases/download/v0.6.2/0.6.2_splice-node.tar.gz">下载捆绑包 (MainNet 0.6.2)</a>，并解压捆绑包：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    tar xzvf 0.6.2_splice-node.tar.gz
+    ```
+
+    <Warning>
+      **如果您丢失了钥匙，您就无法使用您的代币**。虽然运行节点不需要定期备份，
+
+      **强烈**建议将它们用于恢复目的。
+
+      您应该定期备份部署中的所有数据库，并确保始终拥有最新的身份备份。
+
+      超级验证者保留必要的信息，以便您从身份备份中恢复您的 Canton Coin。另一方面，超级验证者**不会**保留他们不参与的应用程序的交易详细信息。
+
+      这意味着，如果您安装了其他应用程序，超级验证者无法帮助您从这些应用程序中恢复数据；
+
+      您只能依靠自己的备份。
+
+      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+    </Warning>
+
+    ### 所需的网络参数
+
+    <p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
+
+    <ul>
+      <li>**MIGRATION\_ID** — 您尝试连接的网络 (dev/test/mainnet) 的当前迁移 ID。该值已被冻结，不得更改上一个值。您可以在 [https://sync.global/sv-network/](https://sync.global/sv-network/) 上找到此内容。</li>
+
+      <li>**SPONSOR\_SV\_URL** — SV 赞助商的 SV 应用的 URL。格式应为 <a href="https://sv.sv-1.global.canton.network.YOUR_SV_SPONSOR">https\://sv.sv-1.global.canton.network.YOUR\_SV\_SPONSOR</a>，例如，如果 全局同步器 基金会是您的赞助商，则使用 <a href="https://sv.sv-1.global.canton.network.sync.global">[https://sv.sv-1.global.canton.network.sync.global](https://sv.sv-1.global.canton.network.sync.global)</a>。</li>
+    </ul>
+
+    <p>**入职\_秘密**<br />
+    您的赞助商提供的入职秘密。如果您还没有，请询​​问您的赞助商。请注意，入职密码是一次性使用的，并在 48 小时后过期。如果您在过期前未加入，则需要向 SV 赞助商请求新的密钥。</p>
+
+    下面描述了描述您自己的设置而不是网络连接的其他参数。
+  </Tabs>
+</Tabs>
+
+### HTTP 代理配置
+
+如果您的环境中需要使用 HTTP 转发代理进行出口，则需要在 `splice-node/docker-compose/验证者/compose.yaml` 中的 `JAVA_TOOL_OPTIONS` 中设置 `https.proxyHost` 和 `https.proxyPort`，以使用 HTTP 代理进行传出连接。您需要为验证者和参与者服务执行此操作：
+
+```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+  services:
+    验证者:
+      environment:
+        JAVA_TOOL_OPTIONS: >-
+          -Dhttps.proxyHost=your.proxy.host
+          -Dhttps.proxyPort=your_proxy_port
+```
+
+```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+  services:
+    participant:
+      environment:
+        JAVA_TOOL_OPTIONS: >-
+          -Dhttps.proxyHost=your.proxy.host
+          -Dhttps.proxyPort=your_proxy_port
+```
+
+将 `your.proxy.host` 和 `your_proxy_port` 替换为 HTTP 代理的实际主机和端口。目前不支持代理身份验证。
+
+## 绕过特定主机的代理
+
+<注意>
+  设置 `http.nonProxyHosts` 会影响：
+
+  * CN 应用程序（验证者、扫描、SV、钱包）使用的 HTTP 客户端。
+  * 同一 JVM 中的 JDK 级 HTTP 客户端（通过默认的 `ProxySelector`）。这包括 CN 应用程序**和 Canton 参与者用于 JWKS / OIDC 发现的 Auth0 JWK 库，以及使用 `java.net.HttpURLConnection` 的文件下载。
+  * gRPC 来自其他组件的出口，因为 gRPC 的 Netty 传输将代理决策委托给默认的 JDK `ProxySelector`。
+</注>
+
+您可以设置`http.nonProxyHosts`来绕过特定目标主机的代理。将直接联系匹配的主机，而不是通过配置的代理。这对于本地网络上可访问的服务非常有用，例如集群内扫描实例或内部监控端点。
+
+该值是一个以 `|` 分隔的模式列表，遵循标准 Java `nonProxyHosts` 语法：
+
+* 模式与请求主机名匹配，不区分大小写。
+* `*` 是通配符。通常，它用在模式的开头 (`*.internal`) 或结尾 (`10.*`)。
+* 对请求 URI 中的原始主机字符串执行匹配。不执行 DNS 解析，因此 `localhost` 和 `127.0.0.1` 被视为不同的名称，除非您同时列出这两个名称。
+* 空值（例如`-Dhttp.nonProxyHosts=`）表示“无旁路模式”。代理来自 `验证者` 服务的外部流量，但绕过 `localhost` / `127.0.0.1`、`.internal` 域中的任何主机以及其文字字符串表示形式以 `10.` 开头的任何 IPv4 地址的代理：
+
+```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+  services:
+    验证者:
+      environment:
+        JAVA_TOOL_OPTIONS: >-
+          -Dhttps.proxyHost=your.proxy.host
+          -Dhttps.proxyPort=your_proxy_port
+          -Dhttp.nonProxyHosts=localhost|127.0.0.1|*.internal|10.*
+```
+
+## 部署
+
+<Tabs>
+  <Tab title="DevNet (0.6.4)">
+    1. 切换到解压包中的`docker-compose`目录：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    cd splice-node/docker-compose/验证者
+    ```
+
+    2、导出当前版本到环境变量：export IMAGE\_TAG=0.6.4
+    3. 运行以下命令启动验证者节点，并等待其准备就绪（可能需要几分钟）：
+
+    > ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > ./start.sh -s "<SPONSOR_SV_URL>" -o "<ONBOARDING_SECRET>" -p "<party_hint>" -m "<MIGRATION_ID>" -w
+    > ```
+    >
+    > 地点：
+    >
+    > `<party_hint>` 将用作验证人管理员的参与方 ID 的前缀。
+    > 格式必须为 `<organization>-<function>-<enumerator>`，例如`myCompany-my钱包-1`。它不能随着时间的推移而更改，因为它是验证者运营方 ID 的一部分。
+
+    请注意，验证者可以使用命令 `./stop.sh` 停止，并使用与上面相同的 `start.sh` 命令再次重新启动。其数据将在调用之间保留。在后续调用中，秘密本身可以留空，但`-o`仍然是强制性的，因此应提供`-o ""`参数。
+  </Tabs>
+
+  <Tab title="测试网 (0.6.3)">
+    1. 切换到解压包中的`docker-compose`目录：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    cd splice-node/docker-compose/验证者
+    ```
+
+    2.导出当前版本到环境变量：export IMAGE\_TAG=0.6.3
+    3. 运行以下命令启动验证者节点，并等待其准备就绪（可能需要几分钟）：
+
+    > ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > ./start.sh -s "<SPONSOR_SV_URL>" -o "<ONBOARDING_SECRET>" -p "<party_hint>" -m "<MIGRATION_ID>" -w
+    > ```
+    >
+    > 地点：
+    >
+    > `<party_hint>` 将用作验证人管理员的参与方 ID 的前缀。
+    > 格式必须为 `<organization>-<function>-<enumerator>`，例如`myCompany-my钱包-1`。它不能随着时间的推移而更改，因为它是验证者运营方 ID 的一部分。
+
+    请注意，验证者可以使用命令 `./stop.sh` 停止，并使用与上面相同的 `start.sh` 命令再次重新启动。其数据将在调用之间保留。在后续调用中，秘密本身可以留空，但`-o`仍然是强制性的，因此应提供`-o ""`参数。
+  </Tabs>
+
+  <Tab title="主网 (0.6.2)">
+    1. 切换到解压包中的`docker-compose`目录：
+
+    ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    cd splice-node/docker-compose/验证者
+    ```
+
+    2、导出当前版本到环境变量：export IMAGE\_TAG=0.6.2
+    3. 运行以下命令启动验证者节点，并等待其准备就绪（可能需要几分钟）：
+
+    > ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    > ./start.sh -s "<SPONSOR_SV_URL>" -o "<ONBOARDING_SECRET>" -p "<party_hint>" -m "<MIGRATION_ID>" -w
+    > ```
+    >
+    > 地点：
+    >
+    > `<party_hint>` 将用作验证人管理员的参与方 ID 的前缀。
+    > 格式必须为 `<organization>-<function>-<enumerator>`，例如`myCompany-my钱包-1`。它不能随着时间的推移而更改，因为它是验证者运营方 ID 的一部分。
+
+    请注意，验证者可以使用命令 `./stop.sh` 停止，并使用与上面相同的 `start.sh` 命令再次重新启动。其数据将在调用之间保留。在后续调用中，秘密本身可以留空，但`-o`仍然是强制性的，因此应提供`-o ""`参数。
+  </Tabs>
+</Tabs>
+
+## 登录钱包界面<注意>
+  基于 Docker Compose 的验证者部署使用`.localhost`子域进行寻址，例如`钱包.localhost`。据报道，`.localhost` URL 在某些浏览器上不起作用。如果您遇到问题，请尝试使用其他浏览器，例如 Firefox 或 Chrome。如果您在从自定义程序或脚本访问 API 时遇到问题，则可能需要将 HTTP 请求上的 `HOST` 标头显式设置为目标 `.localhost` 地址。
+</注>
+
+可以在浏览器中通过 [http://钱包.localhost](http://钱包.localhost) 访问钱包 UI。验证人管理员的用户名是`administrator`。将该名称插入用户名字段并单击`Log in`，您应该会看到钱包管理员的钱包。
+
+您还可以注销管理员帐户并以任何其他用户名登录。用户第一次登录时，系统会提示一条消息，要求他们确认是否希望加入验证者节点。
+
+<div className="todo">
+  链接到解释此入职含义的部分
+</div>
+
+## 登录 CNS UI
+
+您可以在 [http://ans.localhost](http://ans.localhost) 打开浏览器（请注意，当前默认为`ans`，而不是`cns`），并使用同一管理员用户或已通过钱包登录的任何其他用户登录，以便为该用户购买 CNS 条目。
+
+### 访问 Canton 参与者 API
+
+[JSON Ledger API](/sdks-tools/api-reference/json-api) 在 `json-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `Host: json-ledger-api.localhost` 标头才能正确解决此问题。
+
+[gRPC Ledger API](/sdks-tools/api-reference/ledger-api) 在 `grpc-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `:authority: json-ledger-api.localhost` 伪标头才能正确解决此问题。
+
+Canton Admin API 默认情况下不公开，因为它尚不支持身份验证。 `nginx.conf` 中有一个注释掉的部分，如果您确保它不会公开（例如通过网络限制），则可以启用该部分来公开它。
+
+## 配置身份验证
+
+<Warning>
+  默认部署使用高度不安全的自签名令牌。任何有权访问钱包 UI（或机器和/或其网络接口）的人都可以以其选择的用户身份登录您的钱包。对于任何生产用途，您应该按照本节中的描述配置正确的身份验证。
+</Warning>
+
+请参阅身份验证部分，了解如何为验证者设置 OAuth 提供程序的说明。为回调配置的 URL 为 `http://钱包.localhost` 和 `http://ans.localhost`。
+
+设置 OAuth 提供程序后，您需要通过在 `.env` 文件中设置以下环境变量来配置它：
+
+<表>
+  <标题>
+    <tr 类名=“标题”>
+      <th>姓名</th>
+      <th>值</th>
+    </tr>
+  </标题>
+
+  <正文>
+    <tr className="奇数">
+      <td>AUTH\_URL</td>
+      <td>用于获取 <code>openid-configuration</code> 和 <code>jwks.json</code> 的 OIDC 提供商的 URL。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>AUTH\_JWKS\_URL</td>
+      <td>用于获取 <code>jwks.json</code> 的 OIDC 提供商的 URL 通常为 <code>\${AUTH_URL}/.well-known/jwks.json</code>。</td>
+    </tr>
+
+    <tr className="奇数">
+      <td>AUTH\_WELLKNOWN\_URL</td>
+      <td>用于获取 <code>openid-configuration</code> 的 OIDC 提供商的 URL 通常为 <code>\${AUTH_URL}/.well-known/openid-configuration</code>。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>LEDGER\_API\_AUTH\_AUDIENCE</td>
+      <td>参与者账本 API 的受众，例如<code>[https://ledger\_api.example.com](https://ledger_api.example.com)</code>。这将为参与者设置 <code>ledger-api.auth-services.target-audience</code> 配置。</td>
+    </tr>
+
+    <tr className="奇数">
+      <td>LEDGER\_API\_AUTH\_SCOPE</td>
+      <td>参与者账本 API 的范围。这将设置参与者的 <code>ledger-api.auth-services.target-scope</code> 配置。可选。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>验证者\_AUTH\_AUDIENCE</td>
+      <td>验证者后端 API 的受众。例如<code>[https://验证者.example.com](https://验证者.example.com)</code>。</td>
+    </tr><tr className="奇数">
+      <td>VALIDATOR\_AUTH\_CLIENT\_ID</td>
+      <td>验证者应用后端的 OAuth 应用的客户端 ID。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>VALIDATOR\_AUTH\_CLIENT\_SECRET</td>
+      <td>验证者应用后端的 OAuth 应用的客户端密钥。</td>
+    </tr>
+
+    <tr className="奇数">
+      <td>LEDGER\_API\_ADMIN\_USER</td>
+      <td>应与为验证者应用程序颁发的 JWT 的 `sub` 字段匹配。对于某些身份验证提供程序，这将形成为 <code>CLIENT\_ID\@clients</code>。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>钱包\_ADMIN\_USER</td>
+      <td>应以钱包管理员身份登录的用户的用户ID。请注意，这应该是完整的用户 ID，例如 <code>auth0|43b68e1e4978b000cefba352</code>，<em>而不仅仅是</em>后缀 <code>43b68e1e4978b000cefba352</code>。</td>
+    </tr>
+
+    <tr className="奇数">
+      <td>钱包\_UI\_CLIENT\_ID</td>
+      <td>钱包 UI 的 OAuth 应用程序的客户端 ID。</td>
+    </tr>
+
+    <tr className="偶">
+      <td>ANS\_UI\_CLIENT\_ID</td>
+      <td>CNS UI 的 OAuth 应用程序的客户端 ID。</td>
+    </tr>
+
+    <tr className="奇数">
+      <td>联系\_POINT</td>
+      <td>您的验证者节点的联系点，其他节点运营商可以使用该联系点在需要时与您联系（slack 用户名或电子邮件地址）。可选</td>
+    </tr>
+  </tbody>
+</表>
+
+为了在部署中启用身份验证，请将`-a`标志添加到`start.sh`命令，如下所示：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+./start.sh -s "<SPONSOR_SV_URL>" -o "<ONBOARDING_SECRET>" -p "<party_hint>" -m "<MIGRATION_ID>" -w -a
+```
+
+如果您已经在计算机上部署了未经身份验证的验证者，则可以通过使用 `./stop.sh` 停止验证者并使用 `-a` 标志重新启动它，将其迁移到经过身份验证的验证者，如上所述。验证者操作者用户将自动迁移，`WALLET_ADMIN_USER`变量指示的用户将与验证者操作者方关联。如果您还让其他用户加入您的验证者，这些用户将不会自动迁移，您需要手动将 OAuth 用户与其相应方关联。为此，首先记下所有相关用户的参与方 ID（在停止未经身份验证的验证者之前执行此操作），例如通过从钱包用户界面的右上角复制它们。现在，对于您想要迁移的每个用户，请按照 Splice 钱包部分的用户、各方和钱包中的说明将用户与一方关联起来，但将管理方 ID 替换为您希望与每个用户关联的一方 ID。
+
+## 配置自动流量购买
+
+您的节点配置为按量付费自动购买流量（请参阅自动购买流量）。为了满足您的需求，您可以设置环境变量，例如：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+export TARGET_TRAFFIC_THROUGHPUT=20000 # target throughput in bytes/second
+export MIN_TRAFFIC_TOPUP_INTERVAL="1m" # minimum interval between top-ups
+```
+
+<p>每次成功充值时，验证者应用都会购买 `top-up amount` 大约 `targetThroughput * minTopupInterval` 字节的流量（具体金额可能因四舍五入而异）。 `minTopupInterval` 允许验证者操作员控制自动充值发生的上限频率。如果充值金额低于同步器范围的`minTopupAmount`（请参阅[流量参数](/global-同步器/deployment/同步器-流量#流量-parameters)），`minTopupInterval`会自动拉伸，以便在尊重配置的`targetThroughput`的同时至少购买`minTopupAmount`字节的流量。</p>
+
+<p>当满足以下所有条件时，将触发下一次充值：</p>
+
+<ul>
+  <li>可用的[额外流量余额](/global-同步器/deployment/同步器-流量#流量-accounting-what-counts-as-流量)低于配置的充值金额（即低于`targetThroughput * minTopupInterval`）。</li>
+
+  <li>自上次充值以来至少已过去 `minTopupInterval`。</li>
+
+  <li>验证者的钱包中有足够的 CC 来购买流量的充值金额（DevNet 上除外，验证者应用程序将自动挖掘足够的代币来购买流量）。</li>
+</ul><p>验证者会从超级验证者那里获得少量的免费流量，足以提交充值交易。但是，如果提交了很多其他交易，则可能会遇到免费流量也耗尽的情况，从而验证者无法提交充值交易。免费流量补贴逐步持续积累。在没有提交交易的情况下，免费流量大约需要二十分钟才能积累到最大可能。如果您在未购买流量的情况下提交过多交易而耗尽了流量余额，请暂停您的验证者节点（验证者应用和参与者）二十分钟，以积累免费流量余额。</p>
+
+## 配置扫描和自动接受转让优惠
+
+<p>您可以选择将验证者配置为在其托管的某些方的余额超过特定阈值时自动创建向网络上其他方的转移要约。</p>
+
+<p>每当`<senderPartyID>`的余额超过`maxBalanceUSD`时，验证者就会自动向`<receiverPartyId>`创建转账要约，金额将`minBalanceUSD`留在发送者的钱包中。请注意，您需要知道发送方和接收方的参与方 ID，可以从相应用户的钱包 UI（位于右上角）复制该 ID。因此，一旦知道了参与方 ID，就需要在初始部署后的第二步中将其应用于 Helm 图表。</p>
+
+<p>每当验证者收到从`<senderPartyID>`到`<receiverPartyId>`的转账要约时，它都会自动接受。与扫描类似，必须知道参与方 ID 才能应用此配置。</p>
+
+为此，请填写以下部分并将以下附加配置添加到您的验证者环境中：
+
+```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# sweep by transferring directly through the transfer preapproval of the receiver,
+# if set to false sweeping creates transfer offers that need to be accepted on the receiver side.
+# Note that this refers to the preapprovals described in /appdev/modules/m7-canton-coin-preapprovals
+# and not to auto accepting transfers. Auto accept transfers does not setup preapproval contracts that allow
+# for a direct transfer but just automates the acceptance of the transfer offer so in that case
+# useTransferPreapproval should be set to false.
+services:
+  验证者:
+    environment:
+       - |
+          ADDITIONAL_CONFIG_WALLET_SWEEP=
+            canton.验证者-apps.验证者_backend.钱包-sweep {
+              "<senderPartyId1>" {
+                max-balance-usd = 1000
+                min-balance-usd = 100
+                receiver = "<receiverPartyId>"
+                use-transfer-preapproval = false
+              }
+            }
+```
+
+同样，您可以将验证者配置为自动接受网络上某些方的转账要约。为此，请添加以下附加配置：
+
+```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+   services:
+     验证者:
+       environment:
+          - |
+             ADDITIONAL_CONFIG_AUTO_ACCEPT_TRANSFERS=
+               canton.验证者-apps.验证者_backend.auto-accept-transfers {
+                 "<receiverPartyId>" {
+                   from-parties = ["<senderPartyId1>", "<senderPartyId2>"]
+                 }
+               }
+```
+
+## 与 systemd 和其他 init 系统集成
+
+如果您想通过 systemd 或类似的 init 系统管理验证者，请创建一个使用正确参数调用 `start.sh` 脚本的服务。但是，请注意，`start.sh` 使用 `-d/--detach` 选项调用 `docker compose up`，因此脚本会在容器启动后退出，而不是继续运行。
+
+您需要确保您的服务此时不会停止 docker compose。要完成此操作，请使用 systemd 设置 `RemainAfterExit=true`。有关更多详细信息，请参阅 [systemd 文档](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html)。如果您使用另一个 init 系统，请查找类似的选项以确保 docker compose 在脚本退出后继续运行。
+
+或者，您可以编辑脚本以删除 `-d` 选项，以便脚本继续运行。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

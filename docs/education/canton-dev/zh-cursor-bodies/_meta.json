@@ -1,0 +1,62 @@
+{
+  "overview-learn-architecture": {
+    "zhTitle": "架构概览",
+    "summary": "Canton 协调与存储分离：验证者、同步器、Party、交易流、拓扑与 Ledger API。"
+  },
+  "overview-learn-cryptographic-keys": {
+    "zhTitle": "Canton 中的密码学密钥",
+    "summary": "密钥存储选项（数据库、离线、KMS）、命名空间/节点/外部 Party 签名密钥与会话密钥。"
+  },
+  "overview-learn-ledger-model": {
+    "zhTitle": "账本模型",
+    "summary": "扩展 UTXO 模型：合约生命周期、利益相关方角色、交易树、视图与可组合性。"
+  },
+  "overview-learn-privacy-model": {
+    "zhTitle": "隐私模型详解",
+    "summary": "子交易隐私、视图分解、利益相关方可见性规则、常见模式与审计设计。"
+  },
+  "overview-learn-multi-synchronizer": {
+    "zhTitle": "多同步器架构",
+    "summary": "合约指派、解除/重新指派、自动路由、确认策略与流量管理。"
+  },
+  "overview-reference-canton-coin-tokenomics": {
+    "zhTitle": "Canton Coin 代币经济学",
+    "summary": "CC 费用结构、铸造轮次、活动记录、销毁-铸造均衡与 UTXO 粉尘过期。"
+  },
+  "overview-reference-canton-name-service": {
+    "zhTitle": "Canton 名称服务",
+    "summary": "CNS 将可读名称映射到 Party ID：注册、续费、解析与 Scan/ANS API。"
+  },
+  "overview-reference-canton-protocol-specification": {
+    "zhTitle": "Canton 协议规范",
+    "summary": "协议技术规范索引：双层共识、账本模型、交易生命周期与拓扑参考页。"
+  },
+  "overview-reference-cip-0056": {
+    "zhTitle": "CIP-0056：Canton Network 代币标准",
+    "summary": "CIP-0056 标准接口：持仓、一步/两步转账、DvP 分配与钱包集成。"
+  },
+  "overview-reference-cip-index": {
+    "zhTitle": "CIP 索引",
+    "summary": "Canton 改进提案（CIP）按类型与状态的参考索引。"
+  },
+  "overview-reference-cross-sync-dvp-example": {
+    "zhTitle": "跨同步器 DvP 示例",
+    "summary": "跨 Payments/Securities/Settlement 同步器的 DvP 交割与重新指派工作流示例。"
+  },
+  "overview-reference-decentralization": {
+    "zhTitle": "去中心化",
+    "summary": "去中心化命名空间、同步器所有权与多宿主 Party 的确认阈值与外部提交。"
+  },
+  "overview-reference-external-party": {
+    "zhTitle": "本地 Party 与外部 Party",
+    "summary": "托管关系、SPN/CPN/OPN、外部签名准备/执行流程与信任模型。"
+  },
+  "overview-reference-gsf-policies": {
+    "zhTitle": "GSF 政策",
+    "summary": "Global Synchronizer Foundation 治理框架、验证者入驻、流量定价与升级协调。"
+  },
+  "overview-reference-ledger-causality": {
+    "zhTitle": "因果性与时间",
+    "summary": "Daml 账本因果图、本地账本、Ledger API 排序保证与账本时间语义。"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "zhTitle": "Contract",
+  "summary": "Canton 参考文档：Contract。",
+  "body": "> 从本地 Javadoc 快照生成 Contract 的对象参考页面。\n\n## 合约 - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/Contract.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic interface Contract\n```\n\n**会员**\n\n在配置的工件中找不到该对象的成员。"
+}

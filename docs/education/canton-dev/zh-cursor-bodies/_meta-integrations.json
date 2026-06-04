@@ -1,0 +1,122 @@
+{
+  "integrations-apps-finding-apps": {
+    "zhTitle": "发现 Canton Network 应用",
+    "summary": "在官方生态目录浏览应用，或自行开发与申请上架。"
+  },
+  "integrations-dapp-building-overview": {
+    "zhTitle": "dApp 构建概览",
+    "summary": "dApp、Wallet Gateway 与 Canton Network 的关系、架构与连接流程。"
+  },
+  "integrations-dapp-sdk-adapters-and-discovery": {
+    "zhTitle": "适配器与发现",
+    "summary": "dApp SDK 适配器注册、默认网关与钱包选择器发现机制。"
+  },
+  "integrations-dapp-sdk-best-practices": {
+    "zhTitle": "最佳实践",
+    "summary": "dApp SDK 集成的推荐模式（文档占位，待补充详细内容）。"
+  },
+  "integrations-dapp-sdk-download": {
+    "zhTitle": "下载",
+    "summary": "通过 npm、yarn 或 pnpm 安装 @canton-network/dapp-sdk。"
+  },
+  "integrations-dapp-sdk-usage": {
+    "zhTitle": "用法",
+    "summary": "dApp SDK 与 Provider API：连接、账户、交易、事件与 Ledger API 代理。"
+  },
+  "integrations-dapp-sdk-wallet-provider-integration": {
+    "zhTitle": "钱包提供方集成",
+    "summary": "钱包/扩展如何出现在 dApp SDK 发现与选择器中。"
+  },
+  "integrations-ecosystem": {
+    "zhTitle": "Canton Network 生态",
+    "summary": "治理、基础设施、应用类别、开发者工具与参与方式。"
+  },
+  "integrations-exchanges-guidance": {
+    "zhTitle": "交易所集成指南",
+    "summary": "交易所与 Canton 集成的架构、工作流、交易摄取、容错、备份与扩展。"
+  },
+  "integrations-exchanges-node-operations": {
+    "zhTitle": "验证者节点运维",
+    "summary": "交易所验证者：奖励铸造、流量、Party 设置、Ledger API 用户与主升级。"
+  },
+  "integrations-exchanges-sdk-download": {
+    "zhTitle": "交易所 SDK 下载",
+    "summary": "Wallet SDK、Java 示例与分阶段交易所集成里程碑。"
+  },
+  "integrations-integration-patterns": {
+    "zhTitle": "集成模式",
+    "summary": "钱包、代币、应用与数据访问的常见 Canton 集成模式。"
+  },
+  "integrations-overview": {
+    "zhTitle": "集成概览",
+    "summary": "钱包、交易所、代币标准与应用集成类别及与公链的差异。"
+  },
+  "integrations-release-notes-dapp-sdk": {
+    "zhTitle": "dApp SDK",
+    "summary": "@canton-network/dapp-sdk 版本发布说明（摘自 GitHub releases）。"
+  },
+  "integrations-release-notes-wallet-gateway": {
+    "zhTitle": "Wallet Gateway",
+    "summary": "@canton-network/wallet-gateway-remote 版本发布说明。"
+  },
+  "integrations-release-notes-wallet-sdk": {
+    "zhTitle": "Wallet SDK",
+    "summary": "Canton Network Wallet SDK 各版本功能与修复说明。"
+  },
+  "integrations-wallet-configuration": {
+    "zhTitle": "钱包配置",
+    "summary": "Wallet SDK 在 LocalNet、DevNet、TestNet 与 MainNet 的连接与认证配置。"
+  },
+  "integrations-wallet-exchange-integration": {
+    "zhTitle": "钱包交易所集成",
+    "summary": "钱包侧交易所集成说明（镜像官方 wallet-integration-guide）。"
+  },
+  "integrations-wallet-gateway-apis": {
+    "zhTitle": "API",
+    "summary": "Wallet Gateway 的 dApp API 与 User API、SSE 与速率限制。"
+  },
+  "integrations-wallet-gateway-configuration": {
+    "zhTitle": "配置",
+    "summary": "远程 Wallet Gateway 的 JSON 配置：内核、服务、存储与签名。"
+  },
+  "integrations-wallet-gateway-download": {
+    "zhTitle": "下载",
+    "summary": "安装并启动 @canton-network/wallet-gateway-remote。"
+  },
+  "integrations-wallet-gateway-signing-providers": {
+    "zhTitle": "签名提供方",
+    "summary": "Wallet Gateway 支持的内部、Participant、Fireblocks、Blockdaemon、Dfns 签名。"
+  },
+  "integrations-wallet-gateway-troubleshooting": {
+    "zhTitle": "故障排除",
+    "summary": "Wallet Gateway 常见问题：数据库、认证、网络、端口与签名。"
+  },
+  "integrations-wallet-gateway-usage": {
+    "zhTitle": "用法",
+    "summary": "User UI、User API 与典型钱包/ dApp 操作流程。"
+  },
+  "integrations-wallet-guidance": {
+    "zhTitle": "钱包集成指南",
+    "summary": "应用开发者使用 Wallet SDK 的完整集成指南。"
+  },
+  "integrations-wallet-proof-of-transfer": {
+    "zhTitle": "转账证明",
+    "summary": "在 Canton 上生成与验证转账证明的机制与用法。"
+  },
+  "integrations-wallet-sdk-download": {
+    "zhTitle": "Wallet SDK 下载",
+    "summary": "安装 @canton-network/wallet-sdk 与相关资源链接。"
+  },
+  "integrations-wallet-wallet-sdk-v1-migration": {
+    "zhTitle": "Wallet SDK v1 迁移",
+    "summary": "从 v0 迁移到 Wallet SDK v1 API 的分模块指南。"
+  },
+  "integrations-wallets-canton-vs-web3": {
+    "zhTitle": "Canton 钱包与 Web3 钱包",
+    "summary": "Canton 钱包在隐私、余额与浏览器集成上与 Web3 钱包的差异。"
+  },
+  "integrations-wallets-for-users": {
+    "zhTitle": "用户钱包指南",
+    "summary": "终端用户选择与管理 Canton Coin 钱包的说明。"
+  }
+}

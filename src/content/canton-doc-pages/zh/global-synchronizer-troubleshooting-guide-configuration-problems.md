@@ -1,0 +1,153 @@
+---
+title: "配置问题"
+slug: "global-synchronizer-troubleshooting-guide-configuration-problems"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/troubleshooting-guide/configuration-problems.md"
+source_title: "Configuration Problems"
+tags:
+  - global-synchronizer
+  - troubleshooting-guide
+  - configuration-problems
+---
+
+# 配置问题
+
+> HOCON 解析、权限与环境变量冲突的配置故障排查。
+
+> 诊断HOCON解析错误、权限问题和环境变量冲突
+
+配置错误是验证者无法启动的最常见原因之一。它们的范围从 HOCON 语法错误到微妙的环境变量冲突。
+
+## HOCON 解析错误
+
+Canton 使用 HOCON（人类优化配置表示法）作为其配置文件。语法错误会阻止验证者启动并生成如下消息：
+
+```
+com.typesafe.config.ConfigException$Parse: ... Expecting close brace } or a comma
+```
+
+**常见错误和修复：**
+
+* **缺少右大括号。** HOCON 文件可以深度嵌套。使用突出显示匹配大括号的编辑器，或在部署之前运行 linter。
+
+```hocon theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Wrong -- missing closing brace
+canton {
+  participants {
+    participant {
+      storage {
+        type = postgres
+      }
+    # <-- missing }
+}
+```
+
+* **未加引号的特殊字符。** 包含 `://`、`=` 或 `#` 的值必须加引号。
+
+```hocon theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Wrong
+url = https://sequencer.sync.global:443
+
+# Correct
+url = "https://sequencer.sync.global:443"
+```
+
+* **错误的值类型。** 如果架构需要持续时间，而您提供了一个不带单位的整数，则解析会失败。
+
+```hocon theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Wrong
+timeout = 30
+
+# Correct
+timeout = 30s
+```
+
+* **尾随逗号。** HOCON 比 JSON 更宽容，但某些结构仍然会因数组内的尾随逗号而中断。
+
+要在应用 HOCON 文件之前对其进行验证：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Quick check using the JVM-based typesafe-config library
+java -cp "canton.jar" com.typesafe.config.impl.Parseable < your-config.conf
+```
+
+## 文件权限问题
+
+验证者进程必须能够读取其配置文件。在 Linux 和容器中，这通常意味着调整所有权或权限。
+
+```
+java.io.FileNotFoundException: /etc/canton/participant.conf (Permission denied)
+```
+
+修复：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Ensure the canton user (UID 1000) can read the file
+chmod 644 /etc/canton/participant.conf
+chown 1000:1000 /etc/canton/participant.conf
+```
+
+### Kubernetes Secrets 未安装
+
+If a configuration file references a Kubernetes Secret that is not mounted into the pod, the 验证者 fails with a `FileNotFoundException` on the expected path.验证：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Check that the secret exists
+kubectl get secret validator-config -n validator
+
+# Check the pod spec for volume mounts
+kubectl get pod -n validator -o yaml | grep -A5 volumeMounts
+```
+
+常见原因：
+
+* Helm 值中的密钥名称与实际密钥名称不匹配。
+* 秘密是在不同的命名空间中创建的。
+* `subPath` 挂载点指向秘密中不存在的密钥。
+
+## 环境变量冲突
+
+Canton 和 Splice 组件从文件和环境变量中读取配置。当两者都设置时，环境变量优先，这可能会产生意外的行为。
+
+### `DPM_SDK_VERSION` 覆盖 `daml.yaml`
+
+如果您将 `DPM_SDK_VERSION` 设置为环境变量，它将覆盖项目的 `daml.yaml` 中的 `sdk-version` 字段。这可能会在构建期间导致版本不匹配错误：
+
+```
+Error: SDK version 3.3.0 from environment does not match 3.2.0 in daml.yaml
+```
+
+修复：取消设置环境变量或将其与`daml.yaml`对齐：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+unset DPM_SDK_VERSION
+```
+
+### `.env` 文件冲突
+
+Docker Compose 从工作目录加载`.env`。如果您有多个 `.env` 文件（例如，来自之前的部署），过时的值可能会覆盖当前配置。
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Show which .env file Docker Compose is using
+docker compose config | head -20
+```
+
+检查可能冲突的变量：
+
+* `SPLICE_APP_VERSION` -- 必须匹配Helm图表或Docker镜像版本
+* `PARTICIPANT_HOST` -- 必须从容器内部解析，而不仅仅是从主机解析
+* `AUTH_URL` -- 必须可从验证者容器访问
+
+### 调试配置解析
+
+要查看 Canton 将使用的最终合并配置：```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Print resolved config (redacts secrets)
+docker exec validator-app cat /proc/1/environ | tr '\0' '\n' | sort
+```
+
+对于 HOCON 文件，Canton 在启动时在 `DEBUG` 级别记录已解析的配置。暂时设置`canton.monitoring.logging.api.level = DEBUG`来捕捉。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

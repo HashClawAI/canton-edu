@@ -1,0 +1,84 @@
+---
+import type { Locale } from '@/i18n/translations';
+import { t } from '@/i18n/translations';
+import { getCantonDocCategories, getCantonDocs, cantonDocsGeneratedAt } from '@/lib/cantonDocs';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const docs = getCantonDocs(locale);
+const categories = getCantonDocCategories(locale);
+const base = import.meta.env.BASE_URL;
+const docsPrefix = locale === 'zh' ? `${base}zh/docs/canton` : `${base}docs/canton`;
+const updated = new Date(cantonDocsGeneratedAt).toISOString().slice(0, 10);
+const total = docs.length;
+---
+
+<section class="section callout">
+  <p class="page-intro">{tr.docs.intro}</p>
+  <p class="inline-muted">{tr.docs.generatedAt}: {updated} · {tr.docs.pageCount}: {total}</p>
+</section>
+
+<section class="section doc-search-wrap">
+  <label class="doc-search-label" for="doc-search">{tr.docs.searchLabel}</label>
+  <input
+    id="doc-search"
+    class="doc-search-input"
+    type="search"
+    placeholder={tr.docs.searchPlaceholder}
+    autocomplete="off"
+  />
+  <p id="doc-search-empty" class="inline-muted doc-search-empty" hidden>{tr.docs.searchEmpty}</p>
+</section>
+
+<div id="doc-catalog">
+  {categories.map((category) => (
+    <section class="section doc-category" data-category={category}>
+      <h2>{category}</h2>
+      <ul class="doc-link-list">
+        {docs
+          .filter((doc) => doc.category === category)
+          .map((doc) => (
+            <li
+              class="doc-link-item"
+              data-title={doc.title.toLowerCase()}
+              data-summary={doc.summary.toLowerCase()}
+              data-tags={doc.tags.join(' ').toLowerCase()}
+            >
+              <a href={`${docsPrefix}/${doc.slug}`}>{doc.title}</a>
+              <p class="inline-muted">{doc.summary}</p>
+            </li>
+          ))}
+      </ul>
+    </section>
+  ))}
+</div>
+
+<script>
+  const input = document.getElementById('doc-search');
+  const empty = document.getElementById('doc-search-empty');
+  const items = [...document.querySelectorAll('.doc-link-item')];
+  const categories = [...document.querySelectorAll('.doc-category')];
+
+  if (input instanceof HTMLInputElement && empty instanceof HTMLElement) {
+    const filter = () => {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+      for (const item of items) {
+        const haystack = `${item.dataset.title ?? ''} ${item.dataset.summary ?? ''} ${item.dataset.tags ?? ''}`;
+        const show = !q || haystack.includes(q);
+        item.toggleAttribute('hidden', !show);
+        if (show) visible += 1;
+      }
+      for (const section of categories) {
+        const anyVisible = [...section.querySelectorAll('.doc-link-item')].some((el) => !el.hasAttribute('hidden'));
+        section.toggleAttribute('hidden', !anyVisible);
+      }
+      empty.toggleAttribute('hidden', visible > 0 || !q);
+    };
+    input.addEventListener('input', filter);
+  }
+</script>

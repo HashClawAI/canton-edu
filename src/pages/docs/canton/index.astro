@@ -1,45 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getCantonDocCategories, getCantonDocs, cantonDocsGeneratedAt, cantonDocsSourceIndexUrl } from '@/lib/cantonDocs';
+import CantonDocsIndex from '@/components/CantonDocsIndex.astro';
 import { t } from '@/i18n/translations';
 
 const locale = 'en';
 const tr = t(locale);
-const docs = getCantonDocs(locale);
-const categories = getCantonDocCategories(locale);
-const base = import.meta.env.BASE_URL;
-const updated = new Date(cantonDocsGeneratedAt).toISOString().slice(0, 10);
 ---
 
 <BaseLayout locale={locale} title={tr.docs.title} description={tr.docs.intro} navCurrent="docs">
   <h1 class="page-title">{tr.docs.title}</h1>
-  <p class="page-intro">{tr.docs.intro}</p>
-
-  <section class="section callout">
-    <h2>{tr.docs.sourceTitle}</h2>
-    <p>{tr.docs.sourceIntro}</p>
-    <ul class="resource-list">
-      <li><a href="https://docs.canton.network/" target="_blank" rel="noopener noreferrer">Canton Network Documentation</a></li>
-      <li><a href={cantonDocsSourceIndexUrl} target="_blank" rel="noopener noreferrer">LLM-friendly docs index</a></li>
-    </ul>
-    <p class="inline-muted">{tr.docs.generatedAt}: {updated}</p>
-  </section>
-
-  {categories.map((category) => (
-    <section class="section">
-      <h2>{category}</h2>
-      <div class="cards docs-grid">
-        {docs.filter((doc) => doc.category === category).map((doc) => (
-          <article class="card doc-card">
-            <p class="kicker">{doc.tags.join(' / ')}</p>
-            <h3><a href={`${base}docs/canton/${doc.slug}`}>{doc.title}</a></h3>
-            <p>{doc.summary}</p>
-            <p class="inline-muted">
-              {tr.docs.verifyAtSource}: <a href={doc.sourceUrl} target="_blank" rel="noopener noreferrer">{doc.sourceTitle}</a>
-            </p>
-          </article>
-        ))}
-      </div>
-    </section>
-  ))}
+  <CantonDocsIndex locale={locale} />
 </BaseLayout>

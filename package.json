@@ -6,6 +6,8 @@
   "scripts": {
     "chart:build": "node scripts/build-sats-chart.mjs",
     "docs:sync-canton": "node scripts/sync-canton-docs.mjs",
+    "docs:translate-canton": "node scripts/translate-canton-docs.mjs",
+    "docs:apply-cursor-zh": "node scripts/apply-cursor-zh.mjs",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "npm run chart:build && astro build",

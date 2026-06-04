@@ -1,0 +1,5 @@
+{
+  "zhTitle": "性能最佳实践",
+  "summary": "Canton 应用性能指南已整合至 Performance Optimization 深度专题；含排障链接。",
+  "body": "> Canton 应用性能指南所在位置 — 已迁至统一的 Performance Optimization 深度专题\n\n详细性能指导——链上与链下权衡、为性能设计合约、PQS 查询优化、并行命令提交、流量管理及降低争用的示例——现与其余性能材料一并位于 [Performance Optimization](/appdev/deep-dives/performance-optimization)。\n\n诊断运行中 validator 的性能问题另见：\n\n* 排障速查中的 [Performance Issues](/appdev/troubleshooting#performance-issues-2) 与 [Contention](/appdev/troubleshooting#contention)。\n\n## 下一步\n\n* [Security Best Practices](/appdev/modules/m7-security) — 授权与安全配置\n* [Package Management](/appdev/modules/m7-package-management) — 高效 DAR 管理"
+}

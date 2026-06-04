@@ -1,0 +1,5 @@
+{
+  "zhTitle": "安装兼容的 Daml SDK",
+  "summary": "如何安装与当前 Splice 版本兼容的 Daml SDK。",
+  "body": "> 安装与当前 Splice 版本兼容的 Daml SDK 的方法。\n\n您无需安装用于构建此 Splice 版本的完全相同的 Daml SDK 版本。这些版本仅供参考。由旧版 3.x Daml SDK 构建的`.dar` 文件通常与此 Splice 版本中使用的 Canton 版本兼容。\n\n为了测试您的应用程序与验证者节点的交互，我们建议使用此 Splice 版本中使用的 Canton 版本，如果您使用验证者部署说明来部署验证者节点，就是这种情况。\n\n为了从 Daml SDK 的最新功能和错误修复中获益，我们建议使用最新的 Daml SDK 版本，该版本与此 Splice 版本中使用的 Canton 版本具有“相同的主要版本和次要版本”。\n\n请按照以下步骤安装最新的兼容 OSS Daml SDK 版本：\n\n1. 选择与上述相同主要版本和次要版本的最新稳定版本。\n\n2. 使用以下命令安装该版本\n\n   ```bash theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\n   curl -sSL https://get.digitalasset.com/ | sh\n   ```\n\n有关安装 Daml SDK 的更多信息，请参阅[DPM 安装指南](/sdks-tools/cli-tools/dpm)。"
+}

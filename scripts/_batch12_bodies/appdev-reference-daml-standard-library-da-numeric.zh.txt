@@ -1,0 +1,160 @@
+> Daml 模块 DA.Numeric 参考文档。
+
+<span id="module-da-numeric-17471" />
+
+# DA.Numeric
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 数据类型
+
+<span id="type-da-numeric-roundingmode-53864" />
+
+### `data RoundingMode`
+
+舍入模式。
+
+构造子：
+
+<span id="constr-da-numeric-roundingup-99831" />
+
+* `RoundingUp`
+  远离零舍入。
+
+<span id="constr-da-numeric-roundingdown-63242" />
+
+* `RoundingDown`
+  朝向零舍入。
+
+<span id="constr-da-numeric-roundingceiling-67218" />
+
+* `RoundingCeiling`
+  朝向正无穷舍入。
+
+<span id="constr-da-numeric-roundingfloor-71675" />
+
+* `RoundingFloor`
+  朝向负无穷舍入。
+
+<span id="constr-da-numeric-roundinghalfup-22532" />
+
+* `RoundingHalfUp`
+  舍入到最近邻；若两侧等距则远离零。
+
+<span id="constr-da-numeric-roundinghalfdown-91305" />
+
+* `RoundingHalfDown`
+  舍入到最近邻；若两侧等距则朝向零。
+
+<span id="constr-da-numeric-roundinghalfeven-70729" />
+
+* `RoundingHalfEven`
+  舍入到最近邻；若两侧等距则舍入到偶数邻。
+
+<span id="constr-da-numeric-roundingunnecessary-42017" />
+
+* `RoundingUnnecessary`
+  不舍入。若结果在目标 scale 下无法精确表示则报错。
+
+## 函数
+
+<span id="function-da-numeric-mul-81896" />
+
+### `mul`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+mul : NumericScale n3 => Numeric n1 -> Numeric n2 -> Numeric n3
+```
+
+两个 Numeric 相乘。输入与输出可有不同 scale，不同于 `(*)` 强制相同 scale。溢出时报错，否则按选定 scale 舍入。
+
+<span id="function-da-numeric-div-56407" />
+
+### `div`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+div : NumericScale n3 => Numeric n1 -> Numeric n2 -> Numeric n3
+```
+
+两个 Numeric 相除。输入与输出可有不同 scale，不同于 `(/)` 强制相同 scale。溢出时报错，否则按选定 scale 舍入。
+
+<span id="function-da-numeric-cast-54256" />
+
+### `cast`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+cast : NumericScale n2 => Numeric n1 -> Numeric n2
+```
+
+转换 Numeric。溢出或精度丢失时报错。
+
+<span id="function-da-numeric-castandround-59941" />
+
+### `castAndRound`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+castAndRound : NumericScale n2 => Numeric n1 -> Numeric n2
+```
+
+转换 Numeric。溢出时报错，否则按选定 scale 舍入。
+
+<span id="function-da-numeric-shift-13796" />
+
+### `shift`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+shift : NumericScale n2 => Numeric n1 -> Numeric n2
+```
+
+通过乘以 10^(n1 - n2) 左移或右移小数点。不会溢出或下溢。
+
+<span id="function-da-numeric-pi-88702" />
+
+### `pi`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+pi : NumericScale n => Numeric n
+```
+
+圆周率 π。
+
+<span id="function-da-numeric-epsilon-3092" />
+
+### `epsilon`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+epsilon : NumericScale n => Numeric n
+```
+
+scale 为 `n` 的 Numeric 可表示的最小严格正值。
+
+<span id="function-da-numeric-roundnumeric-41344" />
+
+### `roundNumeric`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+roundNumeric : NumericScale n => Int -> RoundingMode -> Numeric n -> Numeric n
+```
+
+对 `Numeric` 舍入。`round n r a` 的值为按模式 `r` 将 `a` 舍入到 `n` 位小数（scale）。
+
+使用 `RoundingUnnecessary` 且数值无法用至多 `n` 位小数精确表示时会失败。
+
+## 孤儿类型类实例
+
+* `instance NumericScale n => Bounded (Numeric n)`

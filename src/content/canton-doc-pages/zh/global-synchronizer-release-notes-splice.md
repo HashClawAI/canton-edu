@@ -1,0 +1,2701 @@
+---
+title: "Splice 发布说明"
+slug: "global-synchronizer-release-notes-splice"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/release-notes/splice.md"
+source_title: "Splice"
+tags:
+  - global-synchronizer
+  - release-notes
+  - splice
+---
+
+# Splice 发布说明
+
+> Global Synchronizer 软件发布说明与版本历史。
+
+> 全局同步器 软件的发行说明和版本历史记录
+
+## 0.6.6
+
+* 扫描应用程序
+
+  > * 以下已弃用的端点已从公共 API 中删除：
+  > * `/v0/top-validators-by-验证者-faucets`
+  > * `/v0/top-providers-by-app-rewards`
+  > * `/v0/top-validators-by-验证者-rewards`
+  > * `/v0/top-validators-by-purchased-流量`
+
+* 部署
+
+  > * 将 docker 基础镜像切换到 [https://github.com/canton-network/canton-base-images](https://github.com/canton-network/canton-base-images) 以减少攻击面。
+
+## 0.6.5
+
+<警告标题=“重要”>
+  验证者必须在任何 LSU 之前升级到 0.6.5 或更高版本。如果您不及时升级，您的节点将无法接收或提交交易，直到您升级为止。
+</Warning>
+
+* Canton
+
+  > * 修复 LSU 问题，即参与者在冻结时间后重新启动可能会导致丢失 LSU 公告。验证者必须在任何 LSU 之前更新以使用此错误修复。
+
+* 可观察性
+
+  > * 该发行包现在为验证者操作员提供了一个单独的 Grafana 仪表板文件夹 `验证者-grafana-dashboards/`。
+
+* 添加了`canton.scan-apps.scan-app.activity-ingestion-user-version`配置设置来控制活动记录摄取版本，以便从意外的操作问题中恢复。增加此值会导致扫描应用程序记录新的应用程序活动记录完整性下限。奖励核算不包括此边界之前的回合，即使他们的活动记录被保留。因此，提升用户版本与从提升时开始重新初始化应用程序活动记录计算具有相同的效果。有关更多详细信息，请参阅 [SV Operations 文档](/global-synchronizer/deployment/sv-operations#trigger-re-ingestion-of-the-scan-stores)。
+
+* 扫描应用程序
+
+  > * `app_activity_record_store`表已被修改以提高数据库性能。相应的数据库迁移会截断该表中自 `0.5.18` 版本以来已摄取的现有数据，这没关系，因为我们仍处于 CIP-104 的预览阶段。作为此更改的一部分，下游奖励会计表也被清除。
+
+* SV应用程序
+
+  > * 支持`additionalLegacy` 同步器列表，以应对多个遗留同步器必须在给定点保持活动状态的情况。
+
+* 验证者应用程序
+
+  > * 在基于 Docker Compose 的验证者部署中添加了对 `bft-custom` 扫描和Sequencer配置的支持。
+  > * 停止记录更新历史。这些数据从未暴露在未记录的 SQL 表之外，因此除了数据库以较慢的速度增长之外，应该不会有任何影响。
+  >
+  > 如果您需要访问节点上任何一方的数据，请使用分类帐 API。
+
+* SV部署
+
+  > * Sequencer和调解器 Helm Chart 现在在 pod 的安全上下文中设置与参与者、验证者应用程序和 sv 应用程序图表相同的 `fsGroup`、`runAsUser` 和 `runAsGroup`。
+
+* 用户界面
+
+  > * Offline\_access 范围已从 CN UI 中 OAuth 令牌的默认请求范围中删除。当令牌过期时，现在系统将提示用户重新登录，而不是 UI 刷新令牌。
+
+## 0.6.4
+
+<警告标题=“重要”>
+  验证者必须在任何 LSU 之前升级到 0.6.4 或更高版本。如果您不及时升级，您的节点将无法接收或提交交易，直到您升级为止。
+</Warning>
+
+* 钱包和 CNS 用户界面
+
+  > * 钱包和 CNS UI 现在支持选择性配置请求的 OAuth 令牌范围，以支持需要这样做的 IAM 提供商。
+
+* 扫描用户界面
+
+  > * 恢复在 0.5.18 版本中删除的治理页面。
+
+* 钱包用户界面
+
+  > * 修复了钱包分配 UI 中的一个极端情况，即根据分配请求创建分配时，无效值将传递到 `/v0/allocations`。单击分配请求上的 `Accept` 时，这可能会表现为浏览器错误。
+
+* SV应用程序
+
+  > * SV 参与者现在使用公共Sequencer URL 而不是内部 URL 来连接到其Sequencer。这避免了 LSU 周围的一些冗余重新连接，其中参与者 LSU 自动化将设置公共 URL，而 SV 应用程序将设置内部 URL。
+  >
+  > 可以通过通过 `ADDITIONAL_CONFIG` 环境变量设置 `canton.sv-apps.sv.use-internal-sequencer-api = true` 来恢复之前的行为。 LSU 仍将工作，但由于额外的重新连接而速度稍慢。
+
+* SV部署> * Splice Info 端点现在包括 `/runtime/status.json`，它提供每 60 秒刷新一次的核心组件（此时的 sv、扫描和中介器）的状态。 `splice-info` 舵图现在需要指定 `runtimeDetails.migrationId`。
+
+* 扫描
+
+  > * 应用程序活动记录计算已修改为排除 SV 提交的交易，因为 SV 不会消耗流量，并且它们提交的交易不应生成 CIP-0104 中指定的基于流量的应用程序奖励。
+  >
+  > 本版本之前`GET /v0/events/{update-id}`和`POST /v0/events`端点的实验性`app_activity_records`字段提供的数据可能已将应用程序活动归因于SV提交的交易，此类应用程序活动记录应被视为不正确。为其他交易提供的应用程序活动记录数据是有效的。
+  >
+  > 两个端点都不会为本版本之前的事件提供`app_activity_records`。在内部，`app_activity_record_store` 表将被截断，以删除在初始启动时使用早期逻辑计算的记录。
+
+## 0.6.3
+
+* 扫描应用程序
+
+  > * `app_activity_record_store` 表已被修改以避免意外的数据库性能问题。升级到此版本后，该表中自 `0.5.18` 版本以来已摄取的现有数据将被删除，以支持这一点。这会影响通过`app_activity_records`在`/v0/events`和`/v0/events/{update_id}`端点上提供的数据。具体来说，`app_activity_records`字段将不包含为`0.5.18`与此版本之间发生的事件提供的数据。请注意，在此期间已为事件提供的`app_activity_records`数据是正确的，摄取此数据的网络浏览器应保留其副本。
+  > * 添加 `/v1/holdings/summary` 端点，该端点会删除 `accumulated_holding_fees_unlocked`、`accumulated_holding_fees_locked`、`accumulated_holding_fees_total` 和 `total_available_coin` 响应字段以及 `as_of_round` 请求参数，因为这些值不是有意义的聚合。验证者扫描代理上也公开了相同的端点。 `/v0/holdings/summary` 端点现已弃用，但仍然可用。
+
+* SV应用程序
+
+  > * 将最低 DAR 版本升级到 splice 0.5.7 中的版本，该版本引入了开发基金管理器，因为降级到早期版本已经失败。 SV 应用程序自动化将取消对 SV 节点上的应用程序的审查。
+  >
+  > 具体版本为：
+  >
+  > |名称 |版本 |
+  > | ------------------ | -------- |
+  > |Amulet| 0.1.15 |
+  > | amuletNameService | Amulet名称服务0.1.16 |
+  > | dso治理 | 0.1.21 |
+  > |验证者生命周期 | 0.1.6 |
+  > |钱包| 0.1.15 |
+  > |钱包支付 | 0.1.15 |
+  >
+  > * 修复了导入 ACS 快照时由于审核问题导致新 SV 载入可能失败的问题。
+
+* SV部署
+
+  > * 更新`scan-values.yaml`和`sv-验证者-values.yaml`中的`参与方Address`以使用不带迁移后缀的参与者地址。确保使用参与者的正确 helm 安装名称覆盖此设置，或者重新安装不带迁移后缀的参与者。
+  > * CometBFT：将资源请求从 2 个 CPU 和 5Gi 增加到 3 个 CPU 和 7Gi，并将限制从 8Gi 增加到 10Gi，以更好地适应观察到的资源使用情况。
+
+## 0.6.2
+
+注意：由于 DevNet 上发现了回归，因此在 TestNet 和 MainNet 上跳过了 0.6.1 和 0.6.0。
+
+* 扫描应用程序
+
+  > * 请注意，计划在下一版本 (0.6.3) 或最迟在以下版本 (0.6.4) 中删除已弃用的以下端点：
+  > * `/v0/closed-rounds`
+  > * `/v0/top-validators-by-验证者-faucets`
+  > * `/v0/同步器-identities/{domain_id_prefix}`
+  > * `/v0/同步器-bootstrapping-transactions/{domain_id_prefix}`
+  > * `/v0/aggregated-rounds`
+  > * `/v0/round-totals`
+  > * `/v0/round-party-totals`
+  > * `/v0/amulet-config-for-round`
+  > * `/v0/round-of-latest-data`
+  > * `/v0/rewards-collected`
+  > * `/v0/top-providers-by-app-rewards`
+  > * `/v0/top-validators-by-验证者-rewards`
+  > * `/v0/top-validators-by-purchased-流量`
+  > * `/v0/activities`
+  > * `/v0/transactions`
+
+* SV/验证者应用程序> * 不再支持硬域迁移 (HDM) 和基于 HDM 的灾难恢复。特别是：
+  >
+  > * 验证者配置`domain-migration-dump-path`已被删除，
+  > * SV 入门模式`domain-migration` (`name` / `dump-file-path`) 已删除。
+  >
+  > 逻辑同步器升级 (LSU) 现在是协议升级和网络范围灾难恢复唯一受支持的机制。
+  >
+  > * 更新了文档以澄清`MIGRATION_ID`将来不会改变，并且所有验证者都应在可预见的未来保持当前值。
+  >
+  > * 更新了逻辑同步器升级文档，以包含用于灾难恢复的前滚 LSU 的详细信息。
+
+* 部署
+
+  > * 仅 SV：引入了 **序列 ID** 的概念以及用于同步器部署的现有 **迁移 ID**。迁移 ID 现在冻结在其当前值，并且仅配置一次，如 helm 图表值中的 `migration.id` 字段。每次逻辑同步器升级时，序列 ID 都会加 1，并替换同步器（sequencer/mediator/CometBFT）版本名称、DNS 条目、数据库名称、链 ID 和端口号中的迁移 ID。参与者命名和参与者数据库名称继续使用 MIGRATION\_ID，现已冻结。所有示例 YAML 文件和文档均已更新，以使用 `SERIAL_ID` 进行寻址，使用 `MIGRATION_ID` 进行特定于迁移的配置。对于现有网络，`SERIAL_ID` 必须初始设置为 `MIGRATION_ID` 的当前值。新初始化的网络以`SERIAL_ID=0`开始。这还更改了文档中参与者 helm 安装的名称，以及 `sv-values.yaml` 中的 `参与方Address`。您可以使用新名称重新安装舵图，或者确保 `参与方Address` 反映舵图安装的名称。
+  > * 修复了 0.6.1 中引入的回归问题，其中 `reloader.stakater.com/auto` 注释已从 Splice helm 图表呈现的所有部署中默默删除，从而禁用自动重新加载行为，无论 `enableReloader` 值如何。
+
+* Canton
+
+  > * 错误修复和稳定性改进。除此之外，修复了 0.6.0/0.6.1 中的一个回归，该回归会导致参与者随机卡住，需要重新启动才能恢复。
+
+## 0.6.1
+
+注意：0.6.0 已被跳过，因为它引入了回归，其中 SV UI 治理页面可能因 SQL 查询缓慢而变得不可用。
+
+* SV/扫描用户界面
+
+  > * 修复了列出投票结果的查询可能会降级为顺序扫描从而破坏 SV/Scan UI 治理页面的问题。
+
+* SV用户界面
+
+  > * 修复生效日期字段中恢复所选月份的日历
+
+* Canton
+
+  > * 升级至Canton 3.5。请注意，与升级到 3.4 不同，这仍然只是像任何其他升级一样通过 helm 升级或 compose 文件升级来应用。请参考 [UNRELEASED.md](https://github.com/digital-asset/canton/blob/release-line-3.5/UNRELEASED.md) 了解发行说明。稍后将提供更完善的发行说明。
+
+* SV应用程序
+
+  > * 成功降级投票后，SV 应用程序现在会自动取消比 AmuletRules 配置中指定版本*新*的软件包版本。
+
+* 部署> * SV 应用程序现在支持 `copy-votes-from` 设置，可自动镜像另一个名为 SV 的治理投票，这可以帮助操作员在运行多个 SV 节点时保持投票同步。
+  > * SV h​​elm 图表现在支持新的 `同步器s` 值，该值取代了之前的 `domain` 值。新结构允许配置`current`、`successor`和`legacy`同步器节点，每个同步器节点都有`sequencerPublicUrl`、`sequencerAddress`、`mediatorAddress`、可选的`sequencer修剪Config`、`enableBftSequencer`和内联`cometBFT`。 `同步器s.skipInitialization` 字段替换 `domain.skipInitialization`。为了向后兼容，仍接受先前的 `domain` 值，但不能与 `同步器s` 组合。我们强烈建议更新您的 `sv-values.yaml` 以使用新的 `同步器s` 结构，因为 `domain` 值将在未来版本中删除。更新后的配置说明请参见`helm-sv-install`。
+  > * Scan helm 图表现在支持新的 `同步器s` 值，该值取代了之前的顶级 `sequencerAddress`、`mediatorAddress` 和 `bftSequencers` 值。新结构需要`同步器s.current.sequencer`和`同步器s.current.mediator`，并且可以选择支持具有相同字段的`successor`和`legacy`条目，以及每个同步器`bftSequencerConfig.p2pUrl`。为了向后兼容，仍接受以前的 `sequencerAddress` 和 `mediatorAddress` 值，但不能与 `同步器s` 组合。我们强烈建议更新您的 `scan-values.yaml` 以使用新的 `同步器s` 结构，因为以前的值将在未来版本中删除。更新后的配置说明请参见`helm-sv-install`。
+
+* 扫描
+
+  > * 添加了一个新的 `GET /v2/updates/hash/{hash}` 端点，该端点返回与已准备交易的给定外部交易哈希相关的更新。此端点并不总是 BFT 安全的，请参阅 Scan OpenAPI 文档了解详细信息。
+  > * `POST /v0/state/acs` 已被标记为已弃用，并由更新的 `POST /v1/state/acs` 取代。新的`/v1`端点将`/v0`响应中的事件ID替换为（可选）更新ID。 ACS 中每个合同的更新 ID 指的是创建合同的更新。该值保证在所有 Scan 实例中保持一致，因此适合 BFT 读取。对于在之前的迁移 ID 中创建的合约，或者在未来发生灾难恢复的极端情况下，可能会忽略更新 ID。
+
+* 验证者
+
+  > * CN 应用程序（验证者、扫描、SV、钱包）使用的 HTTP 客户端现在遵循标准 `http.nonProxyHosts` Java 系统属性，以绕过为特定主机配置的 HTTP 转发代理。这与 JDK 自身的默认 `ProxySelector` 行为相匹配，因此相同的属性也适用于其他 JVM 出口组件。配置示例请参见`验证者-http-proxy-compose`和`验证者-http-proxy-helm`。
+
+* 本地网络
+
+  > * 添加了对配置 LocalNet 中使用的协议版本的支持。
+
+* 参加者
+
+  > * 默认设置`commitment-use-db-snapshot-for-参与方-lookup = true`。如果您手动设置此项，则可以删除覆盖。
+
+* 达米尔> * 删除回滚节点的使用以支持协议版本 35
+  >
+  > > * `AmuletRules`。将 `InvalidTransfer` 异常替换为 `failWithStatus`：
+  >>
+  > > > * `ITR_InsufficientFunds` → `FailureStatus` 有错误\_id = `splice.lfdecentralizedtrust.org/insufficient-funds`
+  > > > * `ITR_Unknown同步器` → `FailureStatus` 有错误\_id = `splice.lfdecentralizedtrust.org/unknown-同步器`
+  > > > * `ITR_InsufficientTopupAmount` → `FailureStatus` 有错误\_id = `splice.lfdecentralizedtrust.org/insufficient-topup-amount`
+  > > > * `ITR_Other ("More than the maximum number of inputs")` → `FailureStatus` 有错误\_id = `splice.lfdecentralizedtrust.org/maximum-inputs-exceeded`
+  > > > * `ITR_Other ("More than the maximum number of outputs")` → `FailureStatus` 有错误\_id = `splice.lfdecentralizedtrust.org/maximum-outputs-exceeded`
+  >>
+  > > * `钱包AppInstall_ExecuteBatch`。不再捕获异常并将其返回为 `AmuletOperationOutcome` / `COO_Error`。相反，交易会被中止。
+  >>
+  > > * `TransferCommand_Send`。不再捕获异常并将其作为 `TransferCommandResultFailure` 返回。相反，交易会在不合并输入的情况下中止。
+  >>
+  >> * `DsoRules_CloseVoteRequest` 不再捕获异常。此前，它将以结果 `VRO_AcceptedButActionFailed` 结束投票请求。现在，事务将在失败时中止。
+  >
+  > * 用于拼接 DAR 的 Daml 编译器已升级至 3.4.11。
+  >
+  > * Daml 更改需要升级到以下版本：
+  >
+  > > |名称 |版本 |
+  > > | ------------------ | -------- |
+  > > |Amulet| 0.1.18 |
+  > > | amuletNameService | Amulet名称服务0.1.19 |
+  > > | dso治理 | 0.1.24 |
+  > > |验证者生命周期 | 0.1.7 | 0.1.7
+  > > |钱包| 0.1.19 |
+  > > |钱包支付 | 0.1.18 |
+
+## 0.5.18
+
+* SV应用程序
+
+  > * 在 SV 应用程序配置中添加了新的可选配置映射 `additionalPackagesToUnvet`，用于取消其他受支持的软件包。这只是作为一种安全措施，以增加在出现重大问题时降级到以前版本的能力，或防止使用损坏和不安全的软件包。有关此新配置的更多信息，请参阅 Unvet 不安全软件包版本指南。
+
+* 部署
+
+  > * 我们添加了对 [Stakater Reloader](https://github.com/stakater/Reloader) 注释的支持，该注释会在 pod 引用的 Secret 或 ConfigMap 发生更改时执行滚动重启。默认情况下，所有 Splice Helm 图表中都包含注释。您可以通过在 Helm 值文件中将 `enableReloader` 设置为 `false` 来禁用它。 Reloader必须单独安装；如果不存在，则该注释是无害的并且将被忽略。另请参阅 验证者 和 SV Helm 指南中的新部署技巧。
+
+* 扫描> * 以下选项卡和功能已从扫描 UI 中删除。它们相应的 API 端点仍然可用，但已弃用，并将很快被删除。强烈建议用户尽快迁移到未弃用的 API 端点。
+  >
+  >> * 粤币活动
+  >> * 近期活动列表，以及所有排行榜
+  >> * 应用程序和验证者奖励总额
+  >> * 计算内容的当前轮次（不再列出基于轮次的数据）
+  >> * 该选项卡已更名为“Canton币配置”
+  >> * 治理
+  >> * 完全删除
+  >> * 验证者
+  >> * 完全删除
+  >
+  > * 改善更新和事件历史记录的 CPU 使用率。
+  >
+  > * Scan 现在提取并提供应用程序活动记录以获取基于流量的奖励，从而提供 [CIP-104 增量推出计划](https://github.com/canton-foundation/cips/blob/main/cip-0104/cip-0104.md#incremental-roll-out) 中的增量 2 和 3。
+  >
+  > 来自`/v0/events`和`/v0/events/{update_id}`的回应[端点](https://github.com/canton-network/splice/blob/004f19622e4a145840f18d3fda9d71c9a751a282/apps/scan/src/main/openapi/scan.yaml#L1579-L1639) 现在包括 `流量_summary` （[架构]（https://github.com/canton-network/splice/blob/004f19622e4a145840f18d3fda9d71c9a751a282/apps/scan/src/main/openapi/scan.yaml#L4007-L4026））和`app_activity_records` ([架构](https://github.com/canton-network/splice/blob/004f19622e4a145840f18d3fda9d71c9a751a282/apps/scan/src/main/openapi/scan.yaml#L4027-L4063)) 字段。
+
+  <Note>
+    这些新字段使 Canton Network 社区能够开始验证基于流量的奖励模型，并为未来全面推出 CIP-104 做好准备。
+
+    **网络浏览器运营商**：考虑在网络浏览器应用程序中提取流量摘要和应用程序活动记录以及调解器判决，并使用它们在 CIP-104 上线时提供基于流量的预期应用程序奖励的每笔交易和每轮预览。
+
+    **应用开发者**：查看您的应用的应用活动记录，了解基于流量的应用奖励对您的应用的影响。请记住，奖励取决于您应用程序的确切交易结构，当您停止在交易中创建 `FeaturedAppActivityMarker` 合约时，该结构可能会发生变化。基于流量的应用奖励还取决于交易对手方的特色应用状态。因此，DevNet、TestNet 和 MainNet 之间的预期奖励可能有所不同，因为具有不同的应用程序。
+
+    新字段在 API 规范中被标记为实验性字段，因为验证可能表明需要进行更改。但很可能情况并非如此。
+  </Note>
+
+* Canton
+
+  > * 使用 BFT Sequencer连接和请求放大时频繁出现 `SEQUENCER_SUBMISSION_REQUEST_REFUSED` 错误的原因已得到解决。将 `canton.sequencers.sequencer.sequencer-client.amplify-on-max-sequencing-time-too-far` 设置为 `false` 以恢复之前的行为。
+  >
+  >> * 对于 `maxSequencingTime` 距Sequencer视图太远的事务（通常当Sequencer正在追赶并落后于处理时），`SequencerService.sendAsync` gRPC 服务现在将返回 `SEQUENCER_MAX_SEQUENCING_TIME_TOO_FAR` 而不是 `SEQUENCER_SUBMISSION_REQUEST_REFUSED`。这是一个重大的 API 更改。
+  >
+  > * Ledger JSON API `v2/package-vetting` 端点已被弃用，取而代之的是两个新端点：`v2/package-vetting/list` 和 `v2/package-vetting/update`。这些新端点在功能上是相同的，但更符合 HTTP 规范和工具。
+
+## 0.5.17
+
+* SV
+
+* 此次升级再次推荐 BFT Sequencer连接。要启用它们，请删除配置标志以从 SV 和用于禁用它们的验证者配置中禁用它们。
+
+* SV 和验证者应用程序> * 未来不可用的拼接 DAR 将自动未经超级验证者的审查。这将用于已经无法使用的 DAR，例如，因为不可能将 AmuletRules 降级到该版本，所以它不会强制验证者或应用程序开发人员进行更积极的升级。
+  >
+  > 支持的最低版本为：
+  >
+  > > |名称 |版本 |
+  > > | ------------------ | -------- |
+  > > |Amulet| 0.1.14 |
+  > > | amuletNameService | Amulet名称服务0.1.14 |
+  > > | dso治理 | 0.1.19 |
+  > > |验证者生命周期 | 0.1.5 | 0.1.5
+  > > |钱包| 0.1.14 |
+  > > |钱包支付 | 0.1.14 |
+
+* 扫描
+
+  > * 添加了一个新的 `/v1/domains/{domain_id}/parties/{party_id}/参与方-id` 端点，该端点返回托管给定参与方的所有参与者 ID，支持托管在多个参与者上的参与方。之前的`/v0`端点仅支持单参与者托管。
+  > * 在 `GET /v1/updates/{update-id}`、`GET /v2/updates/{update-id}`、GET `/v1/updates` 和 GET `/v2/updates` 端点的响应中添加了可选的 `external_transaction_hash` 字段。虽然目前尚未设置，但该字段最终将包含外部各方签名的交易哈希值。
+  > * **实验性**：向 `GET /v0/events/{update-id}` 和 `POST /v0/events` 端点的响应添加了可选的 `app_activity_records` 字段。目前尚未设置，但最终将包括流量摘要，并且应用程序活动记录将与事件历史记录项目中的判决一起包含在内。这是 CIP-104 预览版的一部分，可能会发生变化。一旦 SV 成功完成性能测试，应用程序活动记录计算将在开发/测试/主网上逐步启用。
+
+* SV用户界面
+
+  > * 修复了 SV UI，以正确处理多个参与者托管的各方（例如，DSO 方）。
+
+* 本地网络
+
+  > * LocalNet 现在支持并行运行多个同步器以测试多同步器场景。默认情况下，仅`global`同步器处于活动状态。要启用名为 `app-同步器` 的第二个同步器，请使用 `multi-sync` Docker Compose 配置文件 (`--profile multi-sync`) 启动 LocalNet。 `app-provider`和`app-user`参与者节点交叉连接到两个同步器。详情请参阅`multi-sync-localnet`。
+
+## 0.5.16
+
+* 达米尔
+
+**应用程序开发人员建议的操作：**
+
+**其应用程序的 Daml 代码静态依赖于** `splice-amulet < 0.1.17` 的应用程序开发人员应重新编译其 Daml 代码以链接到 `splice-amulet >= 0.1.17`，以便准备好使用添加到 `AmuletRules` 的新字段 `contractStateSchemaVersion`。
+
+这是必需的，因为一旦设置了新字段，`AmuletRules` 的降级将会失败。请注意，此升级后不会自动设置该字段。强烈建议避免对amulet的直接依赖，而通过token标准接口将其替换为依赖。
+
+针对 `token_standard` 或 `featured_app_activity_markers_api` 构建的应用程序无需进行任何更改。
+
+* 限制 `AmuletConfig` 不允许将费用作为 [CIP 107](https://github.com/canton-foundation/cips/blob/main/cip-0107/cip-0107.md) 的一部分。这没有任何功能影响，因为 [CIP 78](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) 已将费用设置为零。
+
+  这也会禁用选项 `AmuletRules_ComputeFees`，因为它始终返回 0。静态链接到 `splice-amulet` 的应用程序提供程序将需要在针对新的 `splice-amulet` 版本重新编译时删除此选项的使用。
+
+* 支持代币标准 CC 转账和分配的 24 小时签名延迟，请参阅 [CIP 107](https://github.com/canton-foundation/cips/blob/main/cip-0107/cip-0107.md)。* 此更改涉及令牌标准 API 的 CC 实现，因此这些 API 的客户端无需进行任何更改即可使用新的 24 小时提交延迟。但是，Scan 返回的选择上下文略有不同，因此请确保您的应用程序以不透明的方式传递该上下文。
+  * 作为此更改的一部分，对 `AmuletConfig` 施加了额外的约束。 DevNet、TestNet 和 MainNet 上的当前配置满足所有这些约束：
+    * CC 使用费不能再设置为非零值。它们在 CIP 78 中被设置为零。
+    * `extraFeaturedAppRewardAmount` 不能再设置为与 `featuredAppActivityMarkerAmount` 不同的值。这两个当前都设置为 \$1。
+    * `AmuletRules`上的配置时间表不能再包含`futureValues`。 CIP 51 中删除了通过 UI 执行此操作的功能，但理论上仍然可以通过内部 API 进行设置。
+  * 这确实改变了交易结构，特别是`AmuletRules_Transfer`不再是代币标准操作和其他一些选择的子节点。符合令牌标准的历史解析不应需要调整。然而，直接解析 Splice 选择的应用程序和钱包可能需要调整。
+  * 已删除对已锁定Amulet上的锁定在基础Amulet过期之前过期的检查。
+
+* `TransferCommand` 已弃用，并将在未来版本中删除。它最初是为了支持 24 小时签名延迟而引入的，现在不再需要它了，因为这也可以通过令牌标准 API 获得。这也适用于相应的验证者 API `/v0/admin/external-party/transfer-preapproval/prepare-send` 和 `/v0/admin/external-party/transfer-preapproval/submit-send`，应将其替换为令牌标准 API。
+
+* 将`sv`方缺失的验证添加到`DsoRules_ClaimExpiredRewards`。
+
+* 为 AmuletTransferInstruction 添加缺少的 TransferInstruction\_Update 选择以支持过期。
+
+* 添加 AmuletAllocation\_DsoExpire 选择以支持过期分配的过期。
+
+这些 Daml 更改需要在**投票之前**升级到以下 Daml 版本，以将转账费用设置为零：
+
+|名称 |版本 |
+| ------------------ | -------- |
+|Amulet| 0.1.17 |
+| amuletNameService | Amulet名称服务0.1.18 |
+| dso治理 | 0.1.23 |
+|验证者生命周期 | 0.1.6 |
+|钱包| 0.1.18 |
+|钱包支付 | 0.1.17 |
+
+* 验证者应用程序
+
+验证者 API `/v0/admin/external-party/transfer-preapproval/prepare-send` 和 `/v0/admin/external-party/transfer-preapproval/submit-send` 已弃用，并将在未来版本中删除。通过调用令牌标准 API 来替换验证者 API 端点的任何用法。
+
+* 修复了当`scanClient.seedUrls`中定义的扫描应用程序不可用时导致验证者应用程序在重新启动期间失败的错误。此修复可确保验证者应用程序使用先前运行中的持久扫描连接，从而消除对成功重新启动所需的 SeedUrls 扫描可用性的依赖。
+
+* 钱包用户界面
+
+  * 扩展`/development-fund`页面，使受益人可以看到有效的优惠券。注意：受益人不能提取优惠券。
+  * 更新`/development-fund`页面警告消息，以反映受益人对活动和历史优惠券的可见性。
+
+* 扫描
+
+  * 提高 ACS 快照生成的性能，减少数据库活动中周期性峰值的幅度，并避免有关咨询锁的日志警告。
+  * 添加新的 Grafana 仪表板来监控 ACS 快照生成的进度。
+
+* 基础设施
+
+  * 将所有 Splice 和 Canton 映像的 JDK 基础映像从 21.0.7 更新到 21.0.10 (Eclipse Temurin)。这包括对 [JDK-8347811](https://bugs.openjdk.org/browse/JDK-8347811) 的修复，该修复导致 cgroupv2 主机上的 cgroup 控制器检测不正确，可能导致 JVM 忽略容器内存和 CPU 限制。
+
+* Canton* 新字段`paid_流量_cost`公开了节点在完成事件和更新事件上支付的流量成本
+    * 完成时，该字段包含节点为提交交易而支付的成本。对于未产生任何流量成本的失败交易，可能为 0。
+    * 在更新时，该字段包含节点为提交交易而支付的成本（如果该节点上和查询方可用）。特别是，成本仅在提交节点上以及使用包含提交方的过滤器进行查询时可用。该费用可用于 Daml 交易和重新分配。不适用于拓扑事务。
+
+## 0.5.15
+
+* 验证者应用程序
+
+  * 删除 `new-sequencer-connection-pool` 标志，因为它没有做它应该做的事情。如果您确实设置了它，则无论您是否在参与者中禁用新的Sequencer连接池，都可以安全地删除它。
+
+* 扫描
+
+  * **实验性**：将可选的 `流量_summary` 字段添加到 `GET /v0/events/{update-id}` 和 `POST /v0/events` 端点的响应中。当通过 SV 配置启用时，流量摘要将与事件历史记录项目中的判决一起包含在内。这是 CIP-104 预览版的一部分，可能会发生变化。
+
+    一旦 SV 成功完成其性能测试，流量摘要将在开发/测试/主网上逐步启用。
+
+* 钱包用户界面
+
+  * 引入新的 `/development-fund` 面板，提供用于管理发展基金分配的完整 UI（请参阅 [CIP-0082](https://github.com/canton-foundation/cips/blob/main/cip-0082/cip-0082.md) 和[CIP-0100](https://github.com/canton-foundation/cips/blob/main/cip-0100/cip-0100.md) 上下文）。
+  * 面板包括：
+    * 显示可用发展基金余额总额
+    * 发展基金优惠券分配表（仅限发展基金管理人）
+    * 无人认领分配表，支持提款
+    * 具有生命周期事件跟踪的优惠券历史记录（领取、撤回、拒绝、过期）
+  * 强制执行基于角色的行为：
+    * 简单用户：只读访问资金总额
+    * 当前发展基金经理：完整的分配和提取能力
+    * 前发展基金经理：可以管理和查看在其任期内创建的分配，但不能创建新的分配
+
+* 文档
+
+  * 添加新的`development_fund`页面记录发展基金。
+
+* Canton
+
+* 修复新拓扑客户端缓存的bug。建议删除在参与者和Mediator配置中设置的临时附加标志`ADDITIONAL_CONFIG_DISABLE_NEW_TOPOLOGY_CLIENT`。
+
+  * JSON API：oneOf 包装器类型中的合成 `value` 字段（例如，`AssignCommand`、`UnassignCommand`、`Completion`）现在在 OpenAPI 和 AsyncAPI 规范中标记为必需，与这些字段必须始终存在的实际 API 逻辑相匹配。
+
+## 0.5.14
+
+* 参加者
+  * 增加[会话加密密钥缓存](https://docs.digitalasset.com/operate/3.4/howtos/optimize/session_keys.html#configure-session-keys)的默认保留参数。最值得注意的是，将会话加密密钥的生命周期从 10 分钟增加到 1 小时，以提高性能并降低整个网络的 (KMS) 成本。对于不使用外部 KMS 的参与者来说，此更改没有实际的安全影响：在这种情况下，主要（非对称）加密密钥通常已在内存中可用（除了存储在参与者数据库内）。我们鼓励启用 KMS 的参与者的操作员查看有关验证者参与者和 SV 参与者的 KMS 使用的更新部分，以获取有关会话密钥缓存的安全影响以及根据个人需求调整相关参数的方法的更多指示。
+* SV应用程序
+  * 改进转换特色应用程序活动标记的自动化，以处理尚未审查相同版本Amulet包的节点的批量标记。
+* 验证者应用程序
+  * 当设置 Helm 中的环境变量 `SPLICE_APP_DARS` 或 `.appDars` 时，防止在 DEBUG 级别记录机密。
+* Canton
+  * 修复了Sequencer启动可能需要 10 分钟以上的时间的问题。
+  * API：
+    * *打破*
+
+      > * `/v2/updates` HTTP POST 和 websocket GET 端点
+      > * `/v2/updates/flats` HTTP POST 和 websocket GET 端点错误地重新调整了 LedgerEffects 事件（即 `CreatedEvent` 和 `ExercisedEvent`）。它们现在已更正为返回 AcsDelta（平坦）事件（即 `CreatedEvent` 和 `ArchivedEvent`）。
+
+    * `GetUpdatesRequest.updateFormat` 现在在 OpenAPI/AsyncAPI 规范中显示为必需，尽管它​​以前是可选的。这是一个规范修复，旨在与需要此字段的 API 的实际行为保持一致。如果您的客户端代码之前省略了此字段，您将需要更新它以包含有效值。
+
+## 0.5.13
+
+* SV 参与者
+  * 现在支持并推荐超级验证者的参与者修剪。请按照文档获取有关如何启用它的说明。
+* 扫描txlog脚本
+  * scan\_txlog.py 脚本已被弃用。它将不会继续维护，并将在未来的版本中完全删除。有兴趣了解如何从历史记录中解析交易的用户可以参考阅读和解析涉及代币标准合约的交易历史记录部分。
+* Canton
+  * JSON Ledger API OpenAPI/AsyncAPI 规范更新
+    我们更正了 OpenAPI 和 AsyncAPI 规范文件，以正确反映 Ledger API `.proto` 文件中定义的字段要求。此外，规范文件现在在其文件名中包含 Canton 版本（例如 `openapi-3.4.11.yaml`）。
+
+    > * 影响和迁移如果您从这些更新的规范重新生成客户端代码，您的代码可能需要由于更正的字段可选性而进行更改。您有两个选择：
+    >
+    > * **继续使用旧规范** - JSON API 服务器保持与先前规范版本的向后兼容性。
+    > * **升级到新规范** - 更新您的客户端代码以处理更正的可选/必填字段：
+    > * **Java（OpenAPI 生成器）**：代码无需更改即可编译，但静态分析工具可能会标记可空性差异。
+    > * **TypeScript**：根据需要使用 `!` 或 `??` 运算符处理可选字段。
+    >
+    > JSON API 服务器与所有 3.4.x 版本（例如 3.4.9）的规范文件保持兼容。
+
+  * Sequencer检验服务
+
+    Sequencer的管理 API 上提供了一项新服务。它提供了一个 RPC，允许查询排序事件的流量摘要。有关更多详细信息，请参阅[流量文档](https://docs.digitalasset.com/subnet/3.4/howtos/operate/流量.html)。
+
+  * 小改进
+
+    * `sequencer-client.enable-amplification-improvements` 标志现在默认为 `true`
+    * 新的连接池：
+      * 连接 gRPC 通道现在可以正确使用定义的客户端保持活动配置。 **如果您之前因问题而禁用了新连接池，请重新启用它们并报告任何问题。**
+      * 连接 gRPC 通道现在配置为 `maxInboundMessageSize` 设置为 `MaxInt`，而不是默认的 4MB（将来将改进以使用动态同步器参数 `maxRequestSize`）。
+    * 在保持活动 gRPC 客户端配置中添加了 `keep-alive-without-calls` 和 `idle-timeout` 配置值。有关详细信息，请参阅https://grpc.io/docs/guides/keepalive/#keepalive-configuration-specification](https://grpc.io/docs/guides/keepalive/#keepalive-configuration-specification)。请注意，当启用`keep-alive-without-calls`时，必须在服务器端启用`permit-keep-alive-without-calls`，并调整`permit-keep-alive-time`以允许来自客户端的可能更高的保持活动频率。
+
+`keep-alive-without-calls` 可能会对性能产生负面影响。打开时要小心，一般情况下，如果可能的话，更喜欢使用`idle-timeout`。
+
+|配置|默认值 |
+| ------------------------ | ------------ |
+|无需呼叫即可保持活动状态 |假 |
+|空闲超时 | 30 分钟 |
+
+`idle-timeout` 的值应设置为低于客户端和服务器之间网络堆栈中的超时值。特别是检查负载均衡器的空闲超时配置。 [AWS ALB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html)、[AWS NLB](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/update-idle-timeout.html) 的默认值[GCP](https://docs.cloud.google.com/load-balancing/docs/https/request-distribution#http-keepalive-timeout)。
+
+例子：参与者配置：
+
+```python theme={"theme":{"light":"github-light","dark":"github-dark"}}
+canton.参与方s.参与方.sequencer-client.keep-alive-client.idle-timeout = 5 minutes
+# And / Or
+canton.参与方s.参与方.sequencer-client.keep-alive-client.keep-alive-without-calls = true
+canton.参与方s.参与方.sequencer-client.keep-alive-client.keep-alive-time = 6 minutes
+```
+
+Sequencer配置：
+
+```python theme={"theme":{"light":"github-light","dark":"github-dark"}}
+# Must be enabled if keep-alive-without-calls is enabled on the client side
+canton.sequencers.sequencer.public-api.keep-alive-server.permit-keep-alive-without-calls = true
+canton.sequencers.sequencer.public-api.keep-alive-server.permit-keep-alive-time = 5 minutes
+```
+
+* 如果确认请求或确认响应的验证由于拓扑更改的竞争而失败，则将某些警告的日志级别降低到 INFO 级别。
+
+* 错误修正
+
+  * 将 gRPC 服务 `SequencerService.subscribe` 和 `SequencerService.download拓扑StateForInit` 切换为手动控制流，以便Sequencer在响应缓慢的客户端时不会因 `OutOfMemoryError` 崩溃。
+  * 当使用`sequencer-client.use-new-connection-pool = false`禁用新连接池时，连接池的运行状况不再作为`<node>.health.status`中的组件报告（修复之前，连接池组件将报告“未初始化”状态）。
+  * 修复了调解器中的竞争条件，该条件可能导致无效请求的判决不会发送到正在进行的检查服务流。如果您使用`canton.mediators.mediator.mediator.asynchronous-processing = false`禁用了异步处理，您现在可以删除此覆盖。
+
+## 0.5.12
+
+* 钱包后端
+  * 修复了一个错误 ([#3970](https://github.com/canton-network/splice/issues/3970))，该错误导致 0.5.11 之前的 Splice 版本创建的条目的交易历史记录无法在后端解码，因此不会显示在钱包 UI 中。这些条目现在再次显示在钱包用户界面中。
+* 验证者
+  * 添加对 **扫描** 和 **Sequencer** 连接的自定义容错配置的支持。请参阅基于 Helm 的部署的更新文档。这引入了新的配置键`scanClient`和`同步器`作为配置**扫描**和**Sequencer**连接的新推荐方法。现有配置选项 `scanAddress`、`nonSv验证者TrustSingleScan`、`decentralized同步器Url`、`useSequencerConnectionsFromScan` 仍受支持，但将在未来版本中弃用。我们建议尽快迁移到新的 `scanClient` 和 `同步器` 配置选项。基于 Docker Compose 的部署当前不支持新的自定义配置选项。
+* 钱包用户界面
+  * 钱包 UI 交易历史记录现在使用当前Amulet兑换率来转换金额，而不是历史兑换率，以减少维护开销。
+* 扫描用户界面
+  * 扫描 UI 交易历史记录现在使用当前Amulet兑换率来转换金额，而不是历史兑换率，以减少维护开销。
+* SV用户界面
+  * 彻底修改治理 UI（以前的`/governance-beta`，现在的`/governance`）。旧的 UI 仍然可以在 `/governance-old` 下访问。
+
+## 0.5.11
+
+<Warning>
+  **SV 节点运营商必须仅在所有其他 SV 节点运行 Splice 0.5.10 或更高版本的网络上部署此版本！** 否则Sequencer将在确认响应的流量成本上存在分歧并分叉账本。
+
+  原因是运行 Splice 0.5.10 之前的代码的Sequencer节点不会解析新的动态域参数，该参数用于对所有 SV 节点上的确认响应的流量成本进行协调更新。因此，这些Sequencer将忽略流量成本计算的变化。
+
+  验证者节点操作员不受此要求的影响，因为更改仅影响Sequencer节点。
+</Warning>
+
+* SV应用程序
+
+  * 添加新的配置参数来控制 SV 应用是否应在动态域参数中启用免费确认响应。默认情况下，此新参数设置为`true`，因此 SV 运营商无需手动更改配置即可在运行此版本 Splice 的网络上启用免费确认响应。此更改实现了 [CIP-104 - 基于流量的应用奖励](https://github.com/canton-foundation/cips/blob/main/cip-0104/cip-0104.md#incremental-roll-out) 中的增量 1“使用启发式实现免费确认响应”。
+
+* 验证者和 SV 应用程序
+
+  > * `splice-util-batched-markers` dar 现在自动上传。
+
+* 达米尔
+
+  * 优化 SV 应用程序运行的自动化视图数量，将`FeaturedAppActivityMarker`合约转换为`AppRewardCoupon`合约。
+
+  * 支持特色应用标记的加权。这可以通过新的`splice-api-featured-app-v2`包中的新的`BatchedMarkersProxy_CreateMarkersV2`或`FeaturedAppRight_CreateActivityMarkerV2`选择来使用。请注意，这是为了创建与应用程序消耗成比例的标记，而不是为了增加从常规应用程序活动创建的标记的权重，例如增加作为传输一部分创建的标记的权重。有关详细的使用指南，请参阅tokenomics 委员会。
+
+    这需要将 Daml 升级到
+
+    > |名称 |版本 |
+    > | ------------------ | -------- |
+    > |Amulet| 0.1.16 |
+    > | amuletNameService | Amulet名称服务0.1.17 |
+    > | dso治理 | 0.1.22 |
+    > |验证者生命周期 | 0.1.6 |
+    > |钱包| 0.1.17 |
+    > |钱包支付 | 0.1.16 |
+
+## 0.5.10
+
+* 部署
+  * postgres-exporter：禁用导出设置表，以解决[postgres-exporter 的问题](https://github.com/prometheus-community/postgres_exporter/issues/1240)。
+  * 通过 Docker compose 部署的 Splice 应用程序和 Canton 组件现在默认记录在 `INFO` 级别，而不是`DEBUG`。如果您确实想更改此设置，请在运行 `./start.sh` 之前导出 `LOG_LEVEL` 环境变量。例如，`export LOG_LEVEL="DEBUG"; ./start.sh`。
+* SV应用程序
+  * 为即将到期的发展基金优惠券添加新触发器`ExpiredDevelopmentFundCouponTrigger`。
+* 钱包用户界面
+  * 从交易历史记录中删除提供商字段。
+* 扫描用户界面
+  * 从交易历史记录中删除提供商字段。更新 API 继续公开它。
+* 达米尔
+  * 添加`splice-util-batched-markers`包，支持在单个视图的事务中创建一批`FeaturedAppActivityMarkers`，处理效率更高。请注意，此包尚未自动上传到验证者（或超级验证者）节点。有关更多详细信息，请参阅包文档。
+
+## 0.5.9
+
+* 扫描
+  * 添加了`canton.scan-apps.scan-app.acs-store-descriptor-user-version`和`canton.scan-apps.scan-app.tx-log-store-descriptor-user-version`配置设置，分别为ACS和TxLog存储设置`user-version`。修改 `user-version` 会擦除相应的存储并触发重新摄取。有关更多详细信息，请参阅 SV 操作文档。
+  * 添加了新的外部端点`GET /v0/unclaimed-development-fund-coupons`来检索所有活跃的无人认领的发展基金优惠券合同。
+* 达米尔
+  * 实施 [CIP-0073 - SV 选择方的加权验证者活跃度奖励](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0073/cip-0073.md) 一部分所述的铸币委托。有关详细信息，请参阅铸造委托部分。
+
+    * `splice-钱包`包中添加了新模板：
+      * **铸造DelegationProposal**：代表受益人向受托人提出创建`铸造Delegation`的提案。
+      * **铸造Delegation**：代表一个活跃的委托，授予委托人代表受益人铸造奖励的权力。
+
+    在所有验证者上启用此功能需要 SV 对以下 Daml 版本进行投票：|名称 |版本 |
+    | ------ | -------- |
+    |钱包| 0.1.16 |
+* 钱包
+  * 添加了新的内部端点`POST /v0/钱包/development-fund-coupons/allocate`，用于为给定受益人、金额、到期时间和原因分配发展基金优惠券。
+  * 添加了新的内部端点`GET /v0/钱包/development-fund-coupons`，用于检索所有活跃的DevelopmentFundCoupon合约，按到期日期排序，其中钱包用户方是开发基金管理者或受益人。
+  * 新增内部端点`POST /v0/钱包/development-fund-coupons/{contract_id}/withdraw`，当钱包用户方为开发基金管理人时，可用于提取开发基金优惠券。
+  * 钱包 UI 中添加了对管理铸币委托的支持。有关详细信息，请参阅铸造委托部分。
+  * 增强奖励领取自动化，支持领取发展基金优惠券。
+* 验证者
+  * 如果托管外部方与内部方有有效的 `铸造Delegation` 合同，则添加自动化来为托管外部方执行铸币。
+
+## 0.5.8
+
+注意：0.5.7 引入了与参与者、Mediator和Sequencer上的拓扑事务处理相关的显着性能回归。请跳过0.5.7，直接升级到0.5.8。
+
+* Canton
+  * 修复与拓扑事务处理相关的性能回归。
+  * 提高参与者修剪中使用的一些查询的性能。该修复包括数据库迁移，该过程最多可能需要 2 分钟，但对于大多数参与者来说应该更快。
+* 扫描
+  * 已弃用的 `/v0/total-amulet-balance` 和 `/v0/钱包-balance` 端点已被删除，转而分别使用 /registry/metadata/v1/instruments/{instrumentId} 和 /v0/holdings/summary。
+* 部署
+  * 默认记录器已切换为对所有节点使用异步附加程序，以获得更好的性能。通过设置环境变量`LOG_IMMEDIATE_FLUSH=true`，可以将行为切换回同步日志记录。现在也包括 helm 部署，在 0.5.7 中，默认值仅针对 docker-compose 部署进行了更改。
+
+  * 此版本破坏了与 0.4.x 版本上的迁移转储的向后兼容性。请确保您使用`migrating: false`（helm）/不使用`-M`（docker-compose）进行部署。对于基于 helm 的验证者部署：
+
+    在某些情况下，删除 `migrating` 标志后，helm 可能无法正确更新状态。您可以在升级之前通过`kubectl describe deployment -n 验证者 验证者-app`检查是否已正确应用并查找此环境变量：
+
+    ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    - name: ADDITIONAL_CONFIG_VALIDATOR_MIGRATION_RESTORE
+      value: |
+        canton.验证者-apps.验证者_backend.restore-from-migration-dump = "/domain-upgrade-dump/domain_migration_dump.json"
+    ```
+
+    如果您看到它，则部署仍处于激活状态 `migrating: true`。例如，您可以通过卸载并重新安装验证者 helm 版本（但不包括参与者和 postgres）来清除该标志。您可以直接重新安装新版本，也可以先重新安装旧版本，然后再升级。
+
+## 0.5.7
+
+达米尔：
+
+<警告标题=“重要”>
+  **应用程序开发人员建议的操作：**
+
+  **其应用程序的 Daml 代码静态依赖于** `splice-amulet < 0.1.15` 的应用程序开发人员应重新编译其 Daml 代码以链接到 `splice-amulet >= 0.1.15`，以便准备好使用 `AmuletConfig` (`optDevelopmentFundManager`) 和 `IssuanceConfig` (`optDevelopmentFundPercentage`) 中引入的两个新字段（一旦设置其中一个）。
+
+  这是必需的，因为一旦设置了新字段，`AmuletRules` 的降级将会失败。目前，并不严格要求重新编译，因为没有立即计划设置这些字段。
+
+  针对 `token_standard` 或 `featured_app_activity_markers_api` 构建的应用程序无需进行任何更改。
+</Warning>> * Sequencer连接
+>
+> * 修复了 splice 0.5.6 中Sequencer连接逻辑中导致参与者随机崩溃并重新启动的问题。
+>
+> * 达姆尔
+>
+> * 对 [CIP-0082 - 建立 5% 发展基金（基金会管辖）](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0082/cip-0082.md) 实施 Daml 更改：
+>
+>> - 新模板：
+>> * **无人认领的发展基金优惠券**：代表每轮发行创建的未分配发展基金权利。优惠券归 DSO 所有，没有期限，可作为会计工具。 ACS 大小是通过合并而不是过期来管理的。
+>> * **发展基金优惠券**：代表为特定受益人分配的发展基金部分。优惠券可以由发展基金经理撤回或由 DSO 过期，在这两种情况下都会将金额恢复为无人认领的优惠券。
+>> - 配置扩展：
+>> * `IssuanceConfig` 通过可选的 `optDevelopmentFundPercentage` 进行扩展，定义了分配给发展基金的每个铸币的比例（经验证在 `[0.0, 1.0]` 范围内）。
+>> * `AmuletConfig` 扩展为可选的 `optDevelopmentFundManager`，指定授权分配发展基金权利的一方。
+>> - AmuletRules 更新：
+>> * 修改`AmuletRules_MiningRound_StartIssuing`：发行逻辑现扣除发展基金份额再发放奖励。配置非零分配时，每轮都会创建一个新的`UnclaimedDevelopmentFundCoupon`。如果 `optDevelopmentFundPercentage` 是 `None`，则应用默认值 **0.05**。因此，一旦新的 Daml 模型被投票通过，`UnclaimedDevelopmentFundCoupon` 合约就开始累积。
+>> * 一种新选择`AmuletRules_MergeUnclaimedDevelopmentFundCoupons`：添加批量合并操作，将多个`UnclaimedDevelopmentFundCoupon`合约合并为一个合约，以控制ACS大小。
+>> * 新选择`AmuletRules_AllocateDevelopmentFundCoupon`：允许发展基金经理将无人认领的权利分配给受益人，创建`DevelopmentFundCoupon`合同并返还任何剩余的无人认领金额。
+>> * 修改`AmuletRules_Transfer`：当发送者与受益人匹配时，转账现在接受`DevelopmentFundCoupon`作为有效输入并报告消耗的发展基金总额。
+>> - DsoRules 更新：
+>> * 一个新选择`DsoRules_MergeUnclaimedDevelopmentFundCoupons`：使DSO能够通过治理触发无人认领的优惠券合并。
+>> * 添加新的 `DsoRules_ExpireDevelopmentFundCoupon`：允许 DSO 使分配的 `DevelopmentFundCoupon` 过期，将其金额恢复为 `UnclaimedDevelopmentFundCoupon`。
+>>
+>> 请注意，钱包应用程序中分配资金所需的 UI 更改尚未实施，将在以后的版本中提供。请参考本期：[追踪 - CIP-0082 - 5% 发展基金](https://github.com/canton-network/splice/issues/3218)。
+>>
+>> 这些 Daml 更改需要在**投票之前**升级到以下 Daml 版本，以将转账费用设置为零：
+>>
+> > |名称 |版本 |
+> > | ------------------ | -------- |
+> > |Amulet| 0.1.15 |
+> > | amuletNameService | Amulet名称服务0.1.16 |
+> > | dso治理 | 0.1.21 |
+> > |斯普利特韦尔 | 0.1.15 |
+> > |验证者生命周期 | 0.1.6 |
+> > |钱包| 0.1.15 |
+> > |钱包支付 | 0.1.15 |
+>
+> * SV 应用程序
+>
+> \- 添加一个新触发器，`MergeUnclaimedDevelopmentFundCouponsTrigger`` that automatically monitors ``UnclaimedDevelopmentFundCoupon`\` 并且，
+> 一旦其数量至少达到配置阈值的两倍，则将最小的优惠券合并为一张。这种方法使较大优惠券的合约 ID 保持稳定，以最大限度地减少与引用这些 ID 的外部准备交易的争用。
+>
+> \- 向 `Sv入驻Config` 添加一个新的配置字段，名为 `unclaimedDevelopmentFundCouponsThreshold` 定义
+> 阈值，高于该阈值则合并 `UnclaimedDevelopmentFundCoupon`。默认值设置为 10。
+>
+> * 部署
+>
+> \- 默认记录器已切换为对所有节点使用异步附加程序，以获得更好的性能。
+> 通过设置环境变量`LOG_IMMEDIATE_FLUSH=true`，可以将行为切换回同步日志记录。
+>
+> * 验证者
+> * 从扫描代理中公开 `/v0/holdings/summary` 端点。
+
+## 0.5.6* 音序器
+  * 包括多项性能改进，可提高Sequencer在较高负载下的稳定性。
+
+## 0.5.5
+
+* API安全性
+  * 加强对所有非公共 API 端点的授权检查。
+
+    现在，所有非公共端点都正确尊重参与者用户管理服务中定义的当前用户权限。撤销参与者的用户权限将撤销对相应 API 端点的访问权限。
+
+    一般来说，之前需要身份验证的端点现在将检查经过身份验证的用户是否在参与者上未停用，并且是否拥有相关方（钱包应用程序 API 的钱包方、SV 应用程序 API 的 SV 运营方等）的 `actAs` 权限。
+
+  * 管理 SV 应用程序端点现在需要参与者管理员权限。
+
+    以下 SV 应用程序端点现在要求用户在参与者用户管理服务中拥有参与者管理员权限。
+
+    > * `/v0/admin/domain/pause`
+    > * `/v0/admin/domain/unpause`
+    > * `/v0/admin/domain/migration-dump`
+    > * `/v0/admin/domain/identities-dump`
+    > * `/v0/admin/domain/data-snapshot`
+
+    这允许更细粒度的访问控制，其中具有 SV 操作方`actAs` 权限但没有参与者管理员权限的用户可以使用 SV 或钱包 UI，但不能执行硬同步器迁移等管理操作。
+
+    请注意，只有 SV 和验证者应用程序的服务用户才应自动拥有参与者管理权限。如果您使用其他用户访问上述端点，请检查他们的权限。
+
+  * 一些端点将在即将发布的版本中更改授权规则。
+
+    > * SV 应用程序 `/v0/dso` 目前是公开的，但需要获得 SV 运营商的授权，与大多数其他 SV 应用程序端点类似。如果您需要获取 DSO 信息，请使用扫描应用程序中的公共 `/v0/dso` 端点。
+* 验证者
+  * 添加了对通过 `/v0/admin/users` API 引导用户时创建的新方选择自定义名称的支持。请参阅文档。
+  * 添加了可选的`excludeDebugFields`` boolean to the request body of allocation and transfer endpoints for the Token Standard component (``splice-api-token-allocation-v1`` and ``splice-api-token-transfer-instruction-v1`\`)。客户端现在可以将其设置为 true，以从响应中省略调试信息，从而节省带宽。
+
+## 0.5.4
+
+* 参加者
+  * 修复 0.5.0/0.5.1 中引入的错误，该错误可能导致参与者修剪修剪活动数据。该错误仅在罕见的边缘情况下才会出现，涉及对已经运行了一段时间的参与者进行手动 ACS 导入。
+  * 修复了参与者中的一个性能回归问题，该问题会由于索引器管道关键部分上的数据库查询计划错误而导致事件处理随机暂停数分钟。
+* 扫描
+  * 从返回事务的所有扫描端点的 OpenAPI 规范中删除了不存在的 `command_id` 字段。该字段包含在“必需”部分中，但不是返回的交易对象的属性。这只是 OpenAPI 规范中的错误修复，对实际 API 行为没有影响。
+
+## 0.5.3
+
+注意：0.5.2 错误地为 Canton 参与者引入了默认修剪，应跳过以支持 0.5.3。默认情况下，参与者**不会**删除任何数据。任何验证者操作员都可以显式启用修剪。有关更多信息，请查看文档。* Sequencer连接
+  * 当Sequencer拒绝带有过载错误代码的请求时，通过立即在另一个节点上重试，改进发送Sequencer提交的重试。
+  * 连接的网络超时时间降低至 15 秒，以更快地检测故障。
+* 验证者
+  * 修复了导致验证者在同步器迁移期间无法恢复没有权限的参与者用户的错误。
+* 扫描
+  * 由于Amulet到期的轮次计数方式，基于轮次的余额值聚合（自第 0 轮以来持有费用和初始金额的变化）在扫描之间存在差异。扫描 API 实际上不再依赖回合聚合中记录的余额值，并且现在将其设置为零，以避免 SV 在首次加入时从网络的其余部分读取聚合时出现共识问题。
+  * 请注意，`/v0/total-amulet-balance` 和 `/v0/钱包-balance` 端点已标记为删除，并将在即将发布的版本中删除。有关详细信息，请参阅 Scan OpenAPI 文档：/v0/total-amulet-balance 和 /v0/钱包-balance。
+* 达米尔
+  * 修复了`钱包UserProxy_TransferInstruction_Withdraw`中的一个错误，该错误要求控制器是传输指令的`receiver`而不是`sender`。升级到 `splice-util-featured-app-proxies` 版本 `1.2.1` 或更高版本以获取修复。
+* SV应用程序
+  * SV 应用程序将不再存储更新历史记录等，将无法回答历史查询。涉及 DSO 方的所有更新仍将由 Scan 存储和返回。
+  * 部署
+    * `scan`下的舵值，即`publicUrl`和`internalUrl`现在是强制性的。所有 SV 都已在 DevNet、TestNet 和 MainNet 上部署扫描，因此这应该不会产生影响。
+* 文档
+  * 改进了有关同步器升级和停机的验证者文档。
+
+## 0.5.1
+
+* Canton参与者
+  * 修复了重启后参与者可能无法出现的问题，因为查询超出了 65353 个查询参数限制。对于 SV 或流量非常高的参与者来说，这应该只是一个问题。
+
+## 0.5.0
+
+<Warning>
+  升级到 Canton 3.4：此升级需要停机同步器迁移，并且无法通过常规升级来应用。有关详细信息，请参阅已批准的 [CIP](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0089/cip-0089.md) 以及验证者和 SV 的相应文档页面。
+</Warning>
+
+* 部署
+
+  > * **突破性**：默认情况下，基于 Docker-compose 的 LocalNet、验证者和 SV 部署仅公开到 127.0.0.1。如果要对外暴露，请在验证者中使用`-E`，在super验证者中使用`start.sh`。对于 LocalNet，手动设置`export HOST_BIND_IP=0.0.0.0`。
+
+* 验证者
+
+  > * `/v0/admin/users/offboard`：现在注销用户也会删除参与者节点中的账本 API 用户。
+  > * 如果您需要在您的环境中使用 HTTP 代理，您现在可以使用 `https.proxyHost` 和 `https.proxyPort` Java 系统属性。请参阅基于 Kubernetes 的部署的 HTTP 代理配置和基于 Docker Compose 的部署的 HTTP 代理配置。
+
+* 扫描
+
+  * 为 `/v0/state/acs`、`/v0/holdings/state` 和 `/v0/holdings/summary` API 请求添加了 `record_time_match` 属性。如果设置为 `exact`（默认），则查找与指定 `record_time` 完全匹配的快照；如果设置为 `at-or-before`\`，则查找指定 `record_time` 处或之前的第一个快照。
+
+* 文档
+
+  * 记录恢复在导入`ACS`步骤中失败的验证者灾难恢复过程的其他方法。
+  * 添加了有关为 Docker-compose 部署配置流量充值的部分
+  * 添加`钱包_how_to_earn_featured_app_rewards`部分
+
+* 调解员
+
+  * 调解器现在修剪数据，仅保留最后 30 天的数据，与Sequencer的 30 天修剪间隔相匹配。
+
+## 0.4.25
+
+注意：0.4.24 发布不正确，应跳过以支持 0.4.25。
+
+* Canton参与者
+  * 修复了重启后参与者可能无法出现的问题，因为查询超出了 65353 个查询参数限制。对于 SV 或流量非常高的参与者来说，这应该只是一个问题。
+
+## 0.4.23* 达米尔
+  * 添加了`splice-util-token-standard-钱包.dar`包，为实现持仓自动合并和空投活动提供支持，如`holding_utxo_management`中所述。该包是可选的，默认情况下不会上传到验证者节点。
+  * 扩展了`splice-util-featured-app-proxies.dar`包，以支持执行Canton Network代币标准代币的批量/批量转账，适用于特色应用程序和非特色应用程序。
+* 性能改进
+  * 扫描
+
+    > * 缓存开放回合，默认 TTL 为 30 秒。当回合发生变化并且许多客户尝试阅读公开回合时，这应该会减少负载。 [查看 PR 2860。](https://github.com/canton-network/splice/pull/2860)
+    > * 重新启动与调解器判决摄取的连接时减少数据库负载。 [查看 PR 2861。](https://github.com/canton-network/splice/pull/2861)
+* 部署
+  * 增加了大多数应用程序的资源分配，如果您覆盖默认资源，请仔细检查任何更改。 [查看 PR 2972。](https://github.com/canton-network/splice/pull/2972)
+
+## 0.4.22
+
+* SV
+  * 提高`FeaturedAppActivityMarkerTrigger`的吞吐量，将`FeaturedAppActivityMarker`合约转换为`AppRewardCoupon`合约，如[CIP-0047特色应用程序活动标记](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md)中所述。新的实现使用更大的批次（默认情况下为 100 个标记，而不是 5 个）并并行执行它们（默认情况下高达 4 倍）。工作在不同的 SV 之间分配，这样可以在标记数量不多（默认情况下为 10k）时完全避免争用，并且在自动化处于追赶模式时（因为标记太多），使用批次的随机采样来最大程度地减少争用。仅当一个或多个 SV 长时间未能转换分配给它们的标记时，才会触发追赶模式。
+
+## 0.4.21
+
+* 部署
+  * k8s 上的验证者部署现在支持无身份验证模式。请注意，不建议在生产部署中这样做，并且纯粹依赖于网络级访问控制来保护验证者，即任何有权访问您的节点的人都可以代表您进行操作。
+  * 验证者和 SV h​​elm 图表中的 `chown` init 容器已被替换为在 pod 的安全上下文中设置 `fsGroup`。这克服了某些不允许 init 容器具有 `chown` 功能的安全策略，并且在大多数环境中应该达到相同的效果。在某些环境中，`fsGroup`指令可能会被忽略。在这种情况下，您可以使用 `extraInitContainers` helm 值添加 init 容器，以达到与之前相同的效果，如本节中所述。
+* 奖励领取
+  * 更改了围绕奖励和优惠券的自动化行为，使其在`round open time` -> `round open time + tick duration` 的时间间隔内首次运行。这可能会增加奖励和优惠券发放到领取之间的观察持续时间。一旦第一个刻度过去，重试将会更加积极地发生。
+* 扫描
+  * 添加`v0/events` API。对于私有交易，此 API 返回仅包含Mediator判决的事件。对于 DSO 可见的交易（如 Amulet 传输），API 通过 `update_id` 结合调解员裁决和相关更新。 `update_id`可以使用`/v0/events/{update_id}`检索事件。请参阅扫描批量数据 API 中有关事件的新部分了解更多详细信息。
+* SV
+  * 发布的转化率现在被限制在配置的范围内，并且发布限制值，而不是仅记录警告而不发布超出范围值的更新值。
+  * 用户界面可用性改进。
+* 监控
+  * SV 应用程序现在公开了 SV 投票的代币价格和最新一轮开放挖矿中的代币价格的指标。
+
+## 0.4.20* 部署
+  * 修复了设置`splice-cometbft`和`splice-global-domain`舵图的亲和力会删除`cometbft`和`sequencer`部署的反亲和力的错误。这确保了如果多个 SV 在同一节点上运行，则同一节点上最多只能部署 1 个`cometbft` Pod，并且同一节点上最多只能部署 1 个`sequencer` Pod（`cometbft` Pod 仍可以与`sequencer` Pod 共享一个节点）。可以通过将 `enableAntiAffinity` helm 值设置为 `false`（默认为 `true`）来禁用此功能。
+  * 将 `-Dscala.concurrent.context.minThreads=8` 替换为 `-Dscala.concurrent.context.numThreads=8` ，并在 `defaultJvmOptions` 中为所有部署 scala 应用程序的 helm 图表设置 `-XX:ActiveProcessorCount=8` 。这应该确保内部执行上下文产生 8 个线程来处理处理，并且 JVM 也配置为 8 个 CPU。先前的行为将产生最多可用处理器的数量，如果未设置 CPU 限制，则最多可以达到实际节点上的 CPU 数量。这应该避免在繁重的处理过程中使节点过载。
+* SV
+  * 用户界面
+    * 添加在生成登录密码时指定验证方提示的功能。
+    * UI 现在提供格式化消息，以便与验证者操作员轻松共享入职详细信息。
+
+## 0.4.19
+
+> * 音序器
+>
+> * 修复 0.4.18 中引入的回归，该回归使拓扑事务的处理成本显着增加。
+>
+> * Docker 镜像
+>
+> * 所有应用程序和 UI 图像现在都使用非 root 用户。
+>
+> * 验证者
+>
+>> * 添加触发器来导出这些参与方指标：
+>>
+>>> * `验证者_同步器_拓扑_num_parties`：统计全局同步器上分配的参与方数量
+> > > * `验证者_同步器_拓扑_num_parties_per_参与方`：使用标签`参与方_id` 并计算每个参与者在全局同步器上托管的各方数量。请注意，多托管方将根据托管的每个参与者进行计数。
+>>
+>> 默认情况下触发器不运行。有关如何启用它的说明，请参阅`enable_extra_metric_triggers`。
+>
+> * SV
+>
+> * 部署
+> * 从 `scan`、`mediator` 和 `sequencer` 应用程序的 helm 图表中删除 CPU 限制。这应该可以避免可能导致性能下降的 CPU 调度问题。
+> * 用户界面
+> * 更新 `AmuletRules` 配置时，UI 将忽略存储在账本上的 `AmuletRules` 配置中任何值为零的转账费用步骤。从而使`AmuletRules`合约更小，并节省使用它的交易流量。这是由 [CIP-0078 CC 费用取消](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) 推动的。
+>
+> * Canton和 SDK：
+>
+>> * SDK 版本`3.3.0-snapshot.20250930.0` `DA.Crypto.Text` 模块中引入了 2 个新的 alpha 基元。注意：要使用此处添加的功能，您必须针对 SDK 版本`3.3.0-snapshot.20250930.0` 及更高版本进行编译，并且必须首先将 Canton 升级到 Splice `0.4.19` 中的版本，然后才能将这些 dar 上传到验证者。
+>> * sha256 : BytesHex -> BytesHex: 计算给定十六进制字节的 SHA-256 哈希值。
+>> * secp256k1WithEcdsaOnly : SignatureHex -> BytesHex -> PublicKeyHex -> Bool：验证 secp256k1 曲线上的 ECDSA 签名，检查签名是否与消息和公钥匹配。
+
+## 0.4.18> * 达姆尔
+> * 发布`splice-util-featured-app-proxies-1.1.0`并支持`钱包UserProxy`，这可以简化钱包应用程序提供商在用户参与代币标准工作流程时创建特色应用程序活动标记的过程。
+>
+> * 对 [CIP-0079 - 演示 CC 列表的第三方价格反馈集成](https://github.com/global-synchronizer-foundation/cips/pull/101/files) 实施 Daml 更改：
+>
+>> 这些 Daml 更改需要升级到以下 Daml 版本：
+>>
+> > |名称 |版本 |
+> > | ------------------ | -------- |
+> > |Amulet| 0.1.14 |
+> > | amuletNameService | Amulet名称服务0.1.15 |
+> > | dso治理 | 0.1.20 |
+> > |验证者生命周期 | 0.1.5 | 0.1.5
+> > |钱包| 0.1.14 |
+> > |钱包支付 | 0.1.14 |
+> * 扫描
+> * `/v0/钱包-balance` 端点的性能错误修复，特别是在为不存在的一方请求余额时，以前会超时。
+> * 用户界面
+> * 实施 CIP-78 CC 费用取消的变更。
+
+## 0.4.17
+
+<Warning>
+  **应用程序开发人员需要采取的行动：**
+
+  1. **应用程序的 Daml 代码静态依赖于** `splice-amulet < 0.1.14` 的应用程序开发人员必须重新编译其 Daml 代码以链接到 `splice-amulet >= 0.1.14`。
+
+     原因是早期版本的`AmuletRules`模板不支持将转账费用设置为零。尝试降级到它们将引发 `PRECONDITION_FAILED` 错误，指出 `ensure` 子句评估为 `false`。
+
+     针对 `token_standard` 或 `featured_app_activity_markers_api` 构建的应用程序无需进行任何更改。
+
+  2. **应用程序预测转账持有费的应用程序开发人员必须调整其代码，以便在该 Daml 更改获得投票后不再期望任何持有费。
+
+     最简单的选择是通过删除持有费用的预测，使您的代码独立于是否对更改进行投票。您可以从转账交易本身中提取实际收取的持有费用；即，在`TransferResult`的“摘要”字段中使用`TransferSummary`的“holdingFees”字段。
+</Warning>
+
+* 达米尔
+  * 实施 [CIP-0078 - CC 费用取消](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) 的 Daml 更改：
+
+    > * 将所有 Amulet 转账更改为不收取输入持有费。
+    > * 修复了`AmuletRules`的`ensure`子句中的一个错误，该错误阻止将Amulet转账费用设置为零。
+    > * 修复`AmuletRules_Transfer`的特色应用奖励发放中的错误，该错误导致当 Amulet 转账费用设置为零时，无法发放特色应用奖励。
+    >
+    > 这些 Daml 更改需要在**投票之前**升级到以下 Daml 版本，以将转账费用设置为零：
+    >
+    > |名称 |版本 |
+    > | ------------------ | -------- |
+    > |Amulet| 0.1.14 |
+    > | amuletNameService | Amulet名称服务0.1.14 |
+    > | dso治理 | 0.1.19 |
+    > |验证者生命周期 | 0.1.5 | 0.1.5
+    > |钱包| 0.1.14 |
+    > |钱包支付 | 0.1.14 |
+* Canton
+  * 添加可用于`InteractiveSubmissionService/ExecuteSubmission`端点的`CanExecuteAs`和`CanExecuteAsAnyParty`用户权限。 `CanActAs` 权限意味着 `CanExecuteAs` 所以这是向后兼容的。
+* 验证者
+  * 从扫描代理中暴露`/dso`端点
+* 钱包
+  * 如果网络的`AmuletConfig`中配置了`splice-amulet >= 0.1.14`，则不要从可用余额中扣除持有费用。
+* 部署
+  * 参加者
+
+    > * 删除 `splice-参与方` helm 图表中的 CPU 限制，以避免由于 K8s 处理 CPU 限制的方式而受到限制
+
+  * 验证者* 允许通过将`.ansWebUi.enabled`和`验证者WebUi.enabled`设置为`false`来禁用`splice-验证者`舵图中`ans-web-ui`和`钱包-web-ui`的部署。感谢 Marcin Kocur 在 [https://github.com/canton-network/splice/pull/2171](https://github.com/canton-network/splice/pull/2171) 中贡献了这一更改
+* 本地网络
+  * 添加环境变量`LATEST_PACKAGES_ONLY`（默认：true）。这会修改以前的默认行为 - 如果设置为 true，则仅上传每个包的最新版本而不是所有版本。这会减少资源使用量，但如果您尝试使用 localnet 测试针对旧版本编译的应用程序，可能会导致问题。在这种情况下，请将环境变量设置为 false 以恢复之前的行为。
+* 社区文档
+  * 添加验证者的Keycloak配置指南。感谢 mikeProDev 在 [https://github.com/canton-network/splice/pull/2247](https://github.com/canton-network/splice/pull/2247) 中贡献了这一更改
+
+## 0.4.16
+
+* 达米尔
+  * 添加 `splice-util-featured-app-proxies` 包以简化令牌标准操作的特色应用程序活动标记的创建。这是一个实用程序包，默认情况下不会上传到验证者节点。此包的一个示例用例是想要[赚取 CN 代币标准代币的存款和提款应用奖励](https://docs.digitalasset.com/integrate/devnet/exchange-integration/extensions.html) 的交易所。
+* 文档
+  * SV
+    * 记录当前建议在每次 Daml 升级后忽略参与方 ID 以获得奖励到期自动化的流程，以减少由于使用过时的 Splice 版本而无法完成 Daml 升级的验证者的影响。
+    * 使奖励到期自动忽略方 ID 的过滤器也忽略 SV 奖励优惠券的受益人，这样，如果只有一个受益人有问题，则不需要忽略 SV。
+
+## 0.4.15
+
+* Canton
+
+  > * SV
+  > * 将Sequencer的默认事件缓冲区大小增加到最大 200MiB。当向订阅稍微滞后的节点提供事件时，这应该会提高Sequencer的性能。这将稍微增加Sequencer的内存使用量。
+  > * 账本 API
+  >
+  >> * 将`maxRecordTime`添加到`PrepareSubmissionRequest`以限制准备好的交易可以使用的记录时间。
+  >> * 添加 `com.daml.ledger.api.v2.admin.PartyManagementService/GenerateExternalParty拓扑` 和 `com.daml.ledger.api.v2.admin.PartyManagementService/AllocateExternalParty` 的 alpha 版本。这些端点可以用来代替验证者端点`/v0/admin/external-party/拓扑/generate`和`/v0/admin/external-party/拓扑/submit`，并最终将取代它们。
+
+* 文档
+
+  * 对从身份备份恢复验证者的文档进行了各种改进，包括添加有关从数据库备份获取身份备份的部分。
+  * 添加有关浪费流量的文档。
+
+* 部署
+
+  * 彗星
+
+    > * 将资源请求从 1 个 CPU 和 1Gi 增加到 2 个 CPU 和 2Gi，以更好地适应观察到的资源使用情况。
+    > * 删除 CPU 限制以避免由于 K8s 处理 CPU 限制的方式而受到限制
+
+## 0.4.14
+
+* SV应用程序
+
+  > * 添加在奖励合约到期时忽略某些方的选项。这可以添加到应用程序配置中。示例：`canton.sv-apps.sv.automation.ignored-expired-rewards-party-ids = [ "test-party::1220b3eeb21b02e14945e419c5d9e986ce8102171c50e1444010ab054e11eba262c9" ]`
+
+## 0.4.13* 部署
+  * SV
+    * 将分配给Sequencer的 CPU 限制从 4 个 CPU 增加到 8 个 CPU。这应该避免在高负载期间和停机后的追赶期间出现任何节流。
+  * 彗星
+    * 默认情况下禁用状态同步。状态同步引入了对发起节点在启动时获取状态快照的依赖，因此导致了单点故障。仅当将新节点加入到已经运行一段时间的链时才应启用它。在所有其他情况下，包括完成初始化后和网络重置后的新节点，应禁用状态同步。
+  * 可观察性
+    * 全球同步器利用率仪表板现在包括一个多小时的平均交易率。
+    * Canton/Sequencer 消息仪表板现在包括每小时总计以及过去 24 小时内消息类型分布的饼图。
+* 验证者组合部署
+  * 默认暴露Canton账本API。有关详细信息，请参阅文档。
+* 达米尔
+  * 修复了活动记录过期引用了`AmuletRules`合约的错误，该错误导致在尝试为尚未升级到最新版本 Daml 模型的一方尝试使活动记录过期时交易失败。这导致了 DevNet 上的一个问题，SV 应用提交的事务反复失败，导致断路器被触发并阻止所有提交。
+
+    > 这些 Daml 更改需要升级到以下 Daml 版本：
+    >
+    > |名称 |版本 |
+    > | ------------------ | -------- |
+    > |Amulet| 0.1.13 |
+    > | amuletNameService | Amulet名称服务0.1.13 |
+    > | dso治理 | 0.1.18 |
+    > |验证者生命周期 | 0.1.5 | 0.1.5
+    > |钱包| 0.1.13 |
+    > |钱包支付 | 0.1.13 |
+
+## 0.4.12
+
+* 文档
+  * 澄清了验证者灾难恢复流程。
+  * 添加令牌标准使用方法文档。
+* 彗星
+  * 将默认内存池大小和重复数据删除缓存大小加倍，因为它们偶尔会在产品网络上超出。
+* 拼接开发
+  * 流浪者（新）
+    * 添加 Vagrantfile 作为启动 Splice 本地开发环境的便捷方式。有关详细信息，请参阅 [README.vagrant.md](https://github.com/canton-network/splice/blob/0.4.12/README.vagrant.md) 和 [Vagrantfile](https://github.com/canton-network/splice/blob/0.4.12/Vagrantfile)。
+  * 一部分测试现在在来自分叉的 PR 上运行，无需维护者的批准（有关详细信息，请参阅 [TESTING.md](https://github.com/canton-network/splice/blob/0.4.12/TESTING.md)）
+* 性能改进
+  * 提高Sequencer在处理来自 CometBFT 的事件时的性能，这应该允许Sequencer在停机后更快地赶上。
+
+## 0.4.11
+
+* SV 和验证者应用程序
+  * 为 Daml 升级中使用的软件包审查更改的广播添加随机延迟。这可以确保当所有验证者同时尝试这样做时不会出现负载峰值。这对行为没有影响，因为 Daml 升级是提前宣布的，并且广播仍然在切换之前发生。
+  * CometBFT PVC 现在用 `helm.sh/resource-policy: keep` 进行注释，以便在发生（可能是意外的）`helm uninstall` 时，CometBFT 数据不会被删除，并且可以更轻松地恢复节点。
+* 文档
+  * 将`splice-钱包-payments`包中的工作流程标记为**已弃用**，并建议改用Canton Network Token Standard API。
+  * 将 Splice 钱包 转账优惠标记为 **已弃用**，并建议改用 Canton Network Token Standard API。
+
+## 0.4.10
+
+* SV申请
+  * 完全消除 DSO 代表选举的自动化和逻辑。
+  * 用户界面增强。
+* 达米尔
+  * 弃用与 DSO 代表选举相关的 Daml 选择。
+
+  * 实现 [CIP-0068 - 从非零轮引导网络](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0068/cip-0068.md) 现在第一个 SV 可以指定可用于网络初始化或重置的非零初始轮。> 这些 Daml 更改需要升级到以下 Daml 版本：
+    >
+    > |名称 |版本 |
+    > | ------------------ | -------- |
+    > |Amulet| 0.1.13 |
+    > | amuletNameService | Amulet名称服务0.1.13 |
+    > | dso治理 | 0.1.17 |
+    > |验证者生命周期 | 0.1.5 | 0.1.5
+    > |钱包| 0.1.13 |
+    > |钱包支付 | 0.1.13 |
+* 头盔
+  * `splice-istio-gateway` Helm 图表已弃用，并将在未来版本中删除。它已被验证者文档和 SV 文档中有关如何为验证者和 SV 节点设置 Istio 入口的明确说明所取代。
+* 文档
+  * 添加有关禁用 SV 参与者的 BFT Sequencer连接的部分。
+* 稳定性改进
+  * 为所有拼接应用程序中的账本 API 命令提交添加断路器功能；如果同步器过载，则会导致拼接应用程序暂停尝试新命令提交。
+  * 为扫描`/acs/{party}`端点添加速率限制。
+
+## 0.4.9
+
+* SV申请
+  * 状态报告现在每 2 分钟提交一次，而不是每 1 分钟提交一次。除了监控基础设施之外，这没有任何影响，因此您可能需要调整一些警报以稍微降低攻击性。
+* Canton
+  * 修复了拓扑事务签名根据实际签名而不是签名的公钥进行重复的问题。由于使用非确定性签名方案启用了 KMS 的 SV，这导致 DevNet 上的交易具有数千个签名，从而将新节点的加入速度减慢至无法使用的水平。
+* 文档
+  * 澄清了 Daml API `splice-token-burn-mint-v1` 不是代币标准的一部分，请参阅`app_dev_daml_api`。
+* 扫描
+  * 添加了 HTTP API 的基本速率限制。默认情况下，每个端点配置为允许最多 200 个请求/秒。这些值可以在`canton.scan-apps.scan-app.parameters.rate-limiting`键下调整。
+
+## 0.4.8
+
+* 部署
+
+  * 值得注意但无需更改：添加了新的 helm 值 `persistence.enablePgInitContainer` 和 `extraInitContainers` 允许围绕部署 init 容器进行配置。到目前为止，这仅针对验证者和参与者舵图实现。这些的默认值不会改变您当前的部署，因此如果不感兴趣，您可以放心地忽略。
+
+* SV申请
+
+  * 添加为同步器参数配置不同拓扑更改延迟的功能，并将默认值更改为`250ms`。这应该会对提高Sequencer的性能产生轻微影响。在大多数节点升级到 `0.4.8` 之前，`ReconcileDynamic同步器ParametersTrigger` 可能会产生警告。
+
+* 仪表板
+
+  * 将致谢部分从追赶仪表板移至 `canton` 文件夹中的专用仪表板。
+
+* Istio 参考入口
+
+  * 在 `splice-cluster-ingress-runbook` helm 图表中包含一个 Istio 本地速率限制过滤器，该过滤器将基本速率限制添加到 Scan 中的端点子集。如果使用为 Istio 提供的 helm 图表并且启用了扫描入口，则默认启用此功能。如果不使用 Istio，则可以使用附带的 EnvoyFilter 作为添加速率限制的灵感。这些速率限制未来将扩展到更多端点。
+
+* Canton
+
+  将参与者、Mediator和排序者的确认间隔缩短至 10 分钟。除了对Sequencer公开的确认度量之外，这没有任何影响。
+
+## 0.4.7
+
+注意：0.4.6 有一个错误，应该跳过，改用 0.4.7，它修复了一个错误，即如果调解器无法访问，`skip同步器Initialization` 选项仍可能导致 SV 应用程序崩溃，这种情况在Sequencer关闭时的某些情况下可能会发生。
+
+* 信息（新）
+  * *重要* 此版本包含一个新的 helm 图表“splice-info”，该图表应该安装在所有 SV 节点上并可供公开访问。新的`info`端点提供：
+
+    * 有关网络、sv、同步器、ip 范围的配置摘要和 `https://info.sv.&lt;YOUR_HOSTNAME&gt;` 下的身份的静态信息。
+    * 定期更新（每分钟）`https://info.sv.&lt;YOUR_HOSTNAME&gt;/runtime/dso.json`下的 DSO 信息副本。相关文档更新于`sv-helm`。
+* 扫描
+  * 修复 [bug #1252](https://github.com/canton-network/splice/issues/1252)：使用封闭轮次使用的聚合来填充代币元数据总供应量。使用的数据对应于最新封闭回合中`app_dev_scan_api`中`/v0/total-amulet-balance`端点提供的数据。
+  * 修复 [bug #1280](https://github.com/canton-network/splice/pull/1280)：扫描 API 中的 `record_time` `/updates` 现在右填充为 6 位数字（微秒）。
+* 验证者
+  * 修复了如果接收者的转账预批准提供者方（通常是验证者运营商）出现，则扫描转账预批准失败并出现`CONTRACT_NOT_FOUND`错误的错误。
+* 拼接
+  * 构建 Splice 存储库并在本地运行绝大多数集成测试，不再需要 JFrog 访问权限。
+* SV
+  * 添加了 `domain.skipInitialization` helm 值，可以为已上线的节点设置该值，并允许 SV 应用程序在不启动Sequencer的情况下启动。这对于长时间运行的Sequencer数据库迁移非常有用。
+  * 废弃了旧 Daml 选择 `AmuletRules_AddFutureAmuletConfigSchedule`、`AmuletRules_RemoveFutureAmuletConfigSchedule` 和 `AmuletRules_UpdateFutureAmuletConfigSchedule` 的已弃用代码
+* 音序器
+  * 修复修剪查询中的顺序扫描。这需要长时间运行的Sequencer数据库迁移（预计在主网上需要大约一个小时）。确保在 SV 应用程序上设置 `domain.skipInitialization`，以便 SV 节点的其余部分可以继续运行。Sequencer的活性探测将在迁移过程中失败，因此请确保暂时调整`活跃度ProbeInitialDelaySeconds`，并在迁移完成后将其恢复为默认值。否则，活性探针将终止Sequencer，并且迁移将永远无法完成。
+* 参加者
+  * 修复了Sequencer BFT 连接中的一个问题，即即使只有一个Sequencer报告这些故障，节点也会在某些故障时完全断开连接。
+* 达米尔
+  * 已弃用 Daml 选择 `AmuletRules_AddFutureAmuletConfigSchedule`、`AmuletRules_RemoveFutureAmuletConfigSchedule` 和 `AmuletRules_UpdateFutureAmuletConfigSchedule`
+    * 这需要将 Daml 升级到版本
+
+      > |名称 |版本 |
+      > | ------------------ | -------- |
+      > |Amulet| 0.1.12 |
+      > | amuletNameService | Amulet名称服务0.1.12 |
+      > | dso治理 | 0.1.16 |
+      > |验证者生命周期 | 0.1.5 | 0.1.5
+      > |钱包| 0.1.12 |
+      > |钱包支付 | 0.1.12 |
+
+## 0.4.5
+
+* SV
+
+  * *打破* SV 参与者现在默认为 SV 参与者启用Sequencer BFT 连接。您必须从 SV h​​elm 值中删除 `useSequencerConnectionsFromScan: false` 配置和 `decentralized同步器Url` 配置。如果需要，可以通过再次设置这两个变量以及以下配置来恢复之前的行为（分别通过验证者应用程序和 SV 应用程序的`ADDITIONAL_CONFIG_*`环境变量：`canton.验证者-apps.验证者_backend.disable-sv-验证者-bft-sequencer-connection = true``canton.sv-apps.sv.bft-sequencer-connection = false`
+
+  * 额外受益人权重配置已修复为接受整数值。权重的字符串值已被弃用，并将在未来的版本中删除。建议按照本示例修复配置，之前的配置：
+
+    额外受益人：
+
+    * 受益人：“BENEFICIARY\_1\_PARTY\_ID”
+      重量：“1000”
+
+    更改为：
+
+    额外受益人：
+
+    * 受益人：“BENEFICIARY\_1\_PARTY\_ID”
+      重量：1000
+
+    感谢 Divam Narula 在 [https://github.com/canton-network/splice/pull/1371](https://github.com/canton-network/splice/pull/1371) 中贡献了这一更改
+
+* 达米尔
+
+  * 安全性：更改 `AmuletRules_Transfer` 和 `AmuletRules_ComputeFees` 以采用显式参数 `expectedDso : Optional Party` 并根据 `AmuletRules` 中的 `dso` 方值进行检查。必须提供此值，从而保护将调用委托给这些选择的人员，以免无意中允许调用与不同 `dso` 方的 `AmuletRules` 合约。
+
+    这解决了 Quantstamp 在其安全审查中报告的建议 S-8。直接调用这些选择的应用程序开发人员必须调整其调用站点以设置 `expectedDso` 值。拼接代码库中对这些选择的所有调用都已进行调整。
+
+  *安全性：将建议S-8的精神应用于授予用户的`AmuletRules`和`ExternalAmuletRules`上的所有非DevNet选择。具体来说，我们将 `expectedDso` 方作为必需参数添加到 `AmuletRules_BuyMember流量`、`AmuletRules_CreateExternalPartySetupProposal`、`AmuletRules_CreateTransferPreapproval` 和 `ExternalPartyAmuletRules_CreateTransferCommand`。
+
+    调用这些选择的 Ledger API 客户端应将该值设置为它们正在运行的网络的 `dso` party-id。他们可以通过在验证者的 `验证者-api-scan-proxy` 上调用 `GET /v0/scan-proxy/dso-party-id` 来使用 BFT 检索该信息。
+
+    调用这些选择的第三方 Daml 代码应根据第三方工作流程启动的 `dso` 方进行设置。拼接代码库中对这些选择的所有调用都已进行调整。
+
+  *安全性：添加一个缺失的检查，以确保演员是`DsoRules_ExpireSubscription`的当前SV方
+
+  * 谨慎的工程：强制执行未来对 `ExternalPartyAmuletRules_CreateTransferCommand` 的调用
+
+  *谨慎的工程：更改所有拼接Daml代码以使用检查的获取来获取所有参考数据，其中调用者指定预期的`dso`方
+
+  这些 Daml 更改需要升级到以下 Daml 版本：
+
+  > |名称 |版本 |
+  > | ----------------- | -------- |
+  > |Amulet| 0.1.11 |
+  > | amuletNameService | Amulet名称服务0.1.11 |
+  > | dso治理 | 0.1.15 |
+  > |钱包| 0.1.11 |
+  > |钱包支付 | 0.1.11 |
+
+## 0.4.4
+
+* 达米尔
+
+  此版本包含两组相互构建的 Daml 更改：
+
+  1. 实施 [CIP-0064 - 无委托自动化](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0064/cip-0064.md)
+
+     这些 Daml 更改需要升级到以下 Daml 版本：
+
+     |名称 |版本 |
+     | ------------------ | -------- |
+     |Amulet| 0.1.9 | 0.1.9
+     | amuletNameService | Amulet名称服务0.1.9 | 0.1.9
+     | dso治理 | 0.1.13 |
+     |验证者生命周期 | 0.1.3 |
+     |钱包| 0.1.9 | 0.1.9
+     |钱包支付 | 0.1.9 | 0.1.9
+
+  2. 实施 [CIP-0066 - 来自 Unminted/Unclaimed Pool 的铸造 Canton Coin](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0066/cip-0066.md) 并修复 Quantstamp 提出的安全问题和建议，作为其 [Splice 审核的一部分]代码库](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0057/cip-0057.md#abstract)。请注意，CIP 66 的后端和前端更改尚未实施，因此我们建议暂时推迟升级到新的 Daml 模型。> * CC-1（低严重性）：通过限制每个 SV 在 `VoteRequest` 上投票并更新其 `AmuletPriceVote` 来解决，以防止它们造成不当争用，这将阻止其他 SV 投票、结束投票或推进挖矿轮次。
+     >
+     > 此更改在`DsoRules`配置中引入了新的配置值`voteCooldownTime`，用于定义同一SV投票之间的冷却时间。如果未设置，则默认值为 1 分钟。
+     >
+     > * CC-2（低严重性）：通过默认从 CIP-0064 启用无委托自动化来解决
+     >
+     > * CC-4（低严重性）：由
+     >
+     > * 检查`expiresAt`是否在`DsoRules_ExecuteConfirmedAction`、`DsoRules_AddConfirmedSv`和`验证者入驻_Match`的选择体中处于未来状态。
+     >
+     > * CC-5（低严重性）：由
+     >
+     > * 要求有效`SteppedRate`的步长严格上升
+     > * 对 `AmuletConfig` 中的 `transferFee` 强制执行此验证
+     > * 如果发现负步骤则失败`chargeSteppedRate`
+     >
+     > * S-2（审核员建议）：由
+     >
+     > * 为`AmuletConfig`的所有字段添加基本验证，以降低配置错误的风险
+     > * 限制选择 `AmuletRules_Mint` 仅在 DevNet 设置中调用
+     > * 在`doesLockExpireBeforeAmulet`函数中检查锁是否先于Amulet过期时正确处理Amulet过期的边缘情况
+     > * 检查`ExpiringAmount` 的`createdAt` 和`ratePerRound` 是否为正；并在 `expiringAmount` 智能构造函数中强制执行该检查
+     > * 检查有效`IssuanceConfig`中的`验证者RewardPercentage`和`appRewardPercentage`是否非负且不超过100%
+     > * 更改 `Member流量` 的 `ensure` 子句以强制执行非空 `memberId` 和 `同步器Id` 字段
+     > * 作为谨慎的工程措施，对 `trackingId` 和 `TransferOffer` 实施 280 个字符的长度限制
+     >
+     > * S-3（审核员建议）：由
+     >
+     > * 在`DsoRules_RevokeFeaturedAppRight`的实现中调用`FeaturedAppRight_Withdraw`
+     > * 在`DsoRules_ExpireStaleConfirmation`的实现中调用`Confirmation_Expire`
+     >
+     > * S-7（审核员建议）：通过每当执行已确认的操作时检查`dso`方来解决。
+     >
+     > * S-8（审核员建议）：由
+     >
+     > * 检查对辅助方法 `exerciseAppTransfer`、`exercisePaymentTransfer` 和 `exerciseComputeFees` 的所有调用中预期的 `dso` 方，以防止受委托者从 `AmuletRules` 合约与受其控制的 `dso` 方提供意外的 `AmuletRules` 合约
+     >
+     > * 添加弃用标记
+     >
+     >> * `验证者FaucetCoupon` 模板
+     >> * `AmuletRules_AddFutureAmuletConfigSchedule`、`AmuletRules_RemoveFutureAmuletConfigSchedule`、`AmuletRules_UpdateFutureAmuletConfigSchedule` 已弃用的选项，转而使用 `CRARC_SetConfig` 治理投票和有效约会
+     >> * `DsoRules_RequestElection`、`DsoRules_ElectDsoDelegate` 和 `DsoRules_ArchiveOutdatedElectionRequest` 选项已弃用，有利于无委托自动化
+     >
+     > *澄清`DsoRules_AddConfirmedSv`的`amuletRulesCid`参数是历史文物
+     >
+     > 这些 Daml 更改需要升级到以下 Daml 版本：
+     >
+     > |名称 |版本 |
+     > | ------------------ | -------- |
+     > |Amulet| 0.1.10 |
+     > | amuletNameService | Amulet名称服务0.1.10 |
+     > | dso治理 | 0.1.14 |
+     > |验证者生命周期 | 0.1.4 | 0.1.4
+     > |钱包| 0.1.10 |
+     > |钱包支付 | 0.1.10 |
+
+* SV
+
+  * 从 SvTaskBasedTrigger 继承的实际基于委托的触发器经过修改，以便在新的 dsoGovernance DAR 审核后，它们实现无委托自动化 CIP 中描述的更改。
+  * 一旦实现无委托自动化 CIP 的新 dsoGovernance DAR 得到审查，SV UI 中的代表选举页面就会自动删除。
+
+* 扫描* 修复一个 [bug (#1254)](https://github.com/canton-network/splice/issues/1254)，其中令牌元数据名称和 Amulet 的缩写词未根据 `splice-instance-names` 配置填充。
+
+* 验证者
+
+  * **突破**：验证者应用程序现在强制流量充值间隔 >= 自动轮询间隔（默认为 30 秒）。此前，如果充值间隔较小，则会隐式四舍五入，这会导致每次购买多少流量产生混乱。如果您的充值间隔 >= 30 秒，则不会受到影响。如果您受到影响，请将充值间隔设置为轮询间隔（除非更改，否则为 30 秒）以恢复之前的行为。
+
+* 文档
+
+  * 改进应用程序开发文档，以更好地解释可用的 API 以及如何使用它们。
+  * 添加 Digital Asset 发布的新应用程序开发人员文档页面的相关链接，网址为 [https://docs.digitalasset.com/build/3.4/](https://docs.digitalasset.com/build/3.4/)。
+  * 修复了有关从未经身份验证的验证者迁移到经过身份验证的验证者的 docker-compose 文档。与之前文档所述相反，不需要完全擦除验证者数据库。请参阅有关经过身份验证的 docker-compose 验证者的相关部分。
+
+## 0.4.3
+
+* 验证者
+  * 修复一个 [bug (#1216)](https://github.com/canton-network/splice/issues/1216)，如果接收方的提供商方参与其中，则通过传输预批准发送会失败并出现 `CONTRACT_NOT_FOUND` 错误。
+  * 修复了上传 dars 不会立即审核具有将来有效的审核条目的依赖项的错误。
+  * 修复了一个 [bug (#1215)](https://github.com/canton-network/splice/issues/1215)，从钱包 UI 创建转账优惠时，钱包交易可能会陷入困境。
+* 同步器迁移
+  * 修复了一个罕见的错误，即迁移后尝试恢复数据时验证者或 SV 崩溃可能会导致恢复状态不一致。
+
+## 0.4.2
+
+* SV
+  * 添加对使用外部密钥管理服务 (KMS) 管理的密钥操作 SV 参与者的官方支持。
+* 部署
+  * 修复了 `splice-参与方` Helm 图表中的拼写错误，导致参与者容器被命名为 `参与方-1` 而不是 `参与方`。
+  * Java 21 取代了所有 Docker 镜像中的 Java 17，并作为构建 Splice 应用程序的基础 JDK。
+* 扫描
+  * 修复当请求方持有超过 1000 个持仓时，`/v0/holdings/summary` 端点返回不完整结果的错误。此外，如果提供了空的各方列表，该端点和`/v0/holdings/state`现在将失败。
+  * `/v2/updates` 端点现在可在扫描应用程序上使用，`/v1/updates` 端点已弃用。 `/v2/updates`端点不再在响应中返回`offset`字段，并且`events_by_id`现在按ID按字典顺序排序，以便于查看JSON结果。
+* 调解员
+  * 修复中介器在初始化后有时会卡住并需要重新启动才能恢复的问题。
+* 验证者
+  * docker-compose，中断：从身份转储恢复需要指定 `identities.json` 的路径，而不是包含它的目录。这与记录的行为一致。请参阅 [#387](https://github.com/canton-network/splice/pull/387)
+* 授权
+  * 添加了一个选项，用于在使用 `auth.algorithm="rs-256"` 时覆盖 JWKS URL 的默认连接和读取超时。
+
+## 0.4.1* 验证者
+  * 在验证者扫描代理上公开令牌标准端点。这些路径是带有 `/api/验证者/v0/scan-proxy` 前缀的普通令牌标准路径。
+  * 修复了在 0.4.0 中发布的 DAR 生效之前使用转账预先批准（通过钱包 UI 和自动扫描）进行转账的错误。
+  * 修复[重新加入验证者并恢复所有用户余额]时需要上传最新dar的错误(https://dev.global.canton.network.digitalasset.com/验证者_operator/验证者_disaster_recovery.html#re-onboard-a-验证者-and-recover-balances-of-all-users-it-hosts)
+* 音序器
+  * 通过修复缓慢的查询来缩短Sequencer的启动时间。
+* 为通过 Splice Helm 图表部署的大多数 k8s 资源定义[标准 k8s 标签](https://helm.sh/docs/chart_best_practices/labels/#standard-labels)。感谢 Stephane Loeuillet 在 [https://github.com/canton-network/splice/pull/296](https://github.com/canton-network/splice/pull/296) 中为这一更改贡献了初步提案。
+* 扫描
+  * 现在默认启用所有扫描数据的回填。
+
+## 0.4.0
+
+<Warning>
+  * 升级到 Canton 3.3：此升级需要硬同步器迁移，并且无法通过常规 helm 升级来应用。详细信息请参考[CIP草案](https://github.com/global-synchronizer-foundation/cips/pull/66)。
+</Warning>
+
+* 达米尔
+  * 实施 [CIP 47](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md) 和 [CIP 56](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md)。
+
+    这需要升级到以下 Daml 版本：
+
+    |名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.9 | 0.1.9
+    | amuletNameService | Amulet名称服务0.1.9 | 0.1.9
+    | dso治理 | 0.1.12 |
+    |验证者生命周期 | 0.1.3 |
+    |钱包| 0.1.9 | 0.1.9
+    |钱包支付 | 0.1.9 | 0.1.9
+* 部署
+  * 此版本包括对数据库架构的更改，这将触发短暂的数据库迁移。在 DevNet 和 MainNet 上，扫描应用程序的迁移预计需要 2 分钟，验证者和 sv 应用程序的迁移时间要短得多。
+  * 将 jemalloc 添加到 docker 镜像中。默认情况下不启用此功能，但可以更轻松地进行测试。感谢 Stanislav German-Evtushenko 在 [https://github.com/canton-network/splice/pull/318](https://github.com/canton-network/splice/pull/318) 中做出的贡献
+* 验证者
+  * 修复了如果提供商拥有特色应用程序权限则自动完成`TransferCommand`失败的问题。
+  * 验证者重新加入流程的修复和稳定性改进。除此之外：
+    * 即使验证者托管外部各方，现在也可以自动恢复标准本地各方。
+    * 现在可以强制对在全自动恢复流程中跳过的一方进行恢复尝试。
+  * 改进尝试在 localhost 或 https 之外使用钱包时的错误消息。感谢 Stephane Loeuillet 在 [https://github.com/canton-network/splice/pull/322](https://github.com/canton-network/splice/pull/322) 中做出的贡献。
+* 扫描
+  * Scan 现在实现了一些位于 `/registry` 路径下的令牌标准端点。 `https://scan.sv.&lt;YOUR_HOSTNAME&gt;/registry` 应路由到 `sv` 命名空间中服务 `scan-app` 端口 5012 处的 `/registry`，与 `/api/scan` 的方式相同。
+
+## 0.3.21
+
+<Warning>
+  * 此版本包括对数据库架构的更改，这将触发扫描和验证者应用程序数据库的长时间数据库迁移，从而导致 SV 节点的停机时间增加，验证者节点的停机时间要少得多。
+
+    版本升级后首次启动应用程序时会触发迁移，并导致应用程序处于不可用状态，直到迁移完成。预计 SV 节点最多需要 1:30 小时，而主网上的验证者节点则不到 10 分钟。由于最近对 DevNet 和 TestNet 进行了重置，预计迁移所需的时间将大大减少。请注意，即使在数据库迁移完成后，您也可能会因 Postgres 自动清理而观察到扫描（且仅扫描）的额外（较短）停机时间。
+
+    以下几点对于成功迁移至关重要：* 确保并行升级所有应用程序（即 SV 节点的扫描应用程序、验证者应用程序和 sv 应用程序）
+    * 确保数据库卷上至少有 50% 的可用磁盘空间，或将其设置为自动扩展（迁移将消耗大量临时磁盘空间）。
+    * 确保将 Postgres 参数设置为足够高的数字。实际使用情况很难预测，因此我们建议将其设置为迁移期间的最大值。
+
+    此外，请考虑采取以下措施来减少迁移导致的停机时间：
+
+    * 在迁移期间，暂停访问数据库的任何非必要服务（例如，将数据库指标推送到 grafana 的 postgres 导出程序）。
+    * 在迁移期间，增加硬件配置（从 2 个 CPU / 8 GB RAM 升级到 8 个 CPU / 32 GB RAM 使持续时间降低了约 20%）。
+    * 迁移后的第一个 Postgres autovacuum 预计将比通常的 Vacuum 运行慢得多。如果迁移后不久未触发自动清理，您可能需要手动触发应用程序数据库上的清理，以更好地控制扫描的额外潜在停机时间。
+</Warning>
+
+* 部署
+  * 验证者、应用程序和扫描支持在向参与者请求令牌时指定范围。这使得可以使用 IAM 来强制范围参数。
+* 前端
+  * 钱包和扫描 UI 现在显示每笔交易的更新 ID。这些 ID 与扫描 API 的 `updates` 端点中使用的 ID 一致。
+  * 钱包用户界面：在“正在加载”和“已登录但未登录”状态下添加注销按钮，以实现从所有类型的登录失败中恢复。
+
+## 0.3.20
+
+* 性能
+
+  * 改进了 ACS 快照生成的性能
+
+* 前端
+
+  * 放宽对受众的配置验证，不要求它是 URL，因为这会导致某些 IAM 出现问题。
+
+* API
+
+  * Open API 规范中的相互依赖关系现在已内联到每个 yaml 文件中，以便这些文件可以彼此独立使用（并且不再错误地引用捆绑包中的 common.yaml 文件）。
+
+* 部署
+
+  * `splice-util-lib`\` 舵图不再发布。该库始终与使用它的每个 Helm Chart 一起打包，无需从 ghcr.io 容器注册表中单独提取它。
+
+* 实施【Canton改进提案cip-0051】(https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0051/cip-0051.md)> * 在`VoteRequest`模板中添加了可选的`targetEffectiveAt`字段，该字段允许指定投票请求的有效日期和时间。此外，`DsoRules_CloseVoteRequest` 现在对投票请求强制执行新语义，其中包括有效日期和时间。
+  >
+  > * 一旦所有 SV 升级到新的 DAML 包版本以及相应的前端和后端更新，这些更改将完全生效。
+  >
+  > * 新投票请求语义：
+  >
+  >> * 具有有效日期时间的投票请求 (`targetEffectiveAt != None`)：
+  >> * **投票期开始（现在 \< voteBefore）：**
+  >> * 如果绝大多数 SV 拒绝投票请求，则会提前结束。
+  >> * **投票期结束（现在 ≥ voteBefore 且现在 \< targetEffectiveAt）：**
+  >> * 如果绝对多数已投票，投票请求仍然开放，SV 仍然可以更改投票。
+  >> * 如果没有，投票请求将被标记为过期。
+  >> * 提前关闭是在到期后绝大多数拒绝的情况下发生的。
+  >> * **达到有效日期时间（现在≥ targetEffectiveAt）：**
+  >> * 如果绝大多数人接受投票请求，则更改生效。
+  >> * 否则，投票请求将被记录为被拒绝。
+  >> * 没有有效日期时间的投票请求 (`targetEffectiveAt = None`)：
+  >> * **投票期开始（现在 \< voteBefore）：**
+  >> * 当绝大多数人拒绝时，就会提前结束。
+  >> * 当绝大多数人同意时，就会发生早期接受。
+  >> * **投票期结束（现在 ≥ voteBefore）：**
+  >> * 投票请求被标记为已过期。
+  >
+  > * 此版本中的 Daml 更改需要治理投票才能将包配置升级为：
+  >
+  > * 引入 `CRARC_SetConfig` 选择以支持 `CRARC_AddFutureAmuletConfigSchedule`、`CRARC_AddUpdateAmuletConfigSchedule` 和 `CRARC_AddRemoveAmuletConfigSchedule`
+  >
+  > * 新动作`CRARC_SetConfig`允许SV以与`SRARC_SetConfig`相同的方式设置AmuletRules配置。仅当以下新的 dar 已通过审核后，此操作才可用。
+  >
+  > * 处理并行提案
+  >
+  >> * 之前：并发编辑提案（`CRARC_SetConfig` 和 `SRARC_SetConfig`）存在用过时的值覆盖新更改的风险，因为无论具体更改如何，整个新配置都会替换旧配置。
+  >> * 现在：并发编辑建议（`CRARC_SetConfig` 和 `SRARC_SetConfig`）仅适用于要更改的字段。在创建提案时，当前配置的副本将与修改后的配置一起传递。
+  >
+  > * 治理：新的 dars
+  >
+  > > |名称 |版本 |
+  > > | ------------------ | -------- |
+  > > |Amulet| 0.1.8 |
+  > > | amuletNameService | Amulet名称服务0.1.8 |
+  > > | dso治理 | 0.1.11 |
+  > > |验证者生命周期 | 0.1.2 |
+  > > |钱包| 0.1.8 |
+  > > |钱包支付 | 0.1.8 |
+
+* 彗星BFT
+
+  > * 将 CometBFT 更新为 [0.37.15](https://github.com/cometbft/cometbft/blob/v0.37.15/CHANGELOG.md?rgh-link-date=2025-04-03T08%3A37%3A21.000Z#v03715)
+
+## 0.3.19
+
+* 稳定性改进
+
+## 0.3.18
+
+* 扫描
+  * `scan_txlog.py`将安全地保存`--cache-file-path`指定的缓存。失败的运行将始终恢复到之前的缓存，例如在写入缓存时磁盘空间不足。
+* 文档
+  * SV 和验证者入口：澄清出于安全原因，应阻止文档中未明确允许的所有流量。
+  * 澄清 GCP 和 AWS KMS 驱动程序仅适用于 Canton Enterprise 的许可用户。
+
+## 0.3.17
+
+<Warning>
+  * 此版本修复了验证者应用程序在审核之前上传 dars 的问题。这可能会导致直接针对这些 DAR（而不是依赖于它们的第三方 DAR）的账本 API 命令提交中断。
+    如果您是从0.3.15升级，请直接升级到0.3.17。如果您不直接针对 amulet DAR 的账本 API（而不是验证者 API）提交任何命令，则不会受到影响。
+</Warning>
+
+* 文档
+  * 更新有关配置 SV 出口的文档。
+  * 添加有关基于 Docker Compose 的验证者部署使用的 `.localhost` 地址的注释。
+
+## 0.3.16* SV 和验证者应用程序
+  * SV 和验证者应用程序现在在同步器升级和停机期间保留参与者本地用户状态。更具体地说，SV 和验证者现在保留身份提供者配置和用户及其附加的所有状态（包括例如权限和元数据注释）。
+* 扫描
+  * scan-internal.yaml 和 scan-external.yaml 中的 Scan API 已合并到一个 scan.yaml 文件中。已弃用的端点标有 `deprecated: true`。
+* 部署
+  * 通过`pvc.volumeName`配置同步器迁移PVC名称。感谢 Stéphane Loeuillet 在 [https://github.com/digital-asset/decentralized-canton-sync/pull/338](https://github.com/digital-asset/decentralized-canton-sync/pull/338) 中做出的贡献
+
+## 0.3.15
+
+<Warning>
+  * 此版本修复了 0.3.14 中引入的扫描回填回归。请跳过0.3.14，直接升级到0.3.15。
+</Warning>
+
+* 部署
+  * 将 UI docker 镜像中 nginx 使用的端口从 80 更改为 8080。
+
+    Helm Chart 定义的服务默认仍然公开端口 80，但现在所有这些服务都可以通过 Helm 值进行配置，例如：验证者 Helm Chart 具有通过 `service.钱包.port` 和 `service.ans.port` 配置的新值。
+
+    compose 部署包含更新的 nginx.conf，现在使用新的 8080 端口。
+
+  * 将 `验证者-values.yaml` 示例文件中的 `topup` 部分移至 `standalone-验证者.yaml` 示例文件，以更清楚地表明配置充值仅适用于非 SV 验证者。请参阅 [canton-network/splice#255](https://github.com/canton-network/splice/pull/255)
+
+  * 添加了 `initialAmuletPrice` helm 选项来设置初始Amulet价格投票（即您的 SV 节点上线时将投票的价格）。请参阅配置说明。请注意，这仅对新节点生效。对于已经存在的节点，通过 SV UI 更改价格投票。
+* 验证者
+  * 添加了在验证者 helm 图表中指定多个 `验证者钱包Users` 的选项。仍然支持现有的 `验证者钱包User` 选项。
+* 文档
+  * 添加了用于管理验证者和超级验证者网络重置的文档。
+
+## 0.3.13
+
+* 文档
+  * 添加有关`流量`的文档。
+  * 添加有关计算烧毁代币总量的文档。
+  * 启用文档页面评论。
+* 配置更改
+  * 将参与者重试Sequencer提交之前的时间增加到 10 秒（从 5 秒）。这可以确保我们不会过于激进地重试，从而导致流量浪费。
+
+## 0.3.12
+
+* 文档
+  * 添加SV修剪部分。
+  * 在 SV 文档中添加历史备份部分。
+  * 将历史备份部分添加到验证者文档中。
+* 性能
+  * 更新了 Scan 中的表定义，以提高 `/transactions` 和 `/activities` 端点的性能。根据我们的测试，这需要一个 SQL 迁移，该迁移将在应用程序启动时运行，在 devnet 上运行约 15m，在主网上运行约 2m。
+* 部署
+  * 添加 OCI 注释以提供附加到 Docker 映像的标准化信息。提供的详细信息包括映像名称、映像版本、创建日期、基础映像、存储库和提交哈希。
+  * 修复了 SV h​​elm 图表中的问题：如果 `attachPvc` 设置为 `false`，则资源部分会被省略。请参阅 [https://github.com/digital-asset/decentralized-canton-sync/issues/299](https://github.com/digital-asset/decentralized-canton-sync/issues/299)
+  * 向所有 Splice Helm 图表添加新的 `serviceAccountName` 值，以允许为已部署的 Pod 指定自定义服务帐户。
+  * 增加了 CometBFT 的缓存和内存池的大小，以尝试提高其在负载下的性能
+
+## 0.3.11
+
+* 验证者
+  * 添加一个选项以启用参与者修剪。
+* 可观察性
+  * 添加用于Sequencer客户端指标的仪表板。
+* 文档
+  * 扩展扫描 API 文档。
+  * 各种较小的文档更新和改进。
+
+## 0.3.10
+
+* 验证者应用程序
+
+  添加对使用存储在外部密钥管理服务 (KMS) 中的密钥操作验证者参与者的支持。
+
+* 指标
+
+  添加了每个商店中最后一次摄取记录时间的`splice_store_last_ingested_record_time_ms`指标以及关联的仪表板。这可用于跟踪节点的一般活动。
+
+* 文档* 添加故障排除部分。
+  * 添加验证者入门流程的概述文档。
+  * 添加有关获取控制台访问 Canton 节点的文档。
+  * 添加用于配置已部署应用程序的文档。
+  * 添加验证者入口和出口要求的文档。
+  * 添加有关指标的概述文档。
+  * 添加有关应用程序开发的概述文档。
+  * 改进API文档。
+  * 各种较小的文档更新和改进。
+
+* SV用户界面
+
+  对 SV UI 的各种改进。
+
+## 0.3.9
+
+* SV用户界面
+  * 在导航栏中的项目和警报/徽章之间添加更好的间距
+* 文档
+  * 在验证者文档中添加了有关硬件要求的部分。
+  * 改进了有关启动新验证者所需网络参数的文档。
+  * 添加了 SV 和验证者的网络图。
+  * 添加了有关如何访问验证者和 SV 指标的初始文档。
+
+## 0.3.8
+
+* 修复了有关使用公开图像和 Helm 图表的文档和脚本
+
+## 0.3.7
+
+* 部署
+  * 从身份转储恢复验证者时，`nodeIdentifier` 现在必须匹配`new参与方Identifier`。当恢复完成后再次删除`new参与方Identifier`时，这已经是一个要求，因此这只是更早地捕获错误配置。
+  * 在 docker-compose 启动脚本中，迁移 id 现在是强制参数，而不是默认为 0。这不需要任何更改，因为目前迁移 id 0 上没有网络，因此您必须已经设置它。
+  * Docker 镜像和 Helm Chart 的发布版本现已分别从 Github 容器注册表（ghcr.io/digital-asset/decentralized-canton-sync/docker 和 ghcr.io/digital-asset/decentralized-canton-sync/helm）公开提供。下载这些发布工件不需要任何凭据。 helm 图表中的默认 `imageRepo` 值已更新为 ghcr.io/digital-asset/decentralized-canton-sync/docker。
+
+## 0.3.6
+
+* 验证者应用程序
+
+  > * 钱包扫描自动化现在支持扫描到最终用户方。
+  > * 修复了以下错误：如果同一验证者上的用户首先预先批准了传入传输，则验证者操作员无法预先批准传入传输。
+
+* SV应用程序
+
+  > * 加入秘密现在对赞助 SV 方进行编码，以便在使用秘密加入针对未发布秘密的 SV 时提供更好的错误消息。秘密仍然只是不透明的字符串，因此不需要更改。
+
+* 钱包用户界面
+
+  * 在启用传入直接转账的预先批准时添加了确认对话框。
+
+* 部署
+
+  * 发布包已再次从文档映像中删除。相反，这些文档链接到 OSS GitHub 存储库上公开提供的发行包。
+
+* 彗星BFT
+
+  * CometBFT版本已更新至0.37.13。 SV 运营商不需要做出任何改变。
+
+## 0.3.5
+
+* 扫描
+  * 为扫描应用程序添加了新指标，以监控更新历史记录中交易和合约重新分配的摄取情况。
+* 部署
+  * 现在必须为 `splice-cluster-ingress-runbook` 舵图提供设置 `spliceDomainNames.nameServiceDomain`。请参阅`sv-helm`示例。
+  * 添加了一个新的 Grafana 仪表板，用于监控 全局同步器 的利用率，目前通过将处理的事务总数与 DSO 方可见的事务总数进行比较来估计。该增量越大，全局同步器就越有可能用于超出操作同步器本身所需的私有事务。
+  * 文档图像需要一个新的环境变量`SPLICE_CLUSTER`。在生产中，这将是 `dev`、`test` 或 `main` 之一。 cn-docs Helm 图表从 `networkName` Helm 值中获取该值。
+* 指标
+  * 所有以 `cn_` 开头命名的指标现在都以 `splice_` 开头。示例 Grafana 配置已更新以匹配，但这些指标的任何自定义使用者都必须手动更新。
+* 达米尔
+  * 重构了 AmuletRules\_BuyMember流量 的 Daml 代码，以避免在Amulet被销毁之前中间转移到 DSO 方。燃烧的数量或奖励的发放没有变化，只是交易结构发生了轻微的变化来实现这一点。
+
+    这需要升级到以下 Daml 版本：|名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.7 | 0.1.7
+    | amuletNameService | Amulet名称服务0.1.7 | 0.1.7
+    | dso治理 | 0.1.10 |
+    |验证者生命周期 | 0.1.1 |
+    |钱包| 0.1.7 | 0.1.7
+    |钱包支付 | 0.1.7 | 0.1.7
+
+## 0.3.4
+
+* SV用户界面
+  * 切换到基于`YYYY-MM-DD`的日期格式和基于24小时的时间格式。
+* 部署
+  * 发布包现已包含在文档映像中，以便 GSF 更轻松地托管。
+  * 向参与者 helm 图表添加新的 `jsonApiServerPathPrefix` 值，该值允许为 JSON API 端点设置路径前缀，以简化配置到参与者 JSON API 的入口路由。
+* 稳定性改进
+
+## 0.3.3
+
+* 所有 UI（实验性应用程序管理器和 splitwell UI 除外）
+  * 在授权请求中添加了 `openid` 范围，以符合 [OpenID Connect 规范](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)。
+* 扫描
+  * 扫描实例现在将运行一个后台进程，该进程复制 SV 节点加入之前的网络历史记录。这会影响`/v1/updates`端点返回的数据，其他API端点（例如`/v0/transactions`）的缺失数据将在未来的更新中回填。这一一次性过程预计需要几天时间才能完成，具体取决于丢失历史记录的大小。在此期间，扫描实例将消耗比平时稍多的计算和网络资源，并且`/v1/updates`端点将返回错误，直到该特定实例上的复制完成。您自己的扫描实例的进度可以通过`cn_history_backfilling_*`指标进行监控。
+  * `/v1/updates` 端点现在排除 ACS 导入产生的更新。此更改已在 0.2.5 发行说明中提到，但由于错误，直到现在才实际实施。
+
+## 0.3.2
+
+* 错误修正
+  * 修复 JSON API 错误，该错误导致调用 GetLedgerEnd 时出现未经身份验证的响应
+
+## 0.3.1
+
+<Warning>
+  * 此版本修复了 0.3.0 中与升级相关的错误。请跳过 0.3.0 并通过同步器停机升级过程直接升级到 0.3.1。
+</Warning>
+
+* 错误修正
+  * 修复 Canton 拓扑导入问题，该问题可能导致同步器升级在某些网络上停机时失败。
+* 部署
+  * 在验证者 helm 图表中使钱包扫描配置值 `use-transfer-preapproval` 可选，默认为 `false`。
+
+## 0.3.0
+
+<Warning>
+  * **可能需要 Daml 重新编译：** 此版本更改了 `AmuletRules` 模板参数的定义，因为它引入了一个名为 `transferPreapprovalFee` 的新可选配置值（请参阅 `daml_changes_0.3.0`）。如果您的 Daml 代码依赖于 `splice-amulet` \< `0.1.6`，那么您**必须重新编译**并在网络升级到 `splice-amulet-0.1.6` 之后且在 S​​V 将此可选配置值更改为默认值之前重新部署它。
+  * 此版本必须通过同步器停机升级过程来应用。
+</Warning>
+
+* Canton
+
+  该版本从Canton 3.1升级到Canton 3.2。除了稳定性改进之外，主要的变化是增加了对外部托管方的支持，从而支持 Amulet 托管。
+
+* 验证者应用程序、扫描应用程序
+
+  * 添加对 Amulet 保管的支持。
+  * 修复了即使有足够的远程扫描连接可用，BFT 扫描调用也会失败的错误。如果大约三分之一的 SV 节点离线，就会发生这种情况。
+
+* 钱包用户界面
+
+  * 支持非外部方通过预先批准的转账与外部托管方交换Amulet。
+
+* SV用户界面
+
+  * SV UI 现在在创建投票请求或投票时显示确认对话框。
+
+* 部署
+
+  * 可选值 `uiPollInterval` 已添加到 `splice-scan`、`splice-sv-node` 和 `splice-验证者` 的 Helm 图表中。此值允许您配置已部署的 UI 轮询服务更新的时间间隔（以毫秒为单位）。如果未指定，则默认值为 1000（1 秒）。
+  * 日志字段`labels."k8s-pod/cn-component"`已重命名为`labels."k8s-pod/splice-component"`。
+
+* 安全* 修复了 Canton 节点初始化问题，该问题导致新初始化的参与者、调解器和Sequencer重用其根命名空间签名密钥用于所有签名目的。升级到此版本还将修复最初在受影响版本（版本 0.2.4 至 0.2.8）上安装的所有验证者和 SV 上的密钥使用情况，为受影响的 Canton 节点生成新的签名密钥。
+
+* 文档
+
+  * 在验证者文档中添加了关于如何与多个用户共享运营商钱包的新部分。参见`验证者-users`。
+  * 在超级验证者文档中添加了一个新的小节，记录了 SV 运营商商定的 URL 约定。
+
+### Daml 0.3.0 中的变化
+
+Daml 更改引入了对 Daml 方密钥的外部签名的支持。这些外部各方所需的签名可以通过加密货币托管人的系统收集，并且可能涉及多个人类确认者。因此，以这些方的名义提交的交易从创建交易签名请求到最终在网络上提交交易可能需要几个小时。这种增加的延迟需要对 Amulet 底层的 Daml 模型进行一些更改。可以通过比较 [https://github.com/canton-network/splice](https://github.com/canton-network/splice) 存储库中的 `daml` 目录来详细查看它们。
+
+主要变化总结如下：
+
+> * 更改现有的`AmuletRules`模板：
+>
+> * 在`AmuletRules`存储的`AmuletConfig`中添加新的配置字段`transferPreapprovalFee`。
+
+<Warning>
+  一旦此字段设置为 `Some value`，您将无法再使用针对 `splice-amulet-0.1.6` 之前的版本构建的 Daml 代码来调用 `AmuletRules` 上的选项！一旦目标网络上的 SV 升级到`splice-amulet-0.1.6`，请重新编译并重新分发您的 Daml 代码。> * 添加下面解释的选项 `AmuletRules_CreateTransferPreapproval` 和 `AmuletRules_CreateExternalPartySetupProposal`。
+  >
+  > * 新的工作流程和模板：
+  >
+  > * 通过创建 `TransferPreapproval` ，让一方能够向网络声明他们可以接收来自任何一方的传入 Amulet 传输。外部托管方使用它来接收资金，而无需主动确认他们可以接收资金。想要从外部托管方接收资金的各方也必须使用它，因为外部方钱包目前不使用转账要约工作流程。
+  > * `TransferPreapproval` 合约预计由该方的加密货币托管人创建，并支付每年的维护费。该费用可通过 DSO 投票进行配置，最初设置为每年 1 美元。付款本身是通过在购买时燃烧相应数量的Amulet来进行的。作为支付该费用的回报，加密货币托管人将被记录为通过其维护的`TransferPreapproval`执行的所有 Amulet 传输的应用程序提供商和验证者运营商。
+  > * 为加密货币托管提供商添加了名为 `ExternalPartySetupProposal` 的辅助工作流程，以便为外部方设置 `TransferPreapproval` 和 `验证者Right`。后者是声明验证者活动记录所必需的。该工作流程由加密托管提供商调用 `AmuletRules_CreateExternalPartySetupProposal` 选择启动。
+  > * 各方也可以使用`AmuletRules_CreateTransferPreapproval`选择直接购买`TransferPreapproval`。
+  > * 此外，各方可以使用 `ExternalPartyAmuletRules_CreateTransferCommand` 将Amulet转移委托给他们选择的一方。我们引入这个功能是因为正常的Amulet转账交易是指`OpenMiningRound`合约，其有效期最多为30分钟（10分钟的预告时间，以及2\*10分钟的活跃时间）。这个时间太短，无法适应加密托管提供商的人机循环确认工作流程，这反过来又会因引用陈旧的回合合约而导致交易失败。
+  > * 代表的典型选择是加密货币托管人节点上的普通方。一旦 `TransferCommand` 可见，该方预计将在线并提交实际转账。转移的输入Amulet由代表选择；如果存在的话，他们应该选择能够满足所需金额的投入。如果没有足够的资金，`TransferCommand` 将被存档并标记为失败。
+  > * 创建多个 `TransferCommands` 的外部各方可以使用 DSO 跟踪的以太坊样式随机数来防止执行相同的传输两次，该随机数必须按顺序增加才能执行传输命令。我们希望这些各方的钱包能够使用 Amulet 扫描中提供的信息选择正确的随机数。支持运行中的多个传输命令。
+  > * 涉及`TransferCommands`和`TransferPreapprovals`的所有交易都有`dso`方作为签名者，因此始终由⅔的SV节点验证。
+  >
+  > * 此版本中的 Daml 更改需要治理投票才能将包配置升级为：
+  >
+  > |名称 |版本 |
+  > | ------------------ | -------- |
+  > |Amulet| 0.1.6 |
+  > | amuletNameService | Amulet名称服务0.1.6 |
+  > | dso治理 | 0.1.9 | 0.1.9
+  > |验证者生命周期 | 0.1.1 |
+  > |钱包| 0.1.6 |
+  > |钱包支付 | 0.1.6 |
+</Warning>
+
+## 0.2.8
+
+* SV应用程序
+  * postgres 15 已修复获取投票结果的查询。
+* 音序器
+  * 修复了在查询尝试加入的新 SV 的加入快照时的低效查询。
+
+## 0.2.7
+
+* 扫描
+  * 添加了新端点`/v1/updates`和`/v1/updates/{update_id}`。更新端点返回所有 Daml 交易以及所有合约重新分配。 Daml 交易和合约重新分配都可以由多个较小的组件组​​成：单个 Daml 交易可能是子交易树的顶部节点，而合约重新分配实际上可能是一批许多重新分配。每个超级验证者节点都会为 Daml 交易树中的每个子交易分配一个唯一的计数器（称为事件 ID）。因为为树的元素分配计数器的方法不只有一种，所以每个超级验证者节点都会为交易树的相同元素提供不同的事件 ID。
+
+    这意味着想要比较来自多个超级验证者的更新的应用程序无法匹配其事件 ID。因此，对于这些端点的 v1 版本，我们在 Scan 中添加了一种树节点编号方法，当给定相同的树结构时，该方法在每个树节点上一致地生成相同的事件 id。
+
+    依赖于从单个超级验证者提取的现有事件 ID 集的应用程序可以继续使用 /v0/updates 和 /v0/updates/{update_id}。这将返回他们迄今为止使用的单个超级验证者事件 ID 集。想要跨超级验证者比较更新详细信息（包括事务树和子事务）的应用程序可以使用这些端点的 v1 版本。
+
+## 0.2.6
+
+注意：0.2.5 被跳过，因为它引入了回归，其中拼接应用程序硬编码了错误的日志级别。
+
+* 文档
+  * 更新了文档以包含有关如何创建基于 k8s 的独立 Canton Network 的部分。这对于测试部署更改非常有用，特别是对于 SV。参见`scratchnet`。
+* SV用户界面
+  * AmuletRules 和 DsoRules 的配置更改与其将替换的配置和正在进行的提案有所不同。这样可以更轻松地查看正在提议的更改以及当前的配置是什么。
+  * 通过 SV UI 创建验证者入门密钥时，它们的过期时间现在为 48 小时。
+* 扫描
+  * 添加了端点 `/v0/validators/验证者-faucets` 以通过验证者方 ID 查询验证者水龙头。
+  * 修改了 `/v0/updates` 和 `/v0/updates/{update_id}` 扫描 API 端点，以确保它们在 SV 之间一致返回相同的历史记录：
+    * 现在，`/v0/updates` 端点在扫描尚未复制其 SV 节点加入网络之前的历史记录时会失败。
+    * `/v0/updates` 端点现在排除 ACS 导入产生的更新（工作流程 ID 以 `canton-network-acs-import` 开头的更新）。
+    * 修复了在调用 Scan API 上的 `/v0/updates` 和 `/v0/updates/{update_id}` 端点时，利益相关者（签署者和观察者）的顺序在 SV 之间不一致的问题。
+    * 修复`/v0/domains/{domain_id}/members/{member_id}/流量-status`硬迁移后返回的总购买流量值不正确的问题。
+* 向 Splice 应用程序数据库添加新索引。升级后，扫描和验证者应用程序可能需要一段时间才能启动。
+* Canton
+  * 为所有组件启用缓慢的未来日志记录，以更好地调试卡住的节点。
+  * 添加了在节点崩溃并重新启动之前处理顺序事件的最长时间为 10 分钟。这可以缓解节点可能因错误而卡住并且重新启动可以恢复的情况。
+* 部署
+  * **突破性** 每个名称以 `cn-` 开头的 Helm 图表都已重命名，现在以 `splice-` 开头，除了 `cn-docs` 之外。
+  * **破坏** 脚本 token.py 已重命名为 get-token.py 以避免与某些导入的模块发生冲突。
+  * 与`IfNotPresent`对应的`imagePullPolicy`现在默认未设置。如果需要，您可以使用 helm 值 `imagePullPolicy` 覆盖它。
+  * 在`paused-triggers`设置中，触发器名称前缀`com.daml.network`已替换为`org.lfdecentralizedtrust.splice`。这也适用于您可能在日志中看到的堆栈跟踪。
+  * SV 和 Scan helm 值中的 `domain.sequencerAddress`、`domain.mediatorAddress` 和 `参与方Address` 现在是强制性的。默认值不包括迁移 ID，因此几乎总是不正确，这意味着这可能没有影响，因为 SV 应该已经明确设置了此设置。
+* 错误修正
+  * 修复了钱包应用程序中分页时不会列出之前迁移 ID 中的交易的问题。
+
+## 0.2.4
+
+* 音序器
+
+  修复了一个罕见的错误，即滞后参与者尝试提交拓扑事务导致Sequencer死锁并且不处理任何新事件。
+
+## 0.2.3
+
+注意：由于发布过程中的错误，0.2.2 被跳过。
+
+* SV用户界面
+
+  * 查看Amulet价格的路线已从`/cc-price`重命名为`/amulet-price`* docker-compose 验证者现在支持在发生彻底灾难时从节点身份转储中恢复。
+
+* 将新的 `initialPackageConfigJson` 值添加到 SV h​​elm 图表中，以允许在引导网络时设置 daml 包版本。这对于确保 Daml 版本不会在网络重置时发生更改非常有用。只有第一个 SV 需要设置此项。
+
+* SV应用程序
+
+  * 修复了一个错误，即即使修剪间隔尚未过去，Sequencer修剪也会将同步器迁移后未加入的节点视为滞后，并禁用它们以防止它们连接到Sequencer。
+
+* 部署
+
+  * **破坏**：身份验证秘密 `splice-app-{sv,验证者}-ledger-api-auth` 以前将 `audience` 作为可选字段。现在这是必需的。以前的隐含值为`https://canton.network.global`。如果您之前没有覆盖此值，则现在应该显式添加它。
+  * 过去可以通过 sv 和验证者图表中的 helm 值`auth.ledgerApiAudience` 覆盖 ledger-api 受众值。这已被删除——使用上一点中提到的秘密。
+  * **突破** 图表值 `auth.audience` 以前是可选的，现在是以下图表所必需的。之前的隐式值为`https://canton.network.global`。要继续使用它，请明确提供您的价值观。 （有关身份验证配置的更多信息，请参阅 sv-helm 和 验证者-helm 文档。）
+    * `cn-sv-node`
+    * `cn-验证者`
+  * **突破** 图表值 `auth.jwksUrl` 以前是可选的，现在对于上面的相同图表来说是必需的。这应该已经在您的特定身份验证设置的值文件中被覆盖，因此可能不需要进一步的操作。
+
+* 错误修正
+
+  > * 修复了已使用无效 `验证者PartyHint` 部署的验证者在硬域迁移后无法启动的问题，因为验证者应用程序拒绝了现有的提示。
+
+* 音序器
+
+  * 修复了Sequencer流量管理中的一个问题，该问题导致同步器升级并停机后出现死锁，其中滞后的验证者因落后而无法提交交易，但也因提交失败而无法赶上。
+
+* 添加了对基于 docker-compose 的单 SV 网络部署的支持，应用程序开发人员无需连接到 DevNet 即可进行测试。
+
+## 0.2.1
+
+* 添加了对基于 docker-compose 的验证者部署的支持。
+* 扫描
+  * 修复了馆藏和馆藏摘要端点中的一个问题：当创建合约的拼接Amulet版本与扫描版本支持的最新版本不匹配时，无法解码合约。
+* 音序器
+  * 修复了一个错误，如果旧迁移 ID 上的拓扑状态中有提议，则该错误会阻止硬域迁移期间的初始化。
+
+## 0.2.0
+
+注意：此版本必须通过 `同步器 Upgrades with Downtime` 程序应用。
+
+* Canton
+
+  该版本从Canton 3.0升级到Canton 3.1。主要更改是对Sequencer数据库的完全重新设计，仅将每条已排序的消息存储一次，而不是为每个收件人复制它。
+
+* 达米尔
+
+  * 添加允许合并重复验证者许可证的选项。在 DevNet 上，很容易获得重复项，因为秘密可以自动生成
+
+  * 通过查询`/api/sv/v0/devnet/onboard/验证者/prepare`端点。这在测试/主网上不是问题，其中秘密由 SV 运营商明确提供并且是一次性使用的。
+
+  * SV 运营商需要确保他们只向每个验证者分发一个秘密
+
+  * 添加新模板`验证者活跃度ActivityRecord`。它是`验证者FaucetCoupon`模板的副本，唯一的区别是验证者是观察者而不是签名者。这是为了允许优惠券在没有验证者参与的情况下过期。
+
+  * 此版本中的 Daml 更改需要治理投票才能将包配置升级为：
+
+    |名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.5 | 0.1.5
+    | amuletNameService | Amulet名称服务0.1.5 | 0.1.5
+    | dso治理 | 0.1.8 |
+    |验证者生命周期 | 0.1.1 |
+    |钱包| 0.1.5 | 0.1.5
+    |钱包支付 | 0.1.5 | 0.1.5
+
+* SV 和验证者应用程序* 在SV操作文档中添加关于避免在SV节点上安装第三方Daml应用程序的注释，因为这可能会损害SV节点的安全。
+  * 删除对节点身份转储上已弃用的 `bootstrapTXs` 字段的支持。不再支持在 0.1.2 快照或更早版本上进行的节点身份转储。
+
+* 指标：所有直方图默认使用[原生直方图](https://opentelemetry.io/docs/specs/otel/compatibility/prometheus_and_openmetrics/#exponential-histograms)。
+
+  > * 仪表板也进行了调整，以便在所有查询中使用 PromQL 函数来生成本机直方图
+  > * 您可以通过在 `additionalEnvVars` helm 值中添加以下环境变量来关闭每个组件的此行为：`ADDITIONAL_CONFIG_DISABLE_NATIVE_HISTOGRAMS="canton.monitoring.metrics.histograms=\[\]"`
+
+* 仪表板
+
+  * 添加了新的“同步器费用（验证者视图）”仪表板，供验证者监控其流量购买和消耗。
+
+* 钱包API
+
+  * `钱包-internal.yaml` 中的`list` API 现在将合约公开为 `ContractWithState`，而不仅仅是`Contract`。
+
+* 部署
+
+  * 从Canton节点的舵图中删除了`disableAutoInit`值。现在，所有 Canton 节点将始终在禁用初始化的情况下启动。 SV 和验证者应用程序将根据需要负责初始化节点，并使用新的 `nodeIdentifier` helm 图表值作为 Canton 节点标识符。验证者和 SV 的安装说明已相应更新。
+
+  * `spliceInstanceNames` 值现在对于部署前端的所有 Helm 图表都是强制的（`cn-scan`、`cn-验证者`、`cn-sv-node` 和 `cn-splitwell-web-ui`）。它们的正确值发布在验证者和 SV 的文档中。
+
+  * 配置变量 `clusterUrl` 已从除 `splitwell-web-ui` 之外的所有 Helm 图表中删除。
+
+  * 在新的 `postgres-values-验证者-参与方.yaml` 示例文件中，验证者的默认 Postgres PVC 大小配置为 50GiB。另请注意验证者安装文档中的更改，以便在安装 Postgres 图表时使用此文件。
+
+  * 对于 Docker 镜像，这些输入环境变量已重命名，将 `CN` 替换为 `SPLICE`：
+
+    > * `CN_APP_UI_HTTP_URL`
+    > * `CN_APP_UI_UNSAFE_SECRET`
+    > * `CN_APP_UI_UNSAFE`
+    > * `CN_APP_WALLET_REDIRECT`
+
+  * 以下 Kubernetes 密钥已重命名，将 `cn-` 替换为 `splice-`：
+
+    > * `cn-app-*-ledger-api-auth`
+    > * `cn-app-cns-ui-auth`
+    > * `cn-app-sv-key`
+    > * `cn-app-sv-ui-auth`
+    > * `cn-app-验证者-入驻-验证者`
+    > * `cn-app-钱包-ui-auth`
+
+* 文档
+
+  * 更新了在同步器升级并停机后检查同步器运行状况的建议，以专门关注监控信号。
+  * 简化了 SV 和验证者灾难恢复文档中基于`jq`的数据转储后处理示例。
+
+* 指标
+
+  * 添加了 `cn_钱包_unlocked_amulet_balance` 和 `cn_钱包_locked_amulet_balance` 指标，以公开锁定和解锁Amulet的有效每方余额。
+
+## 0.1.19
+
+* 修复用于 `ans-web-ui` 的 Docker 镜像摘要，由于重命名，在 0.1.18 中意外地为空（从而未固定镜像）。
+* `验证者PartyHint` 现在对于非 SV 验证者是强制性的。对于现有的验证者，必须将其设置为当前方提示（否则应用程序将无法启动）。对于新的验证者，其格式必须为`<organization>-<function>-<enumerator>`，其中`organization`和`function`是字母数字，`enumerator`是从1开始的数字。
+* 修复了 0.1.18 中添加的针对 0:00 之前网络引导的扫描 ACS 快照功能中的问题。
+* 修复了 0.1.18 中添加的 ACS 快照功能中围绕硬域迁移的问题。这仅影响硬域迁移*到*0.1.18，但不影响*从*0.1.18。
+
+## 0.1.18* SV 应用程序
+  * 修复了一个罕见的竞争情况，即 SV 应用程序在硬域迁移中使用错误的时间戳导出拓扑状态，导致Sequencer在迁移后无法初始化。我们建议在下一次硬域迁移之前进行升级。
+  * 使 SV 能够在 `SvNodeState` 中保留迁移前Sequencer URL。这是通过 SV 值中的新 `migration.legacyId` 配置来完成的。如果设置，SV 将继续公开该迁移 ID 的Sequencer URL。取消部署旧Sequencer节点后，请同时删除此选项以阻止 Scan 公布旧Sequencer。这使得一直落后的验证者能够更容易地赶上。
+* 仪表板
+  * 添加了新的 CometBFT 网络状态仪表板，显示与 CometBFT P2P 网络上的每个对等点交换的数据量。这应该可以更轻松地诊断网络对等点之间的连接问题。
+* 扫描API
+  * `scan-internal.yaml`新增`getUpdateById` API。 `getUpdateById` API 可用于通过更新 ID 检索更新。
+  * `scan-internal.yaml`新增`getAcsSnapshotAt`、`getHoldingsStateAt`、`getHoldingsSummaryAt` API。现在定期计算并存储活动合同集 (ACS) 的快照，以便为这些端点提供服务。
+  * 修改了 `listDsoSequencers` 扫描 API，还公开预迁移Sequencer URL，允许预迁移验证者赶上。
+* 用户界面
+  * 扫描、钱包、SV 和 CNS UI 已启用 Gzip 压缩。
+* 部署
+  * 更新了 Cometbft Helm 图表，使其不接受 `chainIdSuffix` 的整数值。
+  * 无论使用什么地方，`disableAutoInit` Helm 值现在都默认为 `true`，并且在加入新的验证者或 SV 时必须明确设置为 `false`。验证者和 SV 的安装说明已相应更新。
+  * 将 `helm.sh/resource-policy: keep` 添加到验证者和 SV 应用程序域迁移 PVC，以确保它们不会意外被 `helm uninstall` 删除。您仍然可以使用`kubectl delete pvc`完全删除它们。
+  * `验证者PartyHint` 现在对于非 SV 验证者是强制性的。对于现有的验证者，应将其设置为当前方提示（否则，该值将被忽略，并且将在日志中打印警告）。对于新的验证者，其格式应为`\<organization\>-\<function\>-\<enumerator\>`。
+  * 在`cometbft-values.yaml`中，顶级标签`founder`现在为`sv1`。该示例已更新以匹配，并且必须对您自己的副本进行此更改。
+  * 发布包的下载链接已更改为新的 URL 格式：`\<version\>\_splice-node.tar.gz`。其内容也已相应重命名。
+* 文档
+  * 简化了 SV 和验证者灾难恢复文档中基于`jq`的数据转储后处理示例。
+
+## 0.1.17
+
+* 钱包自动化
+  * 修复了钱包扫描自动化中的一个问题，即使已经有足够的转移优惠来支付扫描，它也会创建额外的转移优惠。
+* 部署
+  * Helm 图表中的图像版本现在固定到摘要中以提高安全性
+
+## 0.1.16
+
+* 彗星Bft
+  * 默认 cometbft 持久卷大小从 1250Gi 增加到 2500Gi。
+* SV应用程序
+  * 添加自动化功能，自动调用0.1.15中添加的修剪`futureValue`的Daml选项
+* 发布
+  * HTML 文档现已包含在发行包中，位于 `docs/html` 下。
+* 文档
+  * 为`验证者-values.yaml`添加了配置验证人流量充值的注意事项
+* 达米尔
+  * 修复了`AmuletRules_ComputeFees`中的一个错误，该错误导致锁的费用计算过高，因为它没有像`AmuletRules_Transfer`那样对锁持有者进行重复数据删除。
+
+  * 修复了 ANS 条目过期问题，以便利益相关者参与者不可用时仍能保持稳健。
+
+  * 所有 Dars 均由源文件重建，其中包含与 Splice 存储库中相同的版权前缀。这会影响所有软件包中的 dar 版本。纳入这一点将需要治理投票才能将包配置升级为：|名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.4 | 0.1.4
+    | amuletNameService | Amulet名称服务0.1.4 | 0.1.4
+    | dso治理 | 0.1.6 |
+    |验证者生命周期 | 0.1.1 |
+    |钱包| 0.1.4 | 0.1.4
+    |钱包支付 | 0.1.4 | 0.1.4
+* 部署
+  * 为所有舵图添加了 `活跃度ProbeInitialDelaySeconds` 参数。
+  * 部署前端（`cn-scan`、`cn-验证者`、`cn-sv-node` 和 `cn-splitwell-web-ui`）的 Helm 图表现在接受新参数 `spliceInstanceNames`，以配置特定于网络的术语。应从 [cn-svc-configs ui-config-values.yaml](https://github.com/DACH-NY/cn-svc-configs/blob/main/configs/ui-config-values.yaml) 使用正确的值
+  * `CN_APP_*_UI_*` 形式的 Docker 环境变量已重命名为 `CN_APP_UI_*`，删除了应用程序名称前缀。对于 Helm 图表的用户，无需采取进一步操作。
+* 音序器
+  * 改进了序列器启动的性能以及在加入新 SV 时查询序列器加入快照的性能。这会向Sequencer数据库添加一个新索引，因此可能需要一段时间，具体取决于数据库的大小。
+
+    注意：如果您遇到迁移时间过长以及 k8s 终止 pod 的问题，请在Sequencer helm 图表中修改 `活跃度ProbeInitialDelaySeconds` 参数。
+
+    我们还发现了 istio 在迁移完成之前取消数据库连接的一些问题（在比我们预期的开发/测试/主网上规模更大的集群上）。在这种情况下，请考虑通过Sequencer部署上的`annotations: 流量.sidecar.istio.io/excludeOutboundPorts: "YOURDATABASEPORT"`禁用 istio 代理。
+* 所有 helm 图表现在都允许通过 `persistence.port` 配置数据库端口。请注意，对于 `cn-global-domain` 图表，它嵌套在 `sequencer.persistence` 和 `mediator.persistence` 下。
+
+## 0.1.15
+
+注意：0.1.14 已被跳过，因为它包含与日志记录相关的问题。直接从0.1.13升级到0.1.15。
+
+* SV应用程序
+  * 添加了治理选项来更新成员 SV 的 SV 奖励权重。通过选择“更新 SV 奖励权重”操作，可以在“治理”选项卡中使用此功能。
+  * 将 `consensus_state` 添加到通过 SV 应用程序在 `/v0/admin/domain/cometbft/json-rpc` 公开的 CometBFT RPC 端点列表中。
+* 部署
+  * 修复验证者和 SV helm 图表中将 `contactPoint` 设置为空字符串会产生错误的问题。
+* 达米尔
+  * 添加一个选项，允许在达到时间后从 AmuletRules `futureValues` 修剪配置，以减少配置的大小并减少不同网络上配置计划之间的差异。
+
+  * 此版本中的 Daml 更改需要治理投票才能将包配置升级为：
+
+    |名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.3 |
+    | amuletNameService | Amulet名称服务0.1.3 |
+    | dso治理 | 0.1.5 | 0.1.5
+    |验证者生命周期 | 0.1.0 |
+    |钱包| 0.1.3 |
+    |钱包支付 | 0.1.3 |
+
+## 0.1.13
+
+* 码头工人
+
+  * 切换为使用`eclipse-temurin:17-jdk-jammy`作为基础镜像，因为`openjdk:17-jdk-slim`不再维护。
+
+* 部署
+
+  * Helm 图表中的 UI 容器现在默认仅请求 0.1 CPU 和 240Mi 内存。
+  * 根据负载测试中观察到的使用情况，默认参与者 CPU 请求已从 2 个 CPU 降低到 1 个 CPU。
+  * 验证者和 SV 舵图有一个新的必填 `contactPoint` 字段，必须在 `验证者-values.yaml` 和 `sv-values.yaml` 中设置。这应该指向 Slack 用户名或电子邮件地址，其他节点操作员可以使用该用户名或电子邮件地址在您的节点出现问题时与您联系。如果您不想共享它，请将其设置为空字符串。
+  * 为所有 Helm 图表添加了对 k8s 容错的支持。
+
+* SV应用程序
+
+  * `/v0/admin/domain/data-snapshot` 现在在响应负载中包含 `created_at` 和 `migration_id`，因此从备份恢复 SV 应用程序时不再需要手动添加这些内容。 `migration_id` 也是设置后者的可选参数，默认为 1 + 集群当前的迁移 ID。* 额外受益人配置已更改为在有序列表中指定权重而不是百分比。权重按照列表的顺序分配，直到没有权重剩余。任何剩余部分仍归 SV 运营方所有。这解决了基于百分比的受益人规范的两个问题：
+
+    > 1. 不会出现舍入误差
+    > 2. 它允许提前更改配置，以通过在末尾添加附加条目来考虑计划的重量变化。
+
+    这是一个重大配置更改，需要您按照此示例调整 SV 应用程序配置：假设总权重为 10000 个基点，之前的配置：
+
+    额外受益人：
+
+    * partyId: "受益人\_1\_PARTY\_ID"
+      百分比：10.0
+    * partyId: "受益人\_2\_PARTY\_ID"
+      百分比：33.33
+
+    更改为：
+
+    额外受益人：
+
+    * 受益人：“BENEFICIARY\_1\_PARTY\_ID”
+      重量：1000
+    * 受益人：“BENEFICIARY\_2\_PARTY\_ID”
+      体重：3333
+
+* 验证者应用程序
+
+  * `/v0/admin/domain/data-snapshot` 现在接受 `migration_id` 作为参数，覆盖响应负载中的 `migrationId`。默认的 `migrationId` 现在是 1 + 集群的当前迁移 ID，而不仅仅是当前迁移 ID。
+  * 迁移转储格式已更改； JSON 键`acsSnapshot`、`acsTimestamp`、`migrationId`、`domainId` 和`createdAt` 已分别更改为`acs_snapshot`、`acs_timestamp`、`migration_id`、`domain_id` 和`created_at`。 `/v0/admin/domain/data-snapshot` 的格式已修复，与迁移转储导入格式不匹配，因此无需修补备份即可恢复。以前的转储仍然可以使用旧格式导入。
+
+* 扫描应用程序
+
+  * 改进了从身份备份重新加入验证者时使用的每方 ACS 端点的性能。
+
+* 达米尔
+
+  * 扩展了 Daml 模型以报告版本号和每个验证者的定期心跳，以更好地概述网络状态并检测早期升级中的潜在问题。
+
+  * 现在可以通过“设置 DsoRules 配置”治理来修改 ACS 承诺的频率，方法是更改​​ DsoRules 中新添加的`acsCommitmentReconciliationInterval` 配置参数（默认设置为 30 分钟）。
+
+  * 删除了`splice-dso-governance.dar`中`DsoRules_CloseVoteRequest`选项中`SRARC_OffboardSv`的特殊情况，因此现在只有在**所有**当前SV都同意的情况下才可以在投票请求到期之前将SV注销，**包括**正在注销的SV。在此变更之前，除要下线的 SV 之外的所有 SV 都投票完毕后，下线将在设定的到期时间之前生效。这使得协调工作变得更加复杂，为 SV 提供足够的时间来解决离职原因并防止离职。
+
+  * 此版本中的 Daml 更改需要治理投票才能将包配置升级为：
+
+    |名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.3 |
+    | amuletNameService | Amulet名称服务0.1.3 |
+    | dso治理 | 0.1.4 | 0.1.4
+    |验证者生命周期 | 0.1.0 |
+    |钱包| 0.1.3 |
+    |钱包支付 | 0.1.3 |
+
+* 仪表板
+
+  添加了一个新的验证者许可证仪表板，显示所有验证者的版本和联系点。这对于判断升级的影响很有用。
+
+## 0.1.12
+
+注意：0.1.11 被跳过，因为它包含一些问题。直接从0.1.10升级到0.1.12。
+
+* SV 和验证者应用程序
+
+  * 在 SV 和验证者应用程序的 helm 值中添加了 `disableIngestUpdateHistoryFrom参与方Begin` 标志。添加此内容是为了考虑 0.1.11 中的一项更改，该更改存储更多历史记录，因为回填现有测试/devnet 集群上的历史记录过于昂贵。这应该**仅**在现有的 Dev/TestNet 集群上启用，以避免升级到 0.1.12 时出现问题。 **不得**在任何新集群上或节点完全重置时启用它。
+
+* 扫描
+
+  * 修复扫描中新的更新历史记录 API 无法提供升级前的数据的错误。
+
+* 在发布包中包含 Grafana 仪表板和有关网络运行状况的自述文件。
+
+* 配置* 在验证者应用程序 Helm 图表中添加支持，用于配置扫描和自动接受转让报价。
+  * 验证者应用程序的 `钱包-sweep` 和 `auto-accept` 配置值已更改为将 party-id 映射到配置，而不是将参与者用户名映射到配置。
+
+* 达米尔
+
+  * `splice-钱包.dar`中的`钱包AppInstall_ExecuteBatch`选择已更改，以便在对用户的代币持有量执行批量操作时也记录钱包用户方，以提高钱包交易日志中日志条目的歧义性。
+
+  * 修复了计算转会费时的一个问题，其中步数的值被解释为步数之间的差值，而不是绝对值，例如对于默认配置，费用计算为 `transferFee(2000) = 0.1 * 100 + 1000 * 0.01 + 900 * 0.001` 而不是 `transferFee(2000) = 0.1 * 100 + 900 * 0.01 + 1000 * 0.001`。
+
+    这需要治理投票来将包配置升级为：
+
+    |名称 |版本 |
+    | ------------------ | -------- |
+    |Amulet| 0.1.2 |
+    | amuletNameService | Amulet名称服务0.1.2 |
+    | dso治理 | 0.1.3 |
+    |验证者生命周期 | 0.1.0 |
+    |钱包| 0.1.2 |
+    |钱包支付 | 0.1.2 |
+
+* 验证者管理API
+
+  简化了共享相同派对 ID 和钱包的用户创建过程。为此，`POST /v0/admin/users` 在其 JSON 正文中接受可选的 `party_id` 字段，该字段可以设置为已分配的参与方。
+
+* 错误修正
+
+  * 用于收集奖励的钱包自动化仅在每个 Daml 派对启动一次，而不是每个加入的钱包用户启动一次。这使得多个钱包用户可以访问同一 Daml 方的相同代币持有量。
+  * 修复了用户钱包错误地尝试使用验证者管理方的特色应用程序权限（如果存在）的错误，从而导致交易失败。
+
+* `approved-sv-id-values-\*.yaml` 文件已从发布包中删除。现在只能从 [cn-svc-configs 存储库](https://github.com/DACH-NY/cn-svc-configs) 获取每个网络实例批准的 SV 身份。
+
+* CC 扫描
+
+  修复了余额 API 和 UI 中的一个错误，即如果某一方的余额变化在一轮中为负数（例如，因为转走了大量金额），则无法正确跟踪余额。
+
+## 0.1.10
+
+* SV应用程序
+
+  创始节点设置的默认传输配置已从`"0.0000192901`更改为`0.0000190259`，对应于更改以定点小数和365天执行的计算。这与已经通过治理投票应用于 devnet 的更改相匹配。
+
+* 达米尔
+
+  修复了当 SV 重新加入时导致重复的`SvRewardState`合同的错误，这使他们能够获得与其实际体重倍数相对应的奖励。这需要通过对`AmuletConfig`的治理投票将`dso-governance`升级到`0.1.2`。
+
+* SV用户界面
+
+  修复了 `DSO Info` 中 JSON 对象的漂亮打印中的错误，该错误打印的地图与 API 响应和 UI 的其他部分不同。
+
+## 0.1.9
+
+* 配置
+
+  > * CoinRules 中的默认`actionConfirmationTimeout`参数从 5 分钟增加到 1 小时。如果某些节点暂时不可用或速度缓慢，这会提高鲁棒性。请注意，这需要治理投票来更改现有集群上的`DsoConfig`。
+  > * 更新了默认 PVC 大小：Postgres 为 2800Gi。
+
+* 应用程序开发
+
+  * DAR 无法再通过 Ledger API 上传。请改用 Canton 管理 API。此更改是由于分类账 API 上传在硬域迁移下中断而做出的。
+
+* 文档
+
+  * 在 SV 和验证者的同步器升级与停机文档部分中添加有关（Helm 图表）版本升级的注释。
+  * 更新了 `Preparing for 验证者 入驻` 部分，以描述验证者操作员加入新节点所需采取的步骤。
+  * 删除了自托管验证者文档，转而使用用于验证者部署的 Helm 文档。
+  * 删除了与 Splitwell 相关的文档，因为 Splitwell 并未作为生产就绪应用程序进行积极维护。
+
+* 部署* cometbft helm 图表的 `founder` 部分中的值 `nodeId`、`publicKey` 和 `keyAddress` 未在图表默认值中设置，但必须明确提供。请参阅示例 `cometbft-values.yaml` 中的注释，了解用于 DevNet、TestNet 或 MainNet 的值。
+
+* 达米尔
+
+  修复了一个错误，如果该轮没有无人认领的奖励，则该轮无法进入发放状态。这需要通过 AmuletConfig 的治理投票将`splice-amulet`、`splice-amulet-name-service`、`splice-dso-governance`和`splice-钱包`升级到版本`0.1.1`。
+
+## 0.1.8
+
+* 部署
+  * Digital-Asset-2 节点的 URL 现在符合商定的 URL 格式：`\*.sv-2.\<dev\|test\>.global.canton.network.digitalasset.com`
+  * 所有 Digital-Asset-Eng-X 节点也会在此版本中更改 URL，从 *.sv-x 开始。到\`*.sv-x-eng.\<dev|test>.global.canton.network.digitalasset.com\`。
+* 错误修正
+  * 将 ACS 承诺的频率减少到每 30 分钟一次，以避免验证者出现流量不足的问题。
+* 性能
+  * Sequencer现在批处理一些写入，这应该会提高性能。
+
+## 0.1.7
+
+* 部署
+  * 请注意 Digital-Asset-2 节点中的 url（在文档中的几个示例和默认配置中使用）中的 url 更改，来自 *.sv-1.svc。到*.sv-1.，作为使该节点符合商定的 URL 格式的一个步骤。请注意，对数字资产节点 URL 的进一步更改可能会在下一个版本可用之前生效。
+* 更新了验证者操作手册，其中包含重新加入验证者的说明。
+* 将验证者应用程序和 SV 应用程序配置中的`流量-reserved-for-topups`重命名为`reserved-流量`，以更好地反映“预留”流量不仅仅用于流量充值这一事实。除非您明确为此设置一个值而不是仅仅依赖默认值，否则不需要进行任何更改。
+* API
+  * SV 和验证者应用程序上的 `admin/domain/data-snapshot` 端点现在需要将时间戳指定为查询参数，而不是在有效负载正文中。由于 `GET` 请求不得包含请求正文，因此这一点已更改。
+
+## 0.1.6
+
+注意：0.1.5 导致了下面提到的问题，因此 SV 和验证者都应直接从 0.1.4 升级到 0.1.6。
+
+* 安全
+  * 修复了启动时记录配置文件中的机密的问题。这会影响 Auth0 机密、SV 登录和验证者登录机密。请尽快轮换所有这些机密以减少影响。
+* 错误修正
+  * 修复一个错误（由 0.1.5 中的某些更改触发），其中自动化可能会并行提交太多命令，从而导致同步器过载。
+
+## 0.1.5
+
+* 修复了 SV UI 以在 DSO 信息选项卡中显示节点状态信息并显示已执行的 AmuletConfigChange 投票请求。
+* 删除了示例 `postgres-values-参与方.yaml` 和 `postgres-values-sequencer.yaml` 文件中的 PVC 大小覆盖。参与者和Sequencer使用的 Postgres 实例应使用默认大小 (1300Gi)。
+* 更新了扫描 UI，以更加一致且与账本上的实际活动相匹配的方式显示最近的活动。请注意，过去记录的所有转账都将显示为没有 sv 奖励。未来的更新可以消除此限制。
+* 修复了命名空间触发器无法在具有 `migrating: true` 的 SV 上启动的错误，该错误导致域迁移后无法加入新的 SV。
+* 使用全网络灾难恢复说明更新了 SV 和验证者运行手册。
+* 在 IP 白名单 json 文件中引入了 `vpns` 部分，替换了 `infra.vpn` 部分。
+
+## 0.1.4
+
+* 更新了默认 PVC 大小：CometBFT 为 640Gi，Postgres 为 1300Gi。
+* 修复了扫描 UI 中总余额和美元总奖励的错误。
+* `cometbft-values.yaml` 的新值：`genesis.chainIdSuffix`。请根据更新的示例明确将其设置为 `"0"`。请注意，这会弃用 `genesis.chainIdVersion`，对于使用此版本和更高版本的部署，可以将其删除。
+* 默认情况下，CometBFT 部署现在使用 `premium-rwo` 存储类别来提高性能。如果您的 Kubernetes 集群提供商不支持此存储类，请覆盖 `cometbft-values.yaml` 中的 `db.volumeStorageClass`。请为 CometBFT PVC 使用 SSD 存储类别。
+* 更新了用于重新加入 SV 的 SV 操作手册。
+
+## 0.1.3* 扫描前端显示当前配置框中当前开放的挖矿轮次的信息。
+* 与停机同步器升级相关的小文档改进。
+* 将初始验证者奖励部分固定为发行总量的 5%（错误设置为 50%）。请注意，这仅对新引导的集群有影响。现有集群需要通过投票过程进行更改。
+* 将 `验证者FaucetCap` 显式设置为 2.85，而不是保持未设置，以便更轻松地查看配置。这没有任何效果，因为 unset 默认为 2.85。现有集群需要通过投票过程进行更改。
+* Sequencer的资源请求已增加，以符合我们的目标规模。如果需要，可以使用 `cn-global-domain` 的 `sequencer.resources` 值来减少它们，但请尝试及时将它们达到主网的可比值。
+* 修复了Sequencer错误，该错误导致Sequencer无法处理高流量成本消息后的任何进一步消息。
+* 如果钱包前端点击失败，错误消息会包含可能对诊断有用的额外技术详细信息。
+
+## 0.1.2
+
+* 修复了价值非常大的代币由于溢出而导致 SV 和验证者应用程序中的摄取中断的错误。
+* 更新了 SV 操作手册，以提供有关修剪间隔的正确建议。
+
+## 2024-04-01
+
+* 重命名了我们的基础 Daml 模型和应用程序 API 中的以下术语，以准备以不使用术语“Canton”或“集体”的形式开源其代码：
+  * 硬币 -> Amulet
+  * CNS -> ANS（Amulet名称服务）
+  * SVC -> DSO（分散同步器操作）
+  * 域 -> 同步器
+  *全局域（每当它指的是更通用的概念时）->去中心化同步器
+  * 请注意，由于技术原因，网络 URL 目前仍包含术语“svc”；例如，`https://钱包.sv.svc.YOUR_HOSTNAME`。
+* 添加了禁用验证者应用程序钱包的选项。这可以通过在 `验证者-values.yaml` 文件中将 `enable钱包` 设置为 `false` 来完成。
+* 为 DSO 方添加了 ANS 名称解析（正式名称为 CNS），为所有 SV 成员方添加了 `&lt;sv-name&gt;.sv.ans`。
+* CometBFT 修剪持续时间已增加至 30 天。无需更改配置。
+* 序列器修剪周期已调整为 30 天，修剪间隔已减少为 1 小时。调整 `sv-values.yaml` 中的 `sequencer修剪Config.修剪Interval` 和 `sequencer修剪Config.retentionPeriod` 以匹配示例 `sv-values.yaml`。
+* 数字资产 2 节点`https://sequencer.sv-1.svc.CLUSTER.network.canton.global`的Sequencer URL 不再公开。而是使用 `https://sequencer-MIGRATION_ID.sv-1.svc.CLUSTER.network.canton.global`，其中 `MIGRATION_ID` 是集群的当前迁移 ID。
+* 第 0 轮现在的持续时间为 26 小时。额外的两个小时是为了在发布发布之前进行内部验证，同时仍然为其他人提供 24 小时来验证配置。
+* DevNet 和 TestNet 部署时间为每周周一，而不是每周周日。
+
+## 2024-03-25
+
+* 第 0 轮现在的持续时间为 24 小时。这消除了早期加入者的优势，并允许有更多时间来验证加入时的配置是否是 SV 期望的配置。
+* 初始代币价格现在为 \$0.005/CC。
+* 后续回合持续时间现为 10 分钟。
+* 初始持有费现在为每轮 0.0000192901 美元（约为之前值的 4 倍），以在考虑到轮次持续时间变化的情况下保留大约 1/360 天的费用。
+* `"found-collective"` sv 入门的新`initial-holding-fee` 设置。
+* 序列器修剪现在默认启用。这需要在 SV 应用程序的配置中配置修剪间隔和保留期。
+* 修复硬同步器迁移后初始化新同步器时的性能瓶颈。
+* 修复扫描，使其在硬同步器迁移后按预期运行。
+
+## 2024-03-18* 部署
+  * `参与方-values.yaml` 和 `global-domain-values.yaml` 现在需要将您的 SV 名称指定为 `nodeIdentifier: YOUR_SV_NAME`。这用于为 Canton 节点提供更好的名称。
+  * 对（非 SV）验证者节点的部署方式进行了多项更改，以准备支持停机时的同步器升级。请重新访问基于 Helm 的验证者部署部分，注意新的 `MIGRATION_ID` 变量（应设置为 `0`，直至另行通知）。
+* 文档
+  * 添加了（非 SV）验证者节点操作员参与同步器升级的详细说明。请参阅同步器升级与停机的新验证者操作部分，以及`k8s_验证者`中的更新。
+  * SV 同步器升级：添加了更详细的测试说明以及各种说明。
+  * 删除了有关“跨网络重置转换”和“从现有参与者身份备份恢复”的现已过时的文档。
+  * 添加了（非 SV）验证者节点的备份和恢复文档。
+* 配置
+  * SV节点重命名：
+    * Digital-Asset 正在准备运行两个节点：Digital-Asset-1 和 Digital-Asset-2
+    * 数字资产工程团队在 DevNet 上的额外节点更名为 Digital-Asset-Eng-X
+  * SV权重：DevNet上的SV权重已更新
+
+## 2024-03-11
+
+* 部署
+  * 对 SV 节点部署方式进行多项更改，为支持同步器停机升级做好准备。请重新访问基于 Helm 的 SV 部署部分，注意新的 `MIGRATION_ID` 变量（应设置为 `0`，直至另行通知）。
+  * `sv-values.yaml` 现在还要求您为扫描实例指定 `internalUrl`，SV 应用程序可以使用该实例来查询其状态。
+  * 为了准备主网部署和测试真正的升级，测试网不再保留代币余额和验证者许可证。为此无需更改任何配置。但是，现在通过 UI 或 API 创建的任何验证者机密都需要在每次重置时重新生成。在`expected-验证者-入驻s`中配置的验证者秘密将自动重新创建。请注意，这仅影响测试网，因此仅在 3 月 18 日生效。
+* 文档
+  * 为 SV 节点运营商添加了有关参与同步器升级的更详细说明。请参阅有关停机时同步器升级的更新部分，以及`sv-helm`中的更新。
+  * SV奖励中新增如何配置`extraBeneficiaries`，以便SV可以将自己的SV奖励分配给其他方。请参阅`sv-helm`中的新部分。
+* SV奖励现按照CIP-0001发放。
+
+## 2024-03-04
+
+* 部署
+  * 不再需要在`参与方-values.yaml`中指定与`globalDomain`相关的任何内容。
+* 文档
+  * 添加了有关停机时同步器升级的部分。本节目前仅包含高级概述，并将在接下来的几周内进行扩展。
+  * 从备份恢复的初步文档。请注意，目前仅完全涵盖从备份恢复完整 SV 节点的情况。
+* SV 不再为其节点支付域名费用。因此SV验证人无需配置流量充值。与此一致，`sv-验证者-values.yaml`中的`topup.enabled`被设置为`false`。
+* SV UI 和 SvcRules Daml 模型中的`RemoveMember` 操作已重命名为`OffboardMember`，包括`SRARC_OffboardMember` 和`SvcRules_OffboardMember`。
+
+## 2024-02-26
+
+* 部署
+  * 由于实施错误，删除了为 PVC 配置 Kubernetes 节点关联性的选项。为了控制 PVC 的配置，您可以定义自定义存储类并通过相应的 `db.volumeStorageClass` Helm 图表字段进行配置。
+  * 修复了 `cn-postgres` Helm 图表上的 `affinity` 和 `nodeSelector` 字段，以便它们按预期应用。
+  * `验证者-values.yaml` 中的 `scanAddress` 应该是您的验证者可访问的可信扫描实例的地址。
+* 文档
+  * 在备份部分添加了从 SV 节点获取和备份节点身份的说明。
+
+## 2024-02-19* 扫描应用程序现在使用 SVC 中其他扫描的最后计算聚合进行初始化。
+* 部署
+  * 现在，您可以为作为 CN helm 图表一部分部署的 pod 配置 Kubernetes 关联性和节点选择规则。这是通过分别设置 Helm 值文件中的 `affinity` 和 `nodeSelector` 字段来完成的。对于部署持久卷的 Helm Chart，您还可以为这些卷配置 Kubernetes 节点关联性。这是通过在相应的 Helm 值文件中设置 `db.volumeNodeAffinity` 字段来完成的。对于所有这些字段，都适用标准 Kubernetes 配置语法。另请参阅`cometbft-values.yaml`中给出的示例（作为注释行）。
+
+## 2024-02-12
+
+* 数据库中jsonb列的JSON编码已更改。请确保在升级之前清理所有数据库。新版本的软件无法读取旧JSON编码的数据。
+
+## 2024-02-05
+
+* 非 SV 验证者的钱包现在通过验证者中的 Scan 代理执行所有读取，从而以 BFT 方式执行它们。
+* 您可能会在参与者中看到一些`ACS_COMMITMENT_MISMATCH`警告日志。这些都可以忽略不计。
+* 将 `enableHealthProbes` 添加到全局域 helm 图表中，提供禁用Sequencer和中介器的 gRPC 就绪性和活性探针的功能。
+* 容器现在使用 tini 作为入口点以确保正确的信号处理。
+* 修复了尚未汇总的回合中钱包余额错误报告为零的问题。相反，将返回一个错误。
+* 部署
+  * postgres 实例已分为四个不同的实例：sequencer-pg、mediator-pg、参与方-pg、apps-pg。请参阅有关安装和配置 Postgres 的新部分：安装 Postgres 实例
+  * Sequencer的 postgres PVC 大小新设置为 480GB，其他三个实例各为 48GB。
+  * 不同组件的默认数据库名称已更改为 [cantonnet]()。它们都是在附加到相应应用程序 Pod 的初始化容器中自动创建的。
+
+## 2024-01-29
+
+* 用于查询一方 CC 余额的 `/v0/钱包-balance` 端点通过 Scan 应用程序公开。
+
+* 非 SV 验证者现在连接到域中所有已注册的扫描，并以 BFT 方式读取它们（只要少于 1/3 的扫描是安全的）。使用在 2024 年 1 月 15 日部署中配置的公共 URL（SV 应用程序的 helm 图表中的`scan.publicUrl`）将扫描注册为 SV 入门的一部分。 SV 验证者仍然信任 SV 的 Scan 应用程序。
+
+* 清理我们的 OpenAPI 规范以使用 oneOf。这涉及对我们的一些 API 端点的微小更改，包括：
+
+  * 获取所有节点的HealthStatus
+  * 钱包API中的getBuy流量RequestStatus和getTransferOfferStatus
+  * SV 应用程序中的 getCometBftNodeStatus 和 getCometBftNodeDebugDump
+
+  在几乎所有情况下，更改应该只涉及一些现在可选的字段，现在变成了必填字段。
+
+## 2024-01-22
+
+* 将流量购买奖励结构调整为CIP-2：
+  * 验证者奖励是根据所花费的全部 CC 金额发放的。
+  * 购买流量不发放应用奖励。
+  * 设置最低流量购买金额为1美元，以保证覆盖执行成本。
+  * 针对特色应用程序促进的 CC 转账，发放超过 1 美元的额外应用程序奖励。
+* 部署：
+  * 在Canton基金会的Sequencer中启用剪枝
+
+## 2024-01-15
+
+* 部署：
+
+  * SV 应用程序 helm 图表现在需要将 `scan.publicUrl` 设置为 Scan 应用程序的 URL。
+
+  * 配置持久性的 Helm 图表的语法已通过不同的映像进行标准化。提供的代码片段突出显示了可选字段及其语法。要查找每个图像的预期值，请参阅 \_[required.yaml]() Helm 文件：
+
+    Sequencer：
+    司机：
+    类型：
+    港口：
+    主持人：
+    坚持：
+    数据库名称：
+    主持人：
+    港口：
+    用户：
+    秘密名称：
+    调解员：
+    坚持：
+    数据库名称：
+    主持人：
+    港口：
+    用户：
+    秘密名称：
+
+* 文档：
+
+  > * 删除了“基于Kubernetes部署超级验证者节点”页面中的`Renaming an SV`部分。不再可以通过 JSON API 进行。
+
+## 2024-01-08* 部署：
+  * 全局域 helm 图表现在支持Sequencer和中介器的单独 Postgres 实例。它们可以在 `sequencerPostgres` 和 `mediatorPostgres` 值中进行配置。单个 `postgres` 值已被弃用，不再受支持。 （仍然可以使用共享的 postgres 实例，通过在 `sequencerPostgres` 和 `mediatorPostgres` 下配置它。）
+  * CometBFT 出口端口已从 `26656, 26666, 26676, 26686, 26696` 更改为 `26016, 26026, 26036, 26046, 26096`
+  * CometBFT 创始人端口在`cometbft-values.yaml`文件中更新为`26016`（从`26656`）。这可以在 `founder.externalAddress` 字段下找到。
+* 错误修正：
+  * CometBFT 状态同步在最近的问题之后已得到修复，并且可以再次用于快速 CometBFT 节点引导。 （不再需要在 `cometbft-values.yaml` 中将 `stateSync.enable` 覆盖为 `false`。）
+
+## 2023-12-18
+
+* SV UI 的细微调整。除此之外，现在在提交投票请求时必须提供文本提案摘要。
+* 在整个系统中将`directory`重命名为`CNS`
+  * 将入口规则从`https://directory.sv.svc.&lt;YOUR_HOSTNAME&gt;*`重命名为`https://cns.sv.svc.&lt;YOUR_HOSTNAME&gt;*`。请注意，这是此 UI 继续正常工作的要求。
+
+## 2023-12-11
+
+* 部署：
+  * 验证者和超级验证者不再需要`https://directory.sv.svc.\<YOUR_HOSTNAME\>/api/json-api/\*`入口规则
+  * helm 图表现在允许配置存储 postgres 密码的秘密。默认为`postgres-secrets`。
+* 文档：
+  * 添加了`https://directory.sv.svc.\<YOUR_HOSTNAME\>/api/验证者`的入口规则，该规则在说明中被意外省略。
+
+## 2023-12-04
+
+* 代表超级验证者集体的团体从`svc::...`重命名为`SVC::...`，以与SV团体名称保持一致。
+* PostgreSQL 数据库的密码现在在 Kubernetes 机密中设置，而不是在 Helm 值文件中设置。 SV算子和验证者算子请参考`Configuring PostgreSQL authentication`更新文档。
+* 文档：
+  * 澄清建议使用自定义身份验证受众。
+  * 更新了 SV 操作手册以解释 IP 白名单。
+  * 使用出站流量列表更新了 SV 运行手册。
+* `/v0/activities` 和 `/v0/transactions` 扫描 API 现在包括每方的标准化余额变化。请参阅 Scan OpenAPI 规范。
+
+## 2023-11-27
+
+* `cn-sv-node` 舵图中的 `domain.sequencerPublicUrl` 配置现在是强制的。所有 SV 必须指定可以访问其Sequencer的 URL。
+* Canton Name Service (CNS) 应用程序现已去中心化。该应用程序不再是由创始人 SV 为 CNS 运营后端服务，而是一个去中心化的应用程序，由 SVC 运营并提供 BFT 保证。此更改不需要部署或配置更改。
+* CNS条目名称限制从40个更改为60个（包括后缀）。
+* SV、扫描、目录和验证者应用程序现在需要 PostgreSQL 数据库才能运行。可以在 `sv-values.yaml`、`验证者-values.yaml`、`scan-values.yaml` 中进行配置。
+
+## 2023-11-20
+
+* 状态同步所需的 CometBft RPC 端点现在通过 SV 应用程序公开。因此，`cometbft-values.yaml` 中的`rpcServers` 列表已更新以反映新的 URL 路径。
+* 文档修复
+
+## 2023-11-13* CometBft 修剪现已启用，默认保留大约 7 天的历史记录。
+* 修改了SVC治理公式，现在需要`ceil( (n + f + 1) / 2.0 )` SV来形成法定人数，其中`f := floor ( (n - 1) / 3.0 )`是安全运行所支持的最大故障SV数量。
+* 取消对 DevNet 的 SVC 治理阈值的调整，使其与 TestNet 中使用的阈值保持一致。
+* 部署更新：
+  * Canton基金会托管的全球域名Sequencer的URL已更改为`https://sequencer.sv-1.svc.\<TARGET_CLUSTER\>.network.canton.global`。此更改反映在 `参与方-values.yaml`、`验证者-values.yaml` 和 `sv-values.yaml` 中指定的值中。
+  * 删除了 Scan 和 SV 应用规则中 URL 重写的要求：`https://scan.sv.svc.&lt;YOUR_HOSTNAME&gt;/api/scan` 和 `https://sv.sv.svc.&lt;YOUR_HOSTNAME&gt;/api/sv` 不再需要重写（并且已从 `/api/v0/scan` 修改为 `/api/scan`，从 `/api/v0/sv` 修改为 `/api/sv`）。例如，`https://scan.sv.svc.&lt;YOUR_HOSTNAME&gt;/api/scan/foobar` 应转发至`http://验证者-app:5012/api/scan/foobar`。请注意，现在仅在目录前端使用的 JSON API 的入口规则中需要 URL 重写。这条规则将来将会被彻底删除。
+  * 请注意，验证者、Scan 和 SV 应用程序的就绪和活跃端点已全部移至 `/api/\<app\>/readyz` 和 `/api/\<app\>/livez`，其中 `\<app\>` 分别为 `验证者`、`scan` 或 `sv`。相应的 Helm 图表已更新以反映此更改。
+  * `验证者-values.yaml`中基金会扫描应用程序的URL配置已更新为`https://scan.sv-1.svc.TARGET_CLUSTER.network.canton.global`。同样，在自托管验证者部分的配置文件中。
+  * `isDevNet` 标志已从 `cn-cometbft` 舵图中删除，以消除其意外配置错误的可能性。相反，该图表现在依赖于 `cometbft-values.yaml` 中的 `genesis.chainId` 值来确定它是 TestNet 还是 DevNet 部署。
+  * CNS UI 现在使用验证者 API 来管理用户条目，而不是 JSON Ledger API。为了正确地向验证者应用程序进行身份验证，图表现在使用 `auth.audience` 值来指定 JWT 受众，而不是 `auth.ledgerApiAudience`
+* 文档：
+  * 添加配置 SV 节点以发布其Sequencer URL 的文档，以便其他验证者可以订阅它。
+  * 添加新的所需入口规则的文档，以在配置集群入口中公开 `global-domain-sequencer`。
+
+## 2023-11-06
+
+* 部署更新：
+  * CometBFT 状态同步，即基于快照的 CometBFT 节点同步现在默认启用。这使得 CometBFT 节点在初始化期间能够更快地赶上。 `cometbft-values.yaml` 默认配置为从 `https://sv.sv-1.svc.TARGET_CLUSTER.network.canton.global:443/cometbft-rpc/` 获取快照，这是 Canton-Foundation SV 的 CometBFT RPC API 的 URL。要禁用状态同步，请将`cometbft-values.yaml`中的`stateSync.enable`设置为`false`。更多详细信息可以在配置 CometBft 状态同步中找到。
+  * 添加了`useSequencerConnectionsFromScan`。对于验证者 Helm 图表，对于 SV 节点，`useSequencerConnectionsFromScan` 应设置为 `false`。该值位于 `sv-验证者-values.yaml` 文件中。
+* 文档：
+  * 添加有关 SV 节点在不同层上使用的重要身份的简要概述。
+* 扫描活动和交易历史 API 现在返回已注册交易的回合。请参阅 Scan OpenAPI 规范。 `/coin-config-for-round` API 可用于查找特定轮次的持有费用。
+
+## 2023-10-30* 在 SV UI (`/leader`) 中添加隐藏页面，允许 SV 手动触发 SvcRules 领导者的重新选举，作为额外的安全机制和最后手段。
+* 部署更新：
+  * 添加基于 Kubernetes 的验证者节点部署的文档
+  * 其中一条规则中对url重写的要求已被删除：`https://钱包.sv.svc.&lt;YOUR_HOSTNAME&gt;/api/验证者`不再需要重写（并且也已从`/api/v0/验证者`修改为`/api/验证者`）。例如，`https://钱包.sv.svc.&lt;YOUR_HOSTNAME&gt;/api/验证者/foobar` 应转发到`http://验证者-app:5003/api/验证者/foobar`。将来，其他重写要求也将被删除。
+  * 将`验证者-values.yaml`中的`SV_WALLET_USER_ID`占位符重命名为`OPERATOR_WALLET_USER_ID`，以更好地反映该值是SV和独立验证者节点部署中运营商的用户
+* 错误修正：
+  * 修复了扫描最近活动和交易历史 API 中的费用问题，其中未报告某些发送方和接收方费用。如果一方转账给自己，它现在将包含在 API 响应的转账接收者属性中（这之前已被过滤掉）。
+
+## 2023-10-23
+
+* 改进了 BFT 对 SVC 账本操作和调解员判决的保证。现在只要少于 1/3 的 SV 出现故障，这两种方法都是安全的。
+* 非 SV 验证者现在连接到域中所有可到达的Sequencer，并以 BFT 方式读取它们（只要少于 1/3 的错误就安全）。请注意，目前，只有 Canton 基金会运营的Sequencer可以访问并考虑达到法定人数。我们很快将提供使所有 SV 节点的Sequencer也可访问的说明。
+* 部署更新
+  * 将`disableAllocateLedgerApiUserParty`替换为`sv验证者`。对于验证者 Helm 图表，对于 SV 节点，`sv验证者` 应设置为 `true`。该值位于 `sv-验证者-values.yaml` 文件中。
+  * 作为保守的预防措施，`cn-cometbft` 和 `cn-postgres` 的默认卷大小分别增加到 `240Gi`（分别从 `80Gi` 和 `160Gi`）。
+  * 全球域现在使用 CometBFT，而不是 TestNet 上由 Postgres 支持的域。
+  * 现在，每个全局域节点都在 DevNet 和 TestNet 上部署了Sequencer和中介器。不再需要为 DevNet 显式设置`sv-values.yaml`中的`domain.enable`标志（默认为`true`）。
+  * 新增`scan-values.yaml`，请在部署`cn-scan` Helm图表时使用。 `clusterUrl` 值用于在扫描 UI 中查找目录条目。
+* DevNet 上现在也启用了域名费用（和流量充值）。这意味着不再需要在 DevNet 的 `验证者-values.yaml` 中将 `topup.enabled` 显式设置为 `false`（它始终设置为 `true`）。
+
+## 2023-10-16
+
+* 前端更新
+  * 扫描中的最近活动选项卡现在会查找 CNS 条目以获取参与方 ID。如果 CNS 中未找到参与方 ID，则按原样显示。
+* 从参与者身份转储中删除了未使用的“用户”字段。
+* 扫描中添加了交易历史API。请参阅 Scan OpenAPI 规范。
+
+## 2023-10-09
+
+* 部署更新
+  * 全球域名的URL已更改为`http://sequencer.sv-1.svc.\<TARGET_CLUSTER\>.network.canton.global:5008`。此更改反映在`参与方-values.yaml`、`验证者-values.yaml` 和`sv-values.yaml` 中指定的值中。
+* 前端更新
+  * SV UI 中的“SVC 配置”和“Canton Coin 配置”选项卡分别重命名为“SVC Info”和“Canton Coin Info”，以反映它们还显示非配置信息的事实。
+* 错误修正：
+  * 修复了扫描 UI 上损坏的“最近活动”选项卡链接。
+
+## 2023-10-02
+
+* 部署更新：
+
+  > * DevNet 上 Digital Asset 运营的节点的 SV 名称已更新。请注意`approved-sv-id-values-dev.yaml`中更新的SV名称：`Digital-Asset`。
+  > * SV 应用程序和验证者的存储桶配置结构现已扁平化。 `projectId` 和 `bucketName` 现在在顶层指定，而不是在 `config` 结构中。
+
+* 前端更新
+
+  * 对启用的选项进行投票的选项已被删除。这将被对完整 Daml 模型升级的支持所取代。
+
+## 2023-09-25
+
+* 前端更新：> * 过去 SVC 治理投票和行动的新历史视图，分别列出“需要采取行动”、“进行中”、“计划”、“已执行”和“拒绝”投票。
+  > * 单击行以查看投票请求并对其进行投票。
+  > * 按操作名称、请求者和日期过滤投票请求。
+
+* 错误修正：
+
+  > * 当配置为操作本地域节点时，SV 应用程序现在会等待本地 CometBFT 节点完全赶上，然后再加入本地Sequencer和中介器节点。这会在 SV 应用程序初始化时生成更清晰的日志消息，并通过避免在初始化过程中落后的本地Sequencer节点引起的垃圾邮件来提高域性能。
+
+## 2023-09-11
+
+* 部署更新：
+
+  > * 请注意 SV 从 `sbi` 重命名为 `SBI-Holdings`。
+  > * 请注意数据库卷大小从`80Gi` 增加到`160Gi`。
+
+* 错误修正：
+
+  > * 修复了 UI 错误地包含向 OIDC 提供商请求的 `undefined` 范围的问题。
+
+## 2023-09-04
+
+* 部署更新：
+
+  > * 现在每个SV节点都参与操作全局域（仅限`devnet`）
+  > * 引入了新的 Helm Chart，`global-domain`，它将部署全局域节点。目前仅`devnet` 部署需要此舵图表。按照配置说明和部署说明来部署全局域 Helm Chart。请注意，舵图的部署顺序已更新，舵图必须按新顺序应用。
+  > * 为 `sv-values.yaml` 添加了新值 `domain.enable`。仅对于 `devnet` 部署，必须将其设置为 `true`。默认值为`false`。将其设置为 true 将启用作为全局域节点一部分部署的组件，并使该 SV 节点参与操作全局域。
+
+* 文档：
+
+  > * 配置SV节点参与操作全局域（仅限`devnet`）
+  > * 在配置 Helm Charts 中添加了新条目，详细说明了 `global-domain-values.yaml` 所需的更改
+  > * 在安装 Helm Charts 部分中包含新的 Helm Chart `global-domain` 并更新了 Helm 部署顺序
+  > * 为登录 SV UI 添加了新条目，解释如何检查 `global-domain` helm Chart 的组件是否已正确安装。
+
+## 2023-08-28
+
+* 前端更新：
+
+  > * 可以在请求级别指定投票请求的过期时间（VoteRequestTimeout），满足币配置计划更改的生效日期必须在过期之后的条件。
+  > * 通过防止 SV 定义同时有效的代币配置计划，更好地进行投票请求并发管理。
+
+* 部署更新：
+
+  > * 为 CometBFT Helm 图表引入了一个新值 `isDevNet`，仅对于 `devnet` 部署应将其设置为 `true`。生成正确的 CometBFT 创世文件需要此值。该值已添加到`cometbft-values.yaml`文件中，默认为false。
+  > * `foundingSvApiUrl`已从`sv-values.yaml`和`验证者-values.yaml`中删除。
+
+* Jfrog Artifact API 密钥将于 2023 年下半年弃用。您需要将 helm 存储库和 k8s 密钥的密码从 API 密钥更新为身份令牌。
+
+  > * 更多信息：[JFrog 访问和身份令牌简介](https://jfrog.com/help/r/platform-api-key-deprecation-and-the-new-reference-tokens)
+  > * 我们建议使用`helm repo remove`和`kubectl delete secret`删除现有的
+
+* 前端更新：
+
+  > * 取消该操作以完全取代硬币配置时间表`SetConfigSchedule`。应改为使用添加/删除/修改单个计划硬币配置更改的治理操作。
+  > * 将当前的 CometBFT 验证者集添加到 SV 应用程序中的 CometBFT 调试选项卡
+
+* 文档：
+
+  > * 澄清了在什么条件下可以从参与者身份备份中恢复，并且硬币余额仅在测试网重置时保留。
+
+## 2023-08-14
+
+* SV 和验证者应用程序现在会更早失败，如果其节点软件版本与它们所连接的集群上的版本不匹配，则会出现更清晰的错误消息。
+
+* 部署更新：
+
+  > * Fiutur 运营的节点的 SV 名称已更新。请注意`approved-sv-id-values-dev.yaml`中更新的SV名称：`Fiutur`。
+
+* 文档：> * 批准的 SV 成员列表已从 `sv-values.yaml` 文件移至单独的配置文件中。现在存在两个版本 - 一个用于 TestNet 批准的身份，另一个用于 DevNet 批准的身份。部署 `cn-sv-node` Helm 图表的说明已更新为使用此单独的值文件。
+
+* 验证者服务现在自动将目录服务 Daml DAR 包上传给其参与者。最终用户和引导脚本不再需要显式上传目录应用程序模型。
+
+## 2023-08-07
+
+* 前端更新：
+
+  > * 引入了新的治理操作来添加/删除/修改单个计划的代币配置更改。用于替换整个计划的现有 UI 将在即将发布的版本中弃用。
+
+* 部署更新：
+
+  > * 为验证者 Helm 图表引入了一个新值 `disableAllocateLedgerApiUserParty`，对于 SV 节点应将其设置为 `true`。这可以防止验证者和 SV 应用程序之间发生冲突。 Runbook 将此值包含在新引入的 `sv-验证者-values.yaml` 文件中。
+  > * IEU 代表 LCV 运营的节点的 SV 名称已更新。请注意`sv-values.yaml`中更新的SV名称：`Liberty-City-Ventures`。
+  > * Cumberland 的名称和公钥也已添加到 `sv-values.yaml` 中，作为应批准加入 TestNet 上的 SVC 的另一个身份包含在 sv-app 的配置中。
+  > * 从 `sv-values.yaml` 中删除了 SV `cometbft.automationEnabled` 选项。默认情况下启用自动化，并且 CometBFT 网络会更新以反映当前的 SV 网络。
+
+* 文档：
+
+  * 删除了有关手动“加入 SV”的过时部分。有关生成 SV 和 CometBFT 身份的小节已移至基于 Helm 的部署部分。
+
+* 错误修正：
+
+  > * 修复了令牌刷新后，账本摄取不会重新启动的问题。
+
+## 2023-07-31
+
+* 前端更新：
+
+  > * 增强了 SetEnabledChoices 投票请求以修改 CoinRules 选择，从而提供增强的可配置性和对代币的控制。
+  > * 各种前端改进。
+
+* 错误修正：
+
+  > * 修复了扫描 UI 显示未来硬币配置更改的问题，就好像它们是当前的一样。
+  > * 修复了当余额通过网络升级迁移时，扫描应用程序无法正确聚合总代币余额的问题。
+  > * 修复了硬币迁移未出现在钱包交易日志中的问题。
+  > * 修复了 SV 应用程序中的自动化进入繁忙循环且应用程序变得无响应的问题。
+  > * 修复了现有 CometBFT 节点破坏新网络创建的问题。运行旧版本的节点在升级之前将无法加入新网络。请注意，CometBFT Helm 图表现在包含创世链 ID 中的版本以支持这一点。
+
+* 如果 SV 和验证者应用程序的节点软件版本与它们所连接的集群上的版本不匹配，则 SV 和验证者应用程序现在将退出并出现错误。
+
+* 文档：
+
+  > * 在“基于 Kubernetes 的超级验证者节点部署”页面中添加了`Renaming an SV`章节，以逐步指导重命名 SV。
+
+## 2023-07-16
+
+* 部署
+  * 确保`cn-cometbft`和`cn-postgres`图表都支持用于配置持久存储的`db.volumeSize`和`db.volumeStorageClass`值。
+  * 之前需要使用虚拟值的三个秘密`cn-app-scan-ledger-api-auth`、`cn-app-directory-ledger-api-auth`、`cn-app-svc-ledger-api-auth` 不再需要。
+  * `cn-postgres` 和 `cn-参与方\` 图表现在需要设置非空 \`postgresPassword\` 值。值模板包含一个默认值，您可以将其修改为更安全的值。
+  * SV Helm 操作手册已扩展，增加了一个部分，解释如何从参与者身份备份进行恢复。
+  * 自托管验证者的说明已扩展，其中有一个部分解释了如何从参与者身份备份进行恢复。
+  * 不再需要秘密`cn-app-sv1-验证者-ledger-api-auth`和`cn-app-sv1-ledger-api-auth`。
+  * 参与者现在请求 4 个 CPU 来改善负载下的行为。* 前端更新：
+  * Scan UI 中的总代币余额现在显示来自后端的真实数据，并且还反映来自网络启动时的数据，而不仅仅是来自创建特定后端时的数据。请注意，目前这仅适用于总代币余额，不适用于扫描 UI 中的所有数据。
+  * 各种 SV UI 改进。
+
+## 2023-07-02
+
+* `验证者-values.yaml`中扫描的URL已更改为`https://scan.sv-1.svc.TARGET_CLUSTER.network.canton.global/api/v0/scan`。 `scanPort` 字段已被删除。
+
+* `验证者-values.yaml` 中的`svSponsorAddress` 已被删除。与 SV 节点关联的验证者通过其 SV 节点自动加入。
+
+* 现在使用内容类型 `application/x-www-form-urlencoded` 而不是 `application/json` 向 IAM 发出获取令牌的请求。这符合 OAuth 标准并与更广泛的 IAM 兼容。如果您的 IAM 配置之前运行正常，则无需进行任何更改。
+
+* 现在需要在`sv-values.yaml`中的`approvedSvIdentities`部分指定其他超级验证者的公钥。对于测试网启动，这些是：
+
+  批准的 Sv 身份：
+
+  *名称：履行机构
+    公钥：MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETM+CeyHvphl9RiPDKL3vVX7F+Qo4fIhJopmgU5B7IzkwSdFic20hFB6tnAuCTU+UBjqZgh8N/h9r+CTrXMPsRg==
+  * 名称: intellecteu-canton-da-test
+    公钥：MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEr/iPpyuFu2U914tHyNUDuECT4/AYz9J+nLQRTC8m+95yQ6Y4Oah+Y3u3o5MK4a9D+qkoNGoG6ng0HcjA6TGKmw==
+  *名称：数字资产
+    公钥：MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsRRntNkOLF2Wh7JxV0rBQPgT+SendIjFLXKUXCrLbVHqomkypHQiZP8OgFMSlByOnr81fqiUt3G36LUpg/fmgA==
+
+* SV节点现支持在启用域名费用的网络中进行域名费用充值。 `验证者-values.yaml` 文件包含这些的初始推荐值。
+
+* SV 和验证者操作员现在被要求执行参与者身份数据的备份，以实现网络重置时的连续性。运行手册的新部分对此进行了介绍。
+
+* 定义要作为参与者引导的一部分分配的管理员用户的环境变量`CANTON_PARTICIPANT_USERS`现在是一个简单的 JSON 字符串数组，其中每个元素是另一个存储要分配的用户名称的环境变量的名称。
+
+* 前端更新：
+
+  * 扫描 UI 中的硬币配置现在显示来自后端的真实数据。
+  * Scan UI 中的域名费用排行榜现在显示来自后端的真实数据。
+
+## 2023-06-25
+
+* 前端更新：
+
+  > * SV Web UI 允许运营商创建投票请求以提议未来的代币配置。其他人可以对这些进行投票。一旦达到多数，新配置将在适当的时候应用。
+  > * SV Web UI 允许运营商创建投票请求以提出新的 SV Collective 配置。其他人可以对这些进行投票。一旦达到多数，就会应用新的配置。
+  > * SV Web UI 有一个新选项卡，用于显示Sequencer和中介器的状态。请注意，中介器和Sequencer尚未作为 Runbook 的一部分进行部署，因此您将在状态页面上看到错误。
+
+* 部署更新：
+
+  > * 用于扫描的容器现在通过与 SV 应用程序和验证者应用程序匹配的 `CN_APP_SCAN_PARTICIPANT_ADDRESS` 环境变量接受参与者的地址。 helm 图表设置了正确的默认值，因此如果您正在使用它们，则无需配置任何内容。
+  > * 定义令牌预期使用者的`audience`现在可以在参与者、验证者应用程序、验证者 Web UI、SV 应用程序、SV Web UI 和目录 Web UI 中进行配置。
+  > * 验证者应用程序和 SV 应用程序现在配置创始 SV 应用程序的地址，以允许跨节点同步，直到 BFT 域的所有方面在并发操作下都稳健。
+
+* 所有 CN 应用程序现在都有 `/readyz` 和 `/livez` 端点，可用于 Kubernetes 就绪性和活性探测。
+
+* 错误修正
+
+  * 修复目录 UI 无法正确连接到目录后端的错误。
+
+## 2023-06-18* 前端更新：
+  * 超级验证者现在可以在治理选项卡中展示和取消展示应用程序提供商。
+* 部署更新：
+  * Canton Coin Scan 应用程序现已部署为我们运行手册中 SV 节点的一部分。请参阅安装软件中部署 `cn-scan` Helm 图表的说明，以及配置集群入口中两个新的必需入口规则。 “使用 Canton Coin Scan UI”部分解释了该 UI。请注意，并非扫描 UI 中的所有字段都已连接以在后端获取数据。此时应该起作用的是右上角的当前回合以及验证者和应用程序排行榜。
+  * CometBft 节点现已部署为我们 Runbook 中 SV 节点的一部分。
+    * 请参阅生成 CometBft 节点身份中有关生成节点身份的说明。
+    * 请参阅配置 CometBft 节点密钥中有关使用节点身份配置所需机密的说明
+    * 请参阅安装软件中部署 `cn-cometbft` Helm 图表的说明，以及配置集群入口中所需的新入口规则。
+    * 请参阅登录 SV UI 中验证者节点是否已连接的说明。
+    * 注意：您现在需要配置您的入口以接受来自其他 SV 的连接，请与您在 DA 的联系人联系以获取当前要列入白名单的 IP 列表。
+  * SV 节点的启动顺序略有变化：SV 应用程序现在需要在验证者应用程序之前启动。
+  * Canton 名称服务目录 UI 现已部署为我们的 Runbook 中 SV 节点的一部分。请参阅安装软件中部署 `cn-验证者` Helm 图表的说明，以及配置集群入口中两个新的必需入口规则。使用 Canton Coin Directory UI 部分解释了该 UI。通过在 UI 中搜索名称，SV 运营商可以在 Canton 名称服务上注册该名称（如果尚未注册）。
+* 从 SV 应用程序中删除了 `svc-client` 配置参数。 SVC 应用程序不再用于 SV 加入和初始化。
+* Ledger 连接中使用的 Auth0 令牌会在过期前 2 分钟更新。
+* 域连接现在由验证者和 SV 应用程序启动，而不是由参与者引导脚本启动，后者需要在 `sv-values.yaml` 和 `验证者-values.yaml` 的 `globalDomainUrl` 字段中指定。
+* 错误修正
+  * 修复了一个错误：如果参与者停机较长时间并且只有在重新启动后才能恢复，SV 和验证者应用程序有时会停止观察账本更新。
+
+## 2023-06-11
+
+* 文档：
+  * 修复了入口安装说明中示例 istio-gateway helm 图表值中缺少的 `service` 级别缩进
+  * 在参与者 Helm 图表中添加了 `enableHealthProbes`，以允许在不支持 gRPC 就绪性和活性探针的 Kubernetes \<1.24 版本上进行操作。
+
+## 2023-06-04* 部署更新：
+  * Docker 镜像现在使用与 helm 图表相同的版本控制方案：`<major>.<minor>.<patch>-snapshot.&lt;commit_date&gt;.&lt;number_of_commits&gt;.0.v&lt;commit_sha_8&gt;`
+* 前端更新：
+  * 重新组织了 SV UI 中的信息选项卡，并在 SV UI 中包含了管理Canton币的规则（例如费用）。
+  * 添加了对显示治理投票请求的详细信息、投票和更新投票的支持。
+* 错误修正
+  * 修复了 Helm Runbook 中的 SV 入门 URL。它必须是`https://sv.sv-1.svc.TARGET_CLUSTER.network.canton.global/api/v0/sv`而不是`https://sv-1.svc.TARGET_CLUSTER.network.canton.global/api/v0/sv`。
+  * 修复了上周版本中的一个问题，即 K8s 密钥和`sv-values.yaml` 中都需要公钥/私钥 SV 密钥。现在只需要通过秘密来指定它们。
+  * 修复了如何确定新 SV 有资格获得 SV 奖励的第一轮。通过此修复，SV 从 SV 加入后开始的下一轮开始接收 SV 奖励，即 SV 将不会在其加入之前开始的任何轮次中获得 SV 奖励。
+* 部署更新：
+  * 下载的捆绑包现在包含 helm 图表的示例值文件，并且说明已修改为列出使用它们之前所需的特定于用户的配置更改。
+  * 参与者 Helm 值中的 `auth.jwksEndpoint` 值已重命名为 `auth.jwksUrl` 以与其他 Helm 图表保持一致，并且设置它们的说明也变得更加一致。
+
+## 2023-05-28
+
+* 部署更新：
+  * `sv-values.yaml`中的`joinWithKey入驻.keyName`已重命名为`入驻Name`。
+  * `验证者-values.yaml`中的`svSponsorPort`已被删除。该端口现已包含在`svSponsorAddress`中。默认赞助商地址已更改为`https://sv.sv-1.svc.TARGET_CLUSTER.network.canton.global/api/v0/sv`。
+  * `sv-values.yaml`中的`sponsorApiPort`已被删除。该端口现已包含在`sponsorApiUrl`中。默认赞助商地址已更改为`https://sv.sv-1.svc.TARGET_CLUSTER.network.canton.global/api/v0/sv`。
+  * SV 私钥和公钥现在存储在 k8s 机密中。
+  * Kubernetes [活跃度](https://kubernetes.io/docs/tasks/configure-pod-container/configure-活跃度-readiness-startup-probes/#define-a-grpc-活跃度-probe) 和 [readiness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-活跃度-readiness-startup-probes/#define-readiness-probes) 探针配置为探测参与者节点的 [GRPC 健康检查协议](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)。
+  * 生成 SV 密钥的说明现在也适用于 MacOS。
+  * Ingress Helm 图表和说明已被重写得更加简单，并且现在基于 Istio 而不是 Nginx。请参阅配置集群入口
+* 为 SV 应用添加新的 `initial-coin-price-vote` 配置选项
+  * 用于配置 SV 节点在初始化期间投票给给定的币价格，如果该 SV 节点尚未投票给币价格
+  * 对于跨集群（重新）部署持久保持代币价格投票偏好非常有用
+* SV 用户界面：
+  * 添加了对提议对某个操作进行投票的支持，目前仅针对删除 SV 成员。
+* 错误修正
+  * DA 的内部自动化测试现在能够适应代币价格的变化，使我们能够改变 DA 的 SV 上的代币价格投票，因此其他 SV 的投票会产生明显的影响。
+  * 修复了 SV 长时间离线情况下的 SV 奖励收集问题。此前，重新启动后，新奖励的收集可能会被阻止很长一段时间。
+
+## 2023-05-21
+
+* 在 Helm 图表中配置 SV 节点的 Kubernetes 命名空间（现在默认为 Runbook 中的`sv`），请参阅使用 Helm 进行部署。
+* SV UI 引入的功能：
+  * 设置您想要的代币价格（每轮价格使用 SV 投票的所有代币价格中位数确定）
+  * 查看当前开放的挖矿轮次及其代币价格
+* 文档改进
+  * 扩展和改进为 SV 节点设置身份验证的文档
+  * 添加通过 SV UI 验证者加入的文档
+* 错误修正
+  * 修复了验证者和 SV 应用程序无法传递来自除 Auth0 之外的 IAM 的已知响应的问题。
+
+## 2023-05-14* 引入超级验证者操作员的 UI，请参阅 SV Helm-Based Runbook。
+
+  目前，此 UI 允许 SV 操作员查看有关其 SV 方以及 SV 集体其他成员的信息。它允许 SV 操作员通过生成验证者加入密码来加入验证者（请参阅自托管验证者运行手册，了解验证者操作员如何使用该密码）。
+
+* 修复`cn-node`有时无法以`ClassNotFoundException`开头的错误。
+
+## 2023-05-07
+
+* 将 SV 用户的钱包 UI 添加到 SV Runbook。存在使用 Helm 和本地部署进行部署的说明（已弃用）。这允许 SV 操作员登录他们的钱包，例如观察 SV 奖励的积累。
+* 基于 SV Helm 的 Runbook 的各种简化和扩展：
+  * 添加了设置 Auth0 和创建相应的 k8s 密钥的说明。
+  * 合并命名空间。除 docs 之外的所有内容现在都驻留在 sv-1 命名空间中。
+  * 简化入口设置。
+
+## 2023-04-30
+
+* 连接到`TestNet`或`DevNet`的节点的Helm图表部署。说明在这里
+* Helm Chart 在线部署文档请参见此处。
+
+## 2023-04-23
+
+* 独立 SV 节点的初始 Helm 图表部署。说明在这里
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

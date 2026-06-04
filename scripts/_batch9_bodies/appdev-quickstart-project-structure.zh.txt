@@ -1,0 +1,312 @@
+# 项目结构
+
+# Canton Network quickstart 项目结构
+
+## 概览
+
+CN Quickstart 提供构建 Canton Network 应用的完整开发环境，结合构建工具（Gradle、Make）、部署基础设施（Docker Compose）与参考应用以加速开发。
+
+项目通过许可应用演示 Canton 开发模式，并提供自建应用所需脚手架。
+
+## 参考应用
+
+Quickstart 包含涉及四个 party 的许可应用：
+
+* **应用提供方（Application Provider）** — 销售许可
+* **应用用户（Application User）** — 购买许可
+* **DSO Party** — 运营支付系统（CN 中为 Super Validator）
+* **Amulet** — 支付代币系统（默认 Canton Coin）
+
+提供方与用户为独立 party，各需自有验证者节点以维护独立账本状态，经 Super Validator 协调；支付需 Canton 钱包与 Splice 依赖。
+
+四方模型塑造项目结构：Splice 容器运行三个验证者，配置位于 `docker/modules/localnet/conf/splice/`（app-provider/、app-user/、sv/）；提供方与用户应用在 `backend/`、`frontend/`；支付合约在 `daml/`；Splice DAR 在 `daml/dars/`。
+
+完整工作流见 `quickstart-explore-the-demo` 指南。
+
+### 开发环境（Nix + Direnv）
+
+仓库使用 Nix 与 Direnv 提供跨平台一致依赖（JDK、Node.js、TypeScript）。若不使用 Nix，可直接在 `quickstart/` 工作但需自行管理依赖；额外工具见 [Quickstart 前置条件](/appdev/quickstart/prerequisites)。
+
+**关键文件：**
+
+* `.envrc` — 通过 Direnv 激活 Nix 环境
+* `nix/shell.nix` — 定义开发依赖
+* `nix/sources.json` — 固定 Nix 版本以可复现构建
+* `quickstart/` — 主项目目录
+
+## Quickstart 目录结构
+
+`quickstart/` 下文件与目录分三类：
+
+```text theme={"theme":{"light":"github-light","dark":"github-dark"}}
+Build Configuration
+- Makefile                  # Project orchestration
+- build.gradle.kts          # Root build configuration
+- buildSrc/                 # Custom Gradle plugins
+- gradle/                   # Gradle wrapper files
+- gradlew                   # Gradle wrapper (Unix)
+- gradlew.bat               # Gradle wrapper (Windows)
+- settings.gradle.kts       # Project structure definition
+
+Deployment Configuration
+- .env                      # Environment variables
+- compose.yaml              # Docker Compose configuration
+- config/                   # Service configurations
+- docker/                   # Docker image definitions
+
+Application Source
+- daml/                     # Smart contracts
+- backend/                  # Java backend services
+- frontend/                 # React frontend
+- common/                   # Shared API definitions
+```
+
+## 构建系统
+
+### Gradle
+
+Gradle 构建 Java 后端与 Daml 合约；后端通过 DAR 的 Transcode 生成类与 Ledger API 交互。
+
+**自定义 Gradle 插件**（`buildSrc/src/main/kotlin/`）：
+
+| Plugin                     | Purpose                                |
+| -------------------------- | -------------------------------------- |
+| `ConfigureProfilesTask.kt` | 交互生成 `.env.local` |
+| `Dependencies.kt` | 将 `.env` 版本传播到 Gradle |
+| `UnpackTarGzTask.kt` | 解压 `.tgz`（支持符号链接） |
+| `VersionFiles.kt` | 读取 `.env` 与 `daml.yaml` |
+
+### Make
+
+Make 为构建工具与 Docker Compose 提供 CLI；运行 `make help` 查看命令。
+
+**常用目标：**
+
+* `make setup` — 配置部署 profile
+* `make build` — 构建全部组件
+* `make start` — 启动应用
+* `make status` — 显示运行中容器
+* `make stop` — 停止应用
+* `make capture-logs` — 采集容器日志
+
+`Makefile` 既是可执行命令，也是开发流程文档。
+
+## 部署配置
+
+### Docker Compose
+
+Docker Compose 编排本地环境 LocalNet，在笔记本上模拟 Canton Network，含验证者、超级验证者、Canton Coin 钱包与支持服务。
+
+**关键文件：**
+
+* `compose.yaml` — 主 Compose 配置
+* `.env` — 各服务环境变量
+* `config/` — 服务专用配置
+* `docker/` — 镜像构建上下文
+
+### 端口映射
+
+LocalNet 端口采用前缀-后缀模式：
+
+**前缀：**
+
+* `2xxx` — 应用用户验证者
+* `3xxx` — 应用提供方验证者
+* `4xxx` — 超级验证者
+
+**常见后缀：**
+
+* `x901` — Ledger API
+* `x902` — Admin API
+* `x903` — Validator API
+* `x975` - JSON API
+* `5432` — PostgreSQL
+
+**示例**
+
+* 应用用户 Ledger API：`2901`
+* 提供方 Validator API：`3903`
+* 应用用户 JSON API：`2975`。
+
+### 端口映射 security
+
+`LocalNet` 映射暴露 `AdminAPI` 与 `Postgres` 端口，在公网有风险，但本地开发调试有用。**非本地部署配置切勿暴露**；可在对应 Docker 文件中移除端口。
+
+### 健康检查
+
+各验证者健康检查端点见 `..docker/splice/health-check.sh`。
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+curl -f http://localhost:2903/api/validator/readyz  # App User
+curl -f http://localhost:3903/api/validator/readyz  # App Provider
+curl -f http://localhost:4903/api/validator/readyz  # Super Validator
+```
+
+空响应表示服务健康。
+
+Admin 端口定义于 `quickstart/docker/modules/localnet/compose.yaml`
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    curl -v http://localhost:2902/admin    # Accesses App User admin if exposed
+    curl -v http://localhost:3902/admin    # Accesses App Provider admin if exposed
+
+```
+
+端口用法与认证模式详见 `quickstart-json-ledger-api`。
+
+## 应用结构
+
+Canton 应用分三层：
+
+1. **用户界面**（frontend/）— React Web 应用
+2. **本地业务逻辑**（backend/）— Java 服务、PQS 查询与集成
+3. **共识业务逻辑**（daml/）— 需多方一致的智能合约
+
+Quickstart 采用完全中介架构，后端处理全部账本交互；亦可采用 CQRS：前端直接向账本提交命令，后端负责查询。
+
+### Daml 智能合约
+
+许可应用演示应用提供方、用户与 DSO（支付）之间的多方共识工作流。
+
+```text theme={"theme":{"light":"github-light","dark":"github-dark"}}
+licensing/
+└── daml/
+    └── Licensing/
+        ├── AppInstall.daml     # User onboarding
+        ├── License.daml        # License management
+        └── Util.daml           # Helper functions
+```
+
+#### 核心业务流
+
+The consensus layer handles multi-party agreements through these Daml templates:
+
+**用户入驻**（`AppInstall.daml`）：
+
+* `AppInstallRequest` — 用户以提议/接受模式发起安装
+  * Choice：`AppInstallRequest_Accept`、`AppInstallRequest_Reject`、`AppInstallRequest_Cancel`
+* `AppInstall` — 提供方与用户之间的有效安装关系
+  * Choice：`AppInstall_CreateLicense` — 提供方为用户创建许可
+
+**许可管理**（`License.daml`）：
+
+* `License` — 带过期时间的访问控制
+  * Choice：`License_Renew` — 创建 `AppPaymentRequest`（Splice 钱包）与 `LicenseRenewalRequest`
+  * Choice：`License_Expire` — 归档过期许可
+* `LicenseRenewalRequest` — 通过 Canton Coin 支付处理许可延期
+
+#### 为何需要共识层？
+
+这些操作涉及多方协议，需共识层处理，不适合仅由本地后端完成。
+
+1. **用户创建** `AppInstallRequest` → 提供方须看到并响应
+2. **提供方行使** `AppInstallRequest_Accept` → 双方同意创建 `AppInstall`
+3. **提供方创建** `License` **合约** → 用户须接受条款
+4. **许可续期** → 须在用户、提供方与 DSO 支付系统间验证付款
+
+### 后端服务
+
+后端为 Spring Boot 应用，经两条路径中介全部账本交互：
+
+1. **查询** → PQS，快速读取账本状态
+2. **命令** → Ledger API gRPC，行使 choice 与创建合约
+
+完全中介架构集中认证与账本访问，保持前端简单。
+
+**Module structure** (`backend/src/main/java/com/digitalasset/quickstart/`):
+
+| Module        | Purpose                                  | Key Components                                                    |
+| ------------- | ---------------------------------------- | ----------------------------------------------------------------- |
+| `security/`   | OAuth2 authentication and access control | Bearer token validation                                           |
+| `service/`    | OpenAPI endpoint implementations         | Combines PQS queries with Ledger API commands                     |
+| `ledger/`     | Ledger API GRPC client                   | `LedgerApi` submits commands to validator                         |
+| `repository/` | Business-logic PQS queries               | `DamlRepository` provides domain-specific queries                 |
+| `pqs/`        | Low-level PQS access                     | `Pqs` generates SQL, queries PostgreSQL                           |
+| `utility/`    | Codegen and JSON utilities               | `DamlCodeGen` accesses Transcode-generated Java classes from DARs |
+| `config/`     | Spring Boot configuration                | `@ConfigurationProperties` components                             |
+
+#### 后端架构模式
+
+后端提供两类 HTTP 端点：
+
+* **GET** — 经 PQS 查询合约与状态
+* **POST** — 经 Ledger API 在合约上执行 choice（URL 含合约 ID）
+
+后端用 codegen 从 DAR 生成 Java 类以实现类型安全账本交互；更新 Daml 合约后运行 `make build` 重新生成。
+
+### 前端应用架构
+
+前端为 TypeScript React 应用，Vite 构建、Axios 传输。
+
+后端处理**全部**账本交互，前端不直接连接 Canton 或 Ledger API。此举：
+
+* 在一处集中认证与访问控制
+* 便于前端集成非账本数据源
+* 以前后端间 OpenAPI 模式为 DTO
+* HTTP 客户端：Axios + OpenAPI 客户端生成
+
+部分应用采用 CQRS，前端用 Daml 生成 TypeScript 直连 Ledger API；耦合更紧，适合 Daml 中心应用，但前端需理解 party ID、contract ID 等概念。
+
+### 公共 API 定义
+
+`common/openapi.yaml` 定义前后端 HTTP 接口：
+
+* **GET** `/api/resource` — 经 PQS 查询
+* **POST** `/api/contracts/{contractId}/exercise` — 经 Ledger API 执行 choice
+
+OpenAPI 模式为前端生成 TypeScript 类型并在后端校验请求。
+
+## 配置参考
+
+### 环境变量
+
+`.env` 含版本号、特性开关与默认配置；本地覆盖用 `.env.local`（不入库）。
+
+### Docker Compose 模块
+
+LocalNet 由模块化 Compose 层构成：
+
+* 基础 LocalNet 基础设施（来自 Splice）
+* 认证（Keycloak）
+* 可观测性（Grafana、Prometheus、Loki）
+* PQS（Participant Query Store）
+* 应用服务
+
+## 开发工作流
+
+### 快速开始
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    cd quickstart/
+    make setup          # Configure deployment
+    make build          # Build all components
+    make start          # Start LocalNet
+    make status         # Verify containers running
+
+```
+
+### 迭代开发
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    make build-daml      # Rebuild Daml contracts
+    make build-backend   # Rebuild Java services
+    make build-frontend  # Rebuild React app
+    make restart         # Restart services with new code
+
+```
+
+### 调试与日志
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+    make capture-logs    # Start log capture (separate terminal)
+    make shell           # Open Daml Shell for ledger queries
+
+```
+
+日志分析见 `quickstart-debugging-and-troubleshooting-lnav`。
+
+## 下一步
+
+理解项目结构后，可参阅[新开发者 TL;DR](/appdev/get-started/choose-your-path)。
+
+{/* Mintlify preview rebuild marker. */}

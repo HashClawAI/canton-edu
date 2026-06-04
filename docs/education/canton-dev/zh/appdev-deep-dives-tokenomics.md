@@ -1,0 +1,64 @@
+---
+title: "代币经济学"
+slug: "appdev-deep-dives-tokenomics"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/deep-dives/tokenomics.md"
+source_title: "Tokenomics"
+tags:
+  - appdev
+  - deep-dives
+  - tokenomics
+---
+
+# 代币经济学
+
+> Canton Network 代币经济学：轮次、活动记录、转账、流量与奖励分配
+
+以下为应用开发者与验证者运营方所需的 Canton Network 代币经济学概览，基于 [Canton Coin 白皮书](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20(whitepapers%2c%20etc...)/Canton%20Coin_%20A%20Canton-Network-native%20payment%20application.pdf)。
+
+Canton Network 代币经济学基于**活动记录（Activity Record）**：标识为网络提供价值的 Party 所执行的动作；**权重（weight）**表示该记录对应的 CC 铸造相对份额。
+
+创建活动记录与铸造 CC 分属两步，在**轮次（round）**中五阶段完成：写入当轮费用 → **活动记录** → 计算 [CC-issuance-per-activity-weight](https://github.com/canton-network/splice/blob/332e06a7ae9e13fde5bba0bf7dcb059aa36f979e/daml/splice-amulet/daml/Splice/Issuance.daml#L67) → **铸造**。多轮并行；默认每 10 分钟一轮。
+
+[外部 Party](/appdev/deep-dives/external-signing-onboarding) 与本地 Party 创建记录相同；铸造时本地 Party 由验证者自动化铸造，外部 Party 可委托铸造或自建自动化调用 `AmuletRules_Transfer`。相关模板：`AmuletRules`、`OpenMiningRound`、`IssuingMiningRound`。
+
+## 活动记录类型
+
+* 应用：`FeaturedAppActivityMarker`、`AppRewardCoupon`
+* 基础设施：`ValidatorRewardCoupon`、`ValidatorLivenessActivityRecord`、`SvRewardCoupon`
+
+`FeaturedAppActivityMarker` 由 SV 转为 `AppRewardCoupon`；**优先**用标记产生应用活动记录。CIP-0078 后仅 **featured** 应用获奖励（约 $1 等值）。
+
+### 如何成为 featured 应用
+
+填写[申请表](https://sync.global/featured-app-request/)，委员会审核；DevNet 可自 feature。受益方可按 `weight` 分摊（总和 1.0）。
+
+## 特色应用活动标记
+
+见 [CIP 47](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md)。适用于有经济价值但不涉 CC 转账的交易（RWA 锁定/转移、铸销等）；勿为中间步骤或 [propose](/appdev/modules/m3-authorization#use-propose-accept-workflow-for-one-off-authorization) 创建。转为 `AppRewardCoupon` 后 `provider` 可铸造。
+
+## 创建特色应用活动标记
+
+需获批 featured 并更新 Daml：依赖 `splice-api-featured-app-v1.dar`，查询 `FeaturedAppRight`，在 choice 中 exercise `FeaturedAppRight_CreateActivityMarker`。测试见 [DamlScript 示例](https://github.com/canton-network/splice/blob/a32995a0df2d447b9e76d81b770a06c296295ab5/daml/splice-dso-governance-test/daml/Splice/Scripts/TestFeaturedAppActivityMarkers.daml#L4)。
+
+## 使用 Splice 钱包 UI 的 CC 转账
+
+`AmuletRules_Transfer` 的三种 UI 路径：legacy 两步要约（CIP-0078 后无费无记录）；CN 标准两步锁定/解锁（外部 Party 友好，无费无记录）；一步转账至 `TransferPreapproval`（`provider` featured 时可得 `AppRewardCoupon`）。
+
+## 流量
+
+向 Global Synchronizer 提交消耗流量；验证者销毁 CC 购流量并产生 `ValidatorRewardCoupon`。建议自动 top-up（`helm_validator_topup` / `compose_validator_topup`）或 `AmuletRules_BuyMemberTraffic`。争用导致确认失败仍可能耗流量。
+
+## 验证者活跃度
+
+每轮 `ValidatorLivenessActivityRecord` 奖励存活验证者。
+
+## 超级验证者奖励
+
+每轮 `SvRewardCoupon`；权利见 [CIP 仓库](https://github.com/global-synchronizer-foundation/cips)。
+
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

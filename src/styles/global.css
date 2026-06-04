@@ -784,6 +784,154 @@ code {
   padding: 0.08rem 0.28rem;
 }
 
+.doc-meta {
+  margin-bottom: 1.5rem;
+}
+
+.doc-search-wrap {
+  margin-bottom: 2rem;
+}
+
+.doc-search-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.doc-search-input {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: rgba(0, 10, 4, 0.9);
+  color: var(--text);
+  font: inherit;
+}
+
+.doc-search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(0, 255, 100, 0.15);
+}
+
+.doc-search-empty {
+  margin-top: 0.75rem;
+}
+
+.doc-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.doc-link-item h3,
+.doc-link-item a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.doc-link-item p {
+  margin: 0.25rem 0 0;
+}
+
+.doc-category[hidden],
+.doc-link-item[hidden] {
+  display: none;
+}
+
+.doc-prose :global(blockquote:last-child) {
+  margin-top: 2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.doc-prose {
+  background: rgba(0, 18, 8, 0.72);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 0 0 1px rgba(0, 255, 100, 0.05);
+  line-height: 1.7;
+}
+
+.doc-prose :global(h1) {
+  font-size: 1.6rem;
+  margin: 0 0 1rem;
+}
+
+.doc-prose :global(h2) {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.doc-prose :global(h2:first-of-type) {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1.25rem;
+}
+
+.doc-prose :global(h3) {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doc-prose :global(p),
+.doc-prose :global(li) {
+  color: var(--text);
+}
+
+.doc-prose :global(ul),
+.doc-prose :global(ol) {
+  padding-left: 1.25rem;
+}
+
+.doc-prose :global(blockquote) {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent-dim);
+  background: rgba(0, 10, 4, 0.65);
+  color: var(--muted);
+}
+
+.doc-prose :global(pre) {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(0, 8, 4, 0.95);
+}
+
+.doc-prose :global(pre code) {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.doc-prose :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 1rem 0;
+}
+
+.doc-prose :global(th),
+.doc-prose :global(td) {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+.doc-prose :global(th) {
+  color: var(--muted);
+}
+
 .last-updated {
   color: var(--muted);
   font-size: 0.85rem;
