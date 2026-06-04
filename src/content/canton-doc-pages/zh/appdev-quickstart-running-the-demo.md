@@ -201,7 +201,7 @@ make create-app-install-request
 
 查找钱包位置：
 
-1. 阅读 [LocalNet 应用 UI 参考](/sdks-tools/development-tools/localnet#application-uis)。
+1. 阅读 [LocalNet 应用 UI 参考](/zh/docs/canton/appdev-modules-m5-localnet-development#application-uis)。
 2. 进入应用提供方「Tenants」菜单。
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/app-provider-tenants.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=977310daf3ed1412cc3486604d2af9db" alt="AppProvider Tenants menu" width="2576" height="1036" data-path="images/docs_website/app-provider-tenants.png" />

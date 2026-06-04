@@ -94,8 +94,8 @@ The 钱包 SDK includes:
 
 ## 下一步
 
-* [钱包 配置](/集成/钱包/配置) — 配置 the SDK for your environment
-* [钱包 集成 Guidance](/集成/钱包/guidance) — Signing 交易 from dApps
+* [钱包 配置](/zh/docs/canton/integrations-wallet-configuration) — 配置 the SDK for your environment
+* [钱包 集成 Guidance](/zh/docs/canton/integrations-wallet-guidance) — Signing 交易 from dApps
 
 ---
 

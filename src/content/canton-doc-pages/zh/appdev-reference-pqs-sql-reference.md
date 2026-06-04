@@ -346,7 +346,7 @@ where c.create_event_id = (42::bigint, 0);
 
 ## 函数汇总
 
-This section will be expanded in a future update. For PQS query patterns and usage, see the [PQS documentation](/appdev/deep-dives/query-with-pqs).
+This section will be expanded in a future update. For PQS query patterns and usage, see the [PQS documentation](/zh/docs/canton/appdev-modules-m4-query-with-pqs).
 
 ## 合约栏
 

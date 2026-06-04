@@ -29,7 +29,7 @@ You are ready to extend the CN Quickstart to interact directly with your LocalNe
 
 ## Prerequisites
 
-This guide requires the Digital Asset Package Manager. Follow installation instructions at [DPM](/sdks-tools/cli-tools/dpm).
+This guide requires the Digital Asset Package Manager. Follow installation instructions at [DPM](https://docs.canton.network/sdks-tools/cli-tools/dpm).
 
 You should have also finished the Quickstart installation and Explore the demo tutorial. We also recommend reading the developer journey lifecycle to better understand how Quickstart bootstraps your Canton Network development by providing the tooling you will need for any CN app.
 

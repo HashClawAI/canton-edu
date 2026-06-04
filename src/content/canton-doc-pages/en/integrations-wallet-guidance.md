@@ -186,7 +186,7 @@ Links to the node deployment docs are below depending on the deployment choice a
   * [Docker Compose DevNet docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose)
   * [Kubernetes DevNet docs](/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-The Wallet integration guide is tailored to work with a LocalNet setup ([/sdks-tools/development-tools/localnet](/sdks-tools/development-tools/localnet)) to make testing and verification easy.
+The Wallet integration guide is tailored to work with a LocalNet setup ([/sdks-tools/development-tools/localnet](/docs/canton/appdev-modules-m5-localnet-development)) to make testing and verification easy.
 
 ## Connecting to a Synchronizer
 

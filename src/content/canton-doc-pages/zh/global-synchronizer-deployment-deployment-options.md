@@ -110,18 +110,18 @@ Kubernetes 是测试网和主网推荐的部署方法。 Helm 图表为所有验
 
 ## 超级验证器部署
 
-超级验证者必须使用 Kubernetes。其他组件（CometBFT 节点、排序器、中介器、SV 应用程序、扫描服务）需要编排，而 Docker Compose 在生产规模上不支持。请参阅 [Kubernetes 部署](/global-同步器/deployment/kubernetes-deployment) 指南。
+超级验证者必须使用 Kubernetes。其他组件（CometBFT 节点、排序器、中介器、SV 应用程序、扫描服务）需要编排，而 Docker Compose 在生产规模上不支持。请参阅 [Kubernetes 部署](/zh/docs/canton/global-synchronizer-deployment-kubernetes-deployment) 指南。
 
 ## 后续步骤
 
 <卡组列={2}>
-  <Card title="先决条件" icon="list-check" href="/global-同步器/deployment/precessions">
+  <Card title="先决条件" icon="list-check" href="https://docs.canton.network/global-synchronizer/deployment/precessions">
     您选择的部署方法的系统要求。
-  </卡><Card title="Docker Compose 验证器部署" icon="docker" href="/global-同步器/deployment/validator-docker-compose">
+  </卡><Card title="Docker Compose 验证器部署" icon="docker" href="/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose">
     分步 Docker Compose 验证器部署。
   </卡>
 
-  <Card title="Kubernetes 验证器部署" icon="dharmachakra" href="/global-同步器/deployment/validator-kubernetes">
+  <Card title="Kubernetes 验证器部署" icon="dharmachakra" href="/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes">
     使用 Helm 图表逐步部署 Kubernetes 验证器。
   </卡>
 </卡组>

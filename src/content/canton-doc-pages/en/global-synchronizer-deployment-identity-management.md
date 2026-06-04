@@ -216,7 +216,7 @@ Authorization is managed by the Ledger API's User Management Service. In essence
 * a set of user rights (describes whether a user has access to the admin portion of the Ledger API and what parties this user can act or read as)
 * a set of custom annotations (string-based key-value pairs, stored locally on the Ledger API server, that can be used to attach extra information to this party, e.g. how it relates to some business entity)
 
-All these properties except the user ID can be modified. To learn more about annotations refer to the Ledger API Reference documentation. For an overview of the Ledger API's UserManagementService, see the [Ledger API reference](/sdks-tools/api-reference/ledger-api).
+All these properties except the user ID can be modified. To learn more about annotations refer to the Ledger API Reference documentation. For an overview of the Ledger API's UserManagementService, see the [Ledger API reference](https://docs.canton.network/sdks-tools/api-reference/ledger-api).
 
 You can manage users through the Canton console user management commands, an alpha feature. See the cookbook below for some concrete examples of how to manage users.
 

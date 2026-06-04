@@ -22,7 +22,7 @@ tags:
 
 > Package-level overview for com.digitalasset.canton.admin.
 
-<p class="x2mdx-ref-back"><a href="../index">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-admin-api-protobuf-index">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>

@@ -54,7 +54,7 @@ The 转账 Object can also be serialized into JSON format, as shown in the follo
 
 **Fetching the Data via JSON API**
 
-While gRPC can be used, this guide assumes 集成 via the [DAML JSON API](/sdks-tools/api-reference/json-api).
+While gRPC can be used, this guide assumes 集成 via the [DAML JSON API](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
 To fetch update info from the 参与者 node, query the following 端点 using the 交易's `UpdateID`: `GET /v2/updates/update-by-id`
 

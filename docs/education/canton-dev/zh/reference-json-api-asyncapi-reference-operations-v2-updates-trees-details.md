@@ -16,7 +16,7 @@ tags:
 
 > 获取更新交易树流。为了向后兼容，它将在 Canton 版本 3.5.0 中删除，改用 v2/updates。
 
-<p class="x2mdx-ref-back"><a href="../details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI 通道</p>
@@ -61,7 +61,7 @@ tags:
 获取更新交易树流。为了向后兼容，它将在 Canton 版本 3.5.0 中删除，改用 v2/updates。
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-trees-publish">
     <div class="x2mdx-ref-card-head">
       <h3>发布/v2/updates/trees</h3>
     </div>
@@ -94,7 +94,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-trees-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>订阅 /v2/updates/trees</h3>
     </div>

@@ -1359,7 +1359,7 @@ The default PostgreSQL Docker image ships with minimal settings. For any realist
 * `max_connections` — Match to your expected connection pool size
 * `autovacuum` settings — Tune for your write patterns
 
-Resource requirements depend on your workload. Consult the [PQS operations guide](/sdks-tools/development-tools/pqs) for sizing guidance specific to your query patterns and contract volumes.
+Resource requirements depend on your workload. Consult the [PQS operations guide](https://docs.canton.network/sdks-tools/development-tools/pqs) for sizing guidance specific to your query patterns and contract volumes.
 
 ### Query patterns
 

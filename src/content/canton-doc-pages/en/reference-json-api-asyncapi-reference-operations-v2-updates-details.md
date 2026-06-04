@@ -23,7 +23,7 @@ tags:
 > Read the ledger's filtered update stream for the specified contents and filters. It returns the event types in accordance with the stream contents selected. Also the selection criteria for individual events depends on the transaction shape chosen.
 - ACS delta: a requesting party must be a stakeholder of an event for it to be included. - ledger effects: a requesting party must be a witness of an event for it to be included.
 
-<p class="x2mdx-ref-back"><a href="../details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-json-api-asyncapi-reference-operations-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI Channel</p>
@@ -73,7 +73,7 @@ for individual events depends on the transaction shape chosen.
 * ledger effects: a requesting party must be a witness of an event for it to be included.
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-publish">
     <div class="x2mdx-ref-card-head">
       <h3>publish /v2/updates</h3>
     </div>
@@ -106,7 +106,7 @@ for individual events depends on the transaction shape chosen.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>subscribe /v2/updates</h3>
     </div>

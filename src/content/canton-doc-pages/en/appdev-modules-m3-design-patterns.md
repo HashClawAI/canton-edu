@@ -23,7 +23,7 @@ tags:
 
 # Compose choices
 
-It's time to put everything you've learned so far together into a complete and secure Daml model for asset issuance, management, transfer, and trading. This application will have capabilities similar to the one in the [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart). In the process you will learn about a few more concepts:
+It's time to put everything you've learned so far together into a complete and secure Daml model for asset issuance, management, transfer, and trading. This application will have capabilities similar to the one in the [CN Quickstart](/docs/canton/appdev-quickstart-index). In the process you will learn about a few more concepts:
 
 * Daml projects, packages, and modules
 * Composition of transactions
@@ -656,7 +656,7 @@ person1 `submit` do exerciseCmd pending Finalize with signer = person1
 
 # Compose choices
 
-It's time to put everything you've learned so far together into a complete and secure Daml model for asset issuance, management, transfer, and trading. This application will have capabilities similar to the one in the [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart). In the process you will learn about a few more concepts:
+It's time to put everything you've learned so far together into a complete and secure Daml model for asset issuance, management, transfer, and trading. This application will have capabilities similar to the one in the [CN Quickstart](/docs/canton/appdev-quickstart-index). In the process you will learn about a few more concepts:
 
 * Daml projects, packages, and modules
 * Composition of transactions

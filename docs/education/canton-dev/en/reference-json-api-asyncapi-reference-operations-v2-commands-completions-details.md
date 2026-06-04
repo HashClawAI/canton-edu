@@ -22,7 +22,7 @@ tags:
 
 > Subscribe to command completion events.
 
-<p class="x2mdx-ref-back"><a href="../details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-json-api-asyncapi-reference-operations-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI Channel</p>
@@ -67,7 +67,7 @@ tags:
 Subscribe to command completion events.
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-publish">
     <div class="x2mdx-ref-card-head">
       <h3>publish /v2/commands/completions</h3>
     </div>
@@ -100,7 +100,7 @@ Subscribe to command completion events.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>subscribe /v2/commands/completions</h3>
     </div>

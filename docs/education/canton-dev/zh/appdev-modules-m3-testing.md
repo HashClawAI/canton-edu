@@ -172,7 +172,7 @@ sandbox 运行后，可通过 Ledger API（gRPC 或 JSON）交互，用 codegen 
 
 ### 何时用本地 Canton Network
 
-[CN Quickstart](/sdks-tools/reference-projects/cn-quickstart) 含 LocalNet 配置，可在本地运行完整 Canton Network（参与方、sequencer、mediator 与 Splice 应用）。需要测试以下内容时用 LocalNet 而非 sandbox：
+[CN Quickstart](/zh/docs/canton/appdev-quickstart-index) 含 LocalNet 配置，可在本地运行完整 Canton Network（参与方、sequencer、mediator 与 Splice 应用）。需要测试以下内容时用 LocalNet 而非 sandbox：
 
 * Canton Coin 转账与 traffic 购买
 * Wallet SDK 集成

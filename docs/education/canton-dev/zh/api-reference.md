@@ -24,27 +24,27 @@ API 参考涵盖 Canton 的每一个程序化接口——查阅端点、请求/�
     Canton Ledger API 生成参考，涵盖 5 个 gRPC 包——查阅服务、请求/响应模式，以及命令、更新等功能的版本历史。
   </Card>
 
-  <Card title="TypeScript" icon="bookmark" href="/reference/typescript">
+  <Card title="TypeScript" icon="bookmark" href="https://docs.canton.network/reference/typescript">
     Daml TypeScript 类型以及 Wallet SDK 与 dApp SDK 客户端库的生成参考。
   </Card>
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Daml 标准库" icon="bookmark" href="appdev/reference/daml-standard-library/da-action">
+  <Card title="Daml 标准库" icon="bookmark" href="/zh/docs/canton/appdev-reference-daml-standard-library-da-action">
     Daml 标准库模块生成参考——涵盖核心模块等。
   </Card>
 
-  <Card title="dApp API" icon="bookmark" href="reference/wallet-gateway-json-rpc/specs/dapp-api">
+  <Card title="dApp API" icon="bookmark" href="https://docs.canton.network/reference/wallet-gateway-json-rpc/specs/dapp-api">
     dApp 与 Wallet Provider 交互的 OpenRPC 规范。
   </Card>
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Wallet Gateway" icon="bookmark" href="/reference/wallet-gateway-json-rpc/specs/user-api">
+  <Card title="Wallet Gateway" icon="bookmark" href="https://docs.canton.network/reference/wallet-gateway-json-rpc/specs/user-api">
     版本化 OpenRPC 参考——用于将钱包与 dApp 集成到 Splice Wallet Gateway。
   </Card>
 
-  <Card title="Splice API" icon="bookmark" href="/reference/splice-scan-api/common/readyz">
+  <Card title="Splice API" icon="bookmark" href="https://docs.canton.network/reference/splice-scan-api/common/readyz">
     使用 Canton Network 的 OpenAPI 端点进行开发：Canton Coin 数据、名称服务、代币标准等。
   </Card>
 </Columns>

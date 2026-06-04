@@ -25,7 +25,7 @@ The frontend is the user-facing layer of your Canton application. This page uses
 
 ## Connecting to the Backend
 
-In cn-quickstart, the frontend does not talk to the Ledger API directly — all ledger interactions go through the backend's REST endpoints. Canton does provide a [JSON API](/sdks-tools/api-reference/json-api) that frontends can use for direct ledger access, but the cn-quickstart architecture routes everything through the backend for separation of concerns.
+In cn-quickstart, the frontend does not talk to the Ledger API directly — all ledger interactions go through the backend's REST endpoints. Canton does provide a [JSON API](https://docs.canton.network/sdks-tools/api-reference/json-api) that frontends can use for direct ledger access, but the cn-quickstart architecture routes everything through the backend for separation of concerns.
 
 The API client is configured in [`api.ts`](https://github.com/digital-asset/cn-quickstart/blob/main/quickstart/frontend/src/api.ts) using the `openapi-client-axios` library, which reads the OpenAPI schema and produces a typed HTTP client:
 
@@ -78,7 +78,7 @@ dpm codegen-js <DAR-FILES> -o <DIR>
 Whether you use DAR-generated types depends on your architecture:
 
 * **Fully mediated** (cn-quickstart default) -- The frontend uses OpenAPI-generated types from the backend's REST schema. The Daml-generated TypeScript types are not needed in the frontend because the backend translates between ledger concepts and REST DTOs.
-* **Direct ledger access via JSON API** -- The frontend submits commands through the [JSON API](/sdks-tools/api-reference/json-api) using the Daml-generated TypeScript bindings. This gives tighter integration with the ledger but requires the frontend to handle party IDs, contract IDs, and command submission directly.
+* **Direct ledger access via JSON API** -- The frontend submits commands through the [JSON API](https://docs.canton.network/sdks-tools/api-reference/json-api) using the Daml-generated TypeScript bindings. This gives tighter integration with the ledger but requires the frontend to handle party IDs, contract IDs, and command submission directly.
 
 For most applications, the fully mediated approach is simpler. The JSON API approach makes sense when you want a thin or no backend layer.
 

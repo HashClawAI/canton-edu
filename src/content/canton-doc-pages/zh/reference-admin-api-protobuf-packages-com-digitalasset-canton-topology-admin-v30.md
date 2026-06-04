@@ -16,7 +16,7 @@ tags:
 
 > com.digitalasset.canton.topology.admin.v30 的包级别概述。
 
-<p class="x2mdx-ref-back"><a href="../index">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-admin-api-protobuf-index">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>
@@ -224,7 +224,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/identityinitializationservice/currenttime">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-identityinitializationservice-currenttime">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityInitializationService.CurrentTime</h3>
 
@@ -260,7 +260,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/identityinitializationservice/getid">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-identityinitializationservice-getid">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityInitializationService.GetId</h3>
 
@@ -294,7 +294,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/identityinitializationservice/initid">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-identityinitializationservice-initid">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityInitializationService.InitId</h3>
 
@@ -346,7 +346,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologyaggregationservice/listkeyowners">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologyaggregationservice-listkeyowners">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyAggregationService.ListKeyOwners</h3>
 
@@ -382,7 +382,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologyaggregationservice/listparties">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologyaggregationservice-listparties">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyAggregationService.ListParties</h3>
 
@@ -432,7 +432,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/exporttopologysnapshot">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-exporttopologysnapshot">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ExportTopologySnapshot</h3>
 
@@ -468,7 +468,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/exporttopologysnapshotv2">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-exporttopologysnapshotv2">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ExportTopologySnapshotV2</h3>
 
@@ -504,7 +504,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/genesisstate">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-genesisstate">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.GenesisState</h3>
 
@@ -538,7 +538,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/genesisstatev2">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-genesisstatev2">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.GenesisStateV2</h3>
 
@@ -574,7 +574,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listall">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listall">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListAll</h3>
 
@@ -610,7 +610,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listallv2">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listallv2">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListAllV2</h3>
 
@@ -646,7 +646,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listavailablestores">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listavailablestores">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListAvailableStores</h3>
 
@@ -680,7 +680,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listdecentralizednamespacedefinition">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listdecentralizednamespacedefinition">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListDecentralizedNamespaceDefinition</h3>
 
@@ -716,7 +716,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listlsuannouncement">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listlsuannouncement">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListLsu公告</h3>
 
@@ -752,7 +752,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listlsusequencerconnectionsuccessor">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listlsusequencerconnectionsuccessor">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListLsuSequencerConnectionSuccessor</h3>
 
@@ -786,7 +786,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listmediator同步器state">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listmediator同步器state">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListMediator同步器State</h3>
 
@@ -822,7 +822,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listnamespacedelegation">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listnamespacedelegation">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListNamespaceDelegation</h3>
 
@@ -858,7 +858,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listownertokeymapping">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listownertokeymapping">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListOwnerToKeyMapping</h3>
 
@@ -892,7 +892,7 @@ tags:
         <dd>否</dd>
       </div>
     </dl>
-  </a><a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list参与方同步器permission">
+  </a><a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list参与方同步器permission">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.List参与方同步器Permission</h3>
 
@@ -928,7 +928,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listpartyhostinglimits">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listpartyhostinglimits">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListPartyHostingLimits</h3>
 
@@ -964,7 +964,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listpartytokeymapping">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listpartytokeymapping">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListPartyToKeyMapping</h3>
 
@@ -1000,7 +1000,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listpartyto参与方">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listpartyto参与方">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListPartyTo参与方</h3>
 
@@ -1034,7 +1034,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listsequencer同步器state">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listsequencer同步器state">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListSequencer同步器State</h3>
 
@@ -1070,7 +1070,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listsequencingparametersstate">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listsequencingparametersstate">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListSequencingParametersState</h3>
 
@@ -1106,7 +1106,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list同步器parametersstate">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list同步器parametersstate">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.List同步器ParametersState</h3>
 
@@ -1140,7 +1140,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list同步器trustcertificate">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/admin-api/protobuf/operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/list同步器trustcertificate">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.List同步器TrustCertificate</h3>
 
@@ -1176,7 +1176,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/listvettedpackages">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-listvettedpackages">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.ListVettedPackages</h3>
 
@@ -1212,7 +1212,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerreadservice/sequencerlsustate">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerreadservice-sequencerlsustate">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerReadService.SequencerLsuState</h3>
 
@@ -1262,7 +1262,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/addtransactions">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-addtransactions">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.AddTransactions</h3>
 
@@ -1298,7 +1298,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/authorize">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-authorize">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.Authorize</h3>
 
@@ -1334,7 +1334,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/createtemporarytopologystore">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-createtemporarytopologystore">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.CreateTemporaryTopologyStore</h3>
 
@@ -1368,7 +1368,7 @@ tags:
         <dd>否</dd>
       </div>
     </dl>
-  </a><a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/droptemporarytopologystore">
+  </a><a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-droptemporarytopologystore">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.DropTemporaryTopologyStore</h3>
 
@@ -1404,7 +1404,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/generatetransactions">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-generatetransactions">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.GenerateTransactions</h3>
 
@@ -1440,7 +1440,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/importtopologysnapshot">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-importtopologysnapshot">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.ImportTopologySnapshot</h3>
 
@@ -1476,7 +1476,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/importtopologysnapshotv2">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-importtopologysnapshotv2">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.ImportTopologySnapshotV2</h3>
 
@@ -1510,7 +1510,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-topology-admin-v30/topologymanagerwriteservice/signtransactions">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-topology-admin-v30-topologymanagerwriteservice-signtransactions">
     <div class="x2mdx-ref-card-head">
       <h3>TopologyManagerWriteService.SignTransactions</h3>
 

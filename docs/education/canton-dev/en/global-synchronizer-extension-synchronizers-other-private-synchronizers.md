@@ -87,7 +87,7 @@ Deploying a standalone synchronizer follows the same process as deploying a priv
 3. Deploy validators and connect them to your synchronizer
 4. Allocate parties on the validators and begin transacting
 
-For step-by-step instructions, see the [private synchronizer deployment guide](/global-synchronizer/extension-synchronizers/deployment).
+For step-by-step instructions, see the [private synchronizer deployment guide](https://docs.canton.network/global-synchronizer/extension-synchronizers/deployment).
 
 ## Differences from Global Synchronizer operation
 

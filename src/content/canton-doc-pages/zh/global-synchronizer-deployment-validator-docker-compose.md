@@ -77,7 +77,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### 所需的网络参数<p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
@@ -153,7 +153,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### 所需的网络参数
@@ -215,7 +215,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### 所需的网络参数
@@ -376,9 +376,9 @@ tags:
 
 ### 访问 Canton 参与者 API
 
-[JSON Ledger API](/sdks-tools/api-reference/json-api) 在 `json-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `Host: json-ledger-api.localhost` 标头才能正确解决此问题。
+[JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api) 在 `json-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `Host: json-ledger-api.localhost` 标头才能正确解决此问题。
 
-[gRPC Ledger API](/sdks-tools/api-reference/ledger-api) 在 `grpc-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `:authority: json-ledger-api.localhost` 伪标头才能正确解决此问题。
+[gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api) 在 `grpc-ledger-api.localhost:80` 下公开。请注意，对于某些客户端，您可能明确需要设置 `:authority: json-ledger-api.localhost` 伪标头才能正确解决此问题。
 
 Canton Admin API 默认情况下不公开，因为它尚不支持身份验证。 `nginx.conf` 中有一个注释掉的部分，如果您确保它不会公开（例如通过网络限制），则可以启用该部分来公开它。
 
@@ -483,12 +483,12 @@ export TARGET_TRAFFIC_THROUGHPUT=20000 # target throughput in bytes/second
 export MIN_TRAFFIC_TOPUP_INTERVAL="1m" # minimum interval between top-ups
 ```
 
-<p>每次成功充值时，验证者应用都会购买 `top-up amount` 大约 `targetThroughput * minTopupInterval` 字节的流量（具体金额可能因四舍五入而异）。 `minTopupInterval` 允许验证者操作员控制自动充值发生的上限频率。如果充值金额低于同步器范围的`minTopupAmount`（请参阅[流量参数](/global-同步器/deployment/同步器-流量#流量-parameters)），`minTopupInterval`会自动拉伸，以便在尊重配置的`targetThroughput`的同时至少购买`minTopupAmount`字节的流量。</p>
+<p>每次成功充值时，验证者应用都会购买 `top-up amount` 大约 `targetThroughput * minTopupInterval` 字节的流量（具体金额可能因四舍五入而异）。 `minTopupInterval` 允许验证者操作员控制自动充值发生的上限频率。如果充值金额低于同步器范围的`minTopupAmount`（请参阅[流量参数](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量#流量-parameters)），`minTopupInterval`会自动拉伸，以便在尊重配置的`targetThroughput`的同时至少购买`minTopupAmount`字节的流量。</p>
 
 <p>当满足以下所有条件时，将触发下一次充值：</p>
 
 <ul>
-  <li>可用的[额外流量余额](/global-同步器/deployment/同步器-流量#流量-accounting-what-counts-as-流量)低于配置的充值金额（即低于`targetThroughput * minTopupInterval`）。</li>
+  <li>可用的[额外流量余额](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量#流量-accounting-what-counts-as-流量)低于配置的充值金额（即低于`targetThroughput * minTopupInterval`）。</li>
 
   <li>自上次充值以来至少已过去 `minTopupInterval`。</li>
 

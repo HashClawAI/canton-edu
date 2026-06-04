@@ -299,7 +299,7 @@ make start
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="QuickStart" icon="rocket" href="/appdev/quickstart">
+  <Card title="QuickStart" icon="rocket" href="/docs/canton/appdev-quickstart-index">
     Run the example application.
   </Card>
 

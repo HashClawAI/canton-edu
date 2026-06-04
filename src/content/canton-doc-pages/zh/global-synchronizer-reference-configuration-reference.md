@@ -291,7 +291,7 @@ export MIN_TRAFFIC_TOPUP_INTERVAL="1m"
   如果您的节点离线时间超过了修剪保留窗口，则当应用程序竞相追赶修剪的数据时，它可能会被损坏。将保留时间设置为反映正常运行时间保证的值 - 30 天是一个合理的起点，因为排序器也会在 30 天后进行修剪。
 </警告>
 
-有关更多详细信息，请参阅有关 [修剪操作](/global-synchronizer/product-operations/修剪#参与方-node-修剪) 的 Canton 文档。
+有关更多详细信息，请参阅有关 [修剪操作](/zh/docs/canton/global-synchronizer-production-operations-pruning#参与方-node-修剪) 的 Canton 文档。
 
 ## 监控和可观察性
 

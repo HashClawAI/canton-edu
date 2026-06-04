@@ -40,9 +40,9 @@ tags:
   </Accordion>
 
   <Accordion title="搭建开发环境">
-    * [ ] 安装 [Daml SDK](/sdks-tools/sdks/daml-sdk)
+    * [ ] 安装 [Daml SDK](https://docs.canton.network/sdks-tools/sdks/daml-sdk)
     * [ ] VS Code + [Daml 扩展](https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml)
-    * [ ] 克隆 [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart)
+    * [ ] 克隆 [CN Quickstart](/zh/docs/canton/appdev-quickstart-index)
     * [ ] 运行 `make setup && make build && make start` 验证环境
   </Accordion>
 </AccordionGroup>
@@ -162,7 +162,7 @@ tags:
     开始用 Daml 构建。
   </Card>
 
-  <Card title="CN Quickstart" icon="rocket" href="/sdks-tools/reference-projects/cn-quickstart">
+  <Card title="CN Quickstart" icon="rocket" href="/zh/docs/canton/appdev-quickstart-index">
     动手跑通示例。
   </Card>
 </CardGroup>

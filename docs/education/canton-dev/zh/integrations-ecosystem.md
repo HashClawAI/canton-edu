@@ -149,14 +149,14 @@ For current 网络 statistics, visit:
 
 ### As a 验证者
 
-1. Review [infrastructure requirements](/global-同步器/understand/infrastructure-requirements)
+1. Review [infrastructure requirements](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 2. Contact a [超级验证者](https://canton.foundation) for sponsorship
 3. Complete the onboarding process
 4. Begin operations
 
 ### As a 开发者
 
-1. 启动 with the [QuickStart](/appdev/quickstart)
+1. 启动 with the [QuickStart](/zh/docs/canton/appdev-quickstart-index)
 2. Learn [Daml](/zh/docs/canton/appdev-get-started-choose-your-path)
 3. Build and deploy your 应用
 4. Join the 开发者 community {/* TODO: 添加 Slack link once available */}
@@ -191,7 +191,7 @@ The Canton Network community holds regular 事件:
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="集成 Patterns" icon="puzzle-piece" href="/集成/集成-patterns">
+  <Card title="集成 Patterns" icon="puzzle-piece" href="https://docs.canton.network/integrations/集成-patterns">
     Learn common 集成 approaches.
   </Card>
 

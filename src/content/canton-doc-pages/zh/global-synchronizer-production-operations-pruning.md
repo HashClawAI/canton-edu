@@ -19,7 +19,7 @@ tags:
 
 本页面介绍了参与者节点的 Canton 端剪枝和自动剪枝配置。
 
-有关序列器和 CometBFT 层的超级验证者剪枝，请参阅 [SV 剪枝](/global-synchronizer/product-operations/sv-pruning)。
+有关序列器和 CometBFT 层的超级验证者剪枝，请参阅 [SV 剪枝](/zh/docs/canton/global-synchronizer-production-operations-sv-pruning)。
 
 ## 参与者节点剪枝
 

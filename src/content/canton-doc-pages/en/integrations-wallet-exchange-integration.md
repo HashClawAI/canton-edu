@@ -135,7 +135,7 @@ There are five Canton integration components:
 
 * The **Exchange Validator Node** is a Splice validator node that hosts your `treasuryParty`, which is the party you setup to control funds, receive deposits, and execute transfers for withdrawals. See `exchange-parties-setup` for details on how to setup the `treasuryParty`. You can [deploy and operate a validator yourself](/docs/canton/global-synchronizer-deployment-onboarding-process#validators) or use a node-as-a-service provider to operate it for you.
 * The **Canton Integration DB** is used to keep track of the state of withdrawals and the customer-attribution of the funds held by the `treasuryParty`. It is shown as a separate component in the diagram, but it could be part of an existing databases.
-* The **Tx History Ingestion** service uses the [JSON Ledger API](/sdks-tools/api-reference/json-api) exposed by the Exchange Validator Node to read Daml transactions affecting the `treasuryParty`. It parses these transactions and updates the Canton Integration DB with the effect of these transactions (e.g. a successful deposit to a customer account).
+* The **Tx History Ingestion** service uses the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api) exposed by the Exchange Validator Node to read Daml transactions affecting the `treasuryParty`. It parses these transactions and updates the Canton Integration DB with the effect of these transactions (e.g. a successful deposit to a customer account).
 * The **Withdrawal Automation** service is responsible for executing withdrawals requested by the Exchange Internal Systems via the Canton Integration DB.
 * The **Multi-Step Deposit Automation** service is responsible for accepting or rejecting transfers from customers to their exchange accounts for CN tokens that do not support direct transfers. It is not necessary for an integration with Canton Coin, which does support direct, 1-step transfers.
 
@@ -476,7 +476,7 @@ For example, Canton Coin also exist on TestNet and DevNet with different `dsoPar
 
 ## Offset Checkpoints
 
-When consuming transactions through the update service at `/v2/updates` you will not just receive transactions but you will also receive [offset checkpoints](/sdks-tools/api-reference/ledger-api). Each offset checkpoint contains an offset and the most recent observed record time for each synchronizer. Your Tx History Ingestion should use that to update the last processed offset and record time (in addition to updating those after each transaction) so that it will resume processing transactions from that point on after a crash or restart.
+When consuming transactions through the update service at `/v2/updates` you will not just receive transactions but you will also receive [offset checkpoints](https://docs.canton.network/sdks-tools/api-reference/ledger-api). Each offset checkpoint contains an offset and the most recent observed record time for each synchronizer. Your Tx History Ingestion should use that to update the last processed offset and record time (in addition to updating those after each transaction) so that it will resume processing transactions from that point on after a crash or restart.
 
 Offset checkpoints are in particular required around Major Splice Upgrades where there is no Daml transaction for an extended period of time, but you want to ensure that your Tx History Ingestion advances beyond a particular record time.
 
@@ -495,7 +495,7 @@ As part of the `integration-workflows`, Tx History Ingestion is expected to extr
 ### 1-Step Transfers
 
 To understand the structure of a 1-step transfer, let's look at an example deposit
-as seen through the [JSON Ledger API](/sdks-tools/api-reference/json-api).
+as seen through the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
 In this case, we query a single transaction. The format is identical to the transaction you will get when streaming transactions through `/v2/updates/flats` and you can also use the same filter. Note that you need to adjust the `auth-token`, `update-id` and `treasury-party` placeholders to match your setup.
 
@@ -985,7 +985,7 @@ Note however, that for Canton Coin the `amount` in the `TransferFactory_Transfer
 
 ### Multi-Step Transfers
 
-To understand the transaction structure of a multi-step transfer, let's look at an example transaction of a Multi-Step Deposit as seen through the [JSON Ledger API](/sdks-tools/api-reference/json-api).
+To understand the transaction structure of a multi-step transfer, let's look at an example transaction of a Multi-Step Deposit as seen through the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
 In this case, we query a single transaction. The format is identical to the transaction you will get when streaming transactions through `/v2/updates/flats` and you can also use the same filter. Note that you need to adjust the `auth-token`, `update-id` and `treasury-party` placeholders to match your setup.
 
@@ -1993,7 +1993,7 @@ We recommend doing so by having the Tx History Ingestion re-create the withdrawa
 
 ## Test Node Setup
 
-When testing on your laptop or in CI, we recommend using Splice's [LocalNet](/sdks-tools/development-tools/localnet), which is a Docker-Compose based local deployment of a Global Synchronizer and Canton Coin. Automate the exchange parties setup as part of your test setup, so that you can start from a clean state for each test run while reusing the same LocalNet. Thereby achieving test isolation without the overhead of starting and stopping LocalNet for each test run.
+When testing on your laptop or in CI, we recommend using Splice's [LocalNet](/docs/canton/appdev-modules-m5-localnet-development), which is a Docker-Compose based local deployment of a Global Synchronizer and Canton Coin. Automate the exchange parties setup as part of your test setup, so that you can start from a clean state for each test run while reusing the same LocalNet. Thereby achieving test isolation without the overhead of starting and stopping LocalNet for each test run.
 
 Alternatively you can consider setting up a DevNet validator node using either Docker-Compose or k8s as [documented in Splice](/docs/canton/global-synchronizer-deployment-onboarding-process) and using that for testing.
 
@@ -2144,7 +2144,7 @@ See the [Splice docs for how to setup you validator node with keys stored in a K
 
 ## Using the gRPC Ledger API
 
-Feel free to do so if you prefer using gRPC. It is functionally equivalent to the JSON Ledger API. See this [Ledger API overview](/sdks-tools/api-reference/ledger-api) for more information.
+Feel free to do so if you prefer using gRPC. It is functionally equivalent to the JSON Ledger API. See this [Ledger API overview](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for more information.
 
 ---
 

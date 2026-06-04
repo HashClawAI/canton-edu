@@ -170,11 +170,11 @@ Open your 钱包 interface to see your current CC 余额.
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="How Canton Wallets Differ" icon="code-compare" href="/集成/wallets/canton-vs-web3">
+  <Card title="How Canton Wallets Differ" icon="code-compare" href="/zh/docs/canton/integrations-wallets-canton-vs-web3">
     Understand the technical differences.
   </Card>
 
-  <Card title="Find Apps" icon="grid-2" href="/集成/apps/finding-apps">
+  <Card title="Find Apps" icon="grid-2" href="/zh/docs/canton/integrations-apps-finding-apps">
     Discover Canton 网络 应用.
   </Card>
 </CardGroup>

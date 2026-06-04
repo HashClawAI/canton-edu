@@ -87,7 +87,7 @@ We recommend to use the `MergeDelegation` contracts in a batched fashion as foll
 
 3. Run a background process that regularly performs the following steps:
 
-   > 1. Determines all users that have more than 10 `Holding` UTXOs. For example, using the DB provided by the [Participant Query Store](/appdev/deep-dives/query-with-pqs); or by reading the Holding contracts directly from the Ledger API of your validator node. The former being the more scalable option.
+   > 1. Determines all users that have more than 10 `Holding` UTXOs. For example, using the DB provided by the [Participant Query Store](/docs/canton/appdev-modules-m4-query-with-pqs); or by reading the Holding contracts directly from the Ledger API of your validator node. The former being the more scalable option.
    >
    > 2. Constructs the transfer choices to merge the extra `Holding` contracts by querying the registry API as explained in `token_standard_usage_executing_factory_choice`.
    >
@@ -128,7 +128,7 @@ These integrations patterns have recently been nicely packaged in the [Wallet SD
 
 All of these integration patterns are also demonstrated in the form of executable code as part of the [experimental command-line interface](https://github.com/canton-network/splice/tree/main/token-standard#cli) for token standard assets. The sections below explaining the patterns below thus all start with a link to the code. They then provide additional context for an implementor.
 
-All interaction works via the JSON Ledger API (see its [OpenAPI definition here](/sdks-tools/api-reference/json-api)). This OpenAPI definition is also accessible at `http(s)://${YOUR_PARTICIPANT}/docs/openapi`. We encourage developers to use OpenAPI code generation tools as opposed to manually writing HTTP requests.
+All interaction works via the JSON Ledger API (see its [OpenAPI definition here](https://docs.canton.network/sdks-tools/api-reference/json-api)). This OpenAPI definition is also accessible at `http(s)://${YOUR_PARTICIPANT}/docs/openapi`. We encourage developers to use OpenAPI code generation tools as opposed to manually writing HTTP requests.
 
 Check out the [Authentication docs](/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt) for more information on how to authenticate the requests.
 
@@ -136,9 +136,9 @@ Check out the [Authentication docs](/docs/canton/global-synchronizer-reference-s
 
 Reference code from the Token Standard CLI to [list contracts by interface](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/listContractsByInterface.ts)
 
-The Token Standard includes several interfaces that are implemented by Daml templates. To list all contracts implementing a particular interface, you have to query the participant's [active-contracts endpoint](/sdks-tools/api-reference/json-api).
+The Token Standard includes several interfaces that are implemented by Daml templates. To list all contracts implementing a particular interface, you have to query the participant's [active-contracts endpoint](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
-The `activeAtOffset` parameter can be set to the result of [the ledger-end endpoint on the participant](/sdks-tools/api-reference/json-api#ledger-end) to get the latest ACS, or an older (non-pruned) one to get the ACS at that point in time.
+The `activeAtOffset` parameter can be set to the result of [the ledger-end endpoint on the participant](https://docs.canton.network/sdks-tools/api-reference/json-api#ledger-end) to get the latest ACS, or an older (non-pruned) one to get the ACS at that point in time.
 
 To filter for a particular party and interface, it should include a `filtersByParty` with an `InterfaceFilter`:
 
@@ -181,7 +181,7 @@ The response for such a query will contain the `createdEvent` of the contract, i
 
 Example code: [Token Standard CLI's code to list transactions](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/listHoldingTransactions.ts)
 
-The participant has an [endpoint to list all transactions](/sdks-tools/api-reference/json-api) involving the provided parties and interfaces.
+The participant has an [endpoint to list all transactions](https://docs.canton.network/sdks-tools/api-reference/json-api) involving the provided parties and interfaces.
 
 To filter for a particular party and interface, it should include a `filtersByParty` with an `InterfaceFilter`:
 
@@ -282,7 +282,7 @@ The response's payload will include three relevant fields:
 * `disclosedContracts`: must be provided to the exercise of the factory's choice for it to work
 * `choiceContextData`: to be passed as `context` in the `choiceArgument`.
 
-With this data, you can execute a choice on the factory. For external parties you must call the [prepare](/sdks-tools/api-reference/json-api#interactive-submission) and [execute](/sdks-tools/api-reference/json-api#interactive-submission) endpoints of the participant. For non-external parties, you can just use the [submit-and-wait endpoint](/sdks-tools/api-reference/json-api#command-submission).
+With this data, you can execute a choice on the factory. For external parties you must call the [prepare](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) and [execute](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) endpoints of the participant. For non-external parties, you can just use the [submit-and-wait endpoint](https://docs.canton.network/sdks-tools/api-reference/json-api#command-submission).
 
 In both cases, you must include an `ExerciseCommand` in your payload with the following fields:
 
@@ -295,7 +295,7 @@ In both cases, you must include an `ExerciseCommand` in your payload with the fo
 
 Example code: [Token Standard CLI's code to accept a transfer instruction](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/acceptTransferInstruction.ts)
 
-To execute a choice on a contract implementing a Token Standard interface for external parties, you must call the [prepare](/sdks-tools/api-reference/json-api#interactive-submission) and [execute](/sdks-tools/api-reference/json-api#interactive-submission) endpoints of the participant. For non-external parties, you can just use the [submit-and-wait endpoint](/sdks-tools/api-reference/json-api#command-submission).
+To execute a choice on a contract implementing a Token Standard interface for external parties, you must call the [prepare](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) and [execute](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) endpoints of the participant. For non-external parties, you can just use the [submit-and-wait endpoint](https://docs.canton.network/sdks-tools/api-reference/json-api#command-submission).
 
 In both cases, you must include an `ExerciseCommand` in your payload with the following fields:
 
@@ -325,7 +325,7 @@ The response of these endpoints include two fields:
 
 Calling the token standard choices from custom Daml code is useful when integrating one's own app workflows with the token standard. Example workflows relevant to a wallet provider are merging of holdings for a user to keep their ACS small, doing bulk transfers, or marking a user's action as activity of the wallet app.
 
-Splice releases the optional `splice-util-token-standard-wallet.dar` file, which packages common workflows that improve the operations of a wallet app. See [splice-util-token-standard-wallet](/sdks-tools/api-reference/splice-daml/splice-util-token-standard-wallet) for the per-template reference.
+Splice releases the optional `splice-util-token-standard-wallet.dar` file, which packages common workflows that improve the operations of a wallet app. See [splice-util-token-standard-wallet](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-util-token-standard-wallet) for the per-template reference.
 
 ## API References
 
@@ -333,37 +333,37 @@ Refer to [CIP-0056](https://github.com/global-synchronizer-foundation/cips/blob/
 
 ### Token Metadata
 
-* Daml reference: [splice-api-token-metadata-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-metadata-v1)
-* OpenAPI reference: [Token Metadata Service](/reference/splice-token-metadata-service/get-registry-metadata-v1-info)
+* Daml reference: [splice-api-token-metadata-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-metadata-v1)
+* OpenAPI reference: [Token Metadata Service](https://docs.canton.network/reference/splice-token-metadata-service/get-registry-metadata-v1-info)
 
 ### Holding
 
 This allows implementation of a [Portfolio View](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#wallet-client--portfolio-view).
 
-* Daml reference: [splice-api-token-holding-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-holding-v1)
+* Daml reference: [splice-api-token-holding-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-holding-v1)
 
 ### Transfer Instruction
 
 This allows implementation of [Direct Peer-to-Peer / Free of Payment (FOP) Transfers](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#direct-peer-to-peer--free-of-payment-fop-transfer-workflow).
 
-* Daml reference: [splice-api-token-transfer-instruction-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-transfer-instruction-v1)
-* OpenAPI reference: [Transfer Instruction API](/reference/splice-transfer-instruction-api/post-registry-transfer-instruction-v1-transfer-factory)
+* Daml reference: [splice-api-token-transfer-instruction-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-transfer-instruction-v1)
+* OpenAPI reference: [Transfer Instruction API](https://docs.canton.network/reference/splice-transfer-instruction-api/post-registry-transfer-instruction-v1-transfer-factory)
 
 ### Allocation
 
 This allows implementation of [Delivery versus Payment (DVP) Transfer Workflows](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#delivery-versus-payment-dvp-transfer-workflows), jointly with the Allocation Instruction and Allocation Request APIs below.
 
-* Daml reference: [splice-api-token-allocation-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-v1)
-* OpenAPI reference: [Allocation API](/reference/splice-allocation-api/post-registry-allocations-v1-allocationid-choice-contexts-execute-transfer)
+* Daml reference: [splice-api-token-allocation-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-v1)
+* OpenAPI reference: [Allocation API](https://docs.canton.network/reference/splice-allocation-api/post-registry-allocations-v1-allocationid-choice-contexts-execute-transfer)
 
 ### Allocation Instruction
 
-* Daml reference: [splice-api-token-allocation-instruction-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-instruction-v1)
-* OpenAPI reference: [Allocation Instruction API](/reference/splice-allocation-instruction-api/post-registry-allocation-instruction-v1-allocation-factory)
+* Daml reference: [splice-api-token-allocation-instruction-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-instruction-v1)
+* OpenAPI reference: [Allocation Instruction API](https://docs.canton.network/reference/splice-allocation-instruction-api/post-registry-allocation-instruction-v1-allocation-factory)
 
 ### Allocation Request
 
-* Daml reference: [splice-api-token-allocation-request-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-request-v1)
+* Daml reference: [splice-api-token-allocation-request-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-request-v1)
 
 {/* Mintlify preview rebuild marker. */}
 

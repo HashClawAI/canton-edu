@@ -119,8 +119,8 @@ flowchart TB
 
 ## 后续步骤
 
-* [混合同步器模式](/global-synchronizer/extension-synchronizers/hybrid-同步器-pattern) — 结合公共和私有同步器
-* [Deployment](/global-synchronizer/extension-synchronizers/deployment) — 部署扩展同步器基础设施
+* [混合同步器模式](/zh/docs/canton/global-synchronizer-extension-synchronizers-hybrid-synchronizer-pattern) — 结合公共和私有同步器
+* [Deployment](https://docs.canton.network/global-synchronizer/extension-synchronizers/deployment) — 部署扩展同步器基础设施
 * [链接验证者](/zh/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync) — 多同步器验证者配置
 
 ---

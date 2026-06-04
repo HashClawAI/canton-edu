@@ -2356,7 +2356,7 @@ Submits an assignment command on behalf of `submitter` party, waits for the resu
 
 Submit assign command asynchronously.
 
-Provides access to the command submission service of the Ledger API. See the [Ledger API reference](/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
+Provides access to the command submission service of the Ledger API. See the [Ledger API reference](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
 
 **Arguments**
 
@@ -2397,7 +2397,7 @@ Submits an assignment command on behalf of `submitter` party, waits for the resu
 
 Submit command asynchronously.
 
-Provides access to the command submission service of the Ledger API. See the [Ledger API reference](/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
+Provides access to the command submission service of the Ledger API. See the [Ledger API reference](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
 
 **Arguments**
 
@@ -2462,7 +2462,7 @@ Submits an unassignment command on behalf of `submitter` party, waits for the re
 
 Submit unassign command asynchronously.
 
-Provides access to the command submission service of the Ledger API. See the [Ledger API reference](/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
+Provides access to the command submission service of the Ledger API. See the [Ledger API reference](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
 
 **Arguments**
 
@@ -2563,7 +2563,7 @@ Submits a assignment command on behalf of `submitter` party, waits for the resul
 
 Submit java codegen command asynchronously.
 
-Provides access to the command submission service of the Ledger API. See the [Ledger API reference](/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
+Provides access to the command submission service of the Ledger API. See the [Ledger API reference](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for documentation of the parameters.
 
 **Arguments**
 

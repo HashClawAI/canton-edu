@@ -168,27 +168,27 @@ As stated in the Implications for 钱包 提供方 section here, it's important 
 
 Links to the node deployment docs are below depending on the deployment choice and environment. The guidance differs very little based on the environment - different URLs and arguments etc.:
 
-* [MainNet docs](/global-同步器/deployment/onboarding-process)
-  * [Docker Compose MainNet docs](/global-同步器/deployment/validator-docker-compose)
-  * [Kubernetes MainNet docs](/global-同步器/deployment/validator-kubernetes)
+* [MainNet docs](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose MainNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes MainNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-* [TestNet docs](/global-同步器/deployment/onboarding-process)
-  * [Docker Compose TestNet docs](/global-同步器/deployment/validator-docker-compose)
-  * [Kubernetes TestNet docs](/global-同步器/deployment/validator-kubernetes)
+* [TestNet docs](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose TestNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes TestNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-* [DevNet](/global-同步器/deployment/onboarding-process)
-  * [Docker Compose DevNet docs](/global-同步器/deployment/validator-docker-compose)
-  * [Kubernetes DevNet docs](/global-同步器/deployment/validator-kubernetes)
+* [DevNet](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose DevNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes DevNet docs](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-The 钱包 集成 guide is tailored to work with a LocalNet setup ([/sdks-tools/开发-tools/localnet](/sdks-tools/开发-tools/localnet)) to make 测试 and verification easy.
+The 钱包 集成 guide is tailored to work with a LocalNet setup ([/sdks-tools/开发-tools/localnet](https://docs.canton.network/sdks-tools/开发-tools/localnet)) to make 测试 and verification easy.
 
 ## Connecting to a 同步器
 
-For onboarding a validator with the global 同步器 it is recommended to read the Splice documentation here: [/global-同步器/deployment/onboarding-process](/global-同步器/deployment/onboarding-process)
+For onboarding a validator with the global 同步器 it is recommended to read the Splice documentation here: [/global-同步器/deployment/onboarding-process](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
 
 ## Supporting Tokens and 应用
 
-To integrate and support tokens, it is recommended to use the Splice documentation here: [/global-同步器/deployment/onboarding-process](/global-同步器/deployment/onboarding-process)
+To integrate and support tokens, it is recommended to use the Splice documentation here: [/global-同步器/deployment/onboarding-process](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
 
 若你 are interested in building your own 应用, a good first place would be to utilize the CN quickstart: [https://github.com/digital-asset/cn-quickstart](https://github.com/digital-asset/cn-quickstart)
 
@@ -3926,7 +3926,7 @@ credentials: {
 
 The value for some of the audiences in localnet would have to be adjusted to match "[https://canton.网络.global](https://canton.网络.global)". This is specifically the `LEDGER_API_AUTH_AUDIENCE` & `VALIDATOR_AUTH_AUDIENCE`.
 
-When upgrading your setup from a localnet setup to a 生产 or client facing environment then it might make more sense to add proper 认证 to the ledger api and other 服务. The community contributions include okta and keycloak [OIDC](/global-同步器/deployment/oidc-提供方). These can easily be configured for the SDK using a different TokenProviderConfig. 以下 programmatic 方法 of token fetching are supported:
+When upgrading your setup from a localnet setup to a 生产 or client facing environment then it might make more sense to add proper 认证 to the ledger api and other 服务. The community contributions include okta and keycloak [OIDC](/zh/docs/canton/global-synchronizer-deployment-oidc-providers). These can easily be configured for the SDK using a different TokenProviderConfig. 以下 programmatic 方法 of token fetching are supported:
 
 > 1. \`static\`: a fixed, in-memory token. Only used for compatibility, it will totally break for expired tokens.
 > 2. \`self\_signed\`: only for 开发 purposes, used for Canton setups that accept HMAC256 self signed tokens.
@@ -4012,7 +4012,7 @@ export default async function () {
 
 # 流量
 
-Below is a high-level summary of the [同步器 流量 Fees page](/global-同步器/deployment/同步器-流量) in the Splice 验证者 documentation. 更多信息见 detail on point, it's advised to read that documentation.
+Below is a high-level summary of the [同步器 流量 Fees page](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量) in the Splice 验证者 documentation. 更多信息见 detail on point, it's advised to read that documentation.
 
 ## 流量
 
@@ -4040,11 +4040,11 @@ Below is a high-level summary of the [同步器 流量 Fees page](/global-同步
   * 你可以 buy your own 流量.
   * 你可以 sign up with a 服务 like the [Denex Gas Station](https://denex.io/gasstation) to buy your 流量.
 
-* The 验证者节点 has automation to keep 流量 topped up. As long as you keep CC in your validator party, it'll stay available. 参见 [here](/global-同步器/deployment/validator-kubernetes#configuring-automatic-流量-purchases) for how to configure automatic 流量 purchases.
+* The 验证者节点 has automation to keep 流量 topped up. As long as you keep CC in your validator party, it'll stay available. 参见 [here](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-流量-purchases) for how to configure automatic 流量 purchases.
 
 ## How to determine the 流量 cost of a 交易?
 
-Follow this [FAQ entry in the Splice documentation](/global-同步器/deployment/同步器-流量).
+Follow this [FAQ entry in the Splice documentation](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量).
 
 {/* COPIED_START source="splice-wallet-kernel:docs/wallet-integration-guide/src/tokenomics-and-奖励/index.rst" hash="08ff71a4" */}
 

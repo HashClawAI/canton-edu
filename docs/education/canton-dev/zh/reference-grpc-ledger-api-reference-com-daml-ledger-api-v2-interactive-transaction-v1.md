@@ -15,7 +15,7 @@ tags:
 
 > com.daml.ledger.api.v2.interactive.transaction.v1 的包级概述。
 
-<p class="x2mdx-ref-back"><a href="./details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-grpc-ledger-api-reference-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>

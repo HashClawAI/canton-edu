@@ -122,7 +122,7 @@ The `MultiTrade` model has more complex control flow and data handling than prev
 
 ## Building with dpm
 
-When working on Canton Network projects, use the [`dpm`](/sdks-tools/cli-tools/dpm) tool for all build operations:
+When working on Canton Network projects, use the [`dpm`](https://docs.canton.network/sdks-tools/cli-tools/dpm) tool for all build operations:
 
 * `dpm build` — Compile your Daml project and produce a DAR file
 * `dpm build --all` — Build all packages in a multi-package project

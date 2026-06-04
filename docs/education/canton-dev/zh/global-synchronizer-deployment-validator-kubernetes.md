@@ -53,7 +53,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
@@ -117,7 +117,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
@@ -165,7 +165,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证者的备份部分](/global-同步器/生产操作/验证者-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证者的备份部分](https://docs.canton.network/global-synchronizer/production-operations/验证者-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>要初始化验证者节点，您需要以下参数来定义您要加入的网络以及执行此操作所需的密钥。</p>
@@ -1159,12 +1159,12 @@ topup:
   targetThroughput: 20000
   # minTopupInterval - minimum time interval that must elapse before the next top-up
   minTopupInterval: "1m"
-```<p>每次成功充值时，验证者应用都会购买 `top-up amount` 大约 `targetThroughput * minTopupInterval` 字节的流量（具体金额可能因四舍五入而异）。 `minTopupInterval` 允许验证者操作员控制自动充值发生的上限频率。如果充值金额低于同步器范围的`minTopupAmount`（请参阅[流量参数](/global-同步器/deployment/同步器-流量#流量-parameters)），`minTopupInterval`会自动拉伸，以便在尊重配置的`targetThroughput`的同时至少购买`minTopupAmount`字节的流量。</p>
+```<p>每次成功充值时，验证者应用都会购买 `top-up amount` 大约 `targetThroughput * minTopupInterval` 字节的流量（具体金额可能因四舍五入而异）。 `minTopupInterval` 允许验证者操作员控制自动充值发生的上限频率。如果充值金额低于同步器范围的`minTopupAmount`（请参阅[流量参数](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量#流量-parameters)），`minTopupInterval`会自动拉伸，以便在尊重配置的`targetThroughput`的同时至少购买`minTopupAmount`字节的流量。</p>
 
 <p>当满足以下所有条件时，将触发下一次充值：</p>
 
 <ul>
-  <li>可用的[额外流量余额](/global-同步器/deployment/同步器-流量#流量-accounting-what-counts-as-流量)低于配置的充值金额（即低于`targetThroughput * minTopupInterval`）。</li>
+  <li>可用的[额外流量余额](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量#流量-accounting-what-counts-as-流量)低于配置的充值金额（即低于`targetThroughput * minTopupInterval`）。</li>
 
   <li>自上次充值以来至少已过去 `minTopupInterval`。</li>
 
@@ -1228,7 +1228,7 @@ topup:
 
 请注意，如果您的节点关闭时间超过了修剪窗口（在上面的示例中为 48 小时），您的节点很可能会被损坏，因为应用程序会追赶参与者尝试继续修剪的速度。因此，建议将修剪窗口设置为您在保证节点正常运行时间方面感到满意的值。将其设置为 30 天通常是一个合理的选择，因为目前Sequencer也会在 30 天后被修剪，因此在较长的停机时间后您将无法赶上网络（有关灾难恢复指南，请参阅灾难恢复）。
 
-有关参与者剪枝的更多详细信息，请参阅[剪枝指南](/global-同步器/生产操作/剪枝)。
+有关参与者剪枝的更多详细信息，请参阅[剪枝指南](https://docs.canton.network/global-synchronizer/production-operations/剪枝)。
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # To configure participant pruning uncomment the following section.

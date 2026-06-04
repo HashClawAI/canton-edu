@@ -31,7 +31,7 @@ dpm sandbox               # Start a local Sandbox node
 dpm studio                # Launch Daml Studio (VS Code)
 ```
 
-DPM 取代了旧的 `daml` CLI，并且是所有构建和项目任务的推荐入口点。有关完整命令集，请参阅 [DPM 参考](/sdks-tools/cli-tools/dpm)。
+DPM 取代了旧的 `daml` CLI，并且是所有构建和项目任务的推荐入口点。有关完整命令集，请参阅 [DPM 参考](https://docs.canton.network/sdks-tools/cli-tools/dpm)。
 
 ## Daml Studio（VS Code 扩展）
 
@@ -70,7 +70,7 @@ Sandbox 为您提供了一个带有内存分类账的本地验证器。它启动
 
 沙箱不会模拟多验证器或多方不同验证器的场景。为此，请使用 LocalNet。
 
-有关配置选项，请参阅[沙盒](/sdks-tools/development-tools/sandbox)。
+有关配置选项，请参阅[沙盒](https://docs.canton.network/sdks-tools/development-tools/sandbox)。
 
 ## LocalNet
 
@@ -83,7 +83,7 @@ make build
 make start
 ```LocalNet 提供本地同步器、多个验证器节点、具有水龙头访问的测试 Canton Coin 和 Splice 钱包。它是部署到 DevNet 之前进行集成测试、多方工作流程和端到端应用程序测试的正确环境。
 
-有关详细信息，请参阅 [LocalNet](/sdks-tools/development-tools/localnet)。
+有关详细信息，请参阅 [LocalNet](/zh/docs/canton/appdev-modules-m5-localnet-development)。
 
 ## PQS（参与者查询存储）
 
@@ -98,7 +98,7 @@ PQS 维护一个与验证器的账本状态同步的 PostgreSQL 数据库。它�
 
 PQS 尊重与 Ledger API 相同的隐私边界——它只包含您方有权查看的数据。
 
-有关架构详细信息和查询示例，请参阅 [PQS](/sdks-tools/development-tools/pqs) 和 [PQS SQL 参考](/zh/docs/canton/api-reference)。
+有关架构详细信息和查询示例，请参阅 [PQS](https://docs.canton.network/sdks-tools/development-tools/pqs) 和 [PQS SQL 参考](/zh/docs/canton/api-reference)。
 
 ## 选择正确的工具
 

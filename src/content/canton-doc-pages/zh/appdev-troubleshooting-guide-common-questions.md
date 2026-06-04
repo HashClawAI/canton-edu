@@ -33,7 +33,7 @@ Daml 模型必须用 Daml 语言编写。但是，您的应用程序的后端和
 * **JavaScript/TypeScript** 可以使用 JSON API (HTTP) 或 gRPC 客户端库。 cn-quickstart 包含一个 TypeScript 前端作为参考
 * **Python 和 Go** 可以使用从 Ledger API `.proto` 文件生成的 gRPC 客户端库
 
-还有一些语言的社区维护的绑定。请参阅[语言绑定](/sdks-tools/language-bindings/community)页面。
+还有一些语言的社区维护的绑定。请参阅[语言绑定](https://docs.canton.network/sdks-tools/language-bindings/community)页面。
 
 ### 在哪里可以找到示例代码？
 

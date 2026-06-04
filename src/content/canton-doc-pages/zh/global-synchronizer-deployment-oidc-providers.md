@@ -26,7 +26,7 @@ tags:
 
 要部署验证器节点，请使用您的首选 OIDC 提供商配置身份验证。
 本部分提供 Okta 和 Keycloak 的说明。
-有关 Auth0 说明和配置身份验证的更多详细信息，请参阅[配置身份验证](/global-同步器/deployment/installation#configuring-authentication)。
+有关 Auth0 说明和配置身份验证的更多详细信息，请参阅[配置身份验证](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose#configuring-authentication)。
 
 感谢 Stéphane Loeuillet 在[社区讨论](https://github.com/global-同步器-foundation/docs/discussions/15#discussioncomment-12877002)中提供的意见，这构成了本文档中 Okta 部分的基础。
 

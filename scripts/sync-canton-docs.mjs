@@ -10,7 +10,12 @@ import {
   summarizeBody,
 } from './lib/canton-doc-utils.mjs';
 import { translateBodyToZh } from './lib/translate-zh.mjs';
-import { buildValidSlugSet, rewriteInternalLinks } from './lib/canton-link-rewrite.mjs';
+import {
+  buildLegacyPathMap,
+  buildSlugToSourceUrl,
+  buildValidSlugSet,
+  rewriteAllLinks,
+} from './lib/canton-link-rewrite.mjs';
 
 const ROOT = process.cwd();
 const KB_DIR = path.join(ROOT, 'docs/education/canton-dev');
@@ -56,8 +61,8 @@ async function cleanLocaleDir(localeDir, keepSlugs) {
   );
 }
 
-async function writeLocaleFile(locale, doc, body, zhTitle, validSlugs) {
-  const rewritten = rewriteInternalLinks(body, { locale, base: '/', validSlugs });
+async function writeLocaleFile(locale, doc, body, zhTitle, linkCtx) {
+  const rewritten = rewriteAllLinks(body, { ...linkCtx, locale, fromSlug: doc.slug });
   const markdown = markdownPage({ doc, locale, body: rewritten, zhTitle });
   const kbPath = path.join(KB_DIR, locale, `${doc.slug}.md`);
   const pagePath = path.join(PAGE_CONTENT_DIR, locale, `${doc.slug}.md`);
@@ -88,6 +93,14 @@ async function main() {
   const indexedDocs = parseLlmsIndex(llmsText);
   const selected = dedupeBySlug(indexedDocs.map(buildDocRecord)).slice(0, limit);
   const validSlugs = new Set(selected.map((doc) => doc.slug));
+  const linkCtx = {
+    base: '/',
+    validSlugs,
+    legacyPathMap: buildLegacyPathMap(
+      selected.map((doc) => ({ locale: 'en', sourceUrl: doc.sourceUrl })),
+    ),
+    slugToSourceUrl: new Map(selected.map((doc) => [doc.slug, doc.sourceUrl])),
+  };
   const generatedAt = new Date().toISOString();
 
   await mkdir(path.join(KB_DIR, 'en'), { recursive: true });
@@ -118,7 +131,7 @@ async function main() {
     }
 
     {
-      const enMeta = await writeLocaleFile('en', doc, officialBody, undefined, validSlugs);
+      const enMeta = await writeLocaleFile('en', doc, officialBody, undefined, linkCtx);
       contentItems.push({
         slug: doc.slug,
         locale: 'en',
@@ -150,7 +163,7 @@ async function main() {
           title: doc.title,
           body: officialBody,
         });
-        const zhMeta = await writeLocaleFile('zh', doc, zhBody, zhTitle, validSlugs);
+        const zhMeta = await writeLocaleFile('zh', doc, zhBody, zhTitle, linkCtx);
         translated += cached ? 0 : 1;
         contentItems.push({
           slug: doc.slug,

@@ -178,7 +178,7 @@ Once the sandbox is running, you can interact with it through the Ledger API (gR
 
 ### When to use a local Canton Network
 
-The [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart) project includes a LocalNet configuration that runs a full Canton Network locally (participant, sequencer, mediator, and Splice applications). Use LocalNet instead of the sandbox when you need to test:
+The [CN Quickstart](/docs/canton/appdev-quickstart-index) project includes a LocalNet configuration that runs a full Canton Network locally (participant, sequencer, mediator, and Splice applications). Use LocalNet instead of the sandbox when you need to test:
 
 * Canton Coin transfers and traffic purchases
 * Wallet SDK integration

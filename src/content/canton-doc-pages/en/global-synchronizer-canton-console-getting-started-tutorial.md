@@ -22,7 +22,7 @@ tags:
 > Step-by-step tutorial for installing Canton, understanding core concepts, and running your first transactions
 
 <div className="todo">
-  change the section where we provision smart contract code: - create a new empty project - use the "Understanding IOUs" section to explain the structure of a daml contract (see [Java language bindings](/sdks-tools/language-bindings/java)) - transact on the IOU contract using curl and JSON Ledger API, not via console commands
+  change the section where we provision smart contract code: - create a new empty project - use the "Understanding IOUs" section to explain the structure of a daml contract (see [Java language bindings](https://docs.canton.network/sdks-tools/language-bindings/java)) - transact on the IOU contract using curl and JSON Ledger API, not via console commands
 </div>
 
 # Getting Started
@@ -38,7 +38,7 @@ Interested in Canton? This is the right place to start! You don't need any prere
 
 ## Installation
 
-Canton is a JVM application. To run it natively you need Java 11 or higher installed on your system. Alternatively Canton is available as a Docker image at `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`; published tags are listed on the [decentralized-canton-sync packages page](https://github.com/digital-asset/decentralized-canton-sync/pkgs/container/decentralized-canton-sync%2Fdocker%2Fcanton). See the [Version Compatibility Dashboard](/shared/version-compatibility-dashboard) for the current tag for each network.
+Canton is a JVM application. To run it natively you need Java 11 or higher installed on your system. Alternatively Canton is available as a Docker image at `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`; published tags are listed on the [decentralized-canton-sync packages page](https://github.com/digital-asset/decentralized-canton-sync/pkgs/container/decentralized-canton-sync%2Fdocker%2Fcanton). See the [Version Compatibility Dashboard](https://docs.canton.network/shared/version-compatibility-dashboard) for the current tag for each network.
 
 Canton is platform-agnostic. For development purposes, it runs on macOS, Linux, and Windows. Linux is the supported platform for production.
 
@@ -189,7 +189,7 @@ To run the protocol, the participants must connect to one or more synchronizers.
   <img src="https://mintcdn.com/cantonfoundation/53J3Euu6q0XOxgPz/global-synchronizer/canton-console/images/canton-tutorial-elements.svg?fit=max&auto=format&n=53J3Euu6q0XOxgPz&q=85&s=502780581cb91f75f8e189c11ed1883e" alt="images/canton-tutorial-elements.svg" width="1200" height="937" data-path="global-synchronizer/canton-console/images/canton-tutorial-elements.svg" />
 </figure>
 
-The Participant Nodes provide their parties with a [gRPC Ledger API](/sdks-tools/api-reference/ledger-api) as a means to access the ledger. The parties can interact with the gRPC Ledger API manually using the console, but in practice these parties use applications to handle the interactions and display the data in a user-friendly interface.
+The Participant Nodes provide their parties with a [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api) as a means to access the ledger. The parties can interact with the gRPC Ledger API manually using the console, but in practice these parties use applications to handle the interactions and display the data in a user-friendly interface.
 
 In addition to the gRPC Ledger API, each participant node also exposes an *Admin API*. The Admin API allows the administrator (that is, you) to:
 
@@ -944,7 +944,7 @@ Note that the conversion to `LfContractId` was required to pass in the IOU contr
 
 ## Your Development Choices
 
-While the `ledger_api` functions in the Console can be handy for educational purposes, the Daml SDK provides you with much more convenient tools to inspect and manipulate the ledger content: - [Daml Script](/sdks-tools/cli-tools/daml-script) for scripting - [Language bindings](/sdks-tools/language-bindings/java) to build your own applications
+While the `ledger_api` functions in the Console can be handy for educational purposes, the Daml SDK provides you with much more convenient tools to inspect and manipulate the ledger content: - [Daml Script](https://docs.canton.network/sdks-tools/cli-tools/daml-script) for scripting - [Language bindings](https://docs.canton.network/sdks-tools/language-bindings/java) to build your own applications
 
 All these tools work against the Ledger API.
 

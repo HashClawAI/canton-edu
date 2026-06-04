@@ -60,7 +60,7 @@ tags:
 
 ### 参与者身份
 
-* 用于保护 Daml 工作流程并确定 SV 的`svPartyId`，用于各种 DSO 治理流程以及接收 SV 奖励。有关 Canton 和 Daml 身份的一般信息，请参阅 [Canton 身份管理文档](/sdks-tools/api-reference/ledger-api-services#user-management-service)。
+* 用于保护 Daml 工作流程并确定 SV 的`svPartyId`，用于各种 DSO 治理流程以及接收 SV 奖励。有关 Canton 和 Daml 身份的一般信息，请参阅 [Canton 身份管理文档](https://docs.canton.network/sdks-tools/api-reference/ledger-api-services#user-management-service)。
 * 参与者身份对于多种类型的法定人数都很重要
   * 确认 Daml 交易作为 DSO 方的法定人数（>⅓ 已加入的 SV）
   * 代表 DSO 方管理域拓扑的法定人数（激活后超过⅔的已加入 SV）

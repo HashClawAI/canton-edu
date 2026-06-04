@@ -17,7 +17,7 @@ tags:
 > 读取分类帐的过滤更新流以获取指定的内容和过滤器。它根据所选的流内容返回事件类型。此外，各个事件的选择标准取决于所选的交易形式。
 - ACS delta：请求方必须是事件的利益相关者才能将其包括在内。 - 账本效应：请求方必须是事件的见证人才能将其包括在内。
 
-<p class="x2mdx-ref-back"><a href="../details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI 通道</p>
@@ -67,7 +67,7 @@ tags:
 * 账本效应：请求方必须是事件的见证人才能将其包含在内。
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-publish">
     <div class="x2mdx-ref-card-head">
       <h3>发布/v2/更新</h3>
     </div>
@@ -98,7 +98,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>订阅/v2/updates</h3>
     </div>

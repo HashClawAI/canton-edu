@@ -226,7 +226,7 @@ Operating a validator involves several cost categories:
 ### Prerequisites
 
 1. **Technical capacity**: Team capable of operating containerized services
-2. **Infrastructure**: Meet [infrastructure requirements](/global-synchronizer/understand/infrastructure-requirements)
+2. **Infrastructure**: Meet [infrastructure requirements](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 3. **Sponsorship**: Super Validator willing to sponsor
 4. **Canton Coin**: Budget for traffic fees
 
@@ -245,7 +245,7 @@ Operating a validator involves several cost categories:
     Begin deploying your validator node.
   </Card>
 
-  <Card title="Infrastructure Requirements" icon="list-check" href="/global-synchronizer/understand/infrastructure-requirements">
+  <Card title="Infrastructure Requirements" icon="list-check" href="https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements">
     Review detailed infrastructure requirements.
   </Card>
 </CardGroup>

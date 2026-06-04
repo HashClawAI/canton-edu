@@ -136,9 +136,9 @@ tags:
   >
   > 然后您可以在请求中添加额外的查询`(?limit=xyz)`限制，但结果永远不会超出服务器限制。
   >
-  > 一种替代方法是使用没有硬性限制的 [websockets API](/reference/json-api-asyncapi-reference)。
+  > 一种替代方法是使用没有硬性限制的 [websockets API](/zh/docs/canton/reference-json-api-asyncapi-reference-operations-details)。
   >
-  > 另一种选择是使用 [PQS](/appdev/deep-dives/query-with-pqs)，它可以通过 [Daml Shell](/sdks-tools/cli-tools/daml-shell#contract-summaries) 简化调试。
+  > 另一种选择是使用 [PQS](/zh/docs/canton/appdev-modules-m4-query-with-pqs)，它可以通过 [Daml Shell](https://docs.canton.network/sdks-tools/cli-tools/daml-shell#contract-summaries) 简化调试。
   >````
 
   如何创建具有多个根节点的交易？
@@ -158,12 +158,12 @@ tags:
   如何找到开发/测试/主网版本的最新 API 版本的规范？> Canton Network的能力一直在增强，因此您需要使用最新的API版本规范。 JSON API 或 gRPC API 的步骤类似。
   >
   >> * 对于 JSON API 的 OpenAPI 或 AsyncAPI 规范，请按照以下步骤操作：
-  >> * 在 [版本兼容性仪表板](/shared/version-compatibility-dashboard) 中查找网络的 SDK 版本。
+  >> * 在 [版本兼容性仪表板](https://docs.canton.network/shared/version-compatibility-dashboard) 中查找网络的 SDK 版本。
   >> * 记录Canton版本的主要和次要 semver 数字。例如，如果快照是`3.3.0-snapshot.20250827.16063.0.vdc9a8874`，则重要版本信息是`3.3`。
   >> * 前往开源 [Canton Git repo](https://github.com/digital-asset/canton)。
   >> * 通过选择显示 `main` 的下拉菜单来选择适当的发布行，以公开可用的不同分支。然后选择与上面找到的版本相同的发布线。在本例中，要选择的释放线是`release-line-3.3`。
   >> * 这是该发行版的最新代码。因此，沿着路径 `/canton/tree/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs` 到达 `openapi.yaml` 和 `asyncapi.yaml` 文件。
-  >> * JSON API 规范的另一个来源是从正在运行的 Canton 参与方节点检索它们。对此的描述位于 [验证 - 下载 OpenAPI](/sdks-tools/api-reference/json-api#configuration) 部分。规格如下：
+  >> * JSON API 规范的另一个来源是从正在运行的 Canton 参与方节点检索它们。对此的描述位于 [验证 - 下载 OpenAPI](https://docs.canton.network/sdks-tools/api-reference/json-api#configuration) 部分。规格如下：
   >> * 对于 OpenAPI：`http://<host>:<port>/docs/openapi`
   >> * 对于 AsyncAPI：`http://<host>:<port>/docs/asyncapi`
   >> * 对于 GRPC protobuf 定义，请遵循与上述相同的步骤，但将最后一步更改为：
@@ -189,7 +189,7 @@ tags:
 
   有没有广州币的开源钱包实现？
 
-  > [此处](/integrations/钱包/guidance) 有一个钱包 SDK，正在快速开发中。不过还没有 OSS UI。
+  > [此处](/zh/docs/canton/integrations-wallet-guidance) 有一个钱包 SDK，正在快速开发中。不过还没有 OSS UI。
 </div>
 
 ---

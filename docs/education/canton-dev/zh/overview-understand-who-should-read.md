@@ -68,12 +68,12 @@ tags:
 |我想... |从这里开始 |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------- |
 | 5 分钟了解 Canton | [五分钟概述](/zh/docs/canton/overview-understand-five-minute-overview) |
-|了解为什么隐私对于区块链很重要 | [Canton解决的问题](/概述/理解/问题) |
+|了解为什么隐私对于区块链很重要 | [Canton解决的问题](https://docs.canton.network/概述/understand/问题) |
 |了解 Canton 组件如何协同工作 | [架构概述](/zh/docs/canton/overview-learn-architecture) |
 |编写我的第一份智能合约 | [模块 3：Daml 智能合约](/zh/docs/canton/appdev-modules-m3-dev-environment) |
-|运行示例应用程序 | [快速入门](/appdev/快速入门) |
-|部署验证器节点 | [验证器设置](/global-synchronizer/理解/介绍) |
-|将钱包集成到我的应用程序中 | [集成概述](/集成/概述) |
+|运行示例应用程序 | [快速入门](/zh/docs/canton/appdev-quickstart-index) |
+|部署验证器节点 | [验证器设置](https://docs.canton.network/global-synchronizer/understand/介绍) |
+|将钱包集成到我的应用程序中 | [集成概述](https://docs.canton.network/integrations/概述) |
 
 ## 文档结构
 
@@ -101,11 +101,11 @@ tags:
 ## 获取帮助
 
 <CardGroup cols={2}>
-  <Card title="Community Slack" icon="slack" href="/shared/support-channels">
+  <Card title="Community Slack" icon="slack" href="https://docs.canton.network/shared/support-channels">
     加入开发者和运营商社区渠道。
   </Card>
 
-  <Card title="支持" icon="耳机" href="/shared/support-channels">
+  <Card title="支持" icon="耳机" href="https://docs.canton.network/shared/support-channels">
     请联系数字资产支持以获得企业帮助。
   </Card>
 </CardGroup>

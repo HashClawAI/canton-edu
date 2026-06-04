@@ -23,20 +23,20 @@ tags:
 
 For changes shipping in each component, see the corresponding release notes:
 
-* **Splice and the Global Synchronizer** — [Splice release notes](/docs/canton/global-synchronizer-release-notes-splice), [release history](/global-synchronizer/release-notes/release-history), [weekly patch releases](/global-synchronizer/release-notes/weekly-patch-releases)
+* **Splice and the Global Synchronizer** — [Splice release notes](/docs/canton/global-synchronizer-release-notes-splice), [release history](https://docs.canton.network/global-synchronizer/release-notes/release-history), [weekly patch releases](https://docs.canton.network/global-synchronizer/release-notes/weekly-patch-releases)
 * **Wallet SDK** — [Wallet SDK release notes](/docs/canton/integrations-release-notes-wallet-sdk)
 * **Canton and Daml SDK** — [Canton release notes](/docs/canton/global-synchronizer-release-notes-canton)
 * **CIPs** — [Canton Improvement Proposals](https://github.com/global-synchronizer-foundation/cips)
 
 ## Version compatibility
 
-<Card title="Version Compatibility Dashboard" icon="table" href="/shared/version-compatibility-dashboard">
+<Card title="Version Compatibility Dashboard" icon="table" href="https://docs.canton.network/shared/version-compatibility-dashboard">
   Compatible versions across Canton Network components.
 </Card>
 
 ## Upgrading from a previous version
 
-See [Upgrading from Previous Versions](/appdev/get-started/upgrading-from-previous-versions) for guidance on moving applications across SDK series.
+See [Upgrading from Previous Versions](/docs/canton/appdev-get-started-whats-new) for guidance on moving applications across SDK series.
 
 ## Staying current
 

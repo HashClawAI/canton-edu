@@ -23,11 +23,11 @@ tags:
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../details">gRPC API</a>
+      <a href="/zh/docs/canton/reference-grpc-ledger-api-reference-details">gRPC API</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../com-daml-ledger-api-v2-testing">v2.testing</a>
+      <a href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing">v2.testing</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 

@@ -337,7 +337,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Ledger API
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2">
     <div class="x2mdx-ref-card-head">
       <h3>v2</h3>
 
@@ -371,7 +371,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin">
     <div class="x2mdx-ref-card-head">
       <h3>v2.admin</h3>
 
@@ -405,7 +405,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive">
     <div class="x2mdx-ref-card-head">
       <h3>v2.interactive</h3>
 
@@ -439,7 +439,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-testing">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing">
     <div class="x2mdx-ref-card-head">
       <h3>v2.testing</h3>
 
@@ -477,7 +477,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Schema Packages
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive-transaction-v1">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-transaction-v1">
     <div class="x2mdx-ref-card-head">
       <h3>v2.interactive.transaction.v1</h3>
 

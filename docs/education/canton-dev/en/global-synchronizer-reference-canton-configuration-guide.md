@@ -83,12 +83,12 @@ A sample configuration file for two participant nodes and a single synchronizer 
 
 ## Configuration reference
 
-The Canton configuration file for static properties is based on [PureConfig](https://pureconfig.github.io/). PureConfig maps Scala case classes and their class structure into analogue configuration options (see e.g. the [PureConfig quick start](https://pureconfig.github.io/docs/#quick-start) for an example). Therefore, the ultimate source of truth for all available configuration options and the configuration file syntax is given by the [CantonConfig Scala reference](/reference/scala/com-digitalasset-canton-config/cantonconfig) and the related types in `com.digitalasset.canton.config`.
+The Canton configuration file for static properties is based on [PureConfig](https://pureconfig.github.io/). PureConfig maps Scala case classes and their class structure into analogue configuration options (see e.g. the [PureConfig quick start](https://pureconfig.github.io/docs/#quick-start) for an example). Therefore, the ultimate source of truth for all available configuration options and the configuration file syntax is given by the [CantonConfig Scala reference](https://docs.canton.network/reference/scala/com-digitalasset-canton-config/cantonconfig) and the related types in `com.digitalasset.canton.config`.
 
 When understanding the mapping from scaladocs to configuration, please keep in mind that:
 
 * CamelCase Scala names are mapped to lowercase-with-dashes names in configuration files, e.g. `synchronizerParameters` in the scaladocs becomes `synchronizer-parameters` in a configuration file (dash, not underscore).
-* `Option[&lt;scala-class&gt;]` means that the configuration can be specified but doesn't need to be, e.g. you can specify a JWT token via `token=token` in [RemoteParticipantConfig](/reference/scala/com-digitalasset-canton-participant-config/remoteparticipantconfig), but not specifying `token` is also valid.
+* `Option[&lt;scala-class&gt;]` means that the configuration can be specified but doesn't need to be, e.g. you can specify a JWT token via `token=token` in [RemoteParticipantConfig](https://docs.canton.network/reference/scala/com-digitalasset-canton-participant-config/remoteparticipantconfig), but not specifying `token` is also valid.
 
 ## Configuration Compatibility
 

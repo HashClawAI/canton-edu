@@ -144,9 +144,9 @@ tags:
   >
   > Then you can add an extra limit on query `(?limit=xyz)` to the request but the result will never exceed server limit.
   >
-  > One alternative is the use the [websockets APIs](/reference/json-api-asyncapi-reference) which don't have a hard limit.
+  > One alternative is the use the [websockets APIs](/docs/canton/reference-json-api-asyncapi-reference-operations-details) which don't have a hard limit.
   >
-  > Another alternative is to use the [PQS](/appdev/deep-dives/query-with-pqs) which can simplify debugging via [Daml Shell](/sdks-tools/cli-tools/daml-shell#contract-summaries).
+  > Another alternative is to use the [PQS](/docs/canton/appdev-modules-m4-query-with-pqs) which can simplify debugging via [Daml Shell](https://docs.canton.network/sdks-tools/cli-tools/daml-shell#contract-summaries).
   > ````
 
   How can I create a transaction with more than one root node?
@@ -168,12 +168,12 @@ tags:
   > The Canton Network capabilities are always being enhanced so you need to use the latest API version specification. The steps for the JSON API or gRPC API are similar.
   >
   > > * For the JSON API's OpenAPI or AsyncAPI specifications, follow these steps:
-  > >   * Find the network's SDK version in the [Version Compatibility Dashboard](/shared/version-compatibility-dashboard).
+  > >   * Find the network's SDK version in the [Version Compatibility Dashboard](https://docs.canton.network/shared/version-compatibility-dashboard).
   > >   * Record the major and minor semver digits for the Canton version. For example, if the snapshot is `3.3.0-snapshot.20250827.16063.0.vdc9a8874` then the important version information is `3.3`.
   > >   * Go to the open source [Canton Git repo](https://github.com/digital-asset/canton).
   > >   * Pick the appropriate release line by selecting the drop down that says `main` to expose the different branches that are available. Then select the release line that has the same version found above. In this example, the release line to select is `release-line-3.3`.
   > >   * This is the most up to date code for that release line. So follow the path `/canton/tree/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs` to the `openapi.yaml` and `asyncapi.yaml` files.
-  > > * Another source for the JSON API's specifications is to retrieve them from a running Canton participant node. A description of this is in the [Verification - download OpenAPI](/sdks-tools/api-reference/json-api#configuration) section. The specifications are available as:
+  > > * Another source for the JSON API's specifications is to retrieve them from a running Canton participant node. A description of this is in the [Verification - download OpenAPI](https://docs.canton.network/sdks-tools/api-reference/json-api#configuration) section. The specifications are available as:
   > >   * For OpenAPI: `http://<host>:<port>/docs/openapi`
   > >   * For AsyncAPI: `http://<host>:<port>/docs/asyncapi`
   > > * For the GRPC protobuf definitions, follow the same steps as above but change the last step to be:

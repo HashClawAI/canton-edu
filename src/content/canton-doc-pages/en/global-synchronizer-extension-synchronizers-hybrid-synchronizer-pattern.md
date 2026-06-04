@@ -124,7 +124,7 @@ participant:
 * **Traffic costs** — Transactions on the private synchronizer do not consume Canton Coin. Only transactions on the Global Synchronizer incur traffic fees.
 * **Validator overlap** — All parties involved in a contract must have their validators connected to the synchronizer where that contract is assigned. Plan your synchronizer topology accordingly.
 * **Ordering guarantees** — Each synchronizer provides its own total ordering. Cross-synchronizer transactions are synchronized by the Canton protocol but have higher latency than same-synchronizer transactions.
-* **Operational overhead** — Running a private synchronizer means operating sequencer and mediator infrastructure in addition to your validator. See the [deployment guide](/global-synchronizer/extension-synchronizers/deployment) for what this involves.
+* **Operational overhead** — Running a private synchronizer means operating sequencer and mediator infrastructure in addition to your validator. See the [deployment guide](https://docs.canton.network/global-synchronizer/extension-synchronizers/deployment) for what this involves.
 
 ---
 

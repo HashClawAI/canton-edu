@@ -163,7 +163,7 @@ flowchart LR
 在部署验证者之前，请确保您拥有：
 
 1. **赞助**：超级验证者必须赞助您的入驻
-2. **基础设施**：满足[基础设施要求](/global-synchronizer/understand/infrastructure-requirements)
+2. **基础设施**：满足[基础设施要求](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 3. **技术能力**：有能力运营容器化服务的团队
 4. **Canton Coin**：流量费用预算（测试网/主网）
 
@@ -204,7 +204,7 @@ flowchart LR
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="基础设施要求" icon="server" href="/global-synchronizer/understand/infrastructure-requirements">
+  <Card title="基础设施要求" icon="server" href="https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements">
     硬件、软件和网络要求。
   </Card>
 

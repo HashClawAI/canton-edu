@@ -9,6 +9,7 @@
     "docs:translate-canton": "node scripts/translate-canton-docs.mjs",
     "docs:apply-cursor-zh": "node scripts/apply-cursor-zh.mjs",
     "docs:rewrite-links": "node scripts/rewrite-canton-internal-links.mjs",
+    "docs:audit-links": "node scripts/audit-canton-links.mjs",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "npm run chart:build && astro build",

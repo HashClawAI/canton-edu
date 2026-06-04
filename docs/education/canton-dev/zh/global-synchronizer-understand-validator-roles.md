@@ -218,7 +218,7 @@ flowchart TB
 ### 先决条件
 
 1. **技术能力**：有能力运营容器化服务的团队
-2. **基础设施**：满足[基础设施要求](/global-synchronizer/understand/infrastructure-requirements)
+2. **基础设施**：满足[基础设施要求](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 3. **赞助**：超级验证者愿意赞助
 4. **Canton币**：流量费预算
 
@@ -237,7 +237,7 @@ flowchart TB
     开始部署您的验证者节点。
   </Card>
 
-  <Card title="基础设施要求" icon="list-check" href="/global-synchronizer/understand/infrastructure-requirements">
+  <Card title="基础设施要求" icon="list-check" href="https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements">
     查看详细的基础设施要求。
   </Card>
 </CardGroup>

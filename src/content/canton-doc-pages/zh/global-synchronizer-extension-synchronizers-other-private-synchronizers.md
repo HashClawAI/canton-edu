@@ -83,7 +83,7 @@ flowchart TB
 3. 部署验证者并将它们连接到您的同步器
 4. 在验证者上分配参与方并开始交易
 
-有关分步说明，请参阅[私有同步器部署指南](/global-synchronizer/extension-synchronizers/deployment)。
+有关分步说明，请参阅[私有同步器部署指南](https://docs.canton.network/global-synchronizer/extension-synchronizers/deployment)。
 
 ## 与全局同步器操作的差异
 

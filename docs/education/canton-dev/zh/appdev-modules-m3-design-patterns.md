@@ -17,7 +17,7 @@ tags:
 
 # 组合 choice
 
-现在将把目前所学整合为完整、安全的资产发行、管理、转移与交易 Daml 模型。本应用能力类似 [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart)。过程中还将学习：
+现在将把目前所学整合为完整、安全的资产发行、管理、转移与交易 Daml 模型。本应用能力类似 [CN Quickstart](/zh/docs/canton/appdev-quickstart-index)。过程中还将学习：
 
 * Daml 项目、包与模块
 * 交易组合
@@ -648,7 +648,7 @@ person1 `submit` do exerciseCmd pending Finalize with signer = person1
 
 # 组合 choice
 
-现在将把目前所学整合为完整、安全的资产发行、管理、转移与交易 Daml 模型。本应用能力类似 [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart)。过程中还将学习：
+现在将把目前所学整合为完整、安全的资产发行、管理、转移与交易 Daml 模型。本应用能力类似 [CN Quickstart](/zh/docs/canton/appdev-quickstart-index)。过程中还将学习：
 
 * Daml 项目、包与模块
 * 交易组合

@@ -24,7 +24,7 @@ Daml Studio 是用于编写 Daml 智能合约的主要 IDE。它是 VS Code 扩�
 ### 安装
 
 1.安装[VS Code](https://code.visualstudio.com/)版本1.87或更高版本
-2. 如果尚未安装 [DPM](/sdks-tools/cli-tools/dpm)
+2. 如果尚未安装 [DPM](https://docs.canton.network/sdks-tools/cli-tools/dpm)
 3. 从您的项目目录中，运行：
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
