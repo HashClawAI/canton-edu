@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import type { CantonDocPageEntry } from '@/lib/cantonDocPage';
-import { getCantonDoc, getCantonDocs } from '@/lib/cantonDocs';
+import { getCantonDoc, getCantonDocCategoryLabel, getCantonDocs } from '@/lib/cantonDocs';
 import type { Locale } from '@/i18n/translations';
 import { t } from '@/i18n/translations';
 
@@ -30,7 +30,7 @@ const { Content } = await render(entry);
   navCurrent="docs"
 >
   <p class="breadcrumb">
-    <a href={docsIndexHref}>{tr.docs.title}</a> / {entry.data.category}
+    <a href={docsIndexHref}>{tr.docs.title}</a> / {getCantonDocCategoryLabel(locale, entry.data.category)}
   </p>
 
   <section class="section callout doc-meta">

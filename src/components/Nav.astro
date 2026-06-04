@@ -46,14 +46,16 @@ const navItems = [
       />
     </a>
     <nav class="main-nav" aria-label={tr.lang.label}>
-      {navItems.map(({ key, href, label }) => (
-        <a
-          href={href}
-          aria-current={key === 'news' ? (isNewsActive ? 'page' : undefined) : key === 'docs' ? (isDocsActive ? 'page' : undefined) : current === key ? 'page' : undefined}
-        >
-          {label}
-        </a>
-      ))}
+      <div class="main-nav-links">
+        {navItems.map(({ key, href, label }) => (
+          <a
+            href={href}
+            aria-current={key === 'news' ? (isNewsActive ? 'page' : undefined) : key === 'docs' ? (isDocsActive ? 'page' : undefined) : current === key ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
       <LanguageSwitcher locale={locale} />
     </nav>
   </div>
