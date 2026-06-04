@@ -46,9 +46,9 @@ Use this checklist when planning and executing a migration from Ethereum to Cant
   </Accordion>
 
   <Accordion title="Set up your development environment">
-    * [ ] Install the [Daml SDK](/sdks-tools/sdks/daml-sdk)
+    * [ ] Install the [Daml SDK](https://docs.canton.network/sdks-tools/sdks/daml-sdk)
     * [ ] Install VS Code with the [Daml extension](https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml)
-    * [ ] Clone the [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart)
+    * [ ] Clone the [CN Quickstart](/docs/canton/appdev-quickstart-index)
     * [ ] Run `make setup && make build && make start` to verify your setup works
   </Accordion>
 </AccordionGroup>
@@ -293,7 +293,7 @@ Ethereum EOA private keys correspond to Canton party keys, which can live on the
     Start building with Daml.
   </Card>
 
-  <Card title="CN Quickstart" icon="rocket" href="/sdks-tools/reference-projects/cn-quickstart">
+  <Card title="CN Quickstart" icon="rocket" href="/docs/canton/appdev-quickstart-index">
     Get hands-on with a working example.
   </Card>
 </CardGroup>

@@ -23,7 +23,7 @@ tags:
 
 ## 前置条件
 
-本指南需要 Digital Asset Package Manager，安装见 [DPM](/sdks-tools/cli-tools/dpm)。
+本指南需要 Digital Asset Package Manager，安装见 [DPM](https://docs.canton.network/sdks-tools/cli-tools/dpm)。
 
 请完成 Quickstart 安装与演示教程；建议阅读开发者旅程以理解 Quickstart 如何为 CN 应用提供工具链。
 

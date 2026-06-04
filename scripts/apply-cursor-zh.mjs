@@ -1,7 +1,12 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { markdownPage, summarizeBody } from './lib/canton-doc-utils.mjs';
-import { buildValidSlugSet, rewriteInternalLinks } from './lib/canton-link-rewrite.mjs';
+import {
+  buildLegacyPathMap,
+  buildSlugToSourceUrl,
+  buildValidSlugSet,
+  rewriteAllLinks,
+} from './lib/canton-link-rewrite.mjs';
 
 const ROOT = process.cwd();
 const manifestPath = path.join(ROOT, 'docs/education/canton-dev/manifest.json');
@@ -22,7 +27,12 @@ async function main() {
   }
 
   const index = JSON.parse(await readFile(indexPath, 'utf8'));
-  const validSlugs = buildValidSlugSet(index.items);
+  const linkCtx = {
+    base: '/',
+    validSlugs: buildValidSlugSet(index.items),
+    legacyPathMap: buildLegacyPathMap(index.items),
+    slugToSourceUrl: buildSlugToSourceUrl(index.items),
+  };
   const zhBySlug = new Map(index.items.filter((item) => item.locale === 'zh').map((item) => [item.slug, item]));
   const docBySlug = new Map(manifest.documents.map((doc) => [doc.slug, doc]));
 
@@ -51,7 +61,7 @@ async function main() {
       category: doc.category,
       tags: doc.tags,
     };
-    const body = rewriteInternalLinks(payload.body, { locale: 'zh', base: '/', validSlugs });
+    const body = rewriteAllLinks(payload.body, { ...linkCtx, locale: 'zh', fromSlug: slug });
     const markdown = markdownPage({
       doc: record,
       locale: 'zh',

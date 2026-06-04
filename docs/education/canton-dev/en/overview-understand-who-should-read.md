@@ -75,7 +75,7 @@ This documentation serves multiple audiences building on or operating Canton Net
 | Learn why privacy matters for blockchain | [The Problem Canton Solves](/docs/canton/overview-understand-the-problem)        |
 | See how Canton components work together  | [Architecture Overview](/docs/canton/overview-learn-architecture)                |
 | Write my first smart contract            | [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment) |
-| Run the example application              | [QuickStart](/appdev/quickstart)                                     |
+| Run the example application              | [QuickStart](/docs/canton/appdev-quickstart-index)                                     |
 | Deploy a validator node                  | [Validator Setup](/docs/canton/global-synchronizer-understand-introduction)      |
 | Integrate a wallet into my app           | [Integrations Overview](/docs/canton/integrations-overview)                      |
 
@@ -105,11 +105,11 @@ Before diving in, you should have:
 ## Getting Help
 
 <CardGroup cols={2}>
-  <Card title="Community Slack" icon="slack" href="/shared/support-channels">
+  <Card title="Community Slack" icon="slack" href="https://docs.canton.network/shared/support-channels">
     Join the developer and operator community channels.
   </Card>
 
-  <Card title="Support" icon="headset" href="/shared/support-channels">
+  <Card title="Support" icon="headset" href="https://docs.canton.network/shared/support-channels">
     Contact Digital Asset support for enterprise assistance.
   </Card>
 </CardGroup>

@@ -61,7 +61,7 @@ tags:
 使用频道页面选择特定的 `publish` 或 `subscribe` 操作。操作页面是主要参考表面。
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./v2-commands-completions/details">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/命令/完成</h3>
     </div>
@@ -89,7 +89,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-state-active-contracts/details">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/state/active-contracts</h3>
     </div>
@@ -115,7 +115,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates/details">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/更新</h3>
     </div>
@@ -143,7 +143,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates-flats/details">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-flats-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/更新/公寓</h3>
     </div>
@@ -171,7 +171,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates-trees/details">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-trees-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/更新/树</h3>
     </div>

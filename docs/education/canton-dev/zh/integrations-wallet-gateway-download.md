@@ -71,7 +71,7 @@ This downloads and runs the latest version each time, useful for 测试 or one-o
    * **Networks**: At least one Canton 网络 with its Ledger API 端点
    * **Identity 提供方**: 认证 配置 for your networks
 
-   参见 [配置](/集成/钱包-gateway/配置) for detailed 配置 options.
+   参见 [配置](/zh/docs/canton/integrations-wallet-gateway-configuration) for detailed 配置 options.
 
 3. **启动 the Gateway**
 
@@ -163,11 +163,11 @@ This outputs a complete JSON Schema that can be used for validation and IDE auto
 
 ## 下一步
 
-* 读取 [配置](/集成/钱包-gateway/配置) to understand all 配置 options
-* Explore the [APIs](/集成/钱包-gateway/apis) to understand how to interact with the Gateway
-* Learn about [Signing 提供方](/集成/钱包-gateway/signing-提供方) to configure 交易 signing
+* 读取 [配置](/zh/docs/canton/integrations-wallet-gateway-configuration) to understand all 配置 options
+* Explore the [APIs](/zh/docs/canton/integrations-wallet-gateway-apis) to understand how to interact with the Gateway
+* Learn about [Signing 提供方](https://docs.canton.network/integrations/wallet-gateway/signing-提供方) to configure 交易 signing
 * 检查 out the [Deployment](https://github.com/canton-网络/钱包-gateway/blob/82ec39c9/docs/dapp-building/钱包-gateway/deployment/index.md) guide to host the Gateway with Docker or Helm
-* 检查 [Troubleshooting](/集成/钱包-gateway/troubleshooting) if you encounter any issues
+* 检查 [Troubleshooting](/zh/docs/canton/integrations-wallet-gateway-troubleshooting) if you encounter any issues
 
 ---
 

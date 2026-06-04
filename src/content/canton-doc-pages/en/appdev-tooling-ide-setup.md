@@ -30,7 +30,7 @@ Daml Studio is the primary IDE for writing Daml smart contracts. It is a VS Code
 ### Installation
 
 1. Install [VS Code](https://code.visualstudio.com/) version 1.87 or later
-2. Install [DPM](/sdks-tools/cli-tools/dpm) if you have not already
+2. Install [DPM](https://docs.canton.network/sdks-tools/cli-tools/dpm) if you have not already
 3. From your project directory, run:
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}

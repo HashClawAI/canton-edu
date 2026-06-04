@@ -22,10 +22,10 @@ the 交易 to execute withdrawals or accept multi-step deposits.
 As also explained in that section, the 网络 provides 奖励 that can be used to fund 流量.
 
 另请注意 that every 验证者节点 has an associated **validator operator party** that represents
-that 验证者节点's administrator ([docs](/global-同步器/deployment/validator-docker-compose#deployment)).
+that 验证者节点's administrator ([docs](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose#deployment)).
 The 验证者节点 automatically mints 奖励 for that party.
 It can further be configured to
-[automatically purchase 流量](/global-同步器/deployment/validator-kubernetes#configuring-automatic-流量-purchases)
+[automatically purchase 流量](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-流量-purchases)
 using that party's CC 余额, which includes the minted 奖励.
 
 We 因此 recommend the following setup as a starting point to mint
@@ -34,13 +34,13 @@ We 因此 recommend the following setup as a starting point to mint
 1. Use the validator operator party as your featured `exchangeParty（交易所 Party）`.
    Follow [exchange-party-setup](#setup-the-featured-exchange-party) to get it featured.
 2. [treasury-party-setup](#setup-the-treasury-party) to create a `treasuryParty（金库 Party）` with a 转账预批准（TransferPreapproval） managed by your `exchangeParty（交易所 Party）`.
-3. Setup [automatic 流量 purchases in the validator app](/global-同步器/deployment/validator-kubernetes#configuring-automatic-流量-purchases).
-4. 可选: setup [auto-sweep](/global-同步器/deployment/validator-kubernetes#configuring-sweeps-and-auto-accepts-of-transfer-offers) from the `exchangParty` to your `treasuryParty（金库 Party）` to limit the funds managed directly by the 验证者节点.
+3. Setup [automatic 流量 purchases in the validator app](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-流量-purchases).
+4. 可选: setup [auto-sweep](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-sweeps-and-auto-accepts-of-transfer-offers) from the `exchangParty` to your `treasuryParty（金库 Party）` to limit the funds managed directly by the 验证者节点.
 
 As a starting point for the automatic 流量 purchase 配置, set `targetThroughput` to 2kB/s
 and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds.
 Please test this with your expected 流量 pattern and adjust as needed.
-See this [FAQ to measure the 流量 spent on an individual 交易](/global-同步器/faq#how-do-i-determine-the-流量-used-for-a-specific-交易).
+See this [FAQ to measure the 流量 spent on an individual 交易](/zh/docs/canton/global-synchronizer-faq#how-do-i-determine-the-流量-used-for-a-specific-交易).
 
 ## 设置交易所 Party
 
@@ -48,12 +48,12 @@ See this [FAQ to measure the 流量 spent on an individual 交易](/global-同�
 
 As explained above in [reward-minting-and-流量-funding](#reward-minting-and-流量-funding), we recommend to use the validator operator party
 as your featured `exchangeParty（交易所 Party）`. This party is automatically created when you
-[deploy your 验证者节点](/global-同步器/deployment/validator-docker-compose#deployment).
+[deploy your 验证者节点](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose#deployment).
 Thus the only setup step is to get it featured by the SVs:
 
 **On DevNet**, you can self-feature your validator operator party as follows:
 
-1. [Log into the 钱包 UI for the validator 用户](/global-同步器/deployment/validator-kubernetes#logging-into-the-钱包-ui), which presents itself as in this screenshot:
+1. [Log into the 钱包 UI for the validator 用户](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-钱包-ui), which presents itself as in this screenshot:
 
    <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/exchange-integration/wallet_ui.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=4b058b9539d00bf9985434af3c2d005f" alt="image" width="2260" height="523" data-path="images/exchange-integration/wallet_ui.png" />
 
@@ -67,7 +67,7 @@ That's all. Continue with [setting up your treasury party](#setup-the-treasury-p
 
 **On MainNet**, apply for featured status for your validator operator party as follows:
 
-1. [Log into the 钱包 UI for the validator 用户](/global-同步器/deployment/validator-kubernetes#logging-into-the-钱包-ui) on your MainNet 验证者节点.
+1. [Log into the 钱包 UI for the validator 用户](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-钱包-ui) on your MainNet 验证者节点.
 2. Copy the party-id of your validator operator party using the copy button right of the abbreviated `"google-oaut.."` party name in the screenshot above.
 3. Apply for featured 应用 status using this link: [https://sync.global/featured-app-请求/](https://sync.global/featured-app-请求/)
 
@@ -110,7 +110,7 @@ Setup the `treasuryParty（金库 Party）` as follows with a 转账预批准（
 ## 设置 Ledger API 用户
 
 Clients need to
-[authenticate as a Ledger API 用户](/global-同步器/deployment/identity-management#用户-identity-management)
+[authenticate as a Ledger API 用户](/zh/docs/canton/global-synchronizer-deployment-identity-management#用户-identity-management)
 to access the Ledger API of your Exchange 验证者 Node.
 你可以 manage Ledger API 用户 and their rights using the
 `/v2/用户/...` [端点 of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
@@ -118,14 +118,14 @@ to access the Ledger API of your Exchange 验证者 Node.
 你将 need to authenticate as an existing 用户 that has `participant_admin` rights
 to create additional 用户 and grant rights.
 One option is to authenticate as the `ledger-api-用户` that you
-[configured when setting up 认证 for your 验证者节点](/global-同步器/deployment/validator-kubernetes#oidc-提供方-requirements).
+[configured when setting up 认证 for your 验证者节点](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#oidc-providers-requirements).
 Another option is to
-[log-in to your Splice 钱包 UI for the validator operatory party](/global-同步器/deployment/validator-kubernetes#logging-into-the-钱包-ui)
+[log-in to your Splice 钱包 UI for the validator operatory party](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-钱包-ui)
 and use the JWT token used by the UI.
 
 我们建议 that you setup one 用户 per 服务 that needs to access the Ledger API.
 This way you can easily manage permissions and access rights for each 服务 independently.
-The [rights](/global-同步器/deployment/identity-management#manage-用户)
+The [rights](/zh/docs/canton/global-synchronizer-deployment-identity-management#manage-用户)
 required by the 集成 组件 are as follows:
 
 | 组件                                                                                      | 必需 Rights                                   | 用途                                                                                                                                                                                         |
@@ -146,7 +146,7 @@ withdrawals and deposits for those tokens.
 The `.dar` files for Canton Coin（CC） are managed by the 验证者 Node itself.
 The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` 端点 of the
 [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316).
-See this [how-to guide](/appdev/deep-dives/manage-daml-packages)
+See this [how-to guide](/zh/docs/canton/appdev-modules-m5-manage-daml-packages)
 for more information.
 
 <警告 title="重要">
@@ -156,9 +156,9 @@ for more information.
 ## 监控
 
 参见 Splice documentation for guidance on
-[how to monitor your 验证者节点](/global-同步器/生产-operations/splice-metrics-overview).
+[how to monitor your 验证者节点](/zh/docs/canton/global-synchronizer-production-operations-splice-metrics-overview).
 Note in particular that it includes
-[Grafana dashboards](/global-同步器/生产-operations/splice-metrics-overview#grafana-dashboards)
+[Grafana dashboards](/zh/docs/canton/global-synchronizer-production-operations-splice-metrics-overview#grafana-dashboards)
 for 监控 the 流量 usage, balances of local Party (e.g., the `exchangeParty（交易所 Party）`).
 
 ## Splice 主版本升级上线
@@ -203,12 +203,12 @@ From an 集成 perspective, there are a few things to keep in mind:
 4. 停止 your Tx History Ingestion 组件.
 5. Upgrade your validator and connect it to the new 同步器.
 6. Follow the shortened version below of the
-   [procedure for restoring a 验证者节点 from a 备份](/global-同步器/生产-operations/validator-disaster-recovery)
+   [procedure for restoring a 验证者节点 from a 备份](/zh/docs/canton/global-synchronizer-production-operations-validator-disaster-recovery)
    to determine the 偏移 from which to restart your Tx History Ingestion:
 
    1. Retrieve the `synchronizerId` of the last ingested 交易 from the Canton 集成 DB.
 
-   2. Log into the [Canton Console of your 验证者节点](/global-同步器/canton-console/console-overview) and query the 偏移 `offRecovery` assigned to the ACS import 交易 at time `0001-01-01T00:00:00.000000Z` using
+   2. Log into the [Canton Console of your 验证者节点](/zh/docs/canton/global-synchronizer-canton-console-console-overview) and query the 偏移 `offRecovery` assigned to the ACS import 交易 at time `0001-01-01T00:00:00.000000Z` using
 
       ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
       def parseTimestamp(t: String) = {

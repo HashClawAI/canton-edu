@@ -16,7 +16,7 @@ tags:
 
 > 返回活动合约的快照流以及分类帐偏移处的不完整（未）分配。一旦 GetActiveContractsResponses 流完成，客户端应该开始从更新服务流式传输更新，从该请求中指定的 GetActiveContractsRequest.active_at_offset 开始。客户不应该假设他们收到的一组活跃合约反映了账本端的状态。
 
-<p class="x2mdx-ref-back"><a href="../details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI 通道</p>
@@ -65,7 +65,7 @@ tags:
 客户不应该假设他们收到的一组活跃合约反映了账本端的状态。
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-publish">
     <div class="x2mdx-ref-card-head">
       <h3>发布/v2/state/active-contracts</h3>
     </div>
@@ -96,7 +96,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>订阅 /v2/state/active-contracts</h3>
     </div>

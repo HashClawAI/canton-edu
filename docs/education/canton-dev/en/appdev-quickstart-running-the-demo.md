@@ -203,7 +203,7 @@ To make payment, navigate to the Canton Wallet at [http://wallet.localhost:2000/
 
 You can find the wallet's location by:
 
-1. Reading the [LocalNet Application UIs reference](/sdks-tools/development-tools/localnet#application-uis).
+1. Reading the [LocalNet Application UIs reference](/docs/canton/appdev-modules-m5-localnet-development#application-uis).
 2. Navigating to the App Provider's "Tenants" menu.
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/app-provider-tenants.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=977310daf3ed1412cc3486604d2af9db" alt="AppProvider Tenants menu" width="2576" height="1036" data-path="images/docs_website/app-provider-tenants.png" />

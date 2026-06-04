@@ -124,8 +124,8 @@ await sdk.connectTopology(
 
 ## 下一步
 
-* [钱包 SDK 下载](/集成/钱包/sdk-download) — 安装 instructions
-* [钱包 集成 Guidance](/集成/钱包/guidance) — Signing 交易 from dApps
+* [钱包 SDK 下载](/zh/docs/canton/integrations-wallet-sdk-download) — 安装 instructions
+* [钱包 集成 Guidance](/zh/docs/canton/integrations-wallet-guidance) — Signing 交易 from dApps
 
 ---
 

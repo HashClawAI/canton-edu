@@ -19,7 +19,7 @@ tags:
 
 ## 连接后端
 
-cn-quickstart 中前端不直接连接 Ledger API——所有账本交互经后端 REST 端点。Canton 提供 [JSON API](/sdks-tools/api-reference/json-api) 供前端直接访问账本，但 cn-quickstart 架构为关注点分离将所有流量路由经后端。
+cn-quickstart 中前端不直接连接 Ledger API——所有账本交互经后端 REST 端点。Canton 提供 [JSON API](https://docs.canton.network/sdks-tools/api-reference/json-api) 供前端直接访问账本，但 cn-quickstart 架构为关注点分离将所有流量路由经后端。
 
 API 客户端在 [`api.ts`](https://github.com/digital-asset/cn-quickstart/blob/main/quickstart/frontend/src/api.ts) 中用 `openapi-client-axios` 配置，读取 OpenAPI schema 并生成类型化 HTTP 客户端：
 
@@ -72,7 +72,7 @@ dpm codegen-js <DAR-FILES> -o <DIR>
 是否使用 DAR 生成类型取决于架构：
 
 * **完全中介**（cn-quickstart 默认）— 前端使用后端 REST schema 的 OpenAPI 生成类型。前端不需要 Daml 生成的 TypeScript 类型，因后端在账本概念与 REST DTO 间翻译。
-* **经 JSON API 直接访问账本** — 前端通过 [JSON API](/sdks-tools/api-reference/json-api) 用 Daml 生成的 TypeScript 绑定提交命令。与账本集成更紧，但需前端处理 party ID、contract ID 与命令提交。
+* **经 JSON API 直接访问账本** — 前端通过 [JSON API](https://docs.canton.network/sdks-tools/api-reference/json-api) 用 Daml 生成的 TypeScript 绑定提交命令。与账本集成更紧，但需前端处理 party ID、contract ID 与命令提交。
 
 多数应用完全中介更简单。JSON API 方式适合希望薄后端或无后端的场景。
 

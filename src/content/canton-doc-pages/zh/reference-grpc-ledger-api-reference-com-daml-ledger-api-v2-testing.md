@@ -15,7 +15,7 @@ tags:
 
 > com.daml.ledger.api.v2.testing 的包级概述。
 
-<p class="x2mdx-ref-back"><a href="./details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-grpc-ledger-api-reference-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>
@@ -105,7 +105,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-testing/timeservice/gettime">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing-timeservice-gettime">
     <div class="x2mdx-ref-card-head">
       <h3>TimeService.GetTime</h3>
 
@@ -139,7 +139,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-testing/timeservice/settime">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing-timeservice-settime">
     <div class="x2mdx-ref-card-head">
       <h3>TimeService.SetTime</h3>
 

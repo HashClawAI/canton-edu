@@ -79,12 +79,12 @@ Canton 运行的不是一个节点，而是任意数量的节点，无论是同�
 
 ## 配置参考
 
-静态属性的 Canton 配置文件基于 [PureConfig](https://pureconfig.github.io/)。 PureConfig 将 Scala 案例类及其类结构映射到模拟配置选项（例如，请参阅 [PureConfig 快速入门](https://pureconfig.github.io/docs/#quick-start) 的示例）。因此，所有可用配置选项和配置文件语法的最终真实来源由 [CantonConfig Scala 参考](/reference/scala/com-digitalasset-canton-config/cantonconfig) 和 `com.digitalasset.canton.config` 中的相关类型给出。
+静态属性的 Canton 配置文件基于 [PureConfig](https://pureconfig.github.io/)。 PureConfig 将 Scala 案例类及其类结构映射到模拟配置选项（例如，请参阅 [PureConfig 快速入门](https://pureconfig.github.io/docs/#quick-start) 的示例）。因此，所有可用配置选项和配置文件语法的最终真实来源由 [CantonConfig Scala 参考](https://docs.canton.network/reference/scala/com-digitalasset-canton-config/cantonconfig) 和 `com.digitalasset.canton.config` 中的相关类型给出。
 
 在理解从 scaladocs 到配置的映射时，请记住：
 
 * CamelCase Scala 名称映射为配置文件中带破折号的小写名称，例如scaladocs 中的`同步器Parameters` 变成配置文件中的`同步器-parameters`（破折号，而不是下划线）。
-* `Option[<scala-class>]` 表示配置可以指定但不需要指定，例如您可以通过 [Remote参与方Config](/reference/scala/com-digitalasset-canton-参与方-config/remote参与方config) 中的 `token=token` 指定 JWT 令牌，但不指定 `token` 也是有效的。
+* `Option[<scala-class>]` 表示配置可以指定但不需要指定，例如您可以通过 [Remote参与方Config](https://docs.canton.network/reference/scala/com-digitalasset-canton-participant-config/remoteparticipantconfig) 中的 `token=token` 指定 JWT 令牌，但不指定 `token` 也是有效的。
 
 ## 配置兼容性企业版配置文件扩展了社区配置。因此，任何社区配置都可以使用企业二进制文件运行，但并非每个企业配置文件也可以使用社区版本。
 

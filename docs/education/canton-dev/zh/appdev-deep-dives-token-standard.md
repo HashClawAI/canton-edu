@@ -81,7 +81,7 @@ tags:
 
 3. 运行定期执行以下步骤的后台进程：
 
-   > 1. 找出拥有超过 10 个 `Holding` UTXO 的用户。例如通过 [Participant Query Store](/appdev/deep-dives/query-with-pqs) 提供的数据库；或直接从验证者 Ledger API 读取 Holding 合约（前者更可扩展）。
+   > 1. 找出拥有超过 10 个 `Holding` UTXO 的用户。例如通过 [Participant Query Store](/zh/docs/canton/appdev-modules-m4-query-with-pqs) 提供的数据库；或直接从验证者 Ledger API 读取 Holding 合约（前者更可扩展）。
    >
    > 2. 按 `token_standard_usage_executing_factory_choice` 中的说明查询 registry API，构造合并多余 `Holding` 合约的转账 choice。
    >
@@ -122,7 +122,7 @@ tags:
 
 上述模式在 [代币标准 CLI 实验命令行](https://github.com/canton-network/splice/tree/main/token-standard#cli) 中也有可执行示例。下文各节先链接代码，再补充实现背景。
 
-所有交互均通过 JSON Ledger API（[OpenAPI 定义](/sdks-tools/api-reference/json-api)）。该定义也可在 `http(s)://${YOUR_PARTICIPANT}/docs/openapi` 访问。建议使用 OpenAPI 代码生成工具，而非手写 HTTP 请求。
+所有交互均通过 JSON Ledger API（[OpenAPI 定义](https://docs.canton.network/sdks-tools/api-reference/json-api)）。该定义也可在 `http(s)://${YOUR_PARTICIPANT}/docs/openapi` 访问。建议使用 OpenAPI 代码生成工具，而非手写 HTTP 请求。
 
 认证请参阅[认证文档](/zh/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt)。
 
@@ -130,9 +130,9 @@ tags:
 
 参考代码：[Token Standard CLI 按接口列出合约](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/listContractsByInterface.ts)
 
-代币标准包含多个由 Daml 模板实现的接口。要列出实现某接口的全部合约，需查询 participant 的[活跃合约端点](/sdks-tools/api-reference/json-api)。
+代币标准包含多个由 Daml 模板实现的接口。要列出实现某接口的全部合约，需查询 participant 的[活跃合约端点](https://docs.canton.network/sdks-tools/api-reference/json-api)。
 
-`activeAtOffset` 可设为 participant [ledger-end 端点](/sdks-tools/api-reference/json-api#ledger-end) 的结果以获取最新 ACS，或使用更早（未修剪）的 offset 获取该时刻 ACS。
+`activeAtOffset` 可设为 participant [ledger-end 端点](https://docs.canton.network/sdks-tools/api-reference/json-api#ledger-end) 的结果以获取最新 ACS，或使用更早（未修剪）的 offset 获取该时刻 ACS。
 
 按 Party 与接口过滤时，`filtersByParty` 应包含 `InterfaceFilter`：
 
@@ -175,7 +175,7 @@ tags:
 
 示例代码：[Token Standard CLI 列出交易](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/listHoldingTransactions.ts)
 
-participant 提供[列出交易端点](/sdks-tools/api-reference/json-api)，包含所提供 Party 与接口相关的全部交易。
+participant 提供[列出交易端点](https://docs.canton.network/sdks-tools/api-reference/json-api)，包含所提供 Party 与接口相关的全部交易。
 
 过滤方式与上节相同，`filtersByParty` 含 `InterfaceFilter`：
 
@@ -276,7 +276,7 @@ registry 在对应端点返回相关 factory：
 * `disclosedContracts`：行使 factory choice 时必须提供
 * `choiceContextData`：作为 `choiceArgument` 中的 `context` 传入
 
-据此可在 factory 上执行 choice。对外部 Party 须调用 participant 的 [prepare](/sdks-tools/api-reference/json-api#interactive-submission) 与 [execute](/sdks-tools/api-reference/json-api#interactive-submission) 端点；非外部 Party 可使用 [submit-and-wait](/sdks-tools/api-reference/json-api#command-submission)。
+据此可在 factory 上执行 choice。对外部 Party 须调用 participant 的 [prepare](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) 与 [execute](https://docs.canton.network/sdks-tools/api-reference/json-api#interactive-submission) 端点；非外部 Party 可使用 [submit-and-wait](https://docs.canton.network/sdks-tools/api-reference/json-api#command-submission)。
 
 两种情况下 payload 均须包含 `ExerciseCommand`，字段包括：
 
@@ -317,7 +317,7 @@ registry 在对应端点返回相关 factory：
 
 在自定义 Daml 中调用代币标准 choice 有助于将自有应用流程与代币标准集成。对钱包提供方，相关流程包括合并用户持仓以控制 ACS 规模、批量转账，或将用户操作标记为钱包应用活动。
 
-Splice 发布可选的 `splice-util-token-standard-wallet.dar`，封装常见钱包运维流程。见 [splice-util-token-standard-wallet](/sdks-tools/api-reference/splice-daml/splice-util-token-standard-wallet) 各模板参考。
+Splice 发布可选的 `splice-util-token-standard-wallet.dar`，封装常见钱包运维流程。见 [splice-util-token-standard-wallet](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-util-token-standard-wallet) 各模板参考。
 
 ## API 参考
 
@@ -325,37 +325,37 @@ Splice 发布可选的 `splice-util-token-standard-wallet.dar`，封装常见钱
 
 ### 代币元数据
 
-* Daml 参考：[splice-api-token-metadata-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-metadata-v1)
-* OpenAPI：[Token Metadata Service](/reference/splice-token-metadata-service/get-registry-metadata-v1-info)
+* Daml 参考：[splice-api-token-metadata-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-metadata-v1)
+* OpenAPI：[Token Metadata Service](https://docs.canton.network/reference/splice-token-metadata-service/get-registry-metadata-v1-info)
 
 ### Holding
 
 用于实现 [Portfolio View](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#wallet-client--portfolio-view)。
 
-* Daml 参考：[splice-api-token-holding-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-holding-v1)
+* Daml 参考：[splice-api-token-holding-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-holding-v1)
 
 ### Transfer Instruction
 
 用于实现 [点对点直接 / 货银对付（FOP）转账](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#direct-peer-to-peer--free-of-payment-fop-transfer-workflow)。
 
-* Daml 参考：[splice-api-token-transfer-instruction-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-transfer-instruction-v1)
-* OpenAPI：[Transfer Instruction API](/reference/splice-transfer-instruction-api/post-registry-transfer-instruction-v1-transfer-factory)
+* Daml 参考：[splice-api-token-transfer-instruction-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-transfer-instruction-v1)
+* OpenAPI：[Transfer Instruction API](https://docs.canton.network/reference/splice-transfer-instruction-api/post-registry-transfer-instruction-v1-transfer-factory)
 
 ### Allocation
 
 与下文 Allocation Instruction、Allocation Request API 共同实现 [券款对付（DVP）工作流](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md#delivery-versus-payment-dvp-transfer-workflows)。
 
-* Daml 参考：[splice-api-token-allocation-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-v1)
-* OpenAPI：[Allocation API](/reference/splice-allocation-api/post-registry-allocations-v1-allocationid-choice-contexts-execute-transfer)
+* Daml 参考：[splice-api-token-allocation-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-v1)
+* OpenAPI：[Allocation API](https://docs.canton.network/reference/splice-allocation-api/post-registry-allocations-v1-allocationid-choice-contexts-execute-transfer)
 
 ### Allocation Instruction
 
-* Daml 参考：[splice-api-token-allocation-instruction-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-instruction-v1)
-* OpenAPI：[Allocation Instruction API](/reference/splice-allocation-instruction-api/post-registry-allocation-instruction-v1-allocation-factory)
+* Daml 参考：[splice-api-token-allocation-instruction-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-instruction-v1)
+* OpenAPI：[Allocation Instruction API](https://docs.canton.network/reference/splice-allocation-instruction-api/post-registry-allocation-instruction-v1-allocation-factory)
 
 ### Allocation Request
 
-* Daml 参考：[splice-api-token-allocation-request-v1](/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-request-v1)
+* Daml 参考：[splice-api-token-allocation-request-v1](https://docs.canton.network/sdks-tools/api-reference/splice-daml/splice-api-token-allocation-request-v1)
 
 ---
 

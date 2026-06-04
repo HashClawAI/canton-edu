@@ -21,7 +21,7 @@ tags:
 
 > Package-level overview for com.daml.ledger.api.v2.testing.
 
-<p class="x2mdx-ref-back"><a href="./details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-grpc-ledger-api-reference-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>
@@ -111,7 +111,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-testing/timeservice/gettime">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing-timeservice-gettime">
     <div class="x2mdx-ref-card-head">
       <h3>TimeService.GetTime</h3>
 
@@ -147,7 +147,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-testing/timeservice/settime">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-testing-timeservice-settime">
     <div class="x2mdx-ref-card-head">
       <h3>TimeService.SetTime</h3>
 

@@ -24,27 +24,27 @@ The API Reference covers every programmatic interface to Canton - review endpoin
     Generated reference for Canton's Ledger API across 5 gRPC packages - review services, request/response schemas, and version history for commands, updates, and more.
   </Card>
 
-  <Card title="TypeScript" icon="bookmark" href="/reference/typescript">
+  <Card title="TypeScript" icon="bookmark" href="https://docs.canton.network/reference/typescript">
     Generated reference for Daml TypeScript types plus the Wallet SDK and dApp SDK client libraries.
   </Card>
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Daml Standard Library" icon="bookmark" href="appdev/reference/daml-standard-library/da-action">
+  <Card title="Daml Standard Library" icon="bookmark" href="/docs/canton/appdev-reference-daml-standard-library-da-action">
     Generated module reference for the Daml stdlib - covers core modules and more.
   </Card>
 
-  <Card title="dApp API" icon="bookmark" href="reference/wallet-gateway-json-rpc/specs/dapp-api">
+  <Card title="dApp API" icon="bookmark" href="https://docs.canton.network/reference/wallet-gateway-json-rpc/specs/dapp-api">
     An OpenRPC specification for the dApp to interact with a Wallet Provider.
   </Card>
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Wallet Gateway" icon="bookmark" href="/reference/wallet-gateway-json-rpc/specs/user-api">
+  <Card title="Wallet Gateway" icon="bookmark" href="https://docs.canton.network/reference/wallet-gateway-json-rpc/specs/user-api">
     Versioned OpenRPC reference - use this to integrate wallets and dApps with the Splice Wallet Gateway.
   </Card>
 
-  <Card title="Splice APIs" icon="bookmark" href="/reference/splice-scan-api/common/readyz">
+  <Card title="Splice APIs" icon="bookmark" href="https://docs.canton.network/reference/splice-scan-api/common/readyz">
     Developing with Canton Network's OpenAPI endpoints for: Canton Coin data, name service, token standard, and more.
   </Card>
 </Columns>

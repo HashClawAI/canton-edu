@@ -29,11 +29,11 @@ tags:
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../../index">Protobuf</a>
+      <a href="/docs/canton/reference-protobuf-index">Protobuf</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../../packages/com-daml-ledger-api-v2-admin">com.daml.ledger.api.v2.admin</a>
+      <a href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2-admin">com.daml.ledger.api.v2.admin</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 

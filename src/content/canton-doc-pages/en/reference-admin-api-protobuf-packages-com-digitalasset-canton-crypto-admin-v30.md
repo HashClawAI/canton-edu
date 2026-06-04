@@ -22,7 +22,7 @@ tags:
 
 > Package-level overview for com.digitalasset.canton.crypto.admin.v30.
 
-<p class="x2mdx-ref-back"><a href="../index">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-admin-api-protobuf-index">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>
@@ -112,7 +112,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/deletekeypair">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-deletekeypair">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.DeleteKeyPair</h3>
 
@@ -148,7 +148,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/exportkeypair">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-exportkeypair">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.ExportKeyPair</h3>
 
@@ -184,7 +184,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/generateencryptionkey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-generateencryptionkey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.GenerateEncryptionKey</h3>
 
@@ -220,7 +220,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/generatesigningkey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-generatesigningkey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.GenerateSigningKey</h3>
 
@@ -256,7 +256,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/getwrapperkeyid">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-getwrapperkeyid">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.GetWrapperKeyId</h3>
 
@@ -292,7 +292,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/importkeypair">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-importkeypair">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.ImportKeyPair</h3>
 
@@ -328,7 +328,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/importpublickey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-importpublickey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.ImportPublicKey</h3>
 
@@ -364,7 +364,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/listmykeys">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-listmykeys">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.ListMyKeys</h3>
 
@@ -400,7 +400,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/listpublickeys">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-listpublickeys">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.ListPublicKeys</h3>
 
@@ -436,7 +436,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/registerkmsencryptionkey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-registerkmsencryptionkey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.RegisterKmsEncryptionKey</h3>
 
@@ -472,7 +472,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/registerkmssigningkey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-registerkmssigningkey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.RegisterKmsSigningKey</h3>
 
@@ -508,7 +508,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-crypto-admin-v30/vaultservice/rotatewrapperkey">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-crypto-admin-v30-vaultservice-rotatewrapperkey">
     <div class="x2mdx-ref-card-head">
       <h3>VaultService.RotateWrapperKey</h3>
 

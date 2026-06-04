@@ -22,7 +22,7 @@ tags:
 
 > Returns a stream of the snapshot of the active contracts and incomplete (un)assignments at a ledger offset. Once the stream of GetActiveContractsResponses completes, the client SHOULD begin streaming updates from the update service, starting at the GetActiveContractsRequest.active_at_offset specified in this request. Clients SHOULD NOT assume that the set of active contracts they receive reflects the state at the ledger end.
 
-<p class="x2mdx-ref-back"><a href="../details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-json-api-asyncapi-reference-operations-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI Channel</p>
@@ -71,7 +71,7 @@ starting at the GetActiveContractsRequest.active\_at\_offset specified in this r
 Clients SHOULD NOT assume that the set of active contracts they receive reflects the state at the ledger end.
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-publish">
     <div class="x2mdx-ref-card-head">
       <h3>publish /v2/state/active-contracts</h3>
     </div>
@@ -104,7 +104,7 @@ Clients SHOULD NOT assume that the set of active contracts they receive reflects
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>subscribe /v2/state/active-contracts</h3>
     </div>

@@ -34,7 +34,7 @@ This page is generated from supplied local Javadoc jars.
 
 | Details        | Artifact                 | Language | Versions                       | Symbols | Introduced | Deprecated | Removed |
 | -------------- | ------------------------ | -------- | ------------------------------ | ------- | ---------- | ---------- | ------- |
-| [View](./java) | `com.daml:bindings-java` | `java`   | `3.4.8, 3.4.9, 3.4.10, 3.4.11` | `1453`  | `2`        | `2`        | `1`     |
+| [View](https://docs.canton.network/reference/java) | `com.daml:bindings-java` | `java`   | `3.4.8, 3.4.9, 3.4.10, 3.4.11` | `1453`  | `2`        | `2`        | `1`     |
 
 ## Notes
 

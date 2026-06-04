@@ -20,7 +20,7 @@ tags:
 * mainly through the **用户 UI** (Web UI) for end 用户
 * or through the **用户 API** (for automation, custom UIs, or 集成 with your own systems).
 
-The **dApp API** is used by your dApp via the dApp SDK when 用户 connect their 钱包. 参见 [dApp SDK](/集成/dapp-sdk/usage) for more details.
+The **dApp API** is used by your dApp via the dApp SDK when 用户 connect their 钱包. 参见 [dApp SDK](/zh/docs/canton/integrations-dapp-sdk-usage) for more details.
 
 本节 describes typical 工作流, the 用户 UI, 会话 handling, and when to use which interface.
 
@@ -53,7 +53,7 @@ The **dApp API** is used by your dApp via the dApp SDK when 用户 connect their
   * Build a custom 钱包 UI (e.g. embedded in your app) instead of the default 用户 UI.
   * Automate 会话, 网络, IDP, or 钱包 operations.
 
-* **dApp API** (via dApp SDK): Use from your **dApp** frontend. The SDK calls the dApp API to connect, list 账户, and prepare/execute 交易. 用户 approve via the Web UI or browser extension. 参见 [dApp SDK usage](/集成/dapp-sdk/usage) and [APIs](/集成/钱包-gateway/apis) for details.
+* **dApp API** (via dApp SDK): Use from your **dApp** frontend. The SDK calls the dApp API to connect, list 账户, and prepare/execute 交易. 用户 approve via the Web UI or browser extension. 参见 [dApp SDK usage](/zh/docs/canton/integrations-dapp-sdk-usage) and [APIs](/zh/docs/canton/integrations-wallet-gateway-apis) for details.
 
 ## Typical flows
 
@@ -85,9 +85,9 @@ The **dApp API** is used by your dApp via the dApp SDK when 用户 connect their
 ## 下一步
 
 * 配置 the Gateway: [配置](https://github.com/canton-网络/钱包-gateway/blob/82ec39c9/docs/dapp-building/钱包-gateway/配置/index.md)
-* Explore 用户 API and dApp API: [APIs](/集成/钱包-gateway/apis)
-* 设置 up signing: [Signing 提供方](/集成/钱包-gateway/signing-提供方)
-* 运行 and operate the Gateway: [Getting Started](https://github.com/canton-网络/钱包-gateway/blob/82ec39c9/docs/dapp-building/钱包-gateway/getting-started/index.md), [Troubleshooting](/集成/钱包-gateway/troubleshooting)
+* Explore 用户 API and dApp API: [APIs](/zh/docs/canton/integrations-wallet-gateway-apis)
+* 设置 up signing: [Signing 提供方](https://docs.canton.network/integrations/wallet-gateway/signing-提供方)
+* 运行 and operate the Gateway: [Getting Started](https://github.com/canton-网络/钱包-gateway/blob/82ec39c9/docs/dapp-building/钱包-gateway/getting-started/index.md), [Troubleshooting](/zh/docs/canton/integrations-wallet-gateway-troubleshooting)
 
 ---
 

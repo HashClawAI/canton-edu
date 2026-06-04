@@ -228,7 +228,7 @@ Canton explorers show your activity:
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="钱包 for 开发者" icon="code" href="/集成/overview">
+  <Card title="钱包 for 开发者" icon="code" href="/zh/docs/canton/integrations-overview">
     Integrate 钱包 functionality into your app.
   </Card>
 

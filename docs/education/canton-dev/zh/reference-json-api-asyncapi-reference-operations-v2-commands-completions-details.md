@@ -16,7 +16,7 @@ tags:
 
 > 订阅命令完成事件。
 
-<p class="x2mdx-ref-back"><a href="../details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">AsyncAPI 通道</p>
@@ -61,7 +61,7 @@ tags:
 订阅命令完成事件。
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./publish">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-publish">
     <div class="x2mdx-ref-card-head">
       <h3>发布 /v2/commands/completions</h3>
     </div>
@@ -94,7 +94,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./subscribe">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-subscribe">
     <div class="x2mdx-ref-card-head">
       <h3>订阅/v2/commands/completions</h3>
     </div>

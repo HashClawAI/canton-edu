@@ -67,7 +67,7 @@ tags:
 Use the channel page to choose a specific `publish` or `subscribe` action. Action pages are the primary reference surface.
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./v2-commands-completions/details">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-commands-completions-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/commands/completions</h3>
     </div>
@@ -95,7 +95,7 @@ Use the channel page to choose a specific `publish` or `subscribe` action. Actio
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-state-active-contracts/details">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/state/active-contracts</h3>
     </div>
@@ -123,7 +123,7 @@ Use the channel page to choose a specific `publish` or `subscribe` action. Actio
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates/details">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/updates</h3>
     </div>
@@ -151,7 +151,7 @@ Use the channel page to choose a specific `publish` or `subscribe` action. Actio
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates-flats/details">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-flats-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/updates/flats</h3>
     </div>
@@ -179,7 +179,7 @@ Use the channel page to choose a specific `publish` or `subscribe` action. Actio
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./v2-updates-trees/details">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-updates-trees-details">
     <div class="x2mdx-ref-card-head">
       <h3>/v2/updates/trees</h3>
     </div>

@@ -43,7 +43,7 @@ await sdk.init()
 ```
 
 若你 want to add or replace wallets (e.g. WalletConnect), see
-[Adapter registration & 钱包 discovery (picker)](/集成/dapp-sdk/adapters-and-discovery).
+[Adapter registration & 钱包 discovery (picker)](/zh/docs/canton/integrations-dapp-sdk-adapters-and-discovery).
 
 **提供方 API:**
 
@@ -433,7 +433,7 @@ console.log(status.connection.isConnected)
 
 ## Adapter registration & 钱包 discovery (picker)
 
-参见 [Adapter registration & 钱包 discovery (picker)](/集成/dapp-sdk/adapters-and-discovery) for multiple ways
+参见 [Adapter registration & 钱包 discovery (picker)](/zh/docs/canton/integrations-dapp-sdk-adapters-and-discovery) for multiple ways
 to register adapters and what appears in the 钱包 picker.
 
 ---

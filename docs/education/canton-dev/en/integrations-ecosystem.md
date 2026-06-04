@@ -155,14 +155,14 @@ For current network statistics, visit:
 
 ### As a Validator
 
-1. Review [infrastructure requirements](/global-synchronizer/understand/infrastructure-requirements)
+1. Review [infrastructure requirements](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 2. Contact a [Super Validator](https://canton.foundation) for sponsorship
 3. Complete the onboarding process
 4. Begin operations
 
 ### As a Developer
 
-1. Start with the [QuickStart](/appdev/quickstart)
+1. Start with the [QuickStart](/docs/canton/appdev-quickstart-index)
 2. Learn [Daml](/docs/canton/appdev-get-started-choose-your-path)
 3. Build and deploy your application
 4. Join the developer community {/* TODO: Add Slack link once available */}

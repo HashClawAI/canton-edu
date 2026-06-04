@@ -145,7 +145,7 @@ Once both validators have signed, the party appears as hosted on both nodes. You
 
 Multi-hosting addresses compute resilience (can I submit transactions?), but you also need data resilience (can I query my party's contract state?). The Participant Query Store (PQS) is the primary query layer for Canton applications, and its availability matters as much as the validator itself.
 
-For PQS deployment patterns — including high availability across hosting validators and sharing the PQS database with application tables — see [PQS (Participant Query Store)](/sdks-tools/development-tools/pqs#high-availability-and-database-sharing).
+For PQS deployment patterns — including high availability across hosting validators and sharing the PQS database with application tables — see [PQS (Participant Query Store)](https://docs.canton.network/sdks-tools/development-tools/pqs#high-availability-and-database-sharing).
 
 ## When to Use Multi-Hosting vs. Other Resilience Strategies
 

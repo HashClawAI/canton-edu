@@ -22,7 +22,7 @@ tags:
 
 > Package-level overview for com.digitalasset.canton.admin.participant.v30.
 
-<p class="x2mdx-ref-back"><a href="../index">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-admin-api-protobuf-index">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>
@@ -502,7 +502,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/getdar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-getdar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetDar</h3>
 
@@ -538,7 +538,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/getdarcontents">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-getdarcontents">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetDarContents</h3>
 
@@ -574,7 +574,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/getpackagecontents">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-getpackagecontents">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetPackageContents</h3>
 
@@ -610,7 +610,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/getpackagereferences">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-getpackagereferences">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetPackageReferences</h3>
 
@@ -646,7 +646,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/listdars">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-listdars">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.ListDars</h3>
 
@@ -682,7 +682,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/listpackages">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-listpackages">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.ListPackages</h3>
 
@@ -718,7 +718,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/removedar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-removedar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.RemoveDar</h3>
 
@@ -754,7 +754,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/removepackage">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-removepackage">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.RemovePackage</h3>
 
@@ -790,7 +790,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/unvetdar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-unvetdar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.UnvetDar</h3>
 
@@ -826,7 +826,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/uploaddar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-uploaddar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.UploadDar</h3>
 
@@ -862,7 +862,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/validatedar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-validatedar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.ValidateDar</h3>
 
@@ -898,7 +898,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/packageservice/vetdar">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-packageservice-vetdar">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.VetDar</h3>
 
@@ -950,7 +950,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/countinflight">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-countinflight">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.CountInFlight</h3>
 
@@ -986,7 +986,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/getconfigforslowcounterparticipants">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-getconfigforslowcounterparticipants">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.GetConfigForSlowCounterParticipants</h3>
 
@@ -1022,7 +1022,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/getintervalsbehindforcounterparticipants">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-getintervalsbehindforcounterparticipants">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.GetIntervalsBehindForCounterParticipants</h3>
 
@@ -1058,7 +1058,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/inspectcommitmentcontracts">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-inspectcommitmentcontracts">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.InspectCommitmentContracts</h3>
 
@@ -1094,7 +1094,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/lookupoffsetbytime">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-lookupoffsetbytime">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.LookupOffsetByTime</h3>
 
@@ -1130,7 +1130,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/lookupreceivedacscommitments">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-lookupreceivedacscommitments">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.LookupReceivedAcsCommitments</h3>
 
@@ -1166,7 +1166,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/lookupsentacscommitments">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-lookupsentacscommitments">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.LookupSentAcsCommitments</h3>
 
@@ -1202,7 +1202,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/opencommitment">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-opencommitment">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.OpenCommitment</h3>
 
@@ -1238,7 +1238,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantinspectionservice/setconfigforslowcounterparticipants">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantinspectionservice-setconfigforslowcounterparticipants">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantInspectionService.SetConfigForSlowCounterParticipants</h3>
 
@@ -1290,7 +1290,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/changeassignation">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-changeassignation">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.ChangeAssignation</h3>
 
@@ -1326,7 +1326,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/exportacs">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-exportacs">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.ExportAcs</h3>
 
@@ -1362,7 +1362,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/ignoreevents">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-ignoreevents">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.IgnoreEvents</h3>
 
@@ -1398,7 +1398,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/importacs">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-importacs">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.ImportAcs</h3>
 
@@ -1434,7 +1434,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/migratesynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-migratesynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.MigrateSynchronizer</h3>
 
@@ -1470,7 +1470,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/performlatelsu">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-performlatelsu">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.PerformLateLsu</h3>
 
@@ -1506,7 +1506,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/purgecontracts">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-purgecontracts">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.PurgeContracts</h3>
 
@@ -1542,7 +1542,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/purgedeactivatedsynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-purgedeactivatedsynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.PurgeDeactivatedSynchronizer</h3>
 
@@ -1578,7 +1578,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/repaircommitmentsusingacs">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-repaircommitmentsusingacs">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.RepairCommitmentsUsingAcs</h3>
 
@@ -1614,7 +1614,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/rollbackunassignment">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-rollbackunassignment">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.RollbackUnassignment</h3>
 
@@ -1650,7 +1650,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantrepairservice/unignoreevents">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantrepairservice-unignoreevents">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantRepairService.UnignoreEvents</h3>
 
@@ -1702,7 +1702,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantreplicationservice/setpassive">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantreplicationservice-setpassive">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantReplicationService.SetPassive</h3>
 
@@ -1754,7 +1754,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/participantstatusservice/participantstatus">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-participantstatusservice-participantstatus">
     <div class="x2mdx-ref-card-head">
       <h3>ParticipantStatusService.ParticipantStatus</h3>
 
@@ -1806,7 +1806,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/addpartyasync">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-addpartyasync">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.AddPartyAsync</h3>
 
@@ -1842,7 +1842,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/addpartywithacsasync">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-addpartywithacsasync">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.AddPartyWithAcsAsync</h3>
 
@@ -1878,7 +1878,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/clearpartyonboardingflag">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-clearpartyonboardingflag">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.ClearPartyOnboardingFlag</h3>
 
@@ -1914,7 +1914,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/exportpartyacs">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-exportpartyacs">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.ExportPartyAcs</h3>
 
@@ -1950,7 +1950,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/getaddpartystatus">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-getaddpartystatus">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.GetAddPartyStatus</h3>
 
@@ -1986,7 +1986,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/gethighestoffsetbytimestamp">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-gethighestoffsetbytimestamp">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.GetHighestOffsetByTimestamp</h3>
 
@@ -2022,7 +2022,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/partymanagementservice/importpartyacs">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-partymanagementservice-importpartyacs">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.ImportPartyAcs</h3>
 
@@ -2074,7 +2074,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pingservice/ping">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pingservice-ping">
     <div class="x2mdx-ref-card-head">
       <h3>PingService.Ping</h3>
 
@@ -2126,7 +2126,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/clearschedule">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-clearschedule">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.ClearSchedule</h3>
 
@@ -2162,7 +2162,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/getnowaitcommitmentsfrom">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-getnowaitcommitmentsfrom">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.GetNoWaitCommitmentsFrom</h3>
 
@@ -2198,7 +2198,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/getparticipantschedule">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-getparticipantschedule">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.GetParticipantSchedule</h3>
 
@@ -2234,7 +2234,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/getsafepruningoffset">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-getsafepruningoffset">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.GetSafePruningOffset</h3>
 
@@ -2270,7 +2270,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/getschedule">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-getschedule">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.GetSchedule</h3>
 
@@ -2306,7 +2306,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/prune">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-prune">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.Prune</h3>
 
@@ -2342,7 +2342,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/resetnowaitcommitmentsfrom">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-resetnowaitcommitmentsfrom">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.ResetNoWaitCommitmentsFrom</h3>
 
@@ -2378,7 +2378,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setcron">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setcron">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetCron</h3>
 
@@ -2414,7 +2414,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setmaxduration">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setmaxduration">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetMaxDuration</h3>
 
@@ -2450,7 +2450,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setnowaitcommitmentsfrom">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setnowaitcommitmentsfrom">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetNoWaitCommitmentsFrom</h3>
 
@@ -2486,7 +2486,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setparticipantschedule">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setparticipantschedule">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetParticipantSchedule</h3>
 
@@ -2522,7 +2522,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setretention">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setretention">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetRetention</h3>
 
@@ -2558,7 +2558,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/pruningservice/setschedule">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-pruningservice-setschedule">
     <div class="x2mdx-ref-card-head">
       <h3>PruningService.SetSchedule</h3>
 
@@ -2610,7 +2610,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/resourcemanagementservice/getresourcelimits">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-resourcemanagementservice-getresourcelimits">
     <div class="x2mdx-ref-card-head">
       <h3>ResourceManagementService.GetResourceLimits</h3>
 
@@ -2646,7 +2646,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/resourcemanagementservice/setresourcelimits">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-resourcemanagementservice-setresourcelimits">
     <div class="x2mdx-ref-card-head">
       <h3>ResourceManagementService.SetResourceLimits</h3>
 
@@ -2698,7 +2698,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/connectsynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-connectsynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ConnectSynchronizer</h3>
 
@@ -2736,7 +2736,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/disconnectallsynchronizers">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-disconnectallsynchronizers">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.DisconnectAllSynchronizers</h3>
 
@@ -2774,7 +2774,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/disconnectsynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-disconnectsynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.DisconnectSynchronizer</h3>
 
@@ -2812,7 +2812,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/getsynchronizerid">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-getsynchronizerid">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.GetSynchronizerId</h3>
 
@@ -2850,7 +2850,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/listconnectedsynchronizers">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-listconnectedsynchronizers">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ListConnectedSynchronizers</h3>
 
@@ -2888,7 +2888,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/listregisteredsynchronizers">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-listregisteredsynchronizers">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ListRegisteredSynchronizers</h3>
 
@@ -2926,7 +2926,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/logout">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-logout">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.Logout</h3>
 
@@ -2964,7 +2964,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/modifysynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-modifysynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ModifySynchronizer</h3>
 
@@ -3002,7 +3002,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/performmanuallsu">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-performmanuallsu">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.PerformManualLsu</h3>
 
@@ -3038,7 +3038,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/reconnectsynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-reconnectsynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ReconnectSynchronizer</h3>
 
@@ -3076,7 +3076,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/reconnectsynchronizers">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-reconnectsynchronizers">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.ReconnectSynchronizers</h3>
 
@@ -3114,7 +3114,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/synchronizerconnectivityservice/registersynchronizer">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-synchronizerconnectivityservice-registersynchronizer">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerConnectivityService.RegisterSynchronizer</h3>
 
@@ -3168,7 +3168,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-participant-v30/trafficcontrolservice/trafficcontrolstate">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-participant-v30-trafficcontrolservice-trafficcontrolstate">
     <div class="x2mdx-ref-card-head">
       <h3>TrafficControlService.TrafficControlState</h3>
 

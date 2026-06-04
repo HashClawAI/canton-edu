@@ -74,7 +74,7 @@ tags:
 
 ## 数据韧性模式
 
-多托管解决**计算韧性**；**数据韧性**依赖 PQS 等查询层。见 [PQS](/sdks-tools/development-tools/pqs#high-availability-and-database-sharing)。
+多托管解决**计算韧性**；**数据韧性**依赖 PQS 等查询层。见 [PQS](https://docs.canton.network/sdks-tools/development-tools/pqs#high-availability-and-database-sharing)。
 
 ## 多托管与其他韧性策略
 

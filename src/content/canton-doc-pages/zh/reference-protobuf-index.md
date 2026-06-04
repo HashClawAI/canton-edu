@@ -412,7 +412,7 @@ tags:
 ## 账本 API
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-daml-ledger-api-v2">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2">
     <div class="x2mdx-ref-card-head">
       <h3>com.daml.ledger.api.v2</h3>
 
@@ -444,7 +444,7 @@ tags:
         <dd>8</dd>
       </div>
     </dl>
-  </a><a class="x2mdx-ref-card" href="./packages/com-daml-ledger-api-v2-admin">
+  </a><a class="x2mdx-ref-card" href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2-admin">
     <div class="x2mdx-ref-card-head">
       <h3>com.daml.ledger.api.v2.admin</h3>
 
@@ -478,7 +478,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-daml-ledger-api-v2-interactive">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2-interactive">
     <div class="x2mdx-ref-card-head">
       <h3>com.daml.ledger.api.v2.interactive</h3>
 
@@ -512,7 +512,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-daml-ledger-api-v2-testing">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2-testing">
     <div class="x2mdx-ref-card-head">
       <h3>com.daml.ledger.api.v2.testing</h3>
 
@@ -550,7 +550,7 @@ tags:
 ## 架构包
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-daml-ledger-api-v2-interactive-transaction-v1">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/protobuf/packages/com-daml-ledger-api-v2-interactive-transaction-v1">
     <div class="x2mdx-ref-card-head">
       <h3>com.daml.ledger.api.v2.interactive.transaction.v1</h3><div class="x2mdx-ref-badges">
         <span class="x2mdx-ref-badge x2mdx-ref-badge--protocol">gRPC</span>

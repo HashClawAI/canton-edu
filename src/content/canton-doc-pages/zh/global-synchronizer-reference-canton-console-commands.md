@@ -2312,7 +2312,7 @@ KMS 签名密钥的 ID。用途指定签名密钥的预期用途，可以是：
 
 异步提交分配命令。
 
-提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](/sdks-tools/api-reference/ledger-api)。
+提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](https://docs.canton.network/sdks-tools/api-reference/ledger-api)。
 
 **参数**
 
@@ -2351,7 +2351,7 @@ KMS 签名密钥的 ID。用途指定签名密钥的预期用途，可以是：
 
 异步提交命令。
 
-提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](/sdks-tools/api-reference/ledger-api)。
+提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](https://docs.canton.network/sdks-tools/api-reference/ledger-api)。
 
 **参数**
 
@@ -2414,7 +2414,7 @@ KMS 签名密钥的 ID。用途指定签名密钥的预期用途，可以是：
 
 异步提交取消分配命令。
 
-提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](/sdks-tools/api-reference/ledger-api)。
+提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](https://docs.canton.network/sdks-tools/api-reference/ledger-api)。
 
 **参数**
 
@@ -2513,7 +2513,7 @@ KMS 签名密钥的 ID。用途指定签名密钥的预期用途，可以是：
 
 异步提交 java codegen 命令。
 
-提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](/sdks-tools/api-reference/ledger-api)。
+提供对 Ledger API 的命令提交服务的访问。有关参数的文档，请参阅 [Ledger API 参考](https://docs.canton.network/sdks-tools/api-reference/ledger-api)。
 
 **参数**
 

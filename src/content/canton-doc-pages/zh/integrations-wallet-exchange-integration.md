@@ -127,9 +127,9 @@ The guide's assumptions might not perfectly match your exchange's actual archite
 
 There are five Canton 集成 组件:
 
-* The **Exchange 验证者 Node** is a Splice 验证者节点 that hosts your `treasuryParty（金库 Party）`, which is the party you setup to control funds, receive deposits, and execute transfers for withdrawals. See `exchange-Party-setup` for details on how to setup the `treasuryParty（金库 Party）`. 你可以 [deploy and operate a validator yourself](/global-同步器/deployment/onboarding-process#validators) or use a node-as-a-服务 提供方 to operate it for you.
+* The **Exchange 验证者 Node** is a Splice 验证者节点 that hosts your `treasuryParty（金库 Party）`, which is the party you setup to control funds, receive deposits, and execute transfers for withdrawals. See `exchange-Party-setup` for details on how to setup the `treasuryParty（金库 Party）`. 你可以 [deploy and operate a validator yourself](/zh/docs/canton/global-synchronizer-deployment-onboarding-process#validators) or use a node-as-a-服务 提供方 to operate it for you.
 * The **Canton 集成 DB** is used to keep track of the state of withdrawals and the customer-attribution of the funds held by the `treasuryParty（金库 Party）`. It is shown as a separate 组件 in the diagram, but it could be part of an existing databases.
-* The **Tx History Ingestion** 服务 uses the [JSON Ledger API](/sdks-tools/api-reference/json-api) exposed by the Exchange 验证者 Node to read Daml 交易 affecting the `treasuryParty（金库 Party）`. It parses these 交易 and updates the Canton 集成 DB with the effect of these 交易 (e.g. a successful deposit to a customer 账户).
+* The **Tx History Ingestion** 服务 uses the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api) exposed by the Exchange 验证者 Node to read Daml 交易 affecting the `treasuryParty（金库 Party）`. It parses these 交易 and updates the Canton 集成 DB with the effect of these 交易 (e.g. a successful deposit to a customer 账户).
 * The **提现 Automation** 服务 is responsible for executing withdrawals requested by the Exchange Internal Systems via the Canton 集成 DB.
 * The **Multi-Step 充值 Automation** 服务 is responsible for accepting or rejecting transfers from customers to their exchange 账户 for CN tokens that do not support direct transfers. It is not necessary for an 集成 with Canton Coin（CC）, which does support direct, 1-step transfers.
 
@@ -470,7 +470,7 @@ Many token admin's run a test instance of their token on TestNet. Consider using
 
 ## 偏移检查点
 
-When consuming 交易 through the update 服务 at `/v2/updates` you will not just receive 交易 but you will also receive [偏移 checkpoints](/sdks-tools/api-reference/ledger-api). Each 偏移 checkpoint contains an 偏移 and the most recent observed 记录时间 for each 同步器. Your Tx History Ingestion should use that to update the last processed 偏移 and 记录时间 (in addition to updating those after each 交易) so that it will resume processing 交易 from that point on after a crash or restart.
+When consuming 交易 through the update 服务 at `/v2/updates` you will not just receive 交易 but you will also receive [偏移 checkpoints](https://docs.canton.network/sdks-tools/api-reference/ledger-api). Each 偏移 checkpoint contains an 偏移 and the most recent observed 记录时间 for each 同步器. Your Tx History Ingestion should use that to update the last processed 偏移 and 记录时间 (in addition to updating those after each 交易) so that it will resume processing 交易 from that point on after a crash or restart.
 
 偏移 checkpoints are in particular required around Major Splice Upgrades where there is no Daml 交易 for an extended period of time, but you want to ensure that your Tx History Ingestion advances beyond a particular 记录时间.
 
@@ -489,7 +489,7 @@ As part of the `集成-工作流`, Tx History Ingestion is expected to extract a
 ### 1-Step Transfers
 
 To understand the structure of a 1-step transfer, let's look at an example deposit
-as seen through the [JSON Ledger API](/sdks-tools/api-reference/json-api).
+as seen through the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
 In this case, we query a single 交易. The format is identical to the 交易 you will get when streaming 交易 through `/v2/updates/flats` and you can also use the same filter. 请注意 you need to adjust the `auth-token`, `update-id` and `treasury-party` placeholders to match your setup.
 
@@ -979,7 +979,7 @@ Note however, that for Canton Coin（CC） the `amount` in the `TransferFactory_
 
 ### Multi-Step Transfers
 
-To understand the 交易 structure of a multi-step transfer, let's look at an example 交易 of a Multi-Step 充值 as seen through the [JSON Ledger API](/sdks-tools/api-reference/json-api).
+To understand the 交易 structure of a multi-step transfer, let's look at an example 交易 of a Multi-Step 充值 as seen through the [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api).
 
 In this case, we query a single 交易. The format is identical to the 交易 you will get when streaming 交易 through `/v2/updates/flats` and you can also use the same filter. 请注意 you need to adjust the `auth-token`, `update-id` and `treasury-party` placeholders to match your setup.
 
@@ -1722,26 +1722,26 @@ If that is not possible, then you can read from a random Canton Coin（CC） Sca
 
 As explained in `tokenomics-and-奖励`, your 验证者节点 will need 流量 to submit the 交易 to execute withdrawals or accept multi-step deposits. As also explained in that section, the 网络 provides 奖励 that can be used to fund 流量.
 
-另请注意 that every 验证者节点 has an associated **validator operator party** that represents that 验证者节点's administrator ([docs](/global-同步器/deployment/validator-docker-compose)). The 验证者节点 automatically mints 奖励 for that party. It can further be configured to [automatically purchase 流量](/global-同步器/deployment/validator-kubernetes) using that party's CC 余额, which includes the minted 奖励.
+另请注意 that every 验证者节点 has an associated **validator operator party** that represents that 验证者节点's administrator ([docs](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose)). The 验证者节点 automatically mints 奖励 for that party. It can further be configured to [automatically purchase 流量](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes) using that party's CC 余额, which includes the minted 奖励.
 
 We 因此 recommend the following setup as a starting point to mint 奖励 and automatically fund 流量:
 
 1. Use the validator operator party as your featured `exchangeParty（交易所 Party）`. Follow `exchange-party-setup` to get it featured.
 2. `treasury-party-setup` to create a `treasuryParty（金库 Party）` with a 转账预批准（TransferPreapproval） managed by your `exchangeParty（交易所 Party）`.
-3. Setup [automatic 流量 purchases in the validator app](/global-同步器/deployment/validator-kubernetes).
-4. 可选: setup [auto-sweep](/global-同步器/deployment/validator-kubernetes) from the `exchangParty` to your `treasuryParty（金库 Party）` to limit the funds managed directly by the 验证者节点.
+3. Setup [automatic 流量 purchases in the validator app](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes).
+4. 可选: setup [auto-sweep](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes) from the `exchangParty` to your `treasuryParty（金库 Party）` to limit the funds managed directly by the 验证者节点.
 
-As a starting point for the automatic 流量 purchase 配置, set `targetThroughput` to 2kB/s and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds. Please test this with your expected 流量 pattern and adjust as needed. See this [FAQ to measure the 流量 spent on an individual 交易](/global-同步器/deployment/同步器-流量).
+As a starting point for the automatic 流量 purchase 配置, set `targetThroughput` to 2kB/s and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds. Please test this with your expected 流量 pattern and adjust as needed. See this [FAQ to measure the 流量 spent on an individual 交易](https://docs.canton.network/global-synchronizer/deployment/synchronizer-流量).
 
 ## 设置交易所 Party
 
 ### Setup the featured exchange party
 
-As explained above in `reward-minting-and-流量-funding`, we recommend to use the validator operator party as your featured `exchangeParty（交易所 Party）`. This party is automatically created when you [deploy your 验证者节点](/global-同步器/deployment/validator-docker-compose). Thus the only setup step is to get it featured by the SVs:
+As explained above in `reward-minting-and-流量-funding`, we recommend to use the validator operator party as your featured `exchangeParty（交易所 Party）`. This party is automatically created when you [deploy your 验证者节点](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose). Thus the only setup step is to get it featured by the SVs:
 
 **On DevNet**, you can self-feature your validator operator party as follows:
 
-1. [Log into the 钱包 UI for the validator 用户](/global-同步器/deployment/validator-kubernetes), which presents itself as in this screenshot:
+1. [Log into the 钱包 UI for the validator 用户](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes), which presents itself as in this screenshot:
 
    <img src="https://mintlify.s3.us-west-1.amazonaws.com/cantonfoundation/集成/钱包/images/wallet_ui.png" alt="image" />
 
@@ -1755,7 +1755,7 @@ That's all. Continue with setting up your treasury party.
 
 **On MainNet**, apply for featured status for your validator operator party as follows:
 
-1. [Log into the 钱包 UI for the validator 用户](/global-同步器/deployment/validator-kubernetes) on your MainNet 验证者节点.
+1. [Log into the 钱包 UI for the validator 用户](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes) on your MainNet 验证者节点.
 2. Copy the party-id of your validator operator party using the copy button right of the abbreviated `"google-oaut.."` party name in the screenshot above.
 3. Apply for featured 应用 status using this link: [https://sync.global/featured-app-请求/](https://sync.global/featured-app-请求/)
 
@@ -1787,11 +1787,11 @@ Setup the `treasuryParty（金库 Party）` as follows with a 转账预批准（
 
 ## 设置 Ledger API 用户
 
-Clients need to [authenticate as a Ledger API 用户](/appdev/deep-dives/授权) to access the Ledger API of your Exchange 验证者 Node. 你可以 manage Ledger API 用户 and their rights using the `/v2/用户/...` [端点 of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
+Clients need to [authenticate as a Ledger API 用户](/zh/docs/canton/appdev-deep-dives-authorization) to access the Ledger API of your Exchange 验证者 Node. 你可以 manage Ledger API 用户 and their rights using the `/v2/用户/...` [端点 of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
 
-你将 need to authenticate as an existing 用户 that has `participant_admin` rights to create additional 用户 and grant rights. One option is to authenticate as the `ledger-api-用户` that you [configured when setting up 认证 for your 验证者节点](/global-同步器/deployment/oidc-提供方). Another option is to [log-in to your Splice 钱包 UI for the validator operatory party](/global-同步器/deployment/validator-kubernetes) and use the JWT token used by the UI.
+你将 need to authenticate as an existing 用户 that has `participant_admin` rights to create additional 用户 and grant rights. One option is to authenticate as the `ledger-api-用户` that you [configured when setting up 认证 for your 验证者节点](/zh/docs/canton/global-synchronizer-deployment-oidc-providers). Another option is to [log-in to your Splice 钱包 UI for the validator operatory party](/zh/docs/canton/global-synchronizer-deployment-validator-kubernetes) and use the JWT token used by the UI.
 
-我们建议 that you setup one 用户 per 服务 that needs to access the Ledger API. This way you can easily manage permissions and access rights for each 服务 independently. The [rights](/appdev/deep-dives/授权#access-tokens-and-rights) required by the 集成 组件 are as follows:
+我们建议 that you setup one 用户 per 服务 that needs to access the Ledger API. This way you can easily manage permissions and access rights for each 服务 independently. The [rights](/zh/docs/canton/appdev-deep-dives-authorization#access-tokens-and-rights) required by the 集成 组件 are as follows:
 
 | 组件                                                           | 必需 Rights                                   | 用途                                                                                                                                                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1806,7 +1806,7 @@ Clients need to [authenticate as a Ledger API 用户](/appdev/deep-dives/授权)
 
 `.dar` files define the Daml 工作流 used by the token admins for their tokens. They must be uploaded to your Exchange 验证者 Node to be able to process withdrawals and deposits for those tokens.
 
-The `.dar` files for Canton Coin（CC） are managed by the 验证者 Node itself. The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` 端点 of the [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316). See this [how-to guide](/global-同步器/生产-operations/manage-packages) for more information.
+The `.dar` files for Canton Coin（CC） are managed by the 验证者 Node itself. The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` 端点 of the [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316). See this [how-to guide](/zh/docs/canton/global-synchronizer-production-operations-manage-packages) for more information.
 
 <警告>
   Only upload `.dar` files from token admins that you trust. The uploaded `.dar` files define the choices available on active 合约. Uploading a malicious `.dar` file could result in granting an attacker an unintended delegation on your 合约, which could lead to loss of funds.
@@ -1814,7 +1814,7 @@ The `.dar` files for Canton Coin（CC） are managed by the 验证者 Node itsel
 
 ## 监控
 
-参见 Splice documentation for guidance on [how to monitor your 验证者节点](/global-同步器/生产-operations/splice-metrics-overview). Note in particular that it includes [Grafana dashboards](/global-同步器/生产-operations/key-metrics) for 监控 the 流量 usage, balances of local Party (e.g., the `exchangeParty（交易所 Party）`), and [many other metrics](/global-同步器/生产-operations/splice-metrics-overview).
+参见 Splice documentation for guidance on [how to monitor your 验证者节点](/zh/docs/canton/global-synchronizer-production-operations-splice-metrics-overview). Note in particular that it includes [Grafana dashboards](/zh/docs/canton/global-synchronizer-production-operations-key-metrics) for 监控 the 流量 usage, balances of local Party (e.g., the `exchangeParty（交易所 Party）`), and [many other metrics](/zh/docs/canton/global-synchronizer-production-operations-splice-metrics-overview).
 
 ## Splice 主版本升级上线
 
@@ -1848,7 +1848,7 @@ From an 集成 perspective, there are a few things to keep in mind:
 
    > 1. Retrieve the `synchronizerId` of the last ingested 交易 from the Canton 集成 DB.
    >
-   > 2. Log into the [Canton Console of your 验证者节点](/global-同步器/生产-operations/canton-console) and query the 偏移 `offRecovery` assigned to the ACS import 交易 at time `0001-01-01T00:00:00.000000Z` using
+   > 2. Log into the [Canton Console of your 验证者节点](/zh/docs/canton/global-synchronizer-production-operations-canton-console) and query the 偏移 `offRecovery` assigned to the ACS import 交易 at time `0001-01-01T00:00:00.000000Z` using
    >
    >    ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
    >    def parseTimestamp(t: String) = {
@@ -1890,7 +1890,7 @@ Restoring these 组件 from a 备份 can lead to data loss, which needs to be ha
 
 ## Backing up the Exchange 验证者 Node
 
-Follow the [Splice documentation on how to 备份 a 验证者节点](/global-同步器/生产-operations/validator-backups).
+Follow the [Splice documentation on how to 备份 a 验证者节点](/zh/docs/canton/global-synchronizer-production-operations-validator-backups).
 
 ## Backing up the Canton 集成 DB
 
@@ -1900,9 +1900,9 @@ Follow your internal guidance and best practices on what DB system to use and ho
 
 ## Restoring the Exchange 验证者 Node from a 备份
 
-Follow the [Splice documentation on how to 恢复 a 验证者节点 from a 备份](/global-同步器/生产-operations/validator-disaster-recovery) to 恢复 the Exchange 验证者 Node from a 备份 that is less than 30 days old.
+Follow the [Splice documentation on how to 恢复 a 验证者节点 from a 备份](/zh/docs/canton/global-synchronizer-production-operations-validator-disaster-recovery) to 恢复 the Exchange 验证者 Node from a 备份 that is less than 30 days old.
 
-The node will resubscribe to 交易 data from the 同步器 and recover all committed 交易 and the corresponding changes to the set of active 合约 (i.e. UTXOs). However validator-node local data written after the 备份 will be lost, as described on the [Canton documentation page](/global-同步器/生产-operations/node-备份-恢复).
+The node will resubscribe to 交易 data from the 同步器 and recover all committed 交易 and the corresponding changes to the set of active 合约 (i.e. UTXOs). However validator-node local data written after the 备份 will be lost, as described on the [Canton documentation page](/zh/docs/canton/global-synchronizer-production-operations-node-backup-restore).
 
 In the context of the recommended `集成-工作流`, this data loss affects:
 
@@ -1921,7 +1921,7 @@ Follow these steps to 恢复 the Exchange 验证者 Node from a 备份:
 
 4. Reupload all `.dar` files that were uploaded after the 备份.
 
-5. Log into the [Canton Console of your 验证者节点](/global-同步器/生产-operations/canton-console) and query the 偏移 `offRecovery` assigned to `tRecovery` using
+5. Log into the [Canton Console of your 验证者节点](/zh/docs/canton/global-synchronizer-production-operations-canton-console) and query the 偏移 `offRecovery` assigned to `tRecovery` using
 
    ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
    def parseTimestamp(t: String) = {
@@ -1952,7 +1952,7 @@ Follow these steps to 恢复 the Exchange 验证者 Node from a 备份:
 Once Tx History Ingestion has caught up, the 集成工作流 will continue as before the disaster.
 
 <Note>
-  These steps assume that record times assigned to 交易 are unique, which is the case unless you are using 参与者-local operations that modify the 交易 history. These are ACS imports, party migrations, party replication, or [repair 命令](/global-同步器/生产-operations/node-备份-恢复). Multi-hosting a party from the start does not lead to non-unique record times.
+  These steps assume that record times assigned to 交易 are unique, which is the case unless you are using 参与者-local operations that modify the 交易 history. These are ACS imports, party migrations, party replication, or [repair 命令](/zh/docs/canton/global-synchronizer-production-operations-node-backup-restore). Multi-hosting a party from the start does not lead to non-unique record times.
 
   If your are using 参与者-local operations that modify the 交易 history, then you we recommend adjusting Step 5 as follows to deal with the rare case of a partial ingestion of 交易 with the same 记录时间:
 
@@ -1987,9 +1987,9 @@ Step 3 takes care to resynchronize the state of the Canton 集成 DB with the st
 
 ## 测试节点设置
 
-When 测试 on your laptop or in CI, we recommend using Splice's [LocalNet](/sdks-tools/开发-tools/localnet), which is a Docker-Compose based local deployment of a 全局同步器 and Canton Coin（CC）. Automate the exchange Party setup as part of your test setup, so that you can start from a clean state for each test run while reusing the same LocalNet. Thereby achieving test isolation without the overhead of starting and stopping LocalNet for each test run.
+When 测试 on your laptop or in CI, we recommend using Splice's [LocalNet](https://docs.canton.network/sdks-tools/开发-tools/localnet), which is a Docker-Compose based local deployment of a 全局同步器 and Canton Coin（CC）. Automate the exchange Party setup as part of your test setup, so that you can start from a clean state for each test run while reusing the same LocalNet. Thereby achieving test isolation without the overhead of starting and stopping LocalNet for each test run.
 
-Alternatively you can consider setting up a DevNet 验证者节点 using either Docker-Compose or k8s as [documented in Splice](/global-同步器/deployment/onboarding-process) and using that for 测试.
+Alternatively you can consider setting up a DevNet 验证者节点 using either Docker-Compose or k8s as [documented in Splice](/zh/docs/canton/global-synchronizer-deployment-onboarding-process) and using that for 测试.
 
 ## 测试场景
 
@@ -2053,11 +2053,11 @@ In order for the `treasuryParty（金库 Party）` to create featured 应用 act
 5. Change the initialization code of the 提现 Automation to:
 
    1. query the active 合约 of the `exchangeParty（交易所 Party）` for the `DelegateProxy` 合约 created in the previous step and store its 合约 ID in `proxyCid`.
-   2. query the active 合约 of the `exchangeParty（交易所 Party）` for the `FeaturedAppRight` 合约 and store its 合约 ID in `featuredAppRightCid` and its [create-事件-blob](/appdev/deep-dives/explicit-合约-disclosure) in `featuredAppRightEventBlob`.
+   2. query the active 合约 of the `exchangeParty（交易所 Party）` for the `FeaturedAppRight` 合约 and store its 合约 ID in `featuredAppRightCid` and its [create-事件-blob](/zh/docs/canton/appdev-deep-dives-explicit-contract-disclosure) in `featuredAppRightEventBlob`.
 
 6. Change the 提现 Automation code that initiates a withdrawal transfer to call the `DelegateProxy_TransferFactory_Transfer` choice instead of the `TransferFactory_Transfer` choice, as shown in [this test case](https://github.com/hyperledger-labs/splice/blob/5870d2d8b0c6b9dfcf8afe11ab0685e2ee58342f/daml/splice-util-featured-app-proxies-test/daml/Splice/Scripts/TestFeaturedDepositsAndWithdrawals.daml#L204-L215).
 
-   The call to the choice takes the `proxyCid` and the `featuredAppRightCid` as parameters alongside the actual transfer parameters. Pass in the `featuredAppRightEventBlob` as an [additional disclosed 合约](/appdev/deep-dives/explicit-合约-disclosure).
+   The call to the choice takes the `proxyCid` and the `featuredAppRightCid` as parameters alongside the actual transfer parameters. Pass in the `featuredAppRightEventBlob` as an [additional disclosed 合约](/zh/docs/canton/appdev-deep-dives-explicit-contract-disclosure).
 
 The Tx History Ingestion as described here does not need changing, as it descends into the `TransferFactory_Transfer` choice that is called by the `DelegateProxy_TransferFactory_Transfer` choice.
 
@@ -2111,7 +2111,7 @@ Any .dar file that you upload, both as part of the initial setup but also whenev
 
 Both nodes serve all 交易 for the `treasuryParty（金库 Party）` and can 因此 be used in principle to read them. However, 偏移 are not comparable across nodes so it is recommended that to run Tx History Ingestion against the same node under normal operations. 若你 do need to switch nodes, you can do so following the same procedure used for restoring a validator from a 备份 to resynchronize Tx History Ingestion against the 偏移 of the new node.
 
-Preparation and execution of 交易 can also be done against any of the confirming nodes of the party. However, [命令 Deduplication](/appdev/deep-dives/命令-deduplication) is only performed by the executing node so if you submit across nodes you cannot rely on it. It is therefore recommend \_[not]() to rely on 命令 deduplication at all in favor of UTXO and max 记录时间 based deuplication.
+Preparation and execution of 交易 can also be done against any of the confirming nodes of the party. However, [命令 Deduplication](/zh/docs/canton/appdev-deep-dives-command-deduplication) is only performed by the executing node so if you submit across nodes you cannot rely on it. It is therefore recommend \_[not]() to rely on 命令 deduplication at all in favor of UTXO and max 记录时间 based deuplication.
 
 <div className="todo">
   Link to recommended deduplication strategy [https://github.com/canton-网络/钱包/issues/423](https://github.com/canton-网络/钱包/issues/423)
@@ -2134,11 +2134,11 @@ Future versions of Canton will allow changing the confirming nodes without the n
 
 ## 验证者节点密钥使用 KMS
 
-参见 [Splice docs for how to setup you 验证者节点 with keys stored in a KMS](/global-同步器/生产-operations/validator-security). Consider doing so as an additional security hardening measure to protect the keys of the confirming node(s)\_ of your `treasuryParty（金库 Party）`.
+参见 [Splice docs for how to setup you 验证者节点 with keys stored in a KMS](/zh/docs/canton/global-synchronizer-production-operations-validator-security). Consider doing so as an additional security hardening measure to protect the keys of the confirming node(s)\_ of your `treasuryParty（金库 Party）`.
 
 ## 使用 gRPC Ledger API
 
-Feel free to do so if you prefer using gRPC. It is functionally equivalent to the JSON Ledger API. See this [Ledger API overview](/sdks-tools/api-reference/ledger-api) for more information.
+Feel free to do so if you prefer using gRPC. It is functionally equivalent to the JSON Ledger API. See this [Ledger API overview](https://docs.canton.network/sdks-tools/api-reference/ledger-api) for more information.
 
 ---
 

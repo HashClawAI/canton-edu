@@ -171,7 +171,7 @@ The Global Synchronizer upgrades frequently:
 Before deploying a validator, ensure you have:
 
 1. **Sponsorship**: A Super Validator must sponsor your onboarding
-2. **Infrastructure**: Meet the [infrastructure requirements](/global-synchronizer/understand/infrastructure-requirements)
+2. **Infrastructure**: Meet the [infrastructure requirements](https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements)
 3. **Technical capacity**: Team capable of operating containerized services
 4. **Canton Coin**: Budget for traffic fees (TestNet/MainNet)
 
@@ -212,7 +212,7 @@ The Global Synchronizer handles:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Infrastructure Requirements" icon="server" href="/global-synchronizer/understand/infrastructure-requirements">
+  <Card title="Infrastructure Requirements" icon="server" href="https://docs.canton.network/global-synchronizer/understand/infrastructure-requirements">
     Hardware, software, and network requirements.
   </Card>
 

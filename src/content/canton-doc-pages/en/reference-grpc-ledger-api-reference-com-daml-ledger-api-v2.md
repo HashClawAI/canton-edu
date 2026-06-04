@@ -21,7 +21,7 @@ tags:
 
 > Package-level overview for com.daml.ledger.api.v2.
 
-<p class="x2mdx-ref-back"><a href="./details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-grpc-ledger-api-reference-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>
@@ -771,7 +771,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandcompletionservice/completionstream">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandcompletionservice-completionstream">
     <div class="x2mdx-ref-card-head">
       <h3>CommandCompletionService.CompletionStream</h3>
 
@@ -823,7 +823,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandservice/submitandwait">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandservice-submitandwait">
     <div class="x2mdx-ref-card-head">
       <h3>CommandService.SubmitAndWait</h3>
 
@@ -859,7 +859,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandservice/submitandwaitforreassignment">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandservice-submitandwaitforreassignment">
     <div class="x2mdx-ref-card-head">
       <h3>CommandService.SubmitAndWaitForReassignment</h3>
 
@@ -895,7 +895,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandservice/submitandwaitfortransaction">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandservice-submitandwaitfortransaction">
     <div class="x2mdx-ref-card-head">
       <h3>CommandService.SubmitAndWaitForTransaction</h3>
 
@@ -947,7 +947,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandsubmissionservice/submit">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandsubmissionservice-submit">
     <div class="x2mdx-ref-card-head">
       <h3>CommandSubmissionService.Submit</h3>
 
@@ -983,7 +983,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/commandsubmissionservice/submitreassignment">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-commandsubmissionservice-submitreassignment">
     <div class="x2mdx-ref-card-head">
       <h3>CommandSubmissionService.SubmitReassignment</h3>
 
@@ -1035,7 +1035,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/contractservice/getcontract">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-contractservice-getcontract">
     <div class="x2mdx-ref-card-head">
       <h3>ContractService.GetContract</h3>
 
@@ -1087,7 +1087,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/eventqueryservice/geteventsbycontractid">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-eventqueryservice-geteventsbycontractid">
     <div class="x2mdx-ref-card-head">
       <h3>EventQueryService.GetEventsByContractId</h3>
 
@@ -1139,7 +1139,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/packageservice/getpackage">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-packageservice-getpackage">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetPackage</h3>
 
@@ -1175,7 +1175,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/packageservice/getpackagestatus">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-packageservice-getpackagestatus">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.GetPackageStatus</h3>
 
@@ -1211,7 +1211,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/packageservice/listpackages">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-packageservice-listpackages">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.ListPackages</h3>
 
@@ -1247,7 +1247,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/packageservice/listvettedpackages">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-packageservice-listvettedpackages">
     <div class="x2mdx-ref-card-head">
       <h3>PackageService.ListVettedPackages</h3>
 
@@ -1299,7 +1299,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/stateservice/getactivecontracts">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-stateservice-getactivecontracts">
     <div class="x2mdx-ref-card-head">
       <h3>StateService.GetActiveContracts</h3>
 
@@ -1335,7 +1335,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/stateservice/getactivecontractspage">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-stateservice-getactivecontractspage">
     <div class="x2mdx-ref-card-head">
       <h3>StateService.GetActiveContractsPage</h3>
 
@@ -1371,7 +1371,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/stateservice/getconnectedsynchronizers">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-stateservice-getconnectedsynchronizers">
     <div class="x2mdx-ref-card-head">
       <h3>StateService.GetConnectedSynchronizers</h3>
 
@@ -1407,7 +1407,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/stateservice/getlatestprunedoffsets">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-stateservice-getlatestprunedoffsets">
     <div class="x2mdx-ref-card-head">
       <h3>StateService.GetLatestPrunedOffsets</h3>
 
@@ -1443,7 +1443,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/stateservice/getledgerend">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-stateservice-getledgerend">
     <div class="x2mdx-ref-card-head">
       <h3>StateService.GetLedgerEnd</h3>
 
@@ -1495,7 +1495,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/updateservice/getupdatebyid">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-updateservice-getupdatebyid">
     <div class="x2mdx-ref-card-head">
       <h3>UpdateService.GetUpdateById</h3>
 
@@ -1531,7 +1531,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/updateservice/getupdatebyoffset">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-updateservice-getupdatebyoffset">
     <div class="x2mdx-ref-card-head">
       <h3>UpdateService.GetUpdateByOffset</h3>
 
@@ -1567,7 +1567,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/updateservice/getupdates">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-updateservice-getupdates">
     <div class="x2mdx-ref-card-head">
       <h3>UpdateService.GetUpdates</h3>
 
@@ -1603,7 +1603,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/updateservice/getupdatespage">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-updateservice-getupdatespage">
     <div class="x2mdx-ref-card-head">
       <h3>UpdateService.GetUpdatesPage</h3>
 
@@ -1655,7 +1655,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2/versionservice/getledgerapiversion">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-versionservice-getledgerapiversion">
     <div class="x2mdx-ref-card-head">
       <h3>VersionService.GetLedgerApiVersion</h3>
 

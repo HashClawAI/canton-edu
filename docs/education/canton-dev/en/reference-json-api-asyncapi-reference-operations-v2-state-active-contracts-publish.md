@@ -25,11 +25,11 @@ tags:
 <div className="x2mdx-ref-operation-shell">
   <div className="x2mdx-ref-operation-main">
     <div class="x2mdx-ref-breadcrumbs" role="navigation" aria-label="Breadcrumb">
-      <a href="../details">JSON API AsyncAPI</a>
+      <a href="/docs/canton/reference-json-api-asyncapi-reference-operations-details">JSON API AsyncAPI</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="./details">/v2/state/active-contracts</a>
+      <a href="/docs/canton/reference-json-api-asyncapi-reference-operations-v2-state-active-contracts-details">/v2/state/active-contracts</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 

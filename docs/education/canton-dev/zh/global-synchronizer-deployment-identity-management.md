@@ -192,7 +192,7 @@ Canton 拓扑管理者有一项决不能失败的关键任务：不要失去对�
 * 活动/停用状态（可用于暂时禁止用户访问 Ledger API）
 * 可选的主要方（指示作为该用户提交 Ledger API 命令请求时默认使用哪一方）
 * 一组用户权限（描述用户是否有权访问 Ledger API 的管理部分以及该用户可以充当或读取哪些方）
-* 一组自定义注释（基于字符串的键值对，本地存储在 Ledger API 服务器上，可用于向该方附加额外信息，例如它与某些业务实体的关系）除用户 ID 之外的所有这些属性都可以修改。要了解有关注释的更多信息，请参阅 Ledger API 参考文档。有关 Ledger API 的 UserManagementService 的概述，请参阅 [Ledger API 参考](/sdks-tools/api-reference/ledger-api)。
+* 一组自定义注释（基于字符串的键值对，本地存储在 Ledger API 服务器上，可用于向该方附加额外信息，例如它与某些业务实体的关系）除用户 ID 之外的所有这些属性都可以修改。要了解有关注释的更多信息，请参阅 Ledger API 参考文档。有关 Ledger API 的 UserManagementService 的概述，请参阅 [Ledger API 参考](https://docs.canton.network/sdks-tools/api-reference/ledger-api)。
 
 您可以通过 Canton 控制台用户管理命令（alpha 功能）来管理用户。请参阅下面的食谱，了解如何管理用户的一些具体示例。
 

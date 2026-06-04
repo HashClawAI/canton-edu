@@ -15,7 +15,7 @@ tags:
 
 > com.daml.ledger.api.v2.admin 的包级概述。
 
-<p class="x2mdx-ref-back"><a href="./details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-grpc-ledger-api-reference-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>
@@ -283,7 +283,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/commandinspectionservice/getcommandstatus">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-commandinspectionservice-getcommandstatus">
     <div class="x2mdx-ref-card-head">
       <h3>CommandInspectionService.GetCommandStatus</h3>
 
@@ -333,7 +333,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/identityproviderconfigservice/createidentityproviderconfig">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-identityproviderconfigservice-createidentityproviderconfig">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityProviderConfigService.CreateIdentityProviderConfig</h3>
 
@@ -369,7 +369,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/identityproviderconfigservice/deleteidentityproviderconfig">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-identityproviderconfigservice-deleteidentityproviderconfig">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityProviderConfigService.DeleteIdentityProviderConfig</h3>
 
@@ -405,7 +405,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/identityproviderconfigservice/getidentityproviderconfig">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-identityproviderconfigservice-getidentityproviderconfig">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityProviderConfigService.GetIdentityProviderConfig</h3>
 
@@ -439,7 +439,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/identityproviderconfigservice/listidentityproviderconfigs">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-identityproviderconfigservice-listidentityproviderconfigs">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityProviderConfigService.ListIdentityProviderConfigs</h3>
 
@@ -475,7 +475,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/identityproviderconfigservice/updateidentityproviderconfig">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-identityproviderconfigservice-updateidentityproviderconfig">
     <div class="x2mdx-ref-card-head">
       <h3>IdentityProviderConfigService.UpdateIdentityProviderConfig</h3>
 
@@ -527,7 +527,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/packagemanagementservice/listknownpackages">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-packagemanagementservice-listknownpackages">
     <div class="x2mdx-ref-card-head">
       <h3>PackageManagementService.ListKnownPackages</h3>
 
@@ -561,7 +561,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/packagemanagementservice/updatevettedpackages">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-packagemanagementservice-updatevettedpackages">
     <div class="x2mdx-ref-card-head">
       <h3>PackageManagementService.UpdateVettedPackages</h3>
 
@@ -597,7 +597,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/packagemanagementservice/uploaddarfile">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-packagemanagementservice-uploaddarfile">
     <div class="x2mdx-ref-card-head">
       <h3>PackageManagementService.UploadDarFile</h3>
 
@@ -633,7 +633,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/packagemanagementservice/validatedarfile">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-packagemanagementservice-validatedarfile">
     <div class="x2mdx-ref-card-head">
       <h3>PackageManagementService.ValidateDarFile</h3>
 
@@ -683,7 +683,7 @@ tags:
     <dd>1</dd>
   </div>
 </dl><div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/参与方pruningservice/prune">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-participantpruningservice-prune">
     <div class="x2mdx-ref-card-head">
       <h3>参与方PruningService.Prune</h3>
 
@@ -735,7 +735,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/allocateexternalparty">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-allocateexternalparty">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.AllocateExternalParty</h3>
 
@@ -771,7 +771,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/allocateparty">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-allocateparty">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.AllocateParty</h3>
 
@@ -807,7 +807,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/generateexternalpartytopology">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-generateexternalpartytopology">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.GenerateExternalPartyTopology</h3>
 
@@ -841,7 +841,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/get参与方id">
+  <a class="x2mdx-ref-card" href="https://docs.canton.network/reference/grpc-ledger-api-reference/com-daml-ledger-api-v2-admin/partymanagementservice/get参与方id">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.Get参与方Id</h3>
 
@@ -877,7 +877,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/getparties">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-getparties">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.GetParties</h3>
 
@@ -913,7 +913,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/listknownparties">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-listknownparties">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.ListKnownParties</h3>
 
@@ -947,7 +947,7 @@ tags:
         <dd>否</dd>
       </div>
     </dl>
-  </a><a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/updatepartydetails">
+  </a><a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-updatepartydetails">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.UpdatePartyDetails</h3>
 
@@ -983,7 +983,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/partymanagementservice/updatepartyidentityproviderid">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-partymanagementservice-updatepartyidentityproviderid">
     <div class="x2mdx-ref-card-head">
       <h3>PartyManagementService.UpdatePartyIdentityProviderId</h3>
 
@@ -1035,7 +1035,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/createuser">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-createuser">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.CreateUser</h3>
 
@@ -1071,7 +1071,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/deleteuser">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-deleteuser">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.DeleteUser</h3>
 
@@ -1105,7 +1105,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/getuser">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-getuser">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.GetUser</h3>
 
@@ -1141,7 +1141,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/grantuserrights">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-grantuserrights">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.GrantUserRights</h3>
 
@@ -1177,7 +1177,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/listuserrights">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-listuserrights">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.ListUserRights</h3>
 
@@ -1211,7 +1211,7 @@ tags:
         <dd>否</dd>
       </div>
     </dl>
-  </a><a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/listusers">
+  </a><a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-listusers">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.ListUsers</h3>
 
@@ -1247,7 +1247,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/revokeuserrights">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-revokeuserrights">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.RevokeUserRights</h3>
 
@@ -1283,7 +1283,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/updateuser">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-updateuser">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.UpdateUser</h3>
 
@@ -1319,7 +1319,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-admin/usermanagementservice/updateuseridentityproviderid">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-admin-usermanagementservice-updateuseridentityproviderid">
     <div class="x2mdx-ref-card-head">
       <h3>UserManagementService.UpdateUserIdentityProviderId</h3>
 

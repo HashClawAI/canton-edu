@@ -66,7 +66,7 @@ Each identity is relevant on different layers, or within different subsystems, o
 
 ### Participant identities
 
-* Used for securing Daml workflows and for determining an SV's `svPartyId`, which is used for various DSO governance flows as well as for receiving SV rewards. For general information on Canton and Daml identities see the [Canton documentation on Identity Management](/sdks-tools/api-reference/ledger-api-services#user-management-service).
+* Used for securing Daml workflows and for determining an SV's `svPartyId`, which is used for various DSO governance flows as well as for receiving SV rewards. For general information on Canton and Daml identities see the [Canton documentation on Identity Management](https://docs.canton.network/sdks-tools/api-reference/ledger-api-services#user-management-service).
 * Participant identities are important for multiple types of quorums
   * Quorums for confirming Daml transactions as the DSO party (>⅓ of onboarded SVs)
   * Quorums for administering the domain topology on behalf of the DSO party (>⅔ of onboarded SVs once activated)

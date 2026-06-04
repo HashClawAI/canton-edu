@@ -29,7 +29,7 @@ In this module, you will learn about the structure of a Daml ledger and how to w
 
 ## Prerequisites
 
-* You have installed [dpm](/sdks-tools/cli-tools/dpm)
+* You have installed [dpm](https://docs.canton.network/sdks-tools/cli-tools/dpm)
 
 ## Loading Example Code
 

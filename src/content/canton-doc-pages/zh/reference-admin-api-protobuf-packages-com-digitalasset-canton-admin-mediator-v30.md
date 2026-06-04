@@ -16,7 +16,7 @@ tags:
 
 > com.digitalasset.canton.admin.mediator.v30 的包级别概述。
 
-<p class="x2mdx-ref-back"><a href="../index">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-admin-api-protobuf-index">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>
@@ -106,7 +106,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-admin-mediator-v30/mediatorstatusservice/mediatorstatus">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-admin-mediator-v30-mediatorstatusservice-mediatorstatus">
     <div class="x2mdx-ref-card-head">
       <h3>MediatorStatusService.MediatorStatus</h3>
 

@@ -390,9 +390,9 @@ You can open your browser at [http://ans.localhost](http://ans.localhost) (note 
 
 ### Accessing the Canton Participant APIs
 
-The [JSON Ledger API](/sdks-tools/api-reference/json-api) is exposed under `json-ledger-api.localhost:80`. Note that for some clients you may explicitly need to set the `Host: json-ledger-api.localhost` header for this to get resolved correctly.
+The [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api) is exposed under `json-ledger-api.localhost:80`. Note that for some clients you may explicitly need to set the `Host: json-ledger-api.localhost` header for this to get resolved correctly.
 
-The [gRPC Ledger API](/sdks-tools/api-reference/ledger-api) is exposed under `grpc-ledger-api.localhost:80`. Note that for some clients you may explicitly need to set the `:authority: json-ledger-api.localhost` pseudo-header for this to get resolved correctly.
+The [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api) is exposed under `grpc-ledger-api.localhost:80`. Note that for some clients you may explicitly need to set the `:authority: json-ledger-api.localhost` pseudo-header for this to get resolved correctly.
 
 The Canton Admin API is not exposed by default as it does not yet support auth. There is a commented out section in `nginx.conf` that you can enable to expose it if you ensure that it is not exposed publicly, e.g., through network restrictions.
 

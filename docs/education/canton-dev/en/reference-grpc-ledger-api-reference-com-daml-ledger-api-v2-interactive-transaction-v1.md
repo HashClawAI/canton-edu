@@ -21,7 +21,7 @@ tags:
 
 > Package-level overview for com.daml.ledger.api.v2.interactive.transaction.v1.
 
-<p class="x2mdx-ref-back"><a href="./details">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-grpc-ledger-api-reference-details">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>

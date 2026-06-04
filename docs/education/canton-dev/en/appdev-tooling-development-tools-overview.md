@@ -37,7 +37,7 @@ dpm sandbox               # Start a local Sandbox node
 dpm studio                # Launch Daml Studio (VS Code)
 ```
 
-DPM replaces the older `daml` CLI and is the recommended entry point for all build and project tasks. See the [DPM reference](/sdks-tools/cli-tools/dpm) for the full command set.
+DPM replaces the older `daml` CLI and is the recommended entry point for all build and project tasks. See the [DPM reference](https://docs.canton.network/sdks-tools/cli-tools/dpm) for the full command set.
 
 ## Daml Studio (VS Code Extension)
 
@@ -76,7 +76,7 @@ Sandbox gives you a local validator with an in-memory ledger. It is fast to star
 
 Sandbox does not simulate multi-validator or multi-party-on-different-validator scenarios. For that, use LocalNet.
 
-See [Sandbox](/sdks-tools/development-tools/sandbox) for configuration options.
+See [Sandbox](https://docs.canton.network/sdks-tools/development-tools/sandbox) for configuration options.
 
 ## LocalNet
 
@@ -91,7 +91,7 @@ make start
 
 LocalNet provides a local synchronizer, multiple validator nodes, test Canton Coin with faucet access, and a Splice wallet. It is the right environment for integration testing, multi-party workflows, and end-to-end application testing before deploying to DevNet.
 
-See [LocalNet](/sdks-tools/development-tools/localnet) for details.
+See [LocalNet](/docs/canton/appdev-modules-m5-localnet-development) for details.
 
 ## PQS (Participant Query Store)
 
@@ -106,7 +106,7 @@ PQS is useful when you need:
 
 PQS respects the same privacy boundaries as the Ledger API -- it contains only the data your party is entitled to see.
 
-See [PQS](/sdks-tools/development-tools/pqs) and the [PQS SQL Reference](/docs/canton/api-reference) for schema details and query examples.
+See [PQS](https://docs.canton.network/sdks-tools/development-tools/pqs) and the [PQS SQL Reference](/docs/canton/api-reference) for schema details and query examples.
 
 ## Choosing the Right Tool
 

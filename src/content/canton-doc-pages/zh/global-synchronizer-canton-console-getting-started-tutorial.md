@@ -18,7 +18,7 @@ tags:
 > 安装 Canton、了解核心概念和运行您的第一个交易的分步教程
 
 <div className="todo">
-  change the section where we provision smart contract code: - create a new empty project - use the "Understanding IOUs" section to explain the structure of a daml contract (see [Java language bindings](/sdks-tools/language-bindings/java)) - transact on the IOU contract using curl and JSON Ledger API, not via console commands
+  change the section where we provision smart contract code: - create a new empty project - use the "Understanding IOUs" section to explain the structure of a daml contract (see [Java language bindings](https://docs.canton.network/sdks-tools/language-bindings/java)) - transact on the IOU contract using curl and JSON Ledger API, not via console commands
 </div>
 
 # 开始使用
@@ -34,7 +34,7 @@ tags:
 
 ## 安装
 
-Canton 是一个 JVM 应用程序。要本机运行它，您需要在系统上安装 Java 11 或更高版本。另外，Canton 也可以作为 Docker 镜像在 `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton` 上使用；已发布的标签列在 [decentralized-canton-sync 包页面](https://github.com/digital-asset/decentralized-canton-sync/pkgs/container/decentralized-canton-sync%2Fdocker%2Fcanton) 上。请参阅[版本兼容性仪表板](/shared/version-compatibility-dashboard) 了解每个网络的当前标签。
+Canton 是一个 JVM 应用程序。要本机运行它，您需要在系统上安装 Java 11 或更高版本。另外，Canton 也可以作为 Docker 镜像在 `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton` 上使用；已发布的标签列在 [decentralized-canton-sync 包页面](https://github.com/digital-asset/decentralized-canton-sync/pkgs/container/decentralized-canton-sync%2Fdocker%2Fcanton) 上。请参阅[版本兼容性仪表板](https://docs.canton.network/shared/version-compatibility-dashboard) 了解每个网络的当前标签。
 
 Canton 与平台无关。出于开发目的，它可以在 macOS、Linux 和 Windows 上运行。 Linux 是支持的生产平台。
 
@@ -181,7 +181,7 @@ To understand the basic elements of Canton, let's briefly look at this starting 
   <img src="https://mintcdn.com/cantonfoundation/53J3Euu6q0XOxgPz/global-synchronizer/canton-console/images/canton-tutorial-elements.svg?fit=max&auto=format&n=53J3Euu6q0XOxgPz&q=85&s=502780581cb91f75f8e189c11ed1883e" alt="images/canton-tutorial-elements.svg" width="1200" height="937" data-path="global-synchronizer/canton-console/images/canton-tutorial-elements.svg" />
 </figure>
 
-参与者节点为其各方提供 [gRPC Ledger API](/sdks-tools/api-reference/ledger-api) 作为访问账本的方式。各方可以使用控制台手动与 gRPC Ledger API 进行交互，但实际上，这些各方使用应用程序来处理交互并在用户友好的界面中显示数据。
+参与者节点为其各方提供 [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api) 作为访问账本的方式。各方可以使用控制台手动与 gRPC Ledger API 进行交互，但实际上，这些各方使用应用程序来处理交互并在用户友好的界面中显示数据。
 
 除了 gRPC Ledger API 之外，每个参与者节点还公开一个*管理 API*。管理员 API 允许管理员（即您）：
 
@@ -914,7 +914,7 @@ Alice 将在她的节点上观察到此优惠：
 
 ## 您的发展选择
 
-虽然控制台中的 `ledger_api` 功能可以方便地用于教育目的，但 Daml SDK 为您提供了更方便的工具来检查和操作分类帐内容： - [Daml 脚本](/sdks-tools/cli-tools/daml-script) 用于脚本编写 - [语言绑定](/sdks-tools/language-bindings/java) 用于构建您自己的应用程序
+虽然控制台中的 `ledger_api` 功能可以方便地用于教育目的，但 Daml SDK 为您提供了更方便的工具来检查和操作分类帐内容： - [Daml 脚本](https://docs.canton.network/sdks-tools/cli-tools/daml-script) 用于脚本编写 - [语言绑定](https://docs.canton.network/sdks-tools/language-bindings/java) 用于构建您自己的应用程序
 
 所有这些工具都针对 Ledger API 工作。
 

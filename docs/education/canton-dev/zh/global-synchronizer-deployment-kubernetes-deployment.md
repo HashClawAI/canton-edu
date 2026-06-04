@@ -60,7 +60,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证器的备份部分](/global-同步器/生产操作/validator-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证器的备份部分](/zh/docs/canton/global-synchronizer-production-operations-validator-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </警告>
   </标签>
 
@@ -100,7 +100,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证器的备份部分](/global-同步器/生产操作/validator-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证器的备份部分](/zh/docs/canton/global-synchronizer-production-operations-validator-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </警告>
   </标签>
 
@@ -140,7 +140,7 @@ tags:
 
       您只能依靠自己的备份。
 
-      （更多信息请参见[验证器的备份部分](/global-同步器/生产操作/validator-backups)或[SV的备份部分](/global-同步器/生产操作/sv-backup))
+      （更多信息请参见[验证器的备份部分](/zh/docs/canton/global-synchronizer-production-operations-validator-backups)或[SV的备份部分](/zh/docs/canton/global-synchronizer-production-operations-sv-backup))
     </警告>
   </标签>
 </标签>

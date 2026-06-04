@@ -15,7 +15,7 @@ tags:
 
 > com.daml.ledger.api.v2.interactive 的包级概述。
 
-<p class="x2mdx-ref-back"><a href="./details">返回概览</a></p>
+<p class="x2mdx-ref-back"><a href="/zh/docs/canton/reference-grpc-ledger-api-reference-details">返回概览</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf 包</p>
@@ -133,7 +133,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/executesubmission">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-executesubmission">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.ExecuteSubmission</h3>
 
@@ -169,7 +169,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/executesubmissionandwait">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-executesubmissionandwait">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.ExecuteSubmissionAndWait</h3>
 
@@ -203,7 +203,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/executesubmissionandwaitfortransaction">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-executesubmissionandwaitfortransaction">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.ExecuteSubmissionAndWaitForTransaction</h3>
 
@@ -239,7 +239,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/getpreferredpackageversion">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-getpreferredpackageversion">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.GetPreferredPackageVersion</h3>
 
@@ -273,7 +273,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/getpreferredpackages">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-getpreferredpackages">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.GetPreferredPackages</h3>
 
@@ -309,7 +309,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./com-daml-ledger-api-v2-interactive/interactivesubmissionservice/preparesubmission">
+  <a class="x2mdx-ref-card" href="/zh/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2-interactive-interactivesubmissionservice-preparesubmission">
     <div class="x2mdx-ref-card-head">
       <h3>InteractiveSubmissionService.PrepareSubmission</h3>
 

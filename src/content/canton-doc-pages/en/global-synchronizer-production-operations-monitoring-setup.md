@@ -38,7 +38,7 @@ how should this relate to the other observability docs that we have? we have the
 This section provides an example of how Canton can be run inside a connected network of Docker containers. The example also shows how you can monitor network activity. See the [glossary](/docs/canton/overview-understand-glossary) for monitoring term definitions and the [Monitoring Choices](#monitoring-choices) section for the reasoning behind the example monitoring setup.
 
 <Note>
-  The Canton container image is published at `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`. The example Docker Compose snippets below use `${CANTON_VERSION}` as a placeholder for the tag — export `CANTON_VERSION` to the value for your target network before running them, or substitute it inline. See the [Version Compatibility Dashboard](/shared/version-compatibility-dashboard) for the current tag on MainNet, TestNet, and DevNet.
+  The Canton container image is published at `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`. The example Docker Compose snippets below use `${CANTON_VERSION}` as a placeholder for the tag — export `CANTON_VERSION` to the value for your target network before running them, or substitute it inline. See the [Version Compatibility Dashboard](https://docs.canton.network/shared/version-compatibility-dashboard) for the current tag on MainNet, TestNet, and DevNet.
 </Note>
 
 ### Container Setup

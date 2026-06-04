@@ -39,7 +39,7 @@ Daml models must be written in the Daml language. Your application's backend and
 * **JavaScript/TypeScript** can use the JSON API (HTTP) or gRPC client libraries. The cn-quickstart includes a TypeScript frontend as a reference
 * **Python and Go** can use gRPC client libraries generated from the Ledger API `.proto` files
 
-There are also community-maintained bindings for some languages. See the [language bindings](/sdks-tools/language-bindings/community) page.
+There are also community-maintained bindings for some languages. See the [language bindings](https://docs.canton.network/sdks-tools/language-bindings/community) page.
 
 ### Where do I find example code?
 

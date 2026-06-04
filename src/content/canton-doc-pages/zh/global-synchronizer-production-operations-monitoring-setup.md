@@ -22,7 +22,7 @@ tags:
 对于 Splice / Canton Network 的具体指标 - 每个组件公开什么、如何抓取它以及在验证者和超级验证者上观察哪些指标 - 请参阅：
 
 * [Splice 指标概述](/global-synchronizer/生产-操作/Splice 指标-概述)
-* [关键指标](/global-synchronizer/生产运营/关键指标)
+* [关键指标](https://docs.canton.network/global-synchronizer/生产运营/key-metrics)
 * [指标参考](/zh/docs/canton/global-synchronizer-reference-metrics-reference)
 
 本指南和脚本/配置未经测试，它们仍然有效吗？尝试将其分解为特定的操作方法，并确保配置/脚本移至经过测试的示例。
@@ -34,7 +34,7 @@ tags:
 本节提供了如何在 Docker 容器的连接网络中运行 Canton 的示例。该示例还展示了如何监视网络活动。请参阅[词汇表](/zh/docs/canton/overview-understand-glossary) 了解监控术语定义，并参阅[监控选择](#monitoring-choices) 部分了解示例监控设置背后的原因。
 
 <Note>
-  Canton 容器镜像发布于`ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`。下面的示例 Docker Compose 片段使用 `${CANTON_VERSION}` 作为标签的占位符 — 在运行它们之前将 `CANTON_VERSION` 导出到目标网络的值，或者内联替换它。请参阅 [版本兼容性仪表板](/shared/version-compatibility-dashboard) 了解 MainNet、TestNet 和 DevNet 上的当前标签。
+  Canton 容器镜像发布于`ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`。下面的示例 Docker Compose 片段使用 `${CANTON_VERSION}` 作为标签的占位符 — 在运行它们之前将 `CANTON_VERSION` 导出到目标网络的值，或者内联替换它。请参阅 [版本兼容性仪表板](https://docs.canton.network/shared/version-compatibility-dashboard) 了解 MainNet、TestNet 和 DevNet 上的当前标签。
 </Note>
 
 ### 容器设置

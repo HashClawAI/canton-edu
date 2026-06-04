@@ -54,7 +54,7 @@ Quickstart 提供生产级 Daml 应用基础与完整可观测性配置；技术
 
 当前排障与调试服务包括：
 
-* 经 [Daml Shell](/sdks-tools/cli-tools/daml-shell) 本地检查账本
+* 经 [Daml Shell](https://docs.canton.network/sdks-tools/cli-tools/daml-shell) 本地检查账本
 * 经 **OpenTelemetry** 采集与管理数据源
   * 使用 **OTEL Collector**（[文档](https://opentelemetry.io/docs/collector)）
 * 指标由 **Prometheus** 聚合（[https://prometheus.io/](https://prometheus.io/)）
@@ -372,7 +372,7 @@ Grafana 亦暴露 Tempo/Prometheus 原始查询，值得实验；日志检查用
 
 [^3]: Daml shell has tab completion on most command arguments, including the Template Id argument to `active` and the Contract Id argument to contract.
 
-[^4]: Further documentation is available in the [Daml Shell reference](/sdks-tools/cli-tools/daml-shell).
+[^4]: Further documentation is available in the [Daml Shell reference](https://docs.canton.network/sdks-tools/cli-tools/daml-shell).
 
     <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/docs_website/footnote-04-daml-shell-cli.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=9d7e6774522394445fdb410d894d2e45" alt="&#x22;Daml Shell command line interface&#x22;" width="1342" height="2048" data-path="images/docs_website/footnote-04-daml-shell-cli.png" />
 

@@ -152,7 +152,7 @@ withdrawals and deposits for those tokens.
 The `.dar` files for Canton Coin are managed by the Validator Node itself.
 The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` endpoint of the
 [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316).
-See this [how-to guide](/appdev/deep-dives/manage-daml-packages)
+See this [how-to guide](/docs/canton/appdev-modules-m5-manage-daml-packages)
 for more information.
 
 <Warning title="Important">

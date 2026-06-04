@@ -37,7 +37,7 @@ Follow these steps to install a recent, compatible OSS Daml SDK version:
    curl -sSL https://get.digitalasset.com/ | sh
    ```
 
-For more information about installing the Daml SDK, see the [DPM installation guide](/sdks-tools/cli-tools/dpm).
+For more information about installing the Daml SDK, see the [DPM installation guide](https://docs.canton.network/sdks-tools/cli-tools/dpm).
 
 ---
 

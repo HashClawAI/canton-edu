@@ -29,11 +29,11 @@ tags:
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../../index">Protobuf</a>
+      <a href="/docs/canton/reference-admin-api-protobuf-index">Protobuf</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 
-      <a href="../../../packages/com-digitalasset-canton-admin-sequencer-v30">com.digitalasset.canton.admin.sequencer.v30</a>
+      <a href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-sequencer-v30">com.digitalasset.canton.admin.sequencer.v30</a>
 
       <span class="x2mdx-ref-breadcrumb-separator">›</span>
 

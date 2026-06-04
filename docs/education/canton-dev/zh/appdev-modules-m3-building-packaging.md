@@ -48,7 +48,7 @@ DAR 类似 JAR，为 ZIP。`dpm build -o assets.dar` 后 `dpm damlc inspect-dar 
 
 ## 使用 dpm 构建
 
-Canton Network 项目用 [`dpm`](/sdks-tools/cli-tools/dpm)：
+Canton Network 项目用 [`dpm`](https://docs.canton.network/sdks-tools/cli-tools/dpm)：
 
 * `dpm build` — 编译并产出 DAR
 * `dpm build --all` — 多包项目全部构建

@@ -23,7 +23,7 @@ Daml 是一种智能合约语言，用于在 Canton 账本上构建可组合应�
 
 ## 前置条件
 
-* 已安装 [dpm](/sdks-tools/cli-tools/dpm)
+* 已安装 [dpm](https://docs.canton.network/sdks-tools/cli-tools/dpm)
 
 ## 加载示例代码
 

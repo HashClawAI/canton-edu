@@ -58,7 +58,7 @@ The Quickstart application provides a foundational production Daml application. 
 
 The current troubleshooting and debugging services include:
 
-* Local ledger inspection via [Daml Shell](/sdks-tools/cli-tools/daml-shell)
+* Local ledger inspection via [Daml Shell](https://docs.canton.network/sdks-tools/cli-tools/daml-shell)
 * Datasource collection and management via **OpenTelemetry**
   * This uses the **OTEL Collector** ([https://opentelemetry.io/docs/collector](https://opentelemetry.io/docs/collector))
 * Metrics are aggregated using **Prometheus** ([https://prometheus.io/](https://prometheus.io/))
@@ -376,7 +376,7 @@ A starting point for finding documentation on these see:
 
 [^3]: Daml shell has tab completion on most command arguments, including the Template Id argument to `active` and the Contract Id argument to contract.
 
-[^4]: Further documentation is available in the [Daml Shell reference](/sdks-tools/cli-tools/daml-shell).
+[^4]: Further documentation is available in the [Daml Shell reference](https://docs.canton.network/sdks-tools/cli-tools/daml-shell).
 
     <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/docs_website/footnote-04-daml-shell-cli.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=9d7e6774522394445fdb410d894d2e45" alt="&#x22;Daml Shell command line interface&#x22;" width="1342" height="2048" data-path="images/docs_website/footnote-04-daml-shell-cli.png" />
 

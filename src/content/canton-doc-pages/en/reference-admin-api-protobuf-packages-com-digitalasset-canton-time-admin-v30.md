@@ -22,7 +22,7 @@ tags:
 
 > Package-level overview for com.digitalasset.canton.time.admin.v30.
 
-<p class="x2mdx-ref-back"><a href="../index">Back to overview</a></p>
+<p class="x2mdx-ref-back"><a href="/docs/canton/reference-admin-api-protobuf-index">Back to overview</a></p>
 
 <div class="x2mdx-ref-hero">
   <p class="x2mdx-ref-eyebrow">Protobuf Package</p>
@@ -112,7 +112,7 @@ tags:
 </dl>
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-time-admin-v30/synchronizertimeservice/awaittime">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-time-admin-v30-synchronizertimeservice-awaittime">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerTimeService.AwaitTime</h3>
 
@@ -148,7 +148,7 @@ tags:
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="../operations/com-digitalasset-canton-time-admin-v30/synchronizertimeservice/fetchtime">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-operations-com-digitalasset-canton-time-admin-v30-synchronizertimeservice-fetchtime">
     <div class="x2mdx-ref-card-head">
       <h3>SynchronizerTimeService.FetchTime</h3>
 

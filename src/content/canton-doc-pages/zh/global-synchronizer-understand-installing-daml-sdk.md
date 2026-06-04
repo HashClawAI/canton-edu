@@ -31,7 +31,7 @@ tags:
    curl -sSL https://get.digitalasset.com/ | sh
    ```
 
-有关安装 Daml SDK 的更多信息，请参阅[DPM 安装指南](/sdks-tools/cli-tools/dpm)。
+有关安装 Daml SDK 的更多信息，请参阅[DPM 安装指南](https://docs.canton.network/sdks-tools/cli-tools/dpm)。
 
 ---
 

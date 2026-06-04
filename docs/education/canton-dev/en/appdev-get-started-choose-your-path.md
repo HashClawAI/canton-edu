@@ -130,7 +130,7 @@ Before starting development:
 ### Development Environment
 
 <CardGroup cols={2}>
-  <Card title="Daml SDK" icon="download" href="/sdks-tools/sdks/daml-sdk">
+  <Card title="Daml SDK" icon="download" href="https://docs.canton.network/sdks-tools/sdks/daml-sdk">
     Install the SDK including Daml compiler and tools.
   </Card>
 

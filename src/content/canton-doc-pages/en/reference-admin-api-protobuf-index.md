@@ -425,7 +425,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Participant Administration
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-participant-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-participant-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.participant.v30</h3>
 
@@ -463,7 +463,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Sequencer
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-sequencer-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-sequencer-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.sequencer.v30</h3>
 
@@ -501,7 +501,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Mediator
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-mediator-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-mediator-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.mediator.v30</h3>
 
@@ -539,7 +539,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Shared Administration
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-health-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-health-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.health.v30</h3>
 
@@ -573,7 +573,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-crypto-admin-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-crypto-admin-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.crypto.admin.v30</h3>
 
@@ -607,7 +607,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-time-admin-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-time-admin-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.time.admin.v30</h3>
 
@@ -641,7 +641,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-topology-admin-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-topology-admin-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.topology.admin.v30</h3>
 
@@ -679,7 +679,7 @@ Counts are shown as added / changed / removed within each release slice.
 ## Schema Packages
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin</h3>
 
@@ -713,7 +713,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-crypto-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-crypto-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.crypto.v30</h3>
 
@@ -747,7 +747,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-pruning-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-pruning-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.pruning.v30</h3>
 
@@ -781,7 +781,7 @@ Counts are shown as added / changed / removed within each release slice.
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="./packages/com-digitalasset-canton-admin-time-v30">
+  <a class="x2mdx-ref-card" href="/docs/canton/reference-admin-api-protobuf-packages-com-digitalasset-canton-admin-time-v30">
     <div class="x2mdx-ref-card-head">
       <h3>com.digitalasset.canton.admin.time.v30</h3>
 

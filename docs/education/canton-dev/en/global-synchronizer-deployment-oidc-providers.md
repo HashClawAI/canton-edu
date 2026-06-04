@@ -30,7 +30,7 @@ tags:
 
 To deploy a validator node, configure authentication using your preferred OIDC provider.
 This section provides instructions for Okta and Keycloak.
-For Auth0 instructions and more details on configuring authentication, see [Configuring Authentication](/global-synchronizer/deployment/installation#configuring-authentication).
+For Auth0 instructions and more details on configuring authentication, see [Configuring Authentication](/docs/canton/global-synchronizer-deployment-validator-docker-compose#configuring-authentication).
 
 Thanks to Stéphane Loeuillet for contributing input in a [community discussion](https://github.com/global-synchronizer-foundation/docs/discussions/15#discussioncomment-12877002), which forms the basis of the Okta section in this document.
 
