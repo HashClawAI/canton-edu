@@ -163,7 +163,7 @@ For current network statistics, visit:
 ### As a Developer
 
 1. Start with the [QuickStart](/appdev/quickstart)
-2. Learn [Daml](/appdev/get-started/choose-your-path)
+2. Learn [Daml](/docs/canton/appdev-get-started-choose-your-path)
 3. Build and deploy your application
 4. Join the developer community {/* TODO: Add Slack link once available */}
 
@@ -197,11 +197,11 @@ Check [canton.network](https://canton.network) for upcoming events.
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Integration Patterns" icon="puzzle-piece" href="/integrations/integration-patterns">
+  <Card title="Integration Patterns" icon="puzzle-piece" href="/docs/canton/integrations-integration-patterns">
     Learn common integration approaches.
   </Card>
 
-  <Card title="Start Building" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Start Building" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Begin developing on Canton Network.
   </Card>
 </CardGroup>

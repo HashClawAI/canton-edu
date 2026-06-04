@@ -84,7 +84,7 @@ These changes are **not** backward-compatible and will be rejected by the compil
 * Removing interface instances from templates
 * Changing interface definitions
 
-If you need to make a breaking change, create new templates with the desired structure and add `Upgrade` choices to the old templates that archive old contracts and create new ones. See [SCU compatibility rules](/appdev/modules/m6-writing-first-upgrade#step-3-verify-compatibility) for details on what the compiler checks.
+If you need to make a breaking change, create new templates with the desired structure and add `Upgrade` choices to the old templates that archive old contracts and create new ones. See [SCU compatibility rules](/docs/canton/appdev-modules-m6-writing-first-upgrade#step-3-verify-compatibility) for details on what the compiler checks.
 
 ## Backend Compatibility
 
@@ -102,8 +102,8 @@ The Daml compiler validates upgrade compatibility between v1 and v2 at build tim
 
 ## Next Steps
 
-* [Writing Your First Upgrade](/appdev/modules/m6-writing-first-upgrade) — Step-by-step tutorial for creating a v2 package
-* [Package Selection](/appdev/modules/m6-package-selection) — How the ledger resolves package versions
+* [Writing Your First Upgrade](/docs/canton/appdev-modules-m6-writing-first-upgrade) — Step-by-step tutorial for creating a v2 package
+* [Package Selection](/docs/canton/appdev-modules-m6-package-selection) — How the ledger resolves package versions
 
 ---
 

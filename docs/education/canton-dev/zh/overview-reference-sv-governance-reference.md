@@ -32,7 +32,7 @@ CC、CNS 和全局同步器治理以去中心化方式实现，以容忍最多 `
 
 因此，愿意假设不超过 `f` 个 SV 节点不诚实的 CC 和 CNS 用户可以依赖以下保证：
 
-* **有效交易**：每笔需要DSO方确认的交易都是[有效](/overview/learn/ledger-model)。
+* **有效交易**：每笔需要DSO方确认的交易都是[有效](/zh/docs/canton/overview-learn-ledger-model)。
 * **及时自动化**：DSO 方需要采取的行动及时采取。
 * **可预测的费用和配置值**：费用和配置值是可以合理预测的，因为它们代表了 SV 运营商约 2/3 的“总偏好”，可以假设这些运营商是按照自己的最佳利益行事的。
 
@@ -123,7 +123,7 @@ CC-USD 汇率基于中位数的方法意味着每个 SV 运营商都会发布他
 
 对 Canton 网络标准和协议的正式变更要经过 Canton 改进提案 (CIP) 流程。 CIP 涵盖技术规范、治理程序和信息指南。 SV 通过上述相同的链上治理机制对 CIP 的采用进行投票。
 
-有关 CIP 生命周期以及如何参与的完整概述，请参阅[什么是 CIP？](/overview/reference/what-are-cips)。 CIP 存储库维护在 [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips)。
+有关 CIP 生命周期以及如何参与的完整概述，请参阅[什么是 CIP？](/zh/docs/canton/overview-reference-what-are-cips)。 CIP 存储库维护在 [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips)。
 
 ## 全球同步器基金会
 
@@ -146,7 +146,7 @@ GSF 对网络没有单方面控制权。其 SV 节点与任何其他 SV 具有�
 
 链上投票和去中心化自动化的结合为网络参与者提供了三项保证，他们相信不超过 `f` SV 是不诚实的：
 
-* **有效交易** -- 每个 DSO 确认的交易都满足 Daml 的[账本有效性模型](/overview/learn/ledger-model)
+* **有效交易** -- 每个 DSO 确认的交易都满足 Daml 的[账本有效性模型](/zh/docs/canton/overview-learn-ledger-model)
 * **及时自动化** -- 例行操作动作（回合晋级、奖励发放）立即执行
 * **可预测的参数** -- 费用和配置值反映了至少三分之二的 SV 运营商的总体偏好
 

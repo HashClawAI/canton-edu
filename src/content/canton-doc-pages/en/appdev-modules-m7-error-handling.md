@@ -51,7 +51,7 @@ A timeout does **not** mean the command failed. It may have succeeded but the re
 
 If your validator's traffic budget is exhausted, command submissions fail with an error indicating insufficient traffic. This is not a transient error -- retrying will not help until the traffic budget is replenished (either manually or via auto-top-up).
 
-See [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) for how to manage traffic credits.
+See [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) for how to manage traffic credits.
 
 ## Handling Contention
 
@@ -141,9 +141,9 @@ Commands that fail after all retries should be logged with full context (command
 
 ## Further Reading
 
-* [Backend Development](/appdev/modules/m4-backend-dev) -- Ledger API client setup, including error handling examples
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- Managing traffic to avoid submission failures
-* [Observability](/appdev/modules/m4-observability) -- Logging and metrics for error tracking
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- Ledger API client setup, including error handling examples
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- Managing traffic to avoid submission failures
+* [Observability](/docs/canton/appdev-modules-m4-observability) -- Logging and metrics for error tracking
 
 ---
 

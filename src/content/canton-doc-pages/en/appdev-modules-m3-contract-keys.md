@@ -90,7 +90,7 @@ It returns a tuple of the ID and the contract object (containing all its data).
 
 Like `fetch`, `fetchByKey` needs to be authorized by at least one stakeholder.
 
-`fetchByKey` fails and aborts the transaction with a [`CONTRACT_KEY_NOT_FOUND`](/appdev/reference/error-codes#contracts-and-transactions) error if no contract with the given key is visible to the submitting party.
+`fetchByKey` fails and aborts the transaction with a [`CONTRACT_KEY_NOT_FOUND`](/docs/canton/appdev-reference-error-codes#contracts-and-transactions) error if no contract with the given key is visible to the submitting party.
 
 ### lookupByKey
 

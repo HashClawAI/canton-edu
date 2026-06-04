@@ -25,9 +25,9 @@ This page covers Canton-side monitoring topics: an example containerised monitor
 
 For Splice / Canton Network metrics specifically — what each component exposes, how to scrape it, and which metrics to watch on validators and Super Validators — see:
 
-* [Splice Metrics Overview](/global-synchronizer/production-operations/splice-metrics-overview)
-* [Key Metrics](/global-synchronizer/production-operations/key-metrics)
-* [Metrics Reference](/global-synchronizer/reference/metrics-reference)
+* [Splice Metrics Overview](/docs/canton/global-synchronizer-production-operations-splice-metrics-overview)
+* [Key Metrics](/docs/canton/global-synchronizer-production-operations-key-metrics)
+* [Metrics Reference](/docs/canton/global-synchronizer-reference-metrics-reference)
 
 This guide and the scripts/configs are not tested, do they still work? Try to split this up into specific howtos and ensure the configs/scripts move to examples that are tested.
 
@@ -35,7 +35,7 @@ how should this relate to the other observability docs that we have? we have the
 
 ## Example Monitoring Setup
 
-This section provides an example of how Canton can be run inside a connected network of Docker containers. The example also shows how you can monitor network activity. See the [glossary](/overview/understand/glossary) for monitoring term definitions and the [Monitoring Choices](#monitoring-choices) section for the reasoning behind the example monitoring setup.
+This section provides an example of how Canton can be run inside a connected network of Docker containers. The example also shows how you can monitor network activity. See the [glossary](/docs/canton/overview-understand-glossary) for monitoring term definitions and the [Monitoring Choices](#monitoring-choices) section for the reasoning behind the example monitoring setup.
 
 <Note>
   The Canton container image is published at `ghcr.io/digital-asset/decentralized-canton-sync/docker/canton`. The example Docker Compose snippets below use `${CANTON_VERSION}` as a placeholder for the tag — export `CANTON_VERSION` to the value for your target network before running them, or substitute it inline. See the [Version Compatibility Dashboard](/shared/version-compatibility-dashboard) for the current tag on MainNet, TestNet, and DevNet.

@@ -29,20 +29,20 @@ QuickStart 会搭建名为 LocalNet 的本地环境，包括：
 * **React 前端**：支持提供方与用户角色
 * **Java 后端**：处理 Ledger API 交互
 * **Canton Coin 钱包**：用于流量购买与支付流程
-* **[lnav](/appdev/quickstart/lnav)** 日志分析，便于调试与排障
+* **[lnav](/zh/docs/canton/appdev-quickstart-lnav)** 日志分析，便于调试与排障
 
 ## 本节页面
 
 <CardGroup cols={2}>
-  <Card title="前置条件与安装" icon="download" href="/appdev/quickstart/prerequisites">
+  <Card title="前置条件与安装" icon="download" href="/zh/docs/canton/appdev-quickstart-prerequisites">
     系统要求、依赖与分步安装
   </Card>
 
-  <Card title="项目结构" icon="folder-tree" href="/appdev/quickstart/project-structure">
+  <Card title="项目结构" icon="folder-tree" href="/zh/docs/canton/appdev-quickstart-project-structure">
     QuickStart 项目组织与各组件职责
   </Card>
 
-  <Card title="运行演示" icon="play" href="/appdev/quickstart/running-the-demo">
+  <Card title="运行演示" icon="play" href="/zh/docs/canton/appdev-quickstart-running-the-demo">
     启动应用并走通许可工作流
   </Card>
 </CardGroup>

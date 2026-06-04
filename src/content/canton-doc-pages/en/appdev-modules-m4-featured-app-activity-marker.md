@@ -159,10 +159,10 @@ This local testing loop lets you validate your marker creation logic before depl
 
 ## Further Reading
 
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- How CC rewards relate to traffic and transaction costs
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- How CC rewards relate to traffic and transaction costs
 * [CIP-0047](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md) -- The specification for FeaturedAppActivityMarker
 * [CIP-0078](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) -- The change restricting rewards to featured apps
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) -- Moving from LocalNet to DevNet to MainNet
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) -- Moving from LocalNet to DevNet to MainNet
 
 ---
 

@@ -162,11 +162,11 @@ This isn't a workaround—it's a different architectural foundation. Privacy is 
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Canton's Solution" icon="lightbulb" href="/overview/understand/cantons-solution">
+  <Card title="Canton's Solution" icon="lightbulb" href="/docs/canton/overview-understand-cantons-solution">
     Learn how Canton resolves the privacy-integrity tradeoff.
   </Card>
 
-  <Card title="Privacy Model" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="Privacy Model" icon="lock" href="/docs/canton/overview-learn-privacy-model">
     Deep dive into sub-transaction privacy mechanics.
   </Card>
 </CardGroup>

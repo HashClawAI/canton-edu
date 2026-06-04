@@ -53,7 +53,7 @@ Fail, for FailureStatus
 
 The category of the failure, which determines the status code and log
 level of the failure. Maps 1-1 to the Canton error categories documented
-here: [Error categories inventory](/global-synchronizer/reference/error-codes#error-categories-inventory)
+here: [Error categories inventory](/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)
 
 If you are more familiar with gRPC error codes, you can use the synonyms referenced in the
 comments.
@@ -68,7 +68,7 @@ Constructors:
 
 Corresponds to the gRPC status code `INVALID_ARGUMENT`.
 
-See [Error categories inventory](/global-synchronizer/reference/error-codes#error-categories-inventory)
+See [Error categories inventory](/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)
 for more information.
 
 <span id="constr-da-internal-fail-types-invalidgivencurrentsystemstateother-6547" />
@@ -80,7 +80,7 @@ for more information.
 
 Corresponds to the gRPC status code `FAILED_PRECONDITION`.
 
-See [Error categories inventory](/global-synchronizer/reference/error-codes#error-categories-inventory)
+See [Error categories inventory](/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)
 for more information.
 
 Instances:

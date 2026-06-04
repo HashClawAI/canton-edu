@@ -71,9 +71,9 @@ Canton Network does not charge fees on CC transfers between parties. The only co
 
 ## Further Reading
 
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- How traffic credits and CC work for application developers
-* [Getting Your App Featured](/overview/understand/getting-app-featured) -- Promotional opportunities on Canton Network
-* [Canton Coin overview](/overview/understand/canton-coin) -- Tokenomics, validator rewards, and governance
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- How traffic credits and CC work for application developers
+* [Getting Your App Featured](/docs/canton/overview-understand-getting-app-featured) -- Promotional opportunities on Canton Network
+* [Canton Coin overview](/docs/canton/overview-understand-canton-coin) -- Tokenomics, validator rewards, and governance
 
 ---
 

@@ -39,7 +39,7 @@ tags:
 
 ## Participant 控制台
 
-1. 获取 [Canton 身份验证文档](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt) 中指定的身份验证令牌
+1. 获取 [Canton 身份验证文档](/zh/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt) 中指定的身份验证令牌
 
 2. 确保您可以访问participant 的端口5001和5002
 

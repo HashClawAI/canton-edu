@@ -216,7 +216,7 @@ The Global Synchronizer handles:
     Hardware, software, and network requirements.
   </Card>
 
-  <Card title="Validator Roles" icon="user-gear" href="/global-synchronizer/understand/validator-roles">
+  <Card title="Validator Roles" icon="user-gear" href="/docs/canton/global-synchronizer-understand-validator-roles">
     Understand your responsibilities as a validator.
   </Card>
 </CardGroup>

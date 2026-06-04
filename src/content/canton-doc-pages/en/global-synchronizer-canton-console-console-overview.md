@@ -43,7 +43,7 @@ Once you see the following banner for the console you have successfully gained a
 
 ## Participant console
 
-1. Obtain an authentication token as specified in [the Canton authentication docs](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt)
+1. Obtain an authentication token as specified in [the Canton authentication docs](/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt)
 
 2. Ensure you can access the participant's ports 5001 and 5002
 

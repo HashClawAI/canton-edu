@@ -62,7 +62,7 @@ The application issues licenses using the following process:
 
 ## 前置条件
 
-演示前请先完成 [CN App Quickstart 安装](/appdev/quickstart/prerequisites)。
+演示前请先完成 [CN App Quickstart 安装](/zh/docs/canton/appdev-quickstart-prerequisites)。
 
 ## 演练
 
@@ -402,7 +402,7 @@ Validator Onboarding 菜单可创建验证者 onboarding secret。
 
 ## 下一步
 
-你已完成 CN App Quickstart 中的一次业务操作，并初步了解 Canton Console 与 Daml Shell。建议探索代码库并按业务修改；可继续阅读[项目结构](/appdev/quickstart/project-structure)或[模块 4：构建应用](/appdev/modules/m4-building-apps-intro)。
+你已完成 CN App Quickstart 中的一次业务操作，并初步了解 Canton Console 与 Daml Shell。建议探索代码库并按业务修改；可继续阅读[项目结构](/zh/docs/canton/appdev-quickstart-project-structure)或[模块 4：构建应用](/zh/docs/canton/appdev-modules-m4-building-apps-intro)。
 
 ---
 

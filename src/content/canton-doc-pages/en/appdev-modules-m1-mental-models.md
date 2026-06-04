@@ -229,11 +229,11 @@ When building on Canton, keep these models in mind:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Development Stack" icon="layer-group" href="/appdev/modules/m1-development-stack">
+  <Card title="Development Stack" icon="layer-group" href="/docs/canton/appdev-modules-m1-development-stack">
     Understand the tools you'll use.
   </Card>
 
-  <Card title="Architecture Overview" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture Overview" icon="diagram-project" href="/docs/canton/overview-learn-architecture">
     See how components work together technically.
   </Card>
 </CardGroup>

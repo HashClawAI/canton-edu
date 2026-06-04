@@ -21,7 +21,7 @@ tags:
 
 > Reference for Canton configuration files, DPM project settings, storage, command line arguments, and environment variables
 
-Canton nodes use [HOCON](https://github.com/lightbend/config/blob/master/HOCON.md) (Human-Optimized Config Object Notation) for its static configuration files. Static configuration covers settings that must be known at process startup, such as storage backends, API ports, and node identities. Dynamic settings like party registration and synchronizer connections are managed at runtime through the [console](/global-synchronizer/reference/canton-console-reference) or administration APIs.
+Canton nodes use [HOCON](https://github.com/lightbend/config/blob/master/HOCON.md) (Human-Optimized Config Object Notation) for its static configuration files. Static configuration covers settings that must be known at process startup, such as storage backends, API ports, and node identities. Dynamic settings like party registration and synchronizer connections are managed at runtime through the [console](/docs/canton/global-synchronizer-reference-canton-console-reference) or administration APIs.
 
 ## HOCON Format Basics
 
@@ -131,11 +131,11 @@ Each Daml package has a `daml.yaml` specifying the SDK version, package name, so
 
 ### multi-package.yaml (Multi-Package Projects)
 
-For multi-package project configuration, see [Building and Packaging](/appdev/modules/m3-building-packaging) which covers `multi-package.yaml` structure and dependency resolution.
+For multi-package project configuration, see [Building and Packaging](/docs/canton/appdev-modules-m3-building-packaging) which covers `multi-package.yaml` structure and dependency resolution.
 
 ### DPM Environment Variables
 
-For DPM environment variable details, see [Building and Packaging](/appdev/modules/m3-building-packaging).
+For DPM environment variable details, see [Building and Packaging](/docs/canton/appdev-modules-m3-building-packaging).
 
 ### DPM Global Configuration
 

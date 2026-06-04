@@ -65,7 +65,7 @@ Admin API 使用 gRPC，位于 participant 的 Admin API 端口（默认 5002）
 
 ## Canton Console 访问
 
-Canton Console 提供更易用的 Admin API 操作界面。常用命令见 [Essential Commands](/global-synchronizer/canton-console/essential-commands)。
+Canton Console 提供更易用的 Admin API 操作界面。常用命令见 [Essential Commands](/zh/docs/canton/global-synchronizer-canton-console-essential-commands)。
 
 ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
 // 示例：通过 Canton Console 列出已连接 synchronizer
@@ -80,8 +80,8 @@ participant.health.status
 
 ## 下一步
 
-* [API Reference](/api-reference) — 所有生成 API 文档中心，含 Ledger API
-* [Canton Console](/global-synchronizer/canton-console/console-overview) — 交互式控制台
+* [API Reference](/zh/docs/canton/api-reference) — 所有生成 API 文档中心，含 Ledger API
+* [Canton Console](/zh/docs/canton/global-synchronizer-canton-console-console-overview) — 交互式控制台
 
 ---
 

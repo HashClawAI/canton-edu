@@ -45,9 +45,9 @@ dpm new intro-choices --template daml-intro-choices
 
 ## Next Steps
 
-Continue to [Contract Templates](/appdev/modules/m3-contract-templates) to start building Daml smart contracts.
+Continue to [Contract Templates](/docs/canton/appdev-modules-m3-contract-templates) to start building Daml smart contracts.
 
-If you're new to functional programming or want a refresher on Daml's syntax (types, pattern matching, records, type classes), see [Language Fundamentals](/appdev/modules/m3-language-fundamentals) first. If you have experience with Haskell or other ML-family languages, you can skip it and refer back as needed.
+If you're new to functional programming or want a refresher on Daml's syntax (types, pattern matching, records, type classes), see [Language Fundamentals](/docs/canton/appdev-modules-m3-language-fundamentals) first. If you have experience with Haskell or other ML-family languages, you can skip it and refer back as needed.
 
 ---
 

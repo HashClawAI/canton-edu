@@ -401,7 +401,7 @@ To work around this, follow these steps:
 
     We'll need the topology transaction and the definitions defined here later again. Either keep your Canton console open or save them.
 
-    The topology transaction hash needs to be signed externally following the [documentation for external signing](/appdev/deep-dives/external-signing-onboarding#external-party-onboarding-transactions).
+    The topology transaction hash needs to be signed externally following the [documentation for external signing](/docs/canton/appdev-deep-dives-external-signing-onboarding#external-party-onboarding-transactions).
 
     After you signed it externally, you need to construct the signed topology transaction, sign it additionally through the participant and then submit it through the synchronizer.
 
@@ -517,7 +517,7 @@ To work around this, follow these steps:
 
     We'll need the topology transaction and the definitions defined here later again. Either keep your Canton console open or save them.
 
-    The topology transaction hash needs to be signed externally following the [documentation for external signing](/appdev/deep-dives/external-signing-onboarding#external-party-onboarding-transactions).
+    The topology transaction hash needs to be signed externally following the [documentation for external signing](/docs/canton/appdev-deep-dives-external-signing-onboarding#external-party-onboarding-transactions).
 
     After you signed it externally, you need to construct the signed topology transaction, sign it additionally through the participant and then submit it through the synchronizer.
 
@@ -633,7 +633,7 @@ To work around this, follow these steps:
 
     We'll need the topology transaction and the definitions defined here later again. Either keep your Canton console open or save them.
 
-    The topology transaction hash needs to be signed externally following the [documentation for external signing](/appdev/deep-dives/external-signing-onboarding#external-party-onboarding-transactions).
+    The topology transaction hash needs to be signed externally following the [documentation for external signing](/docs/canton/appdev-deep-dives-external-signing-onboarding#external-party-onboarding-transactions).
 
     After you signed it externally, you need to construct the signed topology transaction, sign it additionally through the participant and then submit it through the synchronizer.
 
@@ -721,7 +721,7 @@ participant.synchronizers.perform_manual_lsu(
 
 ### Resolving ACS mismatches
 
-Note that depending on how exactly the old synchronizer failed, validators may desynchronize if some validators have observed a transaction before the failure while others have not. In that case, the participant will produce ACS mismatches that should be resolved using the [standard ACS mismatch resolution process](/global-synchronizer/troubleshooting-guide/transaction-failures#troubleshoot-acs-commitments) after migrating to the new physical synchronizer.
+Note that depending on how exactly the old synchronizer failed, validators may desynchronize if some validators have observed a transaction before the failure while others have not. In that case, the participant will produce ACS mismatches that should be resolved using the [standard ACS mismatch resolution process](/docs/canton/global-synchronizer-troubleshooting-guide-transaction-failures#troubleshoot-acs-commitments) after migrating to the new physical synchronizer.
 
 ---
 

@@ -147,10 +147,10 @@ LocalNet（通过 cn-quickstart）中，将标记转换为券的 SV 自动化是
 
 ## 延伸阅读
 
-* [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin) — CC 奖励与 traffic 及交易成本的关系
+* [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — CC 奖励与 traffic 及交易成本的关系
 * [CIP-0047](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md) — FeaturedAppActivityMarker 规范
 * [CIP-0078](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) — 将奖励限制于 featured 应用的变更
-* [部署进阶](/appdev/modules/m5-deployment-progression) — 从 LocalNet 到 DevNet 再到 MainNet
+* [部署进阶](/zh/docs/canton/appdev-modules-m5-deployment-progression) — 从 LocalNet 到 DevNet 再到 MainNet
 
 ---
 

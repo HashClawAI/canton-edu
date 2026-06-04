@@ -36,7 +36,7 @@ The implementation uses three key techniques to achieves this Byzantine fault to
 
 Thus CC and CNS users that are willing to assume that no more than `f` SV nodes are dishonest can rely on the following guarantees:
 
-* **valid transactions**: every transaction that requires confirmation from the DSO party is [valid](/overview/learn/ledger-model).
+* **valid transactions**: every transaction that requires confirmation from the DSO party is [valid](/docs/canton/overview-learn-ledger-model).
 * **timely automation**: actions required to be taken by the DSO party are taken in a timely fashion.
 * **predictable fees and configuration values**: fees and configuration values are reasonably predictable as they represent the *aggregate preferences* of \~2/3 of SV operators, which can be assumed to be acting in their own best interest.
 
@@ -131,7 +131,7 @@ Traffic parameters require periodic recalibration. Actual traffic costs change d
 
 Formal changes to Canton Network standards and protocols go through the Canton Improvement Proposal (CIP) process. CIPs cover technical specifications, governance procedures, and informational guidelines. SVs vote on CIP adoption through the same on-chain governance mechanism described above.
 
-For a full overview of the CIP lifecycle and how to participate, see [What Are CIPs?](/overview/reference/what-are-cips). The CIP repository is maintained at [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips).
+For a full overview of the CIP lifecycle and how to participate, see [What Are CIPs?](/docs/canton/overview-reference-what-are-cips). The CIP repository is maintained at [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips).
 
 ## Global Synchronizer Foundation
 
@@ -154,7 +154,7 @@ The decentralized party model means that the DSO party itself has a confirmation
 
 The combination of on-chain voting and decentralized automation provides three guarantees for network participants who trust that no more than `f` SVs are dishonest:
 
-* **Valid transactions** -- Every DSO-confirmed transaction satisfies Daml's [ledger validity model](/overview/learn/ledger-model)
+* **Valid transactions** -- Every DSO-confirmed transaction satisfies Daml's [ledger validity model](/docs/canton/overview-learn-ledger-model)
 * **Timely automation** -- Routine operational actions (round advancement, reward issuance) execute without delay
 * **Predictable parameters** -- Fees and configuration values reflect the aggregate preferences of at least two-thirds of SV operators
 

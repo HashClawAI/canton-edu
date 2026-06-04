@@ -123,7 +123,7 @@ double = (* 2)
 
 #### 结合性与优先级
 
-多个中缀运算符时，**优先级**决定解析方式。例如 `x + y * z`，因 `*` 高于 `+`，解析为 `x + (y * z)` 而非 `(x + y) * z`。同优先级时，**结合性**决定解析，例如 `+`、`-` 左结合，故 `x + y - z` 解析为 `(x + y) - z`。内置运算符已预定义；用户定义运算符须自行定义，见 [Daml 参考：Fixity、结合性与优先级](/appdev/reference/daml-language-reference#fixity-associativity-and-precedence)。
+多个中缀运算符时，**优先级**决定解析方式。例如 `x + y * z`，因 `*` 高于 `+`，解析为 `x + (y * z)` 而非 `(x + y) * z`。同优先级时，**结合性**决定解析，例如 `+`、`-` 左结合，故 `x + y - z` 解析为 `(x + y) - z`。内置运算符已预定义；用户定义运算符须自行定义，见 [Daml 参考：Fixity、结合性与优先级](/zh/docs/canton/appdev-reference-daml-language-reference#fixity-associativity-and-precedence)。
 
 ### 类型约束
 
@@ -791,7 +791,7 @@ Daml 类型系统允许在合约中存储结构化数据。与记录等一样，
 
 ## 标准库
 
-Prelude 概览、标准库重要类型及如何检索库，见 [Daml 标准库](/appdev/modules/m3-standard-library)。
+Prelude 概览、标准库重要类型及如何检索库，见 [Daml 标准库](/zh/docs/canton/appdev-modules-m3-standard-library)。
 
 ---
 

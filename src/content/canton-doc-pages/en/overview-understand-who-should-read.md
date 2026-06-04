@@ -26,7 +26,7 @@ This documentation serves multiple audiences building on or operating Canton Net
 ## By Role
 
 <CardGroup cols={2}>
-  <Card title="Application Developers" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Application Developers" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Build applications on Canton Network using Daml smart contracts and the Ledger API.
 
     **Start here if you want to:**
@@ -36,7 +36,7 @@ This documentation serves multiple audiences building on or operating Canton Net
     * Understand Canton's privacy model for application design
   </Card>
 
-  <Card title="Ethereum/Web3 Developers" icon="ethereum" href="/appdev/modules/m2-canton-for-ethereum-devs">
+  <Card title="Ethereum/Web3 Developers" icon="ethereum" href="/docs/canton/appdev-modules-m2-canton-for-ethereum-devs">
     Translate your blockchain knowledge to Canton concepts and patterns.
 
     **Start here if you:**
@@ -46,7 +46,7 @@ This documentation serves multiple audiences building on or operating Canton Net
     * Need to adapt existing mental models
   </Card>
 
-  <Card title="Node Operators" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="Node Operators" icon="server" href="/docs/canton/global-synchronizer-understand-introduction">
     Run validator infrastructure on the Global Synchronizer.
 
     **Start here if you want to:**
@@ -56,7 +56,7 @@ This documentation serves multiple audiences building on or operating Canton Net
     * Join the Canton Network as an operator
   </Card>
 
-  <Card title="Solution Architects" icon="diagram-project" href="/overview/understand/five-minute-overview">
+  <Card title="Solution Architects" icon="diagram-project" href="/docs/canton/overview-understand-five-minute-overview">
     Evaluate Canton for enterprise use cases.
 
     **Start here if you need to:**
@@ -71,13 +71,13 @@ This documentation serves multiple audiences building on or operating Canton Net
 
 | I want to...                             | Start here                                                           |
 | ---------------------------------------- | -------------------------------------------------------------------- |
-| Understand what Canton is in 5 minutes   | [Five-Minute Overview](/overview/understand/five-minute-overview)    |
-| Learn why privacy matters for blockchain | [The Problem Canton Solves](/overview/understand/the-problem)        |
-| See how Canton components work together  | [Architecture Overview](/overview/learn/architecture)                |
-| Write my first smart contract            | [Module 3: Daml Smart Contracts](/appdev/modules/m3-dev-environment) |
+| Understand what Canton is in 5 minutes   | [Five-Minute Overview](/docs/canton/overview-understand-five-minute-overview)    |
+| Learn why privacy matters for blockchain | [The Problem Canton Solves](/docs/canton/overview-understand-the-problem)        |
+| See how Canton components work together  | [Architecture Overview](/docs/canton/overview-learn-architecture)                |
+| Write my first smart contract            | [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment) |
 | Run the example application              | [QuickStart](/appdev/quickstart)                                     |
-| Deploy a validator node                  | [Validator Setup](/global-synchronizer/understand/introduction)      |
-| Integrate a wallet into my app           | [Integrations Overview](/integrations/overview)                      |
+| Deploy a validator node                  | [Validator Setup](/docs/canton/global-synchronizer-understand-introduction)      |
+| Integrate a wallet into my app           | [Integrations Overview](/docs/canton/integrations-overview)                      |
 
 ## Documentation Structure
 

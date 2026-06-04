@@ -175,11 +175,11 @@ choice ExecuteSwap : ()
 ## 相关主题
 
 <CardGroup cols={2}>
-  <Card title="迁移清单" icon="list-check" href="/appdev/modules/m2-migration-checklist">
+  <Card title="迁移清单" icon="list-check" href="/zh/docs/canton/appdev-modules-m2-migration-checklist">
     从以太坊迁移的实用清单。
   </Card>
 
-  <Card title="模块 3：Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="模块 3：Daml" icon="code" href="/zh/docs/canton/appdev-modules-m3-dev-environment">
     开始编写 Daml 智能合约。
   </Card>
 </CardGroup>

@@ -25,7 +25,7 @@ tags:
 
 * 确认升级在 CI 中通过 `dpm build` 与 `dpm test`
 * 确认新包与当前版本 SCU 兼容（本地或 CI 运行兼容性检查）
-* 对照[升级限制](/appdev/modules/m6-limitations)审查变更列表，确保无破坏性修改
+* 对照[升级限制](/zh/docs/canton/appdev-modules-m6-limitations)审查变更列表，确保无破坏性修改
 * 在 DevNet 或 TestNet 用接近真实数据量测试
 * 提前与持有受影响合约的对手方沟通（见下）
 * 开始前记录回滚程序
@@ -122,12 +122,12 @@ SCU 无内置回滚。包上传后无法删除，「回滚」指管理局面而�
 
 ## 延伸阅读
 
-* [Upgrade Limitations](/appdev/modules/m6-limitations) — 影响生产 rollout 的约束
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — 上线前测试策略
-* [Error Handling](/appdev/modules/m7-error-handling) — 混合版本部署中的错误处理
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — DevNet → TestNet → MainNet 路径
-* [Smart Contract Upgrading Reference](/appdev/deep-dives/smart-contract-upgrading-reference) — 包验证与运行时升级规则详情
-* [Values in the Ledger API](/appdev/deep-dives/values-in-the-ledger-api) — Ledger API 在命令提交与查询时如何验证与规范化值
+* [Upgrade Limitations](/zh/docs/canton/appdev-modules-m6-limitations) — 影响生产 rollout 的约束
+* [Testing Upgrades](/zh/docs/canton/appdev-modules-m6-testing-upgrades) — 上线前测试策略
+* [Error Handling](/zh/docs/canton/appdev-modules-m7-error-handling) — 混合版本部署中的错误处理
+* [Deployment Progression](/zh/docs/canton/appdev-modules-m5-deployment-progression) — DevNet → TestNet → MainNet 路径
+* [Smart Contract Upgrading Reference](/zh/docs/canton/appdev-deep-dives-smart-contract-upgrading-reference) — 包验证与运行时升级规则详情
+* [Values in the Ledger API](/zh/docs/canton/appdev-deep-dives-values-in-the-ledger-api) — Ledger API 在命令提交与查询时如何验证与规范化值
 
 ---
 

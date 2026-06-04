@@ -55,7 +55,7 @@ tags:
   >
   > 1. Ensure you have `DEBUG` logs enabled in your participant configuration.
   > 2. Determine the trace-id of your command submission in your participant logs.
-  > 3. Search for the `DEBUG` log lines containing `EventCost` and that `trace-id`. There are typically two such log lines, due to how the [Canton protocol](/overview/learn/architecture) works. The first one is the cost of the submission of the confirmation request, and the second one is the cost for the submission of the confirmation response for the tx validation done by the participant node.
+  > 3. Search for the `DEBUG` log lines containing `EventCost` and that `trace-id`. There are typically two such log lines, due to how the [Canton protocol](/docs/canton/overview-learn-architecture) works. The first one is the cost of the submission of the confirmation request, and the second one is the cost for the submission of the confirmation response for the tx validation done by the participant node.
   >
   > For example, the following log line (pretty-printed by lnav) shows a command submission with trace-id `1e2d6bf54d150e230fd0c7f348707bf6` that stems from tapping some Amulet.
   >
@@ -199,7 +199,7 @@ tags:
 
   Is there any open-source wallet implementation for canton coins?
 
-  > There's a wallet SDK [here](/integrations/wallet/guidance) which is under rapid development. No OSS UI yet though.
+  > There's a wallet SDK [here](/docs/canton/integrations-wallet-guidance) which is under rapid development. No OSS UI yet though.
 </div>
 
 ---

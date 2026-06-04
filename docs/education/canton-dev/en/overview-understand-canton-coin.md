@@ -178,11 +178,11 @@ Unlike most cryptocurrencies where balances are publicly visible:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Wallets for Users" icon="wallet" href="/integrations/wallets/for-users">
+  <Card title="Wallets for Users" icon="wallet" href="/docs/canton/integrations-wallets-for-users">
     Manage your Canton Coin.
   </Card>
 
-  <Card title="Validator Operations" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="Validator Operations" icon="server" href="/docs/canton/global-synchronizer-understand-introduction">
     Operate and earn rewards.
   </Card>
 </CardGroup>

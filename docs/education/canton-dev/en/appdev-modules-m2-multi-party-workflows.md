@@ -310,11 +310,11 @@ template Vote
 ## Related Topics
 
 <CardGroup cols={2}>
-  <Card title="Migration Checklist" icon="list-check" href="/appdev/modules/m2-migration-checklist">
+  <Card title="Migration Checklist" icon="list-check" href="/docs/canton/appdev-modules-m2-migration-checklist">
     Practical checklist for migrating from Ethereum.
   </Card>
 
-  <Card title="Module 3: Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="Module 3: Daml" icon="code" href="/docs/canton/appdev-modules-m3-dev-environment">
     Start writing Daml smart contracts.
   </Card>
 </CardGroup>

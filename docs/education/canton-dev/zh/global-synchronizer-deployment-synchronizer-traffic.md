@@ -25,7 +25,7 @@ SV，或更具体地说，SV 参与者和Mediator拥有无限流量，因此本�
 
 Sequencer跟踪验证者参与者使用的流量。在这种情况下，`Traffic`指的是来自参与者的必须是`sequenced`的所有消息，即Sequencer组必须排序、持久化（直到修剪间隔）并传递给接收者（通常是Mediator和其他参与者）的消息。
 
-最突出的是，流量用于 Daml 工作流程，作为 [Canton 事务处理协议](/overview/learn/how-transactions-work) 的一部分。这包括：
+最突出的是，流量用于 Daml 工作流程，作为 [Canton 事务处理协议](/zh/docs/canton/overview-learn-how-transactions-work) 的一部分。这包括：
 
 * 确认请求；当参与者发起分类账交易的提交时发送。
 * 确认回复；发送给托管交易利益相关者的参与者。

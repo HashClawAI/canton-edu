@@ -302,11 +302,11 @@ async function submitWithRetry<T>(command: Command, maxRetries = 3): Promise<T> 
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Wallet for Developers" icon="code" href="/integrations/overview">
+  <Card title="Wallet for Developers" icon="code" href="/docs/canton/integrations-overview">
     Detailed wallet integration guide.
   </Card>
 
-  <Card title="Token Standard" icon="coins" href="/overview/understand/cips-introduction">
+  <Card title="Token Standard" icon="coins" href="/docs/canton/overview-understand-cips-introduction">
     Implement the Canton Token Standard.
   </Card>
 </CardGroup>

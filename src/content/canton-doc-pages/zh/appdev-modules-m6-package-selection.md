@@ -24,7 +24,7 @@ tags:
 解析遵循：
 
 * **创建合约** — 运行时使用你代码引用的包版本。若后端导入 v2，新合约用 v2 创建。
-* **获取合约** — 运行时用你代码引用的版本评估合约数据。fetch 是否成功由 SCU 与 vetting 规则决定（见 [升级兼容性](/appdev/modules/m6-upgrade-compatibility)）。
+* **获取合约** — 运行时用你代码引用的版本评估合约数据。fetch 是否成功由 SCU 与 vetting 规则决定（见 [升级兼容性](/zh/docs/canton/appdev-modules-m6-upgrade-compatibility)）。
 * **行使 Choice** — 执行你代码引用版本的 choice 体，而非创建合约的版本。即 v2 choice 中的 bug 修复适用于 v1 合约。
 
 ## 符号化包引用
@@ -69,8 +69,8 @@ Participant 须在 unvet v1 前完成全部 v1 合约升级，以避免问题。
 
 ## 下一步
 
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — 验证升级的版本解析是否正确
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — 跨 validator 协调包上传
+* [Testing Upgrades](/zh/docs/canton/appdev-modules-m6-testing-upgrades) — 验证升级的版本解析是否正确
+* [Deploying Upgrades](/zh/docs/canton/appdev-modules-m6-deployment) — 跨 validator 协调包上传
 
 ---
 

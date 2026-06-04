@@ -233,7 +233,7 @@ flowchart TB
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="验证者部署" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="验证者部署" icon="server" href="/zh/docs/canton/global-synchronizer-understand-introduction">
     开始部署您的验证者节点。
   </Card>
 

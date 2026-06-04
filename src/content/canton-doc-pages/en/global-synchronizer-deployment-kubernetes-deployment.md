@@ -64,7 +64,7 @@ This section describes deploying a Super Validator (SV) node in kubernetes using
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
   </Tab>
 
@@ -106,7 +106,7 @@ This section describes deploying a Super Validator (SV) node in kubernetes using
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
   </Tab>
 
@@ -148,7 +148,7 @@ This section describes deploying a Super Validator (SV) node in kubernetes using
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
   </Tab>
 </Tabs>

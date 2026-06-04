@@ -138,7 +138,7 @@ helm install participant canton/canton-participant \
 
 * **您的任何一方是否需要与外部 Canton Network 各方进行交易？** 如果是，您需要 全局同步器 连接。请考虑使用[混合模式](/global-synchronizer/extension-synchronizers/hybrid-同步器-pattern)。
 * **您是否需要Canton Coin进行支付或结算？** 如果是，您需要全球同步器连接。
-* **您将来可能需要网络连接吗？** 如果可能，请立即部署标准验证者并稍后连接到全局同步器。添加同步器连接是无中断的 - 请参阅[链接到多个同步器](/global-synchronizer/extension-synchronizers/linking-validator-multi-sync)。
+* **您将来可能需要网络连接吗？** 如果可能，请立即部署标准验证者并稍后连接到全局同步器。添加同步器连接是无中断的 - 请参阅[链接到多个同步器](/zh/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync)。
 * **您的用例完全是内部的，没有可预见的外部交互吗？** 专用验证者是更简单的选择。
 
 ## 稍后迁移到全局同步器

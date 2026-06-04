@@ -385,7 +385,7 @@ Rejected transaction ... OwnerToKeyMapping(...) ... due to Not authorized
 
     稍后我们将再次需要拓扑事务和此处定义的定义。要么保持 Canton 控制台打开，要么保存它们。
 
-    拓扑事务哈希需要按照[外部签名文档](/appdev/deep-dives/external-signing-入驻#external-party-入驻-transactions)进行外部签名。
+    拓扑事务哈希需要按照[外部签名文档](/zh/docs/canton/appdev-deep-dives-external-signing#external-party-入驻-transactions)进行外部签名。
 
     外部签名后，需要构建签名的拓扑交易，通过参与者进行额外签名，然后通过同步器提交。
 
@@ -497,7 +497,7 @@ Rejected transaction ... OwnerToKeyMapping(...) ... due to Not authorized
 
     We'll need the 拓扑 transaction and the definitions defined here later again. Either keep your Canton console open or save them.
 
-    The 拓扑 transaction hash needs to be signed externally following the [documentation for external signing](/appdev/deep-dives/external-signing-入驻#external-party-入驻-transactions).
+    The 拓扑 transaction hash needs to be signed externally following the [documentation for external signing](/zh/docs/canton/appdev-deep-dives-external-signing#external-party-入驻-transactions).
 
     After you signed it externally, you need to construct the signed 拓扑 transaction, sign it additionally through the participant and then submit it through the 同步器.
 
@@ -611,7 +611,7 @@ Rejected transaction ... OwnerToKeyMapping(...) ... due to Not authorized
 
     稍后我们将再次需要拓扑事务和此处定义的定义。要么保持 Canton 控制台打开，要么保存它们。
 
-    拓扑事务哈希需要按照[外部签名文档](/appdev/deep-dives/external-signing-入驻#external-party-入驻-transactions)进行外部签名。
+    拓扑事务哈希需要按照[外部签名文档](/zh/docs/canton/appdev-deep-dives-external-signing#external-party-入驻-transactions)进行外部签名。
 
     外部签名后，需要构建签名的拓扑交易，通过参与者进行额外签名，然后通过同步器提交。
 
@@ -697,7 +697,7 @@ participant.同步器s.perform_manual_lsu(
 
 ### 解决 ACS 不匹配问题
 
-请注意，根据旧同步器失败的具体情况，如果某些验证器在失败之前观察到事务而其他验证器没有观察到，则验证器可能会不同步。在这种情况下，参与者将产生 ACS 不匹配，在迁移到新的物理同步器后，应使用[标准 ACS 不匹配解决过程](/global-synchronizer/troubleshooting-guide/transaction-failures#troubleshoot-acs-commitments) 来解决这些不匹配。
+请注意，根据旧同步器失败的具体情况，如果某些验证器在失败之前观察到事务而其他验证器没有观察到，则验证器可能会不同步。在这种情况下，参与者将产生 ACS 不匹配，在迁移到新的物理同步器后，应使用[标准 ACS 不匹配解决过程](/zh/docs/canton/global-synchronizer-troubleshooting-guide-transaction-failures#troubleshoot-acs-commitments) 来解决这些不匹配。
 
 ---
 

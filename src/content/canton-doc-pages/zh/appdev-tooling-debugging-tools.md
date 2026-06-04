@@ -358,9 +358,9 @@ lnav logs/*.log
 
 ## 后续步骤
 
-* [开发工具概述](/appdev/tooling/development-tools-overview) -- 所有可用工具的摘要
-* [Troubleshooting](/appdev/troubleshooting) -- 广州开发常见问题的解决方案
-* [测试 Daml 合约](/appdev/modules/m3-testing) -- 编写有效的测试以尽早发现问题
+* [开发工具概述](/zh/docs/canton/appdev-tooling-development-tools-overview) -- 所有可用工具的摘要
+* [Troubleshooting](/zh/docs/canton/appdev-troubleshooting) -- 广州开发常见问题的解决方案
+* [测试 Daml 合约](/zh/docs/canton/appdev-modules-m3-testing) -- 编写有效的测试以尽早发现问题
 
 ---
 

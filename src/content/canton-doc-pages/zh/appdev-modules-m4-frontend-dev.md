@@ -319,7 +319,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
 ## 练习：添加许可证评论 UI
 
 <Note>
-  本练习基于 [后端开发](/appdev/modules/m4-backend-dev#exercise-add-license-comments) 中的后端练习。请先完成该练习——需要 `LicenseComment` Daml template、OpenAPI 端点与后端实现后前端才能使用。
+  本练习基于 [后端开发](/zh/docs/canton/appdev-modules-m4-backend-dev#exercise-add-license-comments) 中的后端练习。请先完成该练习——需要 `LicenseComment` Daml template、OpenAPI 端点与后端实现后前端才能使用。
 </Note>
 
 你将在许可证视图中添加评论列表与评论表单，遵循 cn-quickstart 用于许可证的 store/view 模式。
@@ -496,8 +496,8 @@ make start-vite-dev
 
 ## 下一步
 
-* [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin) — CC 与 traffic 如何影响应用
-* [后端开发](/appdev/modules/m4-backend-dev) — 前端通信的后端
+* [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — CC 与 traffic 如何影响应用
+* [后端开发](/zh/docs/canton/appdev-modules-m4-backend-dev) — 前端通信的后端
 * [cn-quickstart 前端源码](https://github.com/digital-asset/cn-quickstart/tree/main/quickstart/frontend) — 完整可运行前端实现
 
 ---

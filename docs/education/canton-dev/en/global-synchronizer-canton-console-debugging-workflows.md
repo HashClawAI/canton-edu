@@ -252,7 +252,7 @@ If a multi-hosting setup isn't taking effect:
     )
 ```
 
-A pending proposal means the second participant hasn't signed yet. See [Multi-Hosting](/appdev/deep-dives/multi-hosting) for the authorization procedure.
+A pending proposal means the second participant hasn't signed yet. See [Multi-Hosting](/docs/canton/appdev-deep-dives-multi-hosting) for the authorization procedure.
 
 ## ACS Inspection
 
@@ -310,8 +310,8 @@ When investigating any issue, work through this sequence:
 
 ## Next Steps
 
-* [Essential Commands](/global-synchronizer/canton-console/essential-commands) — Quick reference for all key commands
-* [Console Overview](/global-synchronizer/canton-console/console-overview) — How to access the console in different environments
+* [Essential Commands](/docs/canton/global-synchronizer-canton-console-essential-commands) — Quick reference for all key commands
+* [Console Overview](/docs/canton/global-synchronizer-canton-console-console-overview) — How to access the console in different environments
 
 ---
 

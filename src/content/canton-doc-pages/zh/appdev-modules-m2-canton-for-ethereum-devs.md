@@ -271,9 +271,9 @@ template Agreement
 
 ## 下一步
 
-* **[架构概览](/overview/learn/architecture)** — Canton 组件模型
-* **[隐私模型说明](/overview/learn/privacy-model)** — 子交易隐私
-* **[模块 3：Daml 开发](/appdev/modules/m3-dev-environment)** — 开始写 Daml
+* **[架构概览](/zh/docs/canton/overview-learn-architecture)** — Canton 组件模型
+* **[隐私模型说明](/zh/docs/canton/overview-learn-privacy-model)** — 子交易隐私
+* **[模块 3：Daml 开发](/zh/docs/canton/appdev-modules-m3-dev-environment)** — 开始写 Daml
 
 ---
 

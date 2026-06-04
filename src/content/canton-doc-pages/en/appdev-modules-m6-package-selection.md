@@ -30,7 +30,7 @@ Every contract on the ledger is associated with the package version that created
 The resolution follows these rules:
 
 * **Creating contracts** — The runtime uses the package version your code references. If your backend imports v2, new contracts are created with v2.
-* **Fetching contracts** — The runtime evaluates the contract's data against the version your code references. SCU and vetting rules determine whether the fetch succeeds (see [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility)).
+* **Fetching contracts** — The runtime evaluates the contract's data against the version your code references. SCU and vetting rules determine whether the fetch succeeds (see [Upgrade Compatibility](/docs/canton/appdev-modules-m6-upgrade-compatibility)).
 * **Exercising choices** — The choice body from the version your code references is executed, not the version that created the contract. This means bug fixes in v2 choices apply to v1 contracts.
 
 ## Symbolic Package References
@@ -76,8 +76,8 @@ The system fails safely when versions are incompatible rather than silently drop
 
 ## Next Steps
 
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — Verify that version resolution works correctly for your upgrade
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — Coordinate package uploads across validators
+* [Testing Upgrades](/docs/canton/appdev-modules-m6-testing-upgrades) — Verify that version resolution works correctly for your upgrade
+* [Deploying Upgrades](/docs/canton/appdev-modules-m6-deployment) — Coordinate package uploads across validators
 
 ---
 

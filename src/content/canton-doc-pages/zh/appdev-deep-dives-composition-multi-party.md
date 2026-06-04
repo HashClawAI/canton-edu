@@ -19,7 +19,7 @@ tags:
 
 ## 提议-接受模式
 
-提议-接受的规范讲解见 [模块 2：多方工作流](/appdev/modules/m2-multi-party-workflows#the-propose-accept-pattern)。本文侧重在该基础上的其他组合模式。
+提议-接受的规范讲解见 [模块 2：多方工作流](/zh/docs/canton/appdev-modules-m2-multi-party-workflows#the-propose-accept-pattern)。本文侧重在该基础上的其他组合模式。
 
 ## 委托
 
@@ -155,8 +155,8 @@ template AuditableTransaction
 
 ## 下一步
 
-* [去中心化](/appdev/deep-dives/decentralization) — 各层去中心化策略
-* [多方托管](/appdev/deep-dives/multi-hosting) — 跨验证者分布 Party 以提高韧性
+* [去中心化](/zh/docs/canton/appdev-deep-dives-decentralization) — 各层去中心化策略
+* [多方托管](/zh/docs/canton/appdev-deep-dives-multi-hosting) — 跨验证者分布 Party 以提高韧性
 
 
 ---

@@ -52,7 +52,7 @@ dependencies:
 
 `name` 与 `version` 一般可自由设置以描述项目。`dependencies` 即依赖列表，应始终包含 `daml-prim` 与 `daml-stdlib`：前者含编译器与 Daml Runtime 内部，后者提供标准库。`daml-script` 含 Daml Script 的类型与函数。
 
-在项目根目录运行 `dpm build` 编译，生成 `.daml/dist/dist/${project_name}-${project_version}.dar`。DAR 类似 Java 的 JAR，是部署到账本以加载包及其依赖的产物。`dar` 文件自包含主包的全部依赖。更多见 [构建与打包](/appdev/modules/m3-building-packaging)。
+在项目根目录运行 `dpm build` 编译，生成 `.daml/dist/dist/${project_name}-${project_version}.dar`。DAR 类似 Java 的 JAR，是部署到账本以加载包及其依赖的产物。`dar` 文件自包含主包的全部依赖。更多见 [构建与打包](/zh/docs/canton/appdev-modules-m3-building-packaging)。
 
 ## 项目结构
 
@@ -105,7 +105,7 @@ import Daml.Script
 
 ## 项目概览
 
-本项目在 [授权](/appdev/modules/m3-authorization) 中的 `Iou` 模型上做了修改与扩展：
+本项目在 [授权](/zh/docs/canton/appdev-modules-m3-authorization) 中的 `Iou` 模型上做了修改与扩展：
 
 * 资产可通过 `Merge`、`Split` choice 由 `owner` 管理持仓，具有可合并、可拆分（fungible）特性。
 
@@ -117,7 +117,7 @@ import Daml.Script
 
 ## 组合 choice 与 script
 
-本项目展示如何将 [授权](/appdev/modules/m3-authorization) 中学到的 `Update` 与 `Script` action 付诸实践。例如 `Merge`、`Split` choice 的后果中各执行多个动作。
+本项目展示如何将 [授权](/zh/docs/canton/appdev-modules-m3-authorization) 中学到的 `Update` 与 `Script` action 付诸实践。例如 `Merge`、`Split` choice 的后果中各执行多个动作。
 
 * `Split` 时两个 create 动作
 * `Merge` 时一个 create 与一个 archive 动作
@@ -308,7 +308,7 @@ Daml 执行模型较易理解，但有重要后果。可想象交易生命周期
 每个命令对应一个或多个动作。此步骤在账本上下文中求值各动作对应的 `Update`，计算全部后果（含传递性后果），得到完整交易。交易与其 requester 合称 commit。
 
 脱敏
-在强隐私账本上，为所有相关方创建投影（见 [隐私模型](/overview/learn/privacy-model)），亦称 *projecting*。
+在强隐私账本上，为所有相关方创建投影（见 [隐私模型](/zh/docs/canton/overview-learn-privacy-model)），亦称 *projecting*。
 
 交易提交
 将交易/commit 提交到网络。
@@ -409,7 +409,7 @@ Alice 是 `tradeCid` 的 signatory，Bob 是 `Trade_Settle` 动作的必需授�
 
 ### 提议-接受（Propose-Accept）
 
-多方就共享合约达成一致的最常见方式：一方创建提案合约，另一方接受、拒绝或任其过期。[授权模块](/appdev/modules/m3-authorization#use-propose-accept-workflow-for-one-off-authorization) 中的 `IouProposal` 也是此模式。
+多方就共享合约达成一致的最常见方式：一方创建提案合约，另一方接受、拒绝或任其过期。[授权模块](/zh/docs/canton/appdev-modules-m3-authorization#use-propose-accept-workflow-for-one-off-authorization) 中的 `IouProposal` 也是此模式。
 
 发行方创建 `CoinMaster`，再邀请持有人。邀请为提案合约，发行方为 signatory，持有人为 observer：
 
@@ -677,7 +677,7 @@ Daml 按项目、包与模块组织。Daml 项目用单个 `daml.yaml` 指定，
 
 `name` 与 `version` 可自由设置。`dependencies` 须包含 `daml-prim`、`daml-stdlib` 与 `daml-script`。
 
-在项目根运行 `dpm build` 生成 DAR。更多见 [构建与打包](/appdev/modules/m3-building-packaging)。
+在项目根运行 `dpm build` 生成 DAR。更多见 [构建与打包](/zh/docs/canton/appdev-modules-m3-building-packaging)。
 
 ## 项目结构
 
@@ -728,11 +728,11 @@ import Daml.Script
 
 ## 项目概览
 
-本项目扩展 [授权](/appdev/modules/m3-authorization) 中的 `Iou` 模型：`Merge`/`Split`、双方授权的转移、以及 `Trade` 互换两种资产。
+本项目扩展 [授权](/zh/docs/canton/appdev-modules-m3-authorization) 中的 `Iou` 模型：`Merge`/`Split`、双方授权的转移、以及 `Trade` 互换两种资产。
 
 ## 组合 choice 与 script
 
-展示 [授权](/appdev/modules/m3-authorization) 中 `Update` 与 `Script` 的用法。`Merge`、`Split` 后果含多个动作。
+展示 [授权](/zh/docs/canton/appdev-modules-m3-authorization) 中 `Update` 与 `Script` 的用法。`Merge`、`Split` 后果含多个动作。
 
 ```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
 -- Code from: daml/daml-intro-compose/daml/Intro/Asset.daml

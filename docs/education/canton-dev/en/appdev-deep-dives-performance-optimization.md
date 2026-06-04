@@ -862,13 +862,13 @@ Large ACS can have a negative impact on many aspects of system performance in re
 
 * Pay attention to the lifetime of the contracts. Make sure that the supporting and auxiliary contracts don’t clutter the ACS and archive them as soon as it is practical to do so.
 
-* Set up a frequent pruning schedule. Be aware that pruning is only effective if there are archived contracts available for pruning. If all contracts are still active, pruning has limited success. Refer to our [pruning documentation](/overview/reference/pruning) for more information.
+* Set up a frequent pruning schedule. Be aware that pruning is only effective if there are archived contracts available for pruning. If all contracts are still active, pruning has limited success. Refer to our [pruning documentation](/docs/canton/overview-reference-pruning) for more information.
 
 * Implement an ODS in your ledger client application to limit reliance on read access to the ACS. Do this whenever you notice that the time to initialize the application from the ACS exceeds your pain level.
 
 * Monitor database performance.
   * Monitor the disk read and write activity. Look for sudden changes in the operation patterns. For instance, a sudden increase in the disk’s read activity may be a sign of indices no longer fitting into the shared buffers.
-  * Observe the performance of the database queries. Check our [monitoring documentation](/global-synchronizer/extension-synchronizers/synchronizer-monitoring) for query [metrics](/global-synchronizer/reference/canton-metrics#daml-sequencer-db-storage-write-executor-waittime) that can assist. You may also consider setting up a [log\_min\_duration\_statement parameter](https://www.postgresql.org/docs/current/runtime-config-logging.html#GUC-LOG-MIN-DURATION-STATEMENT) in the PostgreSQL configuration.
+  * Observe the performance of the database queries. Check our [monitoring documentation](/docs/canton/global-synchronizer-extension-synchronizers-synchronizer-monitoring) for query [metrics](/docs/canton/global-synchronizer-reference-canton-metrics#daml-sequencer-db-storage-write-executor-waittime) that can assist. You may also consider setting up a [log\_min\_duration\_statement parameter](https://www.postgresql.org/docs/current/runtime-config-logging.html#GUC-LOG-MIN-DURATION-STATEMENT) in the PostgreSQL configuration.
 
 * Set up [autovacuum](https://www.postgresql.org/docs/current/routine-vacuuming.html#AUTOVACUUM) on the PostgreSQL database. Note that, after pruning, a lot of dead tuples will need removing.
 

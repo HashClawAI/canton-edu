@@ -44,7 +44,7 @@ The core architecture stays the same across all four environments: your applicat
 ## Upgrade Types on the Global Synchronizer
 
 <Note>
-  For detailed upgrade procedures, see the [Validator Upgrades](/global-synchronizer/production-operations/validator-upgrades) page.
+  For detailed upgrade procedures, see the [Validator Upgrades](/docs/canton/global-synchronizer-production-operations-validator-upgrades) page.
 </Note>
 
 The super validators (SVs) periodically implement upgrades to the Global Synchronizer to improve functionality, resolve issues, and introduce new features. As a node operator or application provider you should be aware of the three types of upgrades that may occur.
@@ -99,8 +99,8 @@ Application providers should maintain nodes on DevNet, TestNet, and MainNet to g
 
 ## Next Steps
 
-* [Environment Configuration](/appdev/modules/m5-environment-configuration) — DPM configuration for each environment
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — Automating the promotion pipeline
+* [Environment Configuration](/docs/canton/appdev-modules-m5-environment-configuration) — DPM configuration for each environment
+* [CI/CD Integration](/docs/canton/appdev-modules-m5-ci-cd-integration) — Automating the promotion pipeline
 
 ---
 

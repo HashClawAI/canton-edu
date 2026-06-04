@@ -113,8 +113,8 @@ cn-quickstart 在 `ops/` 目录提供预配置的 Grafana 仪表盘。运行 `ma
 
 ## 延伸阅读
 
-* [后端开发](/appdev/modules/m4-backend-dev) — 与可观测性配套的错误处理模式
-* [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin) — 监控 traffic 预算
+* [后端开发](/zh/docs/canton/appdev-modules-m4-backend-dev) — 与可观测性配套的错误处理模式
+* [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — 监控 traffic 预算
 * [cn-quickstart 仓库](https://github.com/digital-asset/cn-quickstart) — 预配置的可观测性栈
 
 ---

@@ -119,8 +119,8 @@ Set up alerts for conditions that affect your application's reliability:
 
 ## Further Reading
 
-* [Backend Development](/appdev/modules/m4-backend-dev) -- Error handling patterns that pair with observability
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- Monitoring your traffic budget
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- Error handling patterns that pair with observability
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- Monitoring your traffic budget
 * [cn-quickstart repository](https://github.com/digital-asset/cn-quickstart) -- Pre-configured observability stack
 
 ---

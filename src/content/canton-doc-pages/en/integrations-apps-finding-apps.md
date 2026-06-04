@@ -32,11 +32,11 @@ The primary directory of Canton Network applications is maintained at [canton.ne
 If you don't find what you need, consider building it yourself:
 
 <CardGroup cols={2}>
-  <Card title="Start Developing" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Start Developing" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Build your own Canton application.
   </Card>
 
-  <Card title="Get Featured" icon="star" href="/overview/understand/getting-app-featured">
+  <Card title="Get Featured" icon="star" href="/docs/canton/overview-understand-getting-app-featured">
     How to list your application.
   </Card>
 </CardGroup>

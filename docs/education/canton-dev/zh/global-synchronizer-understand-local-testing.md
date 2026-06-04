@@ -263,8 +263,8 @@ docker compose --env-file $LOCALNET_DIR/compose.env \
 
 使用 Canton 管理控制台检查和修改 LocalNet 部署中 Canton 排序器、中介器和参与者节点的运行配置。
 
-* [Canton Console操作方法](/global-synchronizer/canton-console/console-overview)
-* [Canton Console 命令](/global-synchronizer/reference/canton-console-commands)
+* [Canton Console操作方法](/zh/docs/canton/global-synchronizer-canton-console-console-overview)
+* [Canton Console 命令](/zh/docs/canton/global-synchronizer-reference-canton-console-commands)
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
 docker compose --env-file $LOCALNET_DIR/compose.env \

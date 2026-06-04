@@ -63,9 +63,9 @@ Canton Network 不对 Party 之间的 CC 转账收费。网络使用的唯一成
 
 ## 延伸阅读
 
-* [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin) — 应用开发者视角下的 traffic 额度与 CC
-* [如何让应用 Featured](/overview/understand/getting-app-featured) — Canton Network 上的推广机会
-* [Canton Coin 概览](/overview/understand/canton-coin) — 代币经济、验证者奖励与治理
+* [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — 应用开发者视角下的 traffic 额度与 CC
+* [如何让应用 Featured](/zh/docs/canton/overview-understand-getting-app-featured) — Canton Network 上的推广机会
+* [Canton Coin 概览](/zh/docs/canton/overview-understand-canton-coin) — 代币经济、验证者奖励与治理
 
 ---
 

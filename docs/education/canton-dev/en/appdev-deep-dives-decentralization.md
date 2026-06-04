@@ -70,7 +70,7 @@ Transactions involving the party may be processed by any of its hosting validato
 * Organizations that want geographic redundancy
 * Gradual migration between validators
 
-See [Multi-Hosting](/appdev/deep-dives/multi-hosting) for implementation details.
+See [Multi-Hosting](/docs/canton/appdev-deep-dives-multi-hosting) for implementation details.
 
 ## BFT Synchronizers
 
@@ -110,8 +110,8 @@ You don't need to design for the highest level of decentralization from the star
 
 ## Next Steps
 
-* [Multi-Hosting](/appdev/deep-dives/multi-hosting) — Implementation details for distributing parties across validators
-* [Composition and Multi-Party Workflows](/appdev/deep-dives/composition-multi-party) — Daml patterns for multi-party interactions
+* [Multi-Hosting](/docs/canton/appdev-deep-dives-multi-hosting) — Implementation details for distributing parties across validators
+* [Composition and Multi-Party Workflows](/docs/canton/appdev-deep-dives-composition-multi-party) — Daml patterns for multi-party interactions
 
 ---
 

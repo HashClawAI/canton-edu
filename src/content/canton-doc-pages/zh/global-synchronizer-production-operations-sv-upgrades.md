@@ -25,7 +25,7 @@ tags:
 
 协议升级是通过逻辑同步器升级来执行的，这允许在非常有限的网络停机时间内升级协议版本。
 
-<Card title="逻辑同步器升级" icon="shuffle" href="/global-synchronizer/production-operations/logical-synchronizer-upgrade">
+<Card title="逻辑同步器升级" icon="shuffle" href="/zh/docs/canton/global-synchronizer-production-operations-logical-synchronizer-upgrade">
   查看安排和执行逻辑同步器升级的操作流程。
 </Card>
 

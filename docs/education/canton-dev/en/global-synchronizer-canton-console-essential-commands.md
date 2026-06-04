@@ -484,8 +484,8 @@ Topology commands show the current state of party-to-participant mappings, packa
 
 ## Next Steps
 
-* [Debugging Workflows](/global-synchronizer/canton-console/debugging-workflows) — Using these commands in diagnostic scenarios
-* [Console Overview](/global-synchronizer/canton-console/console-overview) — How to start the console
+* [Debugging Workflows](/docs/canton/global-synchronizer-canton-console-debugging-workflows) — Using these commands in diagnostic scenarios
+* [Console Overview](/docs/canton/global-synchronizer-canton-console-console-overview) — How to start the console
 
 ---
 

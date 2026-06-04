@@ -81,9 +81,9 @@ Alice（在验证者 A）向 Bob（在验证者 B）转移资产：
 
 ## 延伸阅读
 
-* [架构概览](/overview/learn/architecture) — 验证者、同步器与应用如何协作
-* [隐私模型详解](/overview/learn/privacy-model) — 子交易隐私与视图分解
-* [双层共识](/overview/learn/two-layer-consensus) — 共识协议技术细节
+* [架构概览](/zh/docs/canton/overview-learn-architecture) — 验证者、同步器与应用如何协作
+* [隐私模型详解](/zh/docs/canton/overview-learn-privacy-model) — 子交易隐私与视图分解
+* [双层共识](/zh/docs/canton/overview-learn-two-layer-consensus) — 共识协议技术细节
 
 ---
 

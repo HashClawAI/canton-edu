@@ -26,7 +26,7 @@ This tutorial walks you through creating a v2 version of a Daml package. You'll 
 ## Prerequisites
 
 * A working `dpm` installation with the Daml SDK
-* Familiarity with Daml templates and choices ([Module 3](/appdev/modules/m3-contract-templates))
+* Familiarity with Daml templates and choices ([Module 3](/docs/canton/appdev-modules-m3-contract-templates))
 * A text editor or Daml Studio
 
 ## Step 1: Create the v1 Package
@@ -222,7 +222,7 @@ dpm test
 ```
 
 <Note>
-  This test runs within a single package version, so it approximates rather than fully reproduces cross-version behavior. On a real ledger with both v1 and v2 DARs uploaded, the runtime handles the version resolution between actual v1 contracts and v2 code. See [Testing Upgrades](/appdev/modules/m6-testing-upgrades) for strategies to test real cross-version scenarios.
+  This test runs within a single package version, so it approximates rather than fully reproduces cross-version behavior. On a real ledger with both v1 and v2 DARs uploaded, the runtime handles the version resolution between actual v1 contracts and v2 code. See [Testing Upgrades](/docs/canton/appdev-modules-m6-testing-upgrades) for strategies to test real cross-version scenarios.
 </Note>
 
 ## Step 5: Deploy Both Versions
@@ -255,13 +255,13 @@ When a validator receives a v2 DAR:
 
 This design ensures that mixed-version operation is safe: no data is silently lost, and incompatible interactions fail explicitly rather than corrupting state.
 
-See [Package Selection](/appdev/modules/m6-package-selection) to learn how different versions are resolved at runtime.
+See [Package Selection](/docs/canton/appdev-modules-m6-package-selection) to learn how different versions are resolved at runtime.
 
 ## Next Steps
 
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — Full reference of allowed and disallowed changes
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — Comprehensive upgrade testing strategies
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — Rolling out upgrades across environments
+* [Upgrade Compatibility](/docs/canton/appdev-modules-m6-upgrade-compatibility) — Full reference of allowed and disallowed changes
+* [Testing Upgrades](/docs/canton/appdev-modules-m6-testing-upgrades) — Comprehensive upgrade testing strategies
+* [Deploying Upgrades](/docs/canton/appdev-modules-m6-deployment) — Rolling out upgrades across environments
 
 ---
 

@@ -58,7 +58,7 @@ Party come in two forms, internal and external. An internal party is created on 
 
 External Party are similar to how node interactions happens on other networks and therefore Externally Owned 账户. In this case the signing key can be held externally and a signature is required alongside the 交易 to authorize the action. For external Party the base flow follows three steps: 准备 a 交易, sign the 交易 and submit the 交易. In this guide, when a party is referenced, it is referring to an external party unless otherwise specified.
 
-To read more about the differences between internal and external Party, see the [Local and external Party documentation section here](/overview/reference/external-party).
+To read more about the differences between internal and external Party, see the [Local and external Party documentation section here](/zh/docs/canton/overview-reference-external-party).
 
 **Onboarding and Format**
 
@@ -129,7 +129,7 @@ When integrating with the Canton Network, we recommend that 钱包 提供方 sup
 
 While optional for 钱包 提供方, the following features are strongly recommended to ensure full support for the Canton Network and maximize 用户 adoption:
 
-* [Canton Coin（CC） pre-approvals](/appdev/modules/m7-canton-coin-preapprovals). Documentation on how to implement pre-approvals with the 钱包 SDK are in the [2-step transfer vs 1-step transfer section of this guide](#2-step-transfer-vs-1-step-transfer).
+* [Canton Coin（CC） pre-approvals](/zh/docs/canton/appdev-modules-m7-canton-coin-preapprovals). Documentation on how to implement pre-approvals with the 钱包 SDK are in the [2-step transfer vs 1-step transfer section of this guide](#2-step-transfer-vs-1-step-transfer).
 * dApp support by conforming to [CIP-0103](https://github.com/canton-foundation/cips/blob/main/cip-0103/cip-0103.md), the standard for 钱包 and dApp 集成.
 * The requirement to hold and transfer USDCx is included in the Necessary Features section above, however there are additional levels of support for USDCx for 钱包 提供方 to support such as supporting xReserves deposits and withdrawals and integrating the xReserve UI into the 钱包 directly. The options and instructions are laid out in the [USDCx Support for Wallets section of this guide](#usdcx-support-for-wallets).
 * Pre-approvals for DA Registry issued assets.
@@ -200,7 +200,7 @@ To integrate and support tokens, it is recommended to use the Splice documentati
 
 Party represent acting entities in the 网络 and all 交易 happens between one or more Party. To understand more about Party see the Party in the 概览.
 
-A detailed tutorial of the steps below can be seen in the External Signing Tutorial [here](/appdev/deep-dives/external-signing-onboarding) using python example scripts.
+A detailed tutorial of the steps below can be seen in the External Signing Tutorial [here](/zh/docs/canton/appdev-deep-dives-external-signing-onboarding) using python example scripts.
 
 *This document focuses on the steps required to create an external party using the 钱包 SDK.*
 
@@ -437,7 +437,7 @@ Using the 钱包 SDK you can quickly allocate a party using the following code s
 
 ## 创建 a key pair
 
-The process for creating a key using standard encryption practices is similar that in other blockchains. The full details of supported cryptographic algorithms can be found [Here](/overview/learn/cryptographic-keys). By default an **Ed25519** encryption is used. There exists many libraries that can be used to generate such a key pair, you can do it simply with the WalletSDK using:
+The process for creating a key using standard encryption practices is similar that in other blockchains. The full details of supported cryptographic algorithms can be found [Here](/zh/docs/canton/overview-learn-cryptographic-keys). By default an **Ed25519** encryption is used. There exists many libraries that can be used to generate such a key pair, you can do it simply with the WalletSDK using:
 
 ```typescript theme={"theme":{"light":"github-light","dark":"github-dark"}}
 import { SDK, localNetStaticConfig } from '@canton-network/wallet-sdk'
@@ -2635,7 +2635,7 @@ It is important when integrating with third party dApps to showcase the 用户 e
 
 # Token Standard
 
-The 钱包 SDK support performing basic token standard operations, these are exposed through the `sdk.tokenStandard` a complete overview of the underlying 集成 can be found [here](/appdev/deep-dives/token-standard) and the CIP is defined [here](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md).
+The 钱包 SDK support performing basic token standard operations, these are exposed through the `sdk.tokenStandard` a complete overview of the underlying 集成 can be found [here](/zh/docs/canton/appdev-deep-dives-token-standard) and the CIP is defined [here](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md).
 
 ## How do i quickly perform a transfer between two Party?
 
@@ -4060,7 +4060,7 @@ Follow this [FAQ entry in the Splice documentation](/global-同步器/deployment
 * All 奖励 and coupons are mintable the follow mining round
 * If 奖励 are not redeemed then they are lost\*
 
-你可以 find more information about the tokenomics of Canton Coin（CC） [here](/overview/reference/canton-coin-tokenomics).
+你可以 find more information about the tokenomics of Canton Coin（CC） [here](/zh/docs/canton/overview-reference-canton-coin-tokenomics).
 
 ## Ways of Obtaining Canton Coin（CC） 奖励
 
@@ -4072,7 +4072,7 @@ Just for being online and growing the 网络, Canton Coin（CC） tokenomics ena
 
 For external Party, automation needs to be developed to call `AmuletRules_Transfer` at least once per round with all activity records as inputs.
 
-你可以 find more information about the tokenomics of Canton Coin（CC） at [/overview/reference/canton-coin-tokenomics](/overview/reference/canton-coin-tokenomics).
+你可以 find more information about the tokenomics of Canton Coin（CC） at [/overview/reference/canton-coin-tokenomics](/zh/docs/canton/overview-reference-canton-coin-tokenomics).
 
 *All 奖励 and coupons are mintable the follow mining round, if 奖励 are not redemed then they are lost*
 
@@ -4450,7 +4450,7 @@ There is one way of handle incoming transfers and another way to handle outgoing
 
 Instead of signing every incoming transfer, the receiver signs a single, long-living `TransferPreapproval` 合约. This authorizes the sending party (or a specific 提供方) to deposit funds immediately without requiring an interactive acceptance signature for every 交易.
 
-To do this, create a `Splice.钱包.TransferPreapproval` 合约. The guide on how to create the pre-approval 合约 in the [钱包 SDK is here](#2-step-transfer-vs-1-step-transfer) and the general information about [Canton Coin（CC） Preapprovals is here](/appdev/modules/m7-canton-coin-preapprovals). By implementing a preapproval 合约 the receiver doesn't need to accept Canton Coin（CC） transfers sent to them as they are automatically accepted.
+To do this, create a `Splice.钱包.TransferPreapproval` 合约. The guide on how to create the pre-approval 合约 in the [钱包 SDK is here](#2-step-transfer-vs-1-step-transfer) and the general information about [Canton Coin（CC） Preapprovals is here](/zh/docs/canton/appdev-modules-m7-canton-coin-preapprovals). By implementing a preapproval 合约 the receiver doesn't need to accept Canton Coin（CC） transfers sent to them as they are automatically accepted.
 
 ### Solution 2: Use 命令 Delegation for Outgoing Transfers / Sending Funds
 
@@ -4490,7 +4490,7 @@ The token standard defines the `splice.lfdecentralizedtrust.org/reason` metadata
 
 Token standard wallets must provide a “说明” or “Reason” field analogous to the Canton Coin（CC） 钱包, and store its value in the metadata field of the `转账` specification ([code](https://github.com/hyperledger-labs/splice/blob/332e06a7ae9e13fde5bba0bf7dcb059aa36f979e/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L12-L43)) when initiating a transfer. This is actually what the Canton Coin（CC） 钱包 does behind the scenes when initiating a Canton Coin（CC） transfer.
 
-Likewise when displaying an incoming transfer or the tx history for a transfer the content of `splice.lfdecentralizedtrust.org/reason` metadata key should be parsed and displayed, as done for example by the 交易 history parser in the token standard CLI ([docs](/appdev/deep-dives/token-standard)). This allows exchanges to communicate a correlation-id for a redemption.
+Likewise when displaying an incoming transfer or the tx history for a transfer the content of `splice.lfdecentralizedtrust.org/reason` metadata key should be parsed and displayed, as done for example by the 交易 history parser in the token standard CLI ([docs](/zh/docs/canton/appdev-deep-dives-token-standard)). This allows exchanges to communicate a correlation-id for a redemption.
 
 Code sample for setting the right metadata field: see this [change to the experimental token standard CLI](https://github.com/hyperledger-labs/splice/pull/2003/files) to take the “reason” as 命令 line argument and store it in the metadata field.
 

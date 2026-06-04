@@ -333,9 +333,9 @@ choice RevealingChoice : ()
 
 ## 下一步
 
-* **[Global Synchronizer](/overview/understand/global-synchronizer)** — 公共网络基础设施
-* **[Developer Track Module 3](/appdev/modules/m3-dev-environment)** — 在代码中应用隐私模式
-* **[Glossary](/overview/understand/glossary)** — 含隐私相关术语
+* **[Global Synchronizer](/zh/docs/canton/overview-understand-global-synchronizer)** — 公共网络基础设施
+* **[Developer Track Module 3](/zh/docs/canton/appdev-modules-m3-dev-environment)** — 在代码中应用隐私模式
+* **[Glossary](/zh/docs/canton/overview-understand-glossary)** — 含隐私相关术语
 
 ---
 

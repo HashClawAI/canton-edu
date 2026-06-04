@@ -390,9 +390,9 @@ This is almost always a privacy question. Your party can see a contract only if 
 
 ## Next Steps
 
-* [Development Tools Overview](/appdev/tooling/development-tools-overview) -- Summary of all available tools
-* [Troubleshooting](/appdev/troubleshooting) -- Solutions for common Canton development issues
-* [Testing Daml Contracts](/appdev/modules/m3-testing) -- Writing effective tests to catch issues early
+* [Development Tools Overview](/docs/canton/appdev-tooling-development-tools-overview) -- Summary of all available tools
+* [Troubleshooting](/docs/canton/appdev-troubleshooting) -- Solutions for common Canton development issues
+* [Testing Daml Contracts](/docs/canton/appdev-modules-m3-testing) -- Writing effective tests to catch issues early
 
 ---
 

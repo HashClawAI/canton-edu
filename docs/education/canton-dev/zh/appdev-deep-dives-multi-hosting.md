@@ -52,7 +52,7 @@ tags:
 多托管需要拓扑交易，将 Party 映射到多个验证者。所有托管验证者须签署该映射——提案仅在各方同意后生效。
 
 <Note>
-  以下说明适用于**新的外部 Party**。为既有 Party 增加托管节点称为 [party replication](/global-synchronizer/production-operations/party-management#simple-party-replication)，流程更复杂。外部 Party 须用自身密钥授权 party-to-participant 映射，详见[外部签名入驻](/appdev/deep-dives/external-signing-onboarding)。
+  以下说明适用于**新的外部 Party**。为既有 Party 增加托管节点称为 [party replication](/zh/docs/canton/global-synchronizer-production-operations-party-management#simple-party-replication)，流程更复杂。外部 Party 须用自身密钥授权 party-to-participant 映射，详见[外部签名入驻](/zh/docs/canton/appdev-deep-dives-external-signing-onboarding)。
 </Note>
 
 ### 通过 Ledger API
@@ -92,8 +92,8 @@ tags:
 
 ## 下一步
 
-* [去中心化](/appdev/deep-dives/decentralization)
-* [组合与多方工作流](/appdev/deep-dives/composition-multi-party)
+* [去中心化](/zh/docs/canton/appdev-deep-dives-decentralization)
+* [组合与多方工作流](/zh/docs/canton/appdev-deep-dives-composition-multi-party)
 
 
 ---

@@ -19,7 +19,7 @@ tags:
 
 本页面介绍了 Canton Network 上验证器和超级验证器 (SV) 操作员可用的配置选项。它涵盖 Splice 应用程序配置、Canton 参与者设置、数据库设置、身份验证、流量管理、修剪和可观察性。
 
-对于应用程序开发人员配置（Canton + DPM），请参阅[AppDev 配置参考](/appdev/reference/configuration-reference)。
+对于应用程序开发人员配置（Canton + DPM），请参阅[AppDev 配置参考](/zh/docs/canton/appdev-reference-configuration-reference)。
 
 ## 配置格式
 
@@ -29,7 +29,7 @@ tags:
 
 ### 自定义引导脚本
 
-自定义引导脚本在节点启动时运行 Canton Console 命令。此部分将在未来的更新中扩展。有关脚本语法和示例，请参阅 [Canton Console 脚本](/global-synchronizer/canton-console/scripting) 页面。
+自定义引导脚本在节点启动时运行 Canton Console 命令。此部分将在未来的更新中扩展。有关脚本语法和示例，请参阅 [Canton Console 脚本](/zh/docs/canton/global-synchronizer-canton-console-scripting) 页面。
 
 ## 验证器节点配置
 
@@ -199,7 +199,7 @@ Canton 使用 [HikariCP](https://github.com/brettwooldridge/HikariCP) 进行连�
 
 ## 身份验证
 
-验证器组件通过 OpenID Connect (OIDC) 提供商颁发的 JWT 令牌相互进行身份验证并向外部用户进行身份验证。完整的设置说明位于 [OIDC 提供商](/global-synchronizer/deployment/oidc-providers) 页面。关键配置秘密是：
+验证器组件通过 OpenID Connect (OIDC) 提供商颁发的 JWT 令牌相互进行身份验证并向外部用户进行身份验证。完整的设置说明位于 [OIDC 提供商](/zh/docs/canton/global-synchronizer-deployment-oidc-providers) 页面。关键配置秘密是：
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # 验证者 backend -> participant authentication

@@ -1000,8 +1000,8 @@ tags:
     **推荐资源：**
 
     1. **官方文档：**
-       * [构建文档](/appdev/get-started/choose-your-path)
-       * [运营文档](/global-synchronizer/understand/introduction)
+       * [构建文档](/zh/docs/canton/appdev-get-started-choose-your-path)
+       * [运营文档](/zh/docs/canton/global-synchronizer-understand-introduction)
 
     2. **动手：**
        * [Canton Quickstart](https://github.com/digital-asset/cn-quickstart)
@@ -1094,7 +1094,7 @@ tags:
 
     1. 完成 MainNet 验证者 onboarding
     2. 申请 MainNet IP 白名单
-    3. 遵循 [MainNet onboarding 文档](/global-synchronizer/deployment/onboarding-process)
+    3. 遵循 [MainNet onboarding 文档](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
     4. 以生产配置部署
 
     <Warning>
@@ -1211,7 +1211,7 @@ tags:
 
 1. **[搜索本站文档](https://docs.canton.network)**
 
-2. **查阅 [故障排除速查表](/appdev/troubleshooting)** 获取具体错误方案
+2. **查阅 [故障排除速查表](/zh/docs/canton/appdev-troubleshooting)** 获取具体错误方案
 
 3. **在 [社区 Slack](https://docs.canton.network/shared/support-channels)** 向其他开发者请教
 

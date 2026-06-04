@@ -182,8 +182,8 @@ Performance testing for Canton applications should account for the distinction b
 
 ## Next Steps
 
-* [LocalNet Development](/appdev/modules/m5-localnet-development) — Set up and work with the cn-quickstart LocalNet environment
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — Automate your test pipeline
+* [LocalNet Development](/docs/canton/appdev-modules-m5-localnet-development) — Set up and work with the cn-quickstart LocalNet environment
+* [CI/CD Integration](/docs/canton/appdev-modules-m5-ci-cd-integration) — Automate your test pipeline
 
 ---
 

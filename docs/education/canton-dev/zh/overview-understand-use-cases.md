@@ -270,11 +270,11 @@ template ShipmentFinancing
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="核心概念" icon="book" href="/overview/understand/core-concepts">
+  <Card title="核心概念" icon="book" href="/zh/docs/canton/overview-understand-core-concepts">
     了解各方、验证者和同步者。
   </Card>
 
-  <Card title="开始构建" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="开始构建" icon="code" href="/zh/docs/canton/appdev-get-started-choose-your-path">
     开始您的开发之旅。
   </Card>
 </CardGroup>

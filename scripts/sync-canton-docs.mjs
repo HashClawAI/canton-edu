@@ -10,6 +10,7 @@ import {
   summarizeBody,
 } from './lib/canton-doc-utils.mjs';
 import { translateBodyToZh } from './lib/translate-zh.mjs';
+import { buildValidSlugSet, rewriteInternalLinks } from './lib/canton-link-rewrite.mjs';
 
 const ROOT = process.cwd();
 const KB_DIR = path.join(ROOT, 'docs/education/canton-dev');
@@ -55,8 +56,9 @@ async function cleanLocaleDir(localeDir, keepSlugs) {
   );
 }
 
-async function writeLocaleFile(locale, doc, body, zhTitle) {
-  const markdown = markdownPage({ doc, locale, body, zhTitle });
+async function writeLocaleFile(locale, doc, body, zhTitle, validSlugs) {
+  const rewritten = rewriteInternalLinks(body, { locale, base: '/', validSlugs });
+  const markdown = markdownPage({ doc, locale, body: rewritten, zhTitle });
   const kbPath = path.join(KB_DIR, locale, `${doc.slug}.md`);
   const pagePath = path.join(PAGE_CONTENT_DIR, locale, `${doc.slug}.md`);
   await writeFile(kbPath, markdown, 'utf8');
@@ -85,6 +87,7 @@ async function main() {
   const llmsText = await response.text();
   const indexedDocs = parseLlmsIndex(llmsText);
   const selected = dedupeBySlug(indexedDocs.map(buildDocRecord)).slice(0, limit);
+  const validSlugs = new Set(selected.map((doc) => doc.slug));
   const generatedAt = new Date().toISOString();
 
   await mkdir(path.join(KB_DIR, 'en'), { recursive: true });
@@ -115,7 +118,7 @@ async function main() {
     }
 
     {
-      const enMeta = await writeLocaleFile('en', doc, officialBody);
+      const enMeta = await writeLocaleFile('en', doc, officialBody, undefined, validSlugs);
       contentItems.push({
         slug: doc.slug,
         locale: 'en',
@@ -147,7 +150,7 @@ async function main() {
           title: doc.title,
           body: officialBody,
         });
-        const zhMeta = await writeLocaleFile('zh', doc, zhBody, zhTitle);
+        const zhMeta = await writeLocaleFile('zh', doc, zhBody, zhTitle, validSlugs);
         translated += cached ? 0 : 1;
         contentItems.push({
           slug: doc.slug,

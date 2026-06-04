@@ -125,9 +125,9 @@ Private synchronizers and the Global Synchronizer are complementary:
 
 ## Next Steps
 
-* [Hybrid Synchronizer Pattern](/global-synchronizer/extension-synchronizers/hybrid-synchronizer-pattern) — Combining public and private synchronizers
+* [Hybrid Synchronizer Pattern](/docs/canton/global-synchronizer-extension-synchronizers-hybrid-synchronizer-pattern) — Combining public and private synchronizers
 * [Deployment](/global-synchronizer/extension-synchronizers/deployment) — Deploying extension synchronizer infrastructure
-* [Linking Validators](/global-synchronizer/extension-synchronizers/linking-validator-multi-sync) — Multi-synchronizer validator configuration
+* [Linking Validators](/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync) — Multi-synchronizer validator configuration
 
 ---
 

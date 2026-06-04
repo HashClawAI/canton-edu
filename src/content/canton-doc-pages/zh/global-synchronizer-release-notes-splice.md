@@ -45,7 +45,7 @@ tags:
 
   > * 该发行包现在为验证者操作员提供了一个单独的 Grafana 仪表板文件夹 `验证者-grafana-dashboards/`。
 
-* 添加了`canton.scan-apps.scan-app.activity-ingestion-user-version`配置设置来控制活动记录摄取版本，以便从意外的操作问题中恢复。增加此值会导致扫描应用程序记录新的应用程序活动记录完整性下限。奖励核算不包括此边界之前的回合，即使他们的活动记录被保留。因此，提升用户版本与从提升时开始重新初始化应用程序活动记录计算具有相同的效果。有关更多详细信息，请参阅 [SV Operations 文档](/global-synchronizer/deployment/sv-operations#trigger-re-ingestion-of-the-scan-stores)。
+* 添加了`canton.scan-apps.scan-app.activity-ingestion-user-version`配置设置来控制活动记录摄取版本，以便从意外的操作问题中恢复。增加此值会导致扫描应用程序记录新的应用程序活动记录完整性下限。奖励核算不包括此边界之前的回合，即使他们的活动记录被保留。因此，提升用户版本与从提升时开始重新初始化应用程序活动记录计算具有相同的效果。有关更多详细信息，请参阅 [SV Operations 文档](/zh/docs/canton/global-synchronizer-deployment-sv-operations#trigger-re-ingestion-of-the-scan-stores)。
 
 * 扫描应用程序
 

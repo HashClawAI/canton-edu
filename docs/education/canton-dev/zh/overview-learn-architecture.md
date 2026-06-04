@@ -321,9 +321,9 @@ flowchart TB
 
 ## 下一步
 
-* **[隐私模型详解](/overview/learn/privacy-model)** — 子交易隐私深入
-* **[Global Synchronizer](/overview/understand/global-synchronizer)** — 公共网络基础设施
-* **[验证者运维](/global-synchronizer/understand/introduction)** — 部署与运营验证者
+* **[隐私模型详解](/zh/docs/canton/overview-learn-privacy-model)** — 子交易隐私深入
+* **[Global Synchronizer](/zh/docs/canton/overview-understand-global-synchronizer)** — 公共网络基础设施
+* **[验证者运维](/zh/docs/canton/global-synchronizer-understand-introduction)** — 部署与运营验证者
 
 ---
 

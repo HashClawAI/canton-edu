@@ -22,7 +22,7 @@ tags:
 ## 按角色
 
 <CardGroup cols={2}>
-  <Card title="应用程序开发人员" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="应用程序开发人员" icon="code" href="/zh/docs/canton/appdev-get-started-choose-your-path">
     使用 Daml 智能合约和 Ledger API 在 Canton Network 上构建应用程序。
 
     **如果您愿意，请从这里开始：**
@@ -32,7 +32,7 @@ tags:
     * 了解 Canton 的应用程序设计隐私模型
   </Card>
 
-  <Card title="Ethereum/Web3 Developers" icon="ethereum" href="/appdev/modules/m2-canton-for-ethereum-devs">
+  <Card title="Ethereum/Web3 Developers" icon="ethereum" href="/zh/docs/canton/appdev-modules-m2-canton-for-ethereum-devs">
     将您的区块链知识转化为 Canton 概念与模式。
 
     **如果您符合以下条件，请从这里开始：**
@@ -42,7 +42,7 @@ tags:
     * 需要适应现有的心理模型
   </Card>
 
-  <Card title="节点操作员" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="节点操作员" icon="server" href="/zh/docs/canton/global-synchronizer-understand-introduction">
     在全局同步器上运行验证器基础设施。
 
     **如果您愿意，请从这里开始：**
@@ -52,7 +52,7 @@ tags:
     * 加入 Canton Network 成为运营商
   </Card>
 
-  <Card title="解决方案架构师" icon="diagram-project" href="/overview/understand/five-minute-overview">
+  <Card title="解决方案架构师" icon="diagram-project" href="/zh/docs/canton/overview-understand-five-minute-overview">
     评估 Canton 的企业用例。
 
     **如果您需要，请从这里开始：**
@@ -67,10 +67,10 @@ tags:
 
 |我想... |从这里开始 |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 5 分钟了解 Canton | [五分钟概述](/overview/understand/five-minute-overview) |
+| 5 分钟了解 Canton | [五分钟概述](/zh/docs/canton/overview-understand-five-minute-overview) |
 |了解为什么隐私对于区块链很重要 | [Canton解决的问题](/概述/理解/问题) |
-|了解 Canton 组件如何协同工作 | [架构概述](/overview/learn/architecture) |
-|编写我的第一份智能合约 | [模块 3：Daml 智能合约](/appdev/modules/m3-dev-environment) |
+|了解 Canton 组件如何协同工作 | [架构概述](/zh/docs/canton/overview-learn-architecture) |
+|编写我的第一份智能合约 | [模块 3：Daml 智能合约](/zh/docs/canton/appdev-modules-m3-dev-environment) |
 |运行示例应用程序 | [快速入门](/appdev/快速入门) |
 |部署验证器节点 | [验证器设置](/global-synchronizer/理解/介绍) |
 |将钱包集成到我的应用程序中 | [集成概述](/集成/概述) |

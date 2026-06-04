@@ -161,24 +161,24 @@ Additive 与 Multiplicative 抽象算术运算，使 `(+)`、`(-)`、`(*)` 等�
 
 对上述多数类型与类型类，标准库有对应模块：
 
-* [DA.List](/appdev/reference/daml-standard-library/da-list) — 列表
-* [DA.Optional](/appdev/reference/daml-standard-library/da-optional) — `Optional`
-* [DA.Tuple](/appdev/reference/daml-standard-library/da-tuple) — 元组
-* [DA.Either](/appdev/reference/daml-standard-library/da-either) — `Either`
-* [DA.Functor](/appdev/reference/daml-standard-library/da-functor) — Functor
-* [DA.Action](/appdev/reference/daml-standard-library/da-action) — Action
-* [DA.Functor](/appdev/reference/daml-standard-library/da-functor) 与 [DA.Semigroup](/appdev/reference/daml-standard-library/da-semigroup) — Monoid 与 Semigroup
-* [DA.Text](/appdev/reference/daml-standard-library/da-text) — `Text`
-* [DA.Time](/appdev/reference/daml-standard-library/da-time) — `Time`
-* [DA.Date](/appdev/reference/daml-standard-library/da-date) — `Date`
+* [DA.List](/zh/docs/canton/appdev-reference-daml-standard-library-da-list) — 列表
+* [DA.Optional](/zh/docs/canton/appdev-reference-daml-standard-library-da-optional) — `Optional`
+* [DA.Tuple](/zh/docs/canton/appdev-reference-daml-standard-library-da-tuple) — 元组
+* [DA.Either](/zh/docs/canton/appdev-reference-daml-standard-library-da-either) — `Either`
+* [DA.Functor](/zh/docs/canton/appdev-reference-daml-standard-library-da-functor) — Functor
+* [DA.Action](/zh/docs/canton/appdev-reference-daml-standard-library-da-action) — Action
+* [DA.Functor](/zh/docs/canton/appdev-reference-daml-standard-library-da-functor) 与 [DA.Semigroup](/zh/docs/canton/appdev-reference-daml-standard-library-da-semigroup) — Monoid 与 Semigroup
+* [DA.Text](/zh/docs/canton/appdev-reference-daml-standard-library-da-text) — `Text`
+* [DA.Time](/zh/docs/canton/appdev-reference-daml-standard-library-da-time) — `Time`
+* [DA.Date](/zh/docs/canton/appdev-reference-daml-standard-library-da-date) — `Date`
 
 命名相当直观。
 
-除 Prelude 中的类型类外，还有两个值得了解的模块，泛化你已学的概念：`Foldable` 与 `Traversable`。本章较早示例基于列表，但还有许多迭代器，由两个额外类型类表达：[DA.Traversable](/appdev/reference/daml-standard-library/da-traversable) 与 [DA.Foldable](/appdev/reference/daml-standard-library/da-foldable)。更多细节见 [Haskell wiki 上的 Foldable and Traversable](https://wiki.haskell.org/Foldable_and_Traversable)。
+除 Prelude 中的类型类外，还有两个值得了解的模块，泛化你已学的概念：`Foldable` 与 `Traversable`。本章较早示例基于列表，但还有许多迭代器，由两个额外类型类表达：[DA.Traversable](/zh/docs/canton/appdev-reference-daml-standard-library-da-traversable) 与 [DA.Foldable](/zh/docs/canton/appdev-reference-daml-standard-library-da-foldable)。更多细节见 [Haskell wiki 上的 Foldable and Traversable](https://wiki.haskell.org/Foldable_and_Traversable)。
 
 ## 搜索标准库
 
-从 [Daml 标准库参考](/appdev/reference/daml-standard-library/index) 浏览是起点，模块命名也有帮助，但要查陌生函数含义、或找「做某事」的函数仍不够高效。
+从 [Daml 标准库参考](/zh/docs/canton/appdev-reference-daml-standard-library-index) 浏览是起点，模块命名也有帮助，但要查陌生函数含义、或找「做某事」的函数仍不够高效。
 
 Daml 有自有 [Hoogle](https://hoogle.haskell.org/)：[Daml Hoogle](https://hoogle.daml.com)，支持按名称与签名搜索标准库。
 

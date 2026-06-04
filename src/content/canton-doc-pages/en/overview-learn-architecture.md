@@ -327,9 +327,9 @@ flowchart TB
 
 ## Next Steps
 
-* **[Privacy Model Explained](/overview/learn/privacy-model)** - Deep dive into sub-transaction privacy
-* **[The Global Synchronizer](/overview/understand/global-synchronizer)** - Understand the public network infrastructure
-* **[Validator Operations](/global-synchronizer/understand/introduction)** - For those deploying and operating validators
+* **[Privacy Model Explained](/docs/canton/overview-learn-privacy-model)** - Deep dive into sub-transaction privacy
+* **[The Global Synchronizer](/docs/canton/overview-understand-global-synchronizer)** - Understand the public network infrastructure
+* **[Validator Operations](/docs/canton/global-synchronizer-understand-introduction)** - For those deploying and operating validators
 
 ---
 

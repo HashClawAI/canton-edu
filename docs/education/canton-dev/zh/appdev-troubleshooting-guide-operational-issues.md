@@ -17,7 +17,7 @@ tags:
 
 # 运维问题
 
-本页涵盖应用对接线上网络（DevNet、TestNet 或 MainNet）时出现的问题。本地开发问题见 [开发问题](/appdev/troubleshooting-guide/development-issues)。
+本页涵盖应用对接线上网络（DevNet、TestNet 或 MainNet）时出现的问题。本地开发问题见 [开发问题](/zh/docs/canton/appdev-troubleshooting-guide-development-issues)。
 
 ## 流量耗尽
 

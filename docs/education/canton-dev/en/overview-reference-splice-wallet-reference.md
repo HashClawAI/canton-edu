@@ -149,7 +149,7 @@ The high-level flow for an external party:
 
 For each transfer, the caller must prepare the transaction (obtaining a hash), sign the hash with the external party's private key, and submit the signed transaction back to the participant. See the [validator-internal.yaml](https://raw.githubusercontent.com/canton-network/splice/refs/heads/main/apps/validator/src/main/openapi/validator-internal.yaml) OpenAPI spec for the full endpoint list.
 
-For building custom wallet integrations using the TypeScript Wallet SDK, see the [Wallet SDK documentation](/integrations/wallet/sdk-download).
+For building custom wallet integrations using the TypeScript Wallet SDK, see the [Wallet SDK documentation](/docs/canton/integrations-wallet-sdk-download).
 
 ---
 

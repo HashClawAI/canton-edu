@@ -50,7 +50,7 @@ Daml Studio is a VS Code extension that provides an IDE experience for writing D
 
 Install it by running `dpm studio` from a project directory, or search for "Daml" in the VS Code extensions marketplace. Requires VS Code 1.87 or later.
 
-For full setup instructions, see [IDE Setup](/appdev/tooling/ide-setup).
+For full setup instructions, see [IDE Setup](/docs/canton/appdev-tooling-ide-setup).
 
 ## Canton Console
 
@@ -106,7 +106,7 @@ PQS is useful when you need:
 
 PQS respects the same privacy boundaries as the Ledger API -- it contains only the data your party is entitled to see.
 
-See [PQS](/sdks-tools/development-tools/pqs) and the [PQS SQL Reference](/api-reference) for schema details and query examples.
+See [PQS](/sdks-tools/development-tools/pqs) and the [PQS SQL Reference](/docs/canton/api-reference) for schema details and query examples.
 
 ## Choosing the Right Tool
 
@@ -119,9 +119,9 @@ See [PQS](/sdks-tools/development-tools/pqs) and the [PQS SQL Reference](/api-re
 
 ## Next Steps
 
-* [IDE Setup](/appdev/tooling/ide-setup) -- Configure your editor for Canton development
-* [Debugging Tools](/appdev/tooling/debugging-tools) -- Troubleshoot transactions and contract state
-* [The Canton Development Stack](/appdev/modules/m1-development-stack) -- How all the pieces fit together
+* [IDE Setup](/docs/canton/appdev-tooling-ide-setup) -- Configure your editor for Canton development
+* [Debugging Tools](/docs/canton/appdev-tooling-debugging-tools) -- Troubleshoot transactions and contract state
+* [The Canton Development Stack](/docs/canton/appdev-modules-m1-development-stack) -- How all the pieces fit together
 
 ---
 

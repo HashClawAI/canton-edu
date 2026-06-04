@@ -289,7 +289,7 @@ choice ClaimAfterDeadline : ()
     -- ... claim logic
 ```
 
-Canton 3.x 可用时间原语见 [Working with Time](/appdev/modules/m3-working-with-time)。
+Canton 3.x 可用时间原语见 [Working with Time](/zh/docs/canton/appdev-modules-m3-working-with-time)。
 
 ## 可组合性
 
@@ -308,9 +308,9 @@ choice ExecuteSwap : ()
 
 ## 相关主题
 
-* [Contract Templates](/appdev/modules/m3-contract-templates) — 编写首个 Daml 合约
-* [Choices](/appdev/modules/m3-choices) — 为合约添加行为
-* [Privacy Model](/overview/learn/privacy-model) — 视图如何实现隐私
+* [Contract Templates](/zh/docs/canton/appdev-modules-m3-contract-templates) — 编写首个 Daml 合约
+* [Choices](/zh/docs/canton/appdev-modules-m3-choices) — 为合约添加行为
+* [Privacy Model](/zh/docs/canton/overview-learn-privacy-model) — 视图如何实现隐私
 
 ---
 

@@ -470,8 +470,8 @@ tags:
 
 ## 后续步骤
 
-* [调试工作流程](/global-synchronizer/canton-console/debugging-workflows) — 在诊断场景中使用这些命令
-* [控制台概述](/global-synchronizer/canton-console/console-overview) — 如何启动控制台
+* [调试工作流程](/zh/docs/canton/global-synchronizer-canton-console-debugging-workflows) — 在诊断场景中使用这些命令
+* [控制台概述](/zh/docs/canton/global-synchronizer-canton-console-console-overview) — 如何启动控制台
 
 ---
 

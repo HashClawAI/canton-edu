@@ -33,7 +33,7 @@ tags:
 * [SvAppConfig.scala](https://github.com/canton-network/splice/blob/main/apps/sv/src/main/scala/org/lfdecentralizedtrust/splice/sv/config/SvAppConfig.scala#L199)
 * [ScanAppConfig.scala](https://github.com/canton-network/splice/blob/main/apps/scan/src/main/scala/org/lfdecentralizedtrust/splice/scan/config/ScanAppConfig.scala#L28)
 
-此外，参与者和其他同步器组件也可以独立配置。有关此类配置的更多信息可以在 [Canton 文档](/global-synchronizer/reference/canton-configuration-guide) 中找到。
+此外，参与者和其他同步器组件也可以独立配置。有关此类配置的更多信息可以在 [Canton 文档](/zh/docs/canton/global-synchronizer-reference-canton-configuration-guide) 中找到。
 
 <Note>
   Examples in the Canton docs might have different root configuration keys for the configured nodes; Splice participants/mediators/sequencers are always configured under `canton.participants.participant {`/`canton.mediators.mediator {`/`canton.sequencers.sequencer {`, respectively.

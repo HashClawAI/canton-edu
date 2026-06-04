@@ -243,11 +243,11 @@ Some Ethereum concepts have no direct Canton equivalent:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Privacy Differences" icon="lock" href="/appdev/modules/m2-privacy-differences">
+  <Card title="Privacy Differences" icon="lock" href="/docs/canton/appdev-modules-m2-privacy-differences">
     Deep dive into Canton's privacy model vs. Ethereum.
   </Card>
 
-  <Card title="Smart Contract Paradigm" icon="code" href="/appdev/modules/m2-smart-contract-paradigm">
+  <Card title="Smart Contract Paradigm" icon="code" href="/docs/canton/appdev-modules-m2-smart-contract-paradigm">
     Understand the Daml vs. Solidity programming model.
   </Card>
 </CardGroup>

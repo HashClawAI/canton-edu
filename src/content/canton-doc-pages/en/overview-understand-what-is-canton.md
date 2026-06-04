@@ -130,9 +130,9 @@ This institutional backing validates Canton's approach for enterprise use cases,
 
 ## Next Steps
 
-* **[Canton for Blockchain Developers](/appdev/modules/m2-canton-for-ethereum-devs)** - Map your existing blockchain knowledge to Canton concepts
-* **[Architecture Overview](/overview/learn/architecture)** - Understand how Canton's components work together
-* **[Privacy Model Explained](/overview/learn/privacy-model)** - Deep dive into sub-transaction privacy
+* **[Canton for Blockchain Developers](/docs/canton/appdev-modules-m2-canton-for-ethereum-devs)** - Map your existing blockchain knowledge to Canton concepts
+* **[Architecture Overview](/docs/canton/overview-learn-architecture)** - Understand how Canton's components work together
+* **[Privacy Model Explained](/docs/canton/overview-learn-privacy-model)** - Deep dive into sub-transaction privacy
 
 ---
 

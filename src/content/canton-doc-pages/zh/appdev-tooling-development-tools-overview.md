@@ -44,7 +44,7 @@ Daml Studio 是一个 VS Code 扩展，为编写 Daml 智能合约提供 IDE 体
 
 通过从项目目录运行 `dpm studio` 来安装它，或者在 VS Code 扩展市场中搜索“Daml”。需要 VS Code 1.87 或更高版本。
 
-有关完整的设置说明，请参阅 [IDE 设置](/appdev/tooling/ide-setup)。
+有关完整的设置说明，请参阅 [IDE 设置](/zh/docs/canton/appdev-tooling-ide-setup)。
 
 ## Canton Console
 
@@ -98,7 +98,7 @@ PQS 维护一个与验证器的账本状态同步的 PostgreSQL 数据库。它�
 
 PQS 尊重与 Ledger API 相同的隐私边界——它只包含您方有权查看的数据。
 
-有关架构详细信息和查询示例，请参阅 [PQS](/sdks-tools/development-tools/pqs) 和 [PQS SQL 参考](/api-reference)。
+有关架构详细信息和查询示例，请参阅 [PQS](/sdks-tools/development-tools/pqs) 和 [PQS SQL 参考](/zh/docs/canton/api-reference)。
 
 ## 选择正确的工具
 
@@ -111,9 +111,9 @@ PQS 尊重与 Ledger API 相同的隐私边界——它只包含您方有权查�
 
 ## 后续步骤
 
-* [IDE 设置](/appdev/tooling/ide-setup) -- 配置您的编辑器以进行 Canton 开发
-* [调试工具](/appdev/tooling/debugging-tools) -- 交易和合约状态故障排除
-* [Canton Development Stack](/appdev/modules/m1-development-stack) -- 所有部分如何组合在一起
+* [IDE 设置](/zh/docs/canton/appdev-tooling-ide-setup) -- 配置您的编辑器以进行 Canton 开发
+* [调试工具](/zh/docs/canton/appdev-tooling-debugging-tools) -- 交易和合约状态故障排除
+* [Canton Development Stack](/zh/docs/canton/appdev-modules-m1-development-stack) -- 所有部分如何组合在一起
 
 ---
 

@@ -139,7 +139,7 @@ MergeDelegation 合约还允许钱包提供商将空投活动与在单个批量�
 3. 使用`/v0/admin/external-party/transfer-preapproval/*`发送抄送
 4.通过`GET /v0/admin/external-party/balance`查询余额对于每次转账，调用者必须准备交易（获取哈希），使用外部方的私钥对哈希进行签名，并将签名的交易提交回参与者。有关完整端点列表，请参阅 [validator-internal.yaml](https://raw.githubusercontent.com/canton-network/splice/refs/heads/main/apps/validator/src/main/openapi/validator-internal.yaml) OpenAPI 规范。
 
-有关使用 TypeScript Wallet SDK 构建自定义钱包集成的信息，请参阅 [Wallet SDK 文档](/integrations/wallet/sdk-download)。
+有关使用 TypeScript Wallet SDK 构建自定义钱包集成的信息，请参阅 [Wallet SDK 文档](/zh/docs/canton/integrations-wallet-sdk-download)。
 
 ---
 

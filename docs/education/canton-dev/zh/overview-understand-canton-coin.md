@@ -172,11 +172,11 @@ flowchart TB
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="用户钱包" icon="wallet" href="/integrations/wallets/for-users">
+  <Card title="用户钱包" icon="wallet" href="/zh/docs/canton/integrations-wallets-for-users">
     管理您的Canton Coin。
   </Card>
 
-  <Card title="验证器操作" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="验证器操作" icon="server" href="/zh/docs/canton/global-synchronizer-understand-introduction">
     经营并赚取奖励。
   </Card>
 </CardGroup>

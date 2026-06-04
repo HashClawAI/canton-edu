@@ -78,7 +78,7 @@ SCU 对 Daml 模型的哪些变更可向后兼容有严格规定。Daml 编译�
 * 从模板删除 interface 实例
 * 更改 interface 定义
 
-若必须做破坏性变更，用期望结构创建新模板，并在旧模板上添加 `Upgrade` choice，归档旧合约并创建新合约。详见 [SCU 兼容性规则](/appdev/modules/m6-writing-first-upgrade#step-3-verify-compatibility)。
+若必须做破坏性变更，用期望结构创建新模板，并在旧模板上添加 `Upgrade` choice，归档旧合约并创建新合约。详见 [SCU 兼容性规则](/zh/docs/canton/appdev-modules-m6-writing-first-upgrade#step-3-verify-compatibility)。
 
 ## 后端兼容性
 
@@ -96,8 +96,8 @@ Daml 编译器在构建时验证 v1 与 v2 的升级兼容性。若构建 v1 与
 
 ## 下一步
 
-* [Writing Your First Upgrade](/appdev/modules/m6-writing-first-upgrade) — 创建 v2 包的分步教程
-* [Package Selection](/appdev/modules/m6-package-selection) — 账本如何解析包版本
+* [Writing Your First Upgrade](/zh/docs/canton/appdev-modules-m6-writing-first-upgrade) — 创建 v2 包的分步教程
+* [Package Selection](/zh/docs/canton/appdev-modules-m6-package-selection) — 账本如何解析包版本
 
 ---
 

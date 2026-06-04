@@ -129,7 +129,7 @@ double = (* 2)
 
 #### Associativity and Precedence
 
-When dealing with multiple infix operators, precedence determines how the Daml compiler should parse an expression. For example, for the expression `x + y * z`, because `\*` has a higher precedence than `+`, the expression is parsed as `x + (y * z)` instead of `(x + y) * z`. When dealing with infix operators with the same precedence, associativity determines how the Daml compiler should parse an expression. For example, because `+` and `-` are left-associative, the expression `x + y - z` is parsed as `(x + y) - z` instead of `x + (y - z)`. For built-in operators this has been predefined, for user-defined operators, it must be user-defined. See the [Daml reference on Fixity, Associativity and Precedence](/appdev/reference/daml-language-reference#fixity-associativity-and-precedence) for details.
+When dealing with multiple infix operators, precedence determines how the Daml compiler should parse an expression. For example, for the expression `x + y * z`, because `\*` has a higher precedence than `+`, the expression is parsed as `x + (y * z)` instead of `(x + y) * z`. When dealing with infix operators with the same precedence, associativity determines how the Daml compiler should parse an expression. For example, because `+` and `-` are left-associative, the expression `x + y - z` is parsed as `(x + y) - z` instead of `x + (y - z)`. For built-in operators this has been predefined, for user-defined operators, it must be user-defined. See the [Daml reference on Fixity, Associativity and Precedence](/docs/canton/appdev-reference-daml-language-reference#fixity-associativity-and-precedence) for details.
 
 ### Type constraints
 
@@ -815,7 +815,7 @@ In `choices` you'll learn how to define data transformations and give other part
 
 ## Standard library
 
-For an overview of the Prelude, important types from the standard library, and how to search the library, see [The Daml Standard Library](/appdev/modules/m3-standard-library).
+For an overview of the Prelude, important types from the standard library, and how to search the library, see [The Daml Standard Library](/docs/canton/appdev-modules-m3-standard-library).
 
 ---
 

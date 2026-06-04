@@ -124,7 +124,7 @@ try {
 
 ## 进一步阅读
 
-* [故障排除备忘单](/appdev/troubleshooting) -- 常见问题的快速参考解决方案，包括特定的错误代码
+* [故障排除备忘单](/zh/docs/canton/appdev-troubleshooting) -- 常见问题的快速参考解决方案，包括特定的错误代码
 * [gRPC 状态码](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) -- 官方 gRPC 状态码定义
 * [gRPC 丰富错误模型](https://cloud.google.com/apis/design/errors#error_details) -- Canton 响应中使用的错误详细信息类型
 

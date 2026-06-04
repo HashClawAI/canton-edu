@@ -142,9 +142,9 @@ After the participant starts, it connects to the configured synchronizer automat
 
 Use this decision framework:
 
-* **Do any of your parties need to transact with external Canton Network parties?** If yes, you need a Global Synchronizer connection. Consider the [hybrid pattern](/global-synchronizer/extension-synchronizers/hybrid-synchronizer-pattern) instead.
+* **Do any of your parties need to transact with external Canton Network parties?** If yes, you need a Global Synchronizer connection. Consider the [hybrid pattern](/docs/canton/global-synchronizer-extension-synchronizers-hybrid-synchronizer-pattern) instead.
 * **Do you need Canton Coin for payments or settlement?** If yes, you need a Global Synchronizer connection.
-* **Might you need network connectivity in the future?** If possibly, deploy standard validators now and connect to the Global Synchronizer later. Adding a synchronizer connection is non-disruptive — see [linking to multiple synchronizers](/global-synchronizer/extension-synchronizers/linking-validator-multi-sync).
+* **Might you need network connectivity in the future?** If possibly, deploy standard validators now and connect to the Global Synchronizer later. Adding a synchronizer connection is non-disruptive — see [linking to multiple synchronizers](/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync).
 * **Is your use case entirely internal with no foreseeable external interaction?** Private-only validators are the simpler choice.
 
 ## Migrating to Global Synchronizer later

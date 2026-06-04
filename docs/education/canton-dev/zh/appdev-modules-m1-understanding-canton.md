@@ -77,8 +77,8 @@ flowchart LR
 
 继续前，你应：
 
-* **理解** Canton 是什么（[五分钟概览](/overview/understand/five-minute-overview)）
-* **了解**基本组件（[核心概念](/overview/understand/core-concepts)）
+* **理解** Canton 是什么（[五分钟概览](/zh/docs/canton/overview-understand-five-minute-overview)）
+* **了解**基本组件（[核心概念](/zh/docs/canton/overview-understand-core-concepts)）
 * **具备**编程经验（任意语言）
 
 不要求有区块链经验——若有，请准备好放下部分旧习惯。
@@ -95,19 +95,19 @@ flowchart LR
 ## 学习路径
 
 <CardGroup cols={2}>
-  <Card title="心智模型" icon="brain" href="/appdev/modules/m1-mental-models">
+  <Card title="心智模型" icon="brain" href="/zh/docs/canton/appdev-modules-m1-mental-models">
     建立对 Canton 分布式账本思路的直觉。
   </Card>
 
-  <Card title="开发技术栈" icon="wrench" href="/appdev/modules/m1-development-stack">
+  <Card title="开发技术栈" icon="wrench" href="/zh/docs/canton/appdev-modules-m1-development-stack">
     了解你将使用的工具与技术。
   </Card>
 </CardGroup>
 
 完成本模块后，可继续：
 
-* **[模块 2](/appdev/modules/m2-canton-for-ethereum-devs)**：若你有以太坊/区块链经验
-* **[选择你的路径](/appdev/get-started/choose-your-path)**：若已准备好开始写 Daml
+* **[模块 2](/zh/docs/canton/appdev-modules-m2-canton-for-ethereum-devs)**：若你有以太坊/区块链经验
+* **[选择你的路径](/zh/docs/canton/appdev-get-started-choose-your-path)**：若已准备好开始写 Daml
 
 ---
 

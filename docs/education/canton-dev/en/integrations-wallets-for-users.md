@@ -176,11 +176,11 @@ If you're running an application that needs traffic:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="How Canton Wallets Differ" icon="code-compare" href="/integrations/wallets/canton-vs-web3">
+  <Card title="How Canton Wallets Differ" icon="code-compare" href="/docs/canton/integrations-wallets-canton-vs-web3">
     Understand the technical differences.
   </Card>
 
-  <Card title="Find Apps" icon="grid-2" href="/integrations/apps/finding-apps">
+  <Card title="Find Apps" icon="grid-2" href="/docs/canton/integrations-apps-finding-apps">
     Discover Canton Network applications.
   </Card>
 </CardGroup>

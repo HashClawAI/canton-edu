@@ -25,7 +25,7 @@ Canton Improvement Proposals (CIPs) are formal design documents that describe st
 
 The CIP process is modeled on established improvement proposal frameworks (such as Ethereum's EIPs and Python's PEPs) and is formally defined in [CIP-0000](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0000/cip-0000.md). All CIPs are maintained in a [public GitHub repository](https://github.com/global-synchronizer-foundation/cips) managed by the Global Synchronizer Foundation.
 
-For an introductory overview of CIPs and why they matter, see the [CIPs introduction](/overview/understand/cips-introduction).
+For an introductory overview of CIPs and why they matter, see the [CIPs introduction](/docs/canton/overview-understand-cips-introduction).
 
 ## CIP types
 
@@ -78,7 +78,7 @@ Once the discussion period has elapsed and two Super Validators have agreed to s
 
 ## Relationship to on-chain governance
 
-CIP approval through the vote process is not the final step for proposals that require on-chain changes. Once a CIP is approved, Super Validators must adopt it through an on-chain governance action — the same BFT voting mechanism described in the [SV governance reference](/overview/reference/sv-governance-reference). A CIP reaches Final status only after two-thirds of Super Validators have implemented the change on-chain.
+CIP approval through the vote process is not the final step for proposals that require on-chain changes. Once a CIP is approved, Super Validators must adopt it through an on-chain governance action — the same BFT voting mechanism described in the [SV governance reference](/docs/canton/overview-reference-sv-governance-reference). A CIP reaches Final status only after two-thirds of Super Validators have implemented the change on-chain.
 
 This two-phase structure separates the design consensus (off-chain CIP vote) from the operational commitment (on-chain adoption), ensuring that approved proposals are actually deployed before becoming authoritative. On-chain implementation results are visible through the Canton Coin Scan APIs, so you can verify whether a given CIP has reached Final status by checking adoption across Super Validators.
 
@@ -114,7 +114,7 @@ The following CIPs illustrate the range of topics the process covers.
 * [CIP repository on GitHub](https://github.com/global-synchronizer-foundation/cips) — All CIP documents and the canonical CIP-0000 process definition
 * [CIP-0000: CIP Process](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0000/cip-0000.md) — The authoritative specification of the CIP process, including editorial team, voting rules, and format requirements
 * [GSF mailing lists](https://lists.sync.global/) — The `cip-discuss` and `cip-vote` lists where CIP discussion and voting take place
-* [SV governance reference](/overview/reference/sv-governance-reference) — On-chain governance mechanics that CIPs feed into after approval
+* [SV governance reference](/docs/canton/overview-reference-sv-governance-reference) — On-chain governance mechanics that CIPs feed into after approval
 
 ## How to propose a CIP
 

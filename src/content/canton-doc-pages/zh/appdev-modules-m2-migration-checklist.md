@@ -96,7 +96,7 @@ tags:
 | 以太坊 | Canton | 说明 |
 | ------------------- | ------------------------------------------------------------- | --------------------------------- |
 | JSON-RPC | Ledger API (gRPC 或 JSON API) | 不同协议 |
-| Web3.js / ethers.js | Ledger API 客户端或 [dApp SDK](/appdev/modules/m4-sdks-apis) | 语言相关客户端 |
+| Web3.js / ethers.js | Ledger API 客户端或 [dApp SDK](/zh/docs/canton/appdev-modules-m4-sdks-apis) | 语言相关客户端 |
 | Event logs | Transaction streams | 订阅 Party 交易 |
 | `eth_call` | Exercise non-consuming choice | 只读操作 |
 
@@ -158,7 +158,7 @@ tags:
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="模块 3：Daml 开发" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="模块 3：Daml 开发" icon="code" href="/zh/docs/canton/appdev-modules-m3-dev-environment">
     开始用 Daml 构建。
   </Card>
 

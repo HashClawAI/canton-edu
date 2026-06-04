@@ -15,7 +15,7 @@ tags:
 
 > Canton Network 应用开发常见问题与解答。
 
-解答 Canton Network 应用程序开发中经常出现的问题。有关验证器操作问题，请参阅[常见问题常见问题解答](/appdev/faq)。
+解答 Canton Network 应用程序开发中经常出现的问题。有关验证器操作问题，请参阅[常见问题常见问题解答](/zh/docs/canton/appdev-faq)。
 
 ## 开始使用
 
@@ -132,7 +132,7 @@ curl "https://your-validator:5002/v2/packages" \
 
 ### 如何让我的应用程序在 Canton Network 上得到推荐？
 
-申请者可以通过坎顿改进提案（CIP）流程申请特色地位。首先查看 [CIP 简介](/overview/understand/cips-introduction) 和 [让您的应用成为特色](/overview/understand/getting-app-featured) 指南。
+申请者可以通过坎顿改进提案（CIP）流程申请特色地位。首先查看 [CIP 简介](/zh/docs/canton/overview-understand-cips-introduction) 和 [让您的应用成为特色](/zh/docs/canton/overview-understand-getting-app-featured) 指南。
 
 该过程包括提交一份提案，描述您的应用程序、其对网络的价值以及它如何使用 Canton Network 基础设施。特色应用程序可以在 canton.network 上获得曝光，并可能获得 Global Synchronizer Foundation 的支持。
 

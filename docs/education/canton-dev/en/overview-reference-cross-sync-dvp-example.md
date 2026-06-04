@@ -131,8 +131,8 @@ has the possibility of a contract being temporarily unusable, but they do not ca
 
 ## Further Reading
 
-* [Reassignment Protocol](/overview/reference/reassignment-protocol) -- detailed protocol mechanics for unassignment and assignment
-* [Architecture Overview](/overview/learn/architecture) -- how synchronizers, validators, and the Global Synchronizer fit together
+* [Reassignment Protocol](/docs/canton/overview-reference-reassignment-protocol) -- detailed protocol mechanics for unassignment and assignment
+* [Architecture Overview](/docs/canton/overview-learn-architecture) -- how synchronizers, validators, and the Global Synchronizer fit together
 
 ---
 

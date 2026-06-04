@@ -139,7 +139,7 @@ users may need to change the validator port from 80 to 8080 to avoid
 
 In `DevNet`, your Splice node validator runs locally and connects to the `DevNet` synchronizer.
 Download and extract the Splice node bundle by following the Requirements
-step in the [Docker Compose Validator Deployment guide](/global-synchronizer/deployment/validator-docker-compose#requirements).
+step in the [Docker Compose Validator Deployment guide](/zh/docs/canton/global-synchronizer-deployment-validator-docker-compose#requirements).
 
 The extracted `splice-node` directory and `cn-quickstart` should be
 siblings to one another:

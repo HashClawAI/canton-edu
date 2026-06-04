@@ -17,7 +17,7 @@ tags:
 
 # 处理依赖
 
-`compose` 中的原子交换模型可扩展。变更分两类：**升级**（改现有逻辑，见[智能合约升级](/appdev/deep-dives/smart-contract-upgrade)）与**扩展**（仅增模板）。本节用多 leg 交易扩展示例，并说明 Daml 栈架构、依赖与标识符。
+`compose` 中的原子交换模型可扩展。变更分两类：**升级**（改现有逻辑，见[智能合约升级](/zh/docs/canton/appdev-deep-dives-smart-contract-upgrade)）与**扩展**（仅增模板）。本节用多 leg 交易扩展示例，并说明 Daml 栈架构、依赖与标识符。
 
 设置：在基目录 `dpm new intro-compose --template daml-intro-compose`（目录名 `intro7` 会被引用），同目录 `dpm new intro-9 --template daml-intro-9`。`Dependencies` 含 `Intro.Asset.MultiTrade` 与测试模块。
 
@@ -107,7 +107,7 @@ data-dependencies:
 
 ## 下一步
 
-`MultiTrade` 有更复杂控制流与数据处理；[语言基础](/appdev/modules/m3-language-fundamentals) 将讲控制流、fold、类型类、自定义函数与标准库。勿删除 intro 目录。
+`MultiTrade` 有更复杂控制流与数据处理；[语言基础](/zh/docs/canton/appdev-modules-m3-language-fundamentals) 将讲控制流、fold、类型类、自定义函数与标准库。勿删除 intro 目录。
 
 ---
 

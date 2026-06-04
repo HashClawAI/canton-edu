@@ -219,7 +219,7 @@ To configure the default and allowed schemes for a node include a snippet like t
 
 ### Disable Session keys
 
-An explanation of the purpose and security implications of session keys is available in [Cryptographic keys in Canton](/overview/learn/cryptographic-keys).
+An explanation of the purpose and security implications of session keys is available in [Cryptographic keys in Canton](/docs/canton/overview-learn-cryptographic-keys).
 
 While session keys improve performance, they also introduce a security risk, as the keys are stored in memory—even if only for a short duration. If you prefer to disable session keys and accept the resulting performance degradation, you can do so by setting the following configurations.
 
@@ -871,7 +871,7 @@ You cannot rotate the root namespace key. If you need to discontinue the usage o
 
 Canton uses session keys to reduce expensive cryptographic operations during protocol execution, improving performance. There are two types: session encryption keys, which reduce the number of asymmetric encryptions, and session signing keys, which help avoid frequent calls to external signers such as a KMS.
 
-You can read more about the rationale and security considerations in [Cryptographic keys in Canton](/overview/learn/cryptographic-keys).
+You can read more about the rationale and security considerations in [Cryptographic keys in Canton](/docs/canton/overview-learn-cryptographic-keys).
 
 Extending the lifetime of session keys minimizes the need for repeated key negotiation or remote signing—but it also increases the window during which keys are stored in memory, raising the risk of compromise.
 

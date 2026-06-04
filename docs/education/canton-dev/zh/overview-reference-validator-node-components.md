@@ -160,7 +160,7 @@ ACS 是参与者对活跃合约的本地预测。它仅包含参与者托管的�
 * **确认**：参与者通过排序器向调解器发送批准或拒绝响应
 * **结果**：中介者聚合响应并通过排序器声明提交或回滚；参与者应用结果
 
-有关这些步骤的完整说明，请参阅[事务生命周期](/overview/reference/transaction-lifecycle)。
+有关这些步骤的完整说明，请参阅[事务生命周期](/zh/docs/canton/overview-reference-transaction-lifecycle)。
 
 ## API
 
@@ -214,7 +214,7 @@ JSON API 是 Ledger API 的 HTTP 和 WebSocket 包装器。它将 JSON 请求转
 
 * **账本存储** -- 已提交的交易和 ACS
 * **定序器客户端存储** -- 从同步器接收的消息
-* **拓扑存储** -- 身份映射、密钥注册和参与方分配（请参阅[拓扑](/overview/reference/topology)）
+* **拓扑存储** -- 身份映射、密钥注册和参与方分配（请参阅[拓扑](/zh/docs/canton/overview-reference-topology)）
 * **验证器应用商店** -- 验证器应用程序自身的运行状态
 
 Splice 应用程序层（验证器应用程序、钱包自动化）在同一 PostgreSQL 实例中使用其他数据库模式。
@@ -282,19 +282,19 @@ Canton Network 上的每个验证器都连接到全局同步器。该连接承�
 ## 相关页面
 
 <CardGroup cols={2}>
-  <Card title="交易生命周期" icon="arrows-spin" href="/overview/reference/transaction-lifecycle">
+  <Card title="交易生命周期" icon="arrows-spin" href="/zh/docs/canton/overview-reference-transaction-lifecycle">
     Canton 协议如何处理事务从提交到提交的过程。
   </Card>
 
-  <Card title="Topology" icon="sitemap" href="/overview/reference/topology">
+  <Card title="Topology" icon="sitemap" href="/zh/docs/canton/overview-reference-topology">
     身份管理、密钥注册和参与方映射。
   </Card>
 
-  <Card title="超级验证器组件" icon="server" href="/overview/reference/super-validator-components">
+  <Card title="超级验证器组件" icon="server" href="/zh/docs/canton/overview-reference-super-validator-components">
     超级验证器在标准验证器之外运行的附加组件。
   </Card>
 
-  <Card title="Canton Coin Tokenomics" icon="coins" href="/overview/reference/canton-coin-tokenomics">
+  <Card title="Canton Coin Tokenomics" icon="coins" href="/zh/docs/canton/overview-reference-canton-coin-tokenomics">
     铸造、燃烧、奖励和燃烧-铸造平衡机制。
   </Card>
 </CardGroup>

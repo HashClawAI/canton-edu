@@ -114,20 +114,20 @@ For most teams, the decision comes down to environment and operational capacity:
 
 ## Super Validator deployments
 
-Super Validators must use Kubernetes. The additional components (CometBFT node, sequencer, mediator, SV app, Scan service) require orchestration that Docker Compose does not support at production scale. See the [Kubernetes Deployment](/global-synchronizer/deployment/kubernetes-deployment) guide.
+Super Validators must use Kubernetes. The additional components (CometBFT node, sequencer, mediator, SV app, Scan service) require orchestration that Docker Compose does not support at production scale. See the [Kubernetes Deployment](/docs/canton/global-synchronizer-deployment-kubernetes-deployment) guide.
 
 ## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Prerequisites" icon="list-check" href="/global-synchronizer/deployment/prerequisites">
+  <Card title="Prerequisites" icon="list-check" href="/docs/canton/global-synchronizer-deployment-prerequisites">
     System requirements for your chosen deployment method.
   </Card>
 
-  <Card title="Docker Compose validator deployment" icon="docker" href="/global-synchronizer/deployment/validator-docker-compose">
+  <Card title="Docker Compose validator deployment" icon="docker" href="/docs/canton/global-synchronizer-deployment-validator-docker-compose">
     Step-by-step Docker Compose validator deployment.
   </Card>
 
-  <Card title="Kubernetes validator deployment" icon="dharmachakra" href="/global-synchronizer/deployment/validator-kubernetes">
+  <Card title="Kubernetes validator deployment" icon="dharmachakra" href="/docs/canton/global-synchronizer-deployment-validator-kubernetes">
     Step-by-step Kubernetes validator deployment with Helm charts.
   </Card>
 </CardGroup>

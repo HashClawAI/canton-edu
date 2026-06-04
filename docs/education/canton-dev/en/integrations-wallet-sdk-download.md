@@ -100,8 +100,8 @@ The Wallet SDK includes:
 
 ## Next Steps
 
-* [Wallet Configuration](/integrations/wallet/configuration) — Configure the SDK for your environment
-* [Wallet Integration Guidance](/integrations/wallet/guidance) — Signing transactions from dApps
+* [Wallet Configuration](/docs/canton/integrations-wallet-configuration) — Configure the SDK for your environment
+* [Wallet Integration Guidance](/docs/canton/integrations-wallet-guidance) — Signing transactions from dApps
 
 ---
 

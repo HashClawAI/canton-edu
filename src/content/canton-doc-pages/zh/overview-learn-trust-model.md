@@ -110,9 +110,9 @@ flowchart TB
 
 ## 相关主题
 
-* [双层共识](/overview/learn/two-layer-consensus)
-* [架构概览](/overview/learn/architecture)
-* [隐私模型](/overview/learn/privacy-model)
+* [双层共识](/zh/docs/canton/overview-learn-two-layer-consensus)
+* [架构概览](/zh/docs/canton/overview-learn-architecture)
+* [隐私模型](/zh/docs/canton/overview-learn-privacy-model)
 
 ---
 

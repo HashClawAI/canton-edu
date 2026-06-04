@@ -21,7 +21,7 @@ tags:
 
 > Manage users, parties, and wallets on a validator node
 
-Canton distinguishes between parties and users, as documented in detail in [Manage Daml parties](/appdev/deep-dives/manage-daml-parties). In essence, a party is an identity on-ledger, while a user represents an off-ledger entity that can be associated with one or more parties.
+Canton distinguishes between parties and users, as documented in detail in [Manage Daml parties](/docs/canton/appdev-deep-dives-manage-daml-parties). In essence, a party is an identity on-ledger, while a user represents an off-ledger entity that can be associated with one or more parties.
 
 By default, when a user logs in for the first time in the wallet, and presses the "Onboard yourself" button, the Validator allocates a fresh party, with a fresh Party ID, and associates that user with the newly allocated party. As part of validator initialization, a party is automatically created for the Validator Operator. The user provided during installation as the `validatorWalletUser` will be associated with this party as its primary party.
 

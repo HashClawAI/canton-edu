@@ -21,7 +21,7 @@ tags:
 
 > Reference index of Canton Improvement Proposals (CIPs) by type, number, and status
 
-This page catalogs Canton Improvement Proposals across all types. The canonical source of truth is the [CIP GitHub repository](https://github.com/global-synchronizer-foundation/cips), where each CIP has its own directory containing the full proposal text. For background on what CIPs are and how they work, see [What are CIPs?](/overview/reference/what-are-cips). To submit a new proposal, see the [CIP Reference](/overview/reference/what-are-cips#how-to-propose-a-cip).
+This page catalogs Canton Improvement Proposals across all types. The canonical source of truth is the [CIP GitHub repository](https://github.com/global-synchronizer-foundation/cips), where each CIP has its own directory containing the full proposal text. For background on what CIPs are and how they work, see [What are CIPs?](/docs/canton/overview-reference-what-are-cips). To submit a new proposal, see the [CIP Reference](/docs/canton/overview-reference-what-are-cips#how-to-propose-a-cip).
 
 ## Standards Track CIPs
 

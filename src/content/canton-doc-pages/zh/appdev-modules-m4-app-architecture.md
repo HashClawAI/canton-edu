@@ -87,9 +87,9 @@ cn-quickstart 采用**完全中介**架构：后端处理全部账本交互，�
 
 ## 下一步
 
-* [SDKs and APIs](/appdev/modules/m4-sdks-apis) — 各层可用工具与接口
-* [Backend Development](/appdev/modules/m4-backend-dev) — 连接 Ledger API 与 PQS 的模式
-* [Frontend Development](/appdev/modules/m4-frontend-dev) — 基于后端 API 构建 React UI
+* [SDKs and APIs](/zh/docs/canton/appdev-modules-m4-sdks-apis) — 各层可用工具与接口
+* [Backend Development](/zh/docs/canton/appdev-modules-m4-backend-dev) — 连接 Ledger API 与 PQS 的模式
+* [Frontend Development](/zh/docs/canton/appdev-modules-m4-frontend-dev) — 基于后端 API 构建 React UI
 
 ---
 

@@ -23,7 +23,7 @@ tags:
 
 This page covers Canton-side pruning for participant nodes and automatic pruning configuration.
 
-For Super Validator pruning of the sequencer and CometBFT layers, see [SV Pruning](/global-synchronizer/production-operations/sv-pruning).
+For Super Validator pruning of the sequencer and CometBFT layers, see [SV Pruning](/docs/canton/global-synchronizer-production-operations-sv-pruning).
 
 ## Participant node pruning
 

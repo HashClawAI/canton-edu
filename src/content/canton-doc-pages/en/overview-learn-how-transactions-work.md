@@ -87,9 +87,9 @@ Throughout this process, the synchronizer never saw the asset details, the trans
 
 ## Further Reading
 
-* [Architecture Overview](/overview/learn/architecture) -- How validators, synchronizers, and applications fit together
-* [Privacy Model Explained](/overview/learn/privacy-model) -- Detailed explanation of sub-transaction privacy and view decomposition
-* [Two-Layer Consensus](/overview/learn/two-layer-consensus) -- The consensus protocol in more technical detail
+* [Architecture Overview](/docs/canton/overview-learn-architecture) -- How validators, synchronizers, and applications fit together
+* [Privacy Model Explained](/docs/canton/overview-learn-privacy-model) -- Detailed explanation of sub-transaction privacy and view decomposition
+* [Two-Layer Consensus](/docs/canton/overview-learn-two-layer-consensus) -- The consensus protocol in more technical detail
 
 ---
 

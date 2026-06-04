@@ -58,7 +58,7 @@ Java 示例仓库演示如何从 JVM 语言与 JSON Ledger API 交互：
 
 ## 下一步
 
-* [交易所集成指南](/integrations/exchanges/guidance) — 工作流、架构与部署
+* [交易所集成指南](/zh/docs/canton/integrations-exchanges-guidance) — 工作流、架构与部署
 
 ---
 

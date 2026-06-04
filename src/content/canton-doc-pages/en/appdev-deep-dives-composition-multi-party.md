@@ -25,7 +25,7 @@ Real-world Daml applications involve multiple parties with different roles, perm
 
 ## The Propose-Accept Pattern
 
-For the canonical walkthrough of propose-accept, see [Module 2: Multi-Party Workflows](/appdev/modules/m2-multi-party-workflows#the-propose-accept-pattern). This deep dive focuses on the additional composition patterns that build on that foundation.
+For the canonical walkthrough of propose-accept, see [Module 2: Multi-Party Workflows](/docs/canton/appdev-modules-m2-multi-party-workflows#the-propose-accept-pattern). This deep dive focuses on the additional composition patterns that build on that foundation.
 
 ## Delegation
 
@@ -161,8 +161,8 @@ When composing multi-party workflows:
 
 ## Next Steps
 
-* [Decentralization](/appdev/deep-dives/decentralization) — Strategies for decentralizing at each layer
-* [Multi-Hosting](/appdev/deep-dives/multi-hosting) — Distributing parties across validators for resilience
+* [Decentralization](/docs/canton/appdev-deep-dives-decentralization) — Strategies for decentralizing at each layer
+* [Multi-Hosting](/docs/canton/appdev-deep-dives-multi-hosting) — Distributing parties across validators for resilience
 
 ---
 

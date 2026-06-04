@@ -93,9 +93,9 @@ Pick the fully mediated approach unless you have a specific reason to expose led
 
 ## Next Steps
 
-* [SDKs and APIs](/appdev/modules/m4-sdks-apis) -- The tools and interfaces available for each layer
-* [Backend Development](/appdev/modules/m4-backend-dev) -- Patterns for connecting to the Ledger API and PQS
-* [Frontend Development](/appdev/modules/m4-frontend-dev) -- Building a React UI against the backend API
+* [SDKs and APIs](/docs/canton/appdev-modules-m4-sdks-apis) -- The tools and interfaces available for each layer
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- Patterns for connecting to the Ledger API and PQS
+* [Frontend Development](/docs/canton/appdev-modules-m4-frontend-dev) -- Building a React UI against the backend API
 
 ---
 

@@ -29,7 +29,7 @@ SVs, or more specifically SV participants and mediators, have unlimited traffic 
 
 Sequencers keep track of the traffic used by validator participants. `Traffic` in this context refers to all messages from participants that have to be `sequenced`, i.e., messages that the group of sequencers has to order, persist (up to a pruning interval), and deliver to recipients (typically mediators and other participants).
 
-Most prominently, traffic is used for Daml workflows as part of the [Canton transaction processing protocol](/overview/learn/how-transactions-work). This includes:
+Most prominently, traffic is used for Daml workflows as part of the [Canton transaction processing protocol](/docs/canton/overview-learn-how-transactions-work). This includes:
 
 * Confirmation requests; sent when a participant initiates the committing of a ledger transaction.
 * Confirmation responses; sent for participants that host stakeholders of a transaction.

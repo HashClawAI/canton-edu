@@ -187,8 +187,8 @@ cn-quickstart：`make canton-console`。
 
 ## 下一步
 
-* [Testing Strategies](/appdev/modules/m5-testing-strategies) — Canton 应用测试金字塔
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — 从 LocalNet 到 DevNet、TestNet、MainNet
+* [Testing Strategies](/zh/docs/canton/appdev-modules-m5-testing-strategies) — Canton 应用测试金字塔
+* [Deployment Progression](/zh/docs/canton/appdev-modules-m5-deployment-progression) — 从 LocalNet 到 DevNet、TestNet、MainNet
 
 ---
 

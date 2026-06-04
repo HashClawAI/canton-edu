@@ -62,7 +62,7 @@ The current troubleshooting and debugging services include:
 * Datasource collection and management via **OpenTelemetry**
   * This uses the **OTEL Collector** ([https://opentelemetry.io/docs/collector](https://opentelemetry.io/docs/collector))
 * Metrics are aggregated using **Prometheus** ([https://prometheus.io/](https://prometheus.io/))
-* Logs are inspected with **lnav** (see the [lnav download and documentation](/appdev/quickstart/lnav) page)
+* Logs are inspected with **lnav** (see the [lnav download and documentation](/docs/canton/appdev-quickstart-lnav) page)
 * Traces are aggregated using **Tempo** ([https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/))
 * Aggregated observations (metrics, logs, and traces) are viewable via **Grafana** ([https://grafana.com/oss/grafana/](https://grafana.com/oss/grafana/)) which acts to allow hyperlinked exploration of the Observability fields.
 
@@ -118,7 +118,7 @@ If you review the `compose.yaml` file and examine the configuration for backend-
 
 ```
 
-This enables remote debugging of the Java component backend in the user application (backend-service). You can use this to connect an IDE Debugger to the service at runtime if required. We recommend Grafana as your first resort, along with inspecting consolidated logs with [lnav](/appdev/quickstart/lnav). This keeps the system debuggable in production.
+This enables remote debugging of the Java component backend in the user application (backend-service). You can use this to connect an IDE Debugger to the service at runtime if required. We recommend Grafana as your first resort, along with inspecting consolidated logs with [lnav](/docs/canton/appdev-quickstart-lnav). This keeps the system debuggable in production.
 
 ## Observability and tracing
 
@@ -360,13 +360,13 @@ This will pop up a window with a full unfiltered view of the component’s logs 
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/16-log-context-view.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=53e1d5d9f72df028da84096e4c773acc" alt="Grafana log context view" width="2048" height="1007" data-path="images/docs_website/16-log-context-view.png" />
 
-It is also worth keeping in mind that Grafana exposes access to the raw queries for Tempo and Prometheus. It is well worth the time to experiment with these and discover how to probe the unified metrics and traces available via the observability stack. For log inspection, use [lnav](/appdev/quickstart/lnav):
+It is also worth keeping in mind that Grafana exposes access to the raw queries for Tempo and Prometheus. It is well worth the time to experiment with these and discover how to probe the unified metrics and traces available via the observability stack. For log inspection, use [lnav](/docs/canton/appdev-quickstart-lnav):
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/17-tempo-trace-ql.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=1df43730962dfe2241e11ca374e6ad47" alt="Tempo TraceQL" width="2048" height="466" data-path="images/docs_website/17-tempo-trace-ql.png" />
 
 A starting point for finding documentation on these see:
 
-* lnav: [lnav download and documentation](/appdev/quickstart/lnav)
+* lnav: [lnav download and documentation](/docs/canton/appdev-quickstart-lnav)
 * Tempo: [https://grafana.com/docs/tempo/latest/traceql/](https://grafana.com/docs/tempo/latest/traceql/)
 * Prometheus: [https://grafana.com/docs/grafana/latest/datasources/prometheus/query-editor/](https://grafana.com/docs/grafana/latest/datasources/prometheus/query-editor/)
 
@@ -380,13 +380,13 @@ A starting point for finding documentation on these see:
 
     <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/docs_website/footnote-04-daml-shell-cli.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=9d7e6774522394445fdb410d894d2e45" alt="&#x22;Daml Shell command line interface&#x22;" width="1342" height="2048" data-path="images/docs_website/footnote-04-daml-shell-cli.png" />
 
-[^5]: A key differentiator of Canton from all other level one blockchains is that it offers privacy. It does this by enforcing right-to-know. rather than via secrecy-via-obscurity and/or via pseudo-anonymity. Canton provides two privacy guarantees: Even in encrypted form (sub-)transactions are only transmitted to participant nodes with a right to be informed of them; and, participant nodes will be informed of every (sub-)transaction they have a right to be informed of. For details on how Canton defines "right" and other aspects of this see the [Daml ledger privacy model](/appdev/deep-dives/privacy-model).
+[^5]: A key differentiator of Canton from all other level one blockchains is that it offers privacy. It does this by enforcing right-to-know. rather than via secrecy-via-obscurity and/or via pseudo-anonymity. Canton provides two privacy guarantees: Even in encrypted form (sub-)transactions are only transmitted to participant nodes with a right to be informed of them; and, participant nodes will be informed of every (sub-)transaction they have a right to be informed of. For details on how Canton defines "right" and other aspects of this see the [Daml ledger privacy model](/docs/canton/appdev-deep-dives-privacy-model).
 
 [^6]: Distributed tracing is essential to efficient debugging and diagnosis of any distributed application. While technically distinct identifiers Trace and Span Ids are closely linked. If unfamiliar with their use OpenTelemetry has a good primer ([https://opentelemetry.io/docs/concepts/signals/traces/](https://opentelemetry.io/docs/concepts/signals/traces/)), Grafana has a reasonable demo ([https://grafana.com/docs/tempo/latest/introduction/](https://grafana.com/docs/tempo/latest/introduction/)), and we demonstrate their use later in this guide.
 
 [^7]: Equivalent to “blockheight” in other public blockchains that do not support privacy. As privacy dictates that each participant node sees a different projection of the global blockchain, the offset is not comparable across different Participant Nodes. It is commonly the preferred id when dealing with a single participant node due to being a simple, monotonic, total-order on ledger events witnessed by a Participant Node.
 
-[^8]: By virtue of their role in the ledger model, all parties are (and the associated entity must be) capable of authorizing a (sub-)transaction or ledger event. See the [Daml ledger authorization model](/appdev/deep-dives/authorization) for details.
+[^8]: By virtue of their role in the ledger model, all parties are (and the associated entity must be) capable of authorizing a (sub-)transaction or ledger event. See the [Daml ledger authorization model](/docs/canton/appdev-deep-dives-authorization) for details.
 
 [^9]: Where loggers cannot be configured to emit structured logs directly, log parsers are used to convert raw log files in the usual manner. This is primarily done in the OTEL Collector configuration.
 

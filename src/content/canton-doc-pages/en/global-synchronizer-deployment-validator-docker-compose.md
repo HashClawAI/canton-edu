@@ -81,7 +81,7 @@ This deployment is useful for:
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### Required Network Parameters
@@ -161,7 +161,7 @@ This deployment is useful for:
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### Required Network Parameters
@@ -225,7 +225,7 @@ This deployment is useful for:
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     ### Required Network Parameters
@@ -499,12 +499,12 @@ export TARGET_TRAFFIC_THROUGHPUT=20000 # target throughput in bytes/second
 export MIN_TRAFFIC_TOPUP_INTERVAL="1m" # minimum interval between top-ups
 ```
 
-<p>On each successful top-up, the validator app purchases a `top-up amount` of roughly `targetThroughput * minTopupInterval` bytes of traffic (specific amount can vary due to rounding-up). The `minTopupInterval` allows validator operators to control the upper-bound frequency at which automated top-ups happen. If the top-up amount is below the synchronizer-wide `minTopupAmount` (see [traffic parameters](/global-synchronizer/deployment/synchronizer-traffic#traffic-parameters)), `minTopupInterval` is automatically stretched so that at least `minTopupAmount` bytes of traffic are purchased while respecting the configured `targetThroughput`.</p>
+<p>On each successful top-up, the validator app purchases a `top-up amount` of roughly `targetThroughput * minTopupInterval` bytes of traffic (specific amount can vary due to rounding-up). The `minTopupInterval` allows validator operators to control the upper-bound frequency at which automated top-ups happen. If the top-up amount is below the synchronizer-wide `minTopupAmount` (see [traffic parameters](/docs/canton/global-synchronizer-deployment-synchronizer-traffic#traffic-parameters)), `minTopupInterval` is automatically stretched so that at least `minTopupAmount` bytes of traffic are purchased while respecting the configured `targetThroughput`.</p>
 
 <p>The next top-up gets triggered when all of the following conditions are met:</p>
 
 <ul>
-  <li>The available [extra traffic balance](/global-synchronizer/deployment/synchronizer-traffic#traffic-accounting-what-counts-as-traffic) drops below the configured top-up amount (i.e., below `targetThroughput * minTopupInterval`).</li>
+  <li>The available [extra traffic balance](/docs/canton/global-synchronizer-deployment-synchronizer-traffic#traffic-accounting-what-counts-as-traffic) drops below the configured top-up amount (i.e., below `targetThroughput * minTopupInterval`).</li>
 
   <li>At least `minTopupInterval` has elapsed since the last top-up.</li>
 

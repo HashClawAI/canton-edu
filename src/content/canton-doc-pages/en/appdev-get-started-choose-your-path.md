@@ -29,20 +29,20 @@ Whether you're new to blockchain or migrating from another platform, this guide 
   <Accordion title="I'm new to blockchain development">
     **Recommended Path:**
 
-    1. [Five-Minute Overview](/overview/understand/five-minute-overview) - Understand what Canton is
-    2. [Core Concepts](/overview/understand/core-concepts) - Learn the fundamentals
-    3. [Module 1: Understanding Canton](/appdev/modules/m1-understanding-canton) - Build mental models
-    4. [Module 3: Daml Smart Contracts](/appdev/modules/m3-dev-environment) - Start coding
-    5. [Module 4: Building Applications](/appdev/modules/m4-building-apps-intro) - Hands-on practice with the example application
+    1. [Five-Minute Overview](/docs/canton/overview-understand-five-minute-overview) - Understand what Canton is
+    2. [Core Concepts](/docs/canton/overview-understand-core-concepts) - Learn the fundamentals
+    3. [Module 1: Understanding Canton](/docs/canton/appdev-modules-m1-understanding-canton) - Build mental models
+    4. [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment) - Start coding
+    5. [Module 4: Building Applications](/docs/canton/appdev-modules-m4-building-apps-intro) - Hands-on practice with the example application
   </Accordion>
 
   <Accordion title="I have Ethereum/Solidity experience">
     **Recommended Path:**
 
-    1. [Canton for Ethereum Developers](/appdev/modules/m2-canton-for-ethereum-devs) - Map your knowledge
-    2. [Privacy Model](/overview/learn/privacy-model) - Understand the key difference
-    3. [Module 3: Daml Smart Contracts](/appdev/modules/m3-dev-environment) - Learn Daml syntax
-    4. [Module 4: Building Applications](/appdev/modules/m4-building-apps-intro) - Hands-on practice building a full-stack Canton app
+    1. [Canton for Ethereum Developers](/docs/canton/appdev-modules-m2-canton-for-ethereum-devs) - Map your knowledge
+    2. [Privacy Model](/docs/canton/overview-learn-privacy-model) - Understand the key difference
+    3. [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment) - Learn Daml syntax
+    4. [Module 4: Building Applications](/docs/canton/appdev-modules-m4-building-apps-intro) - Hands-on practice building a full-stack Canton app
 
     **Key differences to internalize:**
 
@@ -54,20 +54,20 @@ Whether you're new to blockchain or migrating from another platform, this guide 
   <Accordion title="I have experience with other blockchains (Solana, Cosmos, etc.)">
     **Recommended Path:**
 
-    1. [Five-Minute Overview](/overview/understand/five-minute-overview) - Canton's approach
-    2. [Canton for Ethereum Developers](/appdev/modules/m2-canton-for-ethereum-devs) - Concept mapping (still useful)
-    3. [Architecture Overview](/overview/learn/architecture) - How components work
-    4. [Module 3: Daml Smart Contracts](/appdev/modules/m3-dev-environment) - Start coding
+    1. [Five-Minute Overview](/docs/canton/overview-understand-five-minute-overview) - Canton's approach
+    2. [Canton for Ethereum Developers](/docs/canton/appdev-modules-m2-canton-for-ethereum-devs) - Concept mapping (still useful)
+    3. [Architecture Overview](/docs/canton/overview-learn-architecture) - How components work
+    4. [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment) - Start coding
   </Accordion>
 
   <Accordion title="I want to understand Canton without coding (architect/PM)">
     **Recommended Path:**
 
-    1. [Five-Minute Overview](/overview/understand/five-minute-overview)
-    2. [The Problem Canton Solves](/overview/understand/the-problem)
-    3. [Canton's Solution](/overview/understand/cantons-solution)
-    4. [Use Cases](/overview/understand/use-cases)
-    5. [Architecture Overview](/overview/learn/architecture)
+    1. [Five-Minute Overview](/docs/canton/overview-understand-five-minute-overview)
+    2. [The Problem Canton Solves](/docs/canton/overview-understand-the-problem)
+    3. [Canton's Solution](/docs/canton/overview-understand-cantons-solution)
+    4. [Use Cases](/docs/canton/overview-understand-use-cases)
+    5. [Architecture Overview](/docs/canton/overview-learn-architecture)
   </Accordion>
 </AccordionGroup>
 
@@ -141,7 +141,7 @@ Before starting development:
 
 ## Hands-on Practice
 
-Ready to build? [Module 4: Building Applications](/appdev/modules/m4-building-apps-intro) walks you through a full-stack Canton Network application end-to-end — prerequisites, running the demo, backend and frontend development, the JSON Ledger API, and observability.
+Ready to build? [Module 4: Building Applications](/docs/canton/appdev-modules-m4-building-apps-intro) walks you through a full-stack Canton Network application end-to-end — prerequisites, running the demo, backend and frontend development, the JSON Ledger API, and observability.
 
 ## Getting Help
 
@@ -154,7 +154,7 @@ Ready to build? [Module 4: Building Applications](/appdev/modules/m4-building-ap
     Technical discussions and Q\&A
   </Card>
 
-  <Card title="FAQ" icon="question" href="/appdev/faq">
+  <Card title="FAQ" icon="question" href="/docs/canton/appdev-faq">
     Common questions answered
   </Card>
 </CardGroup>

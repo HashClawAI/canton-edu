@@ -99,7 +99,7 @@ Practical steps for distribution:
 * Publish DARs to a shared artifact repository that counterparties can access
 * Provide build instructions so counterparties can compile from source and verify the DAR matches
 * Include a changelog documenting what changed between versions
-* Communicate upgrade timelines (see [Upgrade Deployment](/appdev/modules/m6-deployment))
+* Communicate upgrade timelines (see [Upgrade Deployment](/docs/canton/appdev-modules-m6-deployment))
 
 ## Package Modularization
 
@@ -109,8 +109,8 @@ Practical steps for distribution:
 
 ## Next Steps
 
-* [Security Best Practices](/appdev/modules/m7-security) — Securing your packages and deployment pipeline
-* [Performance](/appdev/modules/m7-performance) — Optimization strategies for Canton applications
+* [Security Best Practices](/docs/canton/appdev-modules-m7-security) — Securing your packages and deployment pipeline
+* [Performance](/docs/canton/appdev-modules-m7-performance) — Optimization strategies for Canton applications
 
 ---
 

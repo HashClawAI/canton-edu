@@ -118,13 +118,13 @@ tags:
 > * `token_standard_usage_executing_nonfactory_choice`
 > * `token_standard_usage_custom_daml_code`
 
-这些模式已封装在 `canton-network/wallet-gateway` 仓库的 [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk) 中，并[在此文档](/integrations/wallet/guidance)说明。
+这些模式已封装在 `canton-network/wallet-gateway` 仓库的 [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk) 中，并[在此文档](/zh/docs/canton/integrations-wallet-guidance)说明。
 
 上述模式在 [代币标准 CLI 实验命令行](https://github.com/canton-network/splice/tree/main/token-standard#cli) 中也有可执行示例。下文各节先链接代码，再补充实现背景。
 
 所有交互均通过 JSON Ledger API（[OpenAPI 定义](/sdks-tools/api-reference/json-api)）。该定义也可在 `http(s)://${YOUR_PARTICIPANT}/docs/openapi` 访问。建议使用 OpenAPI 代码生成工具，而非手写 HTTP 请求。
 
-认证请参阅[认证文档](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt)。
+认证请参阅[认证文档](/zh/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt)。
 
 ### 读取实现代币标准接口的合约
 
@@ -166,7 +166,7 @@ tags:
 还可设置三个标志：
 
 * `includeInterfaceView`：在响应中包含合约的接口视图。
-* `includeCreatedEventBlob`：包含 [显式披露](/appdev/deep-dives/explicit-contract-disclosure) 所需的二进制 blob。
+* `includeCreatedEventBlob`：包含 [显式披露](/zh/docs/canton/appdev-deep-dives-explicit-contract-disclosure) 所需的二进制 blob。
 * `verbose`：在响应中包含更多信息。
 
 此类查询的响应包含合约的 `createdEvent`（含所请求的接口视图）。其中的 `viewValue` 为 JSON 序列化的 Daml 接口视图。若请求多个接口，可通过 `interfaceId` 区分。[Holding 示例响应](https://github.com/canton-network/splice/blob/main/token-standard/cli/__tests__/mocks/data/holdings.json)。

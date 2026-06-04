@@ -598,14 +598,14 @@ curl -s "http://localhost:8080/licenses/${LICENSE_CID}/comments" \
 
 ## Next Steps
 
-* [Frontend Development](/appdev/modules/m4-frontend-dev) -- Build a React UI that consumes this backend's REST API, including a frontend exercise that adds comment UI on top of these backend endpoints
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- Understand traffic costs and wallet integration for payments
+* [Frontend Development](/docs/canton/appdev-modules-m4-frontend-dev) -- Build a React UI that consumes this backend's REST API, including a frontend exercise that adds comment UI on top of these backend endpoints
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- Understand traffic costs and wallet integration for payments
 * [cn-quickstart repository](https://github.com/digital-asset/cn-quickstart) -- Full working backend implementation
 
 ## Advanced Topics
 
-* [Command Deduplication](/appdev/deep-dives/command-deduplication) — Designing application command flows so an intended ledger change is executed exactly once, even under retries, crashes, and lost network messages.
-* [Explicit Contract Disclosure](/appdev/deep-dives/explicit-contract-disclosure) — Submitting commands that read a contract you do not stakeholder by passing it as a disclosed contract on the Ledger API.
+* [Command Deduplication](/docs/canton/appdev-deep-dives-command-deduplication) — Designing application command flows so an intended ledger change is executed exactly once, even under retries, crashes, and lost network messages.
+* [Explicit Contract Disclosure](/docs/canton/appdev-deep-dives-explicit-contract-disclosure) — Submitting commands that read a contract you do not stakeholder by passing it as a disclosed contract on the Ledger API.
 
 ---
 

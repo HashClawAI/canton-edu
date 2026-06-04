@@ -309,9 +309,9 @@ Coming from Ethereum, these habits will need to change.
 
 ## Next Steps
 
-* **[Architecture Overview](/overview/learn/architecture)** - Deep dive into Canton's component model
-* **[Privacy Model Explained](/overview/learn/privacy-model)** - Understand sub-transaction privacy
-* **[Developer Track Module 3: Daml Development](/appdev/modules/m3-dev-environment)** - Start writing Daml code
+* **[Architecture Overview](/docs/canton/overview-learn-architecture)** - Deep dive into Canton's component model
+* **[Privacy Model Explained](/docs/canton/overview-learn-privacy-model)** - Understand sub-transaction privacy
+* **[Developer Track Module 3: Daml Development](/docs/canton/appdev-modules-m3-dev-environment)** - Start writing Daml code
 
 ---
 

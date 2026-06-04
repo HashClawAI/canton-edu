@@ -141,7 +141,7 @@ Before creating a proposal, the beneficiary must have:
 
 The `MintingDelegationProposal` contract contains a `delegation` field with the same properties as described in the Overview section above (beneficiary, delegate, expiration, and amulet merge limit), plus the DSO party ID.
 
-All interaction works via the JSON Ledger API (see its [OpenAPI definition](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml)). Check out the [Authentication docs](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt) for more information on how to authenticate the requests.
+All interaction works via the JSON Ledger API (see its [OpenAPI definition](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml)). Check out the [Authentication docs](/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt) for more information on how to authenticate the requests.
 
 To create the proposal, submit a `create` command via the Ledger API [command submission endpoint](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L173).
 

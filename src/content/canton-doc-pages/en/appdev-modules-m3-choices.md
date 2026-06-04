@@ -35,7 +35,7 @@ In this section you will learn about how to define simple data transformations u
 
 If you think of templates as classes and contracts as objects, where are the methods?
 
-Take as an example a `Contact` contract on which the contact owner wants to be able to change the telephone number. Rather than requiring them to manually look up the contract, archive the old one, and create a new one as you saw in [Contract Templates](/appdev/modules/m3-contract-templates), you can provide them a convenience method on `Contact`:
+Take as an example a `Contact` contract on which the contact owner wants to be able to change the telephone number. Rather than requiring them to manually look up the contract, archive the old one, and create a new one as you saw in [Contract Templates](/docs/canton/appdev-modules-m3-contract-templates), you can provide them a convenience method on `Contact`:
 
 ```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
 template Contact
@@ -142,7 +142,7 @@ If you open the script view in the IDE, you will notice that Bob sees the `Conta
 
 ## Choices in the ledger model
 
-In [Contract Templates](/appdev/modules/m3-contract-templates#daml-ledger-basics) you learned about the high-level structure of a Daml ledger. With choices and the `exercise` function, you have the next important ingredient to understand the structure of the ledger and transactions.
+In [Contract Templates](/docs/canton/appdev-modules-m3-contract-templates#daml-ledger-basics) you learned about the high-level structure of a Daml ledger. With choices and the `exercise` function, you have the next important ingredient to understand the structure of the ledger and transactions.
 
 A *transaction* is a list of *actions*, and there are three kinds of action: `create`, `exercise` and `fetch`.
 
@@ -212,7 +212,7 @@ You may have noticed that there is no archive action. That's because `archive ci
 
 ## A simple cash model
 
-With the power of choices, you can build your first interesting model: issuance of cash IOUs (I owe you). The model presented here is simpler than the one in [Language Fundamentals](/appdev/modules/m3-language-fundamentals) as it's not concerned with the location of the physical cash, but merely with liabilities:
+With the power of choices, you can build your first interesting model: issuance of cash IOUs (I owe you). The model presented here is simpler than the one in [Language Fundamentals](/docs/canton/appdev-modules-m3-language-fundamentals) as it's not concerned with the location of the physical cash, but merely with liabilities:
 
 ```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
 data Cash = Cash with
@@ -244,7 +244,7 @@ The above model is fine as long as everyone trusts Dora. Dora could revoke the `
 
 You can now store and transform data on the ledger, even giving other parties specific write access through choices.
 
-In [Authorization Model](/appdev/modules/m3-authorization), you will learn more about the authorization rules that govern who can create, exercise, and archive contracts.
+In [Authorization Model](/docs/canton/appdev-modules-m3-authorization), you will learn more about the authorization rules that govern who can create, exercise, and archive contracts.
 
 ---
 

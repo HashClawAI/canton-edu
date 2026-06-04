@@ -62,7 +62,7 @@ MyRecord {foo = 3, bar = "hello"}
 daml>
 ```
 
-更多记录语法见 [DA.Record](/appdev/reference/daml-standard-library/da-record)。
+更多记录语法见 [DA.Record](/zh/docs/canton/appdev-reference-daml-standard-library-da-record)。
 
 `GetField x r a` 与 `SetField x r a` 为三参数类型类：第一参数 `x` 为字段名，第二参数 `r` 为记录类型，第三参数 `a` 为该字段类型。
 

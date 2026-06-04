@@ -21,7 +21,7 @@ tags:
 
 > Troubleshooting traffic exhaustion, upgrade problems, and PQS failures on DevNet, TestNet, and MainNet
 
-This page covers problems that arise when your application runs against a live network: DevNet, TestNet, or MainNet. Local development issues are covered in [Development Issues](/appdev/troubleshooting-guide/development-issues).
+This page covers problems that arise when your application runs against a live network: DevNet, TestNet, or MainNet. Local development issues are covered in [Development Issues](/docs/canton/appdev-troubleshooting-guide-development-issues).
 
 ## Traffic Exhaustion
 

@@ -64,7 +64,7 @@ The exchange integration guide is structured as incremental milestones:
 
 ## Next Steps
 
-* [Exchange Integration Guidance](/integrations/exchanges/guidance) — Workflows, architecture, and deployment
+* [Exchange Integration Guidance](/docs/canton/integrations-exchanges-guidance) — Workflows, architecture, and deployment
 
 ---
 

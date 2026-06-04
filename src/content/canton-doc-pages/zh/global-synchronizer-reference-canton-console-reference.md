@@ -39,7 +39,7 @@ Welcome to Canton!
 
 ## 参与者控制台
 
-1. 获取 [Canton 身份验证文档](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt) 中指定的身份验证令牌
+1. 获取 [Canton 身份验证文档](/zh/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt) 中指定的身份验证令牌
 
 2. 确保您可以访问与会者的端口5001和5002
 

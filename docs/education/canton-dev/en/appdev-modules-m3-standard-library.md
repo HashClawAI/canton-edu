@@ -167,24 +167,24 @@ Additive and Multiplicative abstract out arithmetic operations, so that `(+)`, `
 
 For almost all the types and typeclasses presented above, the standard library contains a module:
 
-* [DA.List](/appdev/reference/daml-standard-library/da-list) for Lists
-* [DA.Optional](/appdev/reference/daml-standard-library/da-optional) for `Optional`
-* [DA.Tuple](/appdev/reference/daml-standard-library/da-tuple) for Tuples
-* [DA.Either](/appdev/reference/daml-standard-library/da-either) for `Either`
-* [DA.Functor](/appdev/reference/daml-standard-library/da-functor) for Functors
-* [DA.Action](/appdev/reference/daml-standard-library/da-action) for Actions
-* [DA.Functor](/appdev/reference/daml-standard-library/da-functor) and [DA.Semigroup](/appdev/reference/daml-standard-library/da-semigroup) for Monoids and Semigroups
-* [DA.Text](/appdev/reference/daml-standard-library/da-text) for working with `Text`
-* [DA.Time](/appdev/reference/daml-standard-library/da-time) for working with `Time`
-* [DA.Date](/appdev/reference/daml-standard-library/da-date) for working with `Date`
+* [DA.List](/docs/canton/appdev-reference-daml-standard-library-da-list) for Lists
+* [DA.Optional](/docs/canton/appdev-reference-daml-standard-library-da-optional) for `Optional`
+* [DA.Tuple](/docs/canton/appdev-reference-daml-standard-library-da-tuple) for Tuples
+* [DA.Either](/docs/canton/appdev-reference-daml-standard-library-da-either) for `Either`
+* [DA.Functor](/docs/canton/appdev-reference-daml-standard-library-da-functor) for Functors
+* [DA.Action](/docs/canton/appdev-reference-daml-standard-library-da-action) for Actions
+* [DA.Functor](/docs/canton/appdev-reference-daml-standard-library-da-functor) and [DA.Semigroup](/docs/canton/appdev-reference-daml-standard-library-da-semigroup) for Monoids and Semigroups
+* [DA.Text](/docs/canton/appdev-reference-daml-standard-library-da-text) for working with `Text`
+* [DA.Time](/docs/canton/appdev-reference-daml-standard-library-da-time) for working with `Time`
+* [DA.Date](/docs/canton/appdev-reference-daml-standard-library-da-date) for working with `Date`
 
 You get the idea, the names are fairly descriptive.
 
-Other than the typeclasses defined in Prelude, there are two modules generalizing concepts you've already learned, which are worth knowing about: `Foldable` and `Traversable`. The examples earlier in this module were based on lists, but there are many other possible iterators. This is expressed in two additional typeclasses: [DA.Traversable](/appdev/reference/daml-standard-library/da-traversable) and [DA.Foldable](/appdev/reference/daml-standard-library/da-foldable). For more detail on these concepts, see [Foldable and Traversable on the Haskell wiki](https://wiki.haskell.org/Foldable_and_Traversable).
+Other than the typeclasses defined in Prelude, there are two modules generalizing concepts you've already learned, which are worth knowing about: `Foldable` and `Traversable`. The examples earlier in this module were based on lists, but there are many other possible iterators. This is expressed in two additional typeclasses: [DA.Traversable](/docs/canton/appdev-reference-daml-standard-library-da-traversable) and [DA.Foldable](/docs/canton/appdev-reference-daml-standard-library-da-foldable). For more detail on these concepts, see [Foldable and Traversable on the Haskell wiki](https://wiki.haskell.org/Foldable_and_Traversable).
 
 ## Search the standard library
 
-Being able to browse the standard library starting from the [Daml Standard Library reference](/appdev/reference/daml-standard-library/index) is a start, and the module naming helps, but it's not an efficient process for finding out what a function you've encountered does, even less so for finding a function that does a thing you need to do.
+Being able to browse the standard library starting from the [Daml Standard Library reference](/docs/canton/appdev-reference-daml-standard-library-index) is a start, and the module naming helps, but it's not an efficient process for finding out what a function you've encountered does, even less so for finding a function that does a thing you need to do.
 
 Daml has its own version of the [Hoogle](https://hoogle.haskell.org/) search engine: [Daml Hoogle](https://hoogle.daml.com). It offers standard library search both by name and by signature.
 

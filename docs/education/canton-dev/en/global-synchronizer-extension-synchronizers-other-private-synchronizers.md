@@ -40,7 +40,7 @@ Without a Global Synchronizer connection, your deployment cannot:
 * **Interoperate with other Canton Network participants** — Contracts on your private synchronizer cannot be reassigned to the Global Synchronizer or interact with contracts there
 * **Participate in Canton Network governance** — Your validators are not part of the Canton Network topology
 
-If you later decide you need Global Synchronizer connectivity, you can add it by connecting your validators to the Global Synchronizer and reassigning contracts as needed. See [linking a validator to multiple synchronizers](/global-synchronizer/extension-synchronizers/linking-validator-multi-sync) for how this works.
+If you later decide you need Global Synchronizer connectivity, you can add it by connecting your validators to the Global Synchronizer and reassigning contracts as needed. See [linking a validator to multiple synchronizers](/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync) for how this works.
 
 ## Architecture
 

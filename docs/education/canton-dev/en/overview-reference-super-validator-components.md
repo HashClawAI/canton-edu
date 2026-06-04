@@ -75,7 +75,7 @@ flowchart TB
 
 ## Validator Stack
 
-Every SV includes the full validator stack. For a detailed breakdown, see the [Validator Node Components](/overview/reference/validator-node-components) reference.
+Every SV includes the full validator stack. For a detailed breakdown, see the [Validator Node Components](/docs/canton/overview-reference-validator-node-components) reference.
 
 The validator layer provides:
 
@@ -113,7 +113,7 @@ The BFT orderer node participates in the consensus protocol that establishes the
 
 CometBFT nodes maintain peer-to-peer connections with all other SV CometBFT nodes and communicate over a dedicated TCP gossip/consensus channel (separate from the HTTPS APIs used by validators). The BFT consensus requires agreement from more than two-thirds of the SV nodes to produce a block, meaning the system tolerates up to `f` Byzantine (faulty or malicious) nodes where `f = floor((n-1)/3)` and `n` is the total number of SVs.
 
-For more on how ordering consensus works, see [Ordering Consensus](/overview/reference/ordering-consensus).
+For more on how ordering consensus works, see [Ordering Consensus](/docs/canton/overview-reference-ordering-consensus).
 
 ## SV-Specific Applications
 

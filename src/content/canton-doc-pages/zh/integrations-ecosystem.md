@@ -157,7 +157,7 @@ For current 网络 statistics, visit:
 ### As a 开发者
 
 1. 启动 with the [QuickStart](/appdev/quickstart)
-2. Learn [Daml](/appdev/get-started/choose-your-path)
+2. Learn [Daml](/zh/docs/canton/appdev-get-started-choose-your-path)
 3. Build and deploy your 应用
 4. Join the 开发者 community {/* TODO: 添加 Slack link once available */}
 
@@ -195,7 +195,7 @@ The Canton Network community holds regular 事件:
     Learn common 集成 approaches.
   </Card>
 
-  <Card title="启动 Building" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="启动 Building" icon="code" href="/zh/docs/canton/appdev-get-started-choose-your-path">
     Begin developing on Canton Network.
   </Card>
 </CardGroup>

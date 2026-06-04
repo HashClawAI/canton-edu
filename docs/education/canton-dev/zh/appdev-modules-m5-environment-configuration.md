@@ -153,8 +153,8 @@ override-components:
 
 ## 下一步
 
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — 环境差异与晋级清单
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — 在自动化流水线中使用环境配置
+* [Deployment Progression](/zh/docs/canton/appdev-modules-m5-deployment-progression) — 环境差异与晋级清单
+* [CI/CD Integration](/zh/docs/canton/appdev-modules-m5-ci-cd-integration) — 在自动化流水线中使用环境配置
 
 ---
 

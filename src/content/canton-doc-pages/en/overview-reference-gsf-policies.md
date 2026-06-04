@@ -62,7 +62,7 @@ Premier members additionally have access to Board Committees and can appoint del
 
 The Global Synchronizer is operated by independently acting organizations called Super Validators. These organizations run the core infrastructure -- sequencers, mediators, and SV application nodes -- and participate in governance through an on-chain governance application.
 
-Governance actions are executed through the DSO (Decentralized Synchronizer Operations) party, a decentralized Daml party with a confirmation threshold of approximately 2/3 of onboarded Super Validators. No single entity, including the GSF, can make unilateral changes. For a detailed breakdown of the DSO party, confirmation protocols, and voting mechanics, see [SV Governance Reference](/overview/reference/sv-governance-reference).
+Governance actions are executed through the DSO (Decentralized Synchronizer Operations) party, a decentralized Daml party with a confirmation threshold of approximately 2/3 of onboarded Super Validators. No single entity, including the GSF, can make unilateral changes. For a detailed breakdown of the DSO party, confirmation protocols, and voting mechanics, see [SV Governance Reference](/docs/canton/overview-reference-sv-governance-reference).
 
 The governance framework covers:
 
@@ -126,7 +126,7 @@ Super Validators that do not upgrade in time can cause operational issues. For e
 
 Changes to network rules, standards, and protocols are proposed through Canton Improvement Proposals (CIPs). The CIP process provides a structured way for anyone in the ecosystem to propose changes, with final ratification by Super Validator vote.
 
-For details on the CIP process, including how to propose one, see [CIP Reference](/overview/reference/what-are-cips). The full list of CIPs is maintained at [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips).
+For details on the CIP process, including how to propose one, see [CIP Reference](/docs/canton/overview-reference-what-are-cips). The full list of CIPs is maintained at [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips).
 
 ## Communication channels
 
@@ -142,7 +142,7 @@ The GSF maintains several channels for validator operators and ecosystem partici
 * [Canton Network](https://canton.network) -- network overview and entry point
 * [GSF configs repository](https://github.com/global-synchronizer-foundation/configs) -- network configuration parameters
 * [CIP repository](https://github.com/global-synchronizer-foundation/cips) -- Canton Improvement Proposals
-* [SV Governance Reference](/overview/reference/sv-governance-reference) -- technical details on the DSO party and voting mechanics
+* [SV Governance Reference](/docs/canton/overview-reference-sv-governance-reference) -- technical details on the DSO party and voting mechanics
 
 ---
 

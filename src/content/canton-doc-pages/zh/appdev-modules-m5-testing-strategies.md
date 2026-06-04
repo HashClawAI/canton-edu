@@ -175,8 +175,8 @@ Canton 应用性能测试需区分链上与链下操作。账本操作有随交�
 
 ## 下一步
 
-* [LocalNet Development](/appdev/modules/m5-localnet-development) — 搭建并使用 cn-quickstart LocalNet
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — 自动化测试流水线
+* [LocalNet Development](/zh/docs/canton/appdev-modules-m5-localnet-development) — 搭建并使用 cn-quickstart LocalNet
+* [CI/CD Integration](/zh/docs/canton/appdev-modules-m5-ci-cd-integration) — 自动化测试流水线
 
 ---
 

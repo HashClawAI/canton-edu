@@ -186,11 +186,11 @@ flowchart TB
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="隐私差异" icon="lock" href="/appdev/modules/m2-privacy-differences">
+  <Card title="隐私差异" icon="lock" href="/zh/docs/canton/appdev-modules-m2-privacy-differences">
     Canton 与以太坊隐私模型深入对比。
   </Card>
 
-  <Card title="智能合约范式" icon="code" href="/appdev/modules/m2-smart-contract-paradigm">
+  <Card title="智能合约范式" icon="code" href="/zh/docs/canton/appdev-modules-m2-smart-contract-paradigm">
     Daml 与 Solidity 编程模型。
   </Card>
 </CardGroup>

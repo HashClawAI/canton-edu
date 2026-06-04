@@ -29,7 +29,7 @@ Version upgrades can be done by each node independently and only require a `helm
 
 Protocol upgrades are performed through logical synchronizer upgrades, which allow upgrading the protocol version with very limited network downtime.
 
-<Card title="Logical Synchronizer Upgrades" icon="shuffle" href="/global-synchronizer/production-operations/logical-synchronizer-upgrade">
+<Card title="Logical Synchronizer Upgrades" icon="shuffle" href="/docs/canton/global-synchronizer-production-operations-logical-synchronizer-upgrade">
   Review the operational flow for scheduling and performing logical synchronizer upgrades.
 </Card>
 

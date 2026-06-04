@@ -162,9 +162,9 @@ The flow begins in the ordering layer: a validator submits an encrypted transact
 
 ## Related Topics
 
-* [Trust Model Overview](/overview/learn/trust-model) — trust assumptions across each layer
-* [Architecture Overview](/overview/learn/architecture) — how components fit together
-* [Privacy Model](/overview/learn/privacy-model) — sub-transaction privacy in detail
+* [Trust Model Overview](/docs/canton/overview-learn-trust-model) — trust assumptions across each layer
+* [Architecture Overview](/docs/canton/overview-learn-architecture) — how components fit together
+* [Privacy Model](/docs/canton/overview-learn-privacy-model) — sub-transaction privacy in detail
 
 ---
 

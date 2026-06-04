@@ -21,7 +21,7 @@ Canton Network 代币经济学基于**活动记录（Activity Record）**：标�
 
 创建活动记录与铸造 CC 分属两步，在**轮次（round）**中五阶段完成：写入当轮费用 → **活动记录** → 计算 [CC-issuance-per-activity-weight](https://github.com/canton-network/splice/blob/332e06a7ae9e13fde5bba0bf7dcb059aa36f979e/daml/splice-amulet/daml/Splice/Issuance.daml#L67) → **铸造**。多轮并行；默认每 10 分钟一轮。
 
-[外部 Party](/appdev/deep-dives/external-signing-onboarding) 与本地 Party 创建记录相同；铸造时本地 Party 由验证者自动化铸造，外部 Party 可委托铸造或自建自动化调用 `AmuletRules_Transfer`。相关模板：`AmuletRules`、`OpenMiningRound`、`IssuingMiningRound`。
+[外部 Party](/zh/docs/canton/appdev-deep-dives-external-signing-onboarding) 与本地 Party 创建记录相同；铸造时本地 Party 由验证者自动化铸造，外部 Party 可委托铸造或自建自动化调用 `AmuletRules_Transfer`。相关模板：`AmuletRules`、`OpenMiningRound`、`IssuingMiningRound`。
 
 ## 活动记录类型
 
@@ -36,7 +36,7 @@ Canton Network 代币经济学基于**活动记录（Activity Record）**：标�
 
 ## 特色应用活动标记
 
-见 [CIP 47](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md)。适用于有经济价值但不涉 CC 转账的交易（RWA 锁定/转移、铸销等）；勿为中间步骤或 [propose](/appdev/modules/m3-authorization#use-propose-accept-workflow-for-one-off-authorization) 创建。转为 `AppRewardCoupon` 后 `provider` 可铸造。
+见 [CIP 47](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0047/cip-0047.md)。适用于有经济价值但不涉 CC 转账的交易（RWA 锁定/转移、铸销等）；勿为中间步骤或 [propose](/zh/docs/canton/appdev-modules-m3-authorization#use-propose-accept-workflow-for-one-off-authorization) 创建。转为 `AppRewardCoupon` 后 `provider` 可铸造。
 
 ## 创建特色应用活动标记
 

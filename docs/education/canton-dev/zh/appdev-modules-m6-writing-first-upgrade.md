@@ -20,7 +20,7 @@ tags:
 ## 前置条件
 
 * 已安装可用的 `dpm` 与 Daml SDK
-* 熟悉 Daml 模板与 choice（[模块 3](/appdev/modules/m3-contract-templates)）
+* 熟悉 Daml 模板与 choice（[模块 3](/zh/docs/canton/appdev-modules-m3-contract-templates)）
 * 文本编辑器或 Daml Studio
 
 ## 步骤 1：创建 v1 包
@@ -216,7 +216,7 @@ dpm test
 ```
 
 <Note>
-  此测试在单一包版本内运行，近似而非完全复现跨版本行为。真实账本上同时上传 v1、v2 DAR 时，运行时处理实际 v1 合约与 v2 代码间的版本解析。真实跨版本策略见 [Testing Upgrades](/appdev/modules/m6-testing-upgrades)。
+  此测试在单一包版本内运行，近似而非完全复现跨版本行为。真实账本上同时上传 v1、v2 DAR 时，运行时处理实际 v1 合约与 v2 代码间的版本解析。真实跨版本策略见 [Testing Upgrades](/zh/docs/canton/appdev-modules-m6-testing-upgrades)。
 </Note>
 
 ## 步骤 5：部署两个版本
@@ -249,13 +249,13 @@ validator 收到 v2 DAR 时：
 
 该设计保证混合版本安全：无静默丢数据，不兼容交互显式失败而非破坏状态。
 
-运行时版本解析见 [Package Selection](/appdev/modules/m6-package-selection)。
+运行时版本解析见 [Package Selection](/zh/docs/canton/appdev-modules-m6-package-selection)。
 
 ## 下一步
 
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — 允许与禁止变更完整参考
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — 全面升级测试策略
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — 跨环境 rollout 升级
+* [Upgrade Compatibility](/zh/docs/canton/appdev-modules-m6-upgrade-compatibility) — 允许与禁止变更完整参考
+* [Testing Upgrades](/zh/docs/canton/appdev-modules-m6-testing-upgrades) — 全面升级测试策略
+* [Deploying Upgrades](/zh/docs/canton/appdev-modules-m6-deployment) — 跨环境 rollout 升级
 
 ---
 

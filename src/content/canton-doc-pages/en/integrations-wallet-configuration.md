@@ -130,8 +130,8 @@ See the [config template](https://github.com/canton-network/wallet-gateway/blob/
 
 ## Next Steps
 
-* [Wallet SDK Download](/integrations/wallet/sdk-download) — Installation instructions
-* [Wallet Integration Guidance](/integrations/wallet/guidance) — Signing transactions from dApps
+* [Wallet SDK Download](/docs/canton/integrations-wallet-sdk-download) — Installation instructions
+* [Wallet Integration Guidance](/docs/canton/integrations-wallet-guidance) — Signing transactions from dApps
 
 ---
 

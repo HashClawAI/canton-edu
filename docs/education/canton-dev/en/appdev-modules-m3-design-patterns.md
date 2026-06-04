@@ -58,7 +58,7 @@ dependencies:
 
 You can generally set `name` and `version` freely to describe your project. `dependencies` does what the name suggests: it includes dependencies. You should always include `daml-prim` and `daml-stdlib`. The former contains internals of the compiler and the Daml Runtime, the latter gives access to the Daml standard library. `daml-script` contains the types and functions for Daml Script.
 
-You compile a Daml project by running `dpm build` from the project root directory. This creates a DAR file in `.daml/dist/dist/${project_name}-${project_version}.dar`. A DAR file is Daml's equivalent of a JAR file in Java: it's the artifact that gets deployed to a ledger to load the package and its dependencies. `dar` files are fully self-contained in that they contain all dependencies of the main package. More on all of this in [Building and Packaging](/appdev/modules/m3-building-packaging).
+You compile a Daml project by running `dpm build` from the project root directory. This creates a DAR file in `.daml/dist/dist/${project_name}-${project_version}.dar`. A DAR file is Daml's equivalent of a JAR file in Java: it's the artifact that gets deployed to a ledger to load the package and its dependencies. `dar` files are fully self-contained in that they contain all dependencies of the main package. More on all of this in [Building and Packaging](/docs/canton/appdev-modules-m3-building-packaging).
 
 ## Project structure
 
@@ -111,7 +111,7 @@ import Daml.Script
 
 ## Project overview
 
-The project both changes and adds to the `Iou` model presented in [Authorization](/appdev/modules/m3-authorization):
+The project both changes and adds to the `Iou` model presented in [Authorization](/docs/canton/appdev-modules-m3-authorization):
 
 * Assets are fungible in the sense that they have `Merge` and `Split` choices that allow the `owner` to manage their holdings.
 
@@ -123,7 +123,7 @@ The project both changes and adds to the `Iou` model presented in [Authorization
 
 ## Composed choices and scripts
 
-This project showcases how you can put the `Update` and `Script` actions you learned about in [Authorization](/appdev/modules/m3-authorization) to good use. For example, the `Merge` and `Split` choices each perform several actions in their consequences.
+This project showcases how you can put the `Update` and `Script` actions you learned about in [Authorization](/docs/canton/appdev-modules-m3-authorization) to good use. For example, the `Merge` and `Split` choices each perform several actions in their consequences.
 
 * Two create actions in case of `Split`
 * One create and one archive action in case of `Merge`
@@ -314,7 +314,7 @@ Interpretation
 Each command corresponds to one or more actions. During this step, the `Update` corresponding to each action is evaluated in the context of the ledger to calculate all consequences, including transitive ones (consequences of consequences, etc.). The result of this is a complete transaction. Together with its requestor, this is also known as a commit.
 
 Blinding
-On ledgers with strong privacy, projections (see [Privacy Model](/overview/learn/privacy-model)) for all involved parties are created. This is also called *projecting*.
+On ledgers with strong privacy, projections (see [Privacy Model](/docs/canton/overview-learn-privacy-model)) for all involved parties are created. This is also called *projecting*.
 
 Transaction submission
 The transaction/commit is submitted to the network.
@@ -415,7 +415,7 @@ Beyond the composition patterns above, this section covers common multi-party wo
 
 ### Propose-Accept
 
-The most common way to get multiple parties to agree on a shared contract. One party creates a proposal contract that the other party can accept, reject, or let expire. The `IouProposal` [in the authorization module](/appdev/modules/m3-authorization#use-propose-accept-workflow-for-one-off-authorization) is another example of this pattern.
+The most common way to get multiple parties to agree on a shared contract. One party creates a proposal contract that the other party can accept, reject, or let expire. The `IouProposal` [in the authorization module](/docs/canton/appdev-modules-m3-authorization#use-propose-accept-workflow-for-one-off-authorization) is another example of this pattern.
 
 The issuer creates a `CoinMaster` contract, then uses it to invite an owner. The invitation is a proposal contract with the issuer as signatory and the owner as observer:
 

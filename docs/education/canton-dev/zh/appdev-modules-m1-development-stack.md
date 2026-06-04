@@ -297,7 +297,7 @@ make start
     运行示例应用。
   </Card>
 
-  <Card title="模块 3：Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="模块 3：Daml" icon="code" href="/zh/docs/canton/appdev-modules-m3-dev-environment">
     开始编写智能合约。
   </Card>
 </CardGroup>

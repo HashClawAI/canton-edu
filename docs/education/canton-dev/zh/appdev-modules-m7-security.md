@@ -87,7 +87,7 @@ Canton 使用加密密钥标识 party、节点身份并签署交易。按敏感�
 
 LocalNet 上密钥本地生成存储，适合开发。生产中：
 
-* 对私钥使用 [HSM 或云 KMS](/global-synchronizer/production-operations/kms-operations)
+* 对私钥使用 [HSM 或云 KMS](/zh/docs/canton/global-synchronizer-production-operations-kms-operations)
 * 勿将生产密钥放在开发机或 CI
 * 按组织安全策略轮换密钥
 * 安全备份密钥材料——丢失密钥意味着失去 party 身份访问
@@ -122,13 +122,13 @@ LocalNet 上密钥本地生成存储，适合开发。生产中：
 
 ## 下一步
 
-* [Package Management](/appdev/modules/m7-package-management) — 保护 DAR 分发与部署
-* [Performance](/appdev/modules/m7-performance) — Canton 应用优化
+* [Package Management](/zh/docs/canton/appdev-modules-m7-package-management) — 保护 DAR 分发与部署
+* [Performance](/zh/docs/canton/appdev-modules-m7-performance) — Canton 应用优化
 
 ## 高级主题
 
-* [Open Tracing in Ledger API Client Applications](/appdev/deep-dives/open-tracing) — 为使用 Ledger API 的应用添加基于 OpenTelemetry 的分布式追踪。
-* [Authorization](/appdev/deep-dives/authorization) — Ledger API 的访问 token、身份提供方、scope 与 rights。
+* [Open Tracing in Ledger API Client Applications](/zh/docs/canton/appdev-deep-dives-open-tracing) — 为使用 Ledger API 的应用添加基于 OpenTelemetry 的分布式追踪。
+* [Authorization](/zh/docs/canton/appdev-deep-dives-authorization) — Ledger API 的访问 token、身份提供方、scope 与 rights。
 
 ---
 

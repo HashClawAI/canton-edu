@@ -145,19 +145,19 @@ Canton 支持传统区块链上不可行的用例：|使用案例|为何 Canton 
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="为什么选择 Canton？" icon="问题" href="/overview/understand/the-problem">
+  <Card title="为什么选择 Canton？" icon="问题" href="/zh/docs/canton/overview-understand-the-problem">
     深入了解 Canton 要解决的问题。
   </Card>
 
-  <Card title="核心概念" icon="book" href="/overview/understand/core-concepts">
+  <Card title="核心概念" icon="book" href="/zh/docs/canton/overview-understand-core-concepts">
     了解各方、验证器、同步器和智能合约。
   </Card>
 
-  <Card title="对于以太坊开发者" icon="ethereum" href="/appdev/modules/m2-canton-for-ethereum-devs">
+  <Card title="对于以太坊开发者" icon="ethereum" href="/zh/docs/canton/appdev-modules-m2-canton-for-ethereum-devs">
     将您的区块链知识转移到广州。
   </Card>
 
-  <Card title="Architecture" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture" icon="diagram-project" href="/zh/docs/canton/overview-learn-architecture">
     了解组件如何协同工作。
   </Card>
 </CardGroup>

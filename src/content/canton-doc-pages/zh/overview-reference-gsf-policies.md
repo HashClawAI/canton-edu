@@ -56,7 +56,7 @@ Premier 成员还可接触 Board Committees 并委派代表。
 
 Global Synchronizer 由称为 Super Validator 的独立组织运营，运行核心基础设施——Sequencer、Mediator 与 SV 应用节点——并通过链上治理应用参与治理。
 
-治理行动通过 DSO（Decentralized Synchronizer Operations）party 执行，该去中心化 Daml party 的确认阈值约为已入驻 Super Validator 的 2/3。无单一实体（含 GSF）可单方面变更。DSO party、确认协议与投票机制详见 [SV Governance Reference](/overview/reference/sv-governance-reference)。
+治理行动通过 DSO（Decentralized Synchronizer Operations）party 执行，该去中心化 Daml party 的确认阈值约为已入驻 Super Validator 的 2/3。无单一实体（含 GSF）可单方面变更。DSO party、确认协议与投票机制详见 [SV Governance Reference](/zh/docs/canton/overview-reference-sv-governance-reference)。
 
 治理框架涵盖：
 
@@ -120,7 +120,7 @@ Super Validator 因运营基础设施获得奖励，由 reward weight 参数配�
 
 网络规则、标准与协议变更通过 Canton Improvement Proposals (CIPs) 提议。CIP 流程为生态任何人提供结构化变更路径，最终由 Super Validator 投票批准。
 
-流程详情见 [CIP Reference](/overview/reference/what-are-cips)。完整列表见 [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips)。
+流程详情见 [CIP Reference](/zh/docs/canton/overview-reference-what-are-cips)。完整列表见 [github.com/global-synchronizer-foundation/cips](https://github.com/global-synchronizer-foundation/cips)。
 
 ## 沟通渠道
 
@@ -136,7 +136,7 @@ GSF 为验证者运营方与生态参与者维护：
 * [Canton Network](https://canton.network) — 网络概览与入口
 * [GSF configs repository](https://github.com/global-synchronizer-foundation/configs) — 网络配置参数
 * [CIP repository](https://github.com/global-synchronizer-foundation/cips) — Canton Improvement Proposals
-* [SV Governance Reference](/overview/reference/sv-governance-reference) — DSO party 与投票机制技术细节
+* [SV Governance Reference](/zh/docs/canton/overview-reference-sv-governance-reference) — DSO party 与投票机制技术细节
 
 ---
 

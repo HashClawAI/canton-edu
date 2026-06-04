@@ -93,7 +93,7 @@ Canton uses cryptographic keys for party identity, node identity, and transactio
 
 On LocalNet, keys are generated and stored locally — this is fine for development. In production:
 
-* Use [Hardware Security Modules (HSM) or cloud Key Management Services (KMS)](/global-synchronizer/production-operations/kms-operations) for private keys
+* Use [Hardware Security Modules (HSM) or cloud Key Management Services (KMS)](/docs/canton/global-synchronizer-production-operations-kms-operations) for private keys
 * Never store production keys on developer machines or in CI systems
 * Rotate keys according to your organization's security policy
 * Back up key material securely — losing keys means losing access to your party identity
@@ -128,13 +128,13 @@ Validate all user input before it reaches the Ledger API. While Daml's type syst
 
 ## Next Steps
 
-* [Package Management](/appdev/modules/m7-package-management) — Securing DAR distribution and deployment
-* [Performance](/appdev/modules/m7-performance) — Optimization strategies for Canton applications
+* [Package Management](/docs/canton/appdev-modules-m7-package-management) — Securing DAR distribution and deployment
+* [Performance](/docs/canton/appdev-modules-m7-performance) — Optimization strategies for Canton applications
 
 ## Advanced Topics
 
-* [Open Tracing in Ledger API Client Applications](/appdev/deep-dives/open-tracing) — Adding OpenTelemetry-based distributed tracing to applications using the Ledger API.
-* [Authorization](/appdev/deep-dives/authorization) — Access tokens, identity providers, scopes, and rights for the Ledger API.
+* [Open Tracing in Ledger API Client Applications](/docs/canton/appdev-deep-dives-open-tracing) — Adding OpenTelemetry-based distributed tracing to applications using the Ledger API.
+* [Authorization](/docs/canton/appdev-deep-dives-authorization) — Access tokens, identity providers, scopes, and rights for the Ledger API.
 
 ---
 

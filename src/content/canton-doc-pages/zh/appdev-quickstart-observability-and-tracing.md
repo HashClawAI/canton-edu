@@ -58,7 +58,7 @@ Quickstart 提供生产级 Daml 应用基础与完整可观测性配置；技术
 * 经 **OpenTelemetry** 采集与管理数据源
   * 使用 **OTEL Collector**（[文档](https://opentelemetry.io/docs/collector)）
 * 指标由 **Prometheus** 聚合（[https://prometheus.io/](https://prometheus.io/)）
-* 日志用 **lnav** 检查（见 [lnav 文档](/appdev/quickstart/lnav)）
+* 日志用 **lnav** 检查（见 [lnav 文档](/zh/docs/canton/appdev-quickstart-lnav)）
 * 追踪由 **Tempo** 聚合（[https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/)）
 * **Grafana** 可查看聚合观测并超链接跳转（[https://grafana.com/oss/grafana/](https://grafana.com/oss/grafana/)）。
 
@@ -114,7 +114,7 @@ Quickstart 在 `LocalNet` 上配置了额外调试访问；开发与生产应使
 
 ```
 
-这可远程调试 Java 后端；必要时 IDE 附加调试。仍建议优先 Grafana 与 [lnav](/appdev/quickstart/lnav)，以保持生产可调试性。
+这可远程调试 Java 后端；必要时 IDE 附加调试。仍建议优先 Grafana 与 [lnav](/zh/docs/canton/appdev-quickstart-lnav)，以保持生产可调试性。
 
 ## 可观测性与追踪
 
@@ -356,13 +356,13 @@ export transaction span 的 references 含相关 PQS 追踪及导致该交易的
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/16-log-context-view.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=53e1d5d9f72df028da84096e4c773acc" alt="Grafana log context view" width="2048" height="1007" data-path="images/docs_website/16-log-context-view.png" />
 
-Grafana 亦暴露 Tempo/Prometheus 原始查询，值得实验；日志检查用 [lnav](/appdev/quickstart/lnav)：
+Grafana 亦暴露 Tempo/Prometheus 原始查询，值得实验；日志检查用 [lnav](/zh/docs/canton/appdev-quickstart-lnav)：
 
 <img src="https://mintcdn.com/cantonfoundation/QAGFSphBsRkeZIBi/images/docs_website/17-tempo-trace-ql.png?fit=max&auto=format&n=QAGFSphBsRkeZIBi&q=85&s=1df43730962dfe2241e11ca374e6ad47" alt="Tempo TraceQL" width="2048" height="466" data-path="images/docs_website/17-tempo-trace-ql.png" />
 
 相关文档起点：
 
-* lnav：[文档](/appdev/quickstart/lnav)
+* lnav：[文档](/zh/docs/canton/appdev-quickstart-lnav)
 * Tempo：[TraceQL](https://grafana.com/docs/tempo/latest/traceql/)
 * Prometheus：[查询编辑器](https://grafana.com/docs/grafana/latest/datasources/prometheus/query-editor/)
 
@@ -376,13 +376,13 @@ Grafana 亦暴露 Tempo/Prometheus 原始查询，值得实验；日志检查用
 
     <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/docs_website/footnote-04-daml-shell-cli.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=9d7e6774522394445fdb410d894d2e45" alt="&#x22;Daml Shell command line interface&#x22;" width="1342" height="2048" data-path="images/docs_website/footnote-04-daml-shell-cli.png" />
 
-[^5]: A key differentiator of Canton from all other level one blockchains is that it offers privacy. It does this by enforcing right-to-know. rather than via secrecy-via-obscurity and/or via pseudo-anonymity. Canton provides two privacy guarantees: Even in encrypted form (sub-)transactions are only transmitted to participant nodes with a right to be informed of them; and, participant nodes will be informed of every (sub-)transaction they have a right to be informed of. For details on how Canton defines "right" and other aspects of this see the [Daml ledger privacy model](/appdev/deep-dives/privacy-model).
+[^5]: A key differentiator of Canton from all other level one blockchains is that it offers privacy. It does this by enforcing right-to-know. rather than via secrecy-via-obscurity and/or via pseudo-anonymity. Canton provides two privacy guarantees: Even in encrypted form (sub-)transactions are only transmitted to participant nodes with a right to be informed of them; and, participant nodes will be informed of every (sub-)transaction they have a right to be informed of. For details on how Canton defines "right" and other aspects of this see the [Daml ledger privacy model](/zh/docs/canton/appdev-deep-dives-privacy-model).
 
 [^6]: Distributed tracing is essential to efficient debugging and diagnosis of any distributed application. While technically distinct identifiers Trace and Span Ids are closely linked. If unfamiliar with their use OpenTelemetry has a good primer ([https://opentelemetry.io/docs/concepts/signals/traces/](https://opentelemetry.io/docs/concepts/signals/traces/)), Grafana has a reasonable demo ([https://grafana.com/docs/tempo/latest/introduction/](https://grafana.com/docs/tempo/latest/introduction/)), and we demonstrate their use later in this guide.
 
 [^7]: Equivalent to “blockheight” in other public blockchains that do not support privacy. As privacy dictates that each participant node sees a different projection of the global blockchain, the offset is not comparable across different Participant Nodes. It is commonly the preferred id when dealing with a single participant node due to being a simple, monotonic, total-order on ledger events witnessed by a Participant Node.
 
-[^8]: By virtue of their role in the ledger model, all parties are (and the associated entity must be) capable of authorizing a (sub-)transaction or ledger event. See the [Daml ledger authorization model](/appdev/deep-dives/authorization) for details.
+[^8]: By virtue of their role in the ledger model, all parties are (and the associated entity must be) capable of authorizing a (sub-)transaction or ledger event. See the [Daml ledger authorization model](/zh/docs/canton/appdev-deep-dives-authorization) for details.
 
 [^9]: Where loggers cannot be configured to emit structured logs directly, log parsers are used to convert raw log files in the usual manner. This is primarily done in the OTEL Collector configuration.
 

@@ -64,7 +64,7 @@ Parties come in two forms, internal and external. An internal party is created o
 
 External parties are similar to how node interactions happens on other networks and therefore Externally Owned Accounts. In this case the signing key can be held externally and a signature is required alongside the transaction to authorize the action. For external parties the base flow follows three steps: Prepare a transaction, sign the transaction and submit the transaction. In this guide, when a party is referenced, it is referring to an external party unless otherwise specified.
 
-To read more about the differences between internal and external parties, see the [Local and external parties documentation section here](/overview/reference/external-party).
+To read more about the differences between internal and external parties, see the [Local and external parties documentation section here](/docs/canton/overview-reference-external-party).
 
 **Onboarding and Format**
 
@@ -135,7 +135,7 @@ The following features are required for wallet providers to integrate with the C
 
 While optional for wallet providers, the following features are strongly recommended to ensure full support for the Canton Network and maximize user adoption:
 
-* [Canton Coin pre-approvals](/appdev/modules/m7-canton-coin-preapprovals). Documentation on how to implement pre-approvals with the Wallet SDK are in the [2-step transfer vs 1-step transfer section of this guide](#2-step-transfer-vs-1-step-transfer).
+* [Canton Coin pre-approvals](/docs/canton/appdev-modules-m7-canton-coin-preapprovals). Documentation on how to implement pre-approvals with the Wallet SDK are in the [2-step transfer vs 1-step transfer section of this guide](#2-step-transfer-vs-1-step-transfer).
 * dApp support by conforming to [CIP-0103](https://github.com/canton-foundation/cips/blob/main/cip-0103/cip-0103.md), the standard for wallet and dApp integration.
 * The requirement to hold and transfer USDCx is included in the Necessary Features section above, however there are additional levels of support for USDCx for wallet providers to support such as supporting xReserves deposits and withdrawals and integrating the xReserve UI into the wallet directly. The options and instructions are laid out in the [USDCx Support for Wallets section of this guide](#usdcx-support-for-wallets).
 * Pre-approvals for DA Registry issued assets.
@@ -174,27 +174,27 @@ As stated in the Implications for Wallet Providers section here, it's important 
 
 Links to the node deployment docs are below depending on the deployment choice and environment. The guidance differs very little based on the environment - different URLs and arguments etc.:
 
-* [MainNet docs](/global-synchronizer/deployment/onboarding-process)
-  * [Docker Compose MainNet docs](/global-synchronizer/deployment/validator-docker-compose)
-  * [Kubernetes MainNet docs](/global-synchronizer/deployment/validator-kubernetes)
+* [MainNet docs](/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose MainNet docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes MainNet docs](/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-* [TestNet docs](/global-synchronizer/deployment/onboarding-process)
-  * [Docker Compose TestNet docs](/global-synchronizer/deployment/validator-docker-compose)
-  * [Kubernetes TestNet docs](/global-synchronizer/deployment/validator-kubernetes)
+* [TestNet docs](/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose TestNet docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes TestNet docs](/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
-* [DevNet](/global-synchronizer/deployment/onboarding-process)
-  * [Docker Compose DevNet docs](/global-synchronizer/deployment/validator-docker-compose)
-  * [Kubernetes DevNet docs](/global-synchronizer/deployment/validator-kubernetes)
+* [DevNet](/docs/canton/global-synchronizer-deployment-onboarding-process)
+  * [Docker Compose DevNet docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose)
+  * [Kubernetes DevNet docs](/docs/canton/global-synchronizer-deployment-validator-kubernetes)
 
 The Wallet integration guide is tailored to work with a LocalNet setup ([/sdks-tools/development-tools/localnet](/sdks-tools/development-tools/localnet)) to make testing and verification easy.
 
 ## Connecting to a Synchronizer
 
-For onboarding a validator with the global synchronizer it is recommended to read the Splice documentation here: [/global-synchronizer/deployment/onboarding-process](/global-synchronizer/deployment/onboarding-process)
+For onboarding a validator with the global synchronizer it is recommended to read the Splice documentation here: [/global-synchronizer/deployment/onboarding-process](/docs/canton/global-synchronizer-deployment-onboarding-process)
 
 ## Supporting Tokens and Applications
 
-To integrate and support tokens, it is recommended to use the Splice documentation here: [/global-synchronizer/deployment/onboarding-process](/global-synchronizer/deployment/onboarding-process)
+To integrate and support tokens, it is recommended to use the Splice documentation here: [/global-synchronizer/deployment/onboarding-process](/docs/canton/global-synchronizer-deployment-onboarding-process)
 
 If you are interested in building your own application, a good first place would be to utilize the CN quickstart: [https://github.com/digital-asset/cn-quickstart](https://github.com/digital-asset/cn-quickstart)
 
@@ -206,7 +206,7 @@ If you are interested in building your own application, a good first place would
 
 Parties represent acting entities in the network and all transaction happens between one or more parties. To understand more about parties see the Parties in the Overview.
 
-A detailed tutorial of the steps below can be seen in the External Signing Tutorial [here](/appdev/deep-dives/external-signing-onboarding) using python example scripts.
+A detailed tutorial of the steps below can be seen in the External Signing Tutorial [here](/docs/canton/appdev-deep-dives-external-signing-onboarding) using python example scripts.
 
 *This document focuses on the steps required to create an external party using the Wallet SDK.*
 
@@ -443,7 +443,7 @@ Using the wallet SDK you can quickly allocate a party using the following code s
 
 ## Create a key pair
 
-The process for creating a key using standard encryption practices is similar that in other blockchains. The full details of supported cryptographic algorithms can be found [Here](/overview/learn/cryptographic-keys). By default an **Ed25519** encryption is used. There exists many libraries that can be used to generate such a key pair, you can do it simply with the WalletSDK using:
+The process for creating a key using standard encryption practices is similar that in other blockchains. The full details of supported cryptographic algorithms can be found [Here](/docs/canton/overview-learn-cryptographic-keys). By default an **Ed25519** encryption is used. There exists many libraries that can be used to generate such a key pair, you can do it simply with the WalletSDK using:
 
 ```typescript theme={"theme":{"light":"github-light","dark":"github-dark"}}
 import { SDK, localNetStaticConfig } from '@canton-network/wallet-sdk'
@@ -2641,7 +2641,7 @@ It is important when integrating with third party dApps to showcase the User exa
 
 # Token Standard
 
-The Wallet SDK support performing basic token standard operations, these are exposed through the `sdk.tokenStandard` a complete overview of the underlying integration can be found [here](/appdev/deep-dives/token-standard) and the CIP is defined [here](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md).
+The Wallet SDK support performing basic token standard operations, these are exposed through the `sdk.tokenStandard` a complete overview of the underlying integration can be found [here](/docs/canton/appdev-deep-dives-token-standard) and the CIP is defined [here](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md).
 
 ## How do i quickly perform a transfer between two parties?
 
@@ -3932,7 +3932,7 @@ credentials: {
 
 The value for some of the audiences in localnet would have to be adjusted to match "[https://canton.network.global](https://canton.network.global)". This is specifically the `LEDGER_API_AUTH_AUDIENCE` & `VALIDATOR_AUTH_AUDIENCE`.
 
-When upgrading your setup from a localnet setup to a production or client facing environment then it might make more sense to add proper authentication to the ledger api and other services. The community contributions include okta and keycloak [OIDC](/global-synchronizer/deployment/oidc-providers). These can easily be configured for the SDK using a different TokenProviderConfig. The following programmatic methods of token fetching are supported:
+When upgrading your setup from a localnet setup to a production or client facing environment then it might make more sense to add proper authentication to the ledger api and other services. The community contributions include okta and keycloak [OIDC](/docs/canton/global-synchronizer-deployment-oidc-providers). These can easily be configured for the SDK using a different TokenProviderConfig. The following programmatic methods of token fetching are supported:
 
 > 1. \`static\`: a fixed, in-memory token. Only used for compatibility, it will totally break for expired tokens.
 > 2. \`self\_signed\`: only for development purposes, used for Canton setups that accept HMAC256 self signed tokens.
@@ -4018,7 +4018,7 @@ export default async function () {
 
 # Traffic
 
-Below is a high-level summary of the [Synchronizer Traffic Fees page](/global-synchronizer/deployment/synchronizer-traffic) in the Splice Validator documentation. For more detail on point, it's advised to read that documentation.
+Below is a high-level summary of the [Synchronizer Traffic Fees page](/docs/canton/global-synchronizer-deployment-synchronizer-traffic) in the Splice Validator documentation. For more detail on point, it's advised to read that documentation.
 
 ## Traffic
 
@@ -4046,11 +4046,11 @@ Below is a high-level summary of the [Synchronizer Traffic Fees page](/global-sy
   * You can buy your own traffic.
   * You can sign up with a service like the [Denex Gas Station](https://denex.io/gasstation) to buy your traffic.
 
-* The validator node has automation to keep traffic topped up. As long as you keep CC in your validator party, it'll stay available. See [here](/global-synchronizer/deployment/validator-kubernetes#configuring-automatic-traffic-purchases) for how to configure automatic traffic purchases.
+* The validator node has automation to keep traffic topped up. As long as you keep CC in your validator party, it'll stay available. See [here](/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-traffic-purchases) for how to configure automatic traffic purchases.
 
 ## How to determine the traffic cost of a transaction?
 
-Follow this [FAQ entry in the Splice documentation](/global-synchronizer/deployment/synchronizer-traffic).
+Follow this [FAQ entry in the Splice documentation](/docs/canton/global-synchronizer-deployment-synchronizer-traffic).
 
 {/* COPIED_START source="splice-wallet-kernel:docs/wallet-integration-guide/src/tokenomics-and-rewards/index.rst" hash="08ff71a4" */}
 
@@ -4066,7 +4066,7 @@ Follow this [FAQ entry in the Splice documentation](/global-synchronizer/deploym
 * All rewards and coupons are mintable the follow mining round
 * If rewards are not redeemed then they are lost\*
 
-You can find more information about the tokenomics of Canton Coin [here](/overview/reference/canton-coin-tokenomics).
+You can find more information about the tokenomics of Canton Coin [here](/docs/canton/overview-reference-canton-coin-tokenomics).
 
 ## Ways of Obtaining Canton Coin Rewards
 
@@ -4078,7 +4078,7 @@ Just for being online and growing the network, Canton Coin tokenomics enable val
 
 For external parties, automation needs to be developed to call `AmuletRules_Transfer` at least once per round with all activity records as inputs.
 
-You can find more information about the tokenomics of Canton Coin at [/overview/reference/canton-coin-tokenomics](/overview/reference/canton-coin-tokenomics).
+You can find more information about the tokenomics of Canton Coin at [/overview/reference/canton-coin-tokenomics](/docs/canton/overview-reference-canton-coin-tokenomics).
 
 *All rewards and coupons are mintable the follow mining round, if rewards are not redemed then they are lost*
 
@@ -4456,7 +4456,7 @@ There is one way of handle incoming transfers and another way to handle outgoing
 
 Instead of signing every incoming transfer, the receiver signs a single, long-living `TransferPreapproval` contract. This authorizes the sending party (or a specific provider) to deposit funds immediately without requiring an interactive acceptance signature for every transaction.
 
-To do this, create a `Splice.Wallet.TransferPreapproval` contract. The guide on how to create the pre-approval contract in the [Wallet SDK is here](#2-step-transfer-vs-1-step-transfer) and the general information about [Canton Coin Preapprovals is here](/appdev/modules/m7-canton-coin-preapprovals). By implementing a preapproval contract the receiver doesn't need to accept Canton Coin transfers sent to them as they are automatically accepted.
+To do this, create a `Splice.Wallet.TransferPreapproval` contract. The guide on how to create the pre-approval contract in the [Wallet SDK is here](#2-step-transfer-vs-1-step-transfer) and the general information about [Canton Coin Preapprovals is here](/docs/canton/appdev-modules-m7-canton-coin-preapprovals). By implementing a preapproval contract the receiver doesn't need to accept Canton Coin transfers sent to them as they are automatically accepted.
 
 ### Solution 2: Use Command Delegation for Outgoing Transfers / Sending Funds
 
@@ -4496,7 +4496,7 @@ The token standard defines the `splice.lfdecentralizedtrust.org/reason` metadata
 
 Token standard wallets must provide a “Description” or “Reason” field analogous to the Canton Coin wallet, and store its value in the metadata field of the `Transfer` specification ([code](https://github.com/hyperledger-labs/splice/blob/332e06a7ae9e13fde5bba0bf7dcb059aa36f979e/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L12-L43)) when initiating a transfer. This is actually what the Canton Coin wallet does behind the scenes when initiating a Canton Coin transfer.
 
-Likewise when displaying an incoming transfer or the tx history for a transfer the content of `splice.lfdecentralizedtrust.org/reason` metadata key should be parsed and displayed, as done for example by the transaction history parser in the token standard CLI ([docs](/appdev/deep-dives/token-standard)). This allows exchanges to communicate a correlation-id for a redemption.
+Likewise when displaying an incoming transfer or the tx history for a transfer the content of `splice.lfdecentralizedtrust.org/reason` metadata key should be parsed and displayed, as done for example by the transaction history parser in the token standard CLI ([docs](/docs/canton/appdev-deep-dives-token-standard)). This allows exchanges to communicate a correlation-id for a redemption.
 
 Code sample for setting the right metadata field: see this [change to the experimental token standard CLI](https://github.com/hyperledger-labs/splice/pull/2003/files) to take the “reason” as command line argument and store it in the metadata field.
 

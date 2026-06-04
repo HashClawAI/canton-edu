@@ -36,7 +36,7 @@ If you no longer have your `compose` and `dependencies` projects set up, and wan
 
 ## The Haskell connection
 
-The previous chapters of this introduction to Daml have mostly covered the structure of templates, and their connection to the [Daml Ledger Model](/overview/learn/ledger-model). The logic of what happens within the `do` blocks of choices has been kept relatively simple. In this chapter, we will dive deeper into Daml's expression language, the part that allows you to write logic inside those `do` blocks. But we can only scratch the surface here. Daml borrows a lot of its language from [Haskell](https://www.haskell.org). If you want to dive deeper, or learn about specific aspects of the language you can refer to standard literature on Haskell. Some recommendations:
+The previous chapters of this introduction to Daml have mostly covered the structure of templates, and their connection to the [Daml Ledger Model](/docs/canton/overview-learn-ledger-model). The logic of what happens within the `do` blocks of choices has been kept relatively simple. In this chapter, we will dive deeper into Daml's expression language, the part that allows you to write logic inside those `do` blocks. But we can only scratch the surface here. Daml borrows a lot of its language from [Haskell](https://www.haskell.org). If you want to dive deeper, or learn about specific aspects of the language you can refer to standard literature on Haskell. Some recommendations:
 
 * [Finding Success and Failure in Haskell (Julie Moronuki, Chris Martin)](https://joyofhaskell.com/)
 * [Haskell Programming from first principles (Christopher Allen, Julie Moronuki)](http://haskellbook.com/)

@@ -73,7 +73,7 @@ MyRecord {foo = 3, bar = "hello"}
 daml>
 ```
 
-For more on Record syntax, see [DA.Record](/appdev/reference/daml-standard-library/da-record).
+For more on Record syntax, see [DA.Record](/docs/canton/appdev-reference-daml-standard-library-da-record).
 
 `GetField x r a` and `SetField x r a` are typeclasses taking three parameters. The first
 parameter `x` is the field name, the second parameter `r` is the record type,

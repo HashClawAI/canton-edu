@@ -1076,7 +1076,7 @@ prepared_create_transaction = prepare_create_response.prepared_transaction
 * `command_id`: Unique, random string identifying this specific command. Each command submission must have a new and unique `command_id`.
 * `act_as`: ID of the party issuing the command.
 * `synchronizer_id`: ID of the synchronizer that processes the transaction upon submission.
-* `commands`: Ledger commands for submission. In this case, it shows the creation of a Ping contract with `Alice` as the initiator, `Bob` as the responder, and a `ping_id` value. See the [Ledger API command reference](/reference/grpc-ledger-api-reference/com-daml-ledger-api-v2) for details.
+* `commands`: Ledger commands for submission. In this case, it shows the creation of a Ping contract with `Alice` as the initiator, `Bob` as the responder, and a `ping_id` value. See the [Ledger API command reference](/docs/canton/reference-grpc-ledger-api-reference-com-daml-ledger-api-v2) for details.
 
 ### Response
 
@@ -1284,7 +1284,7 @@ In the request, note the presence of:
 * `signatures`: Object containing the signature of the transaction hash, along with metadata. In particular:
 
   > * `signing_algorithm_spec`: Will vary depending on the key used during onboarding.
-  > * `signed_by`: Fingerprint of the protocol signing *public* key of `Alice`. This tutorial assumes the same key was used to create `Alice`'s namespace and her protocol signing key. This is why the fingerprint of the signing key matches the second part of her Party Id (after `::`). For more details check out the onboarding tutorial and the [Daml parties guide](/appdev/deep-dives/manage-daml-parties).
+  > * `signed_by`: Fingerprint of the protocol signing *public* key of `Alice`. This tutorial assumes the same key was used to create `Alice`'s namespace and her protocol signing key. This is why the fingerprint of the signing key matches the second part of her Party Id (after `::`). For more details check out the onboarding tutorial and the [Daml parties guide](/docs/canton/appdev-deep-dives-manage-daml-parties).
 
 <Note>
   If the gRPC Ledger API authorization is enabled, the user must have the `actAs` claim on behalf of `Alice` to call the `execute` endpoint.

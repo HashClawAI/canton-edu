@@ -21,7 +21,7 @@ tags:
 
 ## 部署序列
 
-部署遵循 [概览](/appdev/modules/m6-overview) 中的异步 rollout 模型：
+部署遵循 [概览](/zh/docs/canton/appdev-modules-m6-overview) 中的异步 rollout 模型：
 
 1. **将 v2 DAR 上传到你自己的 validator** — 在你的 participant 上传 v2 包，此时尚不影响其他组织。
 
@@ -89,7 +89,7 @@ tags:
 
 ## 分环境推广
 
-遵循 [部署晋级路径](/appdev/modules/m5-deployment-progression) 的标准推广路径：
+遵循 [部署晋级路径](/zh/docs/canton/appdev-modules-m5-deployment-progression) 的标准推广路径：
 
 * **LocalNet** — 本地测试完整升级周期：上传 v1、创建合约、上传 v2、验证跨版本行为、运行迁移自动化。
 * **DevNet** — 与真实对手方部署升级，验证 DAR 分发与混合版本跨 validator 运行。
@@ -98,9 +98,9 @@ tags:
 
 ## 下一步
 
-* [Smart Contract Upgrades Overview](/appdev/modules/m6-overview) — 返回模块概览
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — 部署前验证升级路径
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — 通用环境推广策略
+* [Smart Contract Upgrades Overview](/zh/docs/canton/appdev-modules-m6-overview) — 返回模块概览
+* [Testing Upgrades](/zh/docs/canton/appdev-modules-m6-testing-upgrades) — 部署前验证升级路径
+* [Deployment Progression](/zh/docs/canton/appdev-modules-m5-deployment-progression) — 通用环境推广策略
 
 ---
 

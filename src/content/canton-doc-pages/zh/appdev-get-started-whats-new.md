@@ -17,9 +17,9 @@ tags:
 
 要了解各组件在每个版本中的变更，请参阅对应发布说明：
 
-* **Splice 与 Global Synchronizer** — [Splice 发布说明](/global-synchronizer/release-notes/splice)、[发布历史](/global-synchronizer/release-notes/release-history)、[每周补丁发布](/global-synchronizer/release-notes/weekly-patch-releases)
-* **Wallet SDK** — [Wallet SDK 发布说明](/integrations/release-notes/wallet-sdk)
-* **Canton 与 Daml SDK** — [Canton 发布说明](/global-synchronizer/release-notes/canton)
+* **Splice 与 Global Synchronizer** — [Splice 发布说明](/zh/docs/canton/global-synchronizer-release-notes-splice)、[发布历史](/global-synchronizer/release-notes/release-history)、[每周补丁发布](/global-synchronizer/release-notes/weekly-patch-releases)
+* **Wallet SDK** — [Wallet SDK 发布说明](/zh/docs/canton/integrations-release-notes-wallet-sdk)
+* **Canton 与 Daml SDK** — [Canton 发布说明](/zh/docs/canton/global-synchronizer-release-notes-canton)
 * **CIPs** — [Canton Improvement Proposals](https://github.com/global-synchronizer-foundation/cips)
 
 ## 版本兼容性

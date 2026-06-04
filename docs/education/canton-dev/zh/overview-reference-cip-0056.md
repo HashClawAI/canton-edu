@@ -76,7 +76,7 @@ Allocation 支持多 leg 结算（DvP）。`Allocation` 表示为结算特定 le
 * `holdingCids` — 支撑该 allocation 的持仓
 * `meta` — 扩展元数据
 
-通过从 registry 获取 `AllocationFactory` 并 exercise `AllocationFactory_Allocate` 创建 allocation。用 [Token Standard API](/overview/reference/splice-wallet-reference#wallet-api-endpoints) 发现与交互 allocation 合约。Settlement 的 `executor` Party 与发送方、接收方共同控制 allocation。生命周期三 choice：
+通过从 registry 获取 `AllocationFactory` 并 exercise `AllocationFactory_Allocate` 创建 allocation。用 [Token Standard API](/zh/docs/canton/overview-reference-splice-wallet-reference#wallet-api-endpoints) 发现与交互 allocation 合约。Settlement 的 `executor` Party 与发送方、接收方共同控制 allocation。生命周期三 choice：
 
 * `Allocation_ExecuteTransfer` — 执行已分配资产转账（结算步骤）
 * `Allocation_Cancel` — 提前释放 allocation，由发送方、接收方与 executor 共同控制
@@ -142,7 +142,7 @@ Splice 钱包与 Token Standard registry API 检测现有 preapproval 并自动�
 * `disclosedContracts`（exercise 成功所需）
 * `choiceContextData`（作为 choice 参数中的 `context` 传入）
 
-给定工具的 registry URL 目前由钱包自行维护。计划基于 [Canton Name Service](/overview/reference/canton-name-service) 的通用发现机制，将 registry URL 存入 CNS 条目元数据并经 Scan API 获取。
+给定工具的 registry URL 目前由钱包自行维护。计划基于 [Canton Name Service](/zh/docs/canton/overview-reference-canton-name-service) 的通用发现机制，将 registry URL 存入 CNS 条目元数据并经 Scan API 获取。
 
 链下 API 无需认证。安全模型依赖 contract ID 不可猜测性与 Canton 按需分发——仅有权 Party 收到合约。
 
@@ -176,7 +176,7 @@ Splice 钱包与 Token Standard registry API 检测现有 preapproval 并自动�
 * [Full CIP-0056 text](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md)
 * [Token standard source code](https://github.com/canton-network/splice/tree/main/token-standard)
 * [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk)
-* [Canton Coin Tokenomics](/overview/reference/canton-coin-tokenomics) — CC 费用结构与 UTXO 粉尘过期
+* [Canton Coin Tokenomics](/zh/docs/canton/overview-reference-canton-coin-tokenomics) — CC 费用结构与 UTXO 粉尘过期
 
 ---
 

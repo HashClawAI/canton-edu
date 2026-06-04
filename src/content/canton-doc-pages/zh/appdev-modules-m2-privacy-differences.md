@@ -130,11 +130,11 @@ template TrulyPrivate
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="智能合约范式" icon="code" href="/appdev/modules/m2-smart-contract-paradigm">
+  <Card title="智能合约范式" icon="code" href="/zh/docs/canton/appdev-modules-m2-smart-contract-paradigm">
     Daml 不可变合约模型 vs Solidity。
   </Card>
 
-  <Card title="隐私模型深入" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="隐私模型深入" icon="lock" href="/zh/docs/canton/overview-learn-privacy-model">
     子交易隐私技术细节。
   </Card>
 </CardGroup>

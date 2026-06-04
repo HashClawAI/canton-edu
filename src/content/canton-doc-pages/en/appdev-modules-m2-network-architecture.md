@@ -269,11 +269,11 @@ When migrating from Ethereum to Canton:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Architecture Deep Dive" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture Deep Dive" icon="diagram-project" href="/docs/canton/overview-learn-architecture">
     Detailed Canton architecture documentation.
   </Card>
 
-  <Card title="Start Building" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="Start Building" icon="code" href="/docs/canton/appdev-modules-m3-dev-environment">
     Begin writing Daml smart contracts.
   </Card>
 </CardGroup>

@@ -46,11 +46,11 @@ tags:
 
 ## dApp API 与 dApp SDK
 
-**dApp API** 是由 **CIP-103** 定义的 JSON-RPC 2.0 接口。你可从前端或后端直接调用（HTTP 或 WebSocket）。实践中多数开发者使用 **dApp SDK**，它实现同一协议并提供更简洁的 API、多传输支持（远程 Gateway 用 HTTP，浏览器扩展钱包用 `postMessage`），以及类 EIP-1193 的 provider（`window.canton`）。dApp API 让前端连接钱包、列出账户、准备并执行交易并接收实时更新；这一切都需要有效会话（JWT）。参见 [API](/integrations/wallet-gateway/apis) 与 [dApp SDK](/integrations/dapp-sdk/usage) 文档。
+**dApp API** 是由 **CIP-103** 定义的 JSON-RPC 2.0 接口。你可从前端或后端直接调用（HTTP 或 WebSocket）。实践中多数开发者使用 **dApp SDK**，它实现同一协议并提供更简洁的 API、多传输支持（远程 Gateway 用 HTTP，浏览器扩展钱包用 `postMessage`），以及类 EIP-1193 的 provider（`window.canton`）。dApp API 让前端连接钱包、列出账户、准备并执行交易并接收实时更新；这一切都需要有效会话（JWT）。参见 [API](/zh/docs/canton/integrations-wallet-gateway-apis) 与 [dApp SDK](/zh/docs/canton/integrations-dapp-sdk-usage) 文档。
 
 ## User API 与 User UI
 
-**User API** 面向用户与自动化：会话、网络、身份提供方、钱包与交易签名。**User UI**（由 Wallet Gateway 提供）通过 User API 让用户登录、创建与管理钱包、批准 dApp 交易并修改设置。若需自定义集成或脚本，可直接调用 User API 而不用 User UI。参见 [用法](/integrations/wallet-gateway/usage) 与 [API](/integrations/wallet-gateway/apis)。
+**User API** 面向用户与自动化：会话、网络、身份提供方、钱包与交易签名。**User UI**（由 Wallet Gateway 提供）通过 User API 让用户登录、创建与管理钱包、批准 dApp 交易并修改设置。若需自定义集成或脚本，可直接调用 User API 而不用 User UI。参见 [用法](/zh/docs/canton/integrations-wallet-gateway-usage) 与 [API](/zh/docs/canton/integrations-wallet-gateway-apis)。
 
 ## 发现与连接流程
 
@@ -61,9 +61,9 @@ tags:
 
 ## 下一步
 
-* **构建 dApp？** → 安装 [dApp SDK](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/dapp-sdk/installation.md)，遵循 [dApp SDK 用法](/integrations/dapp-sdk/usage)，并按需查阅 [API](/integrations/wallet-gateway/apis)（dApp API）。
-* **运行或配置 Wallet Gateway？** → 从 [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md) 开始，然后 [Configuration](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/configuration/index.md)、[Signing Providers](/integrations/wallet-gateway/signing-providers) 与 [API](/integrations/wallet-gateway/apis)（User API）。
-* **使用 User UI 或 User API？** → 参见 [用法](/integrations/wallet-gateway/usage) 了解典型流程及接口选择。
+* **构建 dApp？** → 安装 [dApp SDK](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/dapp-sdk/installation.md)，遵循 [dApp SDK 用法](/zh/docs/canton/integrations-dapp-sdk-usage)，并按需查阅 [API](/zh/docs/canton/integrations-wallet-gateway-apis)（dApp API）。
+* **运行或配置 Wallet Gateway？** → 从 [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md) 开始，然后 [Configuration](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/configuration/index.md)、[Signing Providers](/zh/docs/canton/integrations-wallet-gateway-signing-providers) 与 [API](/zh/docs/canton/integrations-wallet-gateway-apis)（User API）。
+* **使用 User UI 或 User API？** → 参见 [用法](/zh/docs/canton/integrations-wallet-gateway-usage) 了解典型流程及接口选择。
 
 ---
 

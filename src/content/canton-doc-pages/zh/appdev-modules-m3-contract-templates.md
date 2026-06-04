@@ -84,7 +84,7 @@ Daml 对空白敏感，用缩进组织*块*。首行以下缩进的内容属于�
 
 ## 下一步
 
-在 [Choices](/appdev/modules/m3-choices) 中，你将学习如何用 choice 为合约添加行为。
+在 [Choices](/zh/docs/canton/appdev-modules-m3-choices) 中，你将学习如何用 choice 为合约添加行为。
 
 ---
 

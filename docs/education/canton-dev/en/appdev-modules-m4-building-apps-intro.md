@@ -25,7 +25,7 @@ Module 4 bridges the gap between writing Daml contracts and shipping a complete 
 
 ## Prerequisites
 
-Before starting this module, you should have completed [Module 3: Daml Smart Contracts](/appdev/modules/m3-dev-environment). You need a working understanding of templates, choices, and authorization in Daml. Familiarity with Java or TypeScript is helpful but not required.
+Before starting this module, you should have completed [Module 3: Daml Smart Contracts](/docs/canton/appdev-modules-m3-dev-environment). You need a working understanding of templates, choices, and authorization in Daml. Familiarity with Java or TypeScript is helpful but not required.
 
 ## What You Will Learn
 
@@ -38,23 +38,23 @@ Before starting this module, you should have completed [Module 3: Daml Smart Con
 ## Module Pages
 
 <CardGroup cols={2}>
-  <Card title="Application Architecture" icon="sitemap" href="/appdev/modules/m4-app-architecture">
+  <Card title="Application Architecture" icon="sitemap" href="/docs/canton/appdev-modules-m4-app-architecture">
     Roles, layers, and how the pieces of a Canton application fit together.
   </Card>
 
-  <Card title="SDKs and APIs" icon="plug" href="/appdev/modules/m4-sdks-apis">
+  <Card title="SDKs and APIs" icon="plug" href="/docs/canton/appdev-modules-m4-sdks-apis">
     Code generation, Ledger API, JSON API, PQS, and the Wallet SDK.
   </Card>
 
-  <Card title="Backend Development" icon="server" href="/appdev/modules/m4-backend-dev">
+  <Card title="Backend Development" icon="server" href="/docs/canton/appdev-modules-m4-backend-dev">
     Connect to the ledger, submit commands, read transactions, and query PQS.
   </Card>
 
-  <Card title="Frontend Development" icon="browser" href="/appdev/modules/m4-frontend-dev">
+  <Card title="Frontend Development" icon="browser" href="/docs/canton/appdev-modules-m4-frontend-dev">
     Build a React UI with generated TypeScript bindings and wallet integration.
   </Card>
 
-  <Card title="Canton Coin and Traffic" icon="coins" href="/appdev/modules/m4-canton-coin">
+  <Card title="Canton Coin and Traffic" icon="coins" href="/docs/canton/appdev-modules-m4-canton-coin">
     Understand how CC buys traffic and how to manage transaction costs.
   </Card>
 </CardGroup>

@@ -179,7 +179,7 @@ sandbox 运行后，可通过 Ledger API（gRPC 或 JSON）交互，用 codegen 
 * Splice API（Scan、Validator APIs）
 * 涉及 Global Synchronizer 的端到端应用流
 
-启动 LocalNet 见 [QuickStart 演练](/appdev/quickstart/running-the-demo)。
+启动 LocalNet 见 [QuickStart 演练](/zh/docs/canton/appdev-quickstart-running-the-demo)。
 
 ---
 

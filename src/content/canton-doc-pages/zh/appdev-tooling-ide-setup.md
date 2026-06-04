@@ -93,9 +93,9 @@ IntelliJ 提供了到生成的 Daml Java 绑定的类型安全导航，这使得
 
 ## 后续步骤
 
-* [开发工具概述](/appdev/tooling/development-tools-overview) -- 所有Canton开发工具汇总
-* [开发环境设置](/appdev/modules/m3-dev-environment) -- Daml 开发入门
-* [调试工具](/appdev/tooling/debugging-tools) -- 解决开发过程中的问题
+* [开发工具概述](/zh/docs/canton/appdev-tooling-development-tools-overview) -- 所有Canton开发工具汇总
+* [开发环境设置](/zh/docs/canton/appdev-modules-m3-dev-environment) -- Daml 开发入门
+* [调试工具](/zh/docs/canton/appdev-tooling-debugging-tools) -- 解决开发过程中的问题
 
 ---
 

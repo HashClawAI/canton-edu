@@ -151,19 +151,19 @@ If you're coming from other blockchains:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Why Canton?" icon="question" href="/overview/understand/the-problem">
+  <Card title="Why Canton?" icon="question" href="/docs/canton/overview-understand-the-problem">
     Understand the problem Canton solves in depth.
   </Card>
 
-  <Card title="Core Concepts" icon="book" href="/overview/understand/core-concepts">
+  <Card title="Core Concepts" icon="book" href="/docs/canton/overview-understand-core-concepts">
     Learn about parties, validators, synchronizers, and smart contracts.
   </Card>
 
-  <Card title="For Ethereum Devs" icon="ethereum" href="/appdev/modules/m2-canton-for-ethereum-devs">
+  <Card title="For Ethereum Devs" icon="ethereum" href="/docs/canton/appdev-modules-m2-canton-for-ethereum-devs">
     Translate your blockchain knowledge to Canton.
   </Card>
 
-  <Card title="Architecture" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture" icon="diagram-project" href="/docs/canton/overview-learn-architecture">
     See how components work together.
   </Card>
 </CardGroup>

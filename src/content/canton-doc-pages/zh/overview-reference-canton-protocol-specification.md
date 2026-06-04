@@ -15,7 +15,7 @@ tags:
 
 > Canton 协议架构技术规范：涵盖共识层、交易处理与拓扑管理
 
-本节提供 Canton 协议完整技术规范。[Learn](/overview/learn/architecture) 页面在高层次介绍概念；本参考页详述协议机制——数据结构、信任假设、消息流与形式化性质，它们是 Canton Network 的基础。
+本节提供 Canton 协议完整技术规范。[Learn](/zh/docs/canton/overview-learn-architecture) 页面在高层次介绍概念；本参考页详述协议机制——数据结构、信任假设、消息流与形式化性质，它们是 Canton Network 的基础。
 
 ## 协议架构
 
@@ -37,23 +37,23 @@ Participant 与 Mediator 不直接通信。所有消息经 Sequencer 全局排�
 ## 参考页面
 
 <CardGroup cols={2}>
-  <Card title="Ledger Model (Detailed)" icon="layer-group" href="/overview/reference/ledger-model-detailed">
+  <Card title="Ledger Model (Detailed)" icon="layer-group" href="/zh/docs/canton/overview-reference-ledger-model-detailed">
     扩展 UTXO 模型：templates、利益相关方、choices、交易结构、视图与 witnesses。
   </Card>
 
-  <Card title="Smart Contract Consensus" icon="handshake" href="/overview/reference/smart-contract-consensus">
+  <Card title="Smart Contract Consensus" icon="handshake" href="/zh/docs/canton/overview-reference-smart-contract-consensus">
     Proof of Stakeholder 验证、隐私保护共识与信任域对比。
   </Card>
 
-  <Card title="Ordering Consensus" icon="arrow-down-1-9" href="/overview/reference/ordering-consensus">
+  <Card title="Ordering Consensus" icon="arrow-down-1-9" href="/zh/docs/canton/overview-reference-ordering-consensus">
     Sequencer 与 Mediator 架构、BFT 排序服务与 ISS 启发式共识协议。
   </Card>
 
-  <Card title="Transaction Lifecycle" icon="rotate" href="/overview/reference/transaction-lifecycle">
+  <Card title="Transaction Lifecycle" icon="rotate" href="/zh/docs/canton/overview-reference-transaction-lifecycle">
     从准备到提交的完整五阶段生命周期。
   </Card>
 
-  <Card title="Topology" icon="diagram-project" href="/overview/reference/topology">
+  <Card title="Topology" icon="diagram-project" href="/zh/docs/canton/overview-reference-topology">
     命名空间管理、密码学密钥、Party-to-participant 映射与拓扑交易。
   </Card>
 </CardGroup>
@@ -78,7 +78,7 @@ Daml 交易在其生命周期中穿越两层共识：
 4. 各确认 Participant 验证其视图并向 Mediator 发送确认或拒绝（智能合约层，经排序层）
 5. Mediator 在所需时间窗内汇总裁认并发出裁决，Sequencer 分发给所有 Participant（排序层）
 
-各阶段详见 [Transaction Lifecycle](/overview/reference/transaction-lifecycle)。
+各阶段详见 [Transaction Lifecycle](/zh/docs/canton/overview-reference-transaction-lifecycle)。
 
 ---
 

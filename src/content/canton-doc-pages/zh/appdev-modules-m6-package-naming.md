@@ -39,7 +39,7 @@ com-acme-asset-main-v2
 com-acme-asset-interfaces-v1
 ```
 
-版本标记指**合约模型版本**，非构建版本。仅在做需新包的破坏性变更时递增（见 [升级限制](/appdev/modules/m6-limitations)）。非破坏性升级（添加可选字段、新 choice）在同一包名内由 SCU 透明处理。
+版本标记指**合约模型版本**，非构建版本。仅在做需新包的破坏性变更时递增（见 [升级限制](/zh/docs/canton/appdev-modules-m6-limitations)）。非破坏性升级（添加可选字段、新 choice）在同一包名内由 SCU 透明处理。
 
 不要在模板名中包含版本号。
 
@@ -99,9 +99,9 @@ com-acme-lending-test-fixtures-v1    -- 测试数据生成器（不部署生产�
 
 ## 延伸阅读
 
-* [Upgrade Limitations](/appdev/modules/m6-limitations) — 驱动包命名决策的约束
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — 破坏性 vs 非破坏性变更规则
-* [Building and Packaging](/appdev/modules/m3-building-packaging) — 用 `dpm build` 编译打包
+* [Upgrade Limitations](/zh/docs/canton/appdev-modules-m6-limitations) — 驱动包命名决策的约束
+* [Upgrade Compatibility](/zh/docs/canton/appdev-modules-m6-upgrade-compatibility) — 破坏性 vs 非破坏性变更规则
+* [Building and Packaging](/zh/docs/canton/appdev-modules-m3-building-packaging) — 用 `dpm build` 编译打包
 
 ---
 
