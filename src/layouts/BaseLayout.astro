@@ -38,7 +38,7 @@ const ogImage = new URL(ogImagePath, Astro.site ?? Astro.url.origin);
     <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
     <title>{siteTitle}</title>
   </head>
-  <body class="matrix-site">
+  <body class={`matrix-site locale-${locale}`}>
     <canvas id="mx-rain-canvas" class="mx-rain-layer" aria-hidden="true"></canvas>
     <div class="site-layer">
       <Nav locale={locale} current={navCurrent} />
