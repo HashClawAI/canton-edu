@@ -17,7 +17,7 @@ tags:
 
 Canton Coin (CC) 是 Global Synchronizer 的原生效用代币，通过 [Splice](https://github.com/canton-network/splice) 开源基础设施实现，Daml 合约层称为「Amulet」。CC 三项功能：支付网络使用（流量）、奖励基础设施运营方与应用提供方、通过 Super Validator 参与治理网络。
 
-CC 在网络中的角色与获取方式见 [Canton Coin and the Global Synchronizer](/overview/understand/canton-coin)。正式规范见 [Canton Coin white paper](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20\(whitepapers%2c%20etc...\)/Canton%20Coin_%20A%20Canton-Network-native%20payment%20application.pdf)。
+CC 在网络中的角色与获取方式见 [Canton Coin and the Global Synchronizer](/zh/docs/canton/overview-understand-canton-coin)。正式规范见 [Canton Coin white paper](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20\(whitepapers%2c%20etc...\)/Canton%20Coin_%20A%20Canton-Network-native%20payment%20application.pdf)。
 
 ## 费用结构
 
@@ -156,7 +156,7 @@ API 详情见 [CIP-0056 text](https://github.com/global-synchronizer-foundation/
 
 ## 相关资源
 
-* [Canton Coin and the Global Synchronizer](/overview/understand/canton-coin) — 概念概览与获取 CC
+* [Canton Coin and the Global Synchronizer](/zh/docs/canton/overview-understand-canton-coin) — 概念概览与获取 CC
 * [CIP-0078 (CC Fee Removal)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) — 取消转账与锁定费的提案
 * [CIP-0056 (CN Token Standard)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md) — 代币操作标准接口
 * [CIP-0073 (Weighted Validator Liveness Rewards)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0073/cip-0073.md) — SV 确定 Party 的 liveness 奖励支持

@@ -20,7 +20,7 @@ tags:
 API 参考涵盖 Canton 的每一个程序化接口——查阅端点、请求/响应模式、服务、消息与客户端库类型，并附生命周期注解。
 
 <Columns cols={2}>
-  <Card title="Ledger API" icon="bookmark" href="/appdev/reference/pqs-sql-reference">
+  <Card title="Ledger API" icon="bookmark" href="/zh/docs/canton/appdev-reference-pqs-sql-reference">
     Canton Ledger API 生成参考，涵盖 5 个 gRPC 包——查阅服务、请求/响应模式，以及命令、更新等功能的版本历史。
   </Card>
 
@@ -50,7 +50,7 @@ API 参考涵盖 Canton 的每一个程序化接口——查阅端点、请求/�
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Admin API" icon="bookmark" href="/reference/admin-api/protobuf/index">
+  <Card title="Admin API" icon="bookmark" href="/zh/docs/canton/reference-admin-api-protobuf-index">
     Canton Admin API 服务、消息与生命周期历史的 gRPC 包生成参考。
   </Card>
 </Columns>

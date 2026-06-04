@@ -1006,8 +1006,8 @@ Answers to frequently asked questions from Canton Network validators and applica
     **Recommended resources:**
 
     1. **Official Documentation:**
-       * [Build Documentation](/appdev/get-started/choose-your-path)
-       * [Operator Documentation](/global-synchronizer/understand/introduction)
+       * [Build Documentation](/docs/canton/appdev-get-started-choose-your-path)
+       * [Operator Documentation](/docs/canton/global-synchronizer-understand-introduction)
 
     2. **Hands-on:**
        * [Canton Quickstart](https://github.com/digital-asset/cn-quickstart)
@@ -1100,7 +1100,7 @@ Answers to frequently asked questions from Canton Network validators and applica
 
     1. Complete MainNet validator onboarding
     2. Request MainNet IP whitelisting
-    3. Follow [MainNet onboarding documentation](/global-synchronizer/deployment/onboarding-process)
+    3. Follow [MainNet onboarding documentation](/docs/canton/global-synchronizer-deployment-onboarding-process)
     4. Deploy with production configuration
 
     <Warning>
@@ -1217,7 +1217,7 @@ If your question isn't answered here:
 
 1. **[Search the documentation](https://docs.canton.network)** on this site
 
-2. **Check the [Troubleshooting Cheat Sheet](/appdev/troubleshooting)** for specific error solutions
+2. **Check the [Troubleshooting Cheat Sheet](/docs/canton/appdev-troubleshooting)** for specific error solutions
 
 3. **Ask in [community Slack](https://docs.canton.network/shared/support-channels)** channels for guidance from other developers
 

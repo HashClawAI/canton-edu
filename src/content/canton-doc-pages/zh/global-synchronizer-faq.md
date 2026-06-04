@@ -49,7 +49,7 @@ tags:
   >
   > 1. 确保您在参与者配置中启用了 `DEBUG` 日志。
   > 2. 确定参与者日志中命令提交的跟踪 ID。
-  > 3. 搜索包含 `EventCost` 和 `trace-id` 的`DEBUG` 日志行。由于 [Canton 协议](/overview/learn/architecture) 的工作原理，通常有两个这样的日志行。第一个是提交确认请求的成本，第二个是提交参与方节点进行的 tx 验证的确认响应的成本。
+  > 3. 搜索包含 `EventCost` 和 `trace-id` 的`DEBUG` 日志行。由于 [Canton 协议](/zh/docs/canton/overview-learn-architecture) 的工作原理，通常有两个这样的日志行。第一个是提交确认请求的成本，第二个是提交参与方节点进行的 tx 验证的确认响应的成本。
   >
   > 例如，以下日志行（由 lnav 漂亮地打印）显示了来自点击某个 Amulet 的跟踪 id `1e2d6bf54d150e230fd0c7f348707bf6` 的命令提交。
   >

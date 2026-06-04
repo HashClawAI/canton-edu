@@ -51,7 +51,7 @@ The guide is intentionally structured such that you can use a learning-by-doing 
 
 <img src="https://mintlify.s3.us-west-1.amazonaws.com/cantonfoundation/集成/钱包/images/delivery_dependencies.png" alt="milestone and delivery dependency diagram" />
 
-**CC with 1-step withdrawal only**: this milestone allows you to support deposits and withdrawals of CC. It includes earning app 奖励 for all CC deposits. The 工作流 基于 the [Canton Network Token Standard](/appdev/deep-dives/token-standard) which is the foundation for supporting all CN tokens in the next milestone. We consider it an intermediate milestone, as it does not support:
+**CC with 1-step withdrawal only**: this milestone allows you to support deposits and withdrawals of CC. It includes earning app 奖励 for all CC deposits. The 工作流 基于 the [Canton Network Token Standard](/zh/docs/canton/appdev-deep-dives-token-standard) which is the foundation for supporting all CN tokens in the next milestone. We consider it an intermediate milestone, as it does not support:
 
 * all CN tokens
 * CC 用户 that prefer to control the receipt of transfers, and 因此 do not want to setup preapprovals
@@ -107,7 +107,7 @@ Use the following support code to simplify your 集成 开发 for:
 * Canton is designed as a 网络-of-networks where each 网络 is a separate 同步器 that is distinct and separate from other synchronizers. 例如, the 全局同步器 is a 同步器 that connects validators in its 网络.
 * 验证者 nodes can be connected to multiple synchronizers. 验证者 nodes merge the data streams from all connected synchronizers into a single logical stream, which is why they assign a local Ledger API **偏移** to every 交易. These 偏移 are not comparable across 验证者节点, but update-ids and record times are.
 * 交易 in Canton have a hierarchical structure that reflects the nested execution and visibility of Daml choices. This hierarchical structure guarantees privacy between Party in the same 交易. Different 验证者节点 may see different sub-trees of the same 交易 depending on which Party they host.
-* **Memos** are stored in the transfer metadata using the `splice.lfdecentralizedtrust.org/reason` key. The [Canton Network Token Standard](/appdev/deep-dives/token-standard) defines this key and a way to parse these memo tags and other transfer information from 交易.
+* **Memos** are stored in the transfer metadata using the `splice.lfdecentralizedtrust.org/reason` key. The [Canton Network Token Standard](/zh/docs/canton/appdev-deep-dives-token-standard) defines this key and a way to parse these memo tags and other transfer information from 交易.
 
 本指南 provides a sample architecture and 工作流 for integrating an exchange with Canton. The expectation is that the 集成 组件 are reasonably thin wrappers over the functionality provided by the 钱包 SDK. The guide expects you to provide these 组件 since they are mostly concerned integrating with your exchange's internal systems and its requirements.
 
@@ -296,7 +296,7 @@ We therefore recommend the following approach:
 
 The MVP for supporting all Canton Network tokens builds on the Canton Coin（CC） MVP. The key changes required are:
 
-* Change Tx History Ingestion to also ingest the `TransferInstruction` UTXOs, which are used by the Canton Network Token Standard to represent in-progress transfers (see [docs](/appdev/deep-dives/token-standard#transfer-instruction), [code](https://github.com/hyperledger-labs/splice/blob/2997dd9e55e5d7901e3f475bc10c3dc6ce95ab0c/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L93-L105)).
+* Change Tx History Ingestion to also ingest the `TransferInstruction` UTXOs, which are used by the Canton Network Token Standard to represent in-progress transfers (see [docs](/zh/docs/canton/appdev-deep-dives-token-standard#transfer-instruction), [code](https://github.com/hyperledger-labs/splice/blob/2997dd9e55e5d7901e3f475bc10c3dc6ce95ab0c/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L93-L105)).
 * Adjust the Exchange UI to show the status of in-progress transfers.
 * Adjust the 用户 funds tracking done as part of Tx History Ingestion to credit funds back to the 用户 if they reject a withdrawal transfer. Consider deducting a fee for the failed withdrawal.
 * Implement the Multi-Step 充值 Automation 服务 to auto-accept incoming transfers that are pending receiver acceptance. 确保 that the deposit address is known before accepting the transfer.
@@ -2025,9 +2025,9 @@ Where possible, we recommend to automate these tests as part of your CI pipeline
 
 ## 优化应用奖励
 
-The MVP for all CN tokens described in the `exchange-integration-overview` section comes with the limitation that 应用 奖励 are only earned on deposits of CC, but not on deposits of other CN tokens. 我们建议 to lift this limitation and to improve the profitability of the 集成 using Canton Coin（CC）'s [featured 应用 activity marker mechanism](/overview/reference/canton-coin-tokenomics). It allows tagging 交易 with a featured 应用 activity marker and earn 应用 奖励 for them.
+The MVP for all CN tokens described in the `exchange-integration-overview` section comes with the limitation that 应用 奖励 are only earned on deposits of CC, but not on deposits of other CN tokens. 我们建议 to lift this limitation and to improve the profitability of the 集成 using Canton Coin（CC）'s [featured 应用 activity marker mechanism](/zh/docs/canton/overview-reference-canton-coin-tokenomics). It allows tagging 交易 with a featured 应用 activity marker and earn 应用 奖励 for them.
 
-The idea is to tag both the initatiation of withdrawals and the acceptance of deposit offers with a featured 应用 activity marker to attribute the 交易 to the `exchangeParty（交易所 Party）`. Tagging these 交易 is compliant with the [guidance given in the Splice documentation](/overview/reference/canton-coin-tokenomics), as they correspond to transfers and create value for the 网络.
+The idea is to tag both the initatiation of withdrawals and the acceptance of deposit offers with a featured 应用 activity marker to attribute the 交易 to the `exchangeParty（交易所 Party）`. Tagging these 交易 is compliant with the [guidance given in the Splice documentation](/zh/docs/canton/overview-reference-canton-coin-tokenomics), as they correspond to transfers and create value for the 网络.
 
 In order for the `treasuryParty（金库 Party）` to create featured 应用 activity markers in the name of the `exchangeParty（交易所 Party）`, a delegation 合约 is required. A suitable [delegation template](https://github.com/hyperledger-labs/splice/blob/5870d2d8b0c6b9dfcf8afe11ab0685e2ee58342f/daml/splice-util-featured-app-proxies/daml/Splice/Util/FeaturedApp/DelegateProxy.daml#L35-L55) called `DelegateProxy` is part of the [splice-util-featured-app-proxies](https://github.com/hyperledger-labs/splice/tree/main/daml/splice-util-featured-app-proxies) package. 我们建议 to use this package and template as explained in the sections below.
 
@@ -2086,7 +2086,7 @@ Sharding your treasury over multiple treasury Party may be interesting to reduce
 
 ## 金库 Party 多托管
 
-The documentation on setting up the exchange party describes how to setup a party with a single confirming node. This can be sufficient but the confirming nodes for the party are essential to keep your party secure and compromise of them could lead to loss of funds. Refer to the trust model [trust model](/overview/reference/external-party) for more details.
+The documentation on setting up the exchange party describes how to setup a party with a single confirming node. This can be sufficient but the confirming nodes for the party are essential to keep your party secure and compromise of them could lead to loss of funds. Refer to the trust model [trust model](/zh/docs/canton/overview-reference-external-party) for more details.
 
 To guard against compromise of the confirming nodes, you can setup your `treasuryParty（金库 Party）` with multiple confirming nodes and a threshold N > 1. As long as less than N nodes are compromised, your party is still secured. Common setups are:
 

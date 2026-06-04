@@ -71,7 +71,7 @@ flowchart TB
 
 ## 验证器堆栈
 
-每个 SV 都包含完整的验证器堆栈。有关详细信息，请参阅[验证器节点组件](/overview/reference/validator-node-components)参考。
+每个 SV 都包含完整的验证器堆栈。有关详细信息，请参阅[验证器节点组件](/zh/docs/canton/overview-reference-validator-node-components)参考。
 
 验证器层提供：
 
@@ -107,7 +107,7 @@ BFT 排序节点参与共识协议，该协议建立排序器处理的消息的�
 
 CometBFT 节点与所有其他 SV CometBFT 节点保持点对点连接，并通过专用的 TCP 八卦/共识通道进行通信（与验证器使用的 HTTPS API 分开）。 BFT 共识需要超过三分之二的 SV 节点同意才能生成区块，这意味着系统最多可以容忍`f` 拜占庭（故障或恶意）节点，其中`f = floor((n-1)/3)` 和 `n` 是 SV 的总数。
 
-有关排序共识如何运作的更多信息，请参阅[排序共识](/overview/reference/ordering-consensus)。
+有关排序共识如何运作的更多信息，请参阅[排序共识](/zh/docs/canton/overview-reference-ordering-consensus)。
 
 ## SV 特定应用
 

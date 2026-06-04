@@ -713,7 +713,7 @@ template OfferToPaintHouseByPainter
         return iouId2
 ```
 
-We won't dive into the details of Daml, as this is [explained elsewhere](/appdev/modules/m3-language-fundamentals). But one key observation is that the contracts themselves are passive. The contract instances represent the ledger and only encode the rules according to which the ledger state can be changed. Any change requires you to trigger some Daml contract execution by sending the appropriate commands over the Ledger API.
+We won't dive into the details of Daml, as this is [explained elsewhere](/docs/canton/appdev-modules-m3-language-fundamentals). But one key observation is that the contracts themselves are passive. The contract instances represent the ledger and only encode the rules according to which the ledger state can be changed. Any change requires you to trigger some Daml contract execution by sending the appropriate commands over the Ledger API.
 
 The Canton console gives you interactive access to this API, together with some utilities that can be useful for experimentation. The Ledger API uses [gRPC](http://grpc.io).
 

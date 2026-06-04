@@ -27,7 +27,7 @@ In the following discussion, the current version is `v1` and the new version is 
 
 ## Deployment Sequence
 
-The deployment follows the asynchronous rollout model described in the [Overview](/appdev/modules/m6-overview):
+The deployment follows the asynchronous rollout model described in the [Overview](/docs/canton/appdev-modules-m6-overview):
 
 1. **Upload v2 DAR to your own validator** — Upload the v2 package on your participant node. This doesn't affect other organizations yet.
 
@@ -96,7 +96,7 @@ To avoid complex roll-forward rollbacks, consider splitting an upgrade into two 
 
 ## Environment-by-Environment Rollout
 
-Apply the standard promotion path from [Deployment Progression](/appdev/modules/m5-deployment-progression):
+Apply the standard promotion path from [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression):
 
 * **LocalNet** — Test the full upgrade cycle locally: upload v1, create contracts, upload v2, verify cross-version behavior, run migration automation.
 * **DevNet** — Deploy the upgrade with a real counterparty. Verify that DAR distribution and mixed-version operation work across validators.
@@ -105,9 +105,9 @@ Apply the standard promotion path from [Deployment Progression](/appdev/modules/
 
 ## Next Steps
 
-* [Smart Contract Upgrades Overview](/appdev/modules/m6-overview) — Return to the module overview
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) — Verify upgrade paths before deployment
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — General environment promotion strategy
+* [Smart Contract Upgrades Overview](/docs/canton/appdev-modules-m6-overview) — Return to the module overview
+* [Testing Upgrades](/docs/canton/appdev-modules-m6-testing-upgrades) — Verify upgrade paths before deployment
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) — General environment promotion strategy
 
 ---
 

@@ -26,7 +26,7 @@ You can use the Wallet Gateway in two ways:
 * mainly through the **User UI** (Web UI) for end users
 * or through the **User API** (for automation, custom UIs, or integration with your own systems).
 
-The **dApp API** is used by your dApp via the dApp SDK when users connect their wallet. See the [dApp SDK](/integrations/dapp-sdk/usage) for more details.
+The **dApp API** is used by your dApp via the dApp SDK when users connect their wallet. See the [dApp SDK](/docs/canton/integrations-dapp-sdk-usage) for more details.
 
 This section describes typical workflows, the User UI, session handling, and when to use which interface.
 
@@ -59,7 +59,7 @@ Users **log out** via the layout logout control. Logout calls `removeSession`, c
   * Build a custom wallet UI (e.g. embedded in your app) instead of the default User UI.
   * Automate session, network, IDP, or wallet operations.
 
-* **dApp API** (via dApp SDK): Use from your **dApp** frontend. The SDK calls the dApp API to connect, list accounts, and prepare/execute transactions. Users approve via the Web UI or browser extension. See [dApp SDK usage](/integrations/dapp-sdk/usage) and [APIs](/integrations/wallet-gateway/apis) for details.
+* **dApp API** (via dApp SDK): Use from your **dApp** frontend. The SDK calls the dApp API to connect, list accounts, and prepare/execute transactions. Users approve via the Web UI or browser extension. See [dApp SDK usage](/docs/canton/integrations-dapp-sdk-usage) and [APIs](/docs/canton/integrations-wallet-gateway-apis) for details.
 
 ## Typical flows
 
@@ -91,9 +91,9 @@ Users **log out** via the layout logout control. Logout calls `removeSession`, c
 ## Next steps
 
 * Configure the Gateway: [Configuration](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/configuration/index.md)
-* Explore User API and dApp API: [APIs](/integrations/wallet-gateway/apis)
-* Set up signing: [Signing Providers](/integrations/wallet-gateway/signing-providers)
-* Run and operate the Gateway: [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md), [Troubleshooting](/integrations/wallet-gateway/troubleshooting)
+* Explore User API and dApp API: [APIs](/docs/canton/integrations-wallet-gateway-apis)
+* Set up signing: [Signing Providers](/docs/canton/integrations-wallet-gateway-signing-providers)
+* Run and operate the Gateway: [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md), [Troubleshooting](/docs/canton/integrations-wallet-gateway-troubleshooting)
 
 ---
 

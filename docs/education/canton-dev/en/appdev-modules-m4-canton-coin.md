@@ -104,8 +104,8 @@ The wallet handles CC transfers, balance lookups, and payment confirmations. You
 
 ## Further Reading
 
-* [Canton Coin overview](/overview/understand/canton-coin) -- Deeper background on CC tokenomics, validator rewards, and governance
-* [Backend Development](/appdev/modules/m4-backend-dev) -- Handling transaction errors, including insufficient-traffic failures
+* [Canton Coin overview](/docs/canton/overview-understand-canton-coin) -- Deeper background on CC tokenomics, validator rewards, and governance
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- Handling transaction errors, including insufficient-traffic failures
 * [cn-quickstart](https://github.com/digital-asset/cn-quickstart) -- Working example of wallet integration in a Canton application
 
 ---

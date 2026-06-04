@@ -154,9 +154,9 @@ flowchart TB
 
 ## 相关主题
 
-* [信任模型概览](/overview/learn/trust-model)
-* [架构概览](/overview/learn/architecture)
-* [隐私模型](/overview/learn/privacy-model)
+* [信任模型概览](/zh/docs/canton/overview-learn-trust-model)
+* [架构概览](/zh/docs/canton/overview-learn-architecture)
+* [隐私模型](/zh/docs/canton/overview-learn-privacy-model)
 
 ---
 

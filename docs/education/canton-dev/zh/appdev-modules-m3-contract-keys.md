@@ -84,7 +84,7 @@ template Account with
 
 与 `fetch` 类似，`fetchByKey` 须至少一名 stakeholder 授权。
 
-若无给定键的合约对提交方可见，`fetchByKey` 失败并以 [`CONTRACT_KEY_NOT_FOUND`](/appdev/reference/error-codes#contracts-and-transactions) 中止交易。
+若无给定键的合约对提交方可见，`fetchByKey` 失败并以 [`CONTRACT_KEY_NOT_FOUND`](/zh/docs/canton/appdev-reference-error-codes#contracts-and-transactions) 中止交易。
 
 ### lookupByKey
 

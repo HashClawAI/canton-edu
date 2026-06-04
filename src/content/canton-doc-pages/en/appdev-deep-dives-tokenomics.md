@@ -29,7 +29,7 @@ Creating an activity record and minting the associated Canton Coin (CC) are two 
 
 There are several rounds active concurrently with each round being in a different phase. A round starts every 10 minutes, which is a configuration parameter that the Super Validators may change in the future via a governance vote. See the CC whitepaper for the details.
 
-There is no difference in activity record creation for an [external party](/appdev/deep-dives/external-signing-onboarding) or a local party, but there is a difference in the automation support used in the minting phase. For local parties onboarded to a validator, the validator application runs background automation to mint all activity records automatically. An external party signs transactions using a key they control. As a consequence, the validator automation is not able to perform minting for external parties directly. For external parties, there are two options:
+There is no difference in activity record creation for an [external party](/docs/canton/appdev-deep-dives-external-signing-onboarding) or a local party, but there is a difference in the automation support used in the minting phase. For local parties onboarded to a validator, the validator application runs background automation to mint all activity records automatically. An external party signs transactions using a key they control. As a consequence, the validator automation is not able to perform minting for external parties directly. For external parties, there are two options:
 
 1. Use a minting delegation to delegate reward collection to a validator, avoiding the need to build custom automation.
 2. Develop custom automation to call AmuletRules\_Transfer at least once per round with all activity records as inputs.
@@ -94,7 +94,7 @@ Generally the guidance is to create a `FeaturedAppActivityMarker` for any econom
 * Transfer a RWA.
 * Mint or burn tokens.
 
-However, it should not be created for any intermediate steps or a [propose step](/appdev/modules/m3-authorization#use-propose-accept-workflow-for-one-off-authorization).
+However, it should not be created for any intermediate steps or a [propose step](/docs/canton/appdev-modules-m3-authorization#use-propose-accept-workflow-for-one-off-authorization).
 
 A `FeaturedAppActivityMarker` is immediately converted into an AppRewardCoupon by the automation run by the Super Validators. The AppRewardCoupon is created with the DSO as the `signatory` and the `provider` field as an observer. By default, the `provider` can mint CC in the minting step. The `featured` field is set to `true` to indicate eligibility to receive featured application rewards, based on a FeaturedAppRight contract.
 

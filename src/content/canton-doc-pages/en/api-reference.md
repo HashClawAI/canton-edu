@@ -20,7 +20,7 @@ tags:
 The API Reference covers every programmatic interface to Canton - review endpoints, request/response schemas, services, messages, and client library types, all with lifecycle annotations.
 
 <Columns cols={2}>
-  <Card title="Ledger API" icon="bookmark" href="/appdev/reference/pqs-sql-reference">
+  <Card title="Ledger API" icon="bookmark" href="/docs/canton/appdev-reference-pqs-sql-reference">
     Generated reference for Canton's Ledger API across 5 gRPC packages - review services, request/response schemas, and version history for commands, updates, and more.
   </Card>
 
@@ -50,7 +50,7 @@ The API Reference covers every programmatic interface to Canton - review endpoin
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Admin API" icon="bookmark" href="/reference/admin-api/protobuf/index">
+  <Card title="Admin API" icon="bookmark" href="/docs/canton/reference-admin-api-protobuf-index">
     Generated gRPC package reference for Canton Admin API services, messages, and lifecycle history.
   </Card>
 </Columns>

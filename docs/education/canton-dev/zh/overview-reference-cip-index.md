@@ -15,7 +15,7 @@ tags:
 
 > 按类型、编号与状态索引的 Canton Improvement Proposals (CIPs) 参考
 
-本页按类型编目 CIP。权威来源为 [CIP GitHub repository](https://github.com/global-synchronizer-foundation/cips)，每项 CIP 有独立目录含完整提案文本。背景见 [What are CIPs?](/overview/reference/what-are-cips)。提交新提案见 [CIP Reference](/overview/reference/what-are-cips#how-to-propose-a-cip)。
+本页按类型编目 CIP。权威来源为 [CIP GitHub repository](https://github.com/global-synchronizer-foundation/cips)，每项 CIP 有独立目录含完整提案文本。背景见 [What are CIPs?](/zh/docs/canton/overview-reference-what-are-cips)。提交新提案见 [CIP Reference](/zh/docs/canton/overview-reference-what-are-cips#how-to-propose-a-cip)。
 
 ## Standards Track CIPs
 

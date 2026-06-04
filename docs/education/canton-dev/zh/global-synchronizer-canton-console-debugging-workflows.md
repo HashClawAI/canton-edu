@@ -240,7 +240,7 @@ tags:
     )
 ```
 
-待决提案意味着第二个参与者尚未签署。授权流程请参见[Multi-Hosting](/appdev/deep-dives/multi-hosting)。
+待决提案意味着第二个参与者尚未签署。授权流程请参见[Multi-Hosting](/zh/docs/canton/appdev-deep-dives-multi-hosting)。
 
 ## ACS 检验
 
@@ -296,8 +296,8 @@ tags:
 
 ## 后续步骤
 
-* [基本命令](/global-synchronizer/canton-console/essential-commands) — 所有按键命令的快速参考
-* [控制台概述](/global-synchronizer/canton-console/console-overview) — 如何在不同环境下访问控制台
+* [基本命令](/zh/docs/canton/global-synchronizer-canton-console-essential-commands) — 所有按键命令的快速参考
+* [控制台概述](/zh/docs/canton/global-synchronizer-canton-console-console-overview) — 如何在不同环境下访问控制台
 
 ---
 

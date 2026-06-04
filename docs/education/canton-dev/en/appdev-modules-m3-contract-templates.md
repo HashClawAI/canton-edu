@@ -90,7 +90,7 @@ Furthermore, Daml ledgers *guarantee* that parties see all transactions where th
 
 ## Next up
 
-In [Choices](/appdev/modules/m3-choices), you'll learn how to add behavior to your contracts using choices.
+In [Choices](/docs/canton/appdev-modules-m3-choices), you'll learn how to add behavior to your contracts using choices.
 
 ---
 

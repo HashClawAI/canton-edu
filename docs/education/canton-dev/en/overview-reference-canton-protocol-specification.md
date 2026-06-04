@@ -21,7 +21,7 @@ tags:
 
 > Technical specification of the Canton protocol architecture, covering consensus layers, transaction processing, and topology management
 
-This section provides the full technical specification of the Canton protocol. Where the [Learn](/overview/learn/architecture) pages introduce concepts at a high level, these reference pages describe the protocol mechanics in detail — the data structures, trust assumptions, message flows, and formal properties that underpin Canton Network.
+This section provides the full technical specification of the Canton protocol. Where the [Learn](/docs/canton/overview-learn-architecture) pages introduce concepts at a high level, these reference pages describe the protocol mechanics in detail — the data structures, trust assumptions, message flows, and formal properties that underpin Canton Network.
 
 ## Protocol Architecture
 
@@ -43,23 +43,23 @@ Participants and mediators never communicate directly. All messages flow through
 ## Reference Pages
 
 <CardGroup cols={2}>
-  <Card title="Ledger Model (Detailed)" icon="layer-group" href="/overview/reference/ledger-model-detailed">
+  <Card title="Ledger Model (Detailed)" icon="layer-group" href="/docs/canton/overview-reference-ledger-model-detailed">
     The extended UTXO model: templates, stakeholders, choices, transaction structure, views, and witnesses.
   </Card>
 
-  <Card title="Smart Contract Consensus" icon="handshake" href="/overview/reference/smart-contract-consensus">
+  <Card title="Smart Contract Consensus" icon="handshake" href="/docs/canton/overview-reference-smart-contract-consensus">
     Proof of Stakeholder validation, privacy-preserving consensus, and trust domain comparisons.
   </Card>
 
-  <Card title="Ordering Consensus" icon="arrow-down-1-9" href="/overview/reference/ordering-consensus">
+  <Card title="Ordering Consensus" icon="arrow-down-1-9" href="/docs/canton/overview-reference-ordering-consensus">
     Sequencer and mediator architecture, BFT ordering service, and the ISS-inspired consensus protocol.
   </Card>
 
-  <Card title="Transaction Lifecycle" icon="rotate" href="/overview/reference/transaction-lifecycle">
+  <Card title="Transaction Lifecycle" icon="rotate" href="/docs/canton/overview-reference-transaction-lifecycle">
     The complete five-phase lifecycle from preparation through commit.
   </Card>
 
-  <Card title="Topology" icon="diagram-project" href="/overview/reference/topology">
+  <Card title="Topology" icon="diagram-project" href="/docs/canton/overview-reference-topology">
     Namespace management, cryptographic keys, party-to-participant mappings, and topology transactions.
   </Card>
 </CardGroup>
@@ -84,7 +84,7 @@ A Daml transaction moves through both consensus layers during its lifecycle:
 4. Each confirming participant validates its views and sends a confirmation or rejection to the mediator (smart contract layer, via ordering layer)
 5. The mediator aggregates confirmations and issues a verdict, within the required time window, which the sequencer distributes to all participants (ordering layer)
 
-The [Transaction Lifecycle](/overview/reference/transaction-lifecycle) page covers each phase in full detail.
+The [Transaction Lifecycle](/docs/canton/overview-reference-transaction-lifecycle) page covers each phase in full detail.
 
 ---
 

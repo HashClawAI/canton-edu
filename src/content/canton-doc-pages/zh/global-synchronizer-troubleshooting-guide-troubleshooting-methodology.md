@@ -17,7 +17,7 @@ tags:
 
 > 诊断和解决全局synchronizer问题的系统方法
 
-本节概述了可以收集哪些信息来调试 Canton Network 节点中的问题。有关直接通过控制台访问 Canton 节点的信息，请参阅 [Canton 控制台参考](/global-synchronizer/reference/canton-console-reference)。
+本节概述了可以收集哪些信息来调试 Canton Network 节点中的问题。有关直接通过控制台访问 Canton 节点的信息，请参阅 [Canton 控制台参考](/zh/docs/canton/global-synchronizer-reference-canton-console-reference)。
 
 ## 哪里可以找到日志
 

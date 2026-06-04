@@ -43,7 +43,7 @@ The lifecycle begins when the submitting participant node receives a command fro
 
 * **Computes a root hash** that cryptographically commits to the entire transaction tree. The root hash binds all views together: every confirming participant can verify that the view it received belongs to the same transaction that every other participant is validating. The mediator uses the root hash to correlate confirmation responses.
 
-If the transaction touches contracts on multiple synchronizers, the participant may need to reassign those contracts to a common synchronizer before submission. This is handled by the [Reassignment Protocol](/overview/reference/reassignment-protocol).
+If the transaction touches contracts on multiple synchronizers, the participant may need to reassign those contracts to a common synchronizer before submission. This is handled by the [Reassignment Protocol](/docs/canton/overview-reference-reassignment-protocol).
 
 ## Phase 2: Submission (Confirmation Request)
 

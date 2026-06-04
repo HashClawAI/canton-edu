@@ -37,7 +37,7 @@ The identity management system is self-contained and built without a trusted cen
 
 When two system entities such as a participant, synchronizer topology manager, mediator or sequencer communicate with each other, they will use asymmetric cryptography to encrypt messages and sign message contents such that only the recipient can decrypt the content, verify the authenticity of the message, or prove its origin. Therefore, we need a method to uniquely identify the system entities and a way to associate encryption and signing keys with them.
 
-On top of that, Canton uses the contract language Daml, which represents contract ownership and rights through [parties](/overview/understand/glossary). But parties are not primary members of the Canton synchronization protocol. They are represented by participants and therefore we need to uniquely identify parties and relate them to participants, such that a participant can represent several parties (and in Canton, a party can be represented by several participants).
+On top of that, Canton uses the contract language Daml, which represents contract ownership and rights through [parties](/docs/canton/overview-understand-glossary). But parties are not primary members of the Canton synchronization protocol. They are represented by participants and therefore we need to uniquely identify parties and relate them to participants, such that a participant can represent several parties (and in Canton, a party can be represented by several participants).
 
 ### Unique Identifier
 
@@ -206,7 +206,7 @@ Every participant also needs to manage access to their local Ledger API and be a
 * authentication: recognizing which user an application corresponds to (essentially by matching an application name with a user name)
 * authorization: knowing which rights an authenticated user has and restricting their Ledger API access according to those rights
 
-Authentication is based on JWT and covered in the [authorization deep dive](/appdev/deep-dives/authorization); the related Ledger API authorization configuration is covered in the Ledger API JWT configuration section.
+Authentication is based on JWT and covered in the [authorization deep dive](/docs/canton/appdev-deep-dives-authorization); the related Ledger API authorization configuration is covered in the Ledger API JWT configuration section.
 
 Authorization is managed by the Ledger API's User Management Service. In essence, a user is a mapping from a user name to a set of parties with read or write permissions. In more detail a user consists of:
 

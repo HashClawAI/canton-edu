@@ -299,19 +299,19 @@ sequenceDiagram
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Architecture Deep Dive" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture Deep Dive" icon="diagram-project" href="/docs/canton/overview-learn-architecture">
     See how components work together technically.
   </Card>
 
-  <Card title="Global Synchronizer" icon="globe" href="/overview/understand/global-synchronizer">
+  <Card title="Global Synchronizer" icon="globe" href="/docs/canton/overview-understand-global-synchronizer">
     Learn about the public coordination layer.
   </Card>
 
-  <Card title="Privacy Model" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="Privacy Model" icon="lock" href="/docs/canton/overview-learn-privacy-model">
     Understand sub-transaction privacy in detail.
   </Card>
 
-  <Card title="Start Building" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Start Building" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Begin developing on Canton.
   </Card>
 </CardGroup>

@@ -36,7 +36,7 @@ tags:
 * **与其他 Canton Network 参与者互操作** — 您的私人同步器上的合约无法重新分配给全局同步器或与那里的合约交互
 * **参与 Canton 网络治理** - 您的验证者不是 Canton 网络拓扑的一部分
 
-如果您稍后决定需要全局同步器连接，则可以通过将验证者连接到全局同步器并根据需要重新分配合约来添加它。请参阅[将验证者链接到多个同步器](/global-synchronizer/extension-synchronizers/linking-validator-multi-sync) 了解其工作原理。
+如果您稍后决定需要全局同步器连接，则可以通过将验证者连接到全局同步器并根据需要重新分配合约来添加它。请参阅[将验证者链接到多个同步器](/zh/docs/canton/global-synchronizer-extension-synchronizers-linking-validator-multi-sync) 了解其工作原理。
 
 ## 架构
 

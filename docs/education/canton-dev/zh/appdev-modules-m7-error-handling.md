@@ -45,7 +45,7 @@ Canton 应用面向分布式、多方账本。错误分不同类别，每类需�
 
 Validator 流量预算耗尽时，提交失败并提示流量不足。这不是瞬时错误——在预算补充（手动或自动充值）前重试无效。
 
-流量额度管理见 [Canton Coin and Traffic](/appdev/modules/m4-canton-coin)。
+流量额度管理见 [Canton Coin and Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin)。
 
 ## 处理争用
 
@@ -135,9 +135,9 @@ Ledger API 不可用时（validator 重启、网络分区），用熔断器包�
 
 ## 延伸阅读
 
-* [Backend Development](/appdev/modules/m4-backend-dev) — Ledger API 客户端与错误处理示例
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) — 避免提交流量失败
-* [Observability](/appdev/modules/m4-observability) — 错误追踪的日志与指标
+* [Backend Development](/zh/docs/canton/appdev-modules-m4-backend-dev) — Ledger API 客户端与错误处理示例
+* [Canton Coin and Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — 避免提交流量失败
+* [Observability](/zh/docs/canton/appdev-modules-m4-observability) — 错误追踪的日志与指标
 
 ---
 

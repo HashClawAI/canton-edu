@@ -123,8 +123,8 @@ sequenceDiagram
 
 ## 延伸阅读
 
-* [Reassignment Protocol](/overview/reference/reassignment-protocol) — unassignment 与 assignment 协议细节
-* [Architecture Overview](/overview/learn/architecture) — Synchronizer、验证者与 Global Synchronizer 如何配合
+* [Reassignment Protocol](/zh/docs/canton/overview-reference-reassignment-protocol) — unassignment 与 assignment 协议细节
+* [Architecture Overview](/zh/docs/canton/overview-learn-architecture) — Synchronizer、验证者与 Global Synchronizer 如何配合
 
 ---
 

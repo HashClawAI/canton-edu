@@ -27,7 +27,7 @@ tags:
 
 Onboarding to TestNet requires a Super Validator (SV) sponsor. Contact the SV you are working with, or reach out through the `#validator-operations-onboarding` Slack channel to find a sponsor. The sponsor submits a vote to approve your validator. The process typically takes 2-4 weeks.
 
-MainNet onboarding follows the same pattern but with stricter requirements. You need a signed operator agreement and must demonstrate successful operation on TestNet. See the [onboarding process](/global-synchronizer/deployment/onboarding-process) documentation for the full checklist.
+MainNet onboarding follows the same pattern but with stricter requirements. You need a signed operator agreement and must demonstrate successful operation on TestNet. See the [onboarding process](/docs/canton/global-synchronizer-deployment-onboarding-process) documentation for the full checklist.
 
 ### What ports need to be open?
 

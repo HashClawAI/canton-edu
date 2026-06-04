@@ -29,7 +29,7 @@ tags:
 
 若把模板比作类、合约比作对象，方法在哪里？
 
-例如 `Contact` 合约：联系人所有方希望能改电话号码。与其像 [合约模板](/appdev/modules/m3-contract-templates) 中那样手动查找合约、归档旧合约再创建新合约，可在 `Contact` 上提供便捷方法：
+例如 `Contact` 合约：联系人所有方希望能改电话号码。与其像 [合约模板](/zh/docs/canton/appdev-modules-m3-contract-templates) 中那样手动查找合约、归档旧合约再创建新合约，可在 `Contact` 上提供便捷方法：
 
 ```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
 template Contact
@@ -136,7 +136,7 @@ newContactCid <- submit party do
 
 ## Choice 与账本模型
 
-在 [合约模板](/appdev/modules/m3-contract-templates#daml-ledger-basics) 中你已了解 Daml 账本的高层结构。结合 choice 与 `exercise`，你具备理解账本与交易结构的下一要素。
+在 [合约模板](/zh/docs/canton/appdev-modules-m3-contract-templates#daml-ledger-basics) 中你已了解 Daml 账本的高层结构。结合 choice 与 `exercise`，你具备理解账本与交易结构的下一要素。
 
 *交易* 是 *动作* 列表，动作有三类：`create`、`exercise` 与 `fetch`。
 
@@ -206,7 +206,7 @@ Return value: {}
 
 ## 简单现金模型
 
-借助 choice，可构建第一个有趣模型：现金 IOU（我欠你）发行。此处模型比 [语言基础](/appdev/modules/m3-language-fundamentals) 更简单，不关心实物现金位置，只关心负债：
+借助 choice，可构建第一个有趣模型：现金 IOU（我欠你）发行。此处模型比 [语言基础](/zh/docs/canton/appdev-modules-m3-language-fundamentals) 更简单，不关心实物现金位置，只关心负债：
 
 ```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
 data Cash = Cash with
@@ -238,7 +238,7 @@ template SimpleIou
 
 你现已能在账本上存储与变换数据，甚至通过 choice 授予其他参与方特定写权限。
 
-在 [授权模型](/appdev/modules/m3-authorization) 中，将进一步了解谁可创建、exercise 与归档合约的授权规则。
+在 [授权模型](/zh/docs/canton/appdev-modules-m3-authorization) 中，将进一步了解谁可创建、exercise 与归档合约的授权规则。
 
 ---
 

@@ -71,7 +71,7 @@ Topology commands manage the distributed topology state that controls party-to-p
 
 ## Canton Console Access
 
-The Canton Console provides a more ergonomic interface to Admin API operations. See [Essential Commands](/global-synchronizer/canton-console/essential-commands) for commonly used console commands.
+The Canton Console provides a more ergonomic interface to Admin API operations. See [Essential Commands](/docs/canton/global-synchronizer-canton-console-essential-commands) for commonly used console commands.
 
 ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
 // Example: list connected synchronizers via Canton Console
@@ -86,8 +86,8 @@ participant.health.status
 
 ## Next Steps
 
-* [API Reference](/api-reference) — Central hub for all generated API documentation, including the Ledger API
-* [Canton Console](/global-synchronizer/canton-console/console-overview) — Interactive console access
+* [API Reference](/docs/canton/api-reference) — Central hub for all generated API documentation, including the Ledger API
+* [Canton Console](/docs/canton/global-synchronizer-canton-console-console-overview) — Interactive console access
 
 ---
 

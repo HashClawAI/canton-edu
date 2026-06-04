@@ -82,7 +82,7 @@ The `AllocationView` contains:
 * `holdingCids` -- the holdings backing this allocation
 * `meta` -- extensibility metadata
 
-You create allocations by fetching an `AllocationFactory` from the registry and exercising `AllocationFactory_Allocate`. Use the [Token Standard API](/overview/reference/splice-wallet-reference#wallet-api-endpoints) to discover and interact with allocation contracts. The settlement's `executor` party, along with the sender and receiver, jointly control the allocation. Three choices govern its lifecycle:
+You create allocations by fetching an `AllocationFactory` from the registry and exercising `AllocationFactory_Allocate`. Use the [Token Standard API](/docs/canton/overview-reference-splice-wallet-reference#wallet-api-endpoints) to discover and interact with allocation contracts. The settlement's `executor` party, along with the sender and receiver, jointly control the allocation. Three choices govern its lifecycle:
 
 * `Allocation_ExecuteTransfer` -- execute the transfer of allocated assets (the settlement step)
 * `Allocation_Cancel` -- release the allocation early, controlled jointly by sender, receiver, and executor
@@ -148,7 +148,7 @@ To execute a factory choice, you first query the registry's off-ledger API to ob
 * `disclosedContracts` (required for the exercise to succeed)
 * `choiceContextData` (passed as `context` in the choice argument)
 
-Registry URLs for a given instrument are currently maintained by wallets themselves. A generic discovery mechanism based on the [Canton Name Service](/overview/reference/canton-name-service) is planned, where registry URLs would be stored in CNS entry metadata and retrievable through the Scan API.
+Registry URLs for a given instrument are currently maintained by wallets themselves. A generic discovery mechanism based on the [Canton Name Service](/docs/canton/overview-reference-canton-name-service) is planned, where registry URLs would be stored in CNS entry metadata and retrievable through the Scan API.
 
 The off-ledger APIs do not require authentication. Instead, the security model relies on the unguessability of contract IDs and Canton's need-to-know data distribution -- only parties entitled to see a contract receive it.
 
@@ -182,7 +182,7 @@ The [Token Standard CLI](https://github.com/canton-network/splice/tree/main/toke
 * [Full CIP-0056 text](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md)
 * [Token standard source code](https://github.com/canton-network/splice/tree/main/token-standard)
 * [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk)
-* [Canton Coin Tokenomics](/overview/reference/canton-coin-tokenomics) -- fee structure and UTXO dust expiry for CC specifically
+* [Canton Coin Tokenomics](/docs/canton/overview-reference-canton-coin-tokenomics) -- fee structure and UTXO dust expiry for CC specifically
 
 ---
 

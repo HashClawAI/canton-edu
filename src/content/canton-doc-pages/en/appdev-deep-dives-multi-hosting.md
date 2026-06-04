@@ -58,7 +58,7 @@ Each hosting validator is assigned one of three permission levels:
 Multi-hosting requires a topology transaction that maps the party to multiple validators. All hosting validators must sign the mapping — it's a proposal that becomes active only when all parties agree.
 
 <Note>
-  The instructions below apply to **new external parties**. Adding hosting nodes to existing parties is called [party replication](/global-synchronizer/production-operations/party-management#simple-party-replication) and is a different, more involved workflow. For external parties, the external party must authorize (sign) the party to participant mapping with its own key. See the [external signing onboarding documentation](/appdev/deep-dives/external-signing-onboarding) for details.
+  The instructions below apply to **new external parties**. Adding hosting nodes to existing parties is called [party replication](/docs/canton/global-synchronizer-production-operations-party-management#simple-party-replication) and is a different, more involved workflow. For external parties, the external party must authorize (sign) the party to participant mapping with its own key. See the [external signing onboarding documentation](/docs/canton/appdev-deep-dives-external-signing-onboarding) for details.
 </Note>
 
 ### Via the Ledger API
@@ -165,8 +165,8 @@ Multi-hosting is one of several resilience approaches. Choose based on your requ
 
 ## Next Steps
 
-* [Decentralization](/appdev/deep-dives/decentralization) — How multi-hosting fits into Canton's decentralization spectrum
-* [Composition and Multi-Party Workflows](/appdev/deep-dives/composition-multi-party) — Daml patterns for multi-party interactions
+* [Decentralization](/docs/canton/appdev-deep-dives-decentralization) — How multi-hosting fits into Canton's decentralization spectrum
+* [Composition and Multi-Party Workflows](/docs/canton/appdev-deep-dives-composition-multi-party) — Daml patterns for multi-party interactions
 
 ---
 

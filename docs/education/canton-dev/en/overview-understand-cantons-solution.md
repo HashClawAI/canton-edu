@@ -222,19 +222,19 @@ Meet data protection requirements while maintaining shared truth:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Use Cases" icon="building" href="/overview/understand/use-cases">
+  <Card title="Use Cases" icon="building" href="/docs/canton/overview-understand-use-cases">
     See concrete examples of Canton in action.
   </Card>
 
-  <Card title="Core Concepts" icon="book" href="/overview/understand/core-concepts">
+  <Card title="Core Concepts" icon="book" href="/docs/canton/overview-understand-core-concepts">
     Learn about parties, validators, and synchronizers.
   </Card>
 
-  <Card title="Architecture Deep Dive" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="Architecture Deep Dive" icon="diagram-project" href="/docs/canton/overview-learn-architecture">
     Understand how components work together technically.
   </Card>
 
-  <Card title="Privacy Model" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="Privacy Model" icon="lock" href="/docs/canton/overview-learn-privacy-model">
     Explore the privacy guarantees in detail.
   </Card>
 </CardGroup>

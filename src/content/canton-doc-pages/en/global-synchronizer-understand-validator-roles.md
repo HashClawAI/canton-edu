@@ -241,7 +241,7 @@ Operating a validator involves several cost categories:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Validator Setup" icon="server" href="/global-synchronizer/understand/introduction">
+  <Card title="Validator Setup" icon="server" href="/docs/canton/global-synchronizer-understand-introduction">
     Begin deploying your validator node.
   </Card>
 

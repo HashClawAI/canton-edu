@@ -124,9 +124,9 @@ Canton Network 于 2023 年 5 月推出，得到了银行、市场基础设施�
 
 ## 后续步骤
 
-* **[Canton for Blockchain Developers](/appdev/modules/m2-canton-for-ethereum-devs)** - 将您现有的区块链知识映射到 Canton 概念
-* **[架构概述](/overview/learn/architecture)** - 了解 Canton 的组件如何协同工作
-* **[隐私模型解释](/overview/learn/privacy-model)** - 深入探讨子交易隐私
+* **[Canton for Blockchain Developers](/zh/docs/canton/appdev-modules-m2-canton-for-ethereum-devs)** - 将您现有的区块链知识映射到 Canton 概念
+* **[架构概述](/zh/docs/canton/overview-learn-architecture)** - 了解 Canton 的组件如何协同工作
+* **[隐私模型解释](/zh/docs/canton/overview-learn-privacy-model)** - 深入探讨子交易隐私
 
 ---
 

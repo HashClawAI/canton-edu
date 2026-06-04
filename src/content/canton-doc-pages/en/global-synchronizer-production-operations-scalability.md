@@ -37,7 +37,7 @@ It does not apply to:
 
 ### Bypassing the Limit
 
-The preferred option of bypassing the limit is to set up an external party either directly through the [Canton APIs for external signing](/appdev/deep-dives/external-signing) or `/v0/admin/external-party/topology/{generate,submit}` on the validator API but *not* use the endpoints under `/v0/admin/external-party/setup-proposal`.
+The preferred option of bypassing the limit is to set up an external party either directly through the [Canton APIs for external signing](/docs/canton/appdev-deep-dives-external-signing) or `/v0/admin/external-party/topology/{generate,submit}` on the validator API but *not* use the endpoints under `/v0/admin/external-party/setup-proposal`.
 
 If you do not need preapprovals, this is sufficient.
 

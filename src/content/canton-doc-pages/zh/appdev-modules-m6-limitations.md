@@ -93,9 +93,9 @@ SCU 兼容规则禁止移除：
 
 ## 延伸阅读
 
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — SCU 完整兼容规则
-* [Package Naming](/appdev/modules/m6-package-naming) — 考虑破坏性变更的命名惯例
-* [Smart Contract Upgrades in Production](/appdev/modules/m7-smart-contract-upgrades) — 推广运维考量
+* [Upgrade Compatibility](/zh/docs/canton/appdev-modules-m6-upgrade-compatibility) — SCU 完整兼容规则
+* [Package Naming](/zh/docs/canton/appdev-modules-m6-package-naming) — 考虑破坏性变更的命名惯例
+* [Smart Contract Upgrades in Production](/zh/docs/canton/appdev-modules-m7-smart-contract-upgrades) — 推广运维考量
 
 ---
 

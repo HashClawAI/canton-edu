@@ -132,7 +132,7 @@ These error codes are also surfaced through the JSON API (HTTP Ledger API) with 
 
 ## Further reading
 
-* [Troubleshooting cheat sheet](/appdev/troubleshooting) -- quick-reference solutions for common issues including specific error codes
+* [Troubleshooting cheat sheet](/docs/canton/appdev-troubleshooting) -- quick-reference solutions for common issues including specific error codes
 * [gRPC status codes](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) -- official gRPC status code definitions
 * [gRPC rich error model](https://cloud.google.com/apis/design/errors#error_details) -- the error detail types used in Canton responses
 

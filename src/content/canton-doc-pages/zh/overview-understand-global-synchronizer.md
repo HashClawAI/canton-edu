@@ -299,8 +299,8 @@ Splice 包含用于在 Canton Network 上创建代币的代币标准 ([CIP-0056]
 ## 后续步骤
 
 * **[词汇表](/概述/理解/词汇表)** - 术语参考
-* **[验证器操作](/global-synchronizer/understand/introduction)** - 部署您自己的验证器
-* **[部署进度](/appdev/modules/m5-deployment-progression)** - 跨环境部署应用程序
+* **[验证器操作](/zh/docs/canton/global-synchronizer-understand-introduction)** - 部署您自己的验证器
+* **[部署进度](/zh/docs/canton/appdev-modules-m5-deployment-progression)** - 跨环境部署应用程序
 
 <div className="todo">
   # 同步器

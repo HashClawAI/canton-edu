@@ -37,7 +37,7 @@ The full configuration for each app can be observed in the scala code, with the 
 * [SvAppConfig.scala](https://github.com/canton-network/splice/blob/main/apps/sv/src/main/scala/org/lfdecentralizedtrust/splice/sv/config/SvAppConfig.scala#L199)
 * [ScanAppConfig.scala](https://github.com/canton-network/splice/blob/main/apps/scan/src/main/scala/org/lfdecentralizedtrust/splice/scan/config/ScanAppConfig.scala#L28)
 
-Furthermore, the participant and other synchronizer components can be configured independently as well. Further information on such configurations can be found in the [Canton docs](/global-synchronizer/reference/canton-configuration-guide).
+Furthermore, the participant and other synchronizer components can be configured independently as well. Further information on such configurations can be found in the [Canton docs](/docs/canton/global-synchronizer-reference-canton-configuration-guide).
 
 <Note>
   Examples in the Canton docs might have different root configuration keys for the configured nodes; Splice participants/mediators/sequencers are always configured under `canton.participants.participant {`/`canton.mediators.mediator {`/`canton.sequencers.sequencer {`, respectively.

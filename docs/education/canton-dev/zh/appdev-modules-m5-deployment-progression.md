@@ -38,7 +38,7 @@ Canton 应用开发跨越四个环境，各对应开发与部署生命周期的�
 ## Global Synchronizer 上的升级类型
 
 <Note>
-  详细升级流程见 [Validator Upgrades](/global-synchronizer/production-operations/validator-upgrades)。
+  详细升级流程见 [Validator Upgrades](/zh/docs/canton/global-synchronizer-production-operations-validator-upgrades)。
 </Note>
 
 超级验证者（SV）会定期对 Global Synchronizer 实施升级以改进功能、修复问题并引入新特性。作为节点运营方或应用提供方，应了解可能发生的三类升级。
@@ -93,8 +93,8 @@ Validator 落后一两个 Splice 版本通常仍可运行，但 SV 建议保持�
 
 ## 下一步
 
-* [Environment Configuration](/appdev/modules/m5-environment-configuration) — 各环境的 DPM 配置
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — 自动化晋级流水线
+* [Environment Configuration](/zh/docs/canton/appdev-modules-m5-environment-configuration) — 各环境的 DPM 配置
+* [CI/CD Integration](/zh/docs/canton/appdev-modules-m5-ci-cd-integration) — 自动化晋级流水线
 
 ---
 

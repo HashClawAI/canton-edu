@@ -97,7 +97,7 @@ To query contracts by business information in the payload, use JSONB operators[^
 </Note>
 
 <Warning>
-  Querying by payload contents may require additional development and administrative work in order to achieve desired performance outcomes. Please refer to [Performance Optimization](/appdev/deep-dives/performance-optimization) for ideas on how to get started.
+  Querying by payload contents may require additional development and administrative work in order to achieve desired performance outcomes. Please refer to [Performance Optimization](/docs/canton/appdev-deep-dives-performance-optimization) for ideas on how to get started.
 </Warning>
 
 ### How to join contracts that are in ACS
@@ -199,7 +199,7 @@ PQS is backed by PostgreSQL database. Any query optimization is essentially a da
 * Avoid paginating with the help of `OFFSET` SQL clause
 * Avoid using queries similar to `SELECT COUNT(*)` if possible
 
-For additional information concerning performance optimization, refer to [Performance Optimization](/appdev/deep-dives/performance-optimization).
+For additional information concerning performance optimization, refer to [Performance Optimization](/docs/canton/appdev-deep-dives-performance-optimization).
 
 ### How to add an index on expression over JSONB payload
 

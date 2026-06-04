@@ -33,9 +33,9 @@ This guide walks through the installation and `LocalNet` deployment of the CN Qu
 
 ### Roadmap
 
-* After installation, [explore the demo](/appdev/quickstart/running-the-demo) to complete a business operation in the example application.
-* For an overview of how the Quickstart project is structured, read the [project structure guide](/appdev/quickstart/project-structure).
-* Learn about debugging using lnav in the [Debugging and troubleshooting with lnav](/appdev/quickstart/lnav).
+* After installation, [explore the demo](/docs/canton/appdev-quickstart-running-the-demo) to complete a business operation in the example application.
+* For an overview of how the Quickstart project is structured, read the [project structure guide](/docs/canton/appdev-quickstart-project-structure).
+* Learn about debugging using lnav in the [Debugging and troubleshooting with lnav](/docs/canton/appdev-quickstart-lnav).
 * Additional debugging information is in the section in the observability and troubleshooting section of the [cn-quickstart repository](https://github.com/digital-asset/cn-quickstart).
 
 ## Prerequisites
@@ -229,7 +229,7 @@ The `LocalNet` deployment connects to a local validator which is in turn connect
 
 The Canton Network provides three synchronizer pools. The production network is `MainNet`; the production staging network is `TestNet`. As a developer you will mostly be connecting to the development staging network `DevNet`.
 
-Access to [a SV Node](/global-synchronizer/deployment/onboarding-process) that is whitelisted on the CN is required to connect to DevNet. The GSF publishes a [list of SV nodes](https://sync.global/sv-network/) who have the ability to sponsor a Validator node. To access `DevNet`, contact your sponsoring SV agent for VPN connection information.
+Access to [a SV Node](/docs/canton/global-synchronizer-deployment-onboarding-process) that is whitelisted on the CN is required to connect to DevNet. The GSF publishes a [list of SV nodes](https://sync.global/sv-network/) who have the ability to sponsor a Validator node. To access `DevNet`, contact your sponsoring SV agent for VPN connection information.
 
 ## Resources
 
@@ -241,7 +241,7 @@ Access to [a SV Node](/global-synchronizer/deployment/onboarding-process) that i
 * [Digital Asset Docker](https://console.cloud.google.com/artifacts/docker/da-images/europe/public)
 * [Nix](https://nixos.org/download/)
 * [Quickstart GitHub repository](https://github.com/digital-asset/cn-quickstart)
-* [Validator onboarding documentation](/global-synchronizer/deployment/onboarding-process)
+* [Validator onboarding documentation](/docs/canton/global-synchronizer-deployment-onboarding-process)
 * [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ---

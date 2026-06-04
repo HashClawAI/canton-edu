@@ -33,7 +33,7 @@ tags:
 
 ### 绕过限制
 
-绕过限制的首选方法是直接通过[用于外部签名的Canton API](/appdev/deep-dives/external-signing)或验证者 API上的`/v0/admin/external-party/topology/{generate,submit}`设置外部 Party，但*不*使用`/v0/admin/external-party/setup-proposal`下的端点。
+绕过限制的首选方法是直接通过[用于外部签名的Canton API](/zh/docs/canton/appdev-deep-dives-external-signing)或验证者 API上的`/v0/admin/external-party/topology/{generate,submit}`设置外部 Party，但*不*使用`/v0/admin/external-party/setup-proposal`下的端点。
 
 如果您不需要预先批准，这就足够了。
 

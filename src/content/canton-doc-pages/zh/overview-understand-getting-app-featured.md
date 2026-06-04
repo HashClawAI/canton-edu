@@ -64,7 +64,7 @@ tags:
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="构建您的应用程序" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="构建您的应用程序" icon="code" href="/zh/docs/canton/appdev-get-started-choose-your-path">
     开始开发您的应用程序。
   </Card>
 

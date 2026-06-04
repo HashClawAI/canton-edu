@@ -39,7 +39,7 @@ This means:
 * The synchronizer (sequencer and mediator) processes encrypted messages and never sees plaintext transaction data
 * Validators store only the contracts and transactions that involve their hosted parties
 
-For a detailed explanation of visibility rules, see [Privacy Model Explained](/overview/learn/privacy-model).
+For a detailed explanation of visibility rules, see [Privacy Model Explained](/docs/canton/overview-learn-privacy-model).
 
 ### No Global State Visibility
 
@@ -67,7 +67,7 @@ PQS retains data for as long as the underlying PostgreSQL database is maintained
 
 ### Auditor Patterns in Daml
 
-You can grant audit access at the smart contract level by adding an auditor party as an observer. The auditor sees the contract and all events that affect it, without being able to modify it. See the [Privacy Model](/overview/learn/privacy-model) page for code examples of auditor patterns.
+You can grant audit access at the smart contract level by adding an auditor party as an observer. The auditor sees the contract and all events that affect it, without being able to modify it. See the [Privacy Model](/docs/canton/overview-learn-privacy-model) page for code examples of auditor patterns.
 
 ## Data Residency
 
@@ -103,9 +103,9 @@ These are technical mechanisms. Whether they satisfy specific regulatory require
 
 ## Further Reading
 
-* [Privacy Model Explained](/overview/learn/privacy-model) -- Full details on sub-transaction privacy
-* [Security Best Practices](/appdev/modules/m7-security) -- Securing your Canton application
-* [Architecture Overview](/overview/learn/architecture) -- How validators and synchronizers relate
+* [Privacy Model Explained](/docs/canton/overview-learn-privacy-model) -- Full details on sub-transaction privacy
+* [Security Best Practices](/docs/canton/appdev-modules-m7-security) -- Securing your Canton application
+* [Architecture Overview](/docs/canton/overview-learn-architecture) -- How validators and synchronizers relate
 
 ---
 

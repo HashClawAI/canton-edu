@@ -21,7 +21,7 @@ tags:
 
 加入测试网需要超级验证者 (SV) 赞助商。请联系与您合作的 SV，或通过 `#validator-operations-onboarding` Slack 渠道寻找赞助商。发起人提交投票以批准您的验证者。该过程通常需要 2-4 周。
 
-主网上线遵循相同的模式，但要求更严格。您需要签署运营商协议，并且必须证明在测试网上成功运行。有关完整清单，请参阅[onboarding 流程](/global-synchronizer/deployment/onboarding-process) 文档。
+主网上线遵循相同的模式，但要求更严格。您需要签署运营商协议，并且必须证明在测试网上成功运行。有关完整清单，请参阅[onboarding 流程](/zh/docs/canton/global-synchronizer-deployment-onboarding-process) 文档。
 
 ### 需要开放哪些端口？
 

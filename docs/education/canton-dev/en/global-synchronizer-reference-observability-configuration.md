@@ -156,7 +156,7 @@ canton.monitoring.metrics.report-jvm-metrics = yes // default no
 
 ## Metrics
 
-The full Canton metrics inventory — including Participant Metrics, Sequencer Metrics, Mediator Metrics, and Splice service metrics — lives in [Canton Metrics](/global-synchronizer/reference/canton-metrics).
+The full Canton metrics inventory — including Participant Metrics, Sequencer Metrics, Mediator Metrics, and Splice service metrics — lives in [Canton Metrics](/docs/canton/global-synchronizer-reference-canton-metrics).
 
 ## Logging
 

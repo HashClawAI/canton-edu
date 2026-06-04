@@ -331,11 +331,11 @@ When designing Canton applications:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Smart Contract Paradigm" icon="code" href="/appdev/modules/m2-smart-contract-paradigm">
+  <Card title="Smart Contract Paradigm" icon="code" href="/docs/canton/appdev-modules-m2-smart-contract-paradigm">
     Understand Daml's immutable contract model vs. Solidity.
   </Card>
 
-  <Card title="Privacy Model Deep Dive" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="Privacy Model Deep Dive" icon="lock" href="/docs/canton/overview-learn-privacy-model">
     Technical details of sub-transaction privacy.
   </Card>
 </CardGroup>

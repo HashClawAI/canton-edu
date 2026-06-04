@@ -81,7 +81,7 @@ cd backend && ./gradlew test
 kill $SANDBOX_PID
 ```
 
-需要完整多 validator 设置的测试，用 Docker Compose 启动 [LocalNet](/appdev/modules/m5-localnet-development) 而非 sandbox。更重但覆盖跨 validator 场景。
+需要完整多 validator 设置的测试，用 Docker Compose 启动 [LocalNet](/zh/docs/canton/appdev-modules-m5-localnet-development) 而非 sandbox。更重但覆盖跨 validator 场景。
 
 ## 打包阶段
 
@@ -137,7 +137,7 @@ curl -s "https://${LEDGER_HOST}:${LEDGER_HTTP_PORT}/v2/packages" \
 * 手动审批门从 DevNet 晋升到 TestNet
 * 另一手动门从 TestNet 晋升到 MainNet
 
-每次晋升以不同环境配置运行相同部署步骤（见 [环境配置](/appdev/modules/m5-environment-configuration)）。
+每次晋升以不同环境配置运行相同部署步骤（见 [环境配置](/zh/docs/canton/appdev-modules-m5-environment-configuration)）。
 
 ## 示例：GitHub Actions
 
@@ -186,9 +186,9 @@ jobs:
 
 ## 下一步
 
-* [测试策略](/appdev/modules/m5-testing-strategies) — 测试金字塔与方法细节
-* [环境配置](/appdev/modules/m5-environment-configuration) — 各环境配置管理
-* [部署进阶](/appdev/modules/m5-deployment-progression) — 各晋升阶段应验证的内容
+* [测试策略](/zh/docs/canton/appdev-modules-m5-testing-strategies) — 测试金字塔与方法细节
+* [环境配置](/zh/docs/canton/appdev-modules-m5-environment-configuration) — 各环境配置管理
+* [部署进阶](/zh/docs/canton/appdev-modules-m5-deployment-progression) — 各晋升阶段应验证的内容
 
 ---
 

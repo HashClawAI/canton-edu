@@ -23,7 +23,7 @@ tags:
 
 Canton Coin (CC) is the native utility token of the Global Synchronizer. It is implemented through the [Splice](https://github.com/canton-network/splice) open-source infrastructure, where it is referred to as "Amulet" at the Daml contract level. CC serves three functions: paying for network usage (traffic), rewarding infrastructure operators and application providers, and governing the network through Super Validator participation.
 
-For background on CC's role in the network and how to obtain it, see [Canton Coin and the Global Synchronizer](/overview/understand/canton-coin). The [Canton Coin white paper](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20\(whitepapers%2c%20etc...\)/Canton%20Coin_%20A%20Canton-Network-native%20payment%20application.pdf) provides the full formal specification.
+For background on CC's role in the network and how to obtain it, see [Canton Coin and the Global Synchronizer](/docs/canton/overview-understand-canton-coin). The [Canton Coin white paper](https://www.digitalasset.com/hubfs/Canton%20Network%20Files/Documents%20\(whitepapers%2c%20etc...\)/Canton%20Coin_%20A%20Canton-Network-native%20payment%20application.pdf) provides the full formal specification.
 
 ## Fee Structure
 
@@ -167,7 +167,7 @@ For API details, see the [CIP-0056 text](https://github.com/global-synchronizer-
 
 ## Related Resources
 
-* [Canton Coin and the Global Synchronizer](/overview/understand/canton-coin) -- conceptual overview and how to obtain CC
+* [Canton Coin and the Global Synchronizer](/docs/canton/overview-understand-canton-coin) -- conceptual overview and how to obtain CC
 * [CIP-0078 (CC Fee Removal)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) -- the proposal that eliminated transfer and lock fees
 * [CIP-0056 (CN Token Standard)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md) -- standard interfaces for token operations
 * [CIP-0073 (Weighted Validator Liveness Rewards)](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0073/cip-0073.md) -- liveness reward support for SV-determined parties

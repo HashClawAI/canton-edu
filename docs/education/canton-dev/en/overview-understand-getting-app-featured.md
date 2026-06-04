@@ -68,7 +68,7 @@ Misleading claims damage trust. Abandoned projects frustrate users. Poor securit
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Build Your App" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Build Your App" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Start developing your application.
   </Card>
 

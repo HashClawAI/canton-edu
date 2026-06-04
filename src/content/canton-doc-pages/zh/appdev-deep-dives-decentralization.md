@@ -63,7 +63,7 @@ Canton 架构有多层可做去中心化选择，信任含义各不相同：
 * 需要地理冗余的组织
 * 在验证者之间逐步迁移
 
-实现细节见 [多方托管](/appdev/deep-dives/multi-hosting)。
+实现细节见 [多方托管](/zh/docs/canton/appdev-deep-dives-multi-hosting)。
 
 ## BFT 同步器
 
@@ -101,8 +101,8 @@ Canton 支持验证者同时连接多个同步器。Party 可在 Global Synchron
 
 ## 下一步
 
-* [多方托管](/appdev/deep-dives/multi-hosting) — 跨验证者分布 Party 的实现细节
-* [组合与多方工作流](/appdev/deep-dives/composition-multi-party) — 多方交互的 Daml 模式
+* [多方托管](/zh/docs/canton/appdev-deep-dives-multi-hosting) — 跨验证者分布 Party 的实现细节
+* [组合与多方工作流](/zh/docs/canton/appdev-deep-dives-composition-multi-party) — 多方交互的 Daml 模式
 
 
 ---

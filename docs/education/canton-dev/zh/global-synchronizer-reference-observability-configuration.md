@@ -149,7 +149,7 @@ canton.monitoring.metrics.report-jvm-metrics = yes // 默认否
 
 ## 指标
 
-完整的 Canton 指标清单（包括参与者指标、Sequencer指标、Mediator指标和拼接服务指标）位于 [Canton Metrics](/global-synchronizer/reference/canton-metrics) 中。
+完整的 Canton 指标清单（包括参与者指标、Sequencer指标、Mediator指标和拼接服务指标）位于 [Canton Metrics](/zh/docs/canton/global-synchronizer-reference-canton-metrics) 中。
 
 ## 日志记录
 

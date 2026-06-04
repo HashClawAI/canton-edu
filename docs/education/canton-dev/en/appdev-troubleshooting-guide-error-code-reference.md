@@ -113,11 +113,11 @@ ABORTED: Interpretation error: ... contract not active
 
 **Cause:** A concurrent transaction consumed the contract between your read and your exercise. This is normal in concurrent environments.
 
-**Fix:** Retry the operation with exponential backoff. See [Development Issues](/appdev/troubleshooting-guide/development-issues) for a retry pattern.
+**Fix:** Retry the operation with exponential backoff. See [Development Issues](/docs/canton/appdev-troubleshooting-guide-development-issues) for a retry pattern.
 
 ## Ledger API errors
 
-Ledger API runtime error codes (AUTH\_INVALID\_TOKEN, PACKAGE\_NOT\_FOUND, PARTY\_NOT\_KNOWN, PERMISSION\_DENIED, etc.) live on their own page: [Ledger API Errors](/appdev/troubleshooting-guide/ledger-api-errors).
+Ledger API runtime error codes (AUTH\_INVALID\_TOKEN, PACKAGE\_NOT\_FOUND, PARTY\_NOT\_KNOWN, PERMISSION\_DENIED, etc.) live on their own page: [Ledger API Errors](/docs/canton/appdev-troubleshooting-guide-ledger-api-errors).
 
 ---
 

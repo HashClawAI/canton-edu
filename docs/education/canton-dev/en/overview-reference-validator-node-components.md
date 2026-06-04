@@ -166,7 +166,7 @@ The protocol layer handles the multi-step Canton transaction protocol:
 * **Confirmation**: participants send approval or rejection responses via the sequencer to the mediator
 * **Result**: the mediator aggregates responses and declares commit or rollback via the sequencer; participants apply the outcome
 
-For a full description of these steps, see [Transaction Lifecycle](/overview/reference/transaction-lifecycle).
+For a full description of these steps, see [Transaction Lifecycle](/docs/canton/overview-reference-transaction-lifecycle).
 
 ## APIs
 
@@ -222,7 +222,7 @@ The participant stores its state in PostgreSQL databases. The primary stores inc
 
 * **Ledger store** -- committed transactions and the ACS
 * **Sequencer client store** -- messages received from synchronizers
-* **Topology store** -- identity mappings, key registrations, and party-to-participant assignments (see [Topology](/overview/reference/topology))
+* **Topology store** -- identity mappings, key registrations, and party-to-participant assignments (see [Topology](/docs/canton/overview-reference-topology))
 * **Validator app store** -- the Validator App's own operational state
 
 The Splice application layer (Validator App, wallet automation) uses additional database schemas within the same PostgreSQL instance.
@@ -292,19 +292,19 @@ From the participant's perspective, the Splice DARs are just Daml packages like 
 ## Related Pages
 
 <CardGroup cols={2}>
-  <Card title="Transaction Lifecycle" icon="arrows-spin" href="/overview/reference/transaction-lifecycle">
+  <Card title="Transaction Lifecycle" icon="arrows-spin" href="/docs/canton/overview-reference-transaction-lifecycle">
     How the Canton protocol processes a transaction from submission to commit.
   </Card>
 
-  <Card title="Topology" icon="sitemap" href="/overview/reference/topology">
+  <Card title="Topology" icon="sitemap" href="/docs/canton/overview-reference-topology">
     Identity management, key registrations, and party-to-participant mappings.
   </Card>
 
-  <Card title="Super Validator Components" icon="server" href="/overview/reference/super-validator-components">
+  <Card title="Super Validator Components" icon="server" href="/docs/canton/overview-reference-super-validator-components">
     Additional components that Super Validators operate beyond a standard validator.
   </Card>
 
-  <Card title="Canton Coin Tokenomics" icon="coins" href="/overview/reference/canton-coin-tokenomics">
+  <Card title="Canton Coin Tokenomics" icon="coins" href="/docs/canton/overview-reference-canton-coin-tokenomics">
     Minting, burning, rewards, and the burn-mint equilibrium mechanism.
   </Card>
 </CardGroup>

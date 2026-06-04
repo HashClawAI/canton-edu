@@ -39,9 +39,9 @@ dpm new intro-choices --template daml-intro-choices
 
 ## 下一步
 
-继续阅读 [合约模板](/appdev/modules/m3-contract-templates)，开始编写 Daml 智能合约。
+继续阅读 [合约模板](/zh/docs/canton/appdev-modules-m3-contract-templates)，开始编写 Daml 智能合约。
 
-若你刚接触函数式编程，或想复习 Daml 语法（类型、模式匹配、记录、类型类），请先阅读 [语言基础](/appdev/modules/m3-language-fundamentals)。若你熟悉 Haskell 或其他 ML 系语言，可跳过该节，需要时再查阅。
+若你刚接触函数式编程，或想复习 Daml 语法（类型、模式匹配、记录、类型类），请先阅读 [语言基础](/zh/docs/canton/appdev-modules-m3-language-fundamentals)。若你熟悉 Haskell 或其他 ML 系语言，可跳过该节，需要时再查阅。
 
 ---
 

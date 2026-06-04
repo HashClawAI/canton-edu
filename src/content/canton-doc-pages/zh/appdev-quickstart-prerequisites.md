@@ -29,9 +29,9 @@ Quickstart 应用通过提供**必要**脚手架，帮助你和团队熟悉 CN �
 
 ### 路线图
 
-* 安装后[探索演示](/appdev/quickstart/running-the-demo)，在示例应用中完成一次业务操作。
-* 了解 Quickstart 项目结构，请阅读[项目结构指南](/appdev/quickstart/project-structure)。
-* 在 [使用 lnav 调试与排障](/appdev/quickstart/lnav) 中学习日志调试。
+* 安装后[探索演示](/zh/docs/canton/appdev-quickstart-running-the-demo)，在示例应用中完成一次业务操作。
+* 了解 Quickstart 项目结构，请阅读[项目结构指南](/zh/docs/canton/appdev-quickstart-project-structure)。
+* 在 [使用 lnav 调试与排障](/zh/docs/canton/appdev-quickstart-lnav) 中学习日志调试。
 * 更多调试信息见 [cn-quickstart 仓库](https://github.com/digital-asset/cn-quickstart) 中的可观测性与排障章节。
 
 ## 前置条件
@@ -225,7 +225,7 @@ make stop && make clean-all
 
 Canton Network 提供三个 synchronizer 池：生产为 `MainNet`，生产预发布为 `TestNet`；开发者多数时间连接开发预发布网络 `DevNet`。
 
-连接 DevNet 需要接入在 CN 白名单上的 [SV 节点](/global-synchronizer/deployment/onboarding-process)。GSF 发布可赞助验证者节点的 [SV 列表](https://sync.global/sv-network/)。访问 `DevNet` 请联系赞助 SV 获取 VPN 信息。
+连接 DevNet 需要接入在 CN 白名单上的 [SV 节点](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)。GSF 发布可赞助验证者节点的 [SV 列表](https://sync.global/sv-network/)。访问 `DevNet` 请联系赞助 SV 获取 VPN 信息。
 
 ## 资源
 
@@ -237,7 +237,7 @@ Canton Network 提供三个 synchronizer 池：生产为 `MainNet`，生产预�
 * [Digital Asset Docker](https://console.cloud.google.com/artifacts/docker/da-images/europe/public)
 * [Nix](https://nixos.org/download/)
 * [Quickstart GitHub repository](https://github.com/digital-asset/cn-quickstart)
-* [Validator onboarding documentation](/global-synchronizer/deployment/onboarding-process)
+* [Validator onboarding documentation](/zh/docs/canton/global-synchronizer-deployment-onboarding-process)
 * [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ---

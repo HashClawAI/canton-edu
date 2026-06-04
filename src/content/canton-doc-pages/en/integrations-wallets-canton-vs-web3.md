@@ -234,11 +234,11 @@ Canton explorers show your activity:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Wallet for Developers" icon="code" href="/integrations/overview">
+  <Card title="Wallet for Developers" icon="code" href="/docs/canton/integrations-overview">
     Integrate wallet functionality into your app.
   </Card>
 
-  <Card title="Token Standard" icon="coins" href="/overview/understand/cips-introduction">
+  <Card title="Token Standard" icon="coins" href="/docs/canton/overview-understand-cips-introduction">
     Understand the Canton Token Standard.
   </Card>
 </CardGroup>

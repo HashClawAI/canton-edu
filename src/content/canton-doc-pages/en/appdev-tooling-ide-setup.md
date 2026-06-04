@@ -101,9 +101,9 @@ You can also add a `.vscode/settings.json` with project-specific settings like f
 
 ## Next Steps
 
-* [Development Tools Overview](/appdev/tooling/development-tools-overview) -- Summary of all Canton development tools
-* [Development Environment Setup](/appdev/modules/m3-dev-environment) -- Getting started with Daml development
-* [Debugging Tools](/appdev/tooling/debugging-tools) -- Troubleshoot issues during development
+* [Development Tools Overview](/docs/canton/appdev-tooling-development-tools-overview) -- Summary of all Canton development tools
+* [Development Environment Setup](/docs/canton/appdev-modules-m3-dev-environment) -- Getting started with Daml development
+* [Debugging Tools](/docs/canton/appdev-tooling-debugging-tools) -- Troubleshoot issues during development
 
 ---
 

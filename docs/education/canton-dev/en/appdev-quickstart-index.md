@@ -35,20 +35,20 @@ The QuickStart sets up a local environment (called LocalNet) with:
 * **A React frontend** for both provider and user roles
 * **A Java backend** service handling Ledger API interactions
 * **Canton Coin wallets** for traffic purchase and payment flows
-* **Log analysis** with [lnav](/appdev/quickstart/lnav) for debugging and troubleshooting
+* **Log analysis** with [lnav](/docs/canton/appdev-quickstart-lnav) for debugging and troubleshooting
 
 ## Pages in this section
 
 <CardGroup cols={2}>
-  <Card title="Prerequisites and Installation" icon="download" href="/appdev/quickstart/prerequisites">
+  <Card title="Prerequisites and Installation" icon="download" href="/docs/canton/appdev-quickstart-prerequisites">
     System requirements, dependencies, and step-by-step installation
   </Card>
 
-  <Card title="Project Structure" icon="folder-tree" href="/appdev/quickstart/project-structure">
+  <Card title="Project Structure" icon="folder-tree" href="/docs/canton/appdev-quickstart-project-structure">
     How the QuickStart project is organized and what each component does
   </Card>
 
-  <Card title="Running the Demo" icon="play" href="/appdev/quickstart/running-the-demo">
+  <Card title="Running the Demo" icon="play" href="/docs/canton/appdev-quickstart-running-the-demo">
     Start the application and walk through the licensing workflow
   </Card>
 </CardGroup>

@@ -30,11 +30,11 @@ Canton Network 提供多类集成：
 ### 终端用户
 
 <CardGroup cols={2}>
-  <Card title="选择钱包" icon="wallet" href="/integrations/wallets/for-users">
+  <Card title="选择钱包" icon="wallet" href="/zh/docs/canton/integrations-wallets-for-users">
     发现可用于管理 Canton Coin 的钱包选项。
   </Card>
 
-  <Card title="发现应用" icon="grid-2" href="/integrations/apps/finding-apps">
+  <Card title="发现应用" icon="grid-2" href="/zh/docs/canton/integrations-apps-finding-apps">
     探索基于 Canton Network 构建的应用。
   </Card>
 </CardGroup>
@@ -42,11 +42,11 @@ Canton Network 提供多类集成：
 ### 开发者
 
 <CardGroup cols={2}>
-  <Card title="钱包集成" icon="code" href="/integrations/wallet/guidance">
+  <Card title="钱包集成" icon="code" href="/zh/docs/canton/integrations-wallet-guidance">
     使用 Wallet SDK 为应用添加钱包能力。
   </Card>
 
-  <Card title="交易所集成" icon="building-columns" href="/integrations/exchanges/guidance">
+  <Card title="交易所集成" icon="building-columns" href="/zh/docs/canton/integrations-exchanges-guidance">
     连接交易所与流动性提供方。
   </Card>
 </CardGroup>
@@ -67,11 +67,11 @@ Canton 的隐私模型使集成方式与公链不同：
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="集成模式" icon="puzzle-piece" href="/integrations/integration-patterns">
+  <Card title="集成模式" icon="puzzle-piece" href="/zh/docs/canton/integrations-integration-patterns">
     构建集成的常见模式。
   </Card>
 
-  <Card title="Canton 生态" icon="globe" href="/integrations/ecosystem">
+  <Card title="Canton 生态" icon="globe" href="/zh/docs/canton/integrations-ecosystem">
     了解更广泛的 Canton Network 生态。
   </Card>
 </CardGroup>

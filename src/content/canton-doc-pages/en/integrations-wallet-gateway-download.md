@@ -77,7 +77,7 @@ This downloads and runs the latest version each time, useful for testing or one-
    * **Networks**: At least one Canton network with its Ledger API endpoint
    * **Identity Providers**: Authentication configuration for your networks
 
-   See [Configuration](/integrations/wallet-gateway/configuration) for detailed configuration options.
+   See [Configuration](/docs/canton/integrations-wallet-gateway-configuration) for detailed configuration options.
 
 3. **Start the Gateway**
 
@@ -169,11 +169,11 @@ This outputs a complete JSON Schema that can be used for validation and IDE auto
 
 ## Next Steps
 
-* Read [Configuration](/integrations/wallet-gateway/configuration) to understand all configuration options
-* Explore the [APIs](/integrations/wallet-gateway/apis) to understand how to interact with the Gateway
-* Learn about [Signing Providers](/integrations/wallet-gateway/signing-providers) to configure transaction signing
+* Read [Configuration](/docs/canton/integrations-wallet-gateway-configuration) to understand all configuration options
+* Explore the [APIs](/docs/canton/integrations-wallet-gateway-apis) to understand how to interact with the Gateway
+* Learn about [Signing Providers](/docs/canton/integrations-wallet-gateway-signing-providers) to configure transaction signing
 * Check out the [Deployment](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/deployment/index.md) guide to host the Gateway with Docker or Helm
-* Check [Troubleshooting](/integrations/wallet-gateway/troubleshooting) if you encounter any issues
+* Check [Troubleshooting](/docs/canton/integrations-wallet-gateway-troubleshooting) if you encounter any issues
 
 ---
 

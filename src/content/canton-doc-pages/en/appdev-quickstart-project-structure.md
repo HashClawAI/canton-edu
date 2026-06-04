@@ -46,7 +46,7 @@ Work through the `quickstart-explore-the-demo` guide for the complete workflow w
 
 ### Development environment (Nix + Direnv)
 
-The repository uses Nix and Direnv to provide consistent, cross-platform development dependencies including JDK, Node.js, and TypeScript. If you prefer not to use Nix, you can work directly in `quickstart/` but will need to manage dependencies manually. Review the [Quickstart prerequisites](/appdev/quickstart/prerequisites) if you need to set up additional tooling.
+The repository uses Nix and Direnv to provide consistent, cross-platform development dependencies including JDK, Node.js, and TypeScript. If you prefer not to use Nix, you can work directly in `quickstart/` but will need to manage dependencies manually. Review the [Quickstart prerequisites](/docs/canton/appdev-quickstart-prerequisites) if you need to set up additional tooling.
 
 **Key files:**
 
@@ -328,7 +328,7 @@ See `quickstart-debugging-and-troubleshooting-lnav` for log analysis techniques.
 
 ## Next steps
 
-Once you understand the project structure, visit the [TL;DR for new Canton Network developers](/appdev/get-started/choose-your-path) for additional guides to explore.
+Once you understand the project structure, visit the [TL;DR for new Canton Network developers](/docs/canton/appdev-get-started-choose-your-path) for additional guides to explore.
 
 {/* Mintlify preview rebuild marker. */}
 

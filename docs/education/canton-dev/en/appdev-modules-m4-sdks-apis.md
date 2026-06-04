@@ -113,7 +113,7 @@ The Wallet SDK provides integration with Canton Coin (CC) wallets for applicatio
 
 In cn-quickstart, the licensing application uses wallet integration for license renewal payments. The `LicenseRenewalRequest` contract implements the Splice `AllocationRequest` interface, which the wallet system detects and processes as a payment.
 
-For more on how CC and traffic work, see [Canton Coin and Traffic](/appdev/modules/m4-canton-coin).
+For more on how CC and traffic work, see [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin).
 
 ## Working Examples
 
@@ -128,8 +128,8 @@ Clone the repository and run `cd quickstart && make setup && make build && make 
 
 ## Next Steps
 
-* [Backend Development](/appdev/modules/m4-backend-dev) -- Patterns for using the Ledger API and PQS in a Java backend
-* [Frontend Development](/appdev/modules/m4-frontend-dev) -- Building a React frontend against the backend API
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- Patterns for using the Ledger API and PQS in a Java backend
+* [Frontend Development](/docs/canton/appdev-modules-m4-frontend-dev) -- Building a React frontend against the backend API
 
 ---
 

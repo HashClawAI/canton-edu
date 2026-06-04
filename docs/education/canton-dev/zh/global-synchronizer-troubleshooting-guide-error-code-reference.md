@@ -37,7 +37,7 @@ Canton 和 Splice 错误代码遵循结构化格式：`CATEGORY_ERROR_NAME(sever
 
 * **消息：** `Insufficient traffic for submission`
 * **原因：** 您的验证者的流量余额太低，无法将交易提交给Sequencer。
-* **解决方案：** 通过验证者 API 购买额外流量或启用自动充值。有关详细信息，请参阅[交易失败](/global-synchronizer/troubleshooting-guide/transaction-failures)。
+* **解决方案：** 通过验证者 API 购买额外流量或启用自动充值。有关详细信息，请参阅[交易失败](/zh/docs/canton/global-synchronizer-troubleshooting-guide-transaction-failures)。
 
 ## Sequencer错误
 
@@ -91,7 +91,7 @@ Canton 和 Splice 错误代码遵循结构化格式：`CATEGORY_ERROR_NAME(sever
 
 * **消息：** `Cannot convert configuration`
 * **原因：** 配置值缺失、为空或类型错误。错误信息包含具体的配置路径。
-* **解决方案：** 根据您的配置文件和环境变量检查错误中提到的路径。请参阅[配置问题](/global-synchronizer/troubleshooting-guide/configuration-problems)。
+* **解决方案：** 根据您的配置文件和环境变量检查错误中提到的路径。请参阅[配置问题](/zh/docs/canton/global-synchronizer-troubleshooting-guide-configuration-problems)。
 
 ### 数据库存储降级
 

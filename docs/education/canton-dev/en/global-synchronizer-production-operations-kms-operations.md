@@ -568,7 +568,7 @@ You need to follow the same steps if you want to migrate a Participant back to u
 
 By default, Canton nodes use the `jce` crypto provider, which is compatible with other nodes that use external KMS providers to store Canton private keys. If you change the default `jce` provider and use different cryptographic schemes, you must ensure that it supports the same algorithms and key schemes as the KMS providers, in order to interoperate with other KMS-enabled Canton nodes.
 
-See the [Supported Cryptographic Schemes](/global-synchronizer/reference/crypto-schemes) reference for a description of the cryptographic schemes supported by a KMS provider and the ones used by default.
+See the [Supported Cryptographic Schemes](/docs/canton/global-synchronizer-reference-crypto-schemes) reference for a description of the cryptographic schemes supported by a KMS provider and the ones used by default.
 
 {/* COPIED_START source="docs-website:docs/replicated/canton/3.4/participant/howtos/secure/kms/key_rotation/kms_key_rotation.rst" hash="8b47170c" */}
 

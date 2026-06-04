@@ -52,7 +52,7 @@ Fail，用于 FailureStatus。
 ### `data FailureCategory`
 
 失败类别，决定失败的状态码与日志级别。与 Canton 文档中的错误类别一一对应：
-[错误类别清单](/global-synchronizer/reference/error-codes#error-categories-inventory)
+[错误类别清单](/zh/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)
 
 若更熟悉 gRPC 错误码，可使用注释中的同义词。
 
@@ -65,7 +65,7 @@ Fail，用于 FailureStatus。
 
 对应 gRPC 状态码 `INVALID_ARGUMENT`。
 
-详见 [错误类别清单](/global-synchronizer/reference/error-codes#error-categories-inventory)。
+详见 [错误类别清单](/zh/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)。
 
 <span id="constr-da-internal-fail-types-invalidgivencurrentsystemstateother-6547" />
 
@@ -74,7 +74,7 @@ Fail，用于 FailureStatus。
 
 对应 gRPC 状态码 `FAILED_PRECONDITION`。
 
-详见 [错误类别清单](/global-synchronizer/reference/error-codes#error-categories-inventory)。
+详见 [错误类别清单](/zh/docs/canton/global-synchronizer-reference-error-codes#error-categories-inventory)。
 
 实例：
 

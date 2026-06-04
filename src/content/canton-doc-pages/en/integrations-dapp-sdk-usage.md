@@ -49,7 +49,7 @@ await sdk.init()
 ```
 
 If you want to add or replace wallets (e.g. WalletConnect), see
-[Adapter registration & wallet discovery (picker)](/integrations/dapp-sdk/adapters-and-discovery).
+[Adapter registration & wallet discovery (picker)](/docs/canton/integrations-dapp-sdk-adapters-and-discovery).
 
 **Provider API:**
 
@@ -439,7 +439,7 @@ console.log(status.connection.isConnected)
 
 ## Adapter registration & wallet discovery (picker)
 
-See [Adapter registration & wallet discovery (picker)](/integrations/dapp-sdk/adapters-and-discovery) for multiple ways
+See [Adapter registration & wallet discovery (picker)](/docs/canton/integrations-dapp-sdk-adapters-and-discovery) for multiple ways
 to register adapters and what appears in the wallet picker.
 
 ---

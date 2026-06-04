@@ -21,7 +21,7 @@ tags:
 
 > A systematic approach to diagnosing and resolving Global Synchronizer issues
 
-This section provides an overview of which information can be collected to debug issues in a Canton Network node. For direct console access to a Canton node, see the [Canton Console Reference](/global-synchronizer/reference/canton-console-reference).
+This section provides an overview of which information can be collected to debug issues in a Canton Network node. For direct console access to a Canton node, see the [Canton Console Reference](/docs/canton/global-synchronizer-reference-canton-console-reference).
 
 ## Where to find logs
 

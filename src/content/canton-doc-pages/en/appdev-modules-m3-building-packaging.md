@@ -28,7 +28,7 @@ The application from `compose` is a complete and secure model for atomic swaps o
 1. Upgrades, which change existing logic. For example, one might want the `Asset` template to have multiple signatories.
 2. Extensions, which merely add new functionality through additional templates.
 
-Upgrades are covered in their own section outside this introduction to Daml: [smart contract upgrades](/appdev/deep-dives/smart-contract-upgrade),
+Upgrades are covered in their own section outside this introduction to Daml: [smart contract upgrades](/docs/canton/appdev-deep-dives-smart-contract-upgrade),
 so in this section we will extend the `compose` model with a simple second workflow: a multi-leg trade. In doing so, you'll learn about:
 
 * The software architecture of the Daml stack
@@ -112,13 +112,13 @@ You'll notice a module `Test.Intro.Asset.TradeSetup`, which is almost a carbon c
 
 As you've seen here, identifiers depend on the package as a whole and packages always bring all their dependencies with them. Thus changing anything in a complex dependency graph can have significant repercussions. It is therefore advisable to keep dependency graphs simple, and to separate concerns which are likely to change at different rates into separate packages.
 
-For example, in all our projects in this intro, including this chapter, our scripts are in the same project as our templates. In practice, that means changing a test changes all identifiers, which is not desirable. It's better for maintainability to separate tests from main templates. If we had done that in [Design Patterns](/appdev/modules/m3-design-patterns), that would also have saved us from copying those modules.
+For example, in all our projects in this intro, including this chapter, our scripts are in the same project as our templates. In practice, that means changing a test changes all identifiers, which is not desirable. It's better for maintainability to separate tests from main templates. If we had done that in [Design Patterns](/docs/canton/appdev-modules-m3-design-patterns), that would also have saved us from copying those modules.
 
-Similarly, we included `Trade` in the same project as `Asset` in [Design Patterns](/appdev/modules/m3-design-patterns), even though `Trade` is a pure extension to the core `Asset` model. If we expect `Trade` to need more frequent changes, it may be a good idea to split it out into a separate project from the start.
+Similarly, we included `Trade` in the same project as `Asset` in [Design Patterns](/docs/canton/appdev-modules-m3-design-patterns), even though `Trade` is a pure extension to the core `Asset` model. If we expect `Trade` to need more frequent changes, it may be a good idea to split it out into a separate project from the start.
 
 ## Next up
 
-The `MultiTrade` model has more complex control flow and data handling than previous models. In [Language Fundamentals](/appdev/modules/m3-language-fundamentals) you'll learn how to write more advanced logic: control flow, folds, common typeclasses, custom functions, and the Daml standard library. We'll be using the same projects so don't delete your folders just yet.
+The `MultiTrade` model has more complex control flow and data handling than previous models. In [Language Fundamentals](/docs/canton/appdev-modules-m3-language-fundamentals) you'll learn how to write more advanced logic: control flow, folds, common typeclasses, custom functions, and the Daml standard library. We'll be using the same projects so don't delete your folders just yet.
 
 ## Building with dpm
 

@@ -135,7 +135,7 @@ tags:
 
 `铸造DelegationProposal` 合约包含一个 `delegation` 字段，其属性与上面概述部分中描述的相同（受益人、委托人、到期日和Amulet合并限制），以及 DSO 方 ID。
 
-所有交互均通过 JSON Ledger API 进行（请参阅其 [OpenAPI 定义](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml)）。查看[身份验证文档](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt)，了解有关如何对请求进行身份验证的更多信息。
+所有交互均通过 JSON Ledger API 进行（请参阅其 [OpenAPI 定义](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml)）。查看[身份验证文档](/zh/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt)，了解有关如何对请求进行身份验证的更多信息。
 
 要创建提案，请通过 Ledger API [命令提交端点](https://github.com/digital-asset/canton/blob/main/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L173)提交 `create` 命令。
 

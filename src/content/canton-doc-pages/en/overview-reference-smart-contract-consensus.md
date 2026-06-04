@@ -23,7 +23,7 @@ tags:
 
 Canton's smart contract consensus layer determines *who validates a transaction* and *how their confirmations produce a binding result*. The mechanism is called **Proof of Stakeholder**: only the participant nodes hosting parties with a stake in the affected contracts participate in validation and confirmation. No global replication of state or computation is required.
 
-This page specifies the validation logic, confirmation policies, and security properties of the smart contract consensus layer. For transaction ordering and sequencer mechanics, see [Ordering Consensus](/overview/reference/ordering-consensus). For the end-to-end message flow, see [Transaction Lifecycle](/overview/reference/transaction-lifecycle).
+This page specifies the validation logic, confirmation policies, and security properties of the smart contract consensus layer. For transaction ordering and sequencer mechanics, see [Ordering Consensus](/docs/canton/overview-reference-ordering-consensus). For the end-to-end message flow, see [Transaction Lifecycle](/docs/canton/overview-reference-transaction-lifecycle).
 
 ## Proof of Stakeholder
 
@@ -36,7 +36,7 @@ Stakeholder-scoped validation produces two properties simultaneously:
 * **Privacy**: non-stakeholders receive no information about the transaction — the payload content remains private.
 * **Scalability**: the validation workload for any given transaction is bounded by the number of stakeholders, not by the total number of nodes in the network.
 
-The ordering layer (sequencer and mediator) handles global consistency — preventing double-spends and establishing a total order of state changes. The smart contract consensus layer handles correctness — ensuring the Daml logic was executed faithfully and authorization rules were satisfied. This separation is what the [Canton Protocol Specification](/overview/reference/canton-protocol-specification) calls two-layer consensus.
+The ordering layer (sequencer and mediator) handles global consistency — preventing double-spends and establishing a total order of state changes. The smart contract consensus layer handles correctness — ensuring the Daml logic was executed faithfully and authorization rules were satisfied. This separation is what the [Canton Protocol Specification](/docs/canton/overview-reference-canton-protocol-specification) calls two-layer consensus.
 
 ## Peer-to-Peer Validation
 
@@ -143,7 +143,7 @@ Proof of Stakeholder provides the following guarantees, assuming the underlying 
 
 **Atomicity.** The mediator's verdict is all-or-nothing. Either every action in the transaction commits, or none does. There is no partial commit state.
 
-**Liveness.** Transaction progress depends on the availability of the sequencer (for message ordering and distribution), the mediator (for verdict aggregation), and sufficiently many confirming participants (to meet each signatory's confirmation threshold). If any of these components are unavailable beyond the protocol's timeout, the transaction aborts. Liveness of the ordering layer is analyzed in [Ordering Consensus](/overview/reference/ordering-consensus).
+**Liveness.** Transaction progress depends on the availability of the sequencer (for message ordering and distribution), the mediator (for verdict aggregation), and sufficiently many confirming participants (to meet each signatory's confirmation threshold). If any of these components are unavailable beyond the protocol's timeout, the transaction aborts. Liveness of the ordering layer is analyzed in [Ordering Consensus](/docs/canton/overview-reference-ordering-consensus).
 
 **Consistency.** Double-spend protection operates at two levels. Each confirming participant checks consumed contracts against its local ACS. The sequencer's total ordering ensures that conflicting transactions are sequenced, so participants observe a consistent history. If two transactions attempt to consume the same contract, the one sequenced second will find the contract already archived and reject.
 

@@ -213,7 +213,7 @@ Canton 支持多种加密方案。默认情况下，节点允许使用 Canton �
 
 ### 禁用会话密钥
 
-有关会话密钥的用途和安全含义的说明，请参阅 [Canton 的加密密钥](/overview/learn/cryptographic-keys)。
+有关会话密钥的用途和安全含义的说明，请参阅 [Canton 的加密密钥](/zh/docs/canton/overview-learn-cryptographic-keys)。
 
 虽然会话密钥可以提高性能，但它们也会带来安全风险，因为密钥存储在内存中，即使只存储很短的时间。如果您希望禁用会话密钥并接受由此导致的性能下降，可以通过设置以下配置来实现。
 
@@ -849,7 +849,7 @@ On the node site, the revocation certificate can be imported using:
 
 ## 配置会话密钥Canton 使用会话密钥来减少协议执行期间昂贵的加密操作，从而提高性能。有两种类型：会话加密密钥，可减少非对称加密的数量；会话签名密钥，有助于避免频繁调用 KMS 等外部签名者。
 
-您可以在 [Canton 的加密密钥](/overview/learn/cryptographic-keys) 中阅读有关基本原理和安全注意事项的更多信息。
+您可以在 [Canton 的加密密钥](/zh/docs/canton/overview-learn-cryptographic-keys) 中阅读有关基本原理和安全注意事项的更多信息。
 
 延长会话密钥的生命周期可以最大限度地减少重复密钥协商或远程签名的需要，但它也增加了密钥存储在内存中的时间窗口，从而增加了泄露的风险。
 

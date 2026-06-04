@@ -273,8 +273,8 @@ docker compose --env-file $LOCALNET_DIR/compose.env \
 
 Use the Canton Admin Console to inspect and modify the run configuration of the Canton sequencer, mediator, and participant nodes in your LocalNet deployment.
 
-* [Canton Console How-To](/global-synchronizer/canton-console/console-overview)
-* [Canton Console commands](/global-synchronizer/reference/canton-console-commands)
+* [Canton Console How-To](/docs/canton/global-synchronizer-canton-console-console-overview)
+* [Canton Console commands](/docs/canton/global-synchronizer-reference-canton-console-commands)
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
 docker compose --env-file $LOCALNET_DIR/compose.env \

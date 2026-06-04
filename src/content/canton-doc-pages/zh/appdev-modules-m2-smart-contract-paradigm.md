@@ -98,11 +98,11 @@ Solidity 手动多签 mapping；Daml 原生 `signatory partyA, partyB` 与 Propo
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="网络架构" icon="network-wired" href="/appdev/modules/m2-network-architecture">
+  <Card title="网络架构" icon="network-wired" href="/zh/docs/canton/appdev-modules-m2-network-architecture">
     网络架构与拓扑对比。
   </Card>
 
-  <Card title="模块 3：Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="模块 3：Daml" icon="code" href="/zh/docs/canton/appdev-modules-m3-dev-environment">
     开始编写 Daml 智能合约。
   </Card>
 </CardGroup>

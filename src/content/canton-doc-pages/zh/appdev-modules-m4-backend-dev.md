@@ -592,14 +592,14 @@ curl -s "http://localhost:8080/licenses/${LICENSE_CID}/comments" \
 
 ## 下一步
 
-* [前端开发](/appdev/modules/m4-frontend-dev) — 构建消费本后端 REST API 的 React UI，含基于这些后端端点添加评论 UI 的前端练习
-* [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin) — 了解 traffic 成本与支付钱包集成
+* [前端开发](/zh/docs/canton/appdev-modules-m4-frontend-dev) — 构建消费本后端 REST API 的 React UI，含基于这些后端端点添加评论 UI 的前端练习
+* [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin) — 了解 traffic 成本与支付钱包集成
 * [cn-quickstart 仓库](https://github.com/digital-asset/cn-quickstart) — 完整可运行的后端实现
 
 ## 进阶主题
 
-* [命令去重](/appdev/deep-dives/command-deduplication) — 设计应用命令流，使预期账本变更在重试、崩溃与网络消息丢失下仍恰好执行一次。
-* [显式合约披露](/appdev/deep-dives/explicit-contract-disclosure) — 提交读取你非 stakeholder 的合约的命令时，在 Ledger API 上将其作为 disclosed contract 传入。
+* [命令去重](/zh/docs/canton/appdev-deep-dives-command-deduplication) — 设计应用命令流，使预期账本变更在重试、崩溃与网络消息丢失下仍恰好执行一次。
+* [显式合约披露](/zh/docs/canton/appdev-deep-dives-explicit-contract-disclosure) — 提交读取你非 stakeholder 的合约的命令时，在 Ledger API 上将其作为 disclosed contract 传入。
 
 
 ---

@@ -124,13 +124,13 @@ This section provides wallet developers with guidance on how to integrate with t
 > * `token_standard_usage_executing_nonfactory_choice`
 > * `token_standard_usage_custom_daml_code`
 
-These integrations patterns have recently been nicely packaged in the [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk) maintained in the `canton-network/wallet-gateway` repository and [documented here](/integrations/wallet/guidance).
+These integrations patterns have recently been nicely packaged in the [Wallet SDK](https://github.com/canton-network/wallet-gateway/tree/main/sdk/wallet-sdk) maintained in the `canton-network/wallet-gateway` repository and [documented here](/docs/canton/integrations-wallet-guidance).
 
 All of these integration patterns are also demonstrated in the form of executable code as part of the [experimental command-line interface](https://github.com/canton-network/splice/tree/main/token-standard#cli) for token standard assets. The sections below explaining the patterns below thus all start with a link to the code. They then provide additional context for an implementor.
 
 All interaction works via the JSON Ledger API (see its [OpenAPI definition here](/sdks-tools/api-reference/json-api)). This OpenAPI definition is also accessible at `http(s)://${YOUR_PARTICIPANT}/docs/openapi`. We encourage developers to use OpenAPI code generation tools as opposed to manually writing HTTP requests.
 
-Check out the [Authentication docs](/global-synchronizer/reference/security-configuration#configure-api-authentication-and-authorization-with-jwt) for more information on how to authenticate the requests.
+Check out the [Authentication docs](/docs/canton/global-synchronizer-reference-security-configuration#configure-api-authentication-and-authorization-with-jwt) for more information on how to authenticate the requests.
 
 ### Reading contracts implementing a Token Standard interface for a party
 
@@ -172,7 +172,7 @@ For example:
 Additionally, there's three flags that can be set:
 
 * `includeInterfaceView`: to include the interface view of the contract in the response.
-* `includeCreatedEventBlob`: to include a binary blob that is required for [explicit disclosure](/appdev/deep-dives/explicit-contract-disclosure).
+* `includeCreatedEventBlob`: to include a binary blob that is required for [explicit disclosure](/docs/canton/appdev-deep-dives-explicit-contract-disclosure).
 * `verbose`: to include additional information in the response.
 
 The response for such a query will contain the `createdEvent` of the contract, including the interface views requested (if any). The `viewValue` within it will be the JSON-serialized Daml interface view. If more than one interface is requested, you can distinguish them by checking the `interfaceId` field. You can find an [example response for Holdings here](https://github.com/canton-network/splice/blob/main/token-standard/cli/__tests__/mocks/data/holdings.json).

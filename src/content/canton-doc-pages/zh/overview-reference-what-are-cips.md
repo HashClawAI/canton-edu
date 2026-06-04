@@ -21,7 +21,7 @@ Canton 改进提案 (CIP) 是正式的设计文件，描述了Canton Network的�
 
 CIP 流程以已建立的改进提案框架（例如以太坊的 EIP 和 Python 的 PEP）为模型，并在 [CIP-0000](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0000/cip-0000.md) 中正式定义。所有 CIP 均维护在由 Global Synchronizer Foundation 管理的[公共 GitHub 存储库](https://github.com/global-synchronizer-foundation/cips) 中。
 
-有关 CIP 的介绍性概述及其重要性，请参阅 [CIP 简介](/overview/understand/cips-introduction)。
+有关 CIP 的介绍性概述及其重要性，请参阅 [CIP 简介](/zh/docs/canton/overview-understand-cips-introduction)。
 
 ## CIP 类型
 
@@ -72,7 +72,7 @@ CIP 编辑管理审阅过程。他们的职责包括验证技术可靠性、确�
 
 ## 与链上治理的关系
 
-对于需要链上变更的提案，通过投票流程获得 CIP 批准并不是最后一步。一旦 CIP 获得批准，超级验证者必须通过链上治理行动来采用它——与 [SV 治理参考](/overview/reference/sv-governance-reference) 中描述的相同 BFT 投票机制。只有三分之二的超级验证者在链上实施了更改后，CIP 才会达到最终状态。
+对于需要链上变更的提案，通过投票流程获得 CIP 批准并不是最后一步。一旦 CIP 获得批准，超级验证者必须通过链上治理行动来采用它——与 [SV 治理参考](/zh/docs/canton/overview-reference-sv-governance-reference) 中描述的相同 BFT 投票机制。只有三分之二的超级验证者在链上实施了更改后，CIP 才会达到最终状态。
 
 这种两阶段结构将设计共识（链下 CIP 投票）与运营承诺（链上采用）分开，确保批准的提案在成为权威之前得到实际部署。链上实施结果通过 Canton Coin Scan API 可见，因此您可以通过检查超级验证器的采用情况来验证给定的 CIP 是否已达到最终状态。
 
@@ -106,7 +106,7 @@ CIP 存储库包含一个可以用作起点的模板。有关创作和提交 CIP
 * [GitHub 上的 CIP 存储库](https://github.com/global-synchronizer-foundation/cips) — 所有 CIP 文档和规范的 CIP-0000 流程定义
 * [CIP-0000: CIP流程](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0000/cip-0000.md) — CIP流程的权威规范，包括编辑团队、投票规则和格式要求
 * [GSF 邮件列表](https://lists.sync.global/) — 进行 CIP 讨论和投票的 `cip-discuss` 和 `cip-vote` 列表
-* [SV治理参考](/overview/reference/sv-governance-reference) - CIP在批准后纳入的链上治理机制
+* [SV治理参考](/zh/docs/canton/overview-reference-sv-governance-reference) - CIP在批准后纳入的链上治理机制
 
 ## 如何提出 CIP
 

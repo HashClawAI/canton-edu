@@ -153,8 +153,8 @@ kill $SANDBOX_PID
 
 ## Next Steps
 
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — Rolling out tested upgrades across environments
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — Reference for what changes are allowed
+* [Deploying Upgrades](/docs/canton/appdev-modules-m6-deployment) — Rolling out tested upgrades across environments
+* [Upgrade Compatibility](/docs/canton/appdev-modules-m6-upgrade-compatibility) — Reference for what changes are allowed
 
 ---
 

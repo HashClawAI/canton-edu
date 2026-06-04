@@ -64,7 +64,7 @@ If you find errors, please contact your representative at Digital Asset.
 
 ## Prerequisites
 
-Install the [CN App Quickstart](/appdev/quickstart/prerequisites) before beginning this demonstration.
+Install the [CN App Quickstart](/docs/canton/appdev-quickstart-prerequisites) before beginning this demonstration.
 
 ## Walkthrough
 
@@ -404,7 +404,7 @@ The Validator Onboarding menu allows for the creation of validator onboarding se
 
 ## Next steps
 
-You've completed a business operation in the CN App Quickstart and have been introduced to the basics of the Canton Console and Daml Shell. We encourage you to explore the CN App Quickstart codebase and modify it to meet your business needs. You might be interested in learning more about the [App Quickstart project structure](/appdev/quickstart/project-structure) or the application development modules in [Module 4: Building Applications](/appdev/modules/m4-building-apps-intro).
+You've completed a business operation in the CN App Quickstart and have been introduced to the basics of the Canton Console and Daml Shell. We encourage you to explore the CN App Quickstart codebase and modify it to meet your business needs. You might be interested in learning more about the [App Quickstart project structure](/docs/canton/appdev-quickstart-project-structure) or the application development modules in [Module 4: Building Applications](/docs/canton/appdev-modules-m4-building-apps-intro).
 
 ---
 

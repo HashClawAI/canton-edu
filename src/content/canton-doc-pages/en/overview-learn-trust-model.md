@@ -166,9 +166,9 @@ In a traditional blockchain, everyone sees every transaction and every node vali
 
 ## Related Topics
 
-* [Two-Layer Consensus](/overview/learn/two-layer-consensus) — how the consensus layers interact
-* [Architecture Overview](/overview/learn/architecture) — component responsibilities
-* [Privacy Model](/overview/learn/privacy-model) — what each party can see
+* [Two-Layer Consensus](/docs/canton/overview-learn-two-layer-consensus) — how the consensus layers interact
+* [Architecture Overview](/docs/canton/overview-learn-architecture) — component responsibilities
+* [Privacy Model](/docs/canton/overview-learn-privacy-model) — what each party can see
 
 ---
 

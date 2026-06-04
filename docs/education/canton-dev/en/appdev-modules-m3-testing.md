@@ -185,7 +185,7 @@ The [CN Quickstart](/sdks-tools/reference-projects/cn-quickstart) project includ
 * Splice API interactions (Scan, Validator APIs)
 * End-to-end application flows that involve the Global Synchronizer
 
-See the [QuickStart walkthrough](/appdev/quickstart/running-the-demo) for instructions on starting LocalNet.
+See the [QuickStart walkthrough](/docs/canton/appdev-quickstart-running-the-demo) for instructions on starting LocalNet.
 
 ---
 

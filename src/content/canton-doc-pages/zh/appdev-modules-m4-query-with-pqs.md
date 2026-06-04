@@ -91,7 +91,7 @@ tags:
 </Note>
 
 <Warning>
-  按 payload 内容查询可能需要额外开发与管理工作以达到期望性能。请参阅 [性能优化](/appdev/deep-dives/performance-optimization) 了解入门思路。
+  按 payload 内容查询可能需要额外开发与管理工作以达到期望性能。请参阅 [性能优化](/zh/docs/canton/appdev-deep-dives-performance-optimization) 了解入门思路。
 </Warning>
 
 ### 如何 join ACS 中的合约
@@ -193,7 +193,7 @@ PQS 基于 PostgreSQL，查询优化本质上是数据库/SQL 调优问题。常
 * 避免使用 `OFFSET` SQL 子句分页
 * 尽可能避免类似 `SELECT COUNT(*)` 的查询
 
-性能优化更多信息见 [性能优化](/appdev/deep-dives/performance-optimization)。
+性能优化更多信息见 [性能优化](/zh/docs/canton/appdev-deep-dives-performance-optimization)。
 
 ### 如何在 JSONB payload 表达式上添加索引
 

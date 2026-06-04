@@ -691,7 +691,7 @@ template OfferToPaintHouseByPainter
         return iouId2
 ```
 
-我们不会深入探讨 Daml 的细节，因为[在其他地方对此进行了解释](/appdev/modules/m3-language-fundamentals)。但一个重要的观察结果是，合同本身是被动的。合约实例代表账本，并且仅对可以更改账本状态的规则进行编码。任何更改都需要您通过 Ledger API 发送适当的命令来触发某些 Daml 合约执行。
+我们不会深入探讨 Daml 的细节，因为[在其他地方对此进行了解释](/zh/docs/canton/appdev-modules-m3-language-fundamentals)。但一个重要的观察结果是，合同本身是被动的。合约实例代表账本，并且仅对可以更改账本状态的规则进行编码。任何更改都需要您通过 Ledger API 发送适当的命令来触发某些 Daml 合约执行。
 
 Canton 控制台为您提供对此 API 的交互式访问，以及一些可用于实验的实用程序。 Ledger API 使用 [gRPC](http://grpc.io)。
 

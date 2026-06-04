@@ -19,7 +19,7 @@ tags:
 
 ## 前置条件
 
-开始本模块前，应已完成 [模块 3：Daml 智能合约](/appdev/modules/m3-dev-environment)。你需要对 Daml 中的 template、choice 与授权有基本理解。熟悉 Java 或 TypeScript 有帮助，但非必需。
+开始本模块前，应已完成 [模块 3：Daml 智能合约](/zh/docs/canton/appdev-modules-m3-dev-environment)。你需要对 Daml 中的 template、choice 与授权有基本理解。熟悉 Java 或 TypeScript 有帮助，但非必需。
 
 ## 你将学到
 
@@ -32,23 +32,23 @@ tags:
 ## 模块页面
 
 <CardGroup cols={2}>
-  <Card title="Application Architecture" icon="sitemap" href="/appdev/modules/m4-app-architecture">
+  <Card title="Application Architecture" icon="sitemap" href="/zh/docs/canton/appdev-modules-m4-app-architecture">
     角色、层次及 Canton 应用各组件如何协同。
   </Card>
 
-  <Card title="SDKs and APIs" icon="plug" href="/appdev/modules/m4-sdks-apis">
+  <Card title="SDKs and APIs" icon="plug" href="/zh/docs/canton/appdev-modules-m4-sdks-apis">
     代码生成、Ledger API、JSON API、PQS 与 Wallet SDK。
   </Card>
 
-  <Card title="Backend Development" icon="server" href="/appdev/modules/m4-backend-dev">
+  <Card title="Backend Development" icon="server" href="/zh/docs/canton/appdev-modules-m4-backend-dev">
     连接账本、提交命令、读取交易并查询 PQS。
   </Card>
 
-  <Card title="Frontend Development" icon="browser" href="/appdev/modules/m4-frontend-dev">
+  <Card title="Frontend Development" icon="browser" href="/zh/docs/canton/appdev-modules-m4-frontend-dev">
     用生成的 TypeScript 绑定与钱包集成构建 React UI。
   </Card>
 
-  <Card title="Canton Coin and Traffic" icon="coins" href="/appdev/modules/m4-canton-coin">
+  <Card title="Canton Coin and Traffic" icon="coins" href="/zh/docs/canton/appdev-modules-m4-canton-coin">
     了解 CC 如何购买 traffic 及管理交易成本。
   </Card>
 </CardGroup>

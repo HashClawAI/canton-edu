@@ -81,23 +81,23 @@ Not every change requires the upgrade mechanism. Consider the trade-offs:
 This module walks you through the upgrade process step by step:
 
 <CardGroup cols={2}>
-  <Card title="Upgrade Compatibility" icon="code-compare" href="/appdev/modules/m6-upgrade-compatibility">
+  <Card title="Upgrade Compatibility" icon="code-compare" href="/docs/canton/appdev-modules-m6-upgrade-compatibility">
     What changes are allowed and what breaks compatibility.
   </Card>
 
-  <Card title="Writing Your First Upgrade" icon="pen" href="/appdev/modules/m6-writing-first-upgrade">
+  <Card title="Writing Your First Upgrade" icon="pen" href="/docs/canton/appdev-modules-m6-writing-first-upgrade">
     Step-by-step tutorial for creating a v2 package.
   </Card>
 
-  <Card title="Package Selection" icon="list-check" href="/appdev/modules/m6-package-selection">
+  <Card title="Package Selection" icon="list-check" href="/docs/canton/appdev-modules-m6-package-selection">
     How the ledger resolves which package version to use.
   </Card>
 
-  <Card title="Testing Upgrades" icon="vial" href="/appdev/modules/m6-testing-upgrades">
+  <Card title="Testing Upgrades" icon="vial" href="/docs/canton/appdev-modules-m6-testing-upgrades">
     Verifying upgrade paths before deployment.
   </Card>
 
-  <Card title="Deploying Upgrades" icon="rocket" href="/appdev/modules/m6-deployment">
+  <Card title="Deploying Upgrades" icon="rocket" href="/docs/canton/appdev-modules-m6-deployment">
     Rolling out upgrades across environments and organizations.
   </Card>
 </CardGroup>

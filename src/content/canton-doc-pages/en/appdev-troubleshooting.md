@@ -20,47 +20,47 @@ tags:
 
 > Index of detailed troubleshooting guides for Canton Network application development
 
-For detailed troubleshooting steps, see the topic guides below. For diagnostic and debugging tooling, see [Debugging Tools](/appdev/tooling/debugging-tools).
+For detailed troubleshooting steps, see the topic guides below. For diagnostic and debugging tooling, see [Debugging Tools](/docs/canton/appdev-tooling-debugging-tools).
 
 <CardGroup cols={2}>
-  <Card title="Installation Issues" icon="wrench" href="/appdev/troubleshooting-guide/installation-issues">
+  <Card title="Installation Issues" icon="wrench" href="/docs/canton/appdev-troubleshooting-guide-installation-issues">
     Nix shell failures, Docker configuration, memory allocation, JDK setup.
   </Card>
 
-  <Card title="Development Issues" icon="bug" href="/appdev/troubleshooting-guide/development-issues">
+  <Card title="Development Issues" icon="bug" href="/docs/canton/appdev-troubleshooting-guide-development-issues">
     Daml compilation errors, API connection problems, transaction failures during development.
   </Card>
 
-  <Card title="Operational Issues" icon="server" href="/appdev/troubleshooting-guide/operational-issues">
+  <Card title="Operational Issues" icon="server" href="/docs/canton/appdev-troubleshooting-guide-operational-issues">
     Traffic exhaustion, upgrade problems, PQS failures on DevNet, TestNet, and MainNet.
   </Card>
 
-  <Card title="Common Issues FAQ" icon="circle-question" href="/appdev/faq">
+  <Card title="Common Issues FAQ" icon="circle-question" href="/docs/canton/appdev-faq">
     Frequently encountered app development and validator operation issues with short answers and next steps.
   </Card>
 
-  <Card title="Common Questions" icon="circle-question" href="/appdev/troubleshooting-guide/common-questions">
+  <Card title="Common Questions" icon="circle-question" href="/docs/canton/appdev-troubleshooting-guide-common-questions">
     Frequently asked questions about Canton Network application development.
   </Card>
 
-  <Card title="Daml Error Codes" icon="circle-exclamation" href="/appdev/troubleshooting-guide/error-code-reference">
+  <Card title="Daml Error Codes" icon="circle-exclamation" href="/docs/canton/appdev-troubleshooting-guide-error-code-reference">
     Daml compilation errors and Canton runtime error codes with causes and resolutions.
   </Card>
 
-  <Card title="Ledger API Errors" icon="circle-exclamation" href="/appdev/troubleshooting-guide/ledger-api-errors">
+  <Card title="Ledger API Errors" icon="circle-exclamation" href="/docs/canton/appdev-troubleshooting-guide-ledger-api-errors">
     Common Ledger API error codes encountered during command submission.
   </Card>
 </CardGroup>
 
 ## Diagnostic tooling
 
-For log capture, lnav workflows, Canton Console diagnostics, and PQS query examples used while troubleshooting, see [Debugging Tools](/appdev/tooling/debugging-tools).
+For log capture, lnav workflows, Canton Console diagnostics, and PQS query examples used while troubleshooting, see [Debugging Tools](/docs/canton/appdev-tooling-debugging-tools).
 
 ## Getting help
 
 If the topic guides above do not resolve your issue:
 
-* **Self-service**: Search this troubleshooting guide and the [debugging tools](/appdev/tooling/debugging-tools) page.
+* **Self-service**: Search this troubleshooting guide and the [debugging tools](/docs/canton/appdev-tooling-debugging-tools) page.
 * **Community**: Post in `#gsf-global-synchronizer-appdev` (Slack) or [forum.canton.network](https://forum.canton.network/) with your error message, redacted logs, and environment details (validator ID, network, SDK/Splice version).
 * **Email support**: `da-support@digitalasset.com` for best-effort discretionary support.
 * **Paid support with SLAs**: `support@digitalasset.com` (opens a tracked Jira ticket).

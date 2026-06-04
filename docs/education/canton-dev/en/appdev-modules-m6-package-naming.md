@@ -46,7 +46,7 @@ com-acme-asset-interfaces-v1
 ```
 
 The version marker refers to the **contract model version**, not the build version. Increment it only when you make breaking changes that require a new package (as described in
-[Upgrade Limitations](/appdev/modules/m6-limitations)). Non-breaking upgrades (adding optional fields, new choices) happen within the same package name -- SCU handles those transparently.
+[Upgrade Limitations](/docs/canton/appdev-modules-m6-limitations)). Non-breaking upgrades (adding optional fields, new choices) happen within the same package name -- SCU handles those transparently.
 
 Do not include version numbers in template names.
 
@@ -106,9 +106,9 @@ Each package can be versioned independently. The interface package changes rarel
 
 ## Further Reading
 
-* [Upgrade Limitations](/appdev/modules/m6-limitations) -- Constraints that drive package naming decisions
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) -- Rules for what constitutes a breaking vs. non-breaking change
-* [Building and Packaging](/appdev/modules/m3-building-packaging) -- How to compile and package Daml code with `dpm build`
+* [Upgrade Limitations](/docs/canton/appdev-modules-m6-limitations) -- Constraints that drive package naming decisions
+* [Upgrade Compatibility](/docs/canton/appdev-modules-m6-upgrade-compatibility) -- Rules for what constitutes a breaking vs. non-breaking change
+* [Building and Packaging](/docs/canton/appdev-modules-m3-building-packaging) -- How to compile and package Daml code with `dpm build`
 
 ---
 

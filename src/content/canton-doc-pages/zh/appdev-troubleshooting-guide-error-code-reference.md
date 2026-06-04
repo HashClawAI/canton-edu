@@ -105,11 +105,11 @@ ABORTED: Interpretation error: ... contract not active
 
 **原因：** 并发事务消耗了您的阅读和练习之间的合同。这在并发环境中是正常的。
 
-**修复：** 使用指数退避重试操作。有关重试模式，请参阅[开发问题](/appdev/troubleshooting-guide/development-issues)。
+**修复：** 使用指数退避重试操作。有关重试模式，请参阅[开发问题](/zh/docs/canton/appdev-troubleshooting-guide-development-issues)。
 
 ## 账本 API 错误
 
-Ledger API 运行时错误代码（AUTH\_INVALID\_TOKEN、PACKAGE\_NOT\_FOUND、PARTY\_NOT\_KNOWN、PERMISSION\_DENIED 等）位于其自己的页面上：[Ledger API 错误](/appdev/troubleshooting-guide/ledger-api-errors)。
+Ledger API 运行时错误代码（AUTH\_INVALID\_TOKEN、PACKAGE\_NOT\_FOUND、PARTY\_NOT\_KNOWN、PERMISSION\_DENIED 等）位于其自己的页面上：[Ledger API 错误](/zh/docs/canton/appdev-troubleshooting-guide-ledger-api-errors)。
 
 ---
 

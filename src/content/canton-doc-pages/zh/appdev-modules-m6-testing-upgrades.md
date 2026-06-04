@@ -146,8 +146,8 @@ kill $SANDBOX_PID
 
 ## 下一步
 
-* [Deploying Upgrades](/appdev/modules/m6-deployment) — 在多环境 rollout 已测试的升级
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) — 允许变更的参考
+* [Deploying Upgrades](/zh/docs/canton/appdev-modules-m6-deployment) — 在多环境 rollout 已测试的升级
+* [Upgrade Compatibility](/zh/docs/canton/appdev-modules-m6-upgrade-compatibility) — 允许变更的参考
 
 ---
 

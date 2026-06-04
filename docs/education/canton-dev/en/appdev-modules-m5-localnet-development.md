@@ -209,8 +209,8 @@ Or with cn-quickstart: `make canton-console`.
 
 ## Next Steps
 
-* [Testing Strategies](/appdev/modules/m5-testing-strategies) — Testing pyramid and approaches for Canton applications
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — Moving from LocalNet to DevNet, TestNet, and MainNet
+* [Testing Strategies](/docs/canton/appdev-modules-m5-testing-strategies) — Testing pyramid and approaches for Canton applications
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) — Moving from LocalNet to DevNet, TestNet, and MainNet
 
 ---
 

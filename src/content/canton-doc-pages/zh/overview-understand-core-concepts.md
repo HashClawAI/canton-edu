@@ -291,19 +291,19 @@ sequenceDiagram
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="架构深度探究" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="架构深度探究" icon="diagram-project" href="/zh/docs/canton/overview-learn-architecture">
     了解组件如何在技术上协同工作。
   </Card>
 
-  <Card title="全局同步器" icon="globe" href="/overview/understand/global-synchronizer">
+  <Card title="全局同步器" icon="globe" href="/zh/docs/canton/overview-understand-global-synchronizer">
     了解公共协调层。
   </Card>
 
-  <Card title="隐私模型" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="隐私模型" icon="lock" href="/zh/docs/canton/overview-learn-privacy-model">
     详细了解子交易隐私。
   </Card>
 
-  <Card title="开始构建" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="开始构建" icon="code" href="/zh/docs/canton/appdev-get-started-choose-your-path">
     开始在 Canton 上发展。
   </Card>
 </CardGroup>

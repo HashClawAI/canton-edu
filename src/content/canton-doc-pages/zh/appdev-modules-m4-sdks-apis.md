@@ -107,7 +107,7 @@ Wallet SDK 提供与 Canton Coin（CC）钱包的集成，供需要处理支付�
 
 cn-quickstart 的许可应用使用钱包集成处理续期支付。`LicenseRenewalRequest` 合约实现 Splice `AllocationRequest` 接口，钱包系统检测并作为支付处理。
 
-CC 与 traffic 的更多说明见 [Canton Coin 与 Traffic](/appdev/modules/m4-canton-coin)。
+CC 与 traffic 的更多说明见 [Canton Coin 与 Traffic](/zh/docs/canton/appdev-modules-m4-canton-coin)。
 
 ## 可运行示例
 
@@ -122,8 +122,8 @@ CC 与 traffic 的更多说明见 [Canton Coin 与 Traffic](/appdev/modules/m4-c
 
 ## 下一步
 
-* [后端开发](/appdev/modules/m4-backend-dev) — Java 后端使用 Ledger API 与 PQS 的模式
-* [前端开发](/appdev/modules/m4-frontend-dev) — 基于后端 API 构建 React 前端
+* [后端开发](/zh/docs/canton/appdev-modules-m4-backend-dev) — Java 后端使用 Ledger API 与 PQS 的模式
+* [前端开发](/zh/docs/canton/appdev-modules-m4-frontend-dev) — 基于后端 API 构建 React 前端
 
 ---
 

@@ -23,7 +23,7 @@ tags:
 
 # Externally Signed Topology Transactions
 
-Canton's [Topology](/overview/reference/topology) formalizes a shared state on a synchronizer and provides a secure, distributed mechanism for modifying this state.
+Canton's [Topology](/docs/canton/overview-reference-topology) formalizes a shared state on a synchronizer and provides a secure, distributed mechanism for modifying this state.
 
 This tutorial demonstrates how to build, sign, and submit topology transactions. It is particularly useful for cases where the signature is provided by a key held externally to the network, such as in the case of external party onboarding, or initialization of the root namespace of a participant. This tutorial goes through the steps of importing a root namespace delegation, but can be generalized to any topology mapping. A root namespace delegation is essentially equivalent to a X509v3 CA root certificate in Canton and creates an associated namespace.
 

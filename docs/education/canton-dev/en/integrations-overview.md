@@ -36,11 +36,11 @@ Canton Network provides several categories of integrations:
 ### For End Users
 
 <CardGroup cols={2}>
-  <Card title="Find a Wallet" icon="wallet" href="/integrations/wallets/for-users">
+  <Card title="Find a Wallet" icon="wallet" href="/docs/canton/integrations-wallets-for-users">
     Discover wallet options for managing your Canton Coin.
   </Card>
 
-  <Card title="Find Apps" icon="grid-2" href="/integrations/apps/finding-apps">
+  <Card title="Find Apps" icon="grid-2" href="/docs/canton/integrations-apps-finding-apps">
     Explore applications built on Canton Network.
   </Card>
 </CardGroup>
@@ -48,11 +48,11 @@ Canton Network provides several categories of integrations:
 ### For Developers
 
 <CardGroup cols={2}>
-  <Card title="Wallet Integration" icon="code" href="/integrations/wallet/guidance">
+  <Card title="Wallet Integration" icon="code" href="/docs/canton/integrations-wallet-guidance">
     Add wallet functionality to your application using the Wallet SDK.
   </Card>
 
-  <Card title="Exchange Integration" icon="building-columns" href="/integrations/exchanges/guidance">
+  <Card title="Exchange Integration" icon="building-columns" href="/docs/canton/integrations-exchanges-guidance">
     Connect exchanges and liquidity providers.
   </Card>
 </CardGroup>
@@ -73,11 +73,11 @@ Canton's privacy model changes how integrations work compared to public blockcha
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Integration Patterns" icon="puzzle-piece" href="/integrations/integration-patterns">
+  <Card title="Integration Patterns" icon="puzzle-piece" href="/docs/canton/integrations-integration-patterns">
     Common patterns for building integrations.
   </Card>
 
-  <Card title="Canton Ecosystem" icon="globe" href="/integrations/ecosystem">
+  <Card title="Canton Ecosystem" icon="globe" href="/docs/canton/integrations-ecosystem">
     Explore the broader Canton Network ecosystem.
   </Card>
 </CardGroup>

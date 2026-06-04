@@ -15,7 +15,7 @@ tags:
 
 > 使用外部密钥构建、签署并提交 Canton 拓扑交易。
 
-Canton [拓扑](/overview/reference/topology) 形式化 synchronizer 上的共享状态，并提供安全的分布式变更机制(/overview/reference/topology) formalizes a shared state on a synchronizer and provides a secure, distributed mechanism for modifying this state.
+Canton [拓扑](/zh/docs/canton/overview-reference-topology) 形式化 synchronizer 上的共享状态，并提供安全的分布式变更机制(/overview/reference/topology) formalizes a shared state on a synchronizer and provides a secure, distributed mechanism for modifying this state.
 
 本教程演示如何构建、签署并提交拓扑交易，适用于签名密钥在网外的场景，例如外部 Party 入网或 participant 根命名空间初始化。流程以导入根命名空间委托为例，可推广到任意拓扑映射, sign, and submit topology transactions. It is particularly useful for cases where the signature is provided by a key held externally to the network, such as in the case of external party onboarding, or initialization
 

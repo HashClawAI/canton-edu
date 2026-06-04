@@ -83,8 +83,8 @@ You declare what each party can do at compile time, and the protocol enforces it
 
 Before proceeding, you should:
 
-* **Understand** what Canton is ([Five-Minute Overview](/overview/understand/five-minute-overview))
-* **Know** the basic components ([Core Concepts](/overview/understand/core-concepts))
+* **Understand** what Canton is ([Five-Minute Overview](/docs/canton/overview-understand-five-minute-overview))
+* **Know** the basic components ([Core Concepts](/docs/canton/overview-understand-core-concepts))
 * **Have** programming experience (any language)
 
 No blockchain experience is required—and if you have it, be prepared to unlearn some things.
@@ -101,19 +101,19 @@ By the end of this module, you'll understand:
 ## Learning Path
 
 <CardGroup cols={2}>
-  <Card title="Mental Models" icon="brain" href="/appdev/modules/m1-mental-models">
+  <Card title="Mental Models" icon="brain" href="/docs/canton/appdev-modules-m1-mental-models">
     Build intuition for Canton's approach to distributed ledgers.
   </Card>
 
-  <Card title="Development Stack" icon="wrench" href="/appdev/modules/m1-development-stack">
+  <Card title="Development Stack" icon="wrench" href="/docs/canton/appdev-modules-m1-development-stack">
     Understand the tools and technologies you'll use.
   </Card>
 </CardGroup>
 
 After completing this module, continue to:
 
-* **[Module 2](/appdev/modules/m2-canton-for-ethereum-devs)**: If you have Ethereum/blockchain experience
-* **[Choose your path](/appdev/get-started/choose-your-path)**: If you're ready to start writing Daml
+* **[Module 2](/docs/canton/appdev-modules-m2-canton-for-ethereum-devs)**: If you have Ethereum/blockchain experience
+* **[Choose your path](/docs/canton/appdev-get-started-choose-your-path)**: If you're ready to start writing Daml
 
 ---
 

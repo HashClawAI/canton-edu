@@ -339,9 +339,9 @@ When designing Canton applications, ask:
 
 ## Next Steps
 
-* **[The Global Synchronizer](/overview/understand/global-synchronizer)** - Understand the public network infrastructure
-* **[Developer Track Module 3: Daml Development](/appdev/modules/m3-dev-environment)** - Apply privacy patterns in code
-* **[Glossary](/overview/understand/glossary)** - Terminology reference including privacy-related terms
+* **[The Global Synchronizer](/docs/canton/overview-understand-global-synchronizer)** - Understand the public network infrastructure
+* **[Developer Track Module 3: Daml Development](/docs/canton/appdev-modules-m3-dev-environment)** - Apply privacy patterns in code
+* **[Glossary](/docs/canton/overview-understand-glossary)** - Terminology reference including privacy-related terms
 
 ---
 

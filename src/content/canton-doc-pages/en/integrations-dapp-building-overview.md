@@ -57,14 +57,14 @@ The **dApp API** is a JSON-RPC 2.0 interface specified by **CIP-103**.
 You can call it directly (e.g. over HTTP or WebSocket) from your frontend or backend.
 In practice, most developers use the **dApp SDK**, which implements the same protocol and adds a simpler API, multi-transport support (HTTP for remote Gateways, `postMessage` for browser-extension wallets), and an EIP-1193–style provider (`window.canton`).
 The dApp API lets your frontend connect to a wallet, list accounts, prepare and execute transactions, and receive real-time updates; all of this requires a valid session (JWT).
-See [APIs](/integrations/wallet-gateway/apis) and the [dApp SDK](/integrations/dapp-sdk/usage) documentation.
+See [APIs](/docs/canton/integrations-wallet-gateway-apis) and the [dApp SDK](/docs/canton/integrations-dapp-sdk-usage) documentation.
 
 ## User API and User UI
 
 The **User API** is for users and automation: sessions, networks, identity providers, wallets, and transaction signing.
 The **User UI** (served by the Wallet Gateway) is a web interface that uses the User API so users can log in, create and manage wallets, approve dApp transactions, and change settings.
 For custom integrations or scripts, you can call the User API directly instead of using the User UI.
-See [Usage](/integrations/wallet-gateway/usage) and [APIs](/integrations/wallet-gateway/apis).
+See [Usage](/docs/canton/integrations-wallet-gateway-usage) and [APIs](/docs/canton/integrations-wallet-gateway-apis).
 
 ## Discovery and Connection Flow
 
@@ -75,9 +75,9 @@ See [Usage](/integrations/wallet-gateway/usage) and [APIs](/integrations/wallet-
 
 ## Where to Go Next
 
-* **Building a dApp?** → Install the [dApp SDK](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/dapp-sdk/installation.md), follow [dApp SDK usage](/integrations/dapp-sdk/usage), and use the [APIs](/integrations/wallet-gateway/apis) (dApp API) as needed.
-* **Running or configuring the Wallet Gateway?** → Start with [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md), then [Configuration](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/configuration/index.md), [Signing Providers](/integrations/wallet-gateway/signing-providers), and [APIs](/integrations/wallet-gateway/apis) (User API).
-* **Using the User UI or User API?** → See [Usage](/integrations/wallet-gateway/usage) for typical workflows and when to use which interface.
+* **Building a dApp?** → Install the [dApp SDK](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/dapp-sdk/installation.md), follow [dApp SDK usage](/docs/canton/integrations-dapp-sdk-usage), and use the [APIs](/docs/canton/integrations-wallet-gateway-apis) (dApp API) as needed.
+* **Running or configuring the Wallet Gateway?** → Start with [Getting Started](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/getting-started/index.md), then [Configuration](https://github.com/canton-network/wallet-gateway/blob/82ec39c9/docs/dapp-building/wallet-gateway/configuration/index.md), [Signing Providers](/docs/canton/integrations-wallet-gateway-signing-providers), and [APIs](/docs/canton/integrations-wallet-gateway-apis) (User API).
+* **Using the User UI or User API?** → See [Usage](/docs/canton/integrations-wallet-gateway-usage) for typical workflows and when to use which interface.
 
 ---
 

@@ -43,7 +43,7 @@ This page lists the error codes most frequently encountered by validator operato
 
 * **Message:** `Insufficient traffic for submission`
 * **Cause:** Your validator's traffic balance is too low to submit the transaction to the sequencer.
-* **Resolution:** Purchase additional traffic via the validator API or enable auto-top-up. See [Transaction Failures](/global-synchronizer/troubleshooting-guide/transaction-failures) for details.
+* **Resolution:** Purchase additional traffic via the validator API or enable auto-top-up. See [Transaction Failures](/docs/canton/global-synchronizer-troubleshooting-guide-transaction-failures) for details.
 
 ## Sequencer Errors
 
@@ -99,7 +99,7 @@ This page lists the error codes most frequently encountered by validator operato
 
 * **Message:** `Cannot convert configuration`
 * **Cause:** A configuration value is missing, empty, or of the wrong type. The error message includes the specific configuration path.
-* **Resolution:** Check the path mentioned in the error against your configuration files and environment variables. See [Configuration Problems](/global-synchronizer/troubleshooting-guide/configuration-problems).
+* **Resolution:** Check the path mentioned in the error against your configuration files and environment variables. See [Configuration Problems](/docs/canton/global-synchronizer-troubleshooting-guide-configuration-problems).
 
 ### DB\_STORAGE\_DEGRADATION
 

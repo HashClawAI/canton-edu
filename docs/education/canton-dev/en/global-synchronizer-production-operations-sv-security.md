@@ -113,7 +113,7 @@ To instruct the SV app to use the externally managed CometBFT governance key ins
 
 Beyond the changes to the SV app deployment described above, the setup of an SV participant to use an external KMS is identical to the setup of a validator participant with KMS. It involves configuration changes to the `splice-participant` Helm chart that depend on the KMS provider you choose.
 
-Please refer to the [Canton documentation on configuring KMS support](/global-synchronizer/reference/kms-driver-guide) for determining the right configuration options to match your desired KMS provider and setup. We provide minimal Helm configuration examples for Google Cloud (GCP) KMS and Amazon Web Services (AWS) KMS below.
+Please refer to the [Canton documentation on configuring KMS support](/docs/canton/global-synchronizer-reference-kms-driver-guide) for determining the right configuration options to match your desired KMS provider and setup. We provide minimal Helm configuration examples for Google Cloud (GCP) KMS and Amazon Web Services (AWS) KMS below.
 
 <Warning>
   The GCP and AWS KMS drivers are available only for licensed users of Canton Enterprise.
@@ -124,7 +124,7 @@ Whatever KMS provider you choose, please note:
 * Values in the `kms` section of the participant Helm chart are implicitly mapped to the Canton participant `crypto.kms` config. This implies that all configuration keys supported by Canton are supported, not only the ones shown in the examples above. Key names in camelCase are automatically converted to kebab-case.
 * For setting extra environment variables and mounting files to configure authentication to the KMS, you can use the `.additionalEnvVars`, `.extraVolumeMounts`, and `.extraVolumes` fields of the Splice participant Helm chart (see the examples).
 * Make sure that your KMS configuration is always included in the values files you pass to `helm install participant ...` or `helm upgrade participant ...`.
-* Canton participants use [session keys](/global-synchronizer/production-operations/key-management#configure-session-keys) to reduce the number of asymmetric cryptographic operations during protocol execution, improving performance and reducing (KMS) costs. By default, Splice participants use session **encryption** keys with a lifetime of one hour. The security implication for KMS-enabled participants is that an adversary with access to a memory snapshot might be able to obtain symmetric keys that allow decrypting up to one hour of encrypted messages. The default session key parameters can be overridden via configuration overrides. Please refer to the [Canton documentation](/global-synchronizer/production-operations/key-management#configure-session-keys) for an overview of the relevant parameters. The use of session **signing** keys is not yet supported for Splice participants.
+* Canton participants use [session keys](/docs/canton/global-synchronizer-production-operations-key-management#configure-session-keys) to reduce the number of asymmetric cryptographic operations during protocol execution, improving performance and reducing (KMS) costs. By default, Splice participants use session **encryption** keys with a lifetime of one hour. The security implication for KMS-enabled participants is that an adversary with access to a memory snapshot might be able to obtain symmetric keys that allow decrypting up to one hour of encrypted messages. The default session key parameters can be overridden via configuration overrides. Please refer to the [Canton documentation](/docs/canton/global-synchronizer-production-operations-key-management#configure-session-keys) for an overview of the relevant parameters. The use of session **signing** keys is not yet supported for Splice participants.
 
 Also recall that you need to deploy a **fresh** participant in order for KMS to be used correctly, which implies that you will need to set up the remaining SV components afresh as well (see above).
 
@@ -134,7 +134,7 @@ The mock configuration below for GCP KMS is included in `splice-node/examples/sv
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # Participant using GCP KMS (mock values; please modify to match your setup)
-# See [Canton KMS operations](/global-synchronizer/production-operations/kms-operations#configure-a-google-cloud-provider-gcp-kms)
+# See [Canton KMS operations](/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-google-cloud-provider-gcp-kms)
 
 kms:
   type: gcp
@@ -164,7 +164,7 @@ extraVolumes:
       secretName: gke-credentials
 ```
 
-Please refer to the [Canton documentation](/global-synchronizer/production-operations/kms-operations#configure-a-google-cloud-provider-gcp-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/global-synchronizer/production-operations/key-management)) the authentication credentials you supply must correspond to a GCP service account with the following IAM permissions:
+Please refer to the [Canton documentation](/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-google-cloud-provider-gcp-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/docs/canton/global-synchronizer-production-operations-key-management)) the authentication credentials you supply must correspond to a GCP service account with the following IAM permissions:
 
 * `cloudkms.cryptoKeyVersions.create`
 * `cloudkms.cryptoKeyVersions.useToDecrypt`
@@ -180,7 +180,7 @@ The mock configuration below for AWS KMS is included in `splice-node/examples/sv
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # Participant using AWS KMS (mock values; please modify to match your setup)
-# See [Canton KMS operations](/global-synchronizer/production-operations/kms-operations#configure-a-amazon-web-services-aws-kms)
+# See [Canton KMS operations](/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-amazon-web-services-aws-kms)
 kms:
   type: aws
   # Replace REGION based on your AWS KMS setup
@@ -206,7 +206,7 @@ additionalEnvVars:
         key: secretAccessKey
 ```
 
-Please refer to the [Canton documentation](/global-synchronizer/production-operations/kms-operations#configure-a-amazon-web-services-aws-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/global-synchronizer/production-operations/key-management)) the authentication credentials you supply must correspond to an entity with the following IAM permissions:
+Please refer to the [Canton documentation](/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-amazon-web-services-aws-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/docs/canton/global-synchronizer-production-operations-key-management)) the authentication credentials you supply must correspond to an entity with the following IAM permissions:
 
 * `kms:CreateKey`
 * `kms:TagResource`

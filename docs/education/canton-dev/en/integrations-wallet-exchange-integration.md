@@ -57,7 +57,7 @@ The following dependency diagrams shows the work items for each milestone.
 
 <img src="https://mintlify.s3.us-west-1.amazonaws.com/cantonfoundation/integrations/wallet/images/delivery_dependencies.png" alt="milestone and delivery dependency diagram" />
 
-**CC with 1-step withdrawal only**: this milestone allows you to support deposits and withdrawals of CC. It includes earning app rewards for all CC deposits. The workflows build on the [Canton Network Token Standard](/appdev/deep-dives/token-standard) which is the foundation for supporting all CN tokens in the next milestone. We consider it an intermediate milestone, as it does not support:
+**CC with 1-step withdrawal only**: this milestone allows you to support deposits and withdrawals of CC. It includes earning app rewards for all CC deposits. The workflows build on the [Canton Network Token Standard](/docs/canton/appdev-deep-dives-token-standard) which is the foundation for supporting all CN tokens in the next milestone. We consider it an intermediate milestone, as it does not support:
 
 * all CN tokens
 * CC users that prefer to control the receipt of transfers, and thus do not want to setup preapprovals
@@ -113,7 +113,7 @@ If you have integrated your exchange with other BTC and other UTXO-based chains,
 * Canton is designed as a network-of-networks where each network is a separate synchronizer that is distinct and separate from other synchronizers. For example, the Global Synchronizer is a synchronizer that connects validators in its network.
 * Validator nodes can be connected to multiple synchronizers. Validator nodes merge the data streams from all connected synchronizers into a single logical stream, which is why they assign a local Ledger API **offset** to every transaction. These offsets are not comparable across validator nodes, but update-ids and record times are.
 * Transactions in Canton have a hierarchical structure that reflects the nested execution and visibility of Daml choices. This hierarchical structure guarantees privacy between parties in the same transaction. Different validator nodes may see different sub-trees of the same transaction depending on which parties they host.
-* **Memos** are stored in the transfer metadata using the `splice.lfdecentralizedtrust.org/reason` key. The [Canton Network Token Standard](/appdev/deep-dives/token-standard) defines this key and a way to parse these memo tags and other transfer information from transactions.
+* **Memos** are stored in the transfer metadata using the `splice.lfdecentralizedtrust.org/reason` key. The [Canton Network Token Standard](/docs/canton/appdev-deep-dives-token-standard) defines this key and a way to parse these memo tags and other transfer information from transactions.
 
 This guide provides a sample architecture and workflows for integrating an exchange with Canton. The expectation is that the integration components are reasonably thin wrappers over the functionality provided by the wallet SDK. The guide expects you to provide these components since they are mostly concerned integrating with your exchange's internal systems and its requirements.
 
@@ -133,7 +133,7 @@ The guide's assumptions might not perfectly match your exchange's actual archite
 
 There are five Canton integration components:
 
-* The **Exchange Validator Node** is a Splice validator node that hosts your `treasuryParty`, which is the party you setup to control funds, receive deposits, and execute transfers for withdrawals. See `exchange-parties-setup` for details on how to setup the `treasuryParty`. You can [deploy and operate a validator yourself](/global-synchronizer/deployment/onboarding-process#validators) or use a node-as-a-service provider to operate it for you.
+* The **Exchange Validator Node** is a Splice validator node that hosts your `treasuryParty`, which is the party you setup to control funds, receive deposits, and execute transfers for withdrawals. See `exchange-parties-setup` for details on how to setup the `treasuryParty`. You can [deploy and operate a validator yourself](/docs/canton/global-synchronizer-deployment-onboarding-process#validators) or use a node-as-a-service provider to operate it for you.
 * The **Canton Integration DB** is used to keep track of the state of withdrawals and the customer-attribution of the funds held by the `treasuryParty`. It is shown as a separate component in the diagram, but it could be part of an existing databases.
 * The **Tx History Ingestion** service uses the [JSON Ledger API](/sdks-tools/api-reference/json-api) exposed by the Exchange Validator Node to read Daml transactions affecting the `treasuryParty`. It parses these transactions and updates the Canton Integration DB with the effect of these transactions (e.g. a successful deposit to a customer account).
 * The **Withdrawal Automation** service is responsible for executing withdrawals requested by the Exchange Internal Systems via the Canton Integration DB.
@@ -302,7 +302,7 @@ We therefore recommend the following approach:
 
 The MVP for supporting all Canton Network tokens builds on the MVP for Canton Coin. The key changes required are:
 
-* Change Tx History Ingestion to also ingest the `TransferInstruction` UTXOs, which are used by the Canton Network Token Standard to represent in-progress transfers (see [docs](/appdev/deep-dives/token-standard#transfer-instruction), [code](https://github.com/hyperledger-labs/splice/blob/2997dd9e55e5d7901e3f475bc10c3dc6ce95ab0c/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L93-L105)).
+* Change Tx History Ingestion to also ingest the `TransferInstruction` UTXOs, which are used by the Canton Network Token Standard to represent in-progress transfers (see [docs](/docs/canton/appdev-deep-dives-token-standard#transfer-instruction), [code](https://github.com/hyperledger-labs/splice/blob/2997dd9e55e5d7901e3f475bc10c3dc6ce95ab0c/token-standard/splice-api-token-transfer-instruction-v1/daml/Splice/Api/Token/TransferInstructionV1.daml#L93-L105)).
 * Adjust the Exchange UI to show the status of in-progress transfers.
 * Adjust the user funds tracking done as part of Tx History Ingestion to credit funds back to the user if they reject a withdrawal transfer. Consider deducting a fee for the failed withdrawal.
 * Implement the Multi-Step Deposit Automation service to auto-accept incoming transfers that are pending receiver acceptance. Ensure that the deposit address is known before accepting the transfer.
@@ -1728,26 +1728,26 @@ If that is not possible, then you can read from a random Canton Coin Scan instan
 
 As explained in `tokenomics-and-rewards`, your validator node will need traffic to submit the transactions to execute withdrawals or accept multi-step deposits. As also explained in that section, the network provides rewards that can be used to fund traffic.
 
-Note also that every validator node has an associated **validator operator party** that represents that validator node's administrator ([docs](/global-synchronizer/deployment/validator-docker-compose)). The validator node automatically mints rewards for that party. It can further be configured to [automatically purchase traffic](/global-synchronizer/deployment/validator-kubernetes) using that party's CC balance, which includes the minted rewards.
+Note also that every validator node has an associated **validator operator party** that represents that validator node's administrator ([docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose)). The validator node automatically mints rewards for that party. It can further be configured to [automatically purchase traffic](/docs/canton/global-synchronizer-deployment-validator-kubernetes) using that party's CC balance, which includes the minted rewards.
 
 We thus recommend the following setup as a starting point to mint rewards and automatically fund traffic:
 
 1. Use the validator operator party as your featured `exchangeParty`. Follow `exchange-party-setup` to get it featured.
 2. `treasury-party-setup` to create a `treasuryParty` with a transfer preapproval managed by your `exchangeParty`.
-3. Setup [automatic traffic purchases in the validator app](/global-synchronizer/deployment/validator-kubernetes).
-4. Optional: setup [auto-sweep](/global-synchronizer/deployment/validator-kubernetes) from the `exchangParty` to your `treasuryParty` to limit the funds managed directly by the validator node.
+3. Setup [automatic traffic purchases in the validator app](/docs/canton/global-synchronizer-deployment-validator-kubernetes).
+4. Optional: setup [auto-sweep](/docs/canton/global-synchronizer-deployment-validator-kubernetes) from the `exchangParty` to your `treasuryParty` to limit the funds managed directly by the validator node.
 
-As a starting point for the automatic traffic purchase configuration, set `targetThroughput` to 2kB/s and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds. Please test this with your expected traffic pattern and adjust as needed. See this [FAQ to measure the traffic spent on an individual transaction](/global-synchronizer/deployment/synchronizer-traffic).
+As a starting point for the automatic traffic purchase configuration, set `targetThroughput` to 2kB/s and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds. Please test this with your expected traffic pattern and adjust as needed. See this [FAQ to measure the traffic spent on an individual transaction](/docs/canton/global-synchronizer-deployment-synchronizer-traffic).
 
 ## Setup Exchange Parties
 
 ### Setup the featured exchange party
 
-As explained above in `reward-minting-and-traffic-funding`, we recommend to use the validator operator party as your featured `exchangeParty`. This party is automatically created when you [deploy your validator node](/global-synchronizer/deployment/validator-docker-compose). Thus the only setup step is to get it featured by the SVs:
+As explained above in `reward-minting-and-traffic-funding`, we recommend to use the validator operator party as your featured `exchangeParty`. This party is automatically created when you [deploy your validator node](/docs/canton/global-synchronizer-deployment-validator-docker-compose). Thus the only setup step is to get it featured by the SVs:
 
 **On DevNet**, you can self-feature your validator operator party as follows:
 
-1. [Log into the wallet UI for the validator user](/global-synchronizer/deployment/validator-kubernetes), which presents itself as in this screenshot:
+1. [Log into the wallet UI for the validator user](/docs/canton/global-synchronizer-deployment-validator-kubernetes), which presents itself as in this screenshot:
 
    <img src="https://mintlify.s3.us-west-1.amazonaws.com/cantonfoundation/integrations/wallet/images/wallet_ui.png" alt="image" />
 
@@ -1761,7 +1761,7 @@ That's all. Continue with setting up your treasury party.
 
 **On MainNet**, apply for featured status for your validator operator party as follows:
 
-1. [Log into the wallet UI for the validator user](/global-synchronizer/deployment/validator-kubernetes) on your MainNet validator node.
+1. [Log into the wallet UI for the validator user](/docs/canton/global-synchronizer-deployment-validator-kubernetes) on your MainNet validator node.
 2. Copy the party-id of your validator operator party using the copy button right of the abbreviated `"google-oaut.."` party name in the screenshot above.
 3. Apply for featured application status using this link: [https://sync.global/featured-app-request/](https://sync.global/featured-app-request/)
 
@@ -1793,11 +1793,11 @@ You can test the party setup on LocalNet or DevNet as follows:
 
 ## Setup Ledger API Users
 
-Clients need to [authenticate as a Ledger API user](/appdev/deep-dives/authorization) to access the Ledger API of your Exchange Validator Node. You can manage Ledger API users and their rights using the `/v2/users/...` [endpoints of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
+Clients need to [authenticate as a Ledger API user](/docs/canton/appdev-deep-dives-authorization) to access the Ledger API of your Exchange Validator Node. You can manage Ledger API users and their rights using the `/v2/users/...` [endpoints of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
 
-You will need to authenticate as an existing user that has `participant_admin` rights to create additional users and grant rights. One option is to authenticate as the `ledger-api-user` that you [configured when setting up authentication for your validator node](/global-synchronizer/deployment/oidc-providers). Another option is to [log-in to your Splice Wallet UI for the validator operatory party](/global-synchronizer/deployment/validator-kubernetes) and use the JWT token used by the UI.
+You will need to authenticate as an existing user that has `participant_admin` rights to create additional users and grant rights. One option is to authenticate as the `ledger-api-user` that you [configured when setting up authentication for your validator node](/docs/canton/global-synchronizer-deployment-oidc-providers). Another option is to [log-in to your Splice Wallet UI for the validator operatory party](/docs/canton/global-synchronizer-deployment-validator-kubernetes) and use the JWT token used by the UI.
 
-We recommend that you setup one user per service that needs to access the Ledger API. This way you can easily manage permissions and access rights for each service independently. The [rights](/appdev/deep-dives/authorization#access-tokens-and-rights) required by the integration components are as follows:
+We recommend that you setup one user per service that needs to access the Ledger API. This way you can easily manage permissions and access rights for each service independently. The [rights](/docs/canton/appdev-deep-dives-authorization#access-tokens-and-rights) required by the integration components are as follows:
 
 | Component                                                           | Required Rights                                   | Purpose                                                                                                                                                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1812,7 +1812,7 @@ Required Ledger API User Rights
 
 `.dar` files define the Daml workflows used by the token admins for their tokens. They must be uploaded to your Exchange Validator Node to be able to process withdrawals and deposits for those tokens.
 
-The `.dar` files for Canton Coin are managed by the Validator Node itself. The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` endpoint of the [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316). See this [how-to guide](/global-synchronizer/production-operations/manage-packages) for more information.
+The `.dar` files for Canton Coin are managed by the Validator Node itself. The `.dar` files for other tokens need to be uploaded by you using the `/v2/packages` endpoint of the [Ledger API](https://github.com/digital-asset/canton/blob/eeb56bc5d9779a7f918893b7a6b15e0b312a044e/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L316). See this [how-to guide](/docs/canton/global-synchronizer-production-operations-manage-packages) for more information.
 
 <Warning>
   Only upload `.dar` files from token admins that you trust. The uploaded `.dar` files define the choices available on active contracts. Uploading a malicious `.dar` file could result in granting an attacker an unintended delegation on your contracts, which could lead to loss of funds.
@@ -1820,7 +1820,7 @@ The `.dar` files for Canton Coin are managed by the Validator Node itself. The `
 
 ## Monitoring
 
-See the Splice documentation for guidance on [how to monitor your validator node](/global-synchronizer/production-operations/splice-metrics-overview). Note in particular that it includes [Grafana dashboards](/global-synchronizer/production-operations/key-metrics) for monitoring the traffic usage, balances of local parties (e.g., the `exchangeParty`), and [many other metrics](/global-synchronizer/production-operations/splice-metrics-overview).
+See the Splice documentation for guidance on [how to monitor your validator node](/docs/canton/global-synchronizer-production-operations-splice-metrics-overview). Note in particular that it includes [Grafana dashboards](/docs/canton/global-synchronizer-production-operations-key-metrics) for monitoring the traffic usage, balances of local parties (e.g., the `exchangeParty`), and [many other metrics](/docs/canton/global-synchronizer-production-operations-splice-metrics-overview).
 
 ## Rolling out Major Splice Upgrades
 
@@ -1854,7 +1854,7 @@ We recommend to roll-out the upgrade as follows:
 
    > 1. Retrieve the `synchronizerId` of the last ingested transaction from the Canton Integration DB.
    >
-   > 2. Log into the [Canton Console of your validator node](/global-synchronizer/production-operations/canton-console) and query the offset `offRecovery` assigned to the ACS import transactions at time `0001-01-01T00:00:00.000000Z` using
+   > 2. Log into the [Canton Console of your validator node](/docs/canton/global-synchronizer-production-operations-canton-console) and query the offset `offRecovery` assigned to the ACS import transactions at time `0001-01-01T00:00:00.000000Z` using
    >
    >    ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
    >    def parseTimestamp(t: String) = {
@@ -1896,7 +1896,7 @@ Restoring these components from a backup can lead to data loss, which needs to b
 
 ## Backing up the Exchange Validator Node
 
-Follow the [Splice documentation on how to backup a validator node](/global-synchronizer/production-operations/validator-backups).
+Follow the [Splice documentation on how to backup a validator node](/docs/canton/global-synchronizer-production-operations-validator-backups).
 
 ## Backing up the Canton Integration DB
 
@@ -1906,9 +1906,9 @@ Follow your internal guidance and best practices on what DB system to use and ho
 
 ## Restoring the Exchange Validator Node from a Backup
 
-Follow the [Splice documentation on how to restore a validator node from a backup](/global-synchronizer/production-operations/validator-disaster-recovery) to restore the Exchange Validator Node from a backup that is less than 30 days old.
+Follow the [Splice documentation on how to restore a validator node from a backup](/docs/canton/global-synchronizer-production-operations-validator-disaster-recovery) to restore the Exchange Validator Node from a backup that is less than 30 days old.
 
-The node will resubscribe to transaction data from the synchronizer and recover all committed transactions and the corresponding changes to the set of active contracts (i.e. UTXOs). However validator-node local data written after the backup will be lost, as described on the [Canton documentation page](/global-synchronizer/production-operations/node-backup-restore).
+The node will resubscribe to transaction data from the synchronizer and recover all committed transactions and the corresponding changes to the set of active contracts (i.e. UTXOs). However validator-node local data written after the backup will be lost, as described on the [Canton documentation page](/docs/canton/global-synchronizer-production-operations-node-backup-restore).
 
 In the context of the recommended `integration-workflows`, this data loss affects:
 
@@ -1927,7 +1927,7 @@ Follow these steps to restore the Exchange Validator Node from a backup:
 
 4. Reupload all `.dar` files that were uploaded after the backup.
 
-5. Log into the [Canton Console of your validator node](/global-synchronizer/production-operations/canton-console) and query the offset `offRecovery` assigned to `tRecovery` using
+5. Log into the [Canton Console of your validator node](/docs/canton/global-synchronizer-production-operations-canton-console) and query the offset `offRecovery` assigned to `tRecovery` using
 
    ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
    def parseTimestamp(t: String) = {
@@ -1958,7 +1958,7 @@ Follow these steps to restore the Exchange Validator Node from a backup:
 Once Tx History Ingestion has caught up, the integration workflows will continue as before the disaster.
 
 <Note>
-  These steps assume that record times assigned to transactions are unique, which is the case unless you are using participant-local operations that modify the transaction history. These are ACS imports, party migrations, party replication, or [repair commands](/global-synchronizer/production-operations/node-backup-restore). Multi-hosting a party from the start does not lead to non-unique record times.
+  These steps assume that record times assigned to transactions are unique, which is the case unless you are using participant-local operations that modify the transaction history. These are ACS imports, party migrations, party replication, or [repair commands](/docs/canton/global-synchronizer-production-operations-node-backup-restore). Multi-hosting a party from the start does not lead to non-unique record times.
 
   If your are using participant-local operations that modify the transaction history, then you we recommend adjusting Step 5 as follows to deal with the rare case of a partial ingestion of transactions with the same record time:
 
@@ -1995,7 +1995,7 @@ We recommend doing so by having the Tx History Ingestion re-create the withdrawa
 
 When testing on your laptop or in CI, we recommend using Splice's [LocalNet](/sdks-tools/development-tools/localnet), which is a Docker-Compose based local deployment of a Global Synchronizer and Canton Coin. Automate the exchange parties setup as part of your test setup, so that you can start from a clean state for each test run while reusing the same LocalNet. Thereby achieving test isolation without the overhead of starting and stopping LocalNet for each test run.
 
-Alternatively you can consider setting up a DevNet validator node using either Docker-Compose or k8s as [documented in Splice](/global-synchronizer/deployment/onboarding-process) and using that for testing.
+Alternatively you can consider setting up a DevNet validator node using either Docker-Compose or k8s as [documented in Splice](/docs/canton/global-synchronizer-deployment-onboarding-process) and using that for testing.
 
 ## Test Scenarios
 
@@ -2031,9 +2031,9 @@ This page describes the following additional features that you can consider addi
 
 ## Optimizing App Rewards
 
-The MVP for all CN tokens described in the `exchange-integration-overview` section comes with the limitation that application rewards are only earned on deposits of CC, but not on deposits of other CN tokens. We recommend to lift this limitation and to improve the profitability of the integration using Canton Coin's [featured application activity marker mechanism](/overview/reference/canton-coin-tokenomics). It allows tagging transactions with a featured application activity marker and earn application rewards for them.
+The MVP for all CN tokens described in the `exchange-integration-overview` section comes with the limitation that application rewards are only earned on deposits of CC, but not on deposits of other CN tokens. We recommend to lift this limitation and to improve the profitability of the integration using Canton Coin's [featured application activity marker mechanism](/docs/canton/overview-reference-canton-coin-tokenomics). It allows tagging transactions with a featured application activity marker and earn application rewards for them.
 
-The idea is to tag both the initatiation of withdrawals and the acceptance of deposit offers with a featured application activity marker to attribute the transaction to the `exchangeParty`. Tagging these transactions is compliant with the [guidance given in the Splice documentation](/overview/reference/canton-coin-tokenomics), as they correspond to transfers and create value for the network.
+The idea is to tag both the initatiation of withdrawals and the acceptance of deposit offers with a featured application activity marker to attribute the transaction to the `exchangeParty`. Tagging these transactions is compliant with the [guidance given in the Splice documentation](/docs/canton/overview-reference-canton-coin-tokenomics), as they correspond to transfers and create value for the network.
 
 In order for the `treasuryParty` to create featured application activity markers in the name of the `exchangeParty`, a delegation contract is required. A suitable [delegation template](https://github.com/hyperledger-labs/splice/blob/5870d2d8b0c6b9dfcf8afe11ab0685e2ee58342f/daml/splice-util-featured-app-proxies/daml/Splice/Util/FeaturedApp/DelegateProxy.daml#L35-L55) called `DelegateProxy` is part of the [splice-util-featured-app-proxies](https://github.com/hyperledger-labs/splice/tree/main/daml/splice-util-featured-app-proxies) package. We recommend to use this package and template as explained in the sections below.
 
@@ -2059,11 +2059,11 @@ The following steps describe how to adjust the Withdrawal Automation to tag with
 5. Change the initialization code of the Withdrawal Automation to:
 
    1. query the active contracts of the `exchangeParty` for the `DelegateProxy` contract created in the previous step and store its contract ID in `proxyCid`.
-   2. query the active contracts of the `exchangeParty` for the `FeaturedAppRight` contract and store its contract ID in `featuredAppRightCid` and its [create-event-blob](/appdev/deep-dives/explicit-contract-disclosure) in `featuredAppRightEventBlob`.
+   2. query the active contracts of the `exchangeParty` for the `FeaturedAppRight` contract and store its contract ID in `featuredAppRightCid` and its [create-event-blob](/docs/canton/appdev-deep-dives-explicit-contract-disclosure) in `featuredAppRightEventBlob`.
 
 6. Change the Withdrawal Automation code that initiates a withdrawal transfer to call the `DelegateProxy_TransferFactory_Transfer` choice instead of the `TransferFactory_Transfer` choice, as shown in [this test case](https://github.com/hyperledger-labs/splice/blob/5870d2d8b0c6b9dfcf8afe11ab0685e2ee58342f/daml/splice-util-featured-app-proxies-test/daml/Splice/Scripts/TestFeaturedDepositsAndWithdrawals.daml#L204-L215).
 
-   The call to the choice takes the `proxyCid` and the `featuredAppRightCid` as parameters alongside the actual transfer parameters. Pass in the `featuredAppRightEventBlob` as an [additional disclosed contract](/appdev/deep-dives/explicit-contract-disclosure).
+   The call to the choice takes the `proxyCid` and the `featuredAppRightCid` as parameters alongside the actual transfer parameters. Pass in the `featuredAppRightEventBlob` as an [additional disclosed contract](/docs/canton/appdev-deep-dives-explicit-contract-disclosure).
 
 The Tx History Ingestion as described here does not need changing, as it descends into the `TransferFactory_Transfer` choice that is called by the `DelegateProxy_TransferFactory_Transfer` choice.
 
@@ -2092,7 +2092,7 @@ You can shard your treasury over multiple parties as follows:
 
 ## Multi-Hosting the Treasury Party
 
-The documentation on setting up the exchange party describes how to setup a party with a single confirming node. This can be sufficient but the confirming nodes for the party are essential to keep your party secure and compromise of them could lead to loss of funds. Refer to the trust model [trust model](/overview/reference/external-party) for more details.
+The documentation on setting up the exchange party describes how to setup a party with a single confirming node. This can be sufficient but the confirming nodes for the party are essential to keep your party secure and compromise of them could lead to loss of funds. Refer to the trust model [trust model](/docs/canton/overview-reference-external-party) for more details.
 
 To guard against compromise of the confirming nodes, you can setup your `treasuryParty` with multiple confirming nodes and a threshold N > 1. As long as less than N nodes are compromised, your party is still secured. Common setups are:
 
@@ -2117,7 +2117,7 @@ Any .dar file that you upload, both as part of the initial setup but also whenev
 
 Both nodes serve all transactions for the `treasuryParty` and can thus be used in principle to read them. However, offsets are not comparable across nodes so it is recommended that to run Tx History Ingestion against the same node under normal operations. If you do need to switch nodes, you can do so following the same procedure used for restoring a validator from a backup to resynchronize Tx History Ingestion against the offsets of the new node.
 
-Preparation and execution of transactions can also be done against any of the confirming nodes of the party. However, [Command Deduplication](/appdev/deep-dives/command-deduplication) is only performed by the executing node so if you submit across nodes you cannot rely on it. It is therefore recommend \_[not]() to rely on command deduplication at all in favor of UTXO and max record time based deuplication.
+Preparation and execution of transactions can also be done against any of the confirming nodes of the party. However, [Command Deduplication](/docs/canton/appdev-deep-dives-command-deduplication) is only performed by the executing node so if you submit across nodes you cannot rely on it. It is therefore recommend \_[not]() to rely on command deduplication at all in favor of UTXO and max record time based deuplication.
 
 <div className="todo">
   Link to recommended deduplication strategy [https://github.com/canton-network/wallet/issues/423](https://github.com/canton-network/wallet/issues/423)
@@ -2140,7 +2140,7 @@ Future versions of Canton will allow changing the confirming nodes without the n
 
 ## Using a KMS for Validator Node Keys
 
-See the [Splice docs for how to setup you validator node with keys stored in a KMS](/global-synchronizer/production-operations/validator-security). Consider doing so as an additional security hardening measure to protect the keys of the confirming node(s)\_ of your `treasuryParty`.
+See the [Splice docs for how to setup you validator node with keys stored in a KMS](/docs/canton/global-synchronizer-production-operations-validator-security). Consider doing so as an additional security hardening measure to protect the keys of the confirming node(s)\_ of your `treasuryParty`.
 
 ## Using the gRPC Ledger API
 

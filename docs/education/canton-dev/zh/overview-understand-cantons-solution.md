@@ -216,17 +216,17 @@ flowchart LR
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="用例" icon="building" href="/overview/understand/use-cases">
+  <Card title="用例" icon="building" href="/zh/docs/canton/overview-understand-use-cases">
     请参阅 Canton 的具体实例。
-  </Card><Card title="核心概念" icon="book" href="/overview/understand/core-concepts">
+  </Card><Card title="核心概念" icon="book" href="/zh/docs/canton/overview-understand-core-concepts">
     了解参与方、验证者和同步者。
   </Card>
 
-  <Card title="架构深度探究" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="架构深度探究" icon="diagram-project" href="/zh/docs/canton/overview-learn-architecture">
     了解组件如何在技术上协同工作。
   </Card>
 
-  <Card title="隐私模型" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="隐私模型" icon="lock" href="/zh/docs/canton/overview-learn-privacy-model">
     详细探讨隐私保证。
   </Card>
 </CardGroup>

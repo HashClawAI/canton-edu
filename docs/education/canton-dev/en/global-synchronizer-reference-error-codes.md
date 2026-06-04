@@ -23,7 +23,7 @@ tags:
 
 Canton uses a structured error code system across all components. Every error logged or returned via the API follows the format `ERROR_CODE_ID(category_id, correlation_id_prefix): human-readable message`. This page explains how to read these errors, which categories require operator action, and what the most common operational errors mean.
 
-For gRPC error codes encountered during application development, see the [AppDev error codes reference](/appdev/reference/error-codes).
+For gRPC error codes encountered during application development, see the [AppDev error codes reference](/docs/canton/appdev-reference-error-codes).
 
 ## Reading Error Codes in Logs
 
@@ -2955,11 +2955,11 @@ These errors appear when your participant cannot communicate with the synchroniz
 
 ## Sequencer Errors
 
-This section will be expanded in a future update. For sequencer-related troubleshooting, see [Troubleshooting Methodology](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology).
+This section will be expanded in a future update. For sequencer-related troubleshooting, see [Troubleshooting Methodology](/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology).
 
 ## Mediator Errors
 
-This section will be expanded in a future update. For mediator-related troubleshooting, see [Troubleshooting Methodology](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology).
+This section will be expanded in a future update. For mediator-related troubleshooting, see [Troubleshooting Methodology](/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology).
 
 ## ACS Commitment Errors
 
@@ -3001,7 +3001,7 @@ These errors are specific to Splice validator and SV app operation on the Canton
 
 ## Error escalation
 
-For the decision path on how to triage and escalate errors, see [Error Escalation](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology#error-escalation) in the troubleshooting methodology.
+For the decision path on how to triage and escalate errors, see [Error Escalation](/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology#error-escalation) in the troubleshooting methodology.
 
 ---
 

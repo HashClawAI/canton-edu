@@ -58,7 +58,7 @@ tags:
 Open a module page for declarations, type signatures, warnings, and lifecycle details.
 
 <div class="x2mdx-ref-card-grid">
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-action">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-action">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Action</h3>
 
@@ -97,7 +97,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-action-state">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-action-state">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Action.State</h3>
 
@@ -136,7 +136,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-action-state-class">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-action-state-class">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Action.State.Class</h3>
 
@@ -175,7 +175,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-assert">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-assert">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Assert</h3>
 
@@ -214,7 +214,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-bifunctor">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-bifunctor">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Bifunctor</h3>
 
@@ -253,7 +253,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-crypto-text">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-crypto-text">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Crypto.Text</h3>
 
@@ -292,7 +292,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-date">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-date">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Date</h3>
 
@@ -331,7 +331,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-either">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-either">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Either</h3>
 
@@ -370,7 +370,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-exception">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-exception">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Exception</h3>
 
@@ -411,7 +411,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-fail">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-fail">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Fail</h3>
 
@@ -450,7 +450,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-foldable">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-foldable">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Foldable</h3>
 
@@ -489,7 +489,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-functor">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-functor">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Functor</h3>
 
@@ -528,7 +528,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-internal-interface-anyview">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-internal-interface-anyview">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Internal.Interface.AnyView</h3>
 
@@ -567,7 +567,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-internal-interface-anyview-types">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-internal-interface-anyview-types">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Internal.Interface.AnyView\.Types</h3>
 
@@ -606,7 +606,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-list">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-list">
     <div class="x2mdx-ref-card-head">
       <h3>DA.List</h3>
 
@@ -645,7 +645,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-list-builtinorder">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-list-builtinorder">
     <div class="x2mdx-ref-card-head">
       <h3>DA.List.BuiltinOrder</h3>
 
@@ -684,7 +684,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-list-total">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-list-total">
     <div class="x2mdx-ref-card-head">
       <h3>DA.List.Total</h3>
 
@@ -723,7 +723,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-logic">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-logic">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Logic</h3>
 
@@ -762,7 +762,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-map">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-map">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Map</h3>
 
@@ -801,7 +801,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-math">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-math">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Math</h3>
 
@@ -840,7 +840,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-monoid">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-monoid">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Monoid</h3>
 
@@ -879,7 +879,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-nonempty">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-nonempty">
     <div class="x2mdx-ref-card-head">
       <h3>DA.NonEmpty</h3>
 
@@ -918,7 +918,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-nonempty-types">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-nonempty-types">
     <div class="x2mdx-ref-card-head">
       <h3>DA.NonEmpty.Types</h3>
 
@@ -957,7 +957,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-numeric">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-numeric">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Numeric</h3>
 
@@ -996,7 +996,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-optional">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-optional">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Optional</h3>
 
@@ -1035,7 +1035,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-record">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-record">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Record</h3>
 
@@ -1074,7 +1074,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-semigroup">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-semigroup">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Semigroup</h3>
 
@@ -1113,7 +1113,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-set">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-set">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Set</h3>
 
@@ -1152,7 +1152,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-stack">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-stack">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Stack</h3>
 
@@ -1191,7 +1191,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-text">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-text">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Text</h3>
 
@@ -1230,7 +1230,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-textmap">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-textmap">
     <div class="x2mdx-ref-card-head">
       <h3>DA.TextMap</h3>
 
@@ -1269,7 +1269,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-time">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-time">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Time</h3>
 
@@ -1308,7 +1308,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-traversable">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-traversable">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Traversable</h3>
 
@@ -1347,7 +1347,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-tuple">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-tuple">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Tuple</h3>
 
@@ -1386,7 +1386,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/da-validation">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-da-validation">
     <div class="x2mdx-ref-card-head">
       <h3>DA.Validation</h3>
 
@@ -1425,7 +1425,7 @@ Open a module page for declarations, type signatures, warnings, and lifecycle de
     </dl>
   </a>
 
-  <a class="x2mdx-ref-card" href="/appdev/reference/daml-standard-library/prelude">
+  <a class="x2mdx-ref-card" href="/docs/canton/appdev-reference-daml-standard-library-prelude">
     <div class="x2mdx-ref-card-head">
       <h3>Prelude</h3>
 

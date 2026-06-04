@@ -303,11 +303,11 @@ template AgreementProposal
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Network Architecture" icon="network-wired" href="/appdev/modules/m2-network-architecture">
+  <Card title="Network Architecture" icon="network-wired" href="/docs/canton/appdev-modules-m2-network-architecture">
     Compare network architecture and topology.
   </Card>
 
-  <Card title="Module 3: Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="Module 3: Daml" icon="code" href="/docs/canton/appdev-modules-m3-dev-environment">
     Start writing Daml smart contracts.
   </Card>
 </CardGroup>

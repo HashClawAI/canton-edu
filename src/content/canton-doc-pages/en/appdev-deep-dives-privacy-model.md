@@ -137,9 +137,9 @@ The key principle: each party can audit everything they are entitled to see, and
 
 ## Next Steps
 
-* [Privacy Model Explained](/overview/learn/privacy-model) -- Technical overview of sub-transaction privacy at the protocol level
-* [Privacy Differences from Ethereum](/appdev/modules/m2-privacy-differences) -- How Canton's model compares to public blockchains
-* [Design Patterns](/appdev/modules/m3-design-patterns) -- Patterns for authorization and multi-party workflows
+* [Privacy Model Explained](/docs/canton/overview-learn-privacy-model) -- Technical overview of sub-transaction privacy at the protocol level
+* [Privacy Differences from Ethereum](/docs/canton/appdev-modules-m2-privacy-differences) -- How Canton's model compares to public blockchains
+* [Design Patterns](/docs/canton/appdev-modules-m3-design-patterns) -- Patterns for authorization and multi-party workflows
 
 ---
 

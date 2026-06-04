@@ -122,11 +122,11 @@ Canton：分层——Super Validator 协调层、Validator 服务 Party、应用
 ## 下一步
 
 <CardGroup cols={2}>
-  <Card title="架构深入" icon="diagram-project" href="/overview/learn/architecture">
+  <Card title="架构深入" icon="diagram-project" href="/zh/docs/canton/overview-learn-architecture">
     Canton 架构详细文档。
   </Card>
 
-  <Card title="开始构建" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="开始构建" icon="code" href="/zh/docs/canton/appdev-modules-m3-dev-environment">
     开始编写 Daml 智能合约。
   </Card>
 </CardGroup>

@@ -23,7 +23,7 @@ tags:
 
 This page covers the configuration options available to validator and Super Validator (SV) operators on Canton Network. It covers Splice app configuration, Canton participant settings, database setup, authentication, traffic management, pruning, and observability.
 
-For application developer configuration (Canton + DPM), see the [AppDev Configuration Reference](/appdev/reference/configuration-reference).
+For application developer configuration (Canton + DPM), see the [AppDev Configuration Reference](/docs/canton/appdev-reference-configuration-reference).
 
 ## Configuration format
 
@@ -33,7 +33,7 @@ When deploying with Helm, pass `ADDITIONAL_CONFIG` values through the `additiona
 
 ### Custom bootstrap scripts
 
-Custom bootstrap scripts run Canton Console commands at node startup. This section will be expanded in a future update. See the [Canton Console Scripting](/global-synchronizer/canton-console/scripting) page for script syntax and examples.
+Custom bootstrap scripts run Canton Console commands at node startup. This section will be expanded in a future update. See the [Canton Console Scripting](/docs/canton/global-synchronizer-canton-console-scripting) page for script syntax and examples.
 
 ## Validator node configuration
 
@@ -205,7 +205,7 @@ For mutual TLS, add `sslcert` and `sslkey` pointing to the client certificate an
 
 ## Authentication
 
-Validator components authenticate to each other and to external users through JWT tokens issued by an OpenID Connect (OIDC) provider. Full setup instructions are on the [OIDC Providers](/global-synchronizer/deployment/oidc-providers) page. The key configuration secrets are:
+Validator components authenticate to each other and to external users through JWT tokens issued by an OpenID Connect (OIDC) provider. Full setup instructions are on the [OIDC Providers](/docs/canton/global-synchronizer-deployment-oidc-providers) page. The key configuration secrets are:
 
 ```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # Validator backend -> participant authentication
@@ -299,7 +299,7 @@ participantPruningSchedule:
   If your node is offline longer than the pruning retention window, it may become corrupted as apps race to catch up with pruned data. Set the retention to a value that reflects your uptime guarantee -- 30 days is a reasonable starting point, since sequencers are also pruned after 30 days.
 </Warning>
 
-See the Canton documentation on [pruning operations](/global-synchronizer/production-operations/pruning#participant-node-pruning) for more details.
+See the Canton documentation on [pruning operations](/docs/canton/global-synchronizer-production-operations-pruning#participant-node-pruning) for more details.
 
 ## Monitoring and observability
 

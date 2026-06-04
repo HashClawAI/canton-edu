@@ -232,7 +232,7 @@ Canton explorers show your activity:
     Integrate 钱包 functionality into your app.
   </Card>
 
-  <Card title="代币标准" icon="coins" href="/overview/understand/cips-introduction">
+  <Card title="代币标准" icon="coins" href="/zh/docs/canton/overview-understand-cips-introduction">
     Understand the Canton 代币标准.
   </Card>
 </CardGroup>

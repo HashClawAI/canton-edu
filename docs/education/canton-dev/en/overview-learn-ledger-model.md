@@ -295,7 +295,7 @@ choice ClaimAfterDeadline : ()
     -- ... claim logic
 ```
 
-See [Working with Time](/appdev/modules/m3-working-with-time) for the full set of time primitives available in Canton 3.x.
+See [Working with Time](/docs/canton/appdev-modules-m3-working-with-time) for the full set of time primitives available in Canton 3.x.
 
 ## Composability
 
@@ -314,9 +314,9 @@ The ledger enforces this atomicity — either the entire swap commits or none of
 
 ## Related Topics
 
-* [Contract Templates](/appdev/modules/m3-contract-templates) — write your first Daml contracts
-* [Choices](/appdev/modules/m3-choices) — add behavior to contracts
-* [Privacy Model](/overview/learn/privacy-model) — how views enable privacy
+* [Contract Templates](/docs/canton/appdev-modules-m3-contract-templates) — write your first Daml contracts
+* [Choices](/docs/canton/appdev-modules-m3-choices) — add behavior to contracts
+* [Privacy Model](/docs/canton/overview-learn-privacy-model) — how views enable privacy
 
 ---
 

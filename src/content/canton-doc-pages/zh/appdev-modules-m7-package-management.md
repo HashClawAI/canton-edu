@@ -93,7 +93,7 @@ DAR 体积小，小项目也可纳入版本控制。专用库的优势是将制�
 * 发布到对手方可访问的共享制品库
 * 提供构建说明以便从源码编译并验证 DAR 一致
 * 附变更日志说明版本间差异
-* 沟通升级时间线（见 [Upgrade Deployment](/appdev/modules/m6-deployment)）
+* 沟通升级时间线（见 [Upgrade Deployment](/zh/docs/canton/appdev-modules-m6-deployment)）
 
 ## 包模块化
 
@@ -103,8 +103,8 @@ DAR 体积小，小项目也可纳入版本控制。专用库的优势是将制�
 
 ## 下一步
 
-* [Security Best Practices](/appdev/modules/m7-security) — 保护包与部署流水线
-* [Performance](/appdev/modules/m7-performance) — Canton 应用优化策略
+* [Security Best Practices](/zh/docs/canton/appdev-modules-m7-security) — 保护包与部署流水线
+* [Performance](/zh/docs/canton/appdev-modules-m7-performance) — Canton 应用优化策略
 
 ---
 

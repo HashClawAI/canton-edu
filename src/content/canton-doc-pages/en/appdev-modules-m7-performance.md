@@ -21,16 +21,16 @@ tags:
 
 > Where to find Canton application performance guidance — moved to the consolidated Performance Optimization deep-dive.
 
-The detailed performance guidance — on-ledger vs off-ledger trade-offs, contract design for performance, PQS query optimization, parallel command submission, traffic management, and the worked example for reducing contention — now lives with the rest of the performance material in [Performance Optimization](/appdev/deep-dives/performance-optimization).
+The detailed performance guidance — on-ledger vs off-ledger trade-offs, contract design for performance, PQS query optimization, parallel command submission, traffic management, and the worked example for reducing contention — now lives with the rest of the performance material in [Performance Optimization](/docs/canton/appdev-deep-dives-performance-optimization).
 
 For diagnosing performance issues in a running validator, see also:
 
-* [Performance Issues](/appdev/troubleshooting#performance-issues-2) and [Contention](/appdev/troubleshooting#contention) in the troubleshooting cheat sheet.
+* [Performance Issues](/docs/canton/appdev-troubleshooting#performance-issues-2) and [Contention](/docs/canton/appdev-troubleshooting#contention) in the troubleshooting cheat sheet.
 
 ## Next Steps
 
-* [Security Best Practices](/appdev/modules/m7-security) — Authorization and secure configuration
-* [Package Management](/appdev/modules/m7-package-management) — Efficient DAR management
+* [Security Best Practices](/docs/canton/appdev-modules-m7-security) — Authorization and secure configuration
+* [Package Management](/docs/canton/appdev-modules-m7-package-management) — Efficient DAR management
 
 ---
 

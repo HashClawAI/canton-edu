@@ -104,9 +104,9 @@ This approach is explicit and requires active cooperation from contract stakehol
 
 ## Further Reading
 
-* [Upgrade Compatibility](/appdev/modules/m6-upgrade-compatibility) -- Full compatibility rules for SCU
-* [Package Naming](/appdev/modules/m6-package-naming) -- Naming conventions that account for breaking changes
-* [Smart Contract Upgrades in Production](/appdev/modules/m7-smart-contract-upgrades) -- Operational considerations for rollouts
+* [Upgrade Compatibility](/docs/canton/appdev-modules-m6-upgrade-compatibility) -- Full compatibility rules for SCU
+* [Package Naming](/docs/canton/appdev-modules-m6-package-naming) -- Naming conventions that account for breaking changes
+* [Smart Contract Upgrades in Production](/docs/canton/appdev-modules-m7-smart-contract-upgrades) -- Operational considerations for rollouts
 
 ---
 

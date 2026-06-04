@@ -29,7 +29,7 @@ Use this template for any incident that does not have a dedicated runbook.
 
 1. **Detect** -- Identify the symptom. How was the issue discovered? (Alert, user report, routine check.)
 2. **Assess** -- Determine scope and severity. Is the validator offline? Are transactions failing? Is data at risk?
-3. **Act** -- Execute the appropriate fix. Follow the relevant runbook below or the [troubleshooting methodology](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology).
+3. **Act** -- Execute the appropriate fix. Follow the relevant runbook below or the [troubleshooting methodology](/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology).
 4. **Verify** -- Confirm the fix. Check health endpoints, submit a test transaction, review logs for recurring errors.
 5. **Document** -- Record what happened, what caused it, what was done, and any follow-up actions.
 

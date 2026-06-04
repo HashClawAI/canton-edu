@@ -33,7 +33,7 @@ Canton 不会向所有 validator 广播完整交易。每笔交易分解为**视
 * Synchronizer（sequencer 与 mediator）处理加密消息，不见明文交易数据
 * Validator 仅存储涉及其托管 party 的合约与交易
 
-可见性规则详见 [Privacy Model Explained](/overview/learn/privacy-model)。
+可见性规则详见 [Privacy Model Explained](/zh/docs/canton/overview-learn-privacy-model)。
 
 ### 无全局状态可见性
 
@@ -61,7 +61,7 @@ PQS 数据保留取决于底层 PostgreSQL 维护策略，由你控制保留策�
 
 ### Daml 中的审计方模式
 
-可在智能合约层将审计 party 加为 observer，审计方可见合约及影响它的所有事件但不可修改。代码示例见 [Privacy Model](/overview/learn/privacy-model)。
+可在智能合约层将审计 party 加为 observer，审计方可见合约及影响它的所有事件但不可修改。代码示例见 [Privacy Model](/zh/docs/canton/overview-learn-privacy-model)。
 
 ## 数据驻留
 
@@ -97,9 +97,9 @@ Canton 账本只追加。合约就地修改，而是归档并替换。交易历�
 
 ## 延伸阅读
 
-* [Privacy Model Explained](/overview/learn/privacy-model) — 子交易隐私详情
-* [Security Best Practices](/appdev/modules/m7-security) — 保护 Canton 应用
-* [Architecture Overview](/overview/learn/architecture) — Validator 与 synchronizer 关系
+* [Privacy Model Explained](/zh/docs/canton/overview-learn-privacy-model) — 子交易隐私详情
+* [Security Best Practices](/zh/docs/canton/appdev-modules-m7-security) — 保护 Canton 应用
+* [Architecture Overview](/zh/docs/canton/overview-learn-architecture) — Validator 与 synchronizer 关系
 
 ---
 

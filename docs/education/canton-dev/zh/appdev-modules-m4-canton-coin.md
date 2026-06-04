@@ -98,8 +98,8 @@ Validator 可启用 **auto-top-up**，在预算低于配置阈值时自动购买
 
 ## 延伸阅读
 
-* [Canton Coin 概述](/overview/understand/canton-coin) — CC 代币经济学、validator 奖励与治理
-* [后端开发](/appdev/modules/m4-backend-dev) — 含 traffic 不足失败在内的交易错误处理
+* [Canton Coin 概述](/zh/docs/canton/overview-understand-canton-coin) — CC 代币经济学、validator 奖励与治理
+* [后端开发](/zh/docs/canton/appdev-modules-m4-backend-dev) — 含 traffic 不足失败在内的交易错误处理
 * [cn-quickstart](https://github.com/digital-asset/cn-quickstart) — Canton 应用中钱包集成的可运行示例
 
 ---

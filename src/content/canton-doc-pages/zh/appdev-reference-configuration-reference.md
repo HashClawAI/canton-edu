@@ -15,7 +15,7 @@ tags:
 
 > Canton 配置文件、DPM 项目设置、存储后端、命令行参数与环境变量参考。
 
-Canton 节点使用 [HOCON](https://github.com/lightbend/config/blob/master/HOCON.md)（人类优化配置对象表示法）作为其静态配置文件。静态配置涵盖进程启动时必须知道的设置，例如存储后端、API 端口和节点标识。动态设置（例如 Party 注册与 synchronizer连接）在运行时通过 [console](/global-synchronizer/reference/canton-console-reference) 或管理 API 进行管理。
+Canton 节点使用 [HOCON](https://github.com/lightbend/config/blob/master/HOCON.md)（人类优化配置对象表示法）作为其静态配置文件。静态配置涵盖进程启动时必须知道的设置，例如存储后端、API 端口和节点标识。动态设置（例如 Party 注册与 synchronizer连接）在运行时通过 [console](/zh/docs/canton/global-synchronizer-reference-canton-console-reference) 或管理 API 进行管理。
 
 ## HOCON 格式基础知识
 
@@ -125,11 +125,11 @@ DPM 使用 YAML 文件进行项目配置，与 Canton 的 HOCON 节点配置分�
 
 ### multi-package.yaml（多包项目）
 
-对于多包项目配置，请参阅[构建和打包](/appdev/modules/m3-building-packaging)，其中涵盖了`multi-package.yaml`结构和依赖解析。
+对于多包项目配置，请参阅[构建和打包](/zh/docs/canton/appdev-modules-m3-building-packaging)，其中涵盖了`multi-package.yaml`结构和依赖解析。
 
 ### DPM 环境变量
 
-有关 DPM 环境变量的详细信息，请参阅[构建和打包](/appdev/modules/m3-building-packaging)。
+有关 DPM 环境变量的详细信息，请参阅[构建和打包](/zh/docs/canton/appdev-modules-m3-building-packaging)。
 
 ### DPM 全局配置
 

@@ -19,7 +19,7 @@ tags:
 
 Canton 在所有组件中使用结构化错误代码系统。通过 API 记录或返回的每个错误都遵循格式 `ERROR_CODE_ID(category_id, correlation_id_prefix): human-readable message`。本页介绍了如何读取这些错误、哪些类别需要操作员采取操作以及最常见的操作错误的含义。
 
-应用开发过程中遇到的gRPC错误码请参见[AppDev错误码参考](/appdev/reference/error-codes)。
+应用开发过程中遇到的gRPC错误码请参见[AppDev错误码参考](/zh/docs/canton/appdev-reference-error-codes)。
 
 ## 读取日志中的错误码
 
@@ -2851,11 +2851,11 @@ API 上的每个错误都被构造为允许自动和手动错误处理。首先�
 
 ## 定序器错误
 
-此部分将在未来的更新中扩展。有关定序器相关的故障排除，请参阅[故障排除方法](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology)。
+此部分将在未来的更新中扩展。有关定序器相关的故障排除，请参阅[故障排除方法](/zh/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology)。
 
 ## 中介错误
 
-此部分将在未来的更新中扩展。有关调解器相关的故障排除，请参阅[故障排除方法](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology)。
+此部分将在未来的更新中扩展。有关调解器相关的故障排除，请参阅[故障排除方法](/zh/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology)。
 
 ## ACS 承诺错误
 
@@ -2897,7 +2897,7 @@ API 上的每个错误都被构造为允许自动和手动错误处理。首先�
 
 ## 错误升级
 
-有关如何分类和升级错误的决策路径，请参阅故障排除方法中的[错误升级](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology#error-escalation)。
+有关如何分类和升级错误的决策路径，请参阅故障排除方法中的[错误升级](/zh/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology#error-escalation)。
 
 ---
 

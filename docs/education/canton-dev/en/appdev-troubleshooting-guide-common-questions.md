@@ -21,7 +21,7 @@ tags:
 
 > Frequently asked questions about Canton Network application development
 
-Answers to questions that come up regularly in Canton Network application development. For validator operations questions, see the [Common Issues FAQ](/appdev/faq).
+Answers to questions that come up regularly in Canton Network application development. For validator operations questions, see the [Common Issues FAQ](/docs/canton/appdev-faq).
 
 ## Getting Started
 
@@ -140,7 +140,7 @@ curl "https://your-validator:5002/v2/packages" \
 
 ### How do I get my app featured on Canton Network?
 
-Applications can apply for featured status through the Canton Improvement Proposal (CIP) process. Start by reviewing the [CIP introduction](/overview/understand/cips-introduction) and the [getting your app featured](/overview/understand/getting-app-featured) guide.
+Applications can apply for featured status through the Canton Improvement Proposal (CIP) process. Start by reviewing the [CIP introduction](/docs/canton/overview-understand-cips-introduction) and the [getting your app featured](/docs/canton/overview-understand-getting-app-featured) guide.
 
 The process involves submitting a proposal that describes your application, its value to the network, and how it uses Canton Network infrastructure. Featured apps gain visibility on canton.network and may receive support from the Global Synchronizer Foundation.
 

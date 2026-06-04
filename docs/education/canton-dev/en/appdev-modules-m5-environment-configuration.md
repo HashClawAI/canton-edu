@@ -162,8 +162,8 @@ Install overridden components with:
 
 ## Next Steps
 
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — Environment differences and promotion checklist
-* [CI/CD Integration](/appdev/modules/m5-ci-cd-integration) — Using environment configuration in automated pipelines
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) — Environment differences and promotion checklist
+* [CI/CD Integration](/docs/canton/appdev-modules-m5-ci-cd-integration) — Using environment configuration in automated pipelines
 
 ---
 

@@ -87,7 +87,7 @@ cd backend && ./gradlew test
 kill $SANDBOX_PID
 ```
 
-For tests that need a full multi-validator setup, start [LocalNet](/appdev/modules/m5-localnet-development) with Docker Compose instead of the sandbox. This is heavier but covers cross-validator scenarios.
+For tests that need a full multi-validator setup, start [LocalNet](/docs/canton/appdev-modules-m5-localnet-development) with Docker Compose instead of the sandbox. This is heavier but covers cross-validator scenarios.
 
 ## Package Stage
 
@@ -143,7 +143,7 @@ Use your CI system's environment or stage abstractions to gate promotions. A com
 * A manual approval gate promotes from DevNet to TestNet
 * Another manual gate promotes from TestNet to MainNet
 
-Each promotion runs the same deployment steps with different environment configuration (see [Environment Configuration](/appdev/modules/m5-environment-configuration)).
+Each promotion runs the same deployment steps with different environment configuration (see [Environment Configuration](/docs/canton/appdev-modules-m5-environment-configuration)).
 
 ## Example: GitHub Actions
 
@@ -192,9 +192,9 @@ Regularly review logs during development and testing, such as by capturing logs 
 
 ## Next Steps
 
-* [Testing Strategies](/appdev/modules/m5-testing-strategies) — Testing pyramid and approach details
-* [Environment Configuration](/appdev/modules/m5-environment-configuration) — Per-environment configuration management
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) — What to verify at each promotion stage
+* [Testing Strategies](/docs/canton/appdev-modules-m5-testing-strategies) — Testing pyramid and approach details
+* [Environment Configuration](/docs/canton/appdev-modules-m5-environment-configuration) — Per-environment configuration management
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) — What to verify at each promotion stage
 
 ---
 

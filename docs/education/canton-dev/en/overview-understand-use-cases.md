@@ -278,11 +278,11 @@ Consider alternatives if you need:
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Core Concepts" icon="book" href="/overview/understand/core-concepts">
+  <Card title="Core Concepts" icon="book" href="/docs/canton/overview-understand-core-concepts">
     Understand parties, validators, and synchronizers.
   </Card>
 
-  <Card title="Start Building" icon="code" href="/appdev/get-started/choose-your-path">
+  <Card title="Start Building" icon="code" href="/docs/canton/appdev-get-started-choose-your-path">
     Begin your development journey.
   </Card>
 </CardGroup>

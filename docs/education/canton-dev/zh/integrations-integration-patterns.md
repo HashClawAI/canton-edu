@@ -300,7 +300,7 @@ async function submitWithRetry<T>(command: Command, maxRetries = 3): Promise<T> 
     Detailed 钱包 集成 guide.
   </Card>
 
-  <Card title="Token Standard" icon="coins" href="/overview/understand/cips-introduction">
+  <Card title="Token Standard" icon="coins" href="/zh/docs/canton/overview-understand-cips-introduction">
     Implement the Canton Token Standard.
   </Card>
 </CardGroup>

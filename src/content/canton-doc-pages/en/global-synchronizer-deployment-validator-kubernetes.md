@@ -57,7 +57,7 @@ This section describes how to deploy a standalone validator node in Kubernetes u
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>To initialize your validator node, you need the following parameters that define the network you're onboarding to and the secret required for doing so.</p>
@@ -123,7 +123,7 @@ This section describes how to deploy a standalone validator node in Kubernetes u
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>To initialize your validator node, you need the following parameters that define the network you're onboarding to and the secret required for doing so.</p>
@@ -173,7 +173,7 @@ This section describes how to deploy a standalone validator node in Kubernetes u
 
       you can only rely on your own backups.
 
-      (More information in [Backups section for Validators](/global-synchronizer/production-operations/validator-backups) or [Backups section for SVs](/global-synchronizer/production-operations/sv-backup))
+      (More information in [Backups section for Validators](/docs/canton/global-synchronizer-production-operations-validator-backups) or [Backups section for SVs](/docs/canton/global-synchronizer-production-operations-sv-backup))
     </Warning>
 
     <p>To initialize your validator node, you need the following parameters that define the network you're onboarding to and the secret required for doing so.</p>
@@ -1199,12 +1199,12 @@ topup:
   minTopupInterval: "1m"
 ```
 
-<p>On each successful top-up, the validator app purchases a `top-up amount` of roughly `targetThroughput * minTopupInterval` bytes of traffic (specific amount can vary due to rounding-up). The `minTopupInterval` allows validator operators to control the upper-bound frequency at which automated top-ups happen. If the top-up amount is below the synchronizer-wide `minTopupAmount` (see [traffic parameters](/global-synchronizer/deployment/synchronizer-traffic#traffic-parameters)), `minTopupInterval` is automatically stretched so that at least `minTopupAmount` bytes of traffic are purchased while respecting the configured `targetThroughput`.</p>
+<p>On each successful top-up, the validator app purchases a `top-up amount` of roughly `targetThroughput * minTopupInterval` bytes of traffic (specific amount can vary due to rounding-up). The `minTopupInterval` allows validator operators to control the upper-bound frequency at which automated top-ups happen. If the top-up amount is below the synchronizer-wide `minTopupAmount` (see [traffic parameters](/docs/canton/global-synchronizer-deployment-synchronizer-traffic#traffic-parameters)), `minTopupInterval` is automatically stretched so that at least `minTopupAmount` bytes of traffic are purchased while respecting the configured `targetThroughput`.</p>
 
 <p>The next top-up gets triggered when all of the following conditions are met:</p>
 
 <ul>
-  <li>The available [extra traffic balance](/global-synchronizer/deployment/synchronizer-traffic#traffic-accounting-what-counts-as-traffic) drops below the configured top-up amount (i.e., below `targetThroughput * minTopupInterval`).</li>
+  <li>The available [extra traffic balance](/docs/canton/global-synchronizer-deployment-synchronizer-traffic#traffic-accounting-what-counts-as-traffic) drops below the configured top-up amount (i.e., below `targetThroughput * minTopupInterval`).</li>
 
   <li>At least `minTopupInterval` has elapsed since the last top-up.</li>
 
@@ -1270,7 +1270,7 @@ Below you can see an example of the pruning config that you need to add to `vali
 
 Note that if your node is down for longer than the pruning window (48 hours in the example above), your node will most probably get corrupted, as the apps race catching up with the participant's attempts to keep pruning. It is therefore advisable to set the pruning window to a value that you are comfortable with in terms of guaranteeing uptime of your node. Setting it to 30 days is in general a reasonable choice, as the sequencers currently are also pruned after 30 days, so you will not be able to catch up with the network after a longer downtime anyway (see Disaster Recovery for disaster recovery guidelines).
 
-Refer to the [pruning guide](/global-synchronizer/production-operations/pruning) for more details on participant pruning.
+Refer to the [pruning guide](/docs/canton/global-synchronizer-production-operations-pruning) for more details on participant pruning.
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # To configure participant pruning uncomment the following section.

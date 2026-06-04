@@ -306,9 +306,9 @@ The Global Synchronizer and validators currently have frequent upgrades with the
 
 ## Next Steps
 
-* **[Glossary](/overview/understand/glossary)** - Terminology reference
-* **[Validator Operations](/global-synchronizer/understand/introduction)** - Deploy your own validator
-* **[Deployment Progression](/appdev/modules/m5-deployment-progression)** - Deploy applications across environments
+* **[Glossary](/docs/canton/overview-understand-glossary)** - Terminology reference
+* **[Validator Operations](/docs/canton/global-synchronizer-understand-introduction)** - Deploy your own validator
+* **[Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression)** - Deploy applications across environments
 
 <div className="todo">
   # Synchronizers

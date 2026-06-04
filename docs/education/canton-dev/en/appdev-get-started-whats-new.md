@@ -23,9 +23,9 @@ tags:
 
 For changes shipping in each component, see the corresponding release notes:
 
-* **Splice and the Global Synchronizer** — [Splice release notes](/global-synchronizer/release-notes/splice), [release history](/global-synchronizer/release-notes/release-history), [weekly patch releases](/global-synchronizer/release-notes/weekly-patch-releases)
-* **Wallet SDK** — [Wallet SDK release notes](/integrations/release-notes/wallet-sdk)
-* **Canton and Daml SDK** — [Canton release notes](/global-synchronizer/release-notes/canton)
+* **Splice and the Global Synchronizer** — [Splice release notes](/docs/canton/global-synchronizer-release-notes-splice), [release history](/global-synchronizer/release-notes/release-history), [weekly patch releases](/global-synchronizer/release-notes/weekly-patch-releases)
+* **Wallet SDK** — [Wallet SDK release notes](/docs/canton/integrations-release-notes-wallet-sdk)
+* **Canton and Daml SDK** — [Canton release notes](/docs/canton/global-synchronizer-release-notes-canton)
 * **CIPs** — [Canton Improvement Proposals](https://github.com/global-synchronizer-foundation/cips)
 
 ## Version compatibility

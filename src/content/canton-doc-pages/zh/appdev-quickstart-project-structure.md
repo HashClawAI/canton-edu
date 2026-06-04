@@ -42,7 +42,7 @@ Quickstart 包含涉及四个 party 的许可应用：
 
 ### 开发环境（Nix + Direnv）
 
-仓库使用 Nix 与 Direnv 提供跨平台一致依赖（JDK、Node.js、TypeScript）。若不使用 Nix，可直接在 `quickstart/` 工作但需自行管理依赖；额外工具见 [Quickstart 前置条件](/appdev/quickstart/prerequisites)。
+仓库使用 Nix 与 Direnv 提供跨平台一致依赖（JDK、Node.js、TypeScript）。若不使用 Nix，可直接在 `quickstart/` 工作但需自行管理依赖；额外工具见 [Quickstart 前置条件](/zh/docs/canton/appdev-quickstart-prerequisites)。
 
 **关键文件：**
 
@@ -324,7 +324,7 @@ LocalNet 由模块化 Compose 层构成：
 
 ## 下一步
 
-理解项目结构后，可参阅[新开发者 TL;DR](/appdev/get-started/choose-your-path)。
+理解项目结构后，可参阅[新开发者 TL;DR](/zh/docs/canton/appdev-get-started-choose-your-path)。
 
 {/* Mintlify preview rebuild marker. */}
 

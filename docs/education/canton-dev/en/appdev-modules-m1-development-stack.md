@@ -303,7 +303,7 @@ make start
     Run the example application.
   </Card>
 
-  <Card title="Module 3: Daml" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="Module 3: Daml" icon="code" href="/docs/canton/appdev-modules-m3-dev-environment">
     Start writing smart contracts.
   </Card>
 </CardGroup>

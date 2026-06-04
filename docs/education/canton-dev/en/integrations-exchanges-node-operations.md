@@ -28,10 +28,10 @@ the transactions to execute withdrawals or accept multi-step deposits.
 As also explained in that section, the network provides rewards that can be used to fund traffic.
 
 Note also that every validator node has an associated **validator operator party** that represents
-that validator node's administrator ([docs](/global-synchronizer/deployment/validator-docker-compose#deployment)).
+that validator node's administrator ([docs](/docs/canton/global-synchronizer-deployment-validator-docker-compose#deployment)).
 The validator node automatically mints rewards for that party.
 It can further be configured to
-[automatically purchase traffic](/global-synchronizer/deployment/validator-kubernetes#configuring-automatic-traffic-purchases)
+[automatically purchase traffic](/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-traffic-purchases)
 using that party's CC balance, which includes the minted rewards.
 
 We thus recommend the following setup as a starting point to mint
@@ -40,13 +40,13 @@ rewards and automatically fund traffic:
 1. Use the validator operator party as your featured `exchangeParty`.
    Follow [exchange-party-setup](#setup-the-featured-exchange-party) to get it featured.
 2. [treasury-party-setup](#setup-the-treasury-party) to create a `treasuryParty` with a transfer preapproval managed by your `exchangeParty`.
-3. Setup [automatic traffic purchases in the validator app](/global-synchronizer/deployment/validator-kubernetes#configuring-automatic-traffic-purchases).
-4. Optional: setup [auto-sweep](/global-synchronizer/deployment/validator-kubernetes#configuring-sweeps-and-auto-accepts-of-transfer-offers) from the `exchangParty` to your `treasuryParty` to limit the funds managed directly by the validator node.
+3. Setup [automatic traffic purchases in the validator app](/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-automatic-traffic-purchases).
+4. Optional: setup [auto-sweep](/docs/canton/global-synchronizer-deployment-validator-kubernetes#configuring-sweeps-and-auto-accepts-of-transfer-offers) from the `exchangParty` to your `treasuryParty` to limit the funds managed directly by the validator node.
 
 As a starting point for the automatic traffic purchase configuration, set `targetThroughput` to 2kB/s
 and `minTopupInterval` to 1 minute, which should be sufficient to execute about one withdrawal or deposit acceptance every 10 seconds.
 Please test this with your expected traffic pattern and adjust as needed.
-See this [FAQ to measure the traffic spent on an individual transaction](/global-synchronizer/faq#how-do-i-determine-the-traffic-used-for-a-specific-transaction).
+See this [FAQ to measure the traffic spent on an individual transaction](/docs/canton/global-synchronizer-faq#how-do-i-determine-the-traffic-used-for-a-specific-transaction).
 
 ## Setup Exchange Parties
 
@@ -54,12 +54,12 @@ See this [FAQ to measure the traffic spent on an individual transaction](/global
 
 As explained above in [reward-minting-and-traffic-funding](#reward-minting-and-traffic-funding), we recommend to use the validator operator party
 as your featured `exchangeParty`. This party is automatically created when you
-[deploy your validator node](/global-synchronizer/deployment/validator-docker-compose#deployment).
+[deploy your validator node](/docs/canton/global-synchronizer-deployment-validator-docker-compose#deployment).
 Thus the only setup step is to get it featured by the SVs:
 
 **On DevNet**, you can self-feature your validator operator party as follows:
 
-1. [Log into the wallet UI for the validator user](/global-synchronizer/deployment/validator-kubernetes#logging-into-the-wallet-ui), which presents itself as in this screenshot:
+1. [Log into the wallet UI for the validator user](/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-wallet-ui), which presents itself as in this screenshot:
 
    <img src="https://mintcdn.com/cantonfoundation/zmlOjLpKuDjnaObr/images/exchange-integration/wallet_ui.png?fit=max&auto=format&n=zmlOjLpKuDjnaObr&q=85&s=4b058b9539d00bf9985434af3c2d005f" alt="image" width="2260" height="523" data-path="images/exchange-integration/wallet_ui.png" />
 
@@ -73,7 +73,7 @@ That's all. Continue with [setting up your treasury party](#setup-the-treasury-p
 
 **On MainNet**, apply for featured status for your validator operator party as follows:
 
-1. [Log into the wallet UI for the validator user](/global-synchronizer/deployment/validator-kubernetes#logging-into-the-wallet-ui) on your MainNet validator node.
+1. [Log into the wallet UI for the validator user](/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-wallet-ui) on your MainNet validator node.
 2. Copy the party-id of your validator operator party using the copy button right of the abbreviated `"google-oaut.."` party name in the screenshot above.
 3. Apply for featured application status using this link: [https://sync.global/featured-app-request/](https://sync.global/featured-app-request/)
 
@@ -116,7 +116,7 @@ You can test the party setup on LocalNet or DevNet as follows:
 ## Setup Ledger API Users
 
 Clients need to
-[authenticate as a Ledger API user](/global-synchronizer/deployment/identity-management#user-identity-management)
+[authenticate as a Ledger API user](/docs/canton/global-synchronizer-deployment-identity-management#user-identity-management)
 to access the Ledger API of your Exchange Validator Node.
 You can manage Ledger API users and their rights using the
 `/v2/users/...` [endpoints of the Ledger API](https://github.com/digital-asset/canton/blob/97b837d7b7e9a499963cba1d39a017648c46e8d7/community/ledger/ledger-json-api/src/test/resources/json-api-docs/openapi.yaml#L1172).
@@ -124,14 +124,14 @@ You can manage Ledger API users and their rights using the
 You will need to authenticate as an existing user that has `participant_admin` rights
 to create additional users and grant rights.
 One option is to authenticate as the `ledger-api-user` that you
-[configured when setting up authentication for your validator node](/global-synchronizer/deployment/validator-kubernetes#oidc-provider-requirements).
+[configured when setting up authentication for your validator node](/docs/canton/global-synchronizer-deployment-validator-kubernetes#oidc-provider-requirements).
 Another option is to
-[log-in to your Splice Wallet UI for the validator operatory party](/global-synchronizer/deployment/validator-kubernetes#logging-into-the-wallet-ui)
+[log-in to your Splice Wallet UI for the validator operatory party](/docs/canton/global-synchronizer-deployment-validator-kubernetes#logging-into-the-wallet-ui)
 and use the JWT token used by the UI.
 
 We recommend that you setup one user per service that needs to access the Ledger API.
 This way you can easily manage permissions and access rights for each service independently.
-The [rights](/global-synchronizer/deployment/identity-management#manage-users)
+The [rights](/docs/canton/global-synchronizer-deployment-identity-management#manage-users)
 required by the integration components are as follows:
 
 | Component                                                                                      | Required Rights                                   | Purpose                                                                                                                                                                                         |
@@ -162,9 +162,9 @@ for more information.
 ## Monitoring
 
 See the Splice documentation for guidance on
-[how to monitor your validator node](/global-synchronizer/production-operations/splice-metrics-overview).
+[how to monitor your validator node](/docs/canton/global-synchronizer-production-operations-splice-metrics-overview).
 Note in particular that it includes
-[Grafana dashboards](/global-synchronizer/production-operations/splice-metrics-overview#grafana-dashboards)
+[Grafana dashboards](/docs/canton/global-synchronizer-production-operations-splice-metrics-overview#grafana-dashboards)
 for monitoring the traffic usage, balances of local parties (e.g., the `exchangeParty`).
 
 ## Rolling out Major Splice Upgrades
@@ -209,12 +209,12 @@ We recommend to roll-out the upgrade as follows:
 4. Stop your Tx History Ingestion component.
 5. Upgrade your validator and connect it to the new synchronizer.
 6. Follow the shortened version below of the
-   [procedure for restoring a validator node from a backup](/global-synchronizer/production-operations/validator-disaster-recovery)
+   [procedure for restoring a validator node from a backup](/docs/canton/global-synchronizer-production-operations-validator-disaster-recovery)
    to determine the offset from which to restart your Tx History Ingestion:
 
    1. Retrieve the `synchronizerId` of the last ingested transaction from the Canton Integration DB.
 
-   2. Log into the [Canton Console of your validator node](/global-synchronizer/canton-console/console-overview) and query the offset `offRecovery` assigned to the ACS import transactions at time `0001-01-01T00:00:00.000000Z` using
+   2. Log into the [Canton Console of your validator node](/docs/canton/global-synchronizer-canton-console-console-overview) and query the offset `offRecovery` assigned to the ACS import transactions at time `0001-01-01T00:00:00.000000Z` using
 
       ```scala theme={"theme":{"light":"github-light","dark":"github-dark"}}
       def parseTimestamp(t: String) = {

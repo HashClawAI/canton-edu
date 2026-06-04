@@ -21,7 +21,7 @@ tags:
 
 > Synchronizer ordering architecture — sequencers, mediators, BFT ordering service, and the ISS-inspired consensus protocol
 
-The ordering consensus layer is one half of Canton's [two-layer consensus architecture](/overview/reference/canton-protocol-specification). While the smart contract consensus layer validates transaction correctness among affected parties, the ordering layer establishes a single, global sequence of events on a given synchronizer. It does so without accessing transaction content — payloads remain encrypted end-to-end, and the ordering infrastructure sees only metadata.
+The ordering consensus layer is one half of Canton's [two-layer consensus architecture](/docs/canton/overview-reference-canton-protocol-specification). While the smart contract consensus layer validates transaction correctness among affected parties, the ordering layer establishes a single, global sequence of events on a given synchronizer. It does so without accessing transaction content — payloads remain encrypted end-to-end, and the ordering infrastructure sees only metadata.
 
 ## Synchronizer Components
 

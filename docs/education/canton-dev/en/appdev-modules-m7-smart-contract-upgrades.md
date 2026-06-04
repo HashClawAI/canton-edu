@@ -31,7 +31,7 @@ Before uploading a new package version to production:
 
 * Verify the upgrade passes `dpm build` and `dpm test` in your CI pipeline
 * Confirm the new package is SCU-compatible with the current version (run compatibility checks locally or in CI)
-* Review the list of changes against the [upgrade limitations](/appdev/modules/m6-limitations) to ensure no breaking modifications
+* Review the list of changes against the [upgrade limitations](/docs/canton/appdev-modules-m6-limitations) to ensure no breaking modifications
 * Test the upgrade on DevNet or TestNet with realistic data volumes
 * Communicate with counterparties who hold contracts affected by the upgrade (see below)
 * Document the rollback procedure before starting
@@ -128,12 +128,12 @@ Use this checklist for each production upgrade:
 
 ## Further Reading
 
-* [Upgrade Limitations](/appdev/modules/m6-limitations) -- Constraints that affect production rollouts
-* [Testing Upgrades](/appdev/modules/m6-testing-upgrades) -- Testing strategies before going to production
-* [Error Handling](/appdev/modules/m7-error-handling) -- Handling errors that may arise during mixed-version deployments
-* [Deployment Progression](/appdev/modules/m5-deployment-progression) -- The DevNet to TestNet to MainNet path
-* [Smart Contract Upgrading Reference](/appdev/deep-dives/smart-contract-upgrading-reference) — Detailed package validation and runtime upgrade rules.
-* [Values in the Ledger API](/appdev/deep-dives/values-in-the-ledger-api) — How the Ledger API validates and normalizes values during command submission and query.
+* [Upgrade Limitations](/docs/canton/appdev-modules-m6-limitations) -- Constraints that affect production rollouts
+* [Testing Upgrades](/docs/canton/appdev-modules-m6-testing-upgrades) -- Testing strategies before going to production
+* [Error Handling](/docs/canton/appdev-modules-m7-error-handling) -- Handling errors that may arise during mixed-version deployments
+* [Deployment Progression](/docs/canton/appdev-modules-m5-deployment-progression) -- The DevNet to TestNet to MainNet path
+* [Smart Contract Upgrading Reference](/docs/canton/appdev-deep-dives-smart-contract-upgrading-reference) — Detailed package validation and runtime upgrade rules.
+* [Values in the Ledger API](/docs/canton/appdev-deep-dives-values-in-the-ledger-api) — How the Ledger API validates and normalizes values during command submission and query.
 
 ---
 

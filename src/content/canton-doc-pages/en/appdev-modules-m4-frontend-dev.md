@@ -325,7 +325,7 @@ The `ViteYaml` plugin allows importing the OpenAPI YAML file directly as a JavaS
 ## Exercise: Add License Comments UI
 
 <Note>
-  This exercise builds on the backend exercise in [Backend Development](/appdev/modules/m4-backend-dev#exercise-add-license-comments). Complete that first — you need the `LicenseComment` Daml template, the OpenAPI endpoints, and the backend implementation before the frontend can use them.
+  This exercise builds on the backend exercise in [Backend Development](/docs/canton/appdev-modules-m4-backend-dev#exercise-add-license-comments). Complete that first — you need the `LicenseComment` Daml template, the OpenAPI endpoints, and the backend implementation before the frontend can use them.
 </Note>
 
 You'll add a comment list and comment form to the licenses view, following the same store/view patterns that cn-quickstart uses for licenses.
@@ -502,8 +502,8 @@ Open the app, navigate to the Licenses page, click the "Comments" button on a li
 
 ## Next Steps
 
-* [Canton Coin and Traffic](/appdev/modules/m4-canton-coin) -- How CC and traffic affect your application
-* [Backend Development](/appdev/modules/m4-backend-dev) -- The backend that the frontend communicates with
+* [Canton Coin and Traffic](/docs/canton/appdev-modules-m4-canton-coin) -- How CC and traffic affect your application
+* [Backend Development](/docs/canton/appdev-modules-m4-backend-dev) -- The backend that the frontend communicates with
 * [cn-quickstart frontend source](https://github.com/digital-asset/cn-quickstart/tree/main/quickstart/frontend) -- Full working frontend implementation
 
 ---

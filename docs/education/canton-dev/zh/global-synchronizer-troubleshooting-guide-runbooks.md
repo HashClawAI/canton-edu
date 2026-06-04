@@ -25,7 +25,7 @@ tags:
 
 1. **检测** -- 识别症状。问题是如何发现的？ （警报、用户报告、例行检查。）
 2. **评估**——确定范围和严重性。验证者是否离线？交易失败？数据有风险吗？
-3. **行动** -- 执行适当的修复。请遵循下面的相关运维手册或[故障排除方法](/global-synchronizer/troubleshooting-guide/troubleshooting-methodology)。
+3. **行动** -- 执行适当的修复。请遵循下面的相关运维手册或[故障排除方法](/zh/docs/canton/global-synchronizer-troubleshooting-guide-troubleshooting-methodology)。
 4. **验证** -- 确认修复。检查运行状况端点、提交测试交易、检查日志是否重复出现错误。
 5. **文档** -- 记录发生的情况、原因、所做的操作以及任何后续操作。
 

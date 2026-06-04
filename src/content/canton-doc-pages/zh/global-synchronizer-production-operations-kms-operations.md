@@ -543,7 +543,7 @@ canton.participants.participant1.crypto.private-key-store.encryption.reverted = 
 
 默认情况下，Canton 节点使用`jce` 加密提供程序，该提供程序与使用外部 KMS 提供程序存储 Canton 私钥的其他节点兼容。如果您更改默认的`jce`提供商并使用不同的加密方案，则必须确保它支持与KMS提供商相同的算法和密钥方案，以便与其他启用KMS的Canton节点进行互操作。
 
-有关 KMS 提供程序支持的加密方案和默认使用的加密方案的说明，请参阅[支持的加密方案](/global-synchronizer/reference/crypto-schemes) 参考。
+有关 KMS 提供程序支持的加密方案和默认使用的加密方案的说明，请参阅[支持的加密方案](/zh/docs/canton/global-synchronizer-reference-crypto-schemes) 参考。
 
 {/* COPIED_START source="docs-website:docs/replicated/canton/3.4/participant/howtos/secure/kms/key_rotation/kms_key_rotation.rst" hash="8b47170c" */}
 

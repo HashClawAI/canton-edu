@@ -208,7 +208,7 @@ flowchart LR
     硬件、软件和网络要求。
   </Card>
 
-  <Card title="验证者角色" icon="user-gear" href="/global-synchronizer/understand/validator-roles">
+  <Card title="验证者角色" icon="user-gear" href="/zh/docs/canton/global-synchronizer-understand-validator-roles">
     了解您作为验证者的职责。
   </Card>
 </CardGroup>

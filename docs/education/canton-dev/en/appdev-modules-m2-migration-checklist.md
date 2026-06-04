@@ -185,7 +185,7 @@ Use this checklist when planning and executing a migration from Ethereum to Cant
 | Ethereum            | Canton                                                        | Notes                             |
 | ------------------- | ------------------------------------------------------------- | --------------------------------- |
 | JSON-RPC            | Ledger API (gRPC or JSON API)                                 | Different protocol                |
-| Web3.js / ethers.js | Ledger API client or [dApp SDK](/appdev/modules/m4-sdks-apis) | Language-specific clients         |
+| Web3.js / ethers.js | Ledger API client or [dApp SDK](/docs/canton/appdev-modules-m4-sdks-apis) | Language-specific clients         |
 | Event logs          | Transaction streams                                           | Subscribe to party's transactions |
 | `eth_call`          | Exercise non-consuming choice                                 | Read-only operations              |
 
@@ -289,7 +289,7 @@ Ethereum EOA private keys correspond to Canton party keys, which can live on the
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Module 3: Daml Development" icon="code" href="/appdev/modules/m3-dev-environment">
+  <Card title="Module 3: Daml Development" icon="code" href="/docs/canton/appdev-modules-m3-dev-environment">
     Start building with Daml.
   </Card>
 

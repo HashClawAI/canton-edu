@@ -107,7 +107,7 @@ kubectl create secret --namespace sv generic splice-app-sv-cometbft-governance-k
 
 除了上述 SV 应用程序部署的更改之外，使用外部 KMS 的 SV 参与者的设置与使用 KMS 的验证者参与者的设置相同。它涉及对 `splice-participant` Helm 图表的配置更改，具体取决于您选择的 KMS 提供商。
 
-请参阅 [有关配置 KMS 支持的 Canton 文档](/global-synchronizer/reference/kms-driver-guide)，以确定与您所需的 KMS 提供商和设置相匹配的正确配置选项。我们在下面提供了 Google Cloud (GCP) KMS 和 Amazon Web Services (AWS) KMS 的最小 Helm 配置示例。
+请参阅 [有关配置 KMS 支持的 Canton 文档](/zh/docs/canton/global-synchronizer-reference-kms-driver-guide)，以确定与您所需的 KMS 提供商和设置相匹配的正确配置选项。我们在下面提供了 Google Cloud (GCP) KMS 和 Amazon Web Services (AWS) KMS 的最小 Helm 配置示例。
 
 <Warning>
   GCP 和 AWS KMS 驱动程序仅适用于 Canton Enterprise 的许可用户。
@@ -118,7 +118,7 @@ kubectl create secret --namespace sv generic splice-app-sv-cometbft-governance-k
 * 参与者 Helm 图表的 `kms` 部分中的值隐式映射到 Canton 参与者 `crypto.kms` 配置。这意味着 Canton 支持的所有配置键都受支持，而不仅仅是上面示例中显示的配置键。驼峰命名法中的键名称会自动转换为短横线命名法。
 * 要设置额外的环境变量和安装文件以配置 KMS 身份验证，您可以使用 Splice 参与者 Helm 图表的 `.additionalEnvVars`、`.extraVolumeMounts` 和 `.extraVolumes` 字段（请参阅示例）。
 * 确保您的 KMS 配置始终包含在您传递给 `helm install participant ...` 或 `helm upgrade participant ...` 的值文件中。
-* Canton 参与者使用[会话密钥](/global-synchronizer/production-operations/key-management#configure-session-keys) 来减少协议执行过程中非对称加密操作的数量，从而提高性能并降低 (KMS) 成本。默认情况下，Splice 参与者使用生命周期为一小时的会话**加密**密钥。对于启用 KMS 的参与者的安全影响是，有权访问内存快照的对手可能能够获取对称密钥，从而允许解密最多一小时的加密消息。可以通过配置覆盖来覆盖默认会话密钥参数。请参阅 [Canton 文档](/global-synchronizer/production-operations/key-management#configure-session-keys) 以获取相关参数的概述。 Splice 参与者尚不支持使用会话**签名**密钥。
+* Canton 参与者使用[会话密钥](/zh/docs/canton/global-synchronizer-production-operations-key-management#configure-session-keys) 来减少协议执行过程中非对称加密操作的数量，从而提高性能并降低 (KMS) 成本。默认情况下，Splice 参与者使用生命周期为一小时的会话**加密**密钥。对于启用 KMS 的参与者的安全影响是，有权访问内存快照的对手可能能够获取对称密钥，从而允许解密最多一小时的加密消息。可以通过配置覆盖来覆盖默认会话密钥参数。请参阅 [Canton 文档](/zh/docs/canton/global-synchronizer-production-operations-key-management#configure-session-keys) 以获取相关参数的概述。 Splice 参与者尚不支持使用会话**签名**密钥。
 
 另请记住，您需要部署**新**参与者才能正确使用 KMS，这意味着您还需要重新设置其余的 SV 组件（见上文）。
 
@@ -128,7 +128,7 @@ kubectl create secret --namespace sv generic splice-app-sv-cometbft-governance-k
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # 使用 GCP KMS 的参与者（模拟值；请修改以匹配您的设置）
-# 请参阅[广州 KMS 操作](/global-synchronizer/production-operations/kms-operations#configure-a-google-cloud-provider-gcp-kms)
+# 请参阅[广州 KMS 操作](/zh/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-google-cloud-provider-gcp-kms)
 
 公里数：
   类型：gcp
@@ -156,7 +156,7 @@ kubectl create secret --namespace sv generic splice-app-sv-cometbft-governance-k
       秘密名称：gke-credentials
 ```
 
-Please refer to the [Canton documentation](/global-synchronizer/production-operations/kms-operations#configure-a-google-cloud-provider-gcp-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/global-synchronizer/production-operations/key-management)) the authentication credentials you supply must correspond to a GCP service account with the following IAM permissions:
+Please refer to the [Canton documentation](/zh/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-google-cloud-provider-gcp-kms) for a list of supported configuration options and their meaning, as well as for instructions on configuring authentication to the KMS. Note again that Splice participants support the External Key Storage mode of KMS usage, so that (per the [relevant Canton docs](/zh/docs/canton/global-synchronizer-production-operations-key-management)) the authentication credentials you supply must correspond to a GCP service account with the following IAM permissions:
 
 * `cloudkms.cryptoKeyVersions.create`
 * `cloudkms.cryptoKeyVersions.useToDecrypt`
@@ -172,7 +172,7 @@ The mock configuration below for AWS KMS is included in `splice-node/examples/sv
 
 ```yaml theme={"theme":{"light":"github-light","dark":"github-dark"}}
 # 使用 AWS KMS 的参与者（模拟值；请修改以匹配您的设置）
-# 请参阅[广州 KMS 操作](/global-synchronizer/production-operations/kms-operations#configure-a-amazon-web-services-aws-kms)
+# 请参阅[广州 KMS 操作](/zh/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-amazon-web-services-aws-kms)
 公里数：
   类型：AWS
   # 根据您的 AWS KMS 设置替换 REGION
@@ -198,7 +198,7 @@ The mock configuration below for AWS KMS is included in `splice-node/examples/sv
         密钥：秘密访问密钥
 ````
 
-请参阅 [Canton 文档](/global-synchronizer/production-operations/kms-operations#configure-a-amazon-web-services-aws-kms)，了解受支持的配置选项及其含义的列表，以及有关配置 KMS 身份验证的说明。再次注意，拼接参与者支持 KMS 使用的外部密钥存储模式，因此（根据[相关 Canton 文档](/global-synchronizer/production-operations/key-management)）您提供的身份验证凭证必须对应于具有以下 IAM 权限的实体：
+请参阅 [Canton 文档](/zh/docs/canton/global-synchronizer-production-operations-kms-operations#configure-a-amazon-web-services-aws-kms)，了解受支持的配置选项及其含义的列表，以及有关配置 KMS 身份验证的说明。再次注意，拼接参与者支持 KMS 使用的外部密钥存储模式，因此（根据[相关 Canton 文档](/zh/docs/canton/global-synchronizer-production-operations-key-management)）您提供的身份验证凭证必须对应于具有以下 IAM 权限的实体：
 
 * `kms:CreateKey`
 * `kms:TagResource`

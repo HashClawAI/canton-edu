@@ -156,11 +156,11 @@ Canton通过改变“共识”的含义来解决这种紧张局势：
 ## 后续步骤
 
 <CardGroup cols={2}>
-  <Card title="Canton 的解决方案" icon="lightbulb" href="/overview/understand/cantons-solution">
+  <Card title="Canton 的解决方案" icon="lightbulb" href="/zh/docs/canton/overview-understand-cantons-solution">
     了解 Canton 如何解决隐私与完整性的权衡问题。
   </Card>
 
-  <Card title="隐私模型" icon="lock" href="/overview/learn/privacy-model">
+  <Card title="隐私模型" icon="lock" href="/zh/docs/canton/overview-learn-privacy-model">
     深入研究子交易隐私机制。
   </Card>
 </CardGroup>
