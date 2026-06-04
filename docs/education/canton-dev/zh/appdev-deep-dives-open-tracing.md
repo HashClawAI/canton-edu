@@ -1,0 +1,92 @@
+---
+title: "Ledger API 客户端 OpenTracing"
+slug: "appdev-deep-dives-open-tracing"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/deep-dives/open-tracing.md"
+source_title: "Open Tracing in Ledger API Client Applications"
+tags:
+  - appdev
+  - deep-dives
+  - open-tracing
+---
+
+# Ledger API 客户端 OpenTracing
+
+> 为与 Ledger API 交互的 Daml 应用添加基于 OpenTelemetry 的分布式追踪
+
+## 简介
+
+分布式追踪用于排查微服务（如 Daml Enterprise）中的性能问题。Canton 监控文档介绍节点侧追踪。本指南说明如何编写 **Ledger API** 客户端，使 trace 与 span 在客户端与 Canton 间无缝延续。
+
+示例见 GitHub：[ex-java-bindings-with-opentelemetry](https://github.com/digital-asset/ex-java-bindings-with-opentelemetry)。更广主题见 [OpenTelemetry](https://opentelemetry.io/) 与 [Java instrumentation](https://opentelemetry.io/docs/instrumentation/java/)。
+
+## 搭建 OpenTelemetry 环境
+
+先启动后端（Jaeger/Zipkin/OTLP）。Jaeger 示例：
+
+```bash
+docker run --rm -it --name jaeger\
+-p 16686:16686 \
+-p 14250:14250 \
+jaegertracing/all-in-one:1.22.0
+```
+
+`jaeger.conf`：
+
+```
+canton.monitoring.tracing.tracer.exporter {
+  type = jaeger
+  address = "localhost"
+  port = 14250
+}
+```
+
+启动：`bin/canton -c examples/01-simple-topology/simple-topology.conf -c jaeger.conf`
+
+## 添加项目依赖
+
+在 `pom.xml` 加入 OpenTelemetry 与 gRPC instrumentation 依赖（版本见 [Maven Central](https://search.maven.org/artifact/io.opentelemetry/opentelemetry-api)）。
+
+## 初始化
+
+初始化 OpenTelemetry 与 **GRPCTelemetry**（在 gRPC 头中传播 trace）。参考 [OpenTelemetryUtil](https://github.com/digital-asset/ex-java-bindings-with-opentelemetry/blob/master/src/main/java/examples/pingpong/codegen/OpenTelemetryUtil.java)：
+
+```java theme={"theme":{"light":"github-light","dark":"github-dark"}}
+OpenTelemetryUtil openTelemetry = new OpenTelemetryUtil(APP_ID);
+```
+
+通过 `withClientInterceptor` 挂载到 Netty channel：
+
+```java theme={"theme":{"light":"github-light","dark":"github-dark"}}
+ManagedChannel channel = openTelemetry.withClientInterceptor(
+    ManagedChannelBuilder.forAddress(host, port).usePlaintext()
+).build();
+```
+
+## 创建新 Span
+
+调用 gRPC 前用 `runInNewSpan` 包裹：
+
+```java theme={"theme":{"light":"github-light","dark":"github-dark"}}
+openTelemetry.runInNewSpan("createInitialContracts", () -> submissionService.submit(request));
+```
+
+拦截器会将 span 传播到 Canton。
+
+## 跨应用延续 Span
+
+可从 `UpdateService`、`CompletionStream` 等返回的 `Transaction`/`Completion` 提取 `traceContext`，再用 `runInOpenTelemetryScope` 与 `runInNewSpan` 延续同一 trace。
+
+## 串联全流程
+
+规则传递 trace 上下文时，Jaeger UI 可显示完整 span 链：
+
+<figure>
+  <img src="https://mintcdn.com/cantonfoundation/53J3Euu6q0XOxgPz/appdev/deep-dives/images/jaegerPingSpans.png?fit=max&auto=format&n=53J3Euu6q0XOxgPz&q=85&s=f1842a70eb43b6ac23ae5bec78c4070f" alt="jaegerPingSpans" width="1906" height="922" data-path="appdev/deep-dives/images/jaegerPingSpans.png" />
+</figure>
+
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

@@ -1,0 +1,5 @@
+{
+  "zhTitle": "超级验证者奖励",
+  "summary": "超级验证者节点如何获得并分配 Canton Coin 奖励。",
+  "body": "> 超级验证者节点获得与分配 Canton Coin 奖励的机制。\n\n每个超级验证者在每一轮中都会创建一张 SvRewardCoupon。\n\n这些 SV 铸币权由tokenomics 委员会授予，以换取运营 SV 节点或为网络贡献关键基础设施或活动。tokenomics 委员会使用CIP流程来记录SV权利。因此，当前的 SV 权限列表可从 [CIP 存储库](https://github.com/global-synchronizer-foundation/cips) 获取。"
+}

@@ -1,0 +1,5 @@
+{
+  "zhTitle": "关键指标",
+  "summary": "验证者与 SV 节点的就绪/存活探针及核心运维监控指标。",
+  "body": "> Canton Network 验证者与 SV 节点应监控的关键指标。\n\n> 监控 Canton Network 验证者和 SV 节点的关键指标\n\n您可以使用就绪端点检查验证者的运行状况。所有 CN 应用程序都提供 `/readyz` 和 `/livez` 端点，用于就绪性和活性探测。\n\n* **检查准备情况**\n\n  * 在 Kubernetes 中：已配置就绪和活跃探针。\n\n    您还可以使用以下命令手动检查验证者准备情况：\n\n    ```yaml theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\n    kubectl exec <pod-name> -n <namespace> -- curl -v http://localhost:5003/api/validator/readyz\n    ```\n\n  * 在 Docker 中：例如运行以下命令来检查容器内验证者的活跃度：\n\n    ```yaml theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\n    docker exec <container-name> -- curl -v http://localhost:5003/api/validator/livez\n    ```\n\n  如果验证者已准备就绪并处于活动状态，则在这两种情况下，您都应该期望 HTTP 状态代码 200。\n\n* **使用指标**\n\n  `splice_store_last_ingested_record_time_ms` 指标表示每个验证者存储中最后摄取的记录时间。它可用于跟踪节点的一般活动：\n\n  * 如果该值随着时间的推移继续增加，则您的节点处于活动状态并与网络保持同步。请注意，只有当您的节点实际接收新交易时，它才会前进。对于收集验证者活跃度奖励的验证者来说，这种情况每轮都会发生，因此你应该期望你的延迟永远不会超过 20 分钟。\n  * 如果保持不变，可能需要进一步调查。\n\n  有关更多详细信息以及要在其专用仪表板`Splice Store Last Ingested Record Time`上可视化此指标，请参阅有关指标的文档。"
+}

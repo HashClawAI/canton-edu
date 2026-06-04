@@ -14,8 +14,8 @@ Primary upstream source:
 
 ## Layout
 
-- `en/` contains English learning notes anchored to official Canton docs pages.
-- `zh/` contains Chinese learning notes with the same slugs and source URLs.
+- `en/` and `zh/` contain learning notes plus mirrored official documentation bodies.
+- `src/content/canton-doc-pages/{en,zh}/` contains the same Markdown used to render site detail pages.
 - `manifest.json` records the selected core documents, upstream URLs, tags, and generation metadata.
 - `rag-index.jsonl` contains retrieval chunks with stable IDs, local paths, titles, tags, and official source URLs.
 
@@ -38,6 +38,8 @@ The script reads `https://docs.canton.network/llms.txt`, selects the curated cor
 
 - `docs/education/canton-dev/en/*.md`
 - `docs/education/canton-dev/zh/*.md`
+- `src/content/canton-doc-pages/en/*.md`
+- `src/content/canton-doc-pages/zh/*.md`
 - `docs/education/canton-dev/manifest.json`
 - `docs/education/canton-dev/rag-index.jsonl`
 - `src/content/canton-docs/index.json`

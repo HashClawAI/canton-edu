@@ -1,0 +1,266 @@
+---
+title: "DA.NonEmpty"
+slug: "appdev-reference-daml-standard-library-da-nonempty"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/reference/daml-standard-library/da-nonempty.md"
+source_title: "DA.NonEmpty"
+tags:
+  - appdev
+  - reference
+  - daml-standard-library
+  - da-nonempty
+---
+
+# DA.NonEmpty
+
+> Daml 模块 DA.NonEmpty 参考文档。
+
+<span id="module-da-nonempty-15701" />
+
+# DA.NonEmpty
+
+非空列表的类型与函数。本模块再导出许多与 Prelude 列表同名的函数，建议 **qualified import**。
+
+例如下列 import 可得 `NonEmpty` 类型，非空列表函数以限定名使用，如 `NE.append`、`NE.map`、`NE.foldl`：
+
+```
+
+import DA.NonEmpty (NonEmpty)
+
+import qualified DA.NonEmpty as NE
+
+```
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 函数
+
+<span id="function-da-nonempty-cons-63704" />
+
+### `cons`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+cons : a -> NonEmpty a -> NonEmpty a
+```
+
+在非空列表前追加一个元素。
+
+<span id="function-da-nonempty-append-34337" />
+
+### `append`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+append : NonEmpty a -> NonEmpty a -> NonEmpty a
+```
+
+拼接两个非空列表。
+
+<span id="function-da-nonempty-map-69362" />
+
+### `map`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+map : (a -> b) -> NonEmpty a -> NonEmpty b
+```
+
+对非空列表每个元素应用函数。
+
+<span id="function-da-nonempty-nonempty-24939" />
+
+### `nonEmpty`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+nonEmpty : [a] -> Optional (NonEmpty a)
+```
+
+将列表转为非空列表（若可能）。空列表返回 `None`，否则返回 `Some`。
+
+<span id="function-da-nonempty-singleton-99101" />
+
+### `singleton`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+singleton : a -> NonEmpty a
+```
+
+仅含一个元素的非空列表。
+
+<span id="function-da-nonempty-tolist-15474" />
+
+### `toList`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+toList : NonEmpty a -> [a]
+```
+
+将非空列表转为普通列表（忘记「非空」约束）。
+
+<span id="function-da-nonempty-reverse-64050" />
+
+### `reverse`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+reverse : NonEmpty a -> NonEmpty a
+```
+
+反转非空列表。
+
+<span id="function-da-nonempty-find-73910" />
+
+### `find`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+find : (a -> Bool) -> NonEmpty a -> Optional a
+```
+
+在非空列表中查找元素。
+
+<span id="function-da-nonempty-deleteby-6333" />
+
+### `deleteBy`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+deleteBy : (a -> a -> Bool) -> a -> NonEmpty a -> [a]
+```
+
+`deleteBy` 行为类似 `delete`，但使用用户提供的相等谓词。
+
+<span id="function-da-nonempty-delete-59160" />
+
+### `delete`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+delete : Eq a => a -> NonEmpty a -> [a]
+```
+
+从非空列表中移除 `x` 的首次出现，可能移除全部元素。
+
+<span id="function-da-nonempty-foldl1-17561" />
+
+### `foldl1`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldl1 : (a -> a -> a) -> NonEmpty a -> a
+```
+
+从左向右对非空列表元素两两反复应用函数。例如 `foldl1 (+) (NonEmpty 1 [2,3,4]) = ((1 + 2) + 3) + 4`。
+
+<span id="function-da-nonempty-foldr1-43627" />
+
+### `foldr1`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldr1 : (a -> a -> a) -> NonEmpty a -> a
+```
+
+从右向左对非空列表元素两两反复应用函数。例如 `foldr1 (+) (NonEmpty 1 [2,3,4]) = 1 + (2 + (3 + 4))`。
+
+<span id="function-da-nonempty-foldr-65043" />
+
+### `foldr`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldr : (a -> b -> b) -> b -> NonEmpty a -> b
+```
+
+从右向左折叠非空列表，给定初值。例如 `foldr (+) 0 (NonEmpty 1 [2,3,4]) = 1 + (2 + (3 + (4 + 0)))`。
+
+<span id="function-da-nonempty-foldra-91227" />
+
+### `foldrA`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldrA : Action m => (a -> b -> m b) -> b -> NonEmpty a -> m b
+```
+
+与 `foldr` 相同，但每次执行 action。
+
+<span id="function-da-nonempty-foldr1a-13463" />
+
+### `foldr1A`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldr1A : Action m => (a -> a -> m a) -> NonEmpty a -> m a
+```
+
+与 `foldr1` 相同，但每次执行 action。
+
+<span id="function-da-nonempty-foldl-91113" />
+
+### `foldl`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldl : (b -> a -> b) -> b -> NonEmpty a -> b
+```
+
+从左向右折叠非空列表，给定初值。例如 `foldl (+) 0 (NonEmpty 1 [2,3,4]) = (((0 + 1) + 2) + 3) + 4`。
+
+<span id="function-da-nonempty-foldla-69961" />
+
+### `foldlA`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldlA : Action m => (b -> a -> m b) -> b -> NonEmpty a -> m b
+```
+
+与 `foldl` 相同，但每次执行 action。
+
+<span id="function-da-nonempty-foldl1a-63665" />
+
+### `foldl1A`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+foldl1A : Action m => (a -> a -> m a) -> NonEmpty a -> m a
+```
+
+与 `foldl1` 相同，但每次执行 action。
+
+## 孤儿类型类实例
+
+* `instance Eq a => Eq (NonEmpty a)`
+
+* `instance Show a => Show (NonEmpty a)`
+
+* `instance Ord a => Ord (NonEmpty a)`
+
+* `instance GetField hd (NonEmpty a) a`
+
+* `instance SetField hd (NonEmpty a) a`
+
+* `instance GetField tl (NonEmpty a) [a]`
+
+* `instance SetField tl (NonEmpty a) [a]`
+
+* `instance Semigroup (NonEmpty a)`
+
+* `instance Functor NonEmpty`
+
+* `instance Applicative NonEmpty`
+
+* `instance Action NonEmpty`
+
+* `instance Foldable NonEmpty`
+
+* `instance Traversable NonEmpty`
+
+* `instance IsParties (NonEmpty Party)`
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

@@ -1,0 +1,5 @@
+{
+  "zhTitle": "User.Right.CanReadAs",
+  "summary": "Canton 参考文档：User.Right.CanReadAs。",
+  "body": "> 从本地 Javadoc 快照生成 User.Right.CanReadAs 的对象参考页面。\n\n## User.Right.CanReadAs - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/User.Right.CanReadAs.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic static final class User.Right.CanReadAs extends User.Right\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/User.Right.CanReadAs.html#%3Cinit%3E%28java.lang.String%29) | `CanReadAs(String)` | `3.4.8` | - | - |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/User.Right.CanReadAs.html#party) | `party` | `3.4.8` | - | - |"
+}

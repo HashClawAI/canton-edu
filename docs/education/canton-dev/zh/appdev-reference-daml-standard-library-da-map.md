@@ -1,0 +1,339 @@
+---
+title: "DA.Map"
+slug: "appdev-reference-daml-standard-library-da-map"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/reference/daml-standard-library/da-map.md"
+source_title: "DA.Map"
+tags:
+  - appdev
+  - reference
+  - daml-standard-library
+  - da-map
+---
+
+# DA.Map
+
+> Daml 模块 DA.Map 参考文档。
+
+<span id="module-da-map-69618" />
+
+# DA.Map
+
+注意：仅 Daml-LF 1.11 及更高版本支持。
+
+本模块导出泛型映射类型 `Map k v` 及相关函数。建议 **qualified import**，例如：
+
+```
+
+import DA.Map (Map)
+
+import DA.Map qualified as M
+
+```
+
+这样可使用 `Map` 类型，并以 `M.lookup`、`M.insert`、`M.fromList` 等形式调用各操作。
+
+`Map k v` 内部使用类型 `k` 的内置序。含函数的键不可比较，会导致运行时错误。因此多数 map 操作要求 `Ord k` 实例。建议仅对能 `deriving` 自动 `Ord` 的键类型使用 `Map k v`：
+
+```
+
+data K = ...
+
+deriving (Eq, Ord)
+
+```
+
+包括所有非函数类型的内置类型，如 `Int`、`Text`、`Bool`；在 `a`、`b` 有默认 `Ord` 时的 `(a, b)`；在 `t` 有默认 `Ord` 时的 `Optional t` 与 `[t]`；在 `k`、`v` 有默认 `Ord` 时的 `Map k v`；在 `k` 有默认 `Ord` 时的 `Set k`。
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 函数
+
+<span id="function-da-map-fromlist-23400" />
+
+### `fromList`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromList : Ord k => [(k, v)] -> Map k v
+```
+
+由键值对列表创建映射。
+
+<span id="function-da-map-fromlistwithl-71603" />
+
+### `fromListWithL`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromListWithL : Ord k => (v -> v -> v) -> [(k, v)] -> Map k v
+```
+
+由键值对列表创建映射，并用合并函数处理重复键。合并函数仅在列表中同一键多次出现时使用：第一个参数为该键的新值，第二个为迄今在该键上累积的值。
+
+示例：
+
+```
+>>> fromListWithL (++) [("A", [1]), ("A", [2]), ("B", [2]), ("B", [1]), ("A", [3])]
+fromList [("A", [3, 2, 1]), ("B", [1, 2])]
+>>> fromListWithL (++) [] == (empty : Map Text [Int])
+True
+```
+
+<span id="function-da-map-fromlistwithr-67193" />
+
+### `fromListWithR`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromListWithR : Ord k => (v -> v -> v) -> [(k, v)] -> Map k v
+```
+
+类似 `fromListWithL`，但合并函数参数顺序对调。示例：
+
+```
+>>> fromListWithR (++) [("A", [1]), ("A", [2]), ("B", [2]), ("B", [1]), ("A", [3])]
+fromList [("A", [1, 2, 3]), ("B", [2, 1])]
+>>> fromListWithR (++) [] == (empty : Map Text [Int])
+True
+```
+
+<span id="function-da-map-fromlistwith-28620" />
+
+### `fromListWith`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromListWith : Ord k => (v -> v -> v) -> [(k, v)] -> Map k v
+```
+
+<span id="function-da-map-keys-97544" />
+
+### `keys`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+keys : Map k v -> [k]
+```
+
+返回映射中所有键的列表。键按 `k` 的内置序排序，与 `deriving Ord` 时的 `Ord k` 一致。
+
+```
+>>> keys (fromList [("A", 1), ("C", 3), ("B", 2)])
+["A", "B", "C"]
+```
+
+<span id="function-da-map-values-1656" />
+
+### `values`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+values : Map k v -> [v]
+```
+
+返回映射中所有值的列表，顺序与 `M.keys` 中对应键一致。
+
+```
+>>> values (fromList [("A", 1), ("B", 2)])
+[1, 2]
+```
+
+<span id="function-da-map-tolist-88193" />
+
+### `toList`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+toList : Map k v -> [(k, v)]
+```
+
+将映射转为键值对列表，按 `M.keys` 的键序排列。
+
+<span id="function-da-map-empty-15540" />
+
+### `empty`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+empty : Map k v
+```
+
+空映射。
+
+<span id="function-da-map-size-29495" />
+
+### `size`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+size : Map k v -> Int
+```
+
+映射元素个数。
+
+<span id="function-da-map-null-81379" />
+
+### `null`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+null : Map k v -> Bool
+```
+
+映射是否为空？
+
+<span id="function-da-map-lookup-19256" />
+
+### `lookup`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+lookup : Ord k => k -> Map k v -> Optional v
+```
+
+按键查找值。
+
+<span id="function-da-map-member-48452" />
+
+### `member`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+member : Ord k => k -> Map k v -> Bool
+```
+
+键是否属于该映射？
+
+<span id="function-da-map-filter-60004" />
+
+### `filter`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+filter : Ord k => (v -> Bool) -> Map k v -> Map k v
+```
+
+用谓词过滤 `Map`：仅保留值满足谓词的条目。
+
+<span id="function-da-map-filterwithkey-3168" />
+
+### `filterWithKey`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+filterWithKey : Ord k => (k -> v -> Bool) -> Map k v -> Map k v
+```
+
+用谓词过滤 `Map`：仅保留满足谓词的条目。
+
+<span id="function-da-map-delete-97567" />
+
+### `delete`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+delete : Ord k => k -> Map k v -> Map k v
+```
+
+从映射删除键及其值。键不存在时返回原映射。
+
+<span id="function-da-map-singleton-98784" />
+
+### `singleton`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+singleton : Ord k => k -> v -> Map k v
+```
+
+创建单元素映射。
+
+<span id="function-da-map-insert-53601" />
+
+### `insert`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+insert : Ord k => k -> v -> Map k v -> Map k v
+```
+
+插入新键值对。键已存在时用新值替换原值。
+
+<span id="function-da-map-insertwith-32465" />
+
+### `insertWith`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+insertWith : Ord k => (v -> v -> v) -> k -> v -> Map k v -> Map k v
+```
+
+插入新键值对。键已存在时，用函数 `f new_value old_value` 将新值与旧值合并。
+
+<span id="function-da-map-alter-84047" />
+
+### `alter`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+alter : Ord k => (Optional v -> Optional v) -> k -> Map k v -> Map k v
+```
+
+用 `f` 更新 `m` 中键 `k` 的值，按需插入或删除。`f` 接收 `k` 处的值或 `None`（不存在）；`f` 可返回 `Some` 新值插入 `m`（替换旧值），或 `None` 删除 `k` 的关联。
+
+由此可得：
+
+alter identity k = identity
+alter g k . alter f k = alter (g . f) k
+alter (\_ -> Some v) k = insert k v
+alter (\_ -> None) = delete
+
+<span id="function-da-map-union-90078" />
+
+### `union`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+union : Ord k => Map k v -> Map k v -> Map k v
+```
+
+两映射的并集；键冲突时优先第一个映射。
+
+<span id="function-da-map-unionwith-55674" />
+
+### `unionWith`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+unionWith : Ord k => (v -> v -> v) -> Map k v -> Map k v -> Map k v
+```
+
+两映射的并集，用合并函数处理两映射均存在的键。
+
+<span id="function-da-map-merge-46179" />
+
+### `merge`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+merge : Ord k => (k -> a -> Optional c) -> (k -> b -> Optional c) -> (k -> a -> b -> Optional c) -> Map k a -> Map k b -> Map k c
+```
+
+合并两映射：分别处理仅出现在第一映射、仅出现在第二映射、以及两映射均出现的键。
+
+## 孤儿类型类实例
+
+* `instance (Show k, Show v) => Show (Map k v)`
+
+* `instance (Ord k, Eq v) => Eq (Map k v)`
+
+* `instance (Ord k, Ord v) => Ord (Map k v)`
+
+* `instance Ord k => Semigroup (Map k v)`
+
+* `instance Ord k => Monoid (Map k v)`
+
+* `instance Ord k => Functor (Map k)`
+
+* `instance Ord k => Foldable (Map k)`
+
+* `instance Ord k => Traversable (Map k)`
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

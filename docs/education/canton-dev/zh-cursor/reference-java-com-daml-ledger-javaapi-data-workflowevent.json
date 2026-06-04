@@ -1,0 +1,5 @@
+{
+  "zhTitle": "WorkflowEvent",
+  "summary": "Canton 参考文档：WorkflowEvent。",
+  "body": "> 与 getWorkflowId() 标识的工作流相关的 Ledger 事件。\n\n## WorkflowEvent - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/WorkflowEvent.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic interface WorkflowEvent\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/WorkflowEvent.html#getWorkflowId%28%29) | `getWorkflowId()` | `3.4.8` | - | - |"
+}

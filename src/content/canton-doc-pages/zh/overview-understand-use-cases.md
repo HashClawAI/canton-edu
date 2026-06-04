@@ -1,0 +1,284 @@
+---
+title: "用例"
+slug: "overview-understand-use-cases"
+locale: "zh"
+category: "overview"
+source_url: "https://docs.canton.network/overview/understand/use-cases.md"
+source_title: "Use Cases"
+tags:
+  - overview
+  - understand
+  - use-cases
+---
+
+# 用例
+
+> Canton 隐私架构适用的典型业务用例。
+
+> 在现实世界的应用中，Canton 的隐私模型提供了传统区块链上不可行的解决方案
+
+Canton 的架构实现了公共区块链上不可行的用例。本页探讨关键模式和具体示例。
+
+## 货银对付（DvP）
+
+Canton 能力的典型例子是原子交付与跨不同资产和各方的支付。
+
+### 场景
+
+Alice 想要从 Bob 那里购买代币化资产，并使用在私人支付同步器上结算的代币化现金工具进行支付。结算应为：
+
+* **原子**：要么两条腿都完整，要么都不完整
+* **私人**：观察者不应看到交易对手或价格
+
+### 关于传统区块链
+
+这是有问题的：
+
+* 如果分两笔交易完成：其中一项交易没有另一项交易完成的风险
+* 如果以原子方式完成：所有各方（和观察者）都可以看到交易的所有部分
+* 任何观看的人都可以看到价格和条款
+
+### 在 Canton 上
+
+整个交换发生在具有子交易隐私的单个原子交易中：
+
+```mermaid theme={"theme":{"light":"github-light","dark":"github-dark"}}
+flowchart TB
+    subgraph TX[Atomic DvP Transaction]
+        direction LR
+        L1[Leg 1: Alice → Bob<br>Cash payment]
+        L2[Leg 2: Bob → Alice<br>Asset delivery]
+    end
+
+    subgraph Views[What Each Party Sees]
+        VA["Alice's View<br>- Paid Bob<br>- Received asset"]
+        VB["Bob's View<br>- Received cash from Alice<br>- Transferred asset"]
+    end
+
+    TX --> Views
+```
+
+|参与方 |看到 |没看到 |
+| ---------------- | ---------------------------- | ------------------------ | |
+| **爱丽丝** |双腿（她是买家）|不适用 |
+| **鲍勃** |双腿（他是卖家）|不适用 |
+| **第三方** |什么都没有|关于此交易的一切 |
+
+<Note>
+  此示例假设现金和资产部分都在同步器上结算，其中交易参与者是唯一的利益相关者，例如，现金部分的私人支付同步器和资产部分的私人证券同步器。涉及在全局同步器上结算的资产的交易的行为有所不同：Canton Coin 转账、拓扑交易和网络治理交易对于操作全局同步器的超级验证者来说是可见的，因此它们在相同意义上不是私有的。私有同步器保留完整的子事务隐私模型。
+</Note>
+
+### 为什么这很重要
+
+* **监管合规性**：各方只能看到其授权信息
+* **原子结算**：无结算风险——双腿或两者都没有
+* **隐私**：交易关系和价格受到保护
+* **审计跟踪**：有权的审计员可以添加为观察员
+
+## 代币化证券
+
+发行和交易证券具有内置的监管合规性。
+
+### 要求
+
+* 发行人控制谁可以持有证券
+* 监管机构具有审计可见性
+* 买卖双方之间的交易是私密的
+* 公司行为影响所有持有人（但持股仍为私人）
+
+### Canton设计
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+template Security
+  with
+    issuer : Party
+    holder : Party
+    regulator : Party
+    cusip : Text
+    quantity : Decimal
+    approvedHolders : [Party]  -- Issuer maintains list of eligible holders
+  where
+    signatory issuer
+    observer holder, regulator  -- Regulator sees all holdings
+
+    choice Transfer : ContractId Security
+      with
+        newHolder : Party
+      controller holder, issuer  -- Issuer approval required for compliance
+      do
+        assert (newHolder `elem` approvedHolders)
+        create this with holder = newHolder
+```
+
+监管机构在不公开数据的情况下观察所有持股（出于合规性）。发行人必须批准所有转让，确保只有符合资格的各方才能持有证券。交易双方之间的交易保持私密性，同时仍可审计。
+
+## 跨境支付
+
+跨司法管辖区转移价值，同时尊重数据主权要求。
+
+### 挑战
+
+* 发送方银行位于 A 国，有数据本地化要求
+* 收款银行位于B国，要求不同
+* 代理行需要协调
+* 任何一个国家的监管机构都不应查看对方的客户数据
+
+### Canton解决方案
+
+每个司法管辖区的数据都由该司法管辖区的验证者保留：```mermaid theme={"theme":{"light":"github-light","dark":"github-dark"}}
+flowchart LR
+    subgraph CountryA[Country A]
+        SenderBank[Sender's Bank<br>Validator A]
+        RegA[Regulator A<br>Observer]
+    end
+
+    subgraph CountryB[Country B]
+        ReceiverBank[Receiver's Bank<br>Validator B]
+        RegB[Regulator B<br>Observer]
+    end
+
+    SenderBank <--> |atomic settlement<br>via 同步器| ReceiverBank
+
+    RegA --> |sees sender details| SenderBank
+    RegB --> |sees receiver details| ReceiverBank
+```
+
+* 发件人详细信息保留在 A 国
+* 收款人详细信息保留在 B 国
+* 整个同步器的结算是原子的
+* 每个监管机构只能看到其辖区的数据
+
+## 银团贷款管理
+
+多家银行参与贷款，而无需查看彼此的头寸或条款。
+
+### 场景
+
+在银团贷款中：
+
+* 多家银行持有同一笔贷款的部分内容
+* 每家银行的立场都是保密的
+* 代理银行协调付款
+* 借款人与整个团体进行互动
+
+在公共系统上，所有参与者都可以看到所有职位，从而破坏了保密性。
+
+### Canton解决方案
+
+```mermaid theme={"theme":{"light":"github-light","dark":"github-dark"}}
+flowchart TB
+    subgraph Loan[Syndicated Loan Structure]
+        Agent[Agent Bank<br>Coordinates]
+        B1[Bank A<br>$100M position]
+        B2[Bank B<br>$75M position]
+        B3[Bank C<br>$50M position]
+        Borrower[Borrower]
+    end
+
+    Borrower --> Agent
+    Agent --> B1
+    Agent --> B2
+    Agent --> B3
+
+    Note1[Bank A sees: own position, agent coordination<br>Bank A doesn't see: Bank B or C positions]
+```
+
+每家银行都看到：
+
+* 他们自己的立场和条款
+* 流入/流出他们的付款
+* 代理协调他们的部分
+
+每家银行都看不到：
+
+* 其他银行头寸
+* 其他银行条款
+* 辛迪加总规模（除非明确共享）
+
+## 供应链金融
+
+在不暴露商业关系的情况下跟踪多方的货物和付款。
+
+### 场景
+
+制造商向经销商发货，经销商再向零售商发货。每一步都提供融资。
+
+### 隐私要求
+
+* 制造商不应看到零售商的购买价格
+* 零售商不应该看到制造成本
+* 每个金融家只能看到其债务人的部分
+* 物流提供商看到的是运输信息，而不是财务条款
+
+### Canton方法
+
+Canton的隐私在合同层面发挥作用——观察者看到整个合同，而不是单个字段。为了让不同的各方访问不同的信息，您可以为每个受众设计单独的合同：
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+-- Shipping details: visible to logistics provider
+template ShipmentTracking
+  with
+    shipper : Party
+    receiver : Party
+    logisticsProvider : Party
+    goods : GoodsDescription
+    trackingId : Text
+  where
+    signatory shipper, receiver
+    observer logisticsProvider
+    -- Logistics provider sees goods and routing, not financial terms
+
+-- Financing terms: visible to financier
+template ShipmentFinancing
+  with
+    shipper : Party
+    receiver : Party
+    financier : Party
+    terms : FinancingTerms
+    shipmentRef : Text  -- Reference to link related contracts
+  where
+    signatory shipper, receiver
+    observer financier
+    -- Financier sees payment terms, not goods details or other legs' pricing
+```
+
+单个原子交易可以创建两个合约。物流提供商和金融家只能看到各自相关的合同，而托运人和收货人（作为双方的签署人）可以看到一切。供应链的下游参与者永远不会看到上游定价，因为这些合同有不同的利益相关者。
+
+这种模式（将受众数据分成不同的合约）是 Canton 在保持原子性的同时实现细粒度隐私的方式。
+
+## 何时适合 Canton
+
+当您需要以下服务时，Canton是理想的选择：|要求 |Canton提供|
+| ---------------------------- | -------------------------------------------------------------------- |
+| **多方协调** |具有明确授权的原生多方合约 |
+| **保密执行** |子交易隐私设计 |
+| **监管合规性** |向授权方选择性披露 |
+| **原子沉降** |各方要么全有要么全无的执行 |
+| **审计追踪** |有权审核员的观察员角色|
+
+## 何时可能不适合 Canton
+
+如果您需要，请考虑替代方案：
+
+|要求 |考虑|
+| -------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **完全公开的应用程序** |透明度是一个特征，而不是一个限制（例如公共治理、公开拍卖）|
+| **EVM 兼容性** | Canton 本身并不与以太坊智能合约互操作
+| **匿名参与** |Canton 参与方具有身份；真正的匿名系统需要不同的方法|
+| **简单的单方应用程序** |区块链开销可能不合理 |
+
+## 后续步骤
+
+<CardGroup cols={2}>
+  <Card title="核心概念" icon="book" href="/overview/understand/core-concepts">
+    了解各方、验证者和同步者。
+  </Card>
+
+  <Card title="开始构建" icon="code" href="/appdev/get-started/choose-your-path">
+    开始您的开发之旅。
+  </Card>
+</CardGroup>
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

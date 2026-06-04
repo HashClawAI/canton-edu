@@ -1,0 +1,5 @@
+{
+  "zhTitle": "下载",
+  "summary": "通过 npm、yarn 或 pnpm 安装 @canton-network/dapp-sdk。",
+  "body": "> 从 npm 安装 dApp SDK\n\n使用你偏好的包管理器安装 SDK：\n\n**npm：**\n\n```shell theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\nnpm install @canton-network/dapp-sdk\n```\n\n**yarn：**\n\n```shell theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\nyarn add @canton-network/dapp-sdk\n```\n\n**pnpm：**\n\n```shell theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npnpm add @canton-network/dapp-sdk\n```"
+}

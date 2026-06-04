@@ -8,5 +8,7 @@ dist
 news-candidates.md
 .env
 .env.*
+docs/education/canton-dev/.translate-cache/
+scripts/.venv-translate/
 # Built at `npm run build` (CoinGecko); not committed — CI regenerates.
 public/generated/*.svg

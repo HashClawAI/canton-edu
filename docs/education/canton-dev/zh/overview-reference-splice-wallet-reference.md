@@ -1,0 +1,146 @@
+---
+title: "Splice 钱包参考"
+slug: "overview-reference-splice-wallet-reference"
+locale: "zh"
+category: "overview"
+source_url: "https://docs.canton.network/overview/reference/splice-wallet-reference.md"
+source_title: "Splice Wallet Reference"
+tags:
+  - overview
+  - reference
+  - splice-wallet-reference
+---
+
+# Splice 钱包参考
+
+> Global Synchronizer 上 Splice 参考钱包技术说明。
+
+> 内置 Splice 钱包的参考文档，涵盖 Canton Coin 操作、自动化、转账工作流程、API 和 UTXO 管理
+
+Splice 钱包是 Canton 网络上每个验证器节点的内置钱包组件。它为验证器上托管的各方提供 Canton Coin (CC) 管理，包括 Web UI、后台自动化和编程 API。
+
+## 钱包用户界面
+
+钱包 UI 随每个验证器节点一起提供，并为用户提供基于浏览器的 CC 操作界面。登录并加入（分配新队伍）后，用户可以：
+
+* 查看他们的 CC 余额和个人持有合约 (UTXO)
+* 通过转让要约或一步预批准转让将 CC 发送给其他方
+* 接受、拒绝或撤回传入的转账要约
+* 查看交易历史
+* 为网络上的任何验证器购买流量
+* 管理铸币代表团（接受、拒绝或撤回外部各方的提案）
+
+验证人运营方在验证人初始化期间自动创建，并与配置的`validatorWalletUser`关联。其他用户通过 UI 或通过 `/v0/admin/users` API 端点加入。
+
+## 钱包自动化
+
+验证器应用程序代表钱包用户运行多个后台自动化操作。它们无需人工干预即可处理重复的 CC 操作。
+
+**奖励收集。** 钱包自动化定期为每个加入方收集和铸造奖励优惠券（验证者奖励、应用程序奖励、活跃活动记录）。这会将赚取的优惠券转换为 CC 持有量。
+
+**流量充值。** 配置后，只要额外流量余额低于阈值，验证器就会自动使用 CC 从运营商的钱包中购买流量积分。运营商设置`targetThroughput`和`minTopupInterval`，自动化购买足够的流量来维持该吞吐量。在 DevNet 上，如果钱包缺少资金，验证器会自动提取足够的硬币。
+
+**扫描。** 运营商可以配置自动扫描，当发送者的余额超过`maxBalanceUSD`阈值时，CC将从一方转移到另一方。自动化创建转移报价，将资金转移到配置的`minBalanceUSD`。扫描配置将发送方 ID 映射到接收方 ID 和余额阈值。扫描可以使用转移预先批准进行一站式交付。
+
+**自动接受。** 运营商可以配置自动接受来自特定发送方的传入传输报价。这是在验证器的 Helm 图表或 Docker Compose 配置中针对每个发送方-接收方 ID 对进行配置的。
+
+与以太坊或比特币等其他资产相反，Canton Coin 需要一方明确同意持有 Canton Coin。这包括明确同意任何传入传输。
+
+愿意接受来自任何发件人的 Canton Coin 转账的各方可以设置`TransferPreapproval`。这允许任何一方将 Canton Coin 发送给设置`TransferPreapproval`的一方。请注意，这仅适用于 Canton Coin 的转移，不适用于其他资产。其他资产可能会提供自己的预批准变体，需要单独设置，或者可能需要单独批准每笔传入转账。
+
+为了确保超级验证者不必为不再活跃的各方存储和服务 `TransferPreapprovals` 合约，或者恶意方无法向它们发送垃圾邮件，预批准在过期之前具有有限的生命周期，并且在创建预批准时必须按照生命周期按比例消耗费用。费用由超级验证人通过`transferPreapprovalFee`参数控制。当前值可以在 CC Scan 中的 [https://scan.sv-1.unknown\_cluster.global.canton.network.sync.global/dso](https://scan.sv-1.unknown_cluster.global.canton.network.sync.global/dso) 中观察，默认为 \$1/年。
+
+每个预批准都有两方：批准传入转账的`receiver`方和`provider`方。提供方负责支付费用并在预批准临近到期日时更新预批准。作为回报，`provider` 方将成为所有使用此预先批准的传入转账的应用程序提供商，并为此获得应用程序奖励。 `provider` 方不一定与 `receiver` 方托管在同一节点上，尽管这是实践中最常见的设置。
+
+## 设置预先批准对于不使用外部签名的各方，用户可以通过注销按钮旁边的按钮在其拼接钱包 UI 中创建预批准：
+
+<img src="https://mintcdn.com/cantonfoundation/Ps1aWN9aLFijpT3F/images/splice/preapproval_button.png?fit=max&auto=format&n=Ps1aWN9aLFijpT3F&q=85&s=feabdf575485595c7c0aa26911e133dd" width="600" alt="创建预批准按钮" data-path="images/splice/preapproval_button.png" />
+
+对于使用外部签名的各方，最常见的方法是验证者运营商创建`ExternalPartySetupProposal`合约。然后外部方签署一项行使`ExternalPartySetupProposal_Accept`的交易。这既创建了外部方铸造验证者奖励所需的`ValidatorRight`合约，又创建了与设置为验证者运营方的提供商的`TransferPreapproval`合约。验证器公开端点 `/v0/admin/external-party/setup-proposal` 创建提案，然后公开 `/v0/admin/external-party/setup-proposal/prepare-accept` 和 `/v0/admin/external-party/setup-proposal/submit-accept` 准备并提交外部方签署的接受。有关详细信息，请参阅 API 文档。如果您想要在谁应该是提供者方面进行不同的设置，您可能需要构建自己的设置 Daml 合约并通过分类帐 API 创建它们，而不是使用验证器 API。
+
+在将提供商设置为验证者运营商的情况下设置预先批准时，请注意参与方数量的限制。
+
+验证器 API 始终创建预批准，其到期日为未来 90 天。
+
+## 预批准的到期和更新
+
+如上所述，预先批准始终有一个到期日。如果到达该日期并且预批准尚未更新，则它不能再用于传输，并且由超级验证器运行的自动化最终将存档合同。
+
+当距离到期日不到 30 天时，由验证者运营方作为提供者的预批准将通过验证者应用程序中的自动化自动续订 90 天。
+
+如果您已与另一方作为提供商设置了预先批准，则需要设置自己的续订自动化，以定期执行 `TransferPreapproval_Renew` 选择。
+
+## 取消预先批准
+
+接收者和提供者都可以通过 `TransferPreapproval_Cancel` 选择撤销预先批准。
+
+目前 splice 钱包 UI 中不支持此功能，但对于验证者运营商作为提供者的预批准，验证者运营商可以使用对 `/v0/admin/transfer-preapprovals/by-party/{receiver-party}` 的 `DELETE` 请求。有关详细信息，请参阅 API 文档。
+
+## 通过预先批准转移
+
+如果接收者有一项设置，则拼接钱包 UI 将自动默认使用预先批准进行转账。
+
+如果您通过 API 进行操作，特别是对于外部各方，则执行 Canton Coin 转账的首选方式是通过代币标准 API，该 API 也将在可能的情况下使用预先批准。有关如何使用它的示例，请参阅 [CIP](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0056/cip-0056.md) 和 [令牌标准参考 CLI](https://github.com/canton-network/splice/blob/main/token-standard/cli/src/commands/transfer.ts)。
+
+最后，还可以使用验证器`/v0/admin/external-party/transfer-preapproval/prepare-send`和`/v0/admin/external-party/transfer-preapproval/submit-send`上用于非标准Canton Coin传输的传统外部签名API。有关详细信息，请参阅 API 文档。
+
+## 转移工作流程
+
+各方之间的 CC 传输遵循三种模式之一。
+
+**两步代币标准传输。** 发送者将 CC 锁定到`TransferInstruction`合约中。然后接收方接受（解锁并完成传输）、拒绝或让它过期。发送者还可以在接受之前撤回要约，收回锁定的资金。自 [CIP-0078](https://github.com/global-synchronizer-foundation/cips/blob/main/cip-0078/cip-0078.md) 起，这些转账不收取任何费用。**一步预批准转账。** 如果接收方已经建立了`TransferPreapproval`合约，则发送方可以一步转账CC，无需接收方接受。接收者的验证器运营商充当预先批准的`provider`方并处理其定期更新。如果提供商是特色应用提供商，则转账会生成`AppRewardCoupon`。
+
+## 钱包 API 端点
+
+验证器应用程序在`/v0/wallet/*`路径下公开钱包API。这些分为两类。
+
+**外部 API** (`wallet-external.yaml`)——用于具有向后兼容性保证的程序化钱包交互。需要 JWT，其中主题声明可识别钱包用户。端点包括：
+
+* `POST /v0/wallet/transfer-offers` -- 创建转让报价
+* `POST /v0/wallet/transfer-offers/{tracking_id}/status` -- 查看转账报价状态
+* `GET /v0/wallet/transfer-offers` -- 列出转让报价
+* `POST /v0/wallet/buy-traffic-requests` -- 请求购买流量
+* `POST /v0/wallet/buy-traffic-requests/{tracking_id}/status` -- 查看流量购买状态
+
+**内部 API** (`wallet-internal.yaml`)——由钱包 UI 前端使用。不保证向后兼容性。端点包括：
+
+* `GET /v0/wallet/balance` -- 查询钱包余额
+* `GET /v0/wallet/amulets` -- 列出 UTXO
+* `POST /v0/wallet/transactions` -- 交易历史
+* `POST /v0/wallet/transfer-offers/accept` -- 接受转会要约
+* `POST /v0/wallet/transfer-offers/reject` -- 拒绝转会提议
+* `POST /v0/wallet/transfer-offers/withdraw` -- 撤回转让要约
+* `GET /v0/wallet/user-status` -- 用户登录和钱包状态
+
+有关完整的 OpenAPI 规范，请参阅 [wallet-external.yaml](https://raw.githubusercontent.com/canton-network/splice/refs/heads/main/apps/wallet/src/main/openapi/wallet-external.yaml) 和[wallet-internal.yaml](https://raw.githubusercontent.com/canton-network/splice/refs/heads/main/apps/wallet/src/main/openapi/wallet-internal.yaml) 文件。
+
+## UTXO 管理
+
+Canton Coin 使用继承自 Splice 底层 Amulet 合约结构的 UTXO 模型。账本上的每个活跃的`Holding`合约代表一个具有特定 CC 金额的 UTXO。与账户余额模型不同，一方的总余额是其所有个人持有 UTXO 的总和。 UTXO 管理对于钱包提供商很重要，因为活跃的持有合约会消耗托管验证器上的存储和计算，并且每个传输的 UTXO 输入都会产生额外的流量成本。
+
+Canton Coin 强制执行每次转账 100 个输入合约的限制，并使初始金额小于应计持有费的粉尘 UTXO 过期。钱包提供商的目标应该是平均为每个用户提供大约 10 个或更少的 UTXO。
+
+**合并委托合约**允许钱包提供商代表用户合并小型持有 UTXO。工作流程：
+
+1. 用户在入职期间签署`MergeDelegationProposal`的创建。
+2. 钱包提供商接受提案，创建活跃的`MergeDelegation`。
+3. 后台进程识别拥有超过 10 个 UTXO 的用户，通过注册表 API 构建合并操作，并使用`BatchMergeUtility_MergeHoldings`选项分批执行 \~100 个操作。
+
+MergeDelegation 合约还允许钱包提供商将空投活动与在单个批量调用中自动合并资产结合起来。特色钱包提供商通过执行合并获得特色应用程序奖励。
+
+## 外部方钱包支持
+
+验证器提供用于为外部各方管理 CC 的 API，外部各方的交易签名密钥保存在参与者节点之外。外部签名工作流程使用 Canton 的交互式提交功能，其中交易由参与者准备、外部签名，然后提交回来。
+
+外部方的高级流程：
+
+1. 使用`/v0/admin/external-party/topology/*`设置外部方的拓扑
+2. 通过`/v0/admin/external-party/setup-proposal`创建`TransferPreapproval`以启用发送和接收CC
+3. 使用`/v0/admin/external-party/transfer-preapproval/*`发送抄送
+4.通过`GET /v0/admin/external-party/balance`查询余额对于每次转账，调用者必须准备交易（获取哈希），使用外部方的私钥对哈希进行签名，并将签名的交易提交回参与者。有关完整端点列表，请参阅 [validator-internal.yaml](https://raw.githubusercontent.com/canton-network/splice/refs/heads/main/apps/validator/src/main/openapi/validator-internal.yaml) OpenAPI 规范。
+
+有关使用 TypeScript Wallet SDK 构建自定义钱包集成的信息，请参阅 [Wallet SDK 文档](/integrations/wallet/sdk-download)。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

@@ -1,0 +1,81 @@
+---
+title: "下线 Canton 节点"
+slug: "global-synchronizer-production-operations-decommission-nodes"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/production-operations/decommission-nodes.md"
+source_title: "Decommission Canton Nodes"
+tags:
+  - global-synchronizer
+  - production-operations
+  - decommission-nodes
+---
+
+# 下线 Canton 节点
+
+> Canton 节点与同步器实体下线流程。
+
+> 停用 Canton 节点和同步器实体的程序。
+
+
+本指南假设您总体熟悉 Canton，特别是 Canton 身份管理概念和 Canton 控制台的操作。
+
+请注意，虽然始终可以加入新节点，但**已停用的节点或实体将被有效处置，并且无法重新加入同步器**。 **因此，退役是一项不可逆转的操作**。
+
+此外，**退役程序目前处于实验阶段**；无论如何，**强烈建议在停用节点之前备份要停用的节点**。
+
+## 停止参与节点
+
+### 先决条件
+
+请注意，使参与者不可用（通过将其与同步器断开连接或停用）可能会阻止其他工作流程和/或阻止其他方对其合约进行选择。
+
+例如，考虑以下场景：
+
+* 聚会 `bank` 由参与者 `P1` 主持，聚会 `alice` 由参与者 `P2` 主持。
+* 存在有效合约，`bank` 作为签字人，`alice` 作为观察员。
+* `P1` 已退役。
+
+如果`bank`不是多托管的，则`alice`使用合约的任何尝试都会失败，因为`bank`无法确认。除非通过修复服务清除，否则合约在`P2`上永远保持活跃状态​​，并且只能提交非消耗性的选择和获取。
+
+如果`P2`退役，即使`alice`“只是”一个观察者，也适用类似的考虑：如果`alice`不是多托管的，则合约将在`P1`上保持活动状态，直到通过修复服务清除，并且只能提交非消耗选择和获取。
+
+此外，当`P1`退役时，`P2`停止接收来自`P1`的ACS承诺，这可能会阻止修剪。如果 `P2` 退役，则反之亦然。
+
+因此，正确地停用参与者需要执行以下高级步骤：
+
+1. *确保满足先决条件*：确保使用它们的活动合同和工作流程不会由于需要对其进行操作的各方不可用而“卡住”。
+
+<Note>
+  更具体地说，对于要采取的合同行动：
+
+  * 对于“创建”行动，所有利益相关者必须由活跃参与者托管。
+  * 对于消费“练习”操作，所有利益相关者、参与者、选择观察者和选择授权者必须由活跃参与者托管。
+
+  “被告知者”的定义包含在账本隐私模型部分中。
+
+  因此，退役参与者所需满足的确切先决条件取决于 Daml 应用程序的设计，并且应在最初的 Daml 设计过程中进行考虑和测试。
+</Note>
+
+2. *退役*：将参与者从拓扑状态中删除。
+
+之后，参与者就可以被处理掉。
+
+### 满足先决条件后停用参与者
+
+1. 停止应用程序向要退役的参与者的Ledger API发送命令，以避免命令失败和错误。
+2. 按照启用和禁用连接中的说明，断开要停用的参与者与所有同步器的连接。
+
+<div className="todo">
+  #22917：修复损坏的参考号。使用 ref:sequencer.disable\_member 命令禁用在所有Sequencer中停用的参与者，并删除与其关联的任何Sequencer数据。 #.使用 ref:拓扑.participant\_同步器\_states.authorize 命令通过Sequencer管理器从同步器拓扑中删除参与者。
+</div>
+
+以下代码片段演示了最后两个步骤：
+
+<div className="todo">
+  #22917: 修复损坏的文字包括文字包括:: CANTON/enterprise/app/src/test/scala/com/digitalasset/canton/integration/tests/offboarding/ParticipantOffboardingIntegrationTest.scala 语言: scala start-after: user-manual-entry-begin: OffboardParticipant end-before: user-manual-entry-end: OffboardParticipant dedent:
+</div>
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

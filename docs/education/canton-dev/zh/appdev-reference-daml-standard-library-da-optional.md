@@ -1,0 +1,160 @@
+---
+title: "DA.Optional"
+slug: "appdev-reference-daml-standard-library-da-optional"
+locale: "zh"
+category: "appdev"
+source_url: "https://docs.canton.network/appdev/reference/daml-standard-library/da-optional.md"
+source_title: "DA.Optional"
+tags:
+  - appdev
+  - reference
+  - daml-standard-library
+  - da-optional
+---
+
+# DA.Optional
+
+> Daml 模块 DA.Optional 参考文档。
+
+<span id="module-da-optional-38505" />
+
+# DA.Optional
+
+`Optional` 类型封装可选值。`Optional a` 要么包含类型 `a` 的值（`Some a`），要么为空（`None`）。用 `Optional` 处理错误或异常情况，可避免 resort 到粗暴的错误处理方式。
+
+`Optional` 也是一种 action：一种简单错误 action，所有错误用 `None` 表示。更丰富的错误 action 可用 `Either` 构建。
+
+## 模块概览
+
+<CardGroup cols={2}>
+  <Card title="生命周期">
+    稳定（Stable）。
+  </Card>
+
+  <Card title="说明">
+    状态：`active`
+    引入版本：`3.4.9`
+    移除版本：`-`
+    警告：`0`
+    弃用：`0`
+    弃用自：`-`
+  </Card>
+</CardGroup>
+
+## 函数
+
+<span id="function-da-optional-fromsome-59859" />
+
+### `fromSome`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromSome : Optional a -> a
+```
+
+`fromSome` 从 `Some` 中取出元素；参数为 `None` 时抛错。
+
+多数情况下应优先使用 `fromSomeNote` 以获得更清晰的错误信息。
+
+<span id="function-da-optional-fromsomenote-25463" />
+
+### `fromSomeNote`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromSomeNote : Text -> Optional a -> a
+```
+
+类似 `fromSome`，但可自定义错误消息。
+
+<span id="function-da-optional-catoptionals-11568" />
+
+### `catOptionals`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+catOptionals : [Optional a] -> [a]
+```
+
+`catOptionals` 接收 `Optional` 列表，返回所有 `Some` 中的值组成的列表。
+
+<span id="function-da-optional-listtooptional-83598" />
+
+### `listToOptional`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+listToOptional : [a] -> Optional a
+```
+
+`listToOptional` 对空列表返回 `None`，否则返回 `Some a`，其中 `a` 为列表首元素。
+
+<span id="function-da-optional-optionaltolist-83426" />
+
+### `optionalToList`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+optionalToList : Optional a -> [a]
+```
+
+`optionalToList` 对 `None` 返回空列表，否则返回单元素列表。
+
+<span id="function-da-optional-fromoptional-77879" />
+
+### `fromOptional`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+fromOptional : a -> Optional a -> a
+```
+
+`fromOptional` 接受默认值与 `Optional`。若为 `None` 返回默认值，否则返回 `Optional` 中的值。
+
+<span id="function-da-optional-issome-25261" />
+
+### `isSome`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+isSome : Optional a -> Bool
+```
+
+`isSome` 当且仅当参数为 `Some _` 形式时返回 `True`。
+
+<span id="function-da-optional-isnone-84783" />
+
+### `isNone`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+isNone : Optional a -> Bool
+```
+
+`isNone` 当且仅当参数为 `None` 时返回 `True`。
+
+<span id="function-da-optional-mapoptional-4330" />
+
+### `mapOptional`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+mapOptional : (a -> Optional b) -> [a] -> [b]
+```
+
+`mapOptional` 是 `map` 的变体，可丢弃元素：函数参数返回 `Optional b`；若为 `None` 则不加入结果；若为 `Some b` 则将 `b` 加入结果。
+
+<span id="function-da-optional-whensome-82167" />
+
+### `whenSome`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+whenSome : Applicative m => Optional a -> (a -> m ()) -> m ()
+```
+
+对 `Some` 执行操作，传入 `Some` 内的字段。
+
+<span id="function-da-optional-findoptional-83634" />
+
+### `findOptional`
+
+```haskell theme={"theme":{"light":"github-light","dark":"github-dark"}}
+findOptional : (a -> Optional b) -> [a] -> Optional b
+```
+
+`findOptional` 返回谓词首次返回 `Some` 处的值。类似 `find`，但允许谓词返回值，既可在模式匹配场景下更安全，也可避免谓词内重复计算以提升性能。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

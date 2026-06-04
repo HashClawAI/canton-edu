@@ -1,0 +1,5 @@
+{
+  "zhTitle": "Exercises",
+  "summary": "Canton 参考文档：Exercises。",
+  "body": "> 所有生成的模板练习接口和 Daml 接口的根。\n\n## 练习 - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/Exercises.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic interface Exercises<Cmd>\n```\n\n**会员**\n\n在配置的工件中找不到该对象的成员。"
+}

@@ -1,0 +1,30 @@
+---
+title: "验证者升级"
+slug: "global-synchronizer-production-operations-validator-upgrades"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/production-operations/validator-upgrades.md"
+source_title: "Validator Upgrades"
+tags:
+  - global-synchronizer
+  - production-operations
+  - validator-upgrades
+---
+
+# 验证者升级
+
+> 验证者节点版本升级与协议升级的操作说明。
+
+> 验证节点的小升级过程
+
+有两种类型的升级：
+
+版本升级（相当于从`0.A.X`升级到`0.B.Y`）和协议升级（实际版本可以保持不变，只升级协议，无需任何操作）。
+
+版本升级可以由每个节点独立完成，只需要升级 docker-compose 文件或 kubernetes 部署的`helm upgrade`。您不得删除或卸载任何 Postgres 数据库、更改迁移 ID 或版本升级的机密；请务必阅读 `release_notes` 了解升级过程中可能需要进行的更改。
+
+请注意，对于 docker-compose，您必须更新完整包，包括 docker compose 文件和 start.sh 脚本并调整 `IMAGE_TAG`。仅更新 `IMAGE_TAG` 是不够的，因为旧的 docker compose 文件可能与新版本不兼容。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

@@ -1,0 +1,43 @@
+---
+title: "DamlEnum"
+slug: "reference-java-com-daml-ledger-javaapi-data-damlenum"
+locale: "zh"
+category: "reference"
+source_url: "https://docs.canton.network/reference/java/com-daml-ledger-javaapi-data/damlenum.md"
+source_title: "DamlEnum"
+tags:
+  - reference
+  - java
+  - com-daml-ledger-javaapi-data
+  - damlenum
+---
+
+# DamlEnum
+
+> 从本地 Javadoc 快照生成 DamlEnum 的对象参考页面。
+
+## DamlEnum - 稳定
+
+上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html)
+
+**签名**
+
+```text theme={"theme":{"light":"github-light","dark":"github-dark"}}
+public final class DamlEnum extends Value
+```
+
+**会员**|文档 |会员|介绍 |已弃用 |已删除 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- | ---------- | ---------- | -------- |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#%3Cinit%3E%28com.daml.ledger.javaapi.data.Identifier,java.lang.String%29) | `DamlEnum(Identifier, String)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#%3Cinit%3E%28java.lang.String%29) | `DamlEnum(String)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#equals%28java.lang.Object%29) | `equals(Object)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#fromProto%28com.daml.ledger.api.v2.ValueOuterClass.Enum%29) | `fromProto(ValueOuterClass.Enum)` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#getConstructor%28%29) | `getConstructor()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#getEnumId%28%29) | `getEnumId()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#hashCode%28%29) | `hashCode()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#toProto%28%29) | `toProto()` | `3.4.8` | - | - |
+| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#toProtoEnum%28%29) | `toProtoEnum()` | `3.4.8` | - | - || [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/DamlEnum.html#toString%28%29) | `toString()` | `3.4.8` | - | - |
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

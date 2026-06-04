@@ -1,0 +1,5 @@
+{
+  "zhTitle": "DamlRecord",
+  "summary": "Canton 参考文档：DamlRecord。",
+  "body": "> 所有解码为 codegen Daml 记录的基类，不带类型参数。此类别包括所有模板有效负载、所有界面视图和[按照惯例，但不是按照规则]所有选择参数。它的编码对应项是 DamlRecord，可以使用 toValue() 生成。\n\n## DamlRecord - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/DamlRecord.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic abstract class DamlRecord<T> extends Object implements DefinedDataType<T>\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/DamlRecord.html#%3Cinit%3E%28%29) | `DamlRecord()` | `3.4.8` | - | - |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/DamlRecord.html#toValue%28%29) | `toValue()` | `3.4.8` | - | - |"
+}

@@ -1,0 +1,66 @@
+---
+title: "超级验证者备份"
+slug: "global-synchronizer-production-operations-sv-backup"
+locale: "zh"
+category: "global-synchronizer"
+source_url: "https://docs.canton.network/global-synchronizer/production-operations/sv-backup.md"
+source_title: "SV Backup"
+tags:
+  - global-synchronizer
+  - production-operations
+  - sv-backup
+---
+
+# 超级验证者备份
+
+> 超级验证者节点的备份流程。
+
+> 超级验证者节点的备份流程
+
+## 节点身份备份
+
+一旦您的 SV 节点启动并上线，请确保备份 SV 节点的节点身份。 **请注意，此信息高度敏感，包含参与者、排序者和Mediator的私钥，**因此请确保将其存储在安全位置，例如秘密管理器。另一方面，它对于维护您的身份至关重要（因此，例如访问您持有的 Canton Coin ），因此必须在集群外部进行备份。
+
+您的身份可以通过以下端点从您的节点获取：
+
+```bash theme={"theme":{"light":"github-light","dark":"github-dark"}}
+curl "https://sv.sv.YOUR_HOSTNAME/api/sv/v0/admin/domain/identities-dump" -H "authorization: Bearer <token>"
+```
+
+其中 `\<token\>` 是从 OAuth 提供商获取的 OAuth2 Bearer Token。有关上下文，请参阅此处的身份验证部分。
+
+## Postgres 实例的备份
+
+### 进行备份
+
+虽然大多数备份可以独立进行，但它们之间有一个严格的顺序要求：应用程序 postgres 实例的备份必须在严格早于参与者的时间点进行。在启动参与者之前，请确保应用程序实例备份已完成。
+
+如果您在集群中运行自己的 Postgres 实例，则可以使用 `pgdump` 等工具或通过底层持久卷的快照进行备份。同样，如果您使用云托管的 Postgres，则可以使用 `pgdump` 等工具或云提供商提供的备份工具。
+
+请确保您的 Postgres 实例至少每 4 小时备份一次。
+
+### 历史备份
+
+我们需要历史备份，以便保留创世以来的无间隙历史记录，这些历史记录可以在审计期间使用，并且更广泛地向外部观察者证明当前同步器状态的正确性。
+
+对于排序器和参与者，启用剪枝后，必须为每个剪枝窗口保留历史备份。这意味着保存备份时，两个历史备份之间的时间差必须小于为排序器和参与者设置的`retentionPeriod`。
+
+对于 SV，默认情况下，中介器和拼接应用程序未启用修剪。
+
+此外，在逻辑同步器升级过程中必须保留备份。这包括所有历史排序器备份和其他应用程序的备份。
+
+## CometBFT 的备份
+
+除了 Postgres 实例之外，CometBFT 使用的存储也应该每 4 小时备份一次。 CometBFT 不使用 Postgres。我们建议通过创建底层持久卷的快照来备份其存储。
+
+### 历史备份
+
+我们需要历史备份，以便保留创世以来的无间隙历史记录，这些历史记录可以在审计期间使用，并且更广泛地向外部观察者证明当前同步器状态的正确性。
+
+CometBFT 默认启用剪枝。修剪窗口由要保留的块数定义。我们的目标是将要保留的块数设置为至少保留 30 天数据的值。 CometBFT历史备份的保存方式必须确保两次备份时块高度的差值小于配置的保留块数。我们建议每两周以更积极的方式进行备份和保存。
+
+此外，在逻辑同步器升级过程中必须保留备份。
+
+---
+
+> 本文由 CC Privacy Club 根据 Canton Network 官方文档（CC-BY-4.0）整理翻译，仅供学习；实现细节以官方最新版本为准。

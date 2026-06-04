@@ -1,0 +1,5 @@
+{
+  "zhTitle": "JsonLfEncoder",
+  "summary": "Canton 参考文档：JsonLfEncoder。",
+  "body": "> 从本地 Javadoc 快照生成 JsonLfEncoder 的对象参考页面。\n\n## JsonLfEncoder - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/json/JsonLfEncoder.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\n@FunctionalInterface public interface JsonLfEncoder\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/json/JsonLfEncoder.html#encode%28com.daml.ledger.javaapi.data.codegen.json.JsonLfWriter%29) | `encode(JsonLfWriter)` | `3.4.8` | - | - |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/json/JsonLfEncoder.html#intoString%28%29) | `intoString()` | `3.4.8` | - | - |"
+}

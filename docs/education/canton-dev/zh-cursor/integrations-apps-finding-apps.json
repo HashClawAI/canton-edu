@@ -1,0 +1,5 @@
+{
+  "zhTitle": "发现 Canton Network 应用",
+  "summary": "在官方生态目录浏览应用，或自行开发与申请上架。",
+  "body": "> 发现基于 Canton Network 构建的应用\n\nCanton Network 生态正在不断增长，涵盖多个类别的应用。\n\n## 浏览生态\n\nCanton Network 应用的主目录维护在 [canton.network/ecosystem](https://www.canton.network/ecosystem)。你可以在那里浏览精选应用、生态合作伙伴，并发现基于 Canton 构建的项目。\n\n## 自行构建\n\n若未找到所需应用，可以考虑自行开发：\n\n<CardGroup cols={2}>\n  <Card title=\"开始开发\" icon=\"code\" href=\"/appdev/get-started/choose-your-path\">\n    构建你自己的 Canton 应用。\n  </Card>\n\n  <Card title=\"申请上架\" icon=\"star\" href=\"/overview/understand/getting-app-featured\">\n    如何将应用列入目录。\n  </Card>\n</CardGroup>"
+}

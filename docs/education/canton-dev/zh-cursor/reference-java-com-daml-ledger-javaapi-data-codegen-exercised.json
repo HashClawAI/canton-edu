@@ -1,0 +1,5 @@
+{
+  "zhTitle": "Exercised",
+  "summary": "Canton 参考文档：Exercised。",
+  "body": "> 该类包含与执行选择后的结果相关的信息。应用程序代码不应实例化或子类化；\n\n## 行使 - 稳定\n\n上游文档：[打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/Exercised.html)\n\n**签名**\n\n```text theme={\"theme\":{\"light\":\"github-light\",\"dark\":\"github-dark\"}}\npublic final class Exercised<R> extends Object\n```\n\n**会员**\n\n|文档 |会员|介绍 |已弃用 |已删除 |\n| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------- | ---------- | -------- |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/Exercised.html#exerciseResult) | `exerciseResult` | `3.4.8` | - | - |\n| [打开](https://javadoc.io/doc/com.daml/bindings-java/3.4.11/com/daml/ledger/javaapi/data/codegen/Exercised.html#toString%28%29) | `toString()` | `3.4.8` | - | - |"
+}
