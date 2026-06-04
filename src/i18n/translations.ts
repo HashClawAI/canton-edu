@@ -9,6 +9,7 @@ export const translations = {
     nav: {
       home: 'Home',
       learn: 'Learn',
+      docs: 'Docs',
       ecosystem: 'Ecosystem',
       cips: 'CIPs',
       news: 'News',
@@ -91,6 +92,29 @@ export const translations = {
       step6Body: 'Install the Daml SDK, create a project with "daml new", write templates, deploy via Ledger API (gRPC / JSON gateway). For DeFi: list on Cantex or CantonSwap. For cross-chain: LayerZero integration supports 165+ chains. For wallet UX: WalletConnect enables users to connect existing mobile, browser, and custodial wallets to supported Canton applications without bespoke connectors.',
       step7Title: 'Governance & CIPs',
       step7Body: 'Protocol changes go through Canton Improvement Proposals (CIPs). Categories include Tokenomics, Governance (SV onboarding), Standards Track (protocol upgrades), and Process. See the CIPs page for a full summary. For async discussion, use the Canton Network Forum and discuss.daml.com (linked under Resources).',
+      docsCtaTitle: 'Developer docs knowledge base',
+      docsCtaBody:
+        'Use the bilingual Canton developer knowledge base for source-linked notes, RAG chunks, and a curated path into the official docs.',
+      docsCtaLink: 'Open developer docs',
+    },
+    docs: {
+      title: 'Canton developer docs',
+      intro:
+        'A bilingual, unofficial knowledge base built from selected official Canton Network documentation pages. Use it for navigation and retrieval, then verify implementation details upstream.',
+      sourceTitle: 'Source and refresh',
+      sourceIntro:
+        'The index is generated from the official LLM-friendly documentation index and preserves upstream page links for every topic.',
+      generatedAt: 'Generated',
+      verifyAtSource: 'Verify at source',
+      detailIntro:
+        'This local note is intentionally short. Treat the official page as the canonical reference for protocol, API, and deployment details.',
+      localMarkdown: 'Local Markdown',
+      tagsTitle: 'Tags',
+      ragTitle: 'Agent and RAG use',
+      ragIntro:
+        'Agents should retrieve this topic through the JSONL index, cite the official source URL, and avoid presenting CC Privacy Club as official Canton documentation.',
+      localPath: 'Local path',
+      ragIndex: 'RAG index',
     },
     ecosystem: {
       title: 'Ecosystem overview',
@@ -763,6 +787,7 @@ export const translations = {
       ],
       devTitle: 'Developer documentation & hubs',
       dev: [
+        { name: 'Canton Network Documentation', url: 'https://docs.canton.network/' },
         { name: 'Daml / DAML documentation', url: 'https://docs.daml.com/' },
         { name: 'Splice docs (Global Synchronizer app dev)', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice & ops — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
@@ -841,6 +866,7 @@ export const translations = {
     nav: {
       home: '首页',
       learn: '学习路径',
+      docs: '文档',
       ecosystem: '生态',
       cips: 'CIPs',
       news: '动态',
@@ -919,6 +945,29 @@ export const translations = {
       step6Body: '安装 Daml SDK，通过 "daml new" 创建项目，编写模板，通过 Ledger API（gRPC / JSON 网关）部署。DeFi：上 Cantex 或 CantonSwap。跨链：LayerZero 集成支持 165+ 条链。钱包体验：WalletConnect 使用户可以用已有移动、浏览器与托管钱包连接受支持的 Canton 应用，而无需为每个应用单独做连接器。',
       step7Title: '治理与 CIPs',
       step7Body: '协议变更通过 Canton Improvement Proposals（CIPs）进行。类别包括：代币经济（Tokenomics）、治理（Governance，SV 准入）、标准路径（Standards Track，协议升级）、流程（Process）。完整列表见 CIPs 页面。异步讨论见 Canton Network 官方论坛与 discuss.daml.com（资源页有链接）。',
+      docsCtaTitle: '开发者文档知识库',
+      docsCtaBody:
+        '使用双语 Canton 开发者知识库查看带来源的学习笔记、RAG 检索块，以及进入官方文档的精选路径。',
+      docsCtaLink: '打开开发者文档',
+    },
+    docs: {
+      title: 'Canton 开发者文档',
+      intro:
+        '基于官方 Canton Network 文档精选页面生成的双语非官方知识库。适合导航和检索；实现细节请回到官方原文核对。',
+      sourceTitle: '来源与刷新',
+      sourceIntro:
+        '索引从官方 LLM 友好文档目录生成，每个主题都保留上游页面链接。',
+      generatedAt: '生成时间',
+      verifyAtSource: '核对官方来源',
+      detailIntro:
+        '本地笔记刻意保持简短。协议、API 和部署细节以官方页面为准。',
+      localMarkdown: '本地 Markdown',
+      tagsTitle: '标签',
+      ragTitle: 'Agent 与 RAG 使用',
+      ragIntro:
+        'Agent 应通过 JSONL 索引检索主题，回答时引用官方来源 URL，并避免把 CC Privacy Club 表述为 Canton 官方文档。',
+      localPath: '本地路径',
+      ragIndex: 'RAG 索引',
     },
     ecosystem: {
       title: '生态概览',
@@ -1261,6 +1310,7 @@ export const translations = {
       ],
       devTitle: '开发者文档与入口',
       dev: [
+        { name: 'Canton Network 官方文档', url: 'https://docs.canton.network/' },
         { name: 'Daml / DAML 文档', url: 'https://docs.daml.com/' },
         { name: 'Splice 文档（Global Synchronizer 应用开发）', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice 与运维 — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },

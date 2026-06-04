@@ -727,6 +727,63 @@ main.wrap {
   font-size: 0.92rem;
 }
 
+.callout {
+  background: rgba(0, 24, 10, 0.88);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 100, 0.06),
+    0 8px 32px rgba(0, 20, 10, 0.35);
+}
+
+.callout h2 {
+  margin-top: 0;
+}
+
+.docs-grid {
+  align-items: stretch;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker,
+.breadcrumb {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0 0 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  color: var(--muted);
+  background: rgba(0, 10, 4, 0.8);
+  font-size: 0.84rem;
+}
+
+code {
+  color: var(--accent);
+  background: rgba(0, 10, 4, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.08rem 0.28rem;
+}
+
 .last-updated {
   color: var(--muted);
   font-size: 0.85rem;

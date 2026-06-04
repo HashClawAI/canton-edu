@@ -5,7 +5,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
 
 interface Props {
   locale: Locale;
-  current?: 'home' | 'learn' | 'ecosystem' | 'cips' | 'news' | 'videos' | 'research' | 'community' | 'resources';
+  current?: 'home' | 'learn' | 'docs' | 'ecosystem' | 'cips' | 'news' | 'videos' | 'research' | 'community' | 'resources';
 }
 
 const { locale, current = 'home' } = Astro.props;
@@ -15,11 +15,14 @@ const prefix = locale === 'zh' ? `${base}zh/` : base;
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const newsHref = `${prefix}news`.replace(/\/$/, '');
 const isNewsActive = current === 'news' && (pathname === newsHref || pathname.startsWith(`${newsHref}/`));
+const docsHref = `${prefix}docs/canton`.replace(/\/$/, '');
+const isDocsActive = current === 'docs' && (pathname === docsHref || pathname.startsWith(`${docsHref}/`));
 
 const navItems = [
   { key: 'home' as const, href: prefix, label: tr.nav.home },
   { key: 'news' as const, href: `${prefix}news`, label: tr.nav.news },
   { key: 'learn' as const, href: `${prefix}learn`, label: tr.nav.learn },
+  { key: 'docs' as const, href: `${prefix}docs/canton`, label: tr.nav.docs },
   { key: 'ecosystem' as const, href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
   { key: 'cips' as const, href: `${prefix}cips`, label: tr.nav.cips },
   { key: 'videos' as const, href: `${prefix}videos`, label: tr.nav.videos },
@@ -46,7 +49,7 @@ const navItems = [
       {navItems.map(({ key, href, label }) => (
         <a
           href={href}
-          aria-current={key === 'news' ? (isNewsActive ? 'page' : undefined) : current === key ? 'page' : undefined}
+          aria-current={key === 'news' ? (isNewsActive ? 'page' : undefined) : key === 'docs' ? (isDocsActive ? 'page' : undefined) : current === key ? 'page' : undefined}
         >
           {label}
         </a>

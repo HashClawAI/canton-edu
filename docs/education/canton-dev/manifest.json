@@ -1,0 +1,402 @@
+{
+  "name": "Canton Developer Knowledge Base",
+  "unofficial": true,
+  "generatedAt": "2026-06-04T03:41:49.025Z",
+  "sourceIndexUrl": "https://docs.canton.network/llms.txt",
+  "upstreamDocumentation": "https://docs.canton.network/",
+  "attribution": "Summaries and organization are maintained by CC Privacy Club. Official Canton Network documentation remains the canonical source.",
+  "licenseNote": "The upstream documentation site states Documentation License (CC-BY-4.0). Preserve source URLs and attribution when reusing notes.",
+  "coreSetSize": 24,
+  "documents": [
+    {
+      "slug": "choose-your-path",
+      "title": "Choose Your Path",
+      "category": "getting-started",
+      "tags": [
+        "onboarding",
+        "learning-path"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/get-started/choose-your-path.md",
+      "sourcePath": "/appdev/get-started/choose-your-path.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/choose-your-path.md",
+        "zh": "docs/education/canton-dev/zh/choose-your-path.md"
+      }
+    },
+    {
+      "slug": "development-stack",
+      "title": "The Canton Development Stack",
+      "category": "foundations",
+      "tags": [
+        "stack",
+        "daml",
+        "sdk"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-development-stack.md",
+      "sourcePath": "/appdev/modules/m1-development-stack.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/development-stack.md",
+        "zh": "docs/education/canton-dev/zh/development-stack.md"
+      }
+    },
+    {
+      "slug": "mental-models",
+      "title": "Mental Models for Canton",
+      "category": "foundations",
+      "tags": [
+        "mental-models",
+        "architecture"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m1-mental-models.md",
+      "sourcePath": "/appdev/modules/m1-mental-models.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/mental-models.md",
+        "zh": "docs/education/canton-dev/zh/mental-models.md"
+      }
+    },
+    {
+      "slug": "concept-translation",
+      "title": "Concept Translation Tables",
+      "category": "migration",
+      "tags": [
+        "ethereum",
+        "migration",
+        "concepts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m2-concept-translation.md",
+      "sourcePath": "/appdev/modules/m2-concept-translation.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/concept-translation.md",
+        "zh": "docs/education/canton-dev/zh/concept-translation.md"
+      }
+    },
+    {
+      "slug": "dev-environment",
+      "title": "Development Environment Setup",
+      "category": "daml",
+      "tags": [
+        "setup",
+        "sdk",
+        "local-dev"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-dev-environment.md",
+      "sourcePath": "/appdev/modules/m3-dev-environment.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/dev-environment.md",
+        "zh": "docs/education/canton-dev/zh/dev-environment.md"
+      }
+    },
+    {
+      "slug": "language-fundamentals",
+      "title": "Language Fundamentals",
+      "category": "daml",
+      "tags": [
+        "daml",
+        "language"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-language-fundamentals.md",
+      "sourcePath": "/appdev/modules/m3-language-fundamentals.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/language-fundamentals.md",
+        "zh": "docs/education/canton-dev/zh/language-fundamentals.md"
+      }
+    },
+    {
+      "slug": "contract-templates",
+      "title": "Contract Templates",
+      "category": "daml",
+      "tags": [
+        "templates",
+        "contracts"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-contract-templates.md",
+      "sourcePath": "/appdev/modules/m3-contract-templates.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/contract-templates.md",
+        "zh": "docs/education/canton-dev/zh/contract-templates.md"
+      }
+    },
+    {
+      "slug": "choices",
+      "title": "Choices",
+      "category": "daml",
+      "tags": [
+        "choices",
+        "authorization"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-choices.md",
+      "sourcePath": "/appdev/modules/m3-choices.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/choices.md",
+        "zh": "docs/education/canton-dev/zh/choices.md"
+      }
+    },
+    {
+      "slug": "testing-daml-contracts",
+      "title": "Testing Daml Contracts",
+      "category": "daml",
+      "tags": [
+        "testing",
+        "daml"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m3-testing.md",
+      "sourcePath": "/appdev/modules/m3-testing.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/testing-daml-contracts.md",
+        "zh": "docs/education/canton-dev/zh/testing-daml-contracts.md"
+      }
+    },
+    {
+      "slug": "app-architecture",
+      "title": "Application Architecture",
+      "category": "application",
+      "tags": [
+        "architecture",
+        "backend",
+        "frontend"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-app-architecture.md",
+      "sourcePath": "/appdev/modules/m4-app-architecture.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/app-architecture.md",
+        "zh": "docs/education/canton-dev/zh/app-architecture.md"
+      }
+    },
+    {
+      "slug": "backend-development",
+      "title": "Backend Development",
+      "category": "application",
+      "tags": [
+        "backend",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-backend-dev.md",
+      "sourcePath": "/appdev/modules/m4-backend-dev.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/backend-development.md",
+        "zh": "docs/education/canton-dev/zh/backend-development.md"
+      }
+    },
+    {
+      "slug": "frontend-development",
+      "title": "Frontend Development",
+      "category": "application",
+      "tags": [
+        "frontend",
+        "user-experience"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-frontend-dev.md",
+      "sourcePath": "/appdev/modules/m4-frontend-dev.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/frontend-development.md",
+        "zh": "docs/education/canton-dev/zh/frontend-development.md"
+      }
+    },
+    {
+      "slug": "json-ledger-api",
+      "title": "Canton and the JSON Ledger API",
+      "category": "api",
+      "tags": [
+        "json-api",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-json-api-tutorial.md",
+      "sourcePath": "/appdev/modules/m4-json-api-tutorial.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/json-ledger-api.md",
+        "zh": "docs/education/canton-dev/zh/json-ledger-api.md"
+      }
+    },
+    {
+      "slug": "query-with-pqs",
+      "title": "Query Contracts and Transactions with PQS",
+      "category": "api",
+      "tags": [
+        "pqs",
+        "query",
+        "ledger-api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-query-with-pqs.md",
+      "sourcePath": "/appdev/modules/m4-query-with-pqs.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/query-with-pqs.md",
+        "zh": "docs/education/canton-dev/zh/query-with-pqs.md"
+      }
+    },
+    {
+      "slug": "sdks-and-apis",
+      "title": "SDKs and APIs",
+      "category": "api",
+      "tags": [
+        "sdk",
+        "api"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-sdks-apis.md",
+      "sourcePath": "/appdev/modules/m4-sdks-apis.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/sdks-and-apis.md",
+        "zh": "docs/education/canton-dev/zh/sdks-and-apis.md"
+      }
+    },
+    {
+      "slug": "privacy-model",
+      "title": "Privacy Model for App Developers",
+      "category": "deep-dive",
+      "tags": [
+        "privacy",
+        "visibility"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/privacy-model.md",
+      "sourcePath": "/appdev/deep-dives/privacy-model.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/privacy-model.md",
+        "zh": "docs/education/canton-dev/zh/privacy-model.md"
+      }
+    },
+    {
+      "slug": "authorization",
+      "title": "Authorization",
+      "category": "deep-dive",
+      "tags": [
+        "authorization",
+        "parties"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/authorization.md",
+      "sourcePath": "/appdev/deep-dives/authorization.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/authorization.md",
+        "zh": "docs/education/canton-dev/zh/authorization.md"
+      }
+    },
+    {
+      "slug": "token-standard",
+      "title": "Token Standard",
+      "category": "deep-dive",
+      "tags": [
+        "token-standard",
+        "cip-0056"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/deep-dives/token-standard.md",
+      "sourcePath": "/appdev/deep-dives/token-standard.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/token-standard.md",
+        "zh": "docs/education/canton-dev/zh/token-standard.md"
+      }
+    },
+    {
+      "slug": "app-rewards",
+      "title": "App Rewards",
+      "category": "economics",
+      "tags": [
+        "app-rewards",
+        "traffic",
+        "canton-coin"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/app-rewards.md",
+      "sourcePath": "/appdev/app-rewards.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/app-rewards.md",
+        "zh": "docs/education/canton-dev/zh/app-rewards.md"
+      }
+    },
+    {
+      "slug": "observability",
+      "title": "Observability",
+      "category": "operations",
+      "tags": [
+        "observability",
+        "operations"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m4-observability.md",
+      "sourcePath": "/appdev/modules/m4-observability.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/observability.md",
+        "zh": "docs/education/canton-dev/zh/observability.md"
+      }
+    },
+    {
+      "slug": "localnet-development",
+      "title": "LocalNet Development",
+      "category": "deployment",
+      "tags": [
+        "localnet",
+        "deployment"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-localnet-development.md",
+      "sourcePath": "/appdev/modules/m5-localnet-development.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/localnet-development.md",
+        "zh": "docs/education/canton-dev/zh/localnet-development.md"
+      }
+    },
+    {
+      "slug": "deployment-progression",
+      "title": "Deployment Progression",
+      "category": "deployment",
+      "tags": [
+        "deployment",
+        "environments"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m5-deployment-progression.md",
+      "sourcePath": "/appdev/modules/m5-deployment-progression.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/deployment-progression.md",
+        "zh": "docs/education/canton-dev/zh/deployment-progression.md"
+      }
+    },
+    {
+      "slug": "smart-contract-upgrades",
+      "title": "Smart Contract Upgrades Overview",
+      "category": "upgrades",
+      "tags": [
+        "upgrades",
+        "scu"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/modules/m6-overview.md",
+      "sourcePath": "/appdev/modules/m6-overview.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/smart-contract-upgrades.md",
+        "zh": "docs/education/canton-dev/zh/smart-contract-upgrades.md"
+      }
+    },
+    {
+      "slug": "common-issues-faq",
+      "title": "Common Issues FAQ",
+      "category": "reference",
+      "tags": [
+        "faq",
+        "troubleshooting"
+      ],
+      "sourceUrl": "https://docs.canton.network/appdev/faq.md",
+      "sourcePath": "/appdev/faq.md",
+      "includedInCoreSet": true,
+      "local": {
+        "en": "docs/education/canton-dev/en/common-issues-faq.md",
+        "zh": "docs/education/canton-dev/zh/common-issues-faq.md"
+      }
+    }
+  ]
+}

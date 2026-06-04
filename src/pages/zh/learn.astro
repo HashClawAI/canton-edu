@@ -4,6 +4,7 @@ import { t } from '@/i18n/translations';
 
 const locale = 'zh';
 const tr = t(locale);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout locale={locale} title={tr.learn.title} description={tr.learn.intro} navCurrent="learn">
@@ -18,4 +19,10 @@ const tr = t(locale);
     <li><strong>{tr.learn.step6Title}</strong><span>{tr.learn.step6Body}</span></li>
     <li><strong>{tr.learn.step7Title}</strong><span>{tr.learn.step7Body}</span></li>
   </ul>
+
+  <section class="section callout">
+    <h2>{tr.learn.docsCtaTitle}</h2>
+    <p>{tr.learn.docsCtaBody}</p>
+    <a class="btn btn-primary" href={`${base}zh/docs/canton`}>{tr.learn.docsCtaLink}</a>
+  </section>
 </BaseLayout>
