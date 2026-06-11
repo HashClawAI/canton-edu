@@ -267,6 +267,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-11',
+          tag: 'Institutional',
+          title: 'Digital Asset raises $355M to scale Canton Network infrastructure',
+          body: 'PRNewswire (June 11, 2026): Digital Asset (DA), creator of Canton, closed a $355 million funding round led by a16z crypto—with participants including Citadel Securities, HSBC, BNP Paribas, Broadridge, Apollo Funds, CME Ventures, Coinbase Ventures, Hanwha Investment & Securities, Tradeweb, S&P Global, Polychain, and others. DA plans to expand Canton ecosystem offerings, deepen developer and institutional engagement, and support tokenization, collateral mobility, settlement, and regulated workflows. CEO Yuval Rooz and a16z crypto GP Ali Yahya are quoted; FT Partners advised on the transaction.',
+          url: 'https://www.prnewswire.com/news-releases/digital-asset-raises-355-million-to-accelerate-cantons-role-as-onchain-infrastructure-for-capital-markets-302797427.html',
+        },
+        {
           date: '2026-06-05',
           tag: 'Markets',
           title: 'Grayscale files spot Canton Coin ETF (Form S-1 with SEC)',
@@ -1164,6 +1171,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-11', tag: '机构', title: 'Digital Asset 完成 3.55 亿美元融资，加速 Canton 基础设施扩张', body: 'PRNewswire（2026-06-11）：Canton 创建方 Digital Asset（DA）完成 3.55 亿美元融资，由 a16z crypto 领投；参与方含 Citadel Securities、HSBC、BNP Paribas、Broadridge、Apollo Funds、CME Ventures、Coinbase Ventures、韩华投资证券、Tradeweb、S&P Global、Polychain 等。DA 计划扩展 Canton 生态产品、深化开发者与机构合作，并支持代币化、抵押品流动、结算及受监管金融工作流。引述含 CEO Yuval Rooz 与 a16z crypto 合伙人 Ali Yahya；FT Partners 担任独家财务顾问。', url: 'https://www.prnewswire.com/news-releases/digital-asset-raises-355-million-to-accelerate-cantons-role-as-onchain-infrastructure-for-capital-markets-302797427.html' },
         { date: '2026-06-05', tag: '市场', title: 'Grayscale 向 SEC 提交 Canton Coin 现货 ETF（Form S-1）', body: 'Grayscale Investments 于 2026-06-05 提交 Canton Coin（CC）现货 ETF 初步 Form S-1——信托拟直接持有 CC 并按指数价格跟踪，BitGo 为托管方。注册尚未生效（暂无代码与费率）；文件披露集中度风险：前 100 大 CC 钱包约占流通量 89%。请以 SEC EDGAR 最新状态为准，勿将申报等同于可交易产品。', url: 'https://www.sec.gov/Archives/edgar/data/2138284/000213828426000003/ck0002138284-20260605.htm' },
         { date: '2026-06-03', tag: '机构', title: 'Mastercard 将 Canton 纳入多链稳定币结算网络', body: 'Mastercard 宣布扩展结算能力——支持日内、周末与节假日卡交易结算，可使用 USDC、PYUSD、RLUSD 等受监管稳定币，覆盖 Canton、Ethereum、Solana、Base、Arbitrum、Polygon、Tempo、XRPL 等网络。官方新闻稿日期 2026-06-03；Canton Network 亦在社媒强调机构级 24/7 结算框架。', url: 'https://www.mastercard.com/us/en/news-and-trends/press/2026/june/mastercard-expands-settlement-capabilities-to-include-stablecoin.html' },
         { date: '2026-06-02', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——链上资本市场窗口正在收窄', body: 'Canton Network 官方博客摘要 Quadrillions 第 2 集（「You’re Already Late」）——机构预算周期追赶监管转向、隐私与 24/7 回购流动性缺口，以及 Tradeweb/Belshe 等对可扩展全天候融资的评论。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-02。', url: 'https://www.canton.network/blog/quadrillions-recap-onchain-capital-markets' },
