@@ -55,6 +55,8 @@ export const translations = {
       cardCommunityTitle: 'Active community',
       cardCommunityBody:
         '98,000+ Discord members, ongoing governance votes, and a Protocol Development Fund open to external builders.',
+      newsPreviewTitle: 'Latest updates',
+      newsPreviewViewAll: 'View all news',
       contributeTitle: 'Help maintain this site',
       contributeBody: 'This site is open source and includes a Cursor AI Skill that auto-scans for Canton updates. Clone the repo, open in Cursor, and ask the Agent to refresh content — or edit manually and open a PR.',
       contributeRepo: 'https://github.com/HashClawAI/canton-edu',
@@ -911,6 +913,15 @@ export const translations = {
       switch: '中文',
       label: 'Language',
     },
+    footer: {
+      tagline: 'An open-source, community-maintained educational hub for Canton Network, DAML, and the institutional blockchain ecosystem.',
+      explore: 'Learn',
+      content: 'Content',
+      external: 'External links',
+      github: 'GitHub repository',
+      official: 'canton.network (official)',
+      officialDocs: 'Official developer docs',
+    },
   },
   zh: {
     siteName: 'CC Privacy Club',
@@ -962,6 +973,8 @@ export const translations = {
       cardCIPBody: 'Canton 通过 Canton Improvement Proposals（CIPs）演进——涵盖代币经济、Super Validator 准入、技术标准与协议升级。',
       cardCommunityTitle: '活跃社区',
       cardCommunityBody: 'Discord 98,000+ 成员、持续的治理投票，以及对外部开发者开放的协议发展基金。',
+      newsPreviewTitle: '最新动态',
+      newsPreviewViewAll: '查看全部动态',
       contributeTitle: '参与维护本站',
       contributeBody: '本站开源，内置 Cursor AI Skill，可自动扫描 Canton 动态并更新内容。克隆仓库、用 Cursor 打开，让 Agent 刷新内容——或手动编辑后提 PR。',
       contributeRepo: 'https://github.com/HashClawAI/canton-edu',
@@ -1449,6 +1462,15 @@ export const translations = {
     lang: {
       switch: 'English',
       label: '语言',
+    },
+    footer: {
+      tagline: '面向 Canton Network、DAML 与机构级区块链生态的开源社区教育站。',
+      explore: '学习',
+      content: '内容',
+      external: '外部链接',
+      github: 'GitHub 仓库',
+      official: 'canton.network（官方）',
+      officialDocs: '官方开发者文档',
     },
   },
 } as const;
