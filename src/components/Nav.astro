@@ -34,17 +34,19 @@ const navItems = [
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand brand-with-floated-mark" href={prefix} aria-label={tr.siteName}>
+    <a class="brand" href={prefix} aria-label={tr.siteName}>
       <img
-        class="brand-mark-float"
+        class="brand-logo"
         src={`${base}hashclaw-logo.png`}
-        width="140"
-        height="140"
+        width="36"
+        height="36"
         alt=""
         decoding="async"
         fetchpriority="high"
       />
+      <span class="brand-name">{tr.siteName}</span>
     </a>
+    <input type="checkbox" id="nav-menu-toggle" class="nav-toggle-input" aria-hidden="true" />
     <nav class="main-nav" aria-label={tr.lang.label}>
       <div class="main-nav-links">
         {navItems.map(({ key, href, label }) => (
@@ -56,7 +58,14 @@ const navItems = [
           </a>
         ))}
       </div>
-      <LanguageSwitcher locale={locale} />
     </nav>
+    <div class="header-actions">
+      <LanguageSwitcher locale={locale} />
+      <label for="nav-menu-toggle" class="nav-toggle" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </label>
+    </div>
   </div>
 </header>

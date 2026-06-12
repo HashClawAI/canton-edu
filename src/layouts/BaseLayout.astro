@@ -15,8 +15,31 @@ const { locale, title, description, navCurrent = 'home' } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
 const base = import.meta.env.BASE_URL;
+const prefix = locale === 'zh' ? `${base}zh/` : base;
 const ogImagePath = `${base}hashclaw-logo.png`;
 const ogImage = new URL(ogImagePath, Astro.site ?? Astro.url.origin);
+
+const footerExplore = [
+  { href: prefix, label: tr.nav.home },
+  { href: `${prefix}learn`, label: tr.nav.learn },
+  { href: `${prefix}docs/canton`, label: tr.nav.docs },
+  { href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
+  { href: `${prefix}cips`, label: tr.nav.cips },
+];
+
+const footerContent = [
+  { href: `${prefix}news`, label: tr.nav.news },
+  { href: `${prefix}videos`, label: tr.nav.videos },
+  { href: `${prefix}research`, label: tr.nav.research },
+  { href: `${prefix}community`, label: tr.nav.community },
+  { href: `${prefix}resources`, label: tr.nav.resources },
+];
+
+const footerExternal = [
+  { href: 'https://github.com/HashClawAI/canton-edu', label: tr.footer.github },
+  { href: 'https://www.canton.network/', label: tr.footer.official },
+  { href: 'https://docs.canton.network/', label: tr.footer.officialDocs },
+];
 ---
 
 <!doctype html>
@@ -38,19 +61,50 @@ const ogImage = new URL(ogImagePath, Astro.site ?? Astro.url.origin);
     <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
     <title>{siteTitle}</title>
   </head>
-  <body class={`matrix-site locale-${locale}`}>
-    <canvas id="mx-rain-canvas" class="mx-rain-layer" aria-hidden="true"></canvas>
+  <body class={`locale-${locale}`}>
     <div class="site-layer">
       <Nav locale={locale} current={navCurrent} />
       <main class="wrap">
         <slot />
       </main>
       <footer class="site-footer">
-        <div class="wrap">
+        <div class="wrap footer-grid">
+          <div class="footer-brand">
+            <a class="footer-brand-row" href={prefix}>
+              <img class="footer-logo" src={`${base}hashclaw-logo.png`} width="30" height="30" alt="" decoding="async" loading="lazy" />
+              <span>{tr.siteName}</span>
+            </a>
+            <p class="footer-tagline">{tr.footer.tagline}</p>
+          </div>
+          <nav class="footer-col" aria-label={tr.footer.explore}>
+            <h3>{tr.footer.explore}</h3>
+            <ul>
+              {footerExplore.map(({ href, label }) => (
+                <li><a href={href}>{label}</a></li>
+              ))}
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label={tr.footer.content}>
+            <h3>{tr.footer.content}</h3>
+            <ul>
+              {footerContent.map(({ href, label }) => (
+                <li><a href={href}>{label}</a></li>
+              ))}
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <h3>{tr.footer.external}</h3>
+            <ul>
+              {footerExternal.map(({ href, label }) => (
+                <li><a href={href} target="_blank" rel="noopener noreferrer">{label}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div class="wrap footer-disclaimer">
           {tr.home.disclaimer}
         </div>
       </footer>
     </div>
-    <script src={`${base}matrix-rain.js`} defer></script>
   </body>
 </html>

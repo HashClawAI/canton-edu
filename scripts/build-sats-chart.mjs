@@ -274,20 +274,20 @@ async function buildSvgForLocale(locale) {
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
   <defs>
     <linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3d8bfd" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#3d8bfd" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#0f766e" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <style><![CDATA[
     .c-area { stroke: none; }
-    .c-line { stroke: #3d8bfd; stroke-width: ${MK.lineStroke}; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .mk { fill: #0c0f14; stroke-width: ${MK.mkStroke}; }
-    .m-hi { stroke: #4ade80; }
-    .m-lo { stroke: #f87171; }
-    .m-lt { stroke: #3d8bfd; }
-    .m-t { font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf4; }
-    .m-s { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(232,237,244,0.9); font-variant-numeric: tabular-nums; }
-    .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #8b9cb3; font-variant-numeric: tabular-nums; }
+    .c-line { stroke: #0f766e; stroke-width: ${MK.lineStroke}; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .mk { fill: #ffffff; stroke-width: ${MK.mkStroke}; }
+    .m-hi { stroke: #15803d; }
+    .m-lo { stroke: #dc2626; }
+    .m-lt { stroke: #0f766e; }
+    .m-t { font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #0c1f3f; }
+    .m-s { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(12,31,63,0.72); font-variant-numeric: tabular-nums; }
+    .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #5d6b7e; font-variant-numeric: tabular-nums; }
   ]]></style>
   <path class="c-area" d="${area}" fill="url(#${gid})"/>
   <path class="c-line" d="${line}"/>
