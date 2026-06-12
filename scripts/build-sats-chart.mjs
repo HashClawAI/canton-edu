@@ -296,7 +296,7 @@ async function buildSvgForLocale(locale) {
     .mk { fill: #ffffff; stroke-width: ${MK.mkStroke}; }
     .m-hi { stroke: #15803d; }
     .m-lo { stroke: #dc2626; }
-    .m-lt { stroke: #0f766e; }
+    .m-lt { stroke: #2563eb; }
     .m-t { font: 600 9px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #0c1f3f; }
     .m-s { font: 400 9px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(12,31,63,0.72); font-variant-numeric: tabular-nums; }
     .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #5d6b7e; font-variant-numeric: tabular-nums; }
