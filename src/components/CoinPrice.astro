@@ -215,14 +215,26 @@ const chartSrc = `${import.meta.env.BASE_URL}generated/cc-sats-chart-${locale ==
   }
 
   .coin-stat {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1.2rem 1rem;
     box-shadow: var(--shadow-sm);
+  }
+
+  .coin-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent) 0%, #2563eb 100%);
   }
 
   .coin-label {

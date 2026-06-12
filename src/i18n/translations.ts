@@ -19,6 +19,7 @@ export const translations = {
       resources: 'Resources',
     },
     home: {
+      heroKicker: 'Canton Network Education Hub',
       title: 'Learn Canton Network',
       subtitle:
         'Independent, unofficial educational hub for Canton Network, DAML smart contracts, and the institutional blockchain ecosystem — open source and maintained by the community. Some materials are aggregated or refreshed using editor-assisted workflows, including AI agents and automation, which may introduce errors or omissions. Always verify against official documentation.',
@@ -940,6 +941,7 @@ export const translations = {
       resources: '资源',
     },
     home: {
+      heroKicker: 'Canton Network 社区教育站',
       title: '了解 Canton Network',
       subtitle:
         '面向 Canton Network、DAML 智能合约与机构级区块链生态的非官方、开源、由社区维护的独立教育资源（CC Privacy Club）。部分内容经人工辅助与人工智能体（AI Agent）及自动化工具进行汇集或更新，可能存在错漏；请务必以官方文档为准进行核对。',
