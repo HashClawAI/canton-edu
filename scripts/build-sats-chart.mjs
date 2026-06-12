@@ -30,8 +30,8 @@ const MK = {
   dyLo1: 13,
   dyLo2: 27,
   /** Right-aligned “最新数据”: title above value (smaller y first). */
-  dyLtTitle: -24,
-  dyLtValue: -10,
+  dyLtTitle: -30,
+  dyLtValue: -18,
 };
 const DAY_TRIES = ['max', '365', '180', '90'];
 
@@ -174,13 +174,15 @@ function pathFromTimeSeries(plot, tMin, tMax, ymin, ymax) {
  * @param labelNudgeX  offset from dot x for auto anchor (hi/lo)
  * @param anchorEnd     if true, label lines align to chart right (for “最新数据”)
  */
-function markerXml(x, y, label, valueLine, kind, labelNudgeX, anchorEnd = false) {
+function markerXml(x, y, label, valueLine, kind, labelNudgeX, anchorEnd = false, dyOverride) {
   const tx = anchorEnd ? W - PAD.r : x + labelNudgeX;
   const anchor = anchorEnd ? 'end' : tx < PAD.l + IW * 0.22 ? 'start' : tx > PAD.l + IW * 0.78 ? 'end' : 'middle';
   const dy1 =
-    kind === 'lo' ? MK.dyLo1 : kind === 'lt' && anchorEnd ? MK.dyLtTitle : MK.dyHi1;
+    dyOverride?.dy1 ??
+    (kind === 'lo' ? MK.dyLo1 : kind === 'lt' && anchorEnd ? MK.dyLtTitle : MK.dyHi1);
   const dy2 =
-    kind === 'lo' ? MK.dyLo2 : kind === 'lt' && anchorEnd ? MK.dyLtValue : MK.dyHi2;
+    dyOverride?.dy2 ??
+    (kind === 'lo' ? MK.dyLo2 : kind === 'lt' && anchorEnd ? MK.dyLtValue : MK.dyHi2);
   const cls = kind === 'hi' ? 'm-hi' : kind === 'lo' ? 'm-lo' : 'm-lt';
   return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${MK.r}" class="mk ${cls}" />
 <text x="${tx.toFixed(1)}" y="${(y + dy1).toFixed(1)}" text-anchor="${anchor}" class="m-t">${esc(label)}</text>
@@ -245,22 +247,32 @@ async function buildSvgForLocale(locale) {
       iLast === iMax
         ? `${fmtSats(raw[iMax])} · ${df(series[iMax].t)}${latestParen}`
         : `${fmtSats(raw[iMax])} · ${df(series[iMax].t)}`;
-    markers = markerXml(xHi, yHi, labels.high, hiLine, 'hi', 0);
+    const xLt = xOf(series[iLast].t);
+    const yLt = ySvg(raw[iLast], ymin, ymax);
+    const clusterRight =
+      iLast !== iMax &&
+      iLast !== iMin &&
+      xHi > PAD.l + IW * 0.72 &&
+      xLt > PAD.l + IW * 0.72 &&
+      Math.abs(xHi - xLt) < IW * 0.1;
+    const hiDy = clusterRight ? { dy1: 14, dy2: 26 } : undefined;
+    const ltDy = clusterRight ? { dy1: -36, dy2: -24 } : undefined;
+    markers = markerXml(xHi, yHi, labels.high, hiLine, 'hi', 0, false, hiDy);
     const loLine =
       iLast === iMin
         ? `${fmtSats(raw[iMin])} · ${df(series[iMin].t)}${latestParen}`
         : `${fmtSats(raw[iMin])} · ${df(series[iMin].t)}`;
     markers += markerXml(xLo, yLo, labels.low, loLine, 'lo', loNudge);
     if (iLast !== iMax && iLast !== iMin) {
-      const xLt = xOf(series[iLast].t);
       markers += markerXml(
         xLt,
-        ySvg(raw[iLast], ymin, ymax),
+        yLt,
         labels.latest,
         `${fmtSats(raw[iLast])} · ${df(series[iLast].t)}`,
         'lt',
         0,
         true,
+        ltDy,
       );
     }
   }
@@ -284,9 +296,9 @@ async function buildSvgForLocale(locale) {
     .mk { fill: #ffffff; stroke-width: ${MK.mkStroke}; }
     .m-hi { stroke: #15803d; }
     .m-lo { stroke: #dc2626; }
-    .m-lt { stroke: #0f766e; }
-    .m-t { font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #0c1f3f; }
-    .m-s { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(12,31,63,0.72); font-variant-numeric: tabular-nums; }
+    .m-lt { stroke: #2563eb; }
+    .m-t { font: 600 9px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #0c1f3f; }
+    .m-s { font: 400 9px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: rgba(12,31,63,0.72); font-variant-numeric: tabular-nums; }
     .c-axis { font: 400 12px system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #5d6b7e; font-variant-numeric: tabular-nums; }
   ]]></style>
   <path class="c-area" d="${area}" fill="url(#${gid})"/>
