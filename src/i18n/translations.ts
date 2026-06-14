@@ -270,6 +270,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-15',
+          tag: 'Ecosystem',
+          title: 'Build on Canton Hackathon by Encode Club kicks off (virtual)',
+          body: 'Canton Network Forum (May 13 announcement; kickoff June 15, 2026): Encode Club’s fully virtual Build on Canton Hackathon opens to builders worldwide across three tracks—Private DeFi & Capital Markets; TradeFi, RWA & Tokenized Assets; and Payments, Neo-banking & Agentic Commerce. Program page at encodeclub.com/programmes/canton-hackathon.',
+          url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635',
+        },
+        {
+          date: '2026-06-12',
+          tag: 'Institutional',
+          title: 'SBI Holdings announces additional investment in Digital Asset (Canton developer)',
+          body: 'SBI Holdings investor notice (June 12, 2026): SBI invested further in Digital Asset’s $355M round via a subsidiary, deepening its role as a Canton founding partner and Super Validator. The release cites DTCC’s U.S. Treasury tokenization on Canton (December 2025), a Japanese government-bond digital-collateral PoC starting April 2026, 700+ network participants, and >$6T in on-chain managed assets—with broader DTCC rollout expected in H2 2026.',
+          url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf',
+        },
+        {
+          date: '2026-06-11',
+          tag: 'Media',
+          title: 'Canton blog: Quadrillions recap — the ceiling on a transparent ledger',
+          body: 'Official Canton Network blog recap of Quadrillions Episode 3—Eli Ben-Sasson (StarkWare) and Shaul Kfir on why wholesale capital hits adoption limits on fully transparent chains, ZK rollups vs integrity vs privacy, and Canton’s asymmetric-visibility data-distribution model for institutional RWAs. Blockworks × Canton miniseries; full episode at quadrillionspod.com. Blog dated June 11, 2026.',
+          url: 'https://www.canton.network/blog/quadrillions-recap-the-ceiling-on-a-transparent-ledger',
+        },
+        {
           date: '2026-06-11',
           tag: 'Institutional',
           title: 'Digital Asset raises $355M to scale Canton Network infrastructure',
@@ -1186,6 +1207,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
+        { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
+        { date: '2026-06-11', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——透明账本的天花板', body: 'Canton Network 官方博客摘要 Quadrillions 第 3 集——Eli Ben-Sasson（StarkWare）与 Shaul Kfir 讨论 wholesale 资本在完全透明链上的采用上限、ZK Rollup 与完整性/隐私的区分，以及 Canton 非对称可见性数据分发模型如何服务机构 RWA。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-11。', url: 'https://www.canton.network/blog/quadrillions-recap-the-ceiling-on-a-transparent-ledger' },
         { date: '2026-06-11', tag: '机构', title: 'Digital Asset 完成 3.55 亿美元融资，加速 Canton 基础设施扩张', body: 'PRNewswire（2026-06-11）：Canton 创建方 Digital Asset（DA）完成 3.55 亿美元融资，由 a16z crypto 领投；参与方含 Citadel Securities、HSBC、BNP Paribas、Broadridge、Apollo Funds、CME Ventures、Coinbase Ventures、韩华投资证券、Tradeweb、S&P Global、Polychain 等。DA 计划扩展 Canton 生态产品、深化开发者与机构合作，并支持代币化、抵押品流动、结算及受监管金融工作流。引述含 CEO Yuval Rooz 与 a16z crypto 合伙人 Ali Yahya；FT Partners 担任独家财务顾问。', url: 'https://www.prnewswire.com/news-releases/digital-asset-raises-355-million-to-accelerate-cantons-role-as-onchain-infrastructure-for-capital-markets-302797427.html' },
         { date: '2026-06-05', tag: '市场', title: 'Grayscale 向 SEC 提交 Canton Coin 现货 ETF（Form S-1）', body: 'Grayscale Investments 于 2026-06-05 提交 Canton Coin（CC）现货 ETF 初步 Form S-1——信托拟直接持有 CC 并按指数价格跟踪，BitGo 为托管方。注册尚未生效（暂无代码与费率）；文件披露集中度风险：前 100 大 CC 钱包约占流通量 89%。请以 SEC EDGAR 最新状态为准，勿将申报等同于可交易产品。', url: 'https://www.sec.gov/Archives/edgar/data/2138284/000213828426000003/ck0002138284-20260605.htm' },
         { date: '2026-06-03', tag: '机构', title: 'Mastercard 将 Canton 纳入多链稳定币结算网络', body: 'Mastercard 宣布扩展结算能力——支持日内、周末与节假日卡交易结算，可使用 USDC、PYUSD、RLUSD 等受监管稳定币，覆盖 Canton、Ethereum、Solana、Base、Arbitrum、Polygon、Tempo、XRPL 等网络。官方新闻稿日期 2026-06-03；Canton Network 亦在社媒强调机构级 24/7 结算框架。', url: 'https://www.mastercard.com/us/en/news-and-trends/press/2026/june/mastercard-expands-settlement-capabilities-to-include-stablecoin.html' },
