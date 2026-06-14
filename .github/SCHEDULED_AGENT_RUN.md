@@ -39,8 +39,8 @@ GitHub Actions **不会**代替 Cursor 改文案；下面 CI 仅作 RSS 候选�
 | 机制 | Cron (UTC) | 约北京时间 | 作用 |
 |------|------------|------------|------|
 | **Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | **全站扫描 → PR（主路径）** |
-| `deploy.yml` | `0 */12 * * *` | ~08:00 & ~20:00 | 合并后构建部署 |
-| `daily-canton-news-scan.yml` | `15 */12 * * *` | ~08:15 & ~20:15 | RSS 候选 Issue |
-| `scheduled-content-agent-reminder.yml` | `45 */12 * * *` | ~08:45 & ~20:45 | Automation 失败时的备用提醒 |
+| `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | 定时全量重建；合并到 `main` 也会触发 |
+| `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
+| `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | Automation 失败时的备用提醒 |
 
 可选本机 LaunchAgent：见 `~/.cursor/skills/canton-edu-news-daily/scripts/com.user.canton-edu-news-reminder.plist`（默认 20:00 北京时间）。

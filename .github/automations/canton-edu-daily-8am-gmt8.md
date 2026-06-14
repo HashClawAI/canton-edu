@@ -36,7 +36,7 @@ Single source of truth: `src/i18n/translations.ts`
 2. Branch: `content/scheduled-YYYY-MM-DD` (use today's UTC or Asia/Shanghai date)
 3. Web search for news since latest `news.items[0].date`; sweep other modules per credible findings only.
 4. Edit `src/i18n/translations.ts` (EN then ZH).
-5. `npm run build` — fix until green (expect ~28 site pages + doc pages).
+5. `npm run build` — fix until green (site routes + Canton doc mirror; typically ~1600+ static pages).
 6. Commit: `chore(content): scheduled scan YYYY-MM-DD — <short summary>`
 7. `git push -u origin HEAD`
 8. `gh pr create` with title `content: scheduled scan YYYY-MM-DD` and body using `.github/PULL_REQUEST_TEMPLATE/content_update.md` structure:
@@ -60,16 +60,16 @@ Reply with: branch name, PR URL, list of added/changed items, and `npm run build
 
 1. 收到 PR 通知 → 看摘要与 diff，核对中英对齐与链接。
 2. **Approve** → **Squash merge** 到 `main`。
-3. `deploy.yml` 自动部署 GitHub Pages：https://hashclawai.github.io/canton-edu/
+3. `deploy.yml` 自动部署 GitHub Pages：https://ccprivacy.club/
 
 ## 与 GitHub Actions 的分工
 
-| 机制 | 时间（GMT+8） | 作用 |
-|------|----------------|------|
-| **本 Cursor Automation** | **每天 08:00** | 扫描 → 改 `translations.ts` → **开 PR** |
-| `deploy.yml` | 约 08:00 / 20:00 | 合并后重建站点 |
-| `daily-canton-news-scan.yml` | 约 20:15 | RSS 候选 Issue（辅助） |
-| `scheduled-content-agent-reminder.yml` | 约 20:45 | 备用提醒 Issue（Automation 失败时） |
+| 机制 | Cron (UTC) | 约北京时间 | 作用 |
+|------|------------|------------|------|
+| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | 扫描 → 改 `translations.ts` → **开 PR** |
+| `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | 定时全量重建；合并到 `main` 也会触发 |
+| `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue（辅助） |
+| `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 备用提醒 Issue（Automation 失败时） |
 
 ## 故障排查
 
