@@ -284,6 +284,13 @@ export const translations = {
           url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf',
         },
         {
+          date: '2026-06-12',
+          tag: 'Protocol',
+          title: 'Canton 3.4→3.5 Phase 3: TestNet LSU June 17, MainNet LSU June 27',
+          body: 'Super Validator operations schedule update (June 12, 2026): Global Synchronizer networks enter Phase 3 Logical Synchronizer Upgrades to Canton Protocol Version 35. TestNet topology freeze June 16 / upgrade June 17; MainNet freeze June 26 / upgrade June 27 (13:00 UTC). Validators require Splice ≥0.6.5; Splice 0.6.7 is required by June 30 ahead of traffic-based app rewards. Party onboarding and package vetting pause ~24h before each LSU. See SV long-term ops schedule for authoritative timing.',
+          url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-3-4-to-3-5-transition-lsu-schedule-2026-06-12/',
+        },
+        {
           date: '2026-06-11',
           tag: 'Media',
           title: 'Canton blog: Quadrillions recap — the ceiling on a transparent ledger',
@@ -298,11 +305,25 @@ export const translations = {
           url: 'https://www.prnewswire.com/news-releases/digital-asset-raises-355-million-to-accelerate-cantons-role-as-onchain-infrastructure-for-capital-markets-302797427.html',
         },
         {
+          date: '2026-06-11',
+          tag: 'Markets',
+          title: 'Kraken enables USDCx deposits and withdrawals on Canton',
+          body: 'Kraken Blog (June 11, 2026): Kraken supports USDCx funding via the Canton Network—described as the first step in broader Canton ecosystem support. USDCx is a Canton-native stablecoin backed 1:1 by USDC held in Circle xReserve (minted on Canton when USDC is deposited to xReserve on Ethereum). Deposits on unsupported networks may be lost; spot trading awaits liquidity conditions; geographic restrictions may apply.',
+          url: 'https://blog.kraken.com/product/new-features/usdcx-deposits-and-withdrawals-now-available-on-canton',
+        },
+        {
           date: '2026-06-05',
           tag: 'Markets',
           title: 'Grayscale files spot Canton Coin ETF (Form S-1 with SEC)',
           body: 'Grayscale Investments filed a preliminary Form S-1 (June 5, 2026) for a spot ETF holding Canton Coin (CC) directly—the trust would track CC via an index price, with BitGo as custodian. The filing is not yet effective (no ticker or fee disclosed) and notes concentration risk: the 100 largest CC wallets held ~89% of circulating supply per the prospectus. Verify status on SEC EDGAR before treating as a tradable product.',
           url: 'https://www.sec.gov/Archives/edgar/data/2138284/000213828426000003/ck0002138284-20260605.htm',
+        },
+        {
+          date: '2026-06-04',
+          tag: 'Institutional',
+          title: 'Visa and Brale explore private stablecoin settlement on Canton (PoC)',
+          body: 'Visa investor release (June 4, 2026): Visa and Brale are running a proof-of-concept to evaluate SBC—Brale’s U.S. dollar-backed stablecoin natively supported on Canton—for institutional VisaNet settlement using Canton’s privacy architecture. Exploratory PoC only; no production deployment or launch timeline announced.',
+          url: 'https://investor.visa.com/news/news-details/2026/Visa-and-Brale-Explore-Private-Stablecoin-Settlement-for-Institutional-Payments/default.aspx',
         },
         {
           date: '2026-06-03',
@@ -1209,9 +1230,12 @@ export const translations = {
       items: [
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
+        { date: '2026-06-12', tag: '协议', title: 'Canton 3.4→3.5 第三阶段：TestNet LSU 6 月 17 日、MainNet LSU 6 月 27 日', body: '超级验证者运维日程更新（2026-06-12）：全球同步器网络进入第三阶段 Logical Synchronizer 升级至 Canton 协议版本 35。TestNet 拓扑冻结 6 月 16 日 / 升级 6 月 17 日；MainNet 冻结 6 月 26 日 / 升级 6 月 27 日（13:00 UTC）。验证者须运行 Splice ≥0.6.5；6 月 30 日前需升级至 Splice 0.6.7 以配合流量型应用奖励。每次 LSU 前约 24 小时暂停参与方 onboarding 与包 vetting。权威时间以 SV 长期运维日程为准。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-3-4-to-3-5-transition-lsu-schedule-2026-06-12/' },
         { date: '2026-06-11', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——透明账本的天花板', body: 'Canton Network 官方博客摘要 Quadrillions 第 3 集——Eli Ben-Sasson（StarkWare）与 Shaul Kfir 讨论 wholesale 资本在完全透明链上的采用上限、ZK Rollup 与完整性/隐私的区分，以及 Canton 非对称可见性数据分发模型如何服务机构 RWA。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-11。', url: 'https://www.canton.network/blog/quadrillions-recap-the-ceiling-on-a-transparent-ledger' },
         { date: '2026-06-11', tag: '机构', title: 'Digital Asset 完成 3.55 亿美元融资，加速 Canton 基础设施扩张', body: 'PRNewswire（2026-06-11）：Canton 创建方 Digital Asset（DA）完成 3.55 亿美元融资，由 a16z crypto 领投；参与方含 Citadel Securities、HSBC、BNP Paribas、Broadridge、Apollo Funds、CME Ventures、Coinbase Ventures、韩华投资证券、Tradeweb、S&P Global、Polychain 等。DA 计划扩展 Canton 生态产品、深化开发者与机构合作，并支持代币化、抵押品流动、结算及受监管金融工作流。引述含 CEO Yuval Rooz 与 a16z crypto 合伙人 Ali Yahya；FT Partners 担任独家财务顾问。', url: 'https://www.prnewswire.com/news-releases/digital-asset-raises-355-million-to-accelerate-cantons-role-as-onchain-infrastructure-for-capital-markets-302797427.html' },
+        { date: '2026-06-11', tag: '市场', title: 'Kraken 支持 Canton 上 USDCx 充提', body: 'Kraken 博客（2026-06-11）：Kraken 已支持经 Canton Network 的 USDCx 资金充提——Kraken 称此为更广泛 Canton 生态支持的第一步。USDCx 为 Canton 原生稳定币，由 Circle xReserve 中 1:1 支撑的 USDC 铸造（在以太坊向 xReserve 存入 USDC 后在 Canton 铸出）。不支持网络的充值可能永久丢失；现货交易待流动性条件；部分地区可能受限。', url: 'https://blog.kraken.com/product/new-features/usdcx-deposits-and-withdrawals-now-available-on-canton' },
         { date: '2026-06-05', tag: '市场', title: 'Grayscale 向 SEC 提交 Canton Coin 现货 ETF（Form S-1）', body: 'Grayscale Investments 于 2026-06-05 提交 Canton Coin（CC）现货 ETF 初步 Form S-1——信托拟直接持有 CC 并按指数价格跟踪，BitGo 为托管方。注册尚未生效（暂无代码与费率）；文件披露集中度风险：前 100 大 CC 钱包约占流通量 89%。请以 SEC EDGAR 最新状态为准，勿将申报等同于可交易产品。', url: 'https://www.sec.gov/Archives/edgar/data/2138284/000213828426000003/ck0002138284-20260605.htm' },
+        { date: '2026-06-04', tag: '机构', title: 'Visa 与 Brale 在 Canton 上探索隐私型稳定币结算（PoC）', body: 'Visa 投资者新闻稿（2026-06-04）：Visa 与 Brale 开展概念验证，评估在 Canton 上原生支持的 SBC（Brale 美元稳定币）用于机构 VisaNet 结算，并测试 Canton 隐私架构下的可编程结算。仅为探索性 PoC；未宣布生产部署或上线时间表。', url: 'https://investor.visa.com/news/news-details/2026/Visa-and-Brale-Explore-Private-Stablecoin-Settlement-for-Institutional-Payments/default.aspx' },
         { date: '2026-06-03', tag: '机构', title: 'Mastercard 将 Canton 纳入多链稳定币结算网络', body: 'Mastercard 宣布扩展结算能力——支持日内、周末与节假日卡交易结算，可使用 USDC、PYUSD、RLUSD 等受监管稳定币，覆盖 Canton、Ethereum、Solana、Base、Arbitrum、Polygon、Tempo、XRPL 等网络。官方新闻稿日期 2026-06-03；Canton Network 亦在社媒强调机构级 24/7 结算框架。', url: 'https://www.mastercard.com/us/en/news-and-trends/press/2026/june/mastercard-expands-settlement-capabilities-to-include-stablecoin.html' },
         { date: '2026-06-02', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——链上资本市场窗口正在收窄', body: 'Canton Network 官方博客摘要 Quadrillions 第 2 集（「You’re Already Late」）——机构预算周期追赶监管转向、隐私与 24/7 回购流动性缺口，以及 Tradeweb/Belshe 等对可扩展全天候融资的评论。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-02。', url: 'https://www.canton.network/blog/quadrillions-recap-onchain-capital-markets' },
         { date: '2026-05-26', tag: '市场', title: 'Bitwise 在德意志交易所 Xetra 上线 Canton ETP（BWCC）', body: 'Bitwise Europe 推出实物支持的 Bitwise Canton ETP（代码 BWCC，ISIN DE000A4ARTH9），在 Xetra 交易，拟跟踪 Kaiko CANTO 参考利率，CC 冷存储托管，年化费率 0.85%。投资者可通过传统证券账户参与，无需加密钱包。新闻稿日期 2026-05-26。', url: 'https://bitwiseinvestments.eu/newsroom/Press_Release_26_05_2026/' },
