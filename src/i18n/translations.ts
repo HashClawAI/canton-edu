@@ -239,6 +239,7 @@ export const translations = {
         { id: 'CIP-0103', title: 'dApp Standard', type: 'Standards', status: 'Approved', summary: 'Standard for building decentralized applications on Canton.' },
         { id: 'CIP-0105', title: 'SV Locking Framework', type: 'Tokenomics', status: 'Approved', summary: 'Voluntary locking of SV rewards with 365-day vesting, increasing governance weight.' },
         { id: 'CIP-0107', title: '24h Submission Delay', type: 'Standards', status: 'Approved', summary: '24-hour delay for end-user CC transactions for safety.' },
+        { id: 'CIP-0112', title: 'Token Standard V2', type: 'Standards', status: 'Approved', summary: 'Canton Network Token Standard V2—privacy, performance, and traditional-accounting improvements for TradFi/DeFi interoperability; backward-compatible evolution of CIP-0056 (approved 2026-06-12).' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury (DAT) SV Program', type: 'Tokenomics', status: 'Approved', summary: 'Time-bound SV program for purpose-built public treasury companies that hold CC long-term; quarterly reviews, high AUM bar, weight up to 20 with staged release (approved 2026-04-16).' },
       ],
       svTitle: 'Super Validator onboarding CIPs',
@@ -269,6 +270,13 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-06-16',
+          tag: 'Protocol',
+          title: 'TestNet Protocol 35 LSU: topology freeze begins (upgrade June 17)',
+          body: 'SV Operations schedule (update June 12, 2026): Phase 3 of the Canton 3.4→3.5 transition enters TestNet Logical Synchronizer Upgrade prep—topology freeze at 13:00 UTC today, with the Protocol 35 LSU scheduled June 17 at 13:00 UTC. DevNet LSU is complete; MainNet topology freeze is June 26 with upgrade June 27. Validators need Splice ≥0.6.5; Splice 0.6.7 required by June 30 for traffic-based app rewards. Calendar: sv-cal.canton.foundation.',
+          url: 'https://sv-cal.canton.foundation/',
+        },
         {
           date: '2026-06-15',
           tag: 'Ecosystem',
@@ -1198,6 +1206,7 @@ export const translations = {
         { id: 'CIP-0103', title: 'dApp 标准', type: '标准', status: '已通过', summary: '在 Canton 上构建去中心化应用的标准。' },
         { id: 'CIP-0105', title: 'SV 锁仓框架', type: '代币经济', status: '已通过', summary: '超级验证者自愿锁定奖励，365 天线性释放，增加治理权重。' },
         { id: 'CIP-0107', title: '24 小时提交延迟', type: '标准', status: '已通过', summary: '终端用户 CC 交易的 24 小时安全延迟。' },
+        { id: 'CIP-0112', title: '代币标准 V2', type: '标准', status: '已通过', summary: 'Canton Network 代币标准 V2——面向隐私、性能与传统会计的改进，提升 TradFi/DeFi 互操作；与 CIP-0056 向后兼容演进（2026-06-12 批准）。' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury（DAT）SV 计划', type: '代币经济', status: '已通过', summary: '面向以长期持有 CC 为主业的上市「数字资产财库」公司的限时 SV 路径；按持仓与季度审核计权重，设上限与分阶段释放（2026-04-16 批准）。' },
       ],
       svTitle: '超级验证者准入 CIP',
@@ -1228,6 +1237,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
         { date: '2026-06-12', tag: '协议', title: 'Canton 3.4→3.5 第三阶段：TestNet LSU 6 月 17 日、MainNet LSU 6 月 27 日', body: '超级验证者运维日程更新（2026-06-12）：全球同步器网络进入第三阶段 Logical Synchronizer 升级至 Canton 协议版本 35。TestNet 拓扑冻结 6 月 16 日 / 升级 6 月 17 日；MainNet 冻结 6 月 26 日 / 升级 6 月 27 日（13:00 UTC）。验证者须运行 Splice ≥0.6.5；6 月 30 日前需升级至 Splice 0.6.7 以配合流量型应用奖励。每次 LSU 前约 24 小时暂停参与方 onboarding 与包 vetting。权威时间以 SV 长期运维日程为准。', url: 'https://communityone.io/servers/1379531004116471878/canton-network/news/canton-3-4-to-3-5-transition-lsu-schedule-2026-06-12/' },
