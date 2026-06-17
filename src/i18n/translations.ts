@@ -152,6 +152,8 @@ export const translations = {
       ],
       dexTitle: 'Trading, DeFi & lending',
       dexes: [
+        { name: 'OneSwap', desc: 'Permissionless AMM DEX by Sats Terminal — CC/USDCx and CC/CBTC pairs; SDK embeddable in wallets and apps', url: 'https://oneswap.cc/' },
+        { name: 'Ekiden', desc: 'CLOB-based derivatives exchange on Canton testnet — off-chain matching with deferred on-chain settlement', url: 'https://app.cnt.ekiden.fi/' },
         { name: 'CantonSwap', desc: 'Atomic multi-currency swaps for CIP-56 tokens', url: 'https://www.canton.network/ecosystem/cantonswap' },
         { name: 'Cantex', desc: 'Native DEX with AMM pools and CLOB', url: 'https://cantex.io/' },
         { name: 'ACME', desc: 'Overcollateralized lending & instant yield', url: 'https://acmemarkets.cc/' },
@@ -160,6 +162,11 @@ export const translations = {
       ],
       paymentsTitle: 'Payments',
       payments: [
+        {
+          name: 'HandlPay',
+          desc: 'Social-handle payments on Canton — usernames and WhatsApp numbers as private multi-chain payment rails; in-app Base/Polygon ↔ Canton USDC bridge',
+          url: 'https://www.cantonecosystem.com/ecosystem/handlpay',
+        },
         {
           name: 'Canpay.ai',
           desc: 'On-chain payment infrastructure on Canton using payment codes; roadmap extends to agentic payment systems.',
@@ -270,6 +277,34 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'HANDL lists on OneSwap; HandlPay embeds OneSwap SDK (first payments app)',
+          body: 'OneSwap (oneswap.cc) and HandlPay: HANDL/CC trading is live on OneSwap and natively inside the HandlPay app via the OneSwap SDK—the first payments application to embed swap infrastructure. HandlPay maps social handles to private payment rails on Canton; HANDL is the platform utility token. SDK integration docs at docs.oneswap.cc; prior SDK adopters include Edel Finance and Loop Wallet.',
+          url: 'https://oneswap.cc/',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'HandlPay adds in-app USDC bridge (Base & Polygon ↔ Canton)',
+          body: 'HandlPay expands its native bridge to support USDC transfers between Base, Polygon, and Canton Network without leaving the app—alongside existing Polygon ↔ Canton flows. HandlPay is listed on the Canton ecosystem directory (cantonecosystem.com) as a privacy-focused payments app; additional tokens are planned.',
+          url: 'https://www.cantonecosystem.com/ecosystem/handlpay',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'Ekiden launches CLOB derivatives exchange on Canton testnet',
+          body: 'Ekiden goes live on Canton testnet at app.cnt.ekiden.fi—the network’s first central limit order book derivatives venue. Architecture combines off-chain CLOB matching with deferred on-chain settlement via Merkle commitments; API access, points, and referral programs are active. Mainnet rollout and market-maker programs are planned.',
+          url: 'https://app.cnt.ekiden.fi/',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'OneSwap SDK goes live inside Loop Wallet (first wallet integration)',
+          body: 'OneSwap embeds native swap functionality in 5N Loop Wallet at cantonloop.com/swap—the first live OneSwap SDK deployment inside a Canton wallet. Loop users can swap without leaving the passkey-based browser wallet; Edel Finance integrated the SDK earlier in June. Developer docs: docs.oneswap.cc.',
+          url: 'https://cantonloop.com/swap',
+        },
         {
           date: '2026-06-16',
           tag: 'Protocol',
@@ -1119,6 +1154,8 @@ export const translations = {
       ],
       dexTitle: '交易、DeFi 与借贷',
       dexes: [
+        { name: 'OneSwap', desc: 'Sats Terminal 无许可 AMM DEX——CC/USDCx 与 CC/CBTC 交易对；SDK 可嵌入钱包与应用', url: 'https://oneswap.cc/' },
+        { name: 'Ekiden', desc: 'Canton 测试网 CLOB 衍生品交易所——链下撮合、延迟链上结算', url: 'https://app.cnt.ekiden.fi/' },
         { name: 'CantonSwap', desc: '原子多币种兑换，支持所有 CIP-56 代币', url: 'https://www.canton.network/ecosystem/cantonswap' },
         { name: 'Cantex', desc: '原生 DEX，含 AMM 池和中央限价订单簿', url: 'https://cantex.io/' },
         { name: 'ACME', desc: '超额抵押借贷与即时收益', url: 'https://acmemarkets.cc/' },
@@ -1127,6 +1164,11 @@ export const translations = {
       ],
       paymentsTitle: '支付',
       payments: [
+        {
+          name: 'HandlPay',
+          desc: 'Canton 社交账号支付——用户名与 WhatsApp 号码作为隐私多链支付句柄；应用内 Base/Polygon ↔ Canton USDC 桥',
+          url: 'https://www.cantonecosystem.com/ecosystem/handlpay',
+        },
         {
           name: 'Canpay.ai',
           desc: 'Canton 上基于支付码的纯链上支付基础设施；路线图包含智能体支付系统。',
@@ -1237,6 +1279,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-16', tag: '生态', title: 'HANDL 上线 OneSwap；HandlPay 嵌入 OneSwap SDK（首个支付类应用）', body: 'OneSwap（oneswap.cc）与 HandlPay：HANDL/CC 交易已在 OneSwap 及 HandlPay 应用内通过 OneSwap SDK 上线——首个嵌入 swap 基础设施的支付类应用。HandlPay 将社交账号映射为 Canton 隐私支付句柄；HANDL 为平台实用代币。SDK 文档见 docs.oneswap.cc；此前集成方含 Edel Finance 与 Loop Wallet。', url: 'https://oneswap.cc/' },
+        { date: '2026-06-16', tag: '生态', title: 'HandlPay 应用内新增 USDC 桥（Base 与 Polygon ↔ Canton）', body: 'HandlPay 扩展原生桥，支持在应用内于 Base、Polygon 与 Canton Network 之间转移 USDC——在既有 Polygon ↔ Canton 流程之外新增路径。HandlPay 已列入 Canton 生态目录（cantonecosystem.com），定位为隐私型支付应用；更多代币支持计划中。', url: 'https://www.cantonecosystem.com/ecosystem/handlpay' },
+        { date: '2026-06-16', tag: '生态', title: 'Ekiden 在 Canton 测试网推出 CLOB 衍生品交易所', body: 'Ekiden 在 Canton 测试网 app.cnt.ekiden.fi 上线——网络首个中央限价订单簿衍生品场所。架构为链下 CLOB 撮合 + Merkle 承诺延迟链上结算；API、积分与推荐计划已开放。主网上线与做市商计划筹备中。', url: 'https://app.cnt.ekiden.fi/' },
+        { date: '2026-06-16', tag: '生态', title: 'OneSwap SDK 在 Loop Wallet 上线（首个钱包集成）', body: 'OneSwap 在 5N Loop Wallet（cantonloop.com/swap）嵌入原生 swap——首个在 Canton 钱包内上线的 OneSwap SDK 部署。Loop 用户可在 passkey 浏览器钱包内直接兑换，无需跳转外部站点；Edel Finance 于 6 月初已完成 SDK 集成。开发者文档：docs.oneswap.cc。', url: 'https://cantonloop.com/swap' },
         { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
