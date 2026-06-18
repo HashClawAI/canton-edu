@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-17',
+          tag: 'Institutional',
+          title: 'HIFI, DRW, and Marex complete onchain repo on Canton',
+          body: 'PRNewswire (June 17, 2026): HIFI (stablecoin infrastructure) completed an onchain repurchase transaction with DRW on Canton, with Marex as prime broker. The trade was priced via RFQ on Tradeweb; both legs settled atomically with confidential payment flows. Cash orchestration moved fiat over RTP into USDC and USDCx for Canton settlement, reversing at maturity. Digital Asset CBO Kelly Mathieson cited real-time repo for cross-border markets.',
+          url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html',
+        },
+        {
+          date: '2026-06-17',
+          tag: 'Protocol',
+          title: 'TestNet Protocol 35 LSU completes (Canton 3.4→3.5 Phase 3)',
+          body: 'SV Operations calendar (update June 12, 2026): Global Synchronizer TestNet completed its scheduled Logical Synchronizer Upgrade to Canton Protocol Version 35 at 13:00 UTC today, following the June 16 topology freeze. DevNet LSU is already complete; MainNet topology freeze is June 26 with upgrade June 27. Validators need Splice ≥0.6.5; Splice 0.6.7 required by June 30 ahead of traffic-based app rewards. Calendar: sv-cal.canton.foundation.',
+          url: 'https://sv-cal.canton.foundation/',
+        },
+        {
           date: '2026-06-16',
           tag: 'Protocol',
           title: 'TestNet Protocol 35 LSU: topology freeze begins (upgrade June 17)',
@@ -894,6 +908,7 @@ export const translations = {
       devTitle: 'Developer documentation & hubs',
       dev: [
         { name: 'Canton Network Documentation', url: 'https://docs.canton.network/' },
+        { name: 'Canton Developer Hub (Foundation)', url: 'https://dev-hub.canton.foundation/' },
         { name: 'Daml / DAML documentation', url: 'https://docs.daml.com/' },
         { name: 'Splice docs (Global Synchronizer app dev)', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice & ops — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
@@ -1237,6 +1252,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-17', tag: '机构', title: 'HIFI、DRW 与 Marex 在 Canton 上完成链上回购', body: 'PRNewswire（2026-06-17）：稳定币基础设施公司 HIFI 与 DRW 在 Canton 上完成链上回购交易，Marex 担任主经纪商。交易经 Tradeweb RFQ 定价；双腿原子结算且支付流保密。现金编排从法币经 RTP 转入 USDC 与 USDCx 在 Canton 结算，到期按同路径自动回转。Digital Asset 首席商务官 Kelly Mathieson 强调跨境市场的实时回购价值。', url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html' },
+        { date: '2026-06-17', tag: '协议', title: 'TestNet Protocol 35 LSU 完成（Canton 3.4→3.5 第三阶段）', body: 'SV 运维日历（2026-06-12 更新）：全球同步器 TestNet 于今日 13:00 UTC 按计划完成 Logical Synchronizer 升级至 Canton 协议版本 35，此前 6 月 16 日已完成拓扑冻结。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
@@ -1453,6 +1470,7 @@ export const translations = {
       devTitle: '开发者文档与入口',
       dev: [
         { name: 'Canton Network 官方文档', url: 'https://docs.canton.network/' },
+        { name: 'Canton Developer Hub（基金会）', url: 'https://dev-hub.canton.foundation/' },
         { name: 'Daml / DAML 文档', url: 'https://docs.daml.com/' },
         { name: 'Splice 文档（Global Synchronizer 应用开发）', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice 与运维 — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
