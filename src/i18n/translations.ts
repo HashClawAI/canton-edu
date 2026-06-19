@@ -170,6 +170,11 @@ export const translations = {
           desc: 'Enterprise digital-asset finance — invoice-linked, programmable AP and on-chain payments on Canton',
           url: 'https://bitwave.io/',
         },
+        {
+          name: 'HIFI',
+          desc: 'Stablecoin infrastructure — fiat/RTP/USDC/USDCx orchestration for institutional payments and repo on Canton',
+          url: 'https://hifi.com/',
+        },
       ],
       infraTitle: 'Infrastructure & dev tools',
       infra: [
@@ -270,6 +275,34 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-06-18',
+          tag: 'Media',
+          title: 'Canton blog: Quadrillions recap — crypto capital of the world (Episode 4 Part 1)',
+          body: 'Official Canton Network blog recap of Quadrillions Episode 4 (Part 1)—CFTC Acting Chairman Caroline Pham and Digital Asset CEO Yuval Rooz on the agency’s 12-month Crypto Sprint, CLARITY Act momentum, stablecoins as cleared collateral, tokenized treasuries on Canton rails, and why regulatory posture—not technology—was the blocker to onchain scale in U.S. derivatives markets. Blockworks × Canton miniseries; full episode at quadrillionspod.com. Blog dated June 18, 2026.',
+          url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world',
+        },
+        {
+          date: '2026-06-17',
+          tag: 'Institutional',
+          title: 'HIFI, DRW, and Marex complete onchain repo on Canton (Tradeweb RFQ)',
+          body: 'PRNewswire (June 17, 2026): HIFI orchestrated the cash leg of an onchain repurchase agreement with DRW on Canton—U.S. Treasury collateral from DRW, Marex (NASDAQ: MRX) as prime broker. The trade used Tradeweb request-for-quote pricing, atomic real-time settlement, and fiat→RTP→USDC→USDCx cash orchestration with confidential counterparty flows. Digital Asset CBO Kelly Mathieson cited the milestone as a step toward 24/7 repo liquidity; the release notes ~$12.6T average daily U.S. repo outstanding (OFR).',
+          url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html',
+        },
+        {
+          date: '2026-06-17',
+          tag: 'Protocol',
+          title: 'TestNet Protocol 35 LSU completes (Canton 3.4→3.5 Phase 3)',
+          body: 'Per SV Operations schedule (June 12 update): TestNet Logical Synchronizer Upgrade to Canton Protocol Version 35 executed June 17 at 13:00 UTC, following the June 16 topology freeze. DevNet LSU is complete; MainNet topology freeze remains June 26 with LSU June 27. Validators require Splice ≥0.6.5; Splice 0.6.7 is required by June 30 for traffic-based app rewards. Authoritative calendar: sv-cal.canton.foundation.',
+          url: 'https://sv-cal.canton.foundation/',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'Canton releases wallet stack for developers (Wallet SDK, dApp SDK, Gateway)',
+          body: 'Canton Network official blog (June 16, 2026): Canton published a complete wallet stack—@canton-network/wallet-sdk for ledger/party operations, @canton-network/dapp-sdk with CIP-0103 “Connect Wallet” discovery, and Wallet Gateway to bridge validators with institutional custody/signing providers. The post cites $350B+ daily onchain asset processing and 3× daily-user growth over six months; docs at docs.canton.network.',
+          url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack',
+        },
         {
           date: '2026-06-16',
           tag: 'Protocol',
@@ -901,6 +934,8 @@ export const translations = {
         { name: 'Hyperledger Splice (GitHub)', url: 'https://github.com/hyperledger-labs/splice' },
         { name: 'Digital Asset — Canton (GitHub)', url: 'https://github.com/digital-asset/canton' },
         { name: 'WalletConnect — custodian / dApp connection docs (Canton)', url: 'https://docs.walletconnect.network/custodians/overview' },
+        { name: 'Canton Wallet SDK — docs & npm (@canton-network/wallet-sdk)', url: 'https://docs.canton.network/sdks-tools/sdks/wallet-sdk' },
+        { name: 'Canton Wallet Gateway (GitHub)', url: 'https://github.com/canton-network/wallet-gateway' },
         { name: 'Canton Wallet Demo (community)', url: 'https://github.com/stablecoinxyz/canton-wallet-demo' },
       ],
       forumsTitle: 'Forums (long-form Q&A)',
@@ -1137,6 +1172,11 @@ export const translations = {
           desc: '企业级数字资产财资——在 Canton 上提供可编程应付与发票关联的链上支付',
           url: 'https://bitwave.io/',
         },
+        {
+          name: 'HIFI',
+          desc: '稳定币基础设施——为机构支付与回购提供法币/RTP/USDC/USDCx 编排（Canton）',
+          url: 'https://hifi.com/',
+        },
       ],
       infraTitle: '基础设施与开发工具',
       infra: [
@@ -1237,6 +1277,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-18', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——全球加密之都（第 4 集上）', body: 'Canton Network 官方博客摘要 Quadrillions 第 4 集（上）——CFTC 代理主席 Caroline Pham 与 Digital Asset CEO Yuval Rooz 讨论机构 12 个月 Crypto Sprint、CLARITY Act 进展、稳定币作为清算抵押品、代币化国债在 Canton 轨道上的结算，以及监管姿态（而非技术）如何阻碍美国衍生品市场链上规模化。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-18。', url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world' },
+        { date: '2026-06-17', tag: '机构', title: 'HIFI、DRW 与 Marex 在 Canton 完成链上回购（Tradeweb RFQ）', body: 'PRNewswire（2026-06-17）：HIFI 在 Canton 上为 DRW 编排回购现金腿——DRW 提供美国国债抵押，Marex（NASDAQ: MRX）担任主经纪商。交易采用 Tradeweb 询价（RFQ）定价、原子实时结算，以及法币→RTP→USDC→USDCx 现金编排，并保持对手方流程保密。Digital Asset 首席商务官 Kelly Mathieson 称此为迈向 24/7 回购流动性的里程碑；新闻稿援引美国回购日均未偿规模约 12.6 万亿美元（OFR）。', url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html' },
+        { date: '2026-06-17', tag: '协议', title: 'TestNet Protocol 35 LSU 完成（Canton 3.4→3.5 第三阶段）', body: '据 SV 运维日程（2026-06-12 更新）：TestNet Logical Synchronizer 升级至 Canton 协议版本 35 于 6 月 17 日 13:00 UTC 执行，此前 6 月 16 日已完成拓扑冻结。DevNet LSU 已完成；MainNet 拓扑冻结仍为 6 月 26 日、LSU 6 月 27 日。验证者须运行 Splice ≥0.6.5；6 月 30 日前需升级至 Splice 0.6.7 以参与流量型应用奖励。权威日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
+        { date: '2026-06-16', tag: '生态', title: 'Canton 发布开发者钱包栈（Wallet SDK、dApp SDK、Gateway）', body: 'Canton Network 官方博客（2026-06-16）：Canton 发布完整钱包栈——@canton-network/wallet-sdk 用于账本/Party 操作，@canton-network/dapp-sdk 配合 CIP-0103「连接钱包」发现组件，以及 Wallet Gateway 桥接验证者与机构托管/签名系统。文章称链上资产日处理量超 3500 亿美元、六个月内日均用户增长 3 倍；文档见 docs.canton.network。', url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack' },
         { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
@@ -1460,6 +1504,8 @@ export const translations = {
         { name: 'Hyperledger Splice（GitHub）', url: 'https://github.com/hyperledger-labs/splice' },
         { name: 'Digital Asset — Canton（GitHub）', url: 'https://github.com/digital-asset/canton' },
         { name: 'WalletConnect — 托管方 / 应用连接文档（Canton）', url: 'https://docs.walletconnect.network/custodians/overview' },
+        { name: 'Canton Wallet SDK — 文档与 npm（@canton-network/wallet-sdk）', url: 'https://docs.canton.network/sdks-tools/sdks/wallet-sdk' },
+        { name: 'Canton Wallet Gateway（GitHub）', url: 'https://github.com/canton-network/wallet-gateway' },
         { name: 'Canton Wallet Demo（社区）', url: 'https://github.com/stablecoinxyz/canton-wallet-demo' },
       ],
       forumsTitle: '论坛（长文问答）',
