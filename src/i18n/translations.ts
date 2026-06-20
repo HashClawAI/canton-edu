@@ -240,6 +240,7 @@ export const translations = {
         { id: 'CIP-0105', title: 'SV Locking Framework', type: 'Tokenomics', status: 'Approved', summary: 'Voluntary locking of SV rewards with 365-day vesting, increasing governance weight.' },
         { id: 'CIP-0107', title: '24h Submission Delay', type: 'Standards', status: 'Approved', summary: '24-hour delay for end-user CC transactions for safety.' },
         { id: 'CIP-0112', title: 'Token Standard V2', type: 'Standards', status: 'Approved', summary: 'Canton Network Token Standard V2—privacy, performance, and traditional-accounting improvements for TradFi/DeFi interoperability; backward-compatible evolution of CIP-0056 (approved 2026-06-12).' },
+        { id: 'CIP-0119', title: 'Free Transfer-Preapproval Base Duration', type: 'Tokenomics', status: 'Approved', summary: 'Introduces a 90-day free base duration for transfer preapprovals—creation or renewal within that window charges only traffic fees, lowering bootstrap friction for apps (approved 2026-06-15).' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury (DAT) SV Program', type: 'Tokenomics', status: 'Approved', summary: 'Time-bound SV program for purpose-built public treasury companies that hold CC long-term; quarterly reviews, high AUM bar, weight up to 20 with staged release (approved 2026-04-16).' },
       ],
       svTitle: 'Super Validator onboarding CIPs',
@@ -270,6 +271,27 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-06-17',
+          tag: 'Institutional',
+          title: 'HIFI, DRW, and Marex complete onchain repo on Canton',
+          body: 'PRNewswire (June 17, 2026): HIFI, DRW, and Marex completed an onchain repurchase agreement on Canton—HIFI supplied the cash leg against U.S. Treasuries from DRW with Marex as prime broker. The trade used Tradeweb RFQ execution, atomic two-leg settlement, and confidential payment flows; cash moved fiat→RTP→USDC→USDCx for Canton leg settlement and reversed at maturity. Kelly Mathieson (Digital Asset CBO) is quoted on 24/7 repo liquidity.',
+          url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html',
+        },
+        {
+          date: '2026-06-17',
+          tag: 'Protocol',
+          title: 'TestNet Protocol 35 LSU completes on schedule',
+          body: 'Per SV Operations schedule (June 12 update): TestNet’s Logical Synchronizer Upgrade to Canton Protocol Version 35 completed June 17 at 13:00 UTC, following the June 16 topology freeze. DevNet LSU is done; MainNet topology freeze is June 26 with upgrade June 27. Validators require Splice ≥0.6.5 now; Splice 0.6.7 mandatory by June 30 ahead of traffic-based app rewards. Calendar: sv-cal.canton.foundation.',
+          url: 'https://sv-cal.canton.foundation/',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Ecosystem',
+          title: 'Canton releases wallet stack for developers (Wallet SDK, dApp SDK, Gateway)',
+          body: 'Official Canton Network blog (June 16, 2026): Canton launched a complete wallet stack—@canton-network/wallet-sdk for institutions/exchanges, @canton-network/dapp-sdk implementing CIP-0103 “Connect Wallet” discovery for dApps, and Wallet Gateway to bridge validators with institutional custody/signing providers (BYO-validator model). Blog cites $350B+ daily onchain asset processing and 3× average daily user growth over six months.',
+          url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack',
+        },
         {
           date: '2026-06-16',
           tag: 'Protocol',
@@ -893,6 +915,7 @@ export const translations = {
       ],
       devTitle: 'Developer documentation & hubs',
       dev: [
+        { name: 'Canton Developer Hub (tooling catalogue)', url: 'https://dev-hub.canton.foundation/' },
         { name: 'Canton Network Documentation', url: 'https://docs.canton.network/' },
         { name: 'Daml / DAML documentation', url: 'https://docs.daml.com/' },
         { name: 'Splice docs (Global Synchronizer app dev)', url: 'https://docs.dev.global.canton.network.sync.global/' },
@@ -1207,6 +1230,7 @@ export const translations = {
         { id: 'CIP-0105', title: 'SV 锁仓框架', type: '代币经济', status: '已通过', summary: '超级验证者自愿锁定奖励，365 天线性释放，增加治理权重。' },
         { id: 'CIP-0107', title: '24 小时提交延迟', type: '标准', status: '已通过', summary: '终端用户 CC 交易的 24 小时安全延迟。' },
         { id: 'CIP-0112', title: '代币标准 V2', type: '标准', status: '已通过', summary: 'Canton Network 代币标准 V2——面向隐私、性能与传统会计的改进，提升 TradFi/DeFi 互操作；与 CIP-0056 向后兼容演进（2026-06-12 批准）。' },
+        { id: 'CIP-0119', title: '转账预批准免费基准期限', type: '代币经济', status: '已通过', summary: '引入转账预批准 90 天免费基准期限——在该窗口内创建或续期仅计流量费，降低应用启动摩擦（2026-06-15 批准）。' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury（DAT）SV 计划', type: '代币经济', status: '已通过', summary: '面向以长期持有 CC 为主业的上市「数字资产财库」公司的限时 SV 路径；按持仓与季度审核计权重，设上限与分阶段释放（2026-04-16 批准）。' },
       ],
       svTitle: '超级验证者准入 CIP',
@@ -1237,6 +1261,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-17', tag: '机构', title: 'HIFI、DRW 与 Marex 在 Canton 上完成链上回购交易', body: 'PRNewswire（2026-06-17）：HIFI、DRW 与 Marex 在 Canton Network 上完成链上回购协议——HIFI 提供现金腿，DRW 提供美国国债抵押，Marex 担任主经纪商。交易经 Tradeweb RFQ 执行、双腿原子结算且支付流保密；现金经法币→RTP→USDC→USDCx 进入 Canton 腿并在到期沿同路径自动回转。引述含 Digital Asset 首席商务官 Kelly Mathieson 对 24/7 回购流动性的评论。', url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html' },
+        { date: '2026-06-17', tag: '协议', title: 'TestNet Protocol 35 LSU 按计划完成', body: '据 SV 运维日程（2026-06-12 更新）：TestNet 于 6 月 17 日 13:00 UTC 完成至 Canton 协议版本 35 的 Logical Synchronizer Upgrade，此前 6 月 16 日已完成拓扑冻结。DevNet LSU 已结束；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者现须运行 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
+        { date: '2026-06-16', tag: '生态', title: 'Canton 发布开发者钱包技术栈（Wallet SDK、dApp SDK、Gateway）', body: 'Canton Network 官方博客（2026-06-16）：Canton 推出完整钱包技术栈——@canton-network/wallet-sdk 面向机构/交易所；@canton-network/dapp-sdk 实现 CIP-0103「连接钱包」发现组件；Wallet Gateway 在机构环境中桥接验证者与托管/签名系统（自带验证者模型）。博客称链上日处理资产超 3500 亿美元，近六个月日均用户增长约 3 倍。', url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack' },
         { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
         { date: '2026-06-12', tag: '机构', title: 'SBI Holdings 宣布追加投资 Digital Asset（Canton 开发方）', body: 'SBI Holdings 投资者通告（2026-06-12）：SBI 通过子公司追加参与 Digital Asset 3.55 亿美元融资，深化其作为 Canton 创始伙伴与超级验证者的角色。通告提及 DTCC 在 Canton 上代币化美国国债（2025 年 12 月）、2026 年 4 月启动的日本国债数字抵押 PoC、700+ 网络参与者及链上管理资产超 6 万亿美元，并预期 DTCC 方案于 2026 年下半年进一步扩展。', url: 'https://www.sbigroup.co.jp/english/news/pdf/2026/0612_a_en.pdf' },
@@ -1452,6 +1479,7 @@ export const translations = {
       ],
       devTitle: '开发者文档与入口',
       dev: [
+        { name: 'Canton Developer Hub（工具目录）', url: 'https://dev-hub.canton.foundation/' },
         { name: 'Canton Network 官方文档', url: 'https://docs.canton.network/' },
         { name: 'Daml / DAML 文档', url: 'https://docs.daml.com/' },
         { name: 'Splice 文档（Global Synchronizer 应用开发）', url: 'https://docs.dev.global.canton.network.sync.global/' },
