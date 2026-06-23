@@ -16,7 +16,11 @@ const tr = t(locale);
 const ec = tr.ecosystem;
 const synced = formatFeaturedSince(featuredApps.fetchedAt, locale);
 const dataSourceLabel =
-  featuredApps.source === 'ccview' ? ec.dataSourceCcview : ec.dataSourceLighthouse;
+  featuredApps.source === 'ccview'
+    ? ec.dataSourceCcview
+    : featuredApps.source === 'ccview-locking'
+      ? ec.dataSourceCcviewLocking
+      : ec.dataSourceLighthouse;
 ---
 
 <BaseLayout locale={locale} title={ec.title} description={ec.intro} navCurrent="ecosystem">

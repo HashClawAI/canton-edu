@@ -23,7 +23,7 @@ export type FeaturedAppGroup = {
 
 export type FeaturedAppsData = {
   fetchedAt: string;
-  source: 'lighthouse' | 'ccview';
+  source: 'lighthouse' | 'ccview' | 'ccview-locking';
   total: number;
   groups: FeaturedAppGroup[];
   apps: FeaturedApp[];
