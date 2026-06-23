@@ -285,6 +285,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-20',
+          tag: 'Governance',
+          title: 'OneSwap locks 5M CC for Featured App status (CIP-0116)',
+          body: 'OneSwap (@Oneswapcc) announced locking 5 million CC in compliance with CIP-0116 to maintain Featured App designation—the non-issuer threshold per PartyId. CantonNews wire archived the public post dated June 20, 2026; lock requirements and 60-day vesting rules are defined in the approved CIP-0116 spec.',
+          url: 'https://cantonnews.org/wire/5000000-cc-locked-we-are-proud-2026-06-20',
+        },
+        {
+          date: '2026-06-18',
+          tag: 'Institutional',
+          title: 'Canton Strategic (NASDAQ: CNTN) expected to join Russell 3000 and Russell 2000',
+          body: 'PRNewswire (June 18, 2026): Canton Strategic Holdings announced it is on FTSE Russell’s preliminary additions list for the semi-annual reconstitution—expected to enter the Russell 3000 and Russell 2000 (and style sub-indices) after market close June 26, 2026, based on April 30, 2026 rank-day data. CEO Mark Wendland cited Canton-aligned strategy; forward-looking statements and DA trademark disclaimers apply per release.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html',
+        },
+        {
           date: '2026-06-18',
           tag: 'Media',
           title: 'Canton blog: Quadrillions recap — crypto capital of the world is being built in America',
@@ -339,6 +353,13 @@ export const translations = {
           title: 'Canton releases developer wallet stack (Wallet SDK, dApp SDK, Wallet Gateway)',
           body: 'Official Canton Network blog (June 16, 2026): Canton published a full wallet integration stack—@canton-network/wallet-sdk for institutions and exchanges; @canton-network/dapp-sdk with CIP-0103 discovery for frontend “Connect Wallet”; and Wallet Gateway to bridge validators with institutional custody/signing providers (bring-your-own-validator model). Docs linked from the post.',
           url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack',
+        },
+        {
+          date: '2026-06-16',
+          tag: 'Institutional',
+          title: 'Canton Strategic authorizes $50M share repurchase program',
+          body: 'PRNewswire (June 16, 2026): Canton Strategic Holdings (NASDAQ: CNTN) board authorized repurchases of up to $50 million in common stock via open market or other Rule 10b-18–compliant methods; timing and amounts at management discretion. SEC Form 8-K notes board approval June 11 and a Virtu Americas 10b-18 plan dated June 12. Forward-looking statements apply per release.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-authorization-of-share-repurchase-program-302801675.html',
         },
         {
           date: '2026-06-16',
@@ -1331,6 +1352,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-20', tag: '治理', title: 'OneSwap 锁仓 500 万 CC 维持精选应用资格（CIP-0116）', body: 'OneSwap（@Oneswapcc）宣布按 CIP-0116 锁仓 500 万 CC 以维持 Featured App 资格——非发行方每个 PartyId 的门槛。CantonNews 线报归档了 2026-06-20 的公开帖；锁仓要求与 60 天线性解锁规则见已通过的 CIP-0116 正文。', url: 'https://cantonnews.org/wire/5000000-cc-locked-we-are-proud-2026-06-20' },
+        { date: '2026-06-18', tag: '机构', title: 'Canton Strategic（NASDAQ: CNTN）预计纳入 Russell 3000 与 Russell 2000', body: 'PRNewswire（2026-06-18）：Canton Strategic Holdings 称 FTSE Russell 半年度重组初步名单将其列为新增成分——预计 2026-06-26 收盘后进入 Russell 3000 与 Russell 2000（及风格子指数），依据 2026-04-30 排名日数据。CEO Mark Wendland 强调 Canton 对齐战略；前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html' },
         { date: '2026-06-18', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——加密之都正在美国建成', body: 'Canton Network 官方博客摘要 Quadrillions 第 4 集（上）——CFTC 代理主席 Caroline Pham 与 Yuval Rooz 讨论机构 12 个月 Crypto Sprint、从「执法式监管」转向支持创新、代币化抵押品进入清算市场，以及 Canton 在抵押品流动与隐私结算中的角色。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-18。', url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world' },
         { date: '2026-06-17', tag: '机构', title: 'HIFI、DRW 与 Marex 在 Canton 上完成链上回购（Tradeweb RFQ）', body: 'PRNewswire（2026-06-17）：HIFI、DRW 与 Marex 在 Canton 执行链上回购——HIFI 提供现金腿、DRW 提供美国国债抵押，Marex 担任主经纪商。现金经法币→RTP→USDC→USDCx 实时原子结算且保持隐私；定价经 Tradeweb 询价（RFQ）。Digital Asset 首席商务官 Kelly Mathieson 称 24/7 回购有助于跨境资本效率。', url: 'https://www.prnewswire.com/news-releases/hifi-drw-and-marex-advance-onchain-repo-on-the-canton-network-302802300.html' },
         { date: '2026-06-17', tag: '协议', title: 'TestNet Protocol 35 LSU 已完成（MainNet 升级 6 月 27 日）', body: '按 Canton 3.4→3.5 第三阶段日程（Canton Network 论坛 / SV 运维日历）：TestNet Logical Synchronizer 升级至协议版本 35 已于 6 月 17 日 13:00 UTC 完成（6 月 16 日拓扑冻结后）。MainNet 拓扑冻结 6 月 26 日、LSU 6 月 27 日 13:00 UTC。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以配合流量型应用奖励（MainNet 7 月 28 日上线）。', url: 'https://forum.canton.network/t/canton-3-4-to-canton-3-5-transition/8777' },
@@ -1339,6 +1362,7 @@ export const translations = {
         { date: '2026-06-16', tag: '生态', title: 'Ekiden 在 Canton 测试网推出 CLOB 衍生品交易所', body: 'Ekiden 在 Canton 测试网 app.cnt.ekiden.fi 上线——网络首个中央限价订单簿衍生品场所。架构为链下 CLOB 撮合 + Merkle 承诺延迟链上结算；API、积分与推荐计划已开放。主网上线与做市商计划筹备中。', url: 'https://app.cnt.ekiden.fi/' },
         { date: '2026-06-16', tag: '生态', title: 'OneSwap SDK 在 Loop Wallet 上线（首个钱包集成）', body: 'OneSwap 在 5N Loop Wallet（cantonloop.com/swap）嵌入原生 swap——首个在 Canton 钱包内上线的 OneSwap SDK 部署。Loop 用户可在 passkey 浏览器钱包内直接兑换，无需跳转外部站点；Edel Finance 于 6 月初已完成 SDK 集成。开发者文档：docs.oneswap.cc。', url: 'https://cantonloop.com/swap' },
         { date: '2026-06-16', tag: '生态', title: 'Canton 发布开发者钱包栈（Wallet SDK、dApp SDK、Wallet Gateway）', body: 'Canton Network 官方博客（2026-06-16）：发布完整钱包集成栈——@canton-network/wallet-sdk 面向机构与交易所；@canton-network/dapp-sdk 配合 CIP-0103 发现组件实现前端「连接钱包」；Wallet Gateway 连接验证者与机构托管/签名系统（自带验证者模型）。文档见博文链接。', url: 'https://www.canton.network/blog/canton-unlocks-wallet-stack' },
+        { date: '2026-06-16', tag: '机构', title: 'Canton Strategic 授权最高 5000 万美元股份回购计划', body: 'PRNewswire（2026-06-16）：Canton Strategic Holdings（NASDAQ: CNTN）董事会授权回购最高 5000 万美元普通股，可通过公开市场或其他符合 Rule 10b-18 的方式执行；时间与规模由管理层酌情决定。SEC Form 8-K 披露董事会于 6 月 11 日批准、6 月 12 日与 Virtu Americas 签署 10b-18 计划。前瞻性表述以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-authorization-of-share-repurchase-program-302801675.html' },
         { date: '2026-06-16', tag: '协议', title: 'TestNet Protocol 35 LSU：拓扑冻结开始（6 月 17 日升级）', body: 'SV 运维日程（2026-06-12 更新）：Canton 3.4→3.5 迁移 Phase 3 进入 TestNet Logical Synchronizer Upgrade 准备——今日 13:00 UTC 起拓扑冻结，Protocol 35 LSU 定于 6 月 17 日 13:00 UTC。DevNet LSU 已完成；MainNet 拓扑冻结 6 月 26 日、升级 6 月 27 日。验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以参与流量型应用奖励。日历：sv-cal.canton.foundation。', url: 'https://sv-cal.canton.foundation/' },
         { date: '2026-06-15', tag: '治理', title: 'CIP-0119 生效：转账预批准 90 天免费基础时长', body: 'Canton Foundation CIP 仓库（2026-06-15 批准）：CIP-0119 在 AmuletConfig 中新增 transferPreapprovalBaseDuration（默认 90 天）——在此窗口内创建或续期 preapproval 除标准流量外免费（含免费基础流量），解决 CIP-0096 取消验证者活跃奖励后的交易所 onboarding 冷启动；更长时长仍可燃烧 CC 付费。', url: 'https://github.com/canton-foundation/cips/blob/main/cip-0119/cip-0119.md' },
         { date: '2026-06-15', tag: '生态', title: 'Encode Club「Build on Canton」黑客松启动（线上）', body: 'Canton Network 论坛（2026-05-13 公告；2026-06-15 开幕）：Encode Club 举办全球线上 Build on Canton 黑客松，设三赛道——隐私 DeFi 与资本市场；TradeFi、RWA 与代币化资产；支付、新型银行与智能体商务。项目页：encodeclub.com/programmes/canton-hackathon。', url: 'https://forum.canton.network/t/build-on-canton-hackathon/8635' },
