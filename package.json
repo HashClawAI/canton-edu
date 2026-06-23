@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "chart:build": "node scripts/build-sats-chart.mjs",
+    "fa:fetch": "node scripts/fetch-featured-apps.mjs",
     "docs:sync-canton": "node scripts/sync-canton-docs.mjs",
     "docs:translate-canton": "node scripts/translate-canton-docs.mjs",
     "docs:apply-cursor-zh": "node scripts/apply-cursor-zh.mjs",
@@ -12,7 +13,7 @@
     "docs:audit-links": "node scripts/audit-canton-links.mjs",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run chart:build && astro build",
+    "build": "npm run chart:build && npm run fa:fetch && astro build",
     "preview": "astro preview",
     "debug:pages-dns": "node scripts/debug-pages-dns.mjs",
     "news:rss-scan": "node scripts/news-rss-scan.mjs"

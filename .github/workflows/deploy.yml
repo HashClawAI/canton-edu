@@ -36,6 +36,8 @@ jobs:
           PUBLIC_SITE_URL: https://ccprivacy.club
           # Optional repo secret: Groups.io API key (Bearer) for cip-discuss topics at build time.
           GROUPSIO_API_KEY: ${{ secrets.GROUPSIO_API_KEY }}
+          # Optional: CC View API key for Featured App metadata (falls back to Lighthouse).
+          CCVIEW_API_KEY: ${{ secrets.CCVIEW_API_KEY }}
         run: |
           npm ci
           npm run build
