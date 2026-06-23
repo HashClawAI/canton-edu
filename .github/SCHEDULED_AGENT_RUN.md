@@ -10,6 +10,9 @@
    - Repository：`HashClawAI/canton-edu`
    - Prompt：复制该文件中的 **Automation 指令** 整段
 3. **Run now** 试跑 → 确认 PR 能创建 → 启用定时
+4. **Prompt 更新时**：修改仓库内 `canton-edu-daily-8am-gmt8.md` 后，须在 cursor.com 对应 Automation **重新粘贴** Prompt（不会自动同步）
+
+Automation 已配置**去重规则**：已有 open content PR 时跳过；`translations.ts` 中 URL 已存在则不重复添加；无增量时不 commit、不开 PR。积压多条重复 PR 时合并为一条 batch PR（见 #41 范例）。
 
 GitHub Actions **不会**代替 Cursor 改文案；下面 CI 仅作 RSS 候选、部署与**备用提醒**。
 
@@ -38,7 +41,7 @@ GitHub Actions **不会**代替 Cursor 改文案；下面 CI 仅作 RSS 候选�
 
 | 机制 | Cron (UTC) | 约北京时间 | 作用 |
 |------|------------|------------|------|
-| **Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | **全站扫描 → PR（主路径）** |
+| **Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | **全站扫描 → 有增量才开 PR** |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | 定时全量重建；合并到 `main` 也会触发 |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | Automation 失败时的备用提醒 |
