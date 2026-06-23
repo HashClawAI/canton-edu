@@ -8,14 +8,32 @@ interface Props {
 const { locale } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
-// Equivalent-path switching: /zh/news <-> /news (every route is mirrored in both locales).
 let path = Astro.url.pathname;
 if (path.startsWith(base)) {
   path = path.slice(base.length);
 } else {
   path = path.replace(/^\//, '');
 }
-const otherPath = locale === 'en' ? `${base}zh/${path}` : `${base}${path.replace(/^zh\/?/, '')}`;
+path = path.replace(/\/$/, '');
+
+/** Chinese home at `/`; English home at `/en/`; other pages mirrored under `/zh/`. */
+let otherPath: string;
+if (locale === 'zh') {
+  if (path === '' || path === 'zh') {
+    otherPath = `${base}en/`;
+  } else if (path.startsWith('zh/')) {
+    otherPath = `${base}${path.slice(3)}`;
+  } else {
+    otherPath = `${base}en/`;
+  }
+} else {
+  if (path === 'en') {
+    otherPath = base;
+  } else {
+    otherPath = `${base}zh/${path}`;
+  }
+}
+
 const label = locale === 'en' ? '中文' : 'English';
 ---
 

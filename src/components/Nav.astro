@@ -11,30 +11,31 @@ interface Props {
 const { locale, current = 'home' } = Astro.props;
 const tr = t(locale);
 const base = import.meta.env.BASE_URL;
-const prefix = locale === 'zh' ? `${base}zh/` : base;
+const homeHref = locale === 'zh' ? base : `${base}en/`;
+const sectionPrefix = locale === 'zh' ? `${base}zh/` : base;
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
-const newsHref = `${prefix}news`.replace(/\/$/, '');
+const newsHref = `${sectionPrefix}news`.replace(/\/$/, '');
 const isNewsActive = current === 'news' && (pathname === newsHref || pathname.startsWith(`${newsHref}/`));
-const docsHref = `${prefix}docs/canton`.replace(/\/$/, '');
+const docsHref = `${sectionPrefix}docs/canton`.replace(/\/$/, '');
 const isDocsActive = current === 'docs' && (pathname === docsHref || pathname.startsWith(`${docsHref}/`));
 
 const navItems = [
-  { key: 'home' as const, href: prefix, label: tr.nav.home },
-  { key: 'news' as const, href: `${prefix}news`, label: tr.nav.news },
-  { key: 'learn' as const, href: `${prefix}learn`, label: tr.nav.learn },
-  { key: 'docs' as const, href: `${prefix}docs/canton`, label: tr.nav.docs },
-  { key: 'ecosystem' as const, href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
-  { key: 'cips' as const, href: `${prefix}cips`, label: tr.nav.cips },
-  { key: 'videos' as const, href: `${prefix}videos`, label: tr.nav.videos },
-  { key: 'research' as const, href: `${prefix}research`, label: tr.nav.research },
-  { key: 'community' as const, href: `${prefix}community`, label: tr.nav.community },
-  { key: 'resources' as const, href: `${prefix}resources`, label: tr.nav.resources },
+  { key: 'home' as const, href: homeHref, label: tr.nav.home },
+  { key: 'news' as const, href: `${sectionPrefix}news`, label: tr.nav.news },
+  { key: 'learn' as const, href: `${sectionPrefix}learn`, label: tr.nav.learn },
+  { key: 'docs' as const, href: `${sectionPrefix}docs/canton`, label: tr.nav.docs },
+  { key: 'ecosystem' as const, href: `${sectionPrefix}ecosystem`, label: tr.nav.ecosystem },
+  { key: 'cips' as const, href: `${sectionPrefix}cips`, label: tr.nav.cips },
+  { key: 'videos' as const, href: `${sectionPrefix}videos`, label: tr.nav.videos },
+  { key: 'research' as const, href: `${sectionPrefix}research`, label: tr.nav.research },
+  { key: 'community' as const, href: `${sectionPrefix}community`, label: tr.nav.community },
+  { key: 'resources' as const, href: `${sectionPrefix}resources`, label: tr.nav.resources },
 ];
 ---
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href={prefix} aria-label={tr.siteName}>
+    <a class="brand" href={homeHref} aria-label={tr.siteName}>
       <img
         class="brand-logo"
         src={`${base}hashclaw-logo.png`}
