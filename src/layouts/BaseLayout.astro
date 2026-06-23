@@ -15,24 +15,25 @@ const { locale, title, description, navCurrent = 'home' } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
 const base = import.meta.env.BASE_URL;
-const prefix = locale === 'zh' ? `${base}zh/` : base;
+const homeHref = locale === 'zh' ? base : `${base}en/`;
+const sectionPrefix = locale === 'zh' ? `${base}zh/` : base;
 const ogImagePath = `${base}hashclaw-logo.png`;
 const ogImage = new URL(ogImagePath, Astro.site ?? Astro.url.origin);
 
 const footerExplore = [
-  { href: prefix, label: tr.nav.home },
-  { href: `${prefix}learn`, label: tr.nav.learn },
-  { href: `${prefix}docs/canton`, label: tr.nav.docs },
-  { href: `${prefix}ecosystem`, label: tr.nav.ecosystem },
-  { href: `${prefix}cips`, label: tr.nav.cips },
+  { href: homeHref, label: tr.nav.home },
+  { href: `${sectionPrefix}learn`, label: tr.nav.learn },
+  { href: `${sectionPrefix}docs/canton`, label: tr.nav.docs },
+  { href: `${sectionPrefix}ecosystem`, label: tr.nav.ecosystem },
+  { href: `${sectionPrefix}cips`, label: tr.nav.cips },
 ];
 
 const footerContent = [
-  { href: `${prefix}news`, label: tr.nav.news },
-  { href: `${prefix}videos`, label: tr.nav.videos },
-  { href: `${prefix}research`, label: tr.nav.research },
-  { href: `${prefix}community`, label: tr.nav.community },
-  { href: `${prefix}resources`, label: tr.nav.resources },
+  { href: `${sectionPrefix}news`, label: tr.nav.news },
+  { href: `${sectionPrefix}videos`, label: tr.nav.videos },
+  { href: `${sectionPrefix}research`, label: tr.nav.research },
+  { href: `${sectionPrefix}community`, label: tr.nav.community },
+  { href: `${sectionPrefix}resources`, label: tr.nav.resources },
 ];
 
 const footerExternal = [
@@ -70,7 +71,7 @@ const footerExternal = [
       <footer class="site-footer">
         <div class="wrap footer-grid">
           <div class="footer-brand">
-            <a class="footer-brand-row" href={prefix}>
+            <a class="footer-brand-row" href={homeHref}>
               <img class="footer-logo" src={`${base}hashclaw-logo.png`} width="30" height="30" alt="" decoding="async" loading="lazy" />
               <span>{tr.siteName}</span>
             </a>

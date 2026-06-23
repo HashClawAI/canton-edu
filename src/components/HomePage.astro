@@ -1,0 +1,116 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t, type Locale } from '@/i18n/translations';
+import CoinPrice from '@/components/CoinPrice.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const base = import.meta.env.BASE_URL;
+const linkPrefix = locale === 'zh' ? `${base}zh/` : base;
+const latestNews = tr.news.items.slice(0, 3);
+---
+
+<BaseLayout locale={locale} title={tr.home.title} description={tr.home.subtitle} navCurrent="home">
+  <section class="hero">
+    <span class="hero-kicker">{tr.home.heroKicker}</span>
+    <h1>{tr.home.title}</h1>
+    <p class="lead">{tr.home.subtitle}</p>
+    <div class="actions">
+      <a class="btn btn-primary" href={`${linkPrefix}learn`}>{tr.home.ctaLearn}</a>
+      <a class="btn btn-secondary" href={`${linkPrefix}ecosystem`}>{tr.home.ctaEcosystem}</a>
+    </div>
+    <CoinPrice
+      locale={locale}
+      bitcoinLabel={tr.home.coinPriceBitcoinLabel}
+      ccLabel={tr.home.coinPriceCcLabel}
+      ccBtcLabel={tr.home.coinPriceCcBtcLabel}
+      ccBtcFootnote={tr.home.coinPriceCcBtcFootnote}
+      satPerCcUnit={tr.home.coinPriceSatPerCcUnit}
+      chartTitle={tr.home.coinPriceChartTitle}
+      chartSubtitle={tr.home.coinPriceChartSubtitle}
+      chartBuildHint={tr.home.coinPriceChartBuildHint}
+    />
+  </section>
+
+  <div class="cards cards-4">
+    <article class="card">
+      <h2>{tr.home.cardWhatTitle}</h2>
+      <p>{tr.home.cardWhatBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardWhoTitle}</h2>
+      <p>{tr.home.cardWhoBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardCIPTitle}</h2>
+      <p>{tr.home.cardCIPBody}</p>
+    </article>
+    <article class="card">
+      <h2>{tr.home.cardCommunityTitle}</h2>
+      <p>{tr.home.cardCommunityBody}</p>
+    </article>
+  </div>
+
+  <section class="section home-news" aria-labelledby="home-news-heading">
+    <div class="section-head">
+      <h2 id="home-news-heading">{tr.home.newsPreviewTitle}</h2>
+      <a class="view-all" href={`${linkPrefix}news`}>{tr.home.newsPreviewViewAll} →</a>
+    </div>
+    <div class="home-news-list">
+      {latestNews.map(({ date, tag, title, body, url }) => (
+        <article class="home-news-item">
+          <div class="timeline-meta">
+            <time>{date}</time>
+            <span class="news-tag">{tag}</span>
+          </div>
+          <h3>{url ? <a href={url} target="_blank" rel="noopener noreferrer">{title}</a> : title}</h3>
+          <p>{body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="home-bottom-grid">
+    <section class="build-sync-section" aria-labelledby="build-sync-heading">
+      <h2 id="build-sync-heading">{tr.home.buildSyncTitle}</h2>
+      <p class="build-sync-intro">{tr.home.buildSyncIntro}</p>
+      <ul class="build-sync-list">
+        {tr.home.buildSyncItems.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="contribute-section">
+      <h2>{tr.home.contributeTitle}</h2>
+      <p>{tr.home.contributeBody}</p>
+      <a class="btn btn-secondary" href={tr.home.contributeRepo} target="_blank" rel="noopener noreferrer">
+        {tr.home.contributeRepoLabel} ↗
+      </a>
+
+      <div class="contribute-install">
+        <p class="contribute-label">{tr.home.contributeInstallLabel}</p>
+        <code class="command-item install-cmd">{tr.home.contributeInstallCmd}</code>
+        <p class="contribute-note">{tr.home.contributeInstallNote}</p>
+      </div>
+
+      <div class="contribute-commands">
+        <p class="contribute-label">{tr.home.contributeCommandsLabel}</p>
+        <div class="command-list">
+          {tr.home.contributeCommands.map((cmd) => (
+            <code class="command-item">{cmd}</code>
+          ))}
+        </div>
+      </div>
+
+      <div class="contribute-manual">
+        <p class="contribute-label">{tr.home.contributeManualLabel}</p>
+        <code class="command-item">{tr.home.contributeManualSteps}</code>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
