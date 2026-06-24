@@ -286,6 +286,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-23',
+          tag: 'Institutional',
+          title: 'Canton Strategic launches CC locking-as-a-service for SVs and Featured Apps',
+          body: 'PRNewswire (June 23, 2026): Canton Strategic Holdings (NASDAQ: CNTN) announced a locking-as-a-service offering to help Super Validators and Featured App builders meet CIP-0105 and CIP-0116 CC commitment requirements—piloted with SVs in April. CIP-0105 requires SVs to lock 70% of earned CC rewards; CIP-0116 sets per-party locks for Featured Apps. CEO Mark Wendland framed the service as capital-efficient alignment with long-term network health; forward-looking statements and DA trademark disclaimers apply per release.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-launch-of-locking-service-to-support-network-infrastructure-providers-302807710.html',
+        },
+        {
+          date: '2026-06-23',
+          tag: 'Market',
+          title: 'Bithumb lists Canton Coin (CC) on KRW market',
+          body: 'Bithumb (South Korea’s second-largest exchange) added CC to its Korean won market on June 23, 2026—trading opened 14:00 KST with deposits within two hours of the notice, Canton Mainnet only, and a 234 KRW reference price per the venue notice (archived on Xangle). Bithumb’s public CC_KRW ticker and CC-KRW trading page confirm live spot trading; standard new-listing safeguards (buy-order pause, limit-only window) applied. CC was already on Kraken, OKX, Bybit, KuCoin, and Upbit.',
+          url: 'https://www.bithumb.com/react/trade/index/CC-KRW',
+        },
+        {
           date: '2026-06-20',
           tag: 'Governance',
           title: 'OneSwap locks 5M CC for Featured App status (CIP-0116)',
@@ -1057,6 +1071,7 @@ export const translations = {
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT (see venue rules)' },
+        { name: 'Bithumb', pairs: 'CC/KRW (Canton Mainnet only; see venue rules)' },
         { name: 'Crypto.com', pairs: 'Canton deposits / withdrawals (app; region rules)' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
@@ -1354,6 +1369,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-23', tag: '机构', title: 'Canton Strategic 推出 CC 锁仓即服务，服务 SV 与精选应用', body: 'PRNewswire（2026-06-23）：Canton Strategic Holdings（NASDAQ: CNTN）宣布推出锁仓即服务，帮助超级验证者与 Featured App 建设者满足 CIP-0105 与 CIP-0116 的 CC 承诺——4 月已在 SV 侧试点。CIP-0105 要求 SV 锁仓已获奖励 CC 的 70%；CIP-0116 为 Featured App 设定按 Party 锁仓门槛。CEO Mark Wendland 强调以资本效率方式对齐长期网络健康；前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-launch-of-locking-service-to-support-network-infrastructure-providers-302807710.html' },
+        { date: '2026-06-23', tag: '市场', title: 'Bithumb 上线 Canton Coin（CC）韩元交易对', body: '韩国第二大交易所 Bithumb 于 2026-06-23 将 CC 加入韩元市场——公告后两小时内开放充提、14:00 KST 起交易，仅支持 Canton 主网，参考价 234 韩元（公告由 Xangle 归档）。Bithumb 公开 CC_KRW 行情接口与 CC-KRW 交易页已确认现货上线；适用新上币常规保护（买单暂停、限价窗口等）。CC 此前已在 Kraken、OKX、Bybit、KuCoin 与 Upbit 等所交易。', url: 'https://www.bithumb.com/react/trade/index/CC-KRW' },
         { date: '2026-06-20', tag: '治理', title: 'OneSwap 锁仓 500 万 CC 维持精选应用资格（CIP-0116）', body: 'OneSwap（@Oneswapcc）宣布按 CIP-0116 锁仓 500 万 CC 以维持 Featured App 资格——非发行方每个 PartyId 的门槛。CantonNews 线报归档了 2026-06-20 的公开帖；锁仓要求与 60 天线性解锁规则见已通过的 CIP-0116 正文。', url: 'https://cantonnews.org/wire/5000000-cc-locked-we-are-proud-2026-06-20' },
         { date: '2026-06-18', tag: '机构', title: 'Canton Strategic（NASDAQ: CNTN）预计纳入 Russell 3000 与 Russell 2000', body: 'PRNewswire（2026-06-18）：Canton Strategic Holdings 称 FTSE Russell 半年度重组初步名单将其列为新增成分——预计 2026-06-26 收盘后进入 Russell 3000 与 Russell 2000（及风格子指数），依据 2026-04-30 排名日数据。CEO Mark Wendland 强调 Canton 对齐战略；前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html' },
         { date: '2026-06-18', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——加密之都正在美国建成', body: 'Canton Network 官方博客摘要 Quadrillions 第 4 集（上）——CFTC 代理主席 Caroline Pham 与 Yuval Rooz 讨论机构 12 个月 Crypto Sprint、从「执法式监管」转向支持创新、代币化抵押品进入清算市场，以及 Canton 在抵押品流动与隐私结算中的角色。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-18。', url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world' },
@@ -1646,6 +1663,7 @@ export const translations = {
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT（以所内规则为准）' },
+        { name: 'Bithumb', pairs: 'CC/KRW（仅 Canton 主网；以所内规则为准）' },
         { name: 'Crypto.com', pairs: 'Canton 存取（App，地区规则）' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
