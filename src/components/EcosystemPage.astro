@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t, type Locale } from '@/i18n/translations';
+import {
+  featuredApps,
+  formatFeaturedSince,
+  groupLabel,
+} from '@/lib/featuredApps';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const ec = tr.ecosystem;
+const synced = formatFeaturedSince(featuredApps.fetchedAt, locale);
+const dataSourceLabel =
+  featuredApps.source === 'ccview'
+    ? ec.dataSourceCcview
+    : featuredApps.source === 'ccview-locking'
+      ? ec.dataSourceCcviewLocking
+      : ec.dataSourceLighthouse;
+---
+
+<BaseLayout locale={locale} title={ec.title} description={ec.intro} navCurrent="ecosystem">
+  <h1 class="page-title">{ec.title}</h1>
+  <p class="page-intro">
+    {ec.intro.replace('{count}', String(featuredApps.total))}
+  </p>
+  <p class="ecosystem-meta">
+    {dataSourceLabel}
+    {synced ? ` · ${ec.lastSynced} ${synced}` : ''}
+  </p>
+
+  {
+    featuredApps.groups.map((group) => (
+      <section class="section">
+        <h2>
+          {groupLabel(group, locale)}
+          <span class="section-count">{group.apps.length}</span>
+        </h2>
+        <div class="cards ecosystem-fa-cards">
+          {group.apps.map((app) => {
+            const since = formatFeaturedSince(app.featuredSince, locale);
+            return (
+              <article class="card ecosystem-fa-card">
+                {app.logoUrl ? (
+                  <img class="ecosystem-fa-logo" src={app.logoUrl} alt="" width="40" height="40" loading="lazy" />
+                ) : null}
+                <h3>
+                  {app.url ? (
+                    <a href={app.url} target="_blank" rel="noopener noreferrer">
+                      {app.name}
+                    </a>
+                  ) : (
+                    app.name
+                  )}
+                </h3>
+                {app.organization ? <p class="ecosystem-fa-org">{app.organization}</p> : null}
+                {app.description ? <p>{app.description}</p> : null}
+                <p class="ecosystem-fa-meta">
+                  {since ? `${ec.featuredSince} ${since}` : null}
+                  {app.transactions != null ? (
+                    <>
+                      {since ? ' · ' : ''}
+                      {app.transactions.toLocaleString(locale === 'zh' ? 'zh-CN' : 'en-US')} tx
+                    </>
+                  ) : null}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section ecosystem-links">
+    <h2>{ec.externalLinksTitle}</h2>
+    <ul class="ecosystem-link-list">
+      <li>
+        <a href={ec.lighthouseUrl} target="_blank" rel="noopener noreferrer">
+          {ec.lighthouseLabel}
+        </a>
+      </li>
+      <li>
+        <a href={ec.ccviewUrl} target="_blank" rel="noopener noreferrer">
+          {ec.ccviewLabel}
+        </a>
+      </li>
+      <li>
+        <a href={ec.fullListUrl} target="_blank" rel="noopener noreferrer">
+          {ec.fullListNote}
+        </a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>

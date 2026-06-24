@@ -1,0 +1,2611 @@
+{
+  "fetchedAt": "2026-06-23T09:20:47.920Z",
+  "source": "ccview-locking",
+  "total": 121,
+  "groups": [
+    {
+      "id": "wallets",
+      "labelEn": "Wallets",
+      "labelZh": "钱包",
+      "apps": [
+        {
+          "provider": "cantonloop-mainnet-1::12205fb70ce14897d06baec18a4b889f296c765a8325fd3d99cc084b1f980426ac12",
+          "name": "5N Loop",
+          "organization": "Five North",
+          "description": "App provider · Wallets · 75.00M CC",
+          "url": "https://ccview.io/party/cantonloop-mainnet-1%3A%3A12205fb70ce14897d06baec18a4b889f296c765a8325fd3d99cc084b1f980426ac12/",
+          "tags": [
+            "Wallets"
+          ],
+          "featuredSince": "2025-08-28T06:04:18.491957Z"
+        },
+        {
+          "provider": "pixelplex-mainnet-3::12209a8ec282ec94bc941172f3052221413031f27394685693e2d83e4bfab6423ac6",
+          "name": "Console Wallet",
+          "organization": "pixelplex",
+          "description": "App provider · Wallets · 50.85M CC",
+          "url": "https://ccview.io/party/pixelplex-mainnet-3%3A%3A12209a8ec282ec94bc941172f3052221413031f27394685693e2d83e4bfab6423ac6/",
+          "tags": [
+            "Wallets"
+          ],
+          "featuredSince": "2025-11-14T20:53:12.656543Z"
+        },
+        {
+          "provider": "send-cantonwallet-1::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+          "name": "Send Wallet",
+          "organization": "Send",
+          "description": "App provider · Wallets · 5.00M CC",
+          "url": "https://ccview.io/party/send-cantonwallet-1%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+          "tags": [
+            "Wallets"
+          ],
+          "featuredSince": "2025-09-25T20:08:41.17137Z"
+        }
+      ]
+    },
+    {
+      "id": "defi",
+      "labelEn": "DeFi",
+      "labelZh": "DeFi",
+      "apps": [
+        {
+          "provider": "acme-lending::1220a7daf7140e112f15a46f2daa52fe9c8651024ff8705bb23c494275dd02209596",
+          "name": "ACME",
+          "organization": "Guffey, Inc.",
+          "description": "App provider · DEFI · 5.00M CC · Featured",
+          "url": "https://ccview.io/party/acme-lending%3A%3A1220a7daf7140e112f15a46f2daa52fe9c8651024ff8705bb23c494275dd02209596/",
+          "tags": [
+            "DEFI"
+          ],
+          "featuredSince": "2026-04-21T20:44:29.956062Z"
+        },
+        {
+          "provider": "Supanova-validator-1::12205c9e7df3ce671bc5e285120cb6e4dfae5ee3029c04fa82f1cd828c5e7197d882",
+          "name": "Supanova",
+          "organization": "Supanova",
+          "description": "App provider · DEFI · 5.00M CC",
+          "url": "https://ccview.io/party/Supanova-validator-1%3A%3A12205c9e7df3ce671bc5e285120cb6e4dfae5ee3029c04fa82f1cd828c5e7197d882/",
+          "tags": [
+            "DEFI"
+          ],
+          "featuredSince": "2026-01-16T18:00:58.818893Z"
+        }
+      ]
+    },
+    {
+      "id": "amm",
+      "labelEn": "AMM",
+      "labelZh": "AMM",
+      "apps": [
+        {
+          "provider": "Cantex-validator-1::122038c015864f106cfed48bb9106b7c89982368d27956ffcdfda6c38328f0909b8c",
+          "name": "— Cantex",
+          "organization": "CaviarNine Limited",
+          "description": "App provider · AMM · 5.00M CC",
+          "url": "https://ccview.io/party/Cantex-validator-1%3A%3A122038c015864f106cfed48bb9106b7c89982368d27956ffcdfda6c38328f0909b8c/",
+          "tags": [
+            "AMM"
+          ],
+          "featuredSince": "2026-01-28T17:01:02.591964Z"
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "labelEn": "Payments",
+      "labelZh": "支付",
+      "apps": [
+        {
+          "provider": "Ubyx-validator-1::12204cfc7847273bd046b70b5c5549627294a024fb2ab86f58755ee6aebeed9cc1c4",
+          "name": "Ubyx Clearing",
+          "organization": "Ubyx",
+          "description": "App provider · Payments · 5.00M CC",
+          "url": "https://ccview.io/party/Ubyx-validator-1%3A%3A12204cfc7847273bd046b70b5c5549627294a024fb2ab86f58755ee6aebeed9cc1c4/",
+          "tags": [
+            "Payments"
+          ],
+          "featuredSince": "2025-12-26T19:00:22.177352Z"
+        },
+        {
+          "provider": "M1-validator-1::12207b40944692e083593819697e1cd87a94026afca2564253d16ff8696b233a6637",
+          "name": "USDM1 Stablecoin",
+          "organization": "M1 Global",
+          "description": "Asset issuer · Payments · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/M1-validator-1%3A%3A12207b40944692e083593819697e1cd87a94026afca2564253d16ff8696b233a6637/",
+          "tags": [
+            "Payments"
+          ],
+          "featuredSince": "2025-10-10T18:00:30.393739Z"
+        }
+      ]
+    },
+    {
+      "id": "lending",
+      "labelEn": "Lending",
+      "labelZh": "借贷",
+      "apps": [
+        {
+          "provider": "edel-various-1::122085b19d439b7e68abf7c94c3d9949f9e23aef3f1d4835ccbcb0993ed96fb53432",
+          "name": "Edel",
+          "organization": "Edel",
+          "description": "Asset issuer · Lending · 25.00M CC",
+          "url": "https://ccview.io/party/edel-various-1%3A%3A122085b19d439b7e68abf7c94c3d9949f9e23aef3f1d4835ccbcb0993ed96fb53432/",
+          "tags": [
+            "Lending"
+          ],
+          "featuredSince": "2026-04-20T01:00:20.784773Z"
+        }
+      ]
+    },
+    {
+      "id": "liquidity",
+      "labelEn": "Liquidity",
+      "labelZh": "流动性",
+      "apps": [
+        {
+          "provider": "temple-mainnet-2::1220ed902ab8208518afef45e3e2d2aec1526d038d5f8ee2514a10842dc0886e6673",
+          "name": "— Temple Trading Expansion",
+          "organization": "Temple",
+          "description": "App provider · Liquidity · 15.50M CC",
+          "url": "https://ccview.io/party/temple-mainnet-2%3A%3A1220ed902ab8208518afef45e3e2d2aec1526d038d5f8ee2514a10842dc0886e6673/",
+          "tags": [
+            "Liquidity"
+          ],
+          "featuredSince": "2026-06-13T10:12:09.884294Z"
+        },
+        {
+          "provider": "TRIZEGroup-cantonMainnetValidator-1::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889",
+          "name": "T-RIZE",
+          "organization": "T-RIZE Group",
+          "description": "App provider · Liquidity · 25.00M CC",
+          "url": "https://ccview.io/party/TRIZEGroup-cantonMainnetValidator-1%3A%3A12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889/",
+          "tags": [
+            "Liquidity"
+          ],
+          "featuredSince": "2025-09-24T19:25:19.500025Z"
+        },
+        {
+          "provider": "temple-mainnet-1::1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f",
+          "name": "Temple Trading",
+          "organization": "Temple",
+          "description": "App provider · Liquidity · 15.50M CC",
+          "url": "https://ccview.io/party/temple-mainnet-1%3A%3A1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f/",
+          "tags": [
+            "Liquidity"
+          ],
+          "featuredSince": "2025-09-11T20:36:28.974627Z"
+        }
+      ]
+    },
+    {
+      "id": "rwa",
+      "labelEn": "RWA",
+      "labelZh": "RWA",
+      "apps": [
+        {
+          "provider": "trakx-validator-1::1220f2acce9d7491505ee5fabb548e9975bbf0f8efaae98404d7399922fb48a03aeb",
+          "name": "— Trakx Crypto Tradable Indices (CTIs)",
+          "organization": "Trakx SAS",
+          "description": "Asset issuer · RWA · 25.00M CC",
+          "url": "https://ccview.io/party/trakx-validator-1%3A%3A1220f2acce9d7491505ee5fabb548e9975bbf0f8efaae98404d7399922fb48a03aeb/",
+          "tags": [
+            "RWA"
+          ],
+          "featuredSince": "2025-09-25T23:55:27.735753Z"
+        },
+        {
+          "provider": "blackmantacapital-primary-1::1220c0d1b398955a314e9662027cb3ef337b0a9390ca3346314070631d72792cee36",
+          "name": "BMCP Invest",
+          "organization": "Black Manta Capital Partners",
+          "description": "Asset issuer · RWA · 25.00M CC",
+          "url": "https://ccview.io/party/blackmantacapital-primary-1%3A%3A1220c0d1b398955a314e9662027cb3ef337b0a9390ca3346314070631d72792cee36/",
+          "tags": [
+            "RWA"
+          ],
+          "featuredSince": "2025-09-13T09:01:11.132145Z"
+        },
+        {
+          "provider": "TextureCapital-validator-1::12206f711aa1c1017053f53a069279518584074c0b0348f522b020d1fcc311e01988",
+          "name": "Texture Capital Offering Platform",
+          "organization": "Texture Capital Holdings",
+          "description": "App provider · RWA · 5.00M CC",
+          "url": "https://ccview.io/party/TextureCapital-validator-1%3A%3A12206f711aa1c1017053f53a069279518584074c0b0348f522b020d1fcc311e01988/",
+          "tags": [
+            "RWA"
+          ],
+          "featuredSince": "2025-11-06T13:00:33.035764Z"
+        }
+      ]
+    },
+    {
+      "id": "infra-and-dev-tools",
+      "labelEn": "Infra & Dev Tools",
+      "labelZh": "基础设施与开发工具",
+      "apps": [
+        {
+          "provider": "Cygnet::1220e655341f4512555d89c14cf52c80a029b57e19d30d80721b4aae5b0a053ab397",
+          "name": "— IPBlock Cygnet",
+          "organization": "IPBlock LLC",
+          "description": "Asset issuer · Infra & Dev Tools · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/Cygnet%3A%3A1220e655341f4512555d89c14cf52c80a029b57e19d30d80721b4aae5b0a053ab397/",
+          "tags": [
+            "Infra & Dev Tools"
+          ],
+          "featuredSince": "2025-10-04T12:10:34.538051Z"
+        },
+        {
+          "provider": "rails-cethMain-1::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+          "name": "cETH",
+          "organization": "Rails Tech Ltd",
+          "description": "Asset issuer · Infra & Dev Tools · 25.00M CC",
+          "url": "https://ccview.io/party/rails-cethMain-1%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+          "tags": [
+            "Infra & Dev Tools"
+          ],
+          "featuredSince": "2026-03-14T01:00:27.508337Z"
+        },
+        {
+          "provider": "SatsTerminal-main-1::122043df1a3b6ae04288cbcd1899434a945a75b849859f20b124e8ba07ebb812a047",
+          "name": "OneSwap",
+          "organization": "Sats Terminal",
+          "description": "App provider · Infra & Dev Tools · 5.00M CC",
+          "url": "https://ccview.io/party/SatsTerminal-main-1%3A%3A122043df1a3b6ae04288cbcd1899434a945a75b849859f20b124e8ba07ebb812a047/",
+          "tags": [
+            "Infra & Dev Tools"
+          ],
+          "featuredSince": "2026-03-28T15:00:45.426525Z"
+        },
+        {
+          "provider": "Bridge-Operator::1220c8448890a70e65f6906bd48d797ee6551f094e9e6a53e329fd5b2b549334f13f",
+          "name": "USDC Bridge App (Circle)",
+          "organization": "Digital Asset - Bridge Operator for USDC",
+          "description": "Asset issuer · Infra & Dev Tools · 25.00M CC",
+          "url": "https://ccview.io/party/Bridge-Operator%3A%3A1220c8448890a70e65f6906bd48d797ee6551f094e9e6a53e329fd5b2b549334f13f/",
+          "tags": [
+            "Infra & Dev Tools"
+          ],
+          "featuredSince": "2025-10-23T11:36:20.402224Z"
+        }
+      ]
+    },
+    {
+      "id": "api-and-analytics",
+      "labelEn": "API & Analytics",
+      "labelZh": "API 与分析",
+      "apps": [
+        {
+          "provider": "modo::122014f09cb05cffc2f1c524601c4aa91d35908dc55cfe9e92849390137ccc7c0d41",
+          "name": "Modo Data Platform",
+          "organization": "Staketab",
+          "description": "App provider · API & Analytics · 5.00M CC",
+          "url": "https://ccview.io/party/modo%3A%3A122014f09cb05cffc2f1c524601c4aa91d35908dc55cfe9e92849390137ccc7c0d41/",
+          "tags": [
+            "API & Analytics"
+          ],
+          "featuredSince": "2025-11-22T11:44:19.932481Z"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "labelEn": "Identity",
+      "labelZh": "身份",
+      "apps": [
+        {
+          "provider": "LoopID::1220940ccaf484be99fc67387ce461bd358aa6c76e43224e959a4bd20fe30a0b11c6",
+          "name": "5N ID",
+          "organization": "Five North",
+          "description": "App provider · Identity · 75.00M CC",
+          "url": "https://ccview.io/party/LoopID%3A%3A1220940ccaf484be99fc67387ce461bd358aa6c76e43224e959a4bd20fe30a0b11c6/",
+          "tags": [
+            "Identity"
+          ],
+          "featuredSince": "2025-11-02T08:41:20.597576Z"
+        }
+      ]
+    },
+    {
+      "id": "financing",
+      "labelEn": "Financing",
+      "labelZh": "融资",
+      "apps": [
+        {
+          "provider": "RootsFi-validator-01::1220d5ad22c519120105e0fd8b8c50aa5a48c76e29e6c6768987cd7952c225246f51",
+          "name": "Bridge by Roots",
+          "organization": "RootsFi, Inc.",
+          "description": "App provider · Financing · 5.00M CC",
+          "url": "https://ccview.io/party/RootsFi-validator-01%3A%3A1220d5ad22c519120105e0fd8b8c50aa5a48c76e29e6c6768987cd7952c225246f51/",
+          "tags": [
+            "Financing"
+          ],
+          "featuredSince": "2026-03-28T15:00:50.649345Z"
+        }
+      ]
+    },
+    {
+      "id": "non-issuer",
+      "labelEn": "Non-Issuer",
+      "labelZh": "非发行方应用",
+      "apps": [
+        {
+          "provider": "c7trust::12202e2325b04b0f0ee30685088289293b3e7a28d8b26470b39435502912e2876cba",
+          "name": "7Trust",
+          "organization": "C7",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/c7trust%3A%3A12202e2325b04b0f0ee30685088289293b3e7a28d8b26470b39435502912e2876cba/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-09-04T17:00:20.018047Z"
+        },
+        {
+          "provider": "bitdynamicsab-mainnet-1::1220ea322b53b7f031e5e2e99796d02cb84e3fef257c63e89204622dc174f552c1d6",
+          "name": "BitDynamics",
+          "organization": "Bit Dynamics AB",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/bitdynamicsab-mainnet-1%3A%3A1220ea322b53b7f031e5e2e99796d02cb84e3fef257c63e89204622dc174f552c1d6/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-03T12:00:55.968387Z"
+        },
+        {
+          "provider": "nodetech-mainnet-1::122091e990ffc729fcd266b4dd5b03320daba234c7d1c5470f50f21a7720a6d1c278",
+          "name": "Bitleo Wallet",
+          "organization": "Benleo Group",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/nodetech-mainnet-1%3A%3A122091e990ffc729fcd266b4dd5b03320daba234c7d1c5470f50f21a7720a6d1c278/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-20T01:00:09.870792Z"
+        },
+        {
+          "provider": "MPCH-BRONdvn-1::122005b8d2f108b45b4d7872f0e982b13e14fa119a31a4f6ddf76f4a58bbbba49024",
+          "name": "Bron",
+          "organization": "Bron Foundation",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/MPCH-BRONdvn-1%3A%3A122005b8d2f108b45b4d7872f0e982b13e14fa119a31a4f6ddf76f4a58bbbba49024/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-05-28T21:32:37.487082Z"
+        },
+        {
+          "provider": "Cancore-mainnet-1::1220076a94e0a7f0256a32ffab227db7788d8075677d8afcdaa8386df8f2fa659906",
+          "name": "Cancore",
+          "organization": "Cancore",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/Cancore-mainnet-1%3A%3A1220076a94e0a7f0256a32ffab227db7788d8075677d8afcdaa8386df8f2fa659906/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-04T07:12:21.453328Z"
+        },
+        {
+          "provider": "CantonOps::12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7",
+          "name": "Cantix prev. CantonOps",
+          "organization": "Fairmint",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/CantonOps%3A%3A12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-10-19T06:38:20.034355Z"
+        },
+        {
+          "provider": "FTP-validator-1::1220c065ad977ae4e480b6ea5bcd96d6d73025a91ad27fa60d1385010ca01cdd39f9",
+          "name": "CanTrustAi",
+          "organization": "FTP",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/FTP-validator-1%3A%3A1220c065ad977ae4e480b6ea5bcd96d6d73025a91ad27fa60d1385010ca01cdd39f9/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-03-20T02:20:16.957582Z"
+        },
+        {
+          "provider": "cauri-wallet-provider1::1220e852a0cb4372f91dd2b7b93c71d4580600b0f2c045e6cbebd9f510e88c0ba29b",
+          "name": "Cauri",
+          "organization": "Lithium Digital Limited",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/cauri-wallet-provider1%3A%3A1220e852a0cb4372f91dd2b7b93c71d4580600b0f2c045e6cbebd9f510e88c0ba29b/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-29T21:35:12.243609Z"
+        },
+        {
+          "provider": "ccbrowser::1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941",
+          "name": "CC Browser",
+          "organization": "Noves",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/ccbrowser%3A%3A1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-12-12T21:00:47.838779Z"
+        },
+        {
+          "provider": "cantonnodes-validator-1::12202aabb1637789bf00254a7893853860d8458c7c0235b06433611d6bf41e812b10",
+          "name": "CC Node",
+          "organization": "Proof Group",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/cantonnodes-validator-1%3A%3A12202aabb1637789bf00254a7893853860d8458c7c0235b06433611d6bf41e812b10/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-09-25T20:13:30.487985Z"
+        },
+        {
+          "provider": "proofgroup-validator-1::122021b7624f77a1a095714acc74337bebb0f49cf0f8ea565d4f0b12e09bb5deb1e1",
+          "name": "CC Scan (Block Explorer)",
+          "organization": "Proof Group",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/proofgroup-validator-1%3A%3A122021b7624f77a1a095714acc74337bebb0f49cf0f8ea565d4f0b12e09bb5deb1e1/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-04-07T13:03:00.248668Z"
+        },
+        {
+          "provider": "CopperClearLoop::1220b25aa0a73f9f34925b62591da332693bef3a71e3d235c19e5546dafca2dda9ef",
+          "name": "ClearLoop Settlement",
+          "organization": "Copper Technologies",
+          "description": "Asset issuer · Non-Issuer · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/CopperClearLoop%3A%3A1220b25aa0a73f9f34925b62591da332693bef3a71e3d235c19e5546dafca2dda9ef/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-05-08T16:00:14.027886Z"
+        },
+        {
+          "provider": "CoinMetrics-validator-1::1220b6cf34a2c8937dc72403e7a8b57c80049be8aff3e5e2d992063460bdc8636466",
+          "name": "Coin Metrics",
+          "organization": "Coin Metrics",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/CoinMetrics-validator-1%3A%3A1220b6cf34a2c8937dc72403e7a8b57c80049be8aff3e5e2d992063460bdc8636466/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-07-18T16:00:19.406437Z"
+        },
+        {
+          "provider": "foundinalsunthy-mainnet-1::12201004202ad4f2ba69d160e148899596aa294db698917f3aaef063afcb0a412c83",
+          "name": "ConTon BOT",
+          "organization": "Foundinals Lab",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/foundinalsunthy-mainnet-1%3A%3A12201004202ad4f2ba69d160e148899596aa294db698917f3aaef063afcb0a412c83/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-11-24T00:33:14.069725Z"
+        },
+        {
+          "provider": "cypherock-mainnet-1::1220583c5b03a866fd8e5f09737cdb51818c7b4b52a8e8c9b0cc2f4d1b082e95b6d9",
+          "name": "Cypherock Wallet",
+          "organization": "Cypherock",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/cypherock-mainnet-1%3A%3A1220583c5b03a866fd8e5f09737cdb51818c7b4b52a8e8c9b0cc2f4d1b082e95b6d9/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-11-15T05:46:11.695005Z"
+        },
+        {
+          "provider": "Cumberland-GasStation-1::1220987fe52357fc17dc0a3552a691d1e1e685152bbe467acff604503cf301780bcf",
+          "name": "Denex Gas Station",
+          "organization": "Cumberland",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/Cumberland-GasStation-1%3A%3A1220987fe52357fc17dc0a3552a691d1e1e685152bbe467acff604503cf301780bcf/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2024-12-09T18:01:29.963089Z"
+        },
+        {
+          "provider": "DStash::122016b8c36f538ee05279581ab01465feab275ebe208288c517c020b679f4ee5e9f",
+          "name": "DStash",
+          "organization": "EquiTek LLC",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/DStash%3A%3A122016b8c36f538ee05279581ab01465feab275ebe208288c517c020b679f4ee5e9f/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-08-31T16:01:03.720689Z"
+        },
+        {
+          "provider": "Fairmint-validator-1::122047f456985651be8ea317881a9af4f04521417ce1a449b75543541acf33aac4d2",
+          "name": "Fairmint, Inc.",
+          "organization": "Fairmint, Inc.",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/Fairmint-validator-1%3A%3A122047f456985651be8ea317881a9af4f04521417ce1a449b75543541acf33aac4d2/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-06-21T19:00:54.029167Z"
+        },
+        {
+          "provider": "HeliosFinance-Mainnet-1::12209b2f98a7cf41163b67c3aa980840f83f585a5aec8d11854f8d1387b3b8a98eb0",
+          "name": "Helios Credit Line & Card",
+          "organization": "Helios Finance",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/HeliosFinance-Mainnet-1%3A%3A12209b2f98a7cf41163b67c3aa980840f83f585a5aec8d11854f8d1387b3b8a98eb0/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-14T14:00:22.711603Z"
+        },
+        {
+          "provider": "HIFI-validator-1::1220c44096409d3244021ae82992ccae3a1208fa79cacf450760b6f2cd9dfee2daa6",
+          "name": "HIFI",
+          "organization": "HIFI",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/HIFI-validator-1%3A%3A1220c44096409d3244021ae82992ccae3a1208fa79cacf450760b6f2cd9dfee2daa6/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-01-30T17:01:03.376846Z"
+        },
+        {
+          "provider": "cbtc-network::12205af3b949a04776fc48cdcc05a060f6bda2e470632935f375d1049a8546a3b262",
+          "name": "iBTC Bitcoin Bridge",
+          "organization": "Bitsafe",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/cbtc-network%3A%3A12205af3b949a04776fc48cdcc05a060f6bda2e470632935f375d1049a8546a3b262/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-10-25T16:38:16.755405Z"
+        },
+        {
+          "provider": "tenkai-main-1::122092e9dd81d0a52f38b110f6b2e6426713418cc4db363c5c9b2c8cb6e46922c671",
+          "name": "Klarsign",
+          "organization": "Tenkai GmbH",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/tenkai-main-1%3A%3A122092e9dd81d0a52f38b110f6b2e6426713418cc4db363c5c9b2c8cb6e46922c671/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-01-13T17:23:16.900173Z"
+        },
+        {
+          "provider": "931f692d-21d7-4548-82b4-d0e1c6ec7736::1220921c9c5579f2648609d8b007793ffbe31efb311c79c53cbc68571827c1c5ebee",
+          "name": "Metra (by HydraX)",
+          "organization": "HydraX",
+          "description": "Asset issuer · Non-Issuer · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/931f692d-21d7-4548-82b4-d0e1c6ec7736%3A%3A1220921c9c5579f2648609d8b007793ffbe31efb311c79c53cbc68571827c1c5ebee/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-03-20T20:24:40.127978Z"
+        },
+        {
+          "provider": "nexode::12208428f54ef01a64f520dc586a3876f8316b03f1ec40b3764142de89dc5d34acb9",
+          "name": "Nexode",
+          "organization": "Nexode",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/nexode%3A%3A12208428f54ef01a64f520dc586a3876f8316b03f1ec40b3764142de89dc5d34acb9/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-05-30T22:00:11.815715Z"
+        },
+        {
+          "provider": "noves-translate::1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941",
+          "name": "Noves Data App",
+          "organization": "Noves, Inc",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/noves-translate%3A%3A1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-10-03T18:00:16.81403Z"
+        },
+        {
+          "provider": "onchain-transfer-agent::12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7",
+          "name": "Onchain Transfer Agent (OTA)",
+          "organization": "Fairmint Transfer Agent",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/onchain-transfer-agent%3A%3A12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-02-07T19:04:20.846729Z"
+        },
+        {
+          "provider": "Redstone-validator-1::1220a6f7c2315ed7ba230397a459b036bfe9f36763a0e848dad741c4e9d20d85687c",
+          "name": "RedStone Oracle",
+          "organization": "RedStone Oracles",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/Redstone-validator-1%3A%3A1220a6f7c2315ed7ba230397a459b036bfe9f36763a0e848dad741c4e9d20d85687c/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-03-04T00:30:44.675086Z"
+        },
+        {
+          "provider": "auth0_007c69eb81fb9b5cfe37fbc593a3::1220cf5c0358766265d8b67b3269d0ab15eba018449585fa9810481842f6ceeffc44",
+          "name": "Republic Wallet",
+          "organization": "Republic Crypto LLC",
+          "description": "App provider · Non-Issuer · 5.00M CC · Featured",
+          "url": "https://ccview.io/party/auth0_007c69eb81fb9b5cfe37fbc593a3%3A%3A1220cf5c0358766265d8b67b3269d0ab15eba018449585fa9810481842f6ceeffc44/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-05-08T20:16:15.731887Z"
+        },
+        {
+          "provider": "rho-relay::12202d95f280fada14a100a940bb0901a08882cccc92144bc4cf9856994e192e3e73",
+          "name": "Rho Relay",
+          "organization": "Rho Labs (Arda Solutions LLC MENA FZ)",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/rho-relay%3A%3A12202d95f280fada14a100a940bb0901a08882cccc92144bc4cf9856994e192e3e73/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-23T02:03:09.887216Z"
+        },
+        {
+          "provider": "auth0_007c68129abae6733ca8b889162e::122064aab814d8d02f957120e33a970a5aca7c14097eab85ab40a36ddff26c70c44b",
+          "name": "Sync Insights",
+          "organization": "Chata Technologies Inc",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/auth0_007c68129abae6733ca8b889162e%3A%3A122064aab814d8d02f957120e33a970a5aca7c14097eab85ab40a36ddff26c70c44b/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-05-29T19:01:07.611621Z"
+        },
+        {
+          "provider": "feat-unhedged-app::12208567a714a12d1ba486a9fa702a0a438b5b3b895510eca791e3ef965a24be8832",
+          "name": "Unhedged",
+          "organization": "Alpha DNA Private Ltd",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/feat-unhedged-app%3A%3A12208567a714a12d1ba486a9fa702a0a438b5b3b895510eca791e3ef965a24be8832/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-04-21T20:44:25.89961Z"
+        },
+        {
+          "provider": "unitedapp-cc::12203179cc5cae0452dbc233403a6a66f6d87988615d0e64defdd77abb133bdc40a9",
+          "name": "UnitedApp",
+          "organization": "Noders LLC",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/unitedapp-cc%3A%3A12203179cc5cae0452dbc233403a6a66f6d87988615d0e64defdd77abb133bdc40a9/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-11-27T17:57:14.38592Z"
+        },
+        {
+          "provider": "sunthycloud-mainnet-1::1220dc2c99151dbe0ca0ff322dbdcf0f511c181e9277799640287c37f26c7a993773",
+          "name": "VeriGift Fund",
+          "organization": "LILIZ",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/sunthycloud-mainnet-1%3A%3A1220dc2c99151dbe0ca0ff322dbdcf0f511c181e9277799640287c37f26c7a993773/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-01-09T22:59:12.677325Z"
+        },
+        {
+          "provider": "Hashrupt-Verity::1220a92bde4d13d685e03c797e3a33891b64bfa7d93d80f2a0744fc21c9976492321",
+          "name": "Verity",
+          "organization": "Hashrupt Limited",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/Hashrupt-Verity%3A%3A1220a92bde4d13d685e03c797e3a33891b64bfa7d93d80f2a0744fc21c9976492321/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-11-22T17:09:14.461478Z"
+        },
+        {
+          "provider": "walley::1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c",
+          "name": "Walley",
+          "organization": "K2F Labs",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/walley%3A%3A1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2026-02-28T17:00:59.14339Z"
+        },
+        {
+          "provider": "auth0_007c691c4d28726455d23d1aa6dd::122046d30acaaa01b3a0aae069cbfb5983660360af866dd76b335570acacb2b31c3a",
+          "name": "xNS",
+          "organization": "Axymos Systems Limited",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/auth0_007c691c4d28726455d23d1aa6dd%3A%3A122046d30acaaa01b3a0aae069cbfb5983660360af866dd76b335570acacb2b31c3a/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-12-23T21:03:06.09418Z"
+        },
+        {
+          "provider": "openvector-mainnet-1::1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5",
+          "name": "Zoro Wallet",
+          "organization": "OpenVector",
+          "description": "App provider · Non-Issuer",
+          "url": "https://ccview.io/party/openvector-mainnet-1%3A%3A1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5/",
+          "tags": [
+            "Non-Issuer"
+          ],
+          "featuredSince": "2025-11-22T15:46:12.05943Z"
+        }
+      ]
+    },
+    {
+      "id": "asset-issuer",
+      "labelEn": "Asset Issuer",
+      "labelZh": "资产发行方",
+      "apps": [
+        {
+          "provider": "party-28dc4516-b5ca-44ff-86c7-2107e90a6807::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e",
+          "name": "Brale",
+          "organization": "Brale",
+          "description": "Asset issuer · Asset Issuer",
+          "url": "https://ccview.io/party/party-28dc4516-b5ca-44ff-86c7-2107e90a6807%3A%3A1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2024-12-11T16:03:56.844073Z"
+        },
+        {
+          "provider": "CantonSwap::122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7",
+          "name": "CantonSwap",
+          "organization": "Obsidian Software LLC",
+          "description": "Asset issuer · Asset Issuer",
+          "url": "https://ccview.io/party/CantonSwap%3A%3A122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2025-08-21T09:00:21.475048Z"
+        },
+        {
+          "provider": "CopperWrappedAssets::1220c283aa461c4a72626804a615e930d0f6432511464603eb6e40a955f958f98847",
+          "name": "Custodial Wrapped Assets",
+          "organization": "Copper.co",
+          "description": "Asset issuer · Asset Issuer",
+          "url": "https://ccview.io/party/CopperWrappedAssets%3A%3A1220c283aa461c4a72626804a615e930d0f6432511464603eb6e40a955f958f98847/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2026-05-01T13:00:20.260082Z"
+        },
+        {
+          "provider": "auth0_007c6643538f2eadd3e573dd05b9::12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e",
+          "name": "DA Utility App",
+          "organization": "Digital Assets",
+          "description": "Asset issuer · Asset Issuer",
+          "url": "https://ccview.io/party/auth0_007c6643538f2eadd3e573dd05b9%3A%3A12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2025-01-16T19:38:36.403934Z"
+        },
+        {
+          "provider": "tradefast-wallet3-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+          "name": "trade.fast bridge",
+          "organization": "Trade.Fast",
+          "description": "Asset issuer · Asset Issuer · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/tradefast-wallet3-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2026-06-21T14:25:11.252084Z"
+        },
+        {
+          "provider": "tradefast-provider-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+          "name": "Trade.Fast Prediction Market Issuer",
+          "organization": "Trade.Fast",
+          "description": "Asset issuer · Asset Issuer · 25.00M CC · Featured",
+          "url": "https://ccview.io/party/tradefast-provider-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+          "tags": [
+            "Asset Issuer"
+          ],
+          "featuredSince": "2026-05-15T20:14:14.406857Z"
+        }
+      ]
+    },
+    {
+      "id": "5.00m-cc",
+      "labelEn": "5.00m Cc",
+      "labelZh": "5.00m Cc",
+      "apps": [
+        {
+          "provider": "silvana-orderbook::1220997446016f1e96be9215bab224eace372752853ef99175c332307489bccbb07b",
+          "name": "— Silvana Book",
+          "organization": "Silvana",
+          "description": "App provider · 5.00M CC · 1.21M CC",
+          "url": "https://ccview.io/party/silvana-orderbook%3A%3A1220997446016f1e96be9215bab224eace372752853ef99175c332307489bccbb07b/",
+          "tags": [
+            "5.00M CC"
+          ],
+          "featuredSince": "2026-01-13T17:46:18.515124Z"
+        },
+        {
+          "provider": "poolparty-operator::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+          "name": "Pool Party Non-assset",
+          "organization": "Send Foundation",
+          "description": "App provider · 5.00M CC · 1.74M CC",
+          "url": "https://ccview.io/party/poolparty-operator%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+          "tags": [
+            "5.00M CC"
+          ],
+          "featuredSince": "2026-05-19T04:31:20.380261Z"
+        },
+        {
+          "provider": "8a72dd81-b8a4-425a-9061-31ed663d4450::1220d572036d26e3f8ef2fe127184d812a00e0b1b36e129acf990a82a06651e735a1",
+          "name": "Validity Registry",
+          "organization": "Validity.id Inc.",
+          "description": "App provider · 5.00M CC · 110.00K CC",
+          "url": "https://ccview.io/party/8a72dd81-b8a4-425a-9061-31ed663d4450%3A%3A1220d572036d26e3f8ef2fe127184d812a00e0b1b36e129acf990a82a06651e735a1/",
+          "tags": [
+            "5.00M CC"
+          ],
+          "featuredSince": "2026-01-30T23:00:16.593753Z"
+        }
+      ]
+    },
+    {
+      "id": "featured-app",
+      "labelEn": "Featured App",
+      "labelZh": "Featured App",
+      "apps": [
+        {
+          "provider": "3b348904-a81e-403c-a48e-13fa14aa6e97::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+          "name": "3b348904 A81e 403c A48e 13fa14aa6e97",
+          "url": "https://ccview.io/party/3b348904-a81e-403c-a48e-13fa14aa6e97%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-16T22:41:20.317149Z"
+        },
+        {
+          "provider": "3trade_validator_admin::122060327be2fbbda7498a867507bf4d1cd83cd079382fa8af1d4be5cad79248c102",
+          "name": "3trade Validator Admin",
+          "url": "https://ccview.io/party/3trade_validator_admin%3A%3A122060327be2fbbda7498a867507bf4d1cd83cd079382fa8af1d4be5cad79248c102/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2024-06-29T17:00:53.102952Z"
+        },
+        {
+          "provider": "auth0_007c683dbd71f9d177d5fdd09f3c::1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa",
+          "name": "Auth0 007c683dbd71f9d177d5fdd09f3c",
+          "url": "https://ccview.io/party/auth0_007c683dbd71f9d177d5fdd09f3c%3A%3A1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-06-12T16:01:02.555983Z"
+        },
+        {
+          "provider": "auth0_007c68c00c8f13d9cd1ff3a0f951::1220d1e3a653420a5d606c6b88b94e9e5f8361f5313f44d5bcbf2b8835ceb86a8aa7",
+          "name": "Auth0 007c68c00c8f13d9cd1ff3a0f951",
+          "url": "https://ccview.io/party/auth0_007c68c00c8f13d9cd1ff3a0f951%3A%3A1220d1e3a653420a5d606c6b88b94e9e5f8361f5313f44d5bcbf2b8835ceb86a8aa7/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-15T12:35:18.636355Z"
+        },
+        {
+          "provider": "auth0_007c68dab25ebb6582a0cbe2861c::12206476325416d7a9bcab23a22f75d2dd015c2bdcca6173428930e14e7405e78e35",
+          "name": "Auth0 007c68dab25ebb6582a0cbe2861c",
+          "url": "https://ccview.io/party/auth0_007c68dab25ebb6582a0cbe2861c%3A%3A12206476325416d7a9bcab23a22f75d2dd015c2bdcca6173428930e14e7405e78e35/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-24T14:34:38.83155Z"
+        },
+        {
+          "provider": "auth0_007c68f92e9e93fbd6f5a89b0a0c::12208d1aaf40a035e46b5076e41b84acc17a7cfb9c5b6d0848b2203cc2e5eceaee43",
+          "name": "Auth0 007c68f92e9e93fbd6f5a89b0a0c",
+          "url": "https://ccview.io/party/auth0_007c68f92e9e93fbd6f5a89b0a0c%3A%3A12208d1aaf40a035e46b5076e41b84acc17a7cfb9c5b6d0848b2203cc2e5eceaee43/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-05T21:20:09.09229Z"
+        },
+        {
+          "provider": "auth0_007c6944217743c3f0b43f0a8285::122058647c52460fb30fadca42a66f992909c633577ab80a5b71bb9600cbca39c0f9",
+          "name": "Auth0 007c6944217743c3f0b43f0a8285",
+          "url": "https://ccview.io/party/auth0_007c6944217743c3f0b43f0a8285%3A%3A122058647c52460fb30fadca42a66f992909c633577ab80a5b71bb9600cbca39c0f9/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-02-11T11:50:22.061787Z"
+        },
+        {
+          "provider": "binance-dp-1::12206a8a77e900f10dbaa57e4741f2d50d9318dd87e40f8dbf28f7ec4da657bb27b4",
+          "name": "Binance Dp 1",
+          "url": "https://ccview.io/party/binance-dp-1%3A%3A12206a8a77e900f10dbaa57e4741f2d50d9318dd87e40f8dbf28f7ec4da657bb27b4/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-10T05:30:11.15864Z"
+        },
+        {
+          "provider": "brikly-asterizm::122007725fa01ff8d201e87afc2a3c04b8dd67fd65660e9acb68a72ca54a59b5f610",
+          "name": "Brikly Asterizm",
+          "url": "https://ccview.io/party/brikly-asterizm%3A%3A122007725fa01ff8d201e87afc2a3c04b8dd67fd65660e9acb68a72ca54a59b5f610/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-10-30T07:03:21.510596Z"
+        },
+        {
+          "provider": "ByBit-MainNetValidator-1::12202c9fc5180723f14e87c88d316355817dd565afc2a897706a789086c33cd6a095",
+          "name": "ByBit MainNetValidator 1",
+          "url": "https://ccview.io/party/ByBit-MainNetValidator-1%3A%3A12202c9fc5180723f14e87c88d316355817dd565afc2a897706a789086c33cd6a095/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-10T09:50:06.49083Z"
+        },
+        {
+          "provider": "cache-cantor8-1::12207a2fd494b597697ded5a78228b5b9204408cea50ec26b327ae95deaee5cf1812",
+          "name": "Cache Cantor8 1",
+          "url": "https://ccview.io/party/cache-cantor8-1%3A%3A12207a2fd494b597697ded5a78228b5b9204408cea50ec26b327ae95deaee5cf1812/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-22T19:25:16.113802Z"
+        },
+        {
+          "provider": "cantory::1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c",
+          "name": "Cantory",
+          "url": "https://ccview.io/party/cantory%3A%3A1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-26T19:00:58.886134Z"
+        },
+        {
+          "provider": "CopperClearLoop::12203dc704b90128007718fd27a38dcf7ad1b1eaa9910b9eb831fe25ee4214ed98cd",
+          "name": "CopperClearLoop",
+          "url": "https://ccview.io/party/CopperClearLoop%3A%3A12203dc704b90128007718fd27a38dcf7ad1b1eaa9910b9eb831fe25ee4214ed98cd/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-08T16:00:12.326838Z"
+        },
+        {
+          "provider": "dteamtech-validator-1::12206a390f4088321a251280cd20c44f2ae02d54b4d29a8327d3523e7b03a7e98464",
+          "name": "Dteamtech Validator 1",
+          "url": "https://ccview.io/party/dteamtech-validator-1%3A%3A12206a390f4088321a251280cd20c44f2ae02d54b4d29a8327d3523e7b03a7e98464/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-01-30T17:00:48.407723Z"
+        },
+        {
+          "provider": "f932f175-75f1-45e9-9dce-8b8c77f1328b::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+          "name": "F932f175 75f1 45e9 9dce 8b8c77f1328b",
+          "url": "https://ccview.io/party/f932f175-75f1-45e9-9dce-8b8c77f1328b%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-27T17:44:15.672782Z"
+        },
+        {
+          "provider": "FlowRyd-validator-1::1220953c2240437bdf86867bb8540bc060f8db4e94f4ef3d00be48c98c2728a79c8d",
+          "name": "FlowRyd Validator 1",
+          "url": "https://ccview.io/party/FlowRyd-validator-1%3A%3A1220953c2240437bdf86867bb8540bc060f8db4e94f4ef3d00be48c98c2728a79c8d/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-06T14:01:02.988085Z"
+        },
+        {
+          "provider": "fulcrum-point::1220b75e7270e4e28e72b1ae678a3cd64194d32593924d2f76daebd5bc7024249064",
+          "name": "Fulcrum Point",
+          "url": "https://ccview.io/party/fulcrum-point%3A%3A1220b75e7270e4e28e72b1ae678a3cd64194d32593924d2f76daebd5bc7024249064/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-03-04T00:30:07.866973Z"
+        },
+        {
+          "provider": "GlobalSettlement-mainnet-1::1220aae9df566656d20f75190349dbc096ce28871f914d81d0a03dfe5750af817573",
+          "name": "GlobalSettlement Mainnet 1",
+          "url": "https://ccview.io/party/GlobalSettlement-mainnet-1%3A%3A1220aae9df566656d20f75190349dbc096ce28871f914d81d0a03dfe5750af817573/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-03-14T01:00:19.702586Z"
+        },
+        {
+          "provider": "haven-lp::122036a7877810c578708cb1e8e7db2a8eb586adf7f57d7ba7a78654304ac446bc7c",
+          "name": "Haven Lp",
+          "url": "https://ccview.io/party/haven-lp%3A%3A122036a7877810c578708cb1e8e7db2a8eb586adf7f57d7ba7a78654304ac446bc7c/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-02-07T22:12:14.789182Z"
+        },
+        {
+          "provider": "Hecto-App-1::12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972",
+          "name": "Hecto App 1",
+          "url": "https://ccview.io/party/Hecto-App-1%3A%3A12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-06-20T16:08:13.041599Z"
+        },
+        {
+          "provider": "Hecto-Finance-1::12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972",
+          "name": "Hecto Finance 1",
+          "url": "https://ccview.io/party/Hecto-Finance-1%3A%3A12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-06-20T16:17:07.715507Z"
+        },
+        {
+          "provider": "kora-app::1220efef3108b73891ecb7992fadf48bf7bd99e93ad071ec95da7cc40a53a8ebe8bf",
+          "name": "Kora App",
+          "url": "https://ccview.io/party/kora-app%3A%3A1220efef3108b73891ecb7992fadf48bf7bd99e93ad071ec95da7cc40a53a8ebe8bf/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-03-07T13:22:18.945815Z"
+        },
+        {
+          "provider": "kraken-validator-01::12201a93a967d6aa33310fb8b15a5b92a69ff48b7f326f20a26622a56a0ccea4168a",
+          "name": "Kraken Validator 01",
+          "url": "https://ccview.io/party/kraken-validator-01%3A%3A12201a93a967d6aa33310fb8b15a5b92a69ff48b7f326f20a26622a56a0ccea4168a/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-10T05:35:14.750696Z"
+        },
+        {
+          "provider": "kucoin-node-01::1220a9f52878b918c523d04b7b77fde73b39ba9842292e88bf2e7ce3b86eb25a3978",
+          "name": "Kucoin Node 01",
+          "url": "https://ccview.io/party/kucoin-node-01%3A%3A1220a9f52878b918c523d04b7b77fde73b39ba9842292e88bf2e7ce3b86eb25a3978/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-12T19:40:11.834338Z"
+        },
+        {
+          "provider": "mandalo-mainnet-2::122012969f2b0e67f443e0563e34d1468a7353bc3f125a02ea0cc100d934e298f98b",
+          "name": "Mandalo Mainnet 2",
+          "url": "https://ccview.io/party/mandalo-mainnet-2%3A%3A122012969f2b0e67f443e0563e34d1468a7353bc3f125a02ea0cc100d934e298f98b/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-25T21:41:19.452257Z"
+        },
+        {
+          "provider": "mexc-mainNet-01::12200e0228fa4b2652d5364068ed4e518bfb20e8be9ca062397bd068c8b2817fc5c7",
+          "name": "Mexc MainNet 01",
+          "url": "https://ccview.io/party/mexc-mainNet-01%3A%3A12200e0228fa4b2652d5364068ed4e518bfb20e8be9ca062397bd068c8b2817fc5c7/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-10T05:50:21.925941Z"
+        },
+        {
+          "provider": "onrails-core::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+          "name": "Onrails Core",
+          "url": "https://ccview.io/party/onrails-core%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-08T16:00:10.562922Z"
+        },
+        {
+          "provider": "onrails-reserve::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+          "name": "Onrails Reserve",
+          "url": "https://ccview.io/party/onrails-reserve%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-08T16:00:18.648581Z"
+        },
+        {
+          "provider": "onrails-stable::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+          "name": "Onrails Stable",
+          "url": "https://ccview.io/party/onrails-stable%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-08T16:00:26.235014Z"
+        },
+        {
+          "provider": "onrails-yield::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+          "name": "Onrails Yield",
+          "url": "https://ccview.io/party/onrails-yield%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-08T16:00:28.034984Z"
+        },
+        {
+          "provider": "openvector-wallet-1::1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5",
+          "name": "Openvector Wallet 1",
+          "url": "https://ccview.io/party/openvector-wallet-1%3A%3A1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-11-22T16:06:14.931127Z"
+        },
+        {
+          "provider": "opus28-opusaccess-1::122085428bbc45cd9e8e457fa643d98f41bce1d7e5113248e637c611b9de1ddef684",
+          "name": "Opus28 Opusaccess 1",
+          "url": "https://ccview.io/party/opus28-opusaccess-1%3A%3A122085428bbc45cd9e8e457fa643d98f41bce1d7e5113248e637c611b9de1ddef684/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-12T22:19:20.685193Z"
+        },
+        {
+          "provider": "party-8cc0af7a-8265-4c2f-984e-ef299c3c103f::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e",
+          "name": "Party 8cc0af7a 8265 4c2f 984e Ef299c3c103f",
+          "url": "https://ccview.io/party/party-8cc0af7a-8265-4c2f-984e-ef299c3c103f%3A%3A1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-06-17T13:39:55.053017Z"
+        },
+        {
+          "provider": "party-fda614d8-0b2e-4d64-9718-b4c497c56a8d::1220f67b4f1c8742d83ac7e12749d98195bf88ff120b2dab369291cf6a2ca27be9a9",
+          "name": "Party Fda614d8 0b2e 4d64 9718 B4c497c56a8d",
+          "url": "https://ccview.io/party/party-fda614d8-0b2e-4d64-9718-b4c497c56a8d%3A%3A1220f67b4f1c8742d83ac7e12749d98195bf88ff120b2dab369291cf6a2ca27be9a9/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-08-01T14:00:54.546528Z"
+        },
+        {
+          "provider": "ppbpffauvo::1220e9f5090242641b7a4aaad97e5d56ad40b4a65b69522fb9cd1b2443f6bfefb744",
+          "name": "Ppbpffauvo",
+          "url": "https://ccview.io/party/ppbpffauvo%3A%3A1220e9f5090242641b7a4aaad97e5d56ad40b4a65b69522fb9cd1b2443f6bfefb744/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-20T23:02:12.132327Z"
+        },
+        {
+          "provider": "temple-vaults-xx::1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f",
+          "name": "Temple Vaults Xx",
+          "url": "https://ccview.io/party/temple-vaults-xx%3A%3A1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-04-29T21:21:19.581051Z"
+        },
+        {
+          "provider": "the_tie_validator::1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa",
+          "name": "The Tie Validator",
+          "url": "https://ccview.io/party/the_tie_validator%3A%3A1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-04-22T17:42:06.974467Z"
+        },
+        {
+          "provider": "Tokino-validator-1::1220c4e630e0281e7e1487863dd56078106433c35e4bc013f7d3fc8e22464bc78e28",
+          "name": "Tokino Validator 1",
+          "url": "https://ccview.io/party/Tokino-validator-1%3A%3A1220c4e630e0281e7e1487863dd56078106433c35e4bc013f7d3fc8e22464bc78e28/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-02-11T11:37:15.132729Z"
+        },
+        {
+          "provider": "tradefast-mainnet-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+          "name": "Tradefast Mainnet 1",
+          "url": "https://ccview.io/party/tradefast-mainnet-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-02-05T18:24:10.906605Z"
+        },
+        {
+          "provider": "tradefast-mainnet-2::122000713294041cc0f6341f952586a04e029826a80b13369b06e8455611fb3a116b",
+          "name": "Tradefast Mainnet 2",
+          "url": "https://ccview.io/party/tradefast-mainnet-2%3A%3A122000713294041cc0f6341f952586a04e029826a80b13369b06e8455611fb3a116b/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-19T06:47:12.622477Z"
+        },
+        {
+          "provider": "TRIZEGroup-RIZEScore::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889",
+          "name": "TRIZEGroup RIZEScore",
+          "url": "https://ccview.io/party/TRIZEGroup-RIZEScore%3A%3A12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-12-02T17:09:09.611161Z"
+        },
+        {
+          "provider": "twmain-treasury-1::12200954e2b4596dfad67f92cd333602efa4ebcdc3860437884136817fa5c9f54a0e",
+          "name": "Twmain Treasury 1",
+          "url": "https://ccview.io/party/twmain-treasury-1%3A%3A12200954e2b4596dfad67f92cd333602efa4ebcdc3860437884136817fa5c9f54a0e/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2025-09-06T21:00:18.25137Z"
+        },
+        {
+          "provider": "ValaWallet-FA::122093ce879ca5d08db274937f9a2ec1eb7821d41ccfdce521d68a61ef3bf1b63463",
+          "name": "ValaWallet FA",
+          "url": "https://ccview.io/party/ValaWallet-FA%3A%3A122093ce879ca5d08db274937f9a2ec1eb7821d41ccfdce521d68a61ef3bf1b63463/",
+          "tags": [
+            "Featured App"
+          ],
+          "featuredSince": "2026-05-01T17:06:20.05521Z"
+        }
+      ]
+    },
+    {
+      "id": "25.00m-cc",
+      "labelEn": "25.00m Cc",
+      "labelZh": "25.00m Cc",
+      "apps": [
+        {
+          "provider": "asset-relayer::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+          "name": "Asset Relayer",
+          "organization": "Send Foundation",
+          "description": "Asset issuer · 25.00M CC · 6.03M CC",
+          "url": "https://ccview.io/party/asset-relayer%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-05-29T20:24:10.820975Z"
+        },
+        {
+          "provider": "cantor8-digik-1::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+          "name": "Cantor8/DigiK Issuer",
+          "organization": "Cantor8/DigiK",
+          "description": "Asset issuer · 25.00M CC · 186.19K CC",
+          "url": "https://ccview.io/party/cantor8-digik-1%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-04-21T20:44:30.650471Z"
+        },
+        {
+          "provider": "576413da77524b51afd26dc5356b6959::122051b225c4d162a3fe77fbe1bdcf782ad1ed34eaa899fd8e5f79c97f465e259f1d",
+          "name": "Cantor8/DigiK Issuer",
+          "organization": "Cantor8/DigiK",
+          "description": "Asset issuer · 25.00M CC · 186.19K CC",
+          "url": "https://ccview.io/party/576413da77524b51afd26dc5356b6959%3A%3A122051b225c4d162a3fe77fbe1bdcf782ad1ed34eaa899fd8e5f79c97f465e259f1d/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-05-19T19:47:27.159607Z"
+        },
+        {
+          "provider": "handlpay-main-1::12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf",
+          "name": "HandlPay: Additional featured Party ID to separate consumer app activity from asset issuer activity.",
+          "organization": "HandlPay by Verso Network AG",
+          "description": "Asset issuer · 25.00M CC · 12.78M CC",
+          "url": "https://ccview.io/party/handlpay-main-1%3A%3A12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-02-05T17:35:53.618179Z"
+        },
+        {
+          "provider": "handl-issuer::12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf",
+          "name": "HandlPay: Additional featured Party ID to separate consumer app activity from asset issuer activity.",
+          "organization": "HandlPay",
+          "description": "Asset issuer · 25.00M CC · 12.78M CC",
+          "url": "https://ccview.io/party/handl-issuer%3A%3A12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-03-20T13:00:22.264663Z"
+        },
+        {
+          "provider": "modulo-mainnet-2::1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3",
+          "name": "Modulo Issuer",
+          "organization": "Modulo Labs, Inc.",
+          "description": "Asset issuer · 25.00M CC · 21.64M CC",
+          "url": "https://ccview.io/party/modulo-mainnet-2%3A%3A1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2025-12-08T03:14:22.025863Z"
+        },
+        {
+          "provider": "Modulo-Issuer::1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3",
+          "name": "Modulo Issuer",
+          "organization": "Modulo Labs, Inc.",
+          "description": "Asset issuer · 25.00M CC · 21.64M CC",
+          "url": "https://ccview.io/party/Modulo-Issuer%3A%3A1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-05-01T15:27:16.080275Z"
+        },
+        {
+          "provider": "Obligate-validator-1::1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa",
+          "name": "Obligate issuer",
+          "organization": "Obligate AG",
+          "description": "Asset issuer · 25.00M CC · 2.81M CC",
+          "url": "https://ccview.io/party/Obligate-validator-1%3A%3A1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2025-10-10T18:00:39.268406Z"
+        },
+        {
+          "provider": "obligate-issuance::1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa",
+          "name": "Obligate issuer",
+          "organization": "Obligate AG",
+          "description": "Asset issuer · 25.00M CC · 2.81M CC",
+          "url": "https://ccview.io/party/obligate-issuance%3A%3A1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-05-08T16:00:14.810889Z"
+        },
+        {
+          "provider": "Tradecraft::122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7",
+          "name": "Tradecraft",
+          "organization": "Obsidian Software LLC",
+          "description": "App provider · 25.00M CC · 9.54M CC",
+          "url": "https://ccview.io/party/Tradecraft%3A%3A122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7/",
+          "tags": [
+            "25.00M CC"
+          ],
+          "featuredSince": "2026-05-01T13:00:10.942491Z"
+        }
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "provider": "Cantex-validator-1::122038c015864f106cfed48bb9106b7c89982368d27956ffcdfda6c38328f0909b8c",
+      "name": "— Cantex",
+      "organization": "CaviarNine Limited",
+      "description": "App provider · AMM · 5.00M CC",
+      "url": "https://ccview.io/party/Cantex-validator-1%3A%3A122038c015864f106cfed48bb9106b7c89982368d27956ffcdfda6c38328f0909b8c/",
+      "tags": [
+        "AMM"
+      ],
+      "featuredSince": "2026-01-28T17:01:02.591964Z"
+    },
+    {
+      "provider": "Cygnet::1220e655341f4512555d89c14cf52c80a029b57e19d30d80721b4aae5b0a053ab397",
+      "name": "— IPBlock Cygnet",
+      "organization": "IPBlock LLC",
+      "description": "Asset issuer · Infra & Dev Tools · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/Cygnet%3A%3A1220e655341f4512555d89c14cf52c80a029b57e19d30d80721b4aae5b0a053ab397/",
+      "tags": [
+        "Infra & Dev Tools"
+      ],
+      "featuredSince": "2025-10-04T12:10:34.538051Z"
+    },
+    {
+      "provider": "silvana-orderbook::1220997446016f1e96be9215bab224eace372752853ef99175c332307489bccbb07b",
+      "name": "— Silvana Book",
+      "organization": "Silvana",
+      "description": "App provider · 5.00M CC · 1.21M CC",
+      "url": "https://ccview.io/party/silvana-orderbook%3A%3A1220997446016f1e96be9215bab224eace372752853ef99175c332307489bccbb07b/",
+      "tags": [
+        "5.00M CC"
+      ],
+      "featuredSince": "2026-01-13T17:46:18.515124Z"
+    },
+    {
+      "provider": "temple-mainnet-2::1220ed902ab8208518afef45e3e2d2aec1526d038d5f8ee2514a10842dc0886e6673",
+      "name": "— Temple Trading Expansion",
+      "organization": "Temple",
+      "description": "App provider · Liquidity · 15.50M CC",
+      "url": "https://ccview.io/party/temple-mainnet-2%3A%3A1220ed902ab8208518afef45e3e2d2aec1526d038d5f8ee2514a10842dc0886e6673/",
+      "tags": [
+        "Liquidity"
+      ],
+      "featuredSince": "2026-06-13T10:12:09.884294Z"
+    },
+    {
+      "provider": "trakx-validator-1::1220f2acce9d7491505ee5fabb548e9975bbf0f8efaae98404d7399922fb48a03aeb",
+      "name": "— Trakx Crypto Tradable Indices (CTIs)",
+      "organization": "Trakx SAS",
+      "description": "Asset issuer · RWA · 25.00M CC",
+      "url": "https://ccview.io/party/trakx-validator-1%3A%3A1220f2acce9d7491505ee5fabb548e9975bbf0f8efaae98404d7399922fb48a03aeb/",
+      "tags": [
+        "RWA"
+      ],
+      "featuredSince": "2025-09-25T23:55:27.735753Z"
+    },
+    {
+      "provider": "3b348904-a81e-403c-a48e-13fa14aa6e97::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+      "name": "3b348904 A81e 403c A48e 13fa14aa6e97",
+      "url": "https://ccview.io/party/3b348904-a81e-403c-a48e-13fa14aa6e97%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-16T22:41:20.317149Z"
+    },
+    {
+      "provider": "3trade_validator_admin::122060327be2fbbda7498a867507bf4d1cd83cd079382fa8af1d4be5cad79248c102",
+      "name": "3trade Validator Admin",
+      "url": "https://ccview.io/party/3trade_validator_admin%3A%3A122060327be2fbbda7498a867507bf4d1cd83cd079382fa8af1d4be5cad79248c102/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2024-06-29T17:00:53.102952Z"
+    },
+    {
+      "provider": "LoopID::1220940ccaf484be99fc67387ce461bd358aa6c76e43224e959a4bd20fe30a0b11c6",
+      "name": "5N ID",
+      "organization": "Five North",
+      "description": "App provider · Identity · 75.00M CC",
+      "url": "https://ccview.io/party/LoopID%3A%3A1220940ccaf484be99fc67387ce461bd358aa6c76e43224e959a4bd20fe30a0b11c6/",
+      "tags": [
+        "Identity"
+      ],
+      "featuredSince": "2025-11-02T08:41:20.597576Z"
+    },
+    {
+      "provider": "cantonloop-mainnet-1::12205fb70ce14897d06baec18a4b889f296c765a8325fd3d99cc084b1f980426ac12",
+      "name": "5N Loop",
+      "organization": "Five North",
+      "description": "App provider · Wallets · 75.00M CC",
+      "url": "https://ccview.io/party/cantonloop-mainnet-1%3A%3A12205fb70ce14897d06baec18a4b889f296c765a8325fd3d99cc084b1f980426ac12/",
+      "tags": [
+        "Wallets"
+      ],
+      "featuredSince": "2025-08-28T06:04:18.491957Z"
+    },
+    {
+      "provider": "c7trust::12202e2325b04b0f0ee30685088289293b3e7a28d8b26470b39435502912e2876cba",
+      "name": "7Trust",
+      "organization": "C7",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/c7trust%3A%3A12202e2325b04b0f0ee30685088289293b3e7a28d8b26470b39435502912e2876cba/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-09-04T17:00:20.018047Z"
+    },
+    {
+      "provider": "acme-lending::1220a7daf7140e112f15a46f2daa52fe9c8651024ff8705bb23c494275dd02209596",
+      "name": "ACME",
+      "organization": "Guffey, Inc.",
+      "description": "App provider · DEFI · 5.00M CC · Featured",
+      "url": "https://ccview.io/party/acme-lending%3A%3A1220a7daf7140e112f15a46f2daa52fe9c8651024ff8705bb23c494275dd02209596/",
+      "tags": [
+        "DEFI"
+      ],
+      "featuredSince": "2026-04-21T20:44:29.956062Z"
+    },
+    {
+      "provider": "asset-relayer::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+      "name": "Asset Relayer",
+      "organization": "Send Foundation",
+      "description": "Asset issuer · 25.00M CC · 6.03M CC",
+      "url": "https://ccview.io/party/asset-relayer%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-05-29T20:24:10.820975Z"
+    },
+    {
+      "provider": "auth0_007c683dbd71f9d177d5fdd09f3c::1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa",
+      "name": "Auth0 007c683dbd71f9d177d5fdd09f3c",
+      "url": "https://ccview.io/party/auth0_007c683dbd71f9d177d5fdd09f3c%3A%3A1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-06-12T16:01:02.555983Z"
+    },
+    {
+      "provider": "auth0_007c68c00c8f13d9cd1ff3a0f951::1220d1e3a653420a5d606c6b88b94e9e5f8361f5313f44d5bcbf2b8835ceb86a8aa7",
+      "name": "Auth0 007c68c00c8f13d9cd1ff3a0f951",
+      "url": "https://ccview.io/party/auth0_007c68c00c8f13d9cd1ff3a0f951%3A%3A1220d1e3a653420a5d606c6b88b94e9e5f8361f5313f44d5bcbf2b8835ceb86a8aa7/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-15T12:35:18.636355Z"
+    },
+    {
+      "provider": "auth0_007c68dab25ebb6582a0cbe2861c::12206476325416d7a9bcab23a22f75d2dd015c2bdcca6173428930e14e7405e78e35",
+      "name": "Auth0 007c68dab25ebb6582a0cbe2861c",
+      "url": "https://ccview.io/party/auth0_007c68dab25ebb6582a0cbe2861c%3A%3A12206476325416d7a9bcab23a22f75d2dd015c2bdcca6173428930e14e7405e78e35/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-24T14:34:38.83155Z"
+    },
+    {
+      "provider": "auth0_007c68f92e9e93fbd6f5a89b0a0c::12208d1aaf40a035e46b5076e41b84acc17a7cfb9c5b6d0848b2203cc2e5eceaee43",
+      "name": "Auth0 007c68f92e9e93fbd6f5a89b0a0c",
+      "url": "https://ccview.io/party/auth0_007c68f92e9e93fbd6f5a89b0a0c%3A%3A12208d1aaf40a035e46b5076e41b84acc17a7cfb9c5b6d0848b2203cc2e5eceaee43/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-05T21:20:09.09229Z"
+    },
+    {
+      "provider": "auth0_007c6944217743c3f0b43f0a8285::122058647c52460fb30fadca42a66f992909c633577ab80a5b71bb9600cbca39c0f9",
+      "name": "Auth0 007c6944217743c3f0b43f0a8285",
+      "url": "https://ccview.io/party/auth0_007c6944217743c3f0b43f0a8285%3A%3A122058647c52460fb30fadca42a66f992909c633577ab80a5b71bb9600cbca39c0f9/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-02-11T11:50:22.061787Z"
+    },
+    {
+      "provider": "binance-dp-1::12206a8a77e900f10dbaa57e4741f2d50d9318dd87e40f8dbf28f7ec4da657bb27b4",
+      "name": "Binance Dp 1",
+      "url": "https://ccview.io/party/binance-dp-1%3A%3A12206a8a77e900f10dbaa57e4741f2d50d9318dd87e40f8dbf28f7ec4da657bb27b4/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-10T05:30:11.15864Z"
+    },
+    {
+      "provider": "bitdynamicsab-mainnet-1::1220ea322b53b7f031e5e2e99796d02cb84e3fef257c63e89204622dc174f552c1d6",
+      "name": "BitDynamics",
+      "organization": "Bit Dynamics AB",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/bitdynamicsab-mainnet-1%3A%3A1220ea322b53b7f031e5e2e99796d02cb84e3fef257c63e89204622dc174f552c1d6/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-03T12:00:55.968387Z"
+    },
+    {
+      "provider": "nodetech-mainnet-1::122091e990ffc729fcd266b4dd5b03320daba234c7d1c5470f50f21a7720a6d1c278",
+      "name": "Bitleo Wallet",
+      "organization": "Benleo Group",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/nodetech-mainnet-1%3A%3A122091e990ffc729fcd266b4dd5b03320daba234c7d1c5470f50f21a7720a6d1c278/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-20T01:00:09.870792Z"
+    },
+    {
+      "provider": "blackmantacapital-primary-1::1220c0d1b398955a314e9662027cb3ef337b0a9390ca3346314070631d72792cee36",
+      "name": "BMCP Invest",
+      "organization": "Black Manta Capital Partners",
+      "description": "Asset issuer · RWA · 25.00M CC",
+      "url": "https://ccview.io/party/blackmantacapital-primary-1%3A%3A1220c0d1b398955a314e9662027cb3ef337b0a9390ca3346314070631d72792cee36/",
+      "tags": [
+        "RWA"
+      ],
+      "featuredSince": "2025-09-13T09:01:11.132145Z"
+    },
+    {
+      "provider": "party-28dc4516-b5ca-44ff-86c7-2107e90a6807::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e",
+      "name": "Brale",
+      "organization": "Brale",
+      "description": "Asset issuer · Asset Issuer",
+      "url": "https://ccview.io/party/party-28dc4516-b5ca-44ff-86c7-2107e90a6807%3A%3A1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2024-12-11T16:03:56.844073Z"
+    },
+    {
+      "provider": "RootsFi-validator-01::1220d5ad22c519120105e0fd8b8c50aa5a48c76e29e6c6768987cd7952c225246f51",
+      "name": "Bridge by Roots",
+      "organization": "RootsFi, Inc.",
+      "description": "App provider · Financing · 5.00M CC",
+      "url": "https://ccview.io/party/RootsFi-validator-01%3A%3A1220d5ad22c519120105e0fd8b8c50aa5a48c76e29e6c6768987cd7952c225246f51/",
+      "tags": [
+        "Financing"
+      ],
+      "featuredSince": "2026-03-28T15:00:50.649345Z"
+    },
+    {
+      "provider": "brikly-asterizm::122007725fa01ff8d201e87afc2a3c04b8dd67fd65660e9acb68a72ca54a59b5f610",
+      "name": "Brikly Asterizm",
+      "url": "https://ccview.io/party/brikly-asterizm%3A%3A122007725fa01ff8d201e87afc2a3c04b8dd67fd65660e9acb68a72ca54a59b5f610/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-10-30T07:03:21.510596Z"
+    },
+    {
+      "provider": "MPCH-BRONdvn-1::122005b8d2f108b45b4d7872f0e982b13e14fa119a31a4f6ddf76f4a58bbbba49024",
+      "name": "Bron",
+      "organization": "Bron Foundation",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/MPCH-BRONdvn-1%3A%3A122005b8d2f108b45b4d7872f0e982b13e14fa119a31a4f6ddf76f4a58bbbba49024/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-05-28T21:32:37.487082Z"
+    },
+    {
+      "provider": "ByBit-MainNetValidator-1::12202c9fc5180723f14e87c88d316355817dd565afc2a897706a789086c33cd6a095",
+      "name": "ByBit MainNetValidator 1",
+      "url": "https://ccview.io/party/ByBit-MainNetValidator-1%3A%3A12202c9fc5180723f14e87c88d316355817dd565afc2a897706a789086c33cd6a095/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-10T09:50:06.49083Z"
+    },
+    {
+      "provider": "cache-cantor8-1::12207a2fd494b597697ded5a78228b5b9204408cea50ec26b327ae95deaee5cf1812",
+      "name": "Cache Cantor8 1",
+      "url": "https://ccview.io/party/cache-cantor8-1%3A%3A12207a2fd494b597697ded5a78228b5b9204408cea50ec26b327ae95deaee5cf1812/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-22T19:25:16.113802Z"
+    },
+    {
+      "provider": "Cancore-mainnet-1::1220076a94e0a7f0256a32ffab227db7788d8075677d8afcdaa8386df8f2fa659906",
+      "name": "Cancore",
+      "organization": "Cancore",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/Cancore-mainnet-1%3A%3A1220076a94e0a7f0256a32ffab227db7788d8075677d8afcdaa8386df8f2fa659906/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-04T07:12:21.453328Z"
+    },
+    {
+      "provider": "CantonOps::12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7",
+      "name": "Cantix prev. CantonOps",
+      "organization": "Fairmint",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/CantonOps%3A%3A12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-10-19T06:38:20.034355Z"
+    },
+    {
+      "provider": "CantonSwap::122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7",
+      "name": "CantonSwap",
+      "organization": "Obsidian Software LLC",
+      "description": "Asset issuer · Asset Issuer",
+      "url": "https://ccview.io/party/CantonSwap%3A%3A122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2025-08-21T09:00:21.475048Z"
+    },
+    {
+      "provider": "cantor8-digik-1::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+      "name": "Cantor8/DigiK Issuer",
+      "organization": "Cantor8/DigiK",
+      "description": "Asset issuer · 25.00M CC · 186.19K CC",
+      "url": "https://ccview.io/party/cantor8-digik-1%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-04-21T20:44:30.650471Z"
+    },
+    {
+      "provider": "576413da77524b51afd26dc5356b6959::122051b225c4d162a3fe77fbe1bdcf782ad1ed34eaa899fd8e5f79c97f465e259f1d",
+      "name": "Cantor8/DigiK Issuer",
+      "organization": "Cantor8/DigiK",
+      "description": "Asset issuer · 25.00M CC · 186.19K CC",
+      "url": "https://ccview.io/party/576413da77524b51afd26dc5356b6959%3A%3A122051b225c4d162a3fe77fbe1bdcf782ad1ed34eaa899fd8e5f79c97f465e259f1d/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-05-19T19:47:27.159607Z"
+    },
+    {
+      "provider": "cantory::1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c",
+      "name": "Cantory",
+      "url": "https://ccview.io/party/cantory%3A%3A1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-26T19:00:58.886134Z"
+    },
+    {
+      "provider": "FTP-validator-1::1220c065ad977ae4e480b6ea5bcd96d6d73025a91ad27fa60d1385010ca01cdd39f9",
+      "name": "CanTrustAi",
+      "organization": "FTP",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/FTP-validator-1%3A%3A1220c065ad977ae4e480b6ea5bcd96d6d73025a91ad27fa60d1385010ca01cdd39f9/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-03-20T02:20:16.957582Z"
+    },
+    {
+      "provider": "cauri-wallet-provider1::1220e852a0cb4372f91dd2b7b93c71d4580600b0f2c045e6cbebd9f510e88c0ba29b",
+      "name": "Cauri",
+      "organization": "Lithium Digital Limited",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/cauri-wallet-provider1%3A%3A1220e852a0cb4372f91dd2b7b93c71d4580600b0f2c045e6cbebd9f510e88c0ba29b/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-29T21:35:12.243609Z"
+    },
+    {
+      "provider": "ccbrowser::1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941",
+      "name": "CC Browser",
+      "organization": "Noves",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/ccbrowser%3A%3A1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-12-12T21:00:47.838779Z"
+    },
+    {
+      "provider": "cantonnodes-validator-1::12202aabb1637789bf00254a7893853860d8458c7c0235b06433611d6bf41e812b10",
+      "name": "CC Node",
+      "organization": "Proof Group",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/cantonnodes-validator-1%3A%3A12202aabb1637789bf00254a7893853860d8458c7c0235b06433611d6bf41e812b10/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-09-25T20:13:30.487985Z"
+    },
+    {
+      "provider": "proofgroup-validator-1::122021b7624f77a1a095714acc74337bebb0f49cf0f8ea565d4f0b12e09bb5deb1e1",
+      "name": "CC Scan (Block Explorer)",
+      "organization": "Proof Group",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/proofgroup-validator-1%3A%3A122021b7624f77a1a095714acc74337bebb0f49cf0f8ea565d4f0b12e09bb5deb1e1/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-04-07T13:03:00.248668Z"
+    },
+    {
+      "provider": "rails-cethMain-1::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+      "name": "cETH",
+      "organization": "Rails Tech Ltd",
+      "description": "Asset issuer · Infra & Dev Tools · 25.00M CC",
+      "url": "https://ccview.io/party/rails-cethMain-1%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+      "tags": [
+        "Infra & Dev Tools"
+      ],
+      "featuredSince": "2026-03-14T01:00:27.508337Z"
+    },
+    {
+      "provider": "CopperClearLoop::1220b25aa0a73f9f34925b62591da332693bef3a71e3d235c19e5546dafca2dda9ef",
+      "name": "ClearLoop Settlement",
+      "organization": "Copper Technologies",
+      "description": "Asset issuer · Non-Issuer · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/CopperClearLoop%3A%3A1220b25aa0a73f9f34925b62591da332693bef3a71e3d235c19e5546dafca2dda9ef/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-05-08T16:00:14.027886Z"
+    },
+    {
+      "provider": "CoinMetrics-validator-1::1220b6cf34a2c8937dc72403e7a8b57c80049be8aff3e5e2d992063460bdc8636466",
+      "name": "Coin Metrics",
+      "organization": "Coin Metrics",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/CoinMetrics-validator-1%3A%3A1220b6cf34a2c8937dc72403e7a8b57c80049be8aff3e5e2d992063460bdc8636466/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-07-18T16:00:19.406437Z"
+    },
+    {
+      "provider": "pixelplex-mainnet-3::12209a8ec282ec94bc941172f3052221413031f27394685693e2d83e4bfab6423ac6",
+      "name": "Console Wallet",
+      "organization": "pixelplex",
+      "description": "App provider · Wallets · 50.85M CC",
+      "url": "https://ccview.io/party/pixelplex-mainnet-3%3A%3A12209a8ec282ec94bc941172f3052221413031f27394685693e2d83e4bfab6423ac6/",
+      "tags": [
+        "Wallets"
+      ],
+      "featuredSince": "2025-11-14T20:53:12.656543Z"
+    },
+    {
+      "provider": "foundinalsunthy-mainnet-1::12201004202ad4f2ba69d160e148899596aa294db698917f3aaef063afcb0a412c83",
+      "name": "ConTon BOT",
+      "organization": "Foundinals Lab",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/foundinalsunthy-mainnet-1%3A%3A12201004202ad4f2ba69d160e148899596aa294db698917f3aaef063afcb0a412c83/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-11-24T00:33:14.069725Z"
+    },
+    {
+      "provider": "CopperClearLoop::12203dc704b90128007718fd27a38dcf7ad1b1eaa9910b9eb831fe25ee4214ed98cd",
+      "name": "CopperClearLoop",
+      "url": "https://ccview.io/party/CopperClearLoop%3A%3A12203dc704b90128007718fd27a38dcf7ad1b1eaa9910b9eb831fe25ee4214ed98cd/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-08T16:00:12.326838Z"
+    },
+    {
+      "provider": "CopperWrappedAssets::1220c283aa461c4a72626804a615e930d0f6432511464603eb6e40a955f958f98847",
+      "name": "Custodial Wrapped Assets",
+      "organization": "Copper.co",
+      "description": "Asset issuer · Asset Issuer",
+      "url": "https://ccview.io/party/CopperWrappedAssets%3A%3A1220c283aa461c4a72626804a615e930d0f6432511464603eb6e40a955f958f98847/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2026-05-01T13:00:20.260082Z"
+    },
+    {
+      "provider": "cypherock-mainnet-1::1220583c5b03a866fd8e5f09737cdb51818c7b4b52a8e8c9b0cc2f4d1b082e95b6d9",
+      "name": "Cypherock Wallet",
+      "organization": "Cypherock",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/cypherock-mainnet-1%3A%3A1220583c5b03a866fd8e5f09737cdb51818c7b4b52a8e8c9b0cc2f4d1b082e95b6d9/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-11-15T05:46:11.695005Z"
+    },
+    {
+      "provider": "auth0_007c6643538f2eadd3e573dd05b9::12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e",
+      "name": "DA Utility App",
+      "organization": "Digital Assets",
+      "description": "Asset issuer · Asset Issuer",
+      "url": "https://ccview.io/party/auth0_007c6643538f2eadd3e573dd05b9%3A%3A12205bcc106efa0eaa7f18dc491e5c6f5fb9b0cc68dc110ae66f4ed6467475d7c78e/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2025-01-16T19:38:36.403934Z"
+    },
+    {
+      "provider": "Cumberland-GasStation-1::1220987fe52357fc17dc0a3552a691d1e1e685152bbe467acff604503cf301780bcf",
+      "name": "Denex Gas Station",
+      "organization": "Cumberland",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/Cumberland-GasStation-1%3A%3A1220987fe52357fc17dc0a3552a691d1e1e685152bbe467acff604503cf301780bcf/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2024-12-09T18:01:29.963089Z"
+    },
+    {
+      "provider": "DStash::122016b8c36f538ee05279581ab01465feab275ebe208288c517c020b679f4ee5e9f",
+      "name": "DStash",
+      "organization": "EquiTek LLC",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/DStash%3A%3A122016b8c36f538ee05279581ab01465feab275ebe208288c517c020b679f4ee5e9f/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-08-31T16:01:03.720689Z"
+    },
+    {
+      "provider": "dteamtech-validator-1::12206a390f4088321a251280cd20c44f2ae02d54b4d29a8327d3523e7b03a7e98464",
+      "name": "Dteamtech Validator 1",
+      "url": "https://ccview.io/party/dteamtech-validator-1%3A%3A12206a390f4088321a251280cd20c44f2ae02d54b4d29a8327d3523e7b03a7e98464/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-01-30T17:00:48.407723Z"
+    },
+    {
+      "provider": "edel-various-1::122085b19d439b7e68abf7c94c3d9949f9e23aef3f1d4835ccbcb0993ed96fb53432",
+      "name": "Edel",
+      "organization": "Edel",
+      "description": "Asset issuer · Lending · 25.00M CC",
+      "url": "https://ccview.io/party/edel-various-1%3A%3A122085b19d439b7e68abf7c94c3d9949f9e23aef3f1d4835ccbcb0993ed96fb53432/",
+      "tags": [
+        "Lending"
+      ],
+      "featuredSince": "2026-04-20T01:00:20.784773Z"
+    },
+    {
+      "provider": "f932f175-75f1-45e9-9dce-8b8c77f1328b::12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053",
+      "name": "F932f175 75f1 45e9 9dce 8b8c77f1328b",
+      "url": "https://ccview.io/party/f932f175-75f1-45e9-9dce-8b8c77f1328b%3A%3A12204dcfad78c016ab59babba72d4ffe9bdca8aeaf6299a3f0da59523ee3f765b053/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-27T17:44:15.672782Z"
+    },
+    {
+      "provider": "Fairmint-validator-1::122047f456985651be8ea317881a9af4f04521417ce1a449b75543541acf33aac4d2",
+      "name": "Fairmint, Inc.",
+      "organization": "Fairmint, Inc.",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/Fairmint-validator-1%3A%3A122047f456985651be8ea317881a9af4f04521417ce1a449b75543541acf33aac4d2/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-06-21T19:00:54.029167Z"
+    },
+    {
+      "provider": "FlowRyd-validator-1::1220953c2240437bdf86867bb8540bc060f8db4e94f4ef3d00be48c98c2728a79c8d",
+      "name": "FlowRyd Validator 1",
+      "url": "https://ccview.io/party/FlowRyd-validator-1%3A%3A1220953c2240437bdf86867bb8540bc060f8db4e94f4ef3d00be48c98c2728a79c8d/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-06T14:01:02.988085Z"
+    },
+    {
+      "provider": "fulcrum-point::1220b75e7270e4e28e72b1ae678a3cd64194d32593924d2f76daebd5bc7024249064",
+      "name": "Fulcrum Point",
+      "url": "https://ccview.io/party/fulcrum-point%3A%3A1220b75e7270e4e28e72b1ae678a3cd64194d32593924d2f76daebd5bc7024249064/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-03-04T00:30:07.866973Z"
+    },
+    {
+      "provider": "GlobalSettlement-mainnet-1::1220aae9df566656d20f75190349dbc096ce28871f914d81d0a03dfe5750af817573",
+      "name": "GlobalSettlement Mainnet 1",
+      "url": "https://ccview.io/party/GlobalSettlement-mainnet-1%3A%3A1220aae9df566656d20f75190349dbc096ce28871f914d81d0a03dfe5750af817573/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-03-14T01:00:19.702586Z"
+    },
+    {
+      "provider": "handlpay-main-1::12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf",
+      "name": "HandlPay: Additional featured Party ID to separate consumer app activity from asset issuer activity.",
+      "organization": "HandlPay by Verso Network AG",
+      "description": "Asset issuer · 25.00M CC · 12.78M CC",
+      "url": "https://ccview.io/party/handlpay-main-1%3A%3A12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-02-05T17:35:53.618179Z"
+    },
+    {
+      "provider": "handl-issuer::12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf",
+      "name": "HandlPay: Additional featured Party ID to separate consumer app activity from asset issuer activity.",
+      "organization": "HandlPay",
+      "description": "Asset issuer · 25.00M CC · 12.78M CC",
+      "url": "https://ccview.io/party/handl-issuer%3A%3A12207ac147ad3e95894e7a507da3f04a819e8996f0bdf31c084ab3b77e51746b03cf/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-03-20T13:00:22.264663Z"
+    },
+    {
+      "provider": "haven-lp::122036a7877810c578708cb1e8e7db2a8eb586adf7f57d7ba7a78654304ac446bc7c",
+      "name": "Haven Lp",
+      "url": "https://ccview.io/party/haven-lp%3A%3A122036a7877810c578708cb1e8e7db2a8eb586adf7f57d7ba7a78654304ac446bc7c/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-02-07T22:12:14.789182Z"
+    },
+    {
+      "provider": "Hecto-App-1::12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972",
+      "name": "Hecto App 1",
+      "url": "https://ccview.io/party/Hecto-App-1%3A%3A12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-06-20T16:08:13.041599Z"
+    },
+    {
+      "provider": "Hecto-Finance-1::12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972",
+      "name": "Hecto Finance 1",
+      "url": "https://ccview.io/party/Hecto-Finance-1%3A%3A12208ee00572aea3304ebb12e34320769ea4b421911c9b658a999e0e64ee8a070972/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-06-20T16:17:07.715507Z"
+    },
+    {
+      "provider": "HeliosFinance-Mainnet-1::12209b2f98a7cf41163b67c3aa980840f83f585a5aec8d11854f8d1387b3b8a98eb0",
+      "name": "Helios Credit Line & Card",
+      "organization": "Helios Finance",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/HeliosFinance-Mainnet-1%3A%3A12209b2f98a7cf41163b67c3aa980840f83f585a5aec8d11854f8d1387b3b8a98eb0/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-14T14:00:22.711603Z"
+    },
+    {
+      "provider": "HIFI-validator-1::1220c44096409d3244021ae82992ccae3a1208fa79cacf450760b6f2cd9dfee2daa6",
+      "name": "HIFI",
+      "organization": "HIFI",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/HIFI-validator-1%3A%3A1220c44096409d3244021ae82992ccae3a1208fa79cacf450760b6f2cd9dfee2daa6/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-01-30T17:01:03.376846Z"
+    },
+    {
+      "provider": "cbtc-network::12205af3b949a04776fc48cdcc05a060f6bda2e470632935f375d1049a8546a3b262",
+      "name": "iBTC Bitcoin Bridge",
+      "organization": "Bitsafe",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/cbtc-network%3A%3A12205af3b949a04776fc48cdcc05a060f6bda2e470632935f375d1049a8546a3b262/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-10-25T16:38:16.755405Z"
+    },
+    {
+      "provider": "tenkai-main-1::122092e9dd81d0a52f38b110f6b2e6426713418cc4db363c5c9b2c8cb6e46922c671",
+      "name": "Klarsign",
+      "organization": "Tenkai GmbH",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/tenkai-main-1%3A%3A122092e9dd81d0a52f38b110f6b2e6426713418cc4db363c5c9b2c8cb6e46922c671/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-01-13T17:23:16.900173Z"
+    },
+    {
+      "provider": "kora-app::1220efef3108b73891ecb7992fadf48bf7bd99e93ad071ec95da7cc40a53a8ebe8bf",
+      "name": "Kora App",
+      "url": "https://ccview.io/party/kora-app%3A%3A1220efef3108b73891ecb7992fadf48bf7bd99e93ad071ec95da7cc40a53a8ebe8bf/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-03-07T13:22:18.945815Z"
+    },
+    {
+      "provider": "kraken-validator-01::12201a93a967d6aa33310fb8b15a5b92a69ff48b7f326f20a26622a56a0ccea4168a",
+      "name": "Kraken Validator 01",
+      "url": "https://ccview.io/party/kraken-validator-01%3A%3A12201a93a967d6aa33310fb8b15a5b92a69ff48b7f326f20a26622a56a0ccea4168a/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-10T05:35:14.750696Z"
+    },
+    {
+      "provider": "kucoin-node-01::1220a9f52878b918c523d04b7b77fde73b39ba9842292e88bf2e7ce3b86eb25a3978",
+      "name": "Kucoin Node 01",
+      "url": "https://ccview.io/party/kucoin-node-01%3A%3A1220a9f52878b918c523d04b7b77fde73b39ba9842292e88bf2e7ce3b86eb25a3978/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-12T19:40:11.834338Z"
+    },
+    {
+      "provider": "mandalo-mainnet-2::122012969f2b0e67f443e0563e34d1468a7353bc3f125a02ea0cc100d934e298f98b",
+      "name": "Mandalo Mainnet 2",
+      "url": "https://ccview.io/party/mandalo-mainnet-2%3A%3A122012969f2b0e67f443e0563e34d1468a7353bc3f125a02ea0cc100d934e298f98b/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-25T21:41:19.452257Z"
+    },
+    {
+      "provider": "931f692d-21d7-4548-82b4-d0e1c6ec7736::1220921c9c5579f2648609d8b007793ffbe31efb311c79c53cbc68571827c1c5ebee",
+      "name": "Metra (by HydraX)",
+      "organization": "HydraX",
+      "description": "Asset issuer · Non-Issuer · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/931f692d-21d7-4548-82b4-d0e1c6ec7736%3A%3A1220921c9c5579f2648609d8b007793ffbe31efb311c79c53cbc68571827c1c5ebee/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-03-20T20:24:40.127978Z"
+    },
+    {
+      "provider": "mexc-mainNet-01::12200e0228fa4b2652d5364068ed4e518bfb20e8be9ca062397bd068c8b2817fc5c7",
+      "name": "Mexc MainNet 01",
+      "url": "https://ccview.io/party/mexc-mainNet-01%3A%3A12200e0228fa4b2652d5364068ed4e518bfb20e8be9ca062397bd068c8b2817fc5c7/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-10T05:50:21.925941Z"
+    },
+    {
+      "provider": "modo::122014f09cb05cffc2f1c524601c4aa91d35908dc55cfe9e92849390137ccc7c0d41",
+      "name": "Modo Data Platform",
+      "organization": "Staketab",
+      "description": "App provider · API & Analytics · 5.00M CC",
+      "url": "https://ccview.io/party/modo%3A%3A122014f09cb05cffc2f1c524601c4aa91d35908dc55cfe9e92849390137ccc7c0d41/",
+      "tags": [
+        "API & Analytics"
+      ],
+      "featuredSince": "2025-11-22T11:44:19.932481Z"
+    },
+    {
+      "provider": "modulo-mainnet-2::1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3",
+      "name": "Modulo Issuer",
+      "organization": "Modulo Labs, Inc.",
+      "description": "Asset issuer · 25.00M CC · 21.64M CC",
+      "url": "https://ccview.io/party/modulo-mainnet-2%3A%3A1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2025-12-08T03:14:22.025863Z"
+    },
+    {
+      "provider": "Modulo-Issuer::1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3",
+      "name": "Modulo Issuer",
+      "organization": "Modulo Labs, Inc.",
+      "description": "Asset issuer · 25.00M CC · 21.64M CC",
+      "url": "https://ccview.io/party/Modulo-Issuer%3A%3A1220bbd47c5a10d5540c420e1f8f0f1fd513464ec6110dbd5123970dbe3b538805d3/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-05-01T15:27:16.080275Z"
+    },
+    {
+      "provider": "nexode::12208428f54ef01a64f520dc586a3876f8316b03f1ec40b3764142de89dc5d34acb9",
+      "name": "Nexode",
+      "organization": "Nexode",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/nexode%3A%3A12208428f54ef01a64f520dc586a3876f8316b03f1ec40b3764142de89dc5d34acb9/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-05-30T22:00:11.815715Z"
+    },
+    {
+      "provider": "noves-translate::1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941",
+      "name": "Noves Data App",
+      "organization": "Noves, Inc",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/noves-translate%3A%3A1220dd5cc6e969cd7d7c11e339fbd07fab5f6fa1f999dc09339228d17299d9d68941/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-10-03T18:00:16.81403Z"
+    },
+    {
+      "provider": "Obligate-validator-1::1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa",
+      "name": "Obligate issuer",
+      "organization": "Obligate AG",
+      "description": "Asset issuer · 25.00M CC · 2.81M CC",
+      "url": "https://ccview.io/party/Obligate-validator-1%3A%3A1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2025-10-10T18:00:39.268406Z"
+    },
+    {
+      "provider": "obligate-issuance::1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa",
+      "name": "Obligate issuer",
+      "organization": "Obligate AG",
+      "description": "Asset issuer · 25.00M CC · 2.81M CC",
+      "url": "https://ccview.io/party/obligate-issuance%3A%3A1220663cfdc370c3fc447072f3731a838a2a7de757bc29ee0d34b326f317b70db4aa/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-05-08T16:00:14.810889Z"
+    },
+    {
+      "provider": "onchain-transfer-agent::12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7",
+      "name": "Onchain Transfer Agent (OTA)",
+      "organization": "Fairmint Transfer Agent",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/onchain-transfer-agent%3A%3A12204a039322c01e9f714b56259c3e68b69058bf5dfe1debbe956c698f905ceba9d7/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-02-07T19:04:20.846729Z"
+    },
+    {
+      "provider": "SatsTerminal-main-1::122043df1a3b6ae04288cbcd1899434a945a75b849859f20b124e8ba07ebb812a047",
+      "name": "OneSwap",
+      "organization": "Sats Terminal",
+      "description": "App provider · Infra & Dev Tools · 5.00M CC",
+      "url": "https://ccview.io/party/SatsTerminal-main-1%3A%3A122043df1a3b6ae04288cbcd1899434a945a75b849859f20b124e8ba07ebb812a047/",
+      "tags": [
+        "Infra & Dev Tools"
+      ],
+      "featuredSince": "2026-03-28T15:00:45.426525Z"
+    },
+    {
+      "provider": "onrails-core::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+      "name": "Onrails Core",
+      "url": "https://ccview.io/party/onrails-core%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-08T16:00:10.562922Z"
+    },
+    {
+      "provider": "onrails-reserve::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+      "name": "Onrails Reserve",
+      "url": "https://ccview.io/party/onrails-reserve%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-08T16:00:18.648581Z"
+    },
+    {
+      "provider": "onrails-stable::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+      "name": "Onrails Stable",
+      "url": "https://ccview.io/party/onrails-stable%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-08T16:00:26.235014Z"
+    },
+    {
+      "provider": "onrails-yield::12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a",
+      "name": "Onrails Yield",
+      "url": "https://ccview.io/party/onrails-yield%3A%3A12200350ba6e96e3b701c3048b5aa013a8c1c08833e8ebf54339cff581055c29003a/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-08T16:00:28.034984Z"
+    },
+    {
+      "provider": "openvector-wallet-1::1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5",
+      "name": "Openvector Wallet 1",
+      "url": "https://ccview.io/party/openvector-wallet-1%3A%3A1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-11-22T16:06:14.931127Z"
+    },
+    {
+      "provider": "opus28-opusaccess-1::122085428bbc45cd9e8e457fa643d98f41bce1d7e5113248e637c611b9de1ddef684",
+      "name": "Opus28 Opusaccess 1",
+      "url": "https://ccview.io/party/opus28-opusaccess-1%3A%3A122085428bbc45cd9e8e457fa643d98f41bce1d7e5113248e637c611b9de1ddef684/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-12T22:19:20.685193Z"
+    },
+    {
+      "provider": "party-8cc0af7a-8265-4c2f-984e-ef299c3c103f::1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e",
+      "name": "Party 8cc0af7a 8265 4c2f 984e Ef299c3c103f",
+      "url": "https://ccview.io/party/party-8cc0af7a-8265-4c2f-984e-ef299c3c103f%3A%3A1220b8301e18aa8a401d6e34e6c20f8b0243183c514373bca8f1b6b9270246341a9e/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-06-17T13:39:55.053017Z"
+    },
+    {
+      "provider": "party-fda614d8-0b2e-4d64-9718-b4c497c56a8d::1220f67b4f1c8742d83ac7e12749d98195bf88ff120b2dab369291cf6a2ca27be9a9",
+      "name": "Party Fda614d8 0b2e 4d64 9718 B4c497c56a8d",
+      "url": "https://ccview.io/party/party-fda614d8-0b2e-4d64-9718-b4c497c56a8d%3A%3A1220f67b4f1c8742d83ac7e12749d98195bf88ff120b2dab369291cf6a2ca27be9a9/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-08-01T14:00:54.546528Z"
+    },
+    {
+      "provider": "poolparty-operator::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+      "name": "Pool Party Non-assset",
+      "organization": "Send Foundation",
+      "description": "App provider · 5.00M CC · 1.74M CC",
+      "url": "https://ccview.io/party/poolparty-operator%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+      "tags": [
+        "5.00M CC"
+      ],
+      "featuredSince": "2026-05-19T04:31:20.380261Z"
+    },
+    {
+      "provider": "ppbpffauvo::1220e9f5090242641b7a4aaad97e5d56ad40b4a65b69522fb9cd1b2443f6bfefb744",
+      "name": "Ppbpffauvo",
+      "url": "https://ccview.io/party/ppbpffauvo%3A%3A1220e9f5090242641b7a4aaad97e5d56ad40b4a65b69522fb9cd1b2443f6bfefb744/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-20T23:02:12.132327Z"
+    },
+    {
+      "provider": "Redstone-validator-1::1220a6f7c2315ed7ba230397a459b036bfe9f36763a0e848dad741c4e9d20d85687c",
+      "name": "RedStone Oracle",
+      "organization": "RedStone Oracles",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/Redstone-validator-1%3A%3A1220a6f7c2315ed7ba230397a459b036bfe9f36763a0e848dad741c4e9d20d85687c/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-03-04T00:30:44.675086Z"
+    },
+    {
+      "provider": "auth0_007c69eb81fb9b5cfe37fbc593a3::1220cf5c0358766265d8b67b3269d0ab15eba018449585fa9810481842f6ceeffc44",
+      "name": "Republic Wallet",
+      "organization": "Republic Crypto LLC",
+      "description": "App provider · Non-Issuer · 5.00M CC · Featured",
+      "url": "https://ccview.io/party/auth0_007c69eb81fb9b5cfe37fbc593a3%3A%3A1220cf5c0358766265d8b67b3269d0ab15eba018449585fa9810481842f6ceeffc44/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-05-08T20:16:15.731887Z"
+    },
+    {
+      "provider": "rho-relay::12202d95f280fada14a100a940bb0901a08882cccc92144bc4cf9856994e192e3e73",
+      "name": "Rho Relay",
+      "organization": "Rho Labs (Arda Solutions LLC MENA FZ)",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/rho-relay%3A%3A12202d95f280fada14a100a940bb0901a08882cccc92144bc4cf9856994e192e3e73/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-23T02:03:09.887216Z"
+    },
+    {
+      "provider": "send-cantonwallet-1::1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc",
+      "name": "Send Wallet",
+      "organization": "Send",
+      "description": "App provider · Wallets · 5.00M CC",
+      "url": "https://ccview.io/party/send-cantonwallet-1%3A%3A1220f1b0d7a83c7eaaf6d712d95d5952ea2c801238af9c342e8d83c87dfc45c999dc/",
+      "tags": [
+        "Wallets"
+      ],
+      "featuredSince": "2025-09-25T20:08:41.17137Z"
+    },
+    {
+      "provider": "Supanova-validator-1::12205c9e7df3ce671bc5e285120cb6e4dfae5ee3029c04fa82f1cd828c5e7197d882",
+      "name": "Supanova",
+      "organization": "Supanova",
+      "description": "App provider · DEFI · 5.00M CC",
+      "url": "https://ccview.io/party/Supanova-validator-1%3A%3A12205c9e7df3ce671bc5e285120cb6e4dfae5ee3029c04fa82f1cd828c5e7197d882/",
+      "tags": [
+        "DEFI"
+      ],
+      "featuredSince": "2026-01-16T18:00:58.818893Z"
+    },
+    {
+      "provider": "auth0_007c68129abae6733ca8b889162e::122064aab814d8d02f957120e33a970a5aca7c14097eab85ab40a36ddff26c70c44b",
+      "name": "Sync Insights",
+      "organization": "Chata Technologies Inc",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/auth0_007c68129abae6733ca8b889162e%3A%3A122064aab814d8d02f957120e33a970a5aca7c14097eab85ab40a36ddff26c70c44b/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-05-29T19:01:07.611621Z"
+    },
+    {
+      "provider": "TRIZEGroup-cantonMainnetValidator-1::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889",
+      "name": "T-RIZE",
+      "organization": "T-RIZE Group",
+      "description": "App provider · Liquidity · 25.00M CC",
+      "url": "https://ccview.io/party/TRIZEGroup-cantonMainnetValidator-1%3A%3A12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889/",
+      "tags": [
+        "Liquidity"
+      ],
+      "featuredSince": "2025-09-24T19:25:19.500025Z"
+    },
+    {
+      "provider": "temple-mainnet-1::1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f",
+      "name": "Temple Trading",
+      "organization": "Temple",
+      "description": "App provider · Liquidity · 15.50M CC",
+      "url": "https://ccview.io/party/temple-mainnet-1%3A%3A1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f/",
+      "tags": [
+        "Liquidity"
+      ],
+      "featuredSince": "2025-09-11T20:36:28.974627Z"
+    },
+    {
+      "provider": "temple-vaults-xx::1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f",
+      "name": "Temple Vaults Xx",
+      "url": "https://ccview.io/party/temple-vaults-xx%3A%3A1220f238bb79df3efbbac2ea964c3cd501003971a2cb59043e2dac50b06e85b8620f/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-04-29T21:21:19.581051Z"
+    },
+    {
+      "provider": "TextureCapital-validator-1::12206f711aa1c1017053f53a069279518584074c0b0348f522b020d1fcc311e01988",
+      "name": "Texture Capital Offering Platform",
+      "organization": "Texture Capital Holdings",
+      "description": "App provider · RWA · 5.00M CC",
+      "url": "https://ccview.io/party/TextureCapital-validator-1%3A%3A12206f711aa1c1017053f53a069279518584074c0b0348f522b020d1fcc311e01988/",
+      "tags": [
+        "RWA"
+      ],
+      "featuredSince": "2025-11-06T13:00:33.035764Z"
+    },
+    {
+      "provider": "the_tie_validator::1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa",
+      "name": "The Tie Validator",
+      "url": "https://ccview.io/party/the_tie_validator%3A%3A1220d3016091c253f526645cce3a0633837b685da083bac4459dad63e61d5c97b5fa/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-04-22T17:42:06.974467Z"
+    },
+    {
+      "provider": "Tokino-validator-1::1220c4e630e0281e7e1487863dd56078106433c35e4bc013f7d3fc8e22464bc78e28",
+      "name": "Tokino Validator 1",
+      "url": "https://ccview.io/party/Tokino-validator-1%3A%3A1220c4e630e0281e7e1487863dd56078106433c35e4bc013f7d3fc8e22464bc78e28/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-02-11T11:37:15.132729Z"
+    },
+    {
+      "provider": "tradefast-wallet3-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+      "name": "trade.fast bridge",
+      "organization": "Trade.Fast",
+      "description": "Asset issuer · Asset Issuer · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/tradefast-wallet3-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2026-06-21T14:25:11.252084Z"
+    },
+    {
+      "provider": "tradefast-provider-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+      "name": "Trade.Fast Prediction Market Issuer",
+      "organization": "Trade.Fast",
+      "description": "Asset issuer · Asset Issuer · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/tradefast-provider-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+      "tags": [
+        "Asset Issuer"
+      ],
+      "featuredSince": "2026-05-15T20:14:14.406857Z"
+    },
+    {
+      "provider": "Tradecraft::122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7",
+      "name": "Tradecraft",
+      "organization": "Obsidian Software LLC",
+      "description": "App provider · 25.00M CC · 9.54M CC",
+      "url": "https://ccview.io/party/Tradecraft%3A%3A122096fe076cc065af0cb38f94caa60e8ddfecbe8f0cfe10655ae7aa06fab99c66b7/",
+      "tags": [
+        "25.00M CC"
+      ],
+      "featuredSince": "2026-05-01T13:00:10.942491Z"
+    },
+    {
+      "provider": "tradefast-mainnet-1::1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4",
+      "name": "Tradefast Mainnet 1",
+      "url": "https://ccview.io/party/tradefast-mainnet-1%3A%3A1220674b79cae334aa788ffa394a6bd7d10e427d9f2abd418048e5be49ceb4256ca4/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-02-05T18:24:10.906605Z"
+    },
+    {
+      "provider": "tradefast-mainnet-2::122000713294041cc0f6341f952586a04e029826a80b13369b06e8455611fb3a116b",
+      "name": "Tradefast Mainnet 2",
+      "url": "https://ccview.io/party/tradefast-mainnet-2%3A%3A122000713294041cc0f6341f952586a04e029826a80b13369b06e8455611fb3a116b/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-19T06:47:12.622477Z"
+    },
+    {
+      "provider": "TRIZEGroup-RIZEScore::12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889",
+      "name": "TRIZEGroup RIZEScore",
+      "url": "https://ccview.io/party/TRIZEGroup-RIZEScore%3A%3A12206ab3bf15b14410220357d6a6375eb1015f2e7fade1deb449463c2f2a25304889/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-12-02T17:09:09.611161Z"
+    },
+    {
+      "provider": "twmain-treasury-1::12200954e2b4596dfad67f92cd333602efa4ebcdc3860437884136817fa5c9f54a0e",
+      "name": "Twmain Treasury 1",
+      "url": "https://ccview.io/party/twmain-treasury-1%3A%3A12200954e2b4596dfad67f92cd333602efa4ebcdc3860437884136817fa5c9f54a0e/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2025-09-06T21:00:18.25137Z"
+    },
+    {
+      "provider": "Ubyx-validator-1::12204cfc7847273bd046b70b5c5549627294a024fb2ab86f58755ee6aebeed9cc1c4",
+      "name": "Ubyx Clearing",
+      "organization": "Ubyx",
+      "description": "App provider · Payments · 5.00M CC",
+      "url": "https://ccview.io/party/Ubyx-validator-1%3A%3A12204cfc7847273bd046b70b5c5549627294a024fb2ab86f58755ee6aebeed9cc1c4/",
+      "tags": [
+        "Payments"
+      ],
+      "featuredSince": "2025-12-26T19:00:22.177352Z"
+    },
+    {
+      "provider": "feat-unhedged-app::12208567a714a12d1ba486a9fa702a0a438b5b3b895510eca791e3ef965a24be8832",
+      "name": "Unhedged",
+      "organization": "Alpha DNA Private Ltd",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/feat-unhedged-app%3A%3A12208567a714a12d1ba486a9fa702a0a438b5b3b895510eca791e3ef965a24be8832/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-04-21T20:44:25.89961Z"
+    },
+    {
+      "provider": "unitedapp-cc::12203179cc5cae0452dbc233403a6a66f6d87988615d0e64defdd77abb133bdc40a9",
+      "name": "UnitedApp",
+      "organization": "Noders LLC",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/unitedapp-cc%3A%3A12203179cc5cae0452dbc233403a6a66f6d87988615d0e64defdd77abb133bdc40a9/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-11-27T17:57:14.38592Z"
+    },
+    {
+      "provider": "Bridge-Operator::1220c8448890a70e65f6906bd48d797ee6551f094e9e6a53e329fd5b2b549334f13f",
+      "name": "USDC Bridge App (Circle)",
+      "organization": "Digital Asset - Bridge Operator for USDC",
+      "description": "Asset issuer · Infra & Dev Tools · 25.00M CC",
+      "url": "https://ccview.io/party/Bridge-Operator%3A%3A1220c8448890a70e65f6906bd48d797ee6551f094e9e6a53e329fd5b2b549334f13f/",
+      "tags": [
+        "Infra & Dev Tools"
+      ],
+      "featuredSince": "2025-10-23T11:36:20.402224Z"
+    },
+    {
+      "provider": "M1-validator-1::12207b40944692e083593819697e1cd87a94026afca2564253d16ff8696b233a6637",
+      "name": "USDM1 Stablecoin",
+      "organization": "M1 Global",
+      "description": "Asset issuer · Payments · 25.00M CC · Featured",
+      "url": "https://ccview.io/party/M1-validator-1%3A%3A12207b40944692e083593819697e1cd87a94026afca2564253d16ff8696b233a6637/",
+      "tags": [
+        "Payments"
+      ],
+      "featuredSince": "2025-10-10T18:00:30.393739Z"
+    },
+    {
+      "provider": "ValaWallet-FA::122093ce879ca5d08db274937f9a2ec1eb7821d41ccfdce521d68a61ef3bf1b63463",
+      "name": "ValaWallet FA",
+      "url": "https://ccview.io/party/ValaWallet-FA%3A%3A122093ce879ca5d08db274937f9a2ec1eb7821d41ccfdce521d68a61ef3bf1b63463/",
+      "tags": [
+        "Featured App"
+      ],
+      "featuredSince": "2026-05-01T17:06:20.05521Z"
+    },
+    {
+      "provider": "8a72dd81-b8a4-425a-9061-31ed663d4450::1220d572036d26e3f8ef2fe127184d812a00e0b1b36e129acf990a82a06651e735a1",
+      "name": "Validity Registry",
+      "organization": "Validity.id Inc.",
+      "description": "App provider · 5.00M CC · 110.00K CC",
+      "url": "https://ccview.io/party/8a72dd81-b8a4-425a-9061-31ed663d4450%3A%3A1220d572036d26e3f8ef2fe127184d812a00e0b1b36e129acf990a82a06651e735a1/",
+      "tags": [
+        "5.00M CC"
+      ],
+      "featuredSince": "2026-01-30T23:00:16.593753Z"
+    },
+    {
+      "provider": "sunthycloud-mainnet-1::1220dc2c99151dbe0ca0ff322dbdcf0f511c181e9277799640287c37f26c7a993773",
+      "name": "VeriGift Fund",
+      "organization": "LILIZ",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/sunthycloud-mainnet-1%3A%3A1220dc2c99151dbe0ca0ff322dbdcf0f511c181e9277799640287c37f26c7a993773/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-01-09T22:59:12.677325Z"
+    },
+    {
+      "provider": "Hashrupt-Verity::1220a92bde4d13d685e03c797e3a33891b64bfa7d93d80f2a0744fc21c9976492321",
+      "name": "Verity",
+      "organization": "Hashrupt Limited",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/Hashrupt-Verity%3A%3A1220a92bde4d13d685e03c797e3a33891b64bfa7d93d80f2a0744fc21c9976492321/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-11-22T17:09:14.461478Z"
+    },
+    {
+      "provider": "walley::1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c",
+      "name": "Walley",
+      "organization": "K2F Labs",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/walley%3A%3A1220a0a64bd45fee105f5c80474842a4337bb09323ca748d7ea6dacc07fc6237572c/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2026-02-28T17:00:59.14339Z"
+    },
+    {
+      "provider": "auth0_007c691c4d28726455d23d1aa6dd::122046d30acaaa01b3a0aae069cbfb5983660360af866dd76b335570acacb2b31c3a",
+      "name": "xNS",
+      "organization": "Axymos Systems Limited",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/auth0_007c691c4d28726455d23d1aa6dd%3A%3A122046d30acaaa01b3a0aae069cbfb5983660360af866dd76b335570acacb2b31c3a/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-12-23T21:03:06.09418Z"
+    },
+    {
+      "provider": "openvector-mainnet-1::1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5",
+      "name": "Zoro Wallet",
+      "organization": "OpenVector",
+      "description": "App provider · Non-Issuer",
+      "url": "https://ccview.io/party/openvector-mainnet-1%3A%3A1220ab544a2d6cfd0b8c89af3e2b460f6999030ffb067e63dddd60ea265db3c7e3a5/",
+      "tags": [
+        "Non-Issuer"
+      ],
+      "featuredSince": "2025-11-22T15:46:12.05943Z"
+    }
+  ]
+}

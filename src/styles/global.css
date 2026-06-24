@@ -629,6 +629,55 @@ main.wrap {
   margin-top: 1rem;
 }
 
+.section-count {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.ecosystem-meta {
+  margin: -0.25rem 0 1.5rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.ecosystem-fa-cards {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.ecosystem-fa-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ecosystem-fa-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  background: var(--surface-2, #f4f6f8);
+}
+
+.ecosystem-fa-org {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.ecosystem-fa-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.ecosystem-link-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
 .section-head {
   display: flex;
   align-items: baseline;
