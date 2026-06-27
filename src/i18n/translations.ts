@@ -5,7 +5,7 @@ export const translations = {
     siteName: 'CC Privacy Club',
     /** Site-wide search hints (meta keywords); include Canton / Digital Asset / leadership for discoverability. */
     siteKeywords:
-      'Canton Network, Canton Network blockchain, Digital Asset, Digital Asset company, Digital Asset Holdings, Yuval Rooz, Yuval Rooz founder, Daml, DAML, Canton Coin, CC, institutional blockchain, Super Validator, CIP, CIP-0114, DAT, Hanwha, Hanwha Investment & Securities, Korea, WalletConnect, Bitwave, HTX, Upbit',
+      'Canton Network, Canton Network blockchain, Digital Asset, Digital Asset company, Digital Asset Holdings, Yuval Rooz, Yuval Rooz founder, Daml, DAML, Canton Coin, CC, institutional blockchain, Super Validator, CIP, CIP-0114, DAT, Hanwha, Hanwha Investment & Securities, Korea, WalletConnect, Bitwave, HTX, Upbit, Bithumb',
     nav: {
       home: 'Home',
       learn: 'Learn',
@@ -217,6 +217,48 @@ export const translations = {
       paginationNext: 'Next',
       titlePageSuffix: ' — page {page} of {total}',
       items: [
+        {
+          date: '2026-06-27',
+          tag: 'Protocol',
+          title: 'MainNet Protocol 35 LSU: Canton 3.4→3.5 Phase 3 upgrade window',
+          body: 'Canton Network Forum alert (June 18, 2026): MainNet Logical Synchronizer Upgrade to Protocol Version 35 runs June 26–27—topology freeze at 13:00 UTC June 26, upgrade completing just after 13:00 UTC June 27. Minimum validator Splice is 0.6.5; Splice 0.6.7 is required by June 30 ahead of traffic-based app rewards (MainNet live July 28). Phase 3 follows completed DevNet and TestNet LSUs; see SV calendar for authoritative timing.',
+          url: 'https://forum.canton.network/t/alert-mainnet-logical-synchronizer-upgrade-june-26-june-27/8800',
+        },
+        {
+          date: '2026-06-26',
+          tag: 'Institutional',
+          title: 'Russell 3000 and Russell 2000 inclusion effective for Canton Strategic (CNTN)',
+          body: 'Per PRNewswire (June 18, 2026) and FTSE Russell’s semi-annual reconstitution schedule, Canton Strategic Holdings (NASDAQ: CNTN) entered the Russell 3000 and Russell 2000 indices (and style sub-indices) after U.S. market close June 26, 2026, based on April 30, 2026 rank-day data—the effective date stated in the company’s preliminary-additions announcement.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html',
+        },
+        {
+          date: '2026-06-23',
+          tag: 'Exchange',
+          title: 'Bithumb lists CC/KRW on Canton Mainnet',
+          body: 'Bithumb (South Korea) added Canton Coin (CC) to its Korean won market June 23, 2026—Canton Mainnet only, CC/KRW reference price 234 KRW, with standard new-listing trading limits per the exchange notice. CantonNews archived the listing; rules and deposit confirmations are on Bithumb’s site. Follows CC access on Upbit and expands Korean retail liquidity.',
+          url: 'https://cantonnews.org/bithumb-lists-canton-coin-cc-on-korean-won-market',
+        },
+        {
+          date: '2026-06-23',
+          tag: 'Ecosystem',
+          title: 'Palladium Labs launches 10M CC Genesis Fund for Canton builders',
+          body: 'Palladium Labs announced the Genesis Fund (June 23, 2026): 10 million CC (~$1.5M at announcement) in non-dilutive grants for apps, infrastructure, tooling, integrations, and research on Canton—tiered up to 1M CC per project. Palladium is a Canton Foundation General Member and Alpend developer; applications at palladiumlabs.org/grant.',
+          url: 'https://palladiumlabs.org/grant',
+        },
+        {
+          date: '2026-06-22',
+          tag: 'Ecosystem',
+          title: 'Hecto Allocator crosses 17,000+ daily users on Canton',
+          body: 'Canton ecosystem pulse (June 22, 2026): Hecto Finance’s Allocator—native CC→HECTO minting and daily allocation around major private-company forecasts—reported 17,000+ daily users, 18,000+ HECTO holders, and 2.74M+ CC distributed. Highlighted as a breakout consumer app on Canton alongside institutional settlement workflows.',
+          url: 'https://cantonnews.org/wire/another-packed-week-for-canton-network-2026-06-22',
+        },
+        {
+          date: '2026-06-21',
+          tag: 'Governance',
+          title: 'T-RIZE locks 30M CC across two Featured Apps (CIP-0116)',
+          body: 'T-RIZE (@trize_io) locked 30 million CC across two Featured Apps on Canton in compliance with CIP-0116—25M CC for its Tokenization app (Asset Issuer) and 5M CC for Risk Analytics & Decentralized ML/FL (Non-Issuer). Public announcement archived by CantonNews; thresholds and 60-day vesting per the approved CIP-0116 spec.',
+          url: 'https://cantonnews.org/t-rize-locks-30m-cc-across-two-canton-featured-apps-under-cip-0116',
+        },
         {
           date: '2026-06-20',
           tag: 'Governance',
@@ -989,6 +1031,7 @@ export const translations = {
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT (see venue rules)' },
+        { name: 'Bithumb', pairs: 'CC/KRW (Canton Mainnet; see venue rules)' },
         { name: 'Crypto.com', pairs: 'Canton deposits / withdrawals (app; region rules)' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
@@ -1011,7 +1054,7 @@ export const translations = {
   zh: {
     siteName: 'CC Privacy Club',
     siteKeywords:
-      'Canton Network, Canton Network 区块链, Digital Asset, Digital Asset 公司, Digital Asset Holdings, Yuval Rooz, Yuval Rooz 创始人, Daml, DAML, Canton Coin, CC, 机构区块链, 超级验证者, CIP, CIP-0114, DAT, 韩华, 韩华投资证券, 韩国, WalletConnect, Bitwave, HTX, Upbit',
+      'Canton Network, Canton Network 区块链, Digital Asset, Digital Asset 公司, Digital Asset Holdings, Yuval Rooz, Yuval Rooz 创始人, Daml, DAML, Canton Coin, CC, 机构区块链, 超级验证者, CIP, CIP-0114, DAT, 韩华, 韩华投资证券, 韩国, WalletConnect, Bitwave, HTX, Upbit, Bithumb',
     nav: {
       home: '首页',
       learn: '学习路径',
@@ -1217,6 +1260,12 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-27', tag: '协议', title: 'MainNet Protocol 35 LSU：Canton 3.4→3.5 第三阶段升级窗口', body: 'Canton Network 论坛公告（2026-06-18）：MainNet Logical Synchronizer 升级至协议版本 35 于 6 月 26–27 日进行——6 月 26 日 13:00 UTC 起拓扑冻结，6 月 27 日 13:00 UTC 后完成升级。验证者最低 Splice 0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以配合流量型应用奖励（MainNet 7 月 28 日上线）。DevNet 与 TestNet LSU 已完成；权威时间见 SV 日历。', url: 'https://forum.canton.network/t/alert-mainnet-logical-synchronizer-upgrade-june-26-june-27/8800' },
+        { date: '2026-06-26', tag: '机构', title: 'Canton Strategic（CNTN）Russell 3000/2000 成分生效', body: '据 PRNewswire（2026-06-18）与 FTSE Russell 半年度重组日程，Canton Strategic Holdings（NASDAQ: CNTN）于 2026-06-26 美股收盘后正式进入 Russell 3000 与 Russell 2000 指数（及风格子指数），依据 2026-04-30 排名日数据——与公司初步新增名单公告中的生效日一致。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html' },
+        { date: '2026-06-23', tag: '交易所', title: 'Bithumb 上线 CC/KRW（Canton 主网）', body: '韩国 Bithumb 于 2026-06-23 将 Canton Coin（CC）加入韩元市场——仅支持 Canton 主网，CC/KRW 参考价 234 韩元，并按交易所规则对新币实施临时交易限制。CantonNews 归档了上架公告；存取与确认规则以 Bithumb 官网为准。继 Upbit 之后进一步扩展韩国零售流动性。', url: 'https://cantonnews.org/bithumb-lists-canton-coin-cc-on-korean-won-market' },
+        { date: '2026-06-23', tag: '生态', title: 'Palladium Labs 推出 1000 万 CC Genesis Fund 支持 Canton 建设者', body: 'Palladium Labs 宣布 Genesis Fund（2026-06-23）：1000 万 CC（公告时约 150 万美元）非稀释性 grant，支持 Canton 上的应用、基础设施、工具、集成与研究——单项目最高 100 万 CC。Palladium 为 Canton Foundation 普通成员及 Alpend 开发团队；申请见 palladiumlabs.org/grant。', url: 'https://palladiumlabs.org/grant' },
+        { date: '2026-06-22', tag: '生态', title: 'Hecto Allocator 日活突破 1.7 万（Canton 原生）', body: 'Canton 生态脉搏（2026-06-22）：Hecto Finance 的 Allocator——原生 CC→HECTO 铸造与围绕大型私营公司预测的每日分配——报告日活 1.7 万+、HECTO 持有者 1.8 万+、已分发 CC 274 万+。被视为 Canton 上机构结算之外的代表性消费级应用。', url: 'https://cantonnews.org/wire/another-packed-week-for-canton-network-2026-06-22' },
+        { date: '2026-06-21', tag: '治理', title: 'T-RIZE 在两个 Featured App 锁仓 3000 万 CC（CIP-0116）', body: 'T-RIZE（@trize_io）按 CIP-0116 在 Canton 两个 Featured App 锁仓 3000 万 CC——Tokenization 应用（Asset Issuer）2500 万 CC，Risk Analytics & Decentralized ML/FL（Non-Issuer）500 万 CC。CantonNews 归档公开公告；门槛与 60 天 vesting 见已通过 CIP-0116。', url: 'https://cantonnews.org/t-rize-locks-30m-cc-across-two-canton-featured-apps-under-cip-0116' },
         { date: '2026-06-20', tag: '治理', title: 'OneSwap 锁仓 500 万 CC 维持精选应用资格（CIP-0116）', body: 'OneSwap（@Oneswapcc）宣布按 CIP-0116 锁仓 500 万 CC 以维持 Featured App 资格——非发行方每个 PartyId 的门槛。CantonNews 线报归档了 2026-06-20 的公开帖；锁仓要求与 60 天线性解锁规则见已通过的 CIP-0116 正文。', url: 'https://cantonnews.org/wire/5000000-cc-locked-we-are-proud-2026-06-20' },
         { date: '2026-06-18', tag: '机构', title: 'Canton Strategic（NASDAQ: CNTN）预计纳入 Russell 3000 与 Russell 2000', body: 'PRNewswire（2026-06-18）：Canton Strategic Holdings 称 FTSE Russell 半年度重组初步名单将其列为新增成分——预计 2026-06-26 收盘后进入 Russell 3000 与 Russell 2000（及风格子指数），依据 2026-04-30 排名日数据。CEO Mark Wendland 强调 Canton 对齐战略；前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html' },
         { date: '2026-06-18', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——加密之都正在美国建成', body: 'Canton Network 官方博客摘要 Quadrillions 第 4 集（上）——CFTC 代理主席 Caroline Pham 与 Yuval Rooz 讨论机构 12 个月 Crypto Sprint、从「执法式监管」转向支持创新、代币化抵押品进入清算市场，以及 Canton 在抵押品流动与隐私结算中的角色。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-18。', url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world' },
@@ -1509,6 +1558,7 @@ export const translations = {
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT（以所内规则为准）' },
+        { name: 'Bithumb', pairs: 'CC/KRW（Canton 主网；以所内规则为准）' },
         { name: 'Crypto.com', pairs: 'Canton 存取（App，地区规则）' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
