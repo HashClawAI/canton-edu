@@ -218,6 +218,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-06-27',
+          tag: 'Protocol',
+          title: 'MainNet Logical Synchronizer Upgrade to Protocol 35 completed',
+          body: 'Per Canton 3.4→3.5 Phase 3 schedule (Canton Network Forum thread 8777; MainNet alert 8800): Global Synchronizer MainNet upgraded to Canton Protocol Version 35 on June 27 at 13:00 UTC after the June 26 topology freeze—Canton’s first production Logical Synchronizer Upgrade (LSU) under CIP-0117, enabling zero-downtime protocol migration. Validators required Splice ≥0.6.5 before freeze; Splice 0.6.7 is required by June 30 ahead of traffic-based app rewards (MainNet July 28). Phase 4 CantonBFT migration is tentatively scheduled from July 8 (DevNet).',
+          url: 'https://forum.canton.network/t/alert-mainnet-logical-synchronizer-upgrade-june-26-june-27/8800',
+        },
+        {
+          date: '2026-06-27',
+          tag: 'Institutional',
+          title: 'Russell US Indexes reconstitution effective; CNTN on final Russell 3000 additions',
+          body: 'FTSE Russell (LSEG) June 2026 semi-annual reconstitution took effect after U.S. equity market close June 26, 2026, with updated Russell 3000 membership reflected from the June 29 open. LSEG’s final Russell 3000 additions list includes Canton Strategic Holdings (NASDAQ: CNTN)—confirming the June 18 preliminary announcement. Reconstitution used April 30, 2026 rank-day data; Russell 3000 total market cap rose to ~$75.6T per LSEG summary.',
+          url: 'https://www.lseg.com/en/ftse-russell/russell-reconstitution',
+        },
+        {
+          date: '2026-06-23',
+          tag: 'Institutional',
+          title: 'Canton Strategic launches CC locking-as-a-service for SVs and Featured Apps',
+          body: 'PRNewswire (June 23, 2026): Canton Strategic Holdings (NASDAQ: CNTN) begins offering locking-as-a-service to help Super Validators and Featured App builders meet CC commitment rules under CIP-0105 (70% SV reward lock-up) and CIP-0116 (per-party Featured App locks). First piloted with Super Validators in April; CEO Mark Wendland framed capital-efficient locking as supporting long-term network incentives. Forward-looking statements and DA trademark disclaimers apply per release.',
+          url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-launch-of-locking-service-to-support-network-infrastructure-providers-302807710.html',
+        },
+        {
+          date: '2026-06-23',
+          tag: 'Ecosystem',
+          title: 'Moonsong Labs joins Canton ecosystem as Daml-certified service provider',
+          body: 'GlobeNewswire (June 23, 2026): Moonsong Labs listed as a Canton Network ecosystem Service Provider—covering Daml smart contracts, node setup, CIP-56/CIP-103 workflows, and Global Synchronizer integration for banks and asset managers. Canton Foundation Head Viv Diwakar quoted welcoming the partner; Moonsong also released a free Canton Readiness Guide PDF for institutions evaluating first deployments.',
+          url: 'https://www.globenewswire.com/news-release/2026/06/23/3316007/0/en/Moonsong-Labs-Joins-Canton-Ecosystem-as-a-Service-Provider-Launches-Institutional-Readiness-Guide.html',
+        },
+        {
           date: '2026-06-20',
           tag: 'Governance',
           title: 'OneSwap locks 5M CC for Featured App status (CIP-0116)',
@@ -1217,6 +1245,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-06-27', tag: '协议', title: 'MainNet Logical Synchronizer 升级至协议版本 35 已完成', body: '按 Canton 3.4→3.5 第三阶段日程（Canton Network 论坛帖 8777；MainNet 告警 8800）：全球同步器 MainNet 于 6 月 27 日 13:00 UTC 完成升级至 Canton 协议版本 35（6 月 26 日拓扑冻结后）——Canton 在 CIP-0117 下首次生产环境 Logical Synchronizer 升级（LSU），实现零停机协议迁移。冻结前验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以配合流量型应用奖励（MainNet 7 月 28 日上线）。第四阶段 CantonBFT 迁移暂定 7 月 8 日（DevNet）起。', url: 'https://forum.canton.network/t/alert-mainnet-logical-synchronizer-upgrade-june-26-june-27/8800' },
+        { date: '2026-06-27', tag: '机构', title: 'Russell 美国指数重组生效；CNTN 列入 Russell 3000 最终新增名单', body: 'FTSE Russell（LSEG）2026 年 6 月半年度重组于 2026-06-26 美股收盘后生效，Russell 3000 新成分自 6 月 29 日开盘起反映。LSEG 公布的 Russell 3000 最终新增名单包含 Canton Strategic Holdings（NASDAQ: CNTN）——确认 6 月 18 日初步公告。重组依据 2026-04-30 排名日数据；LSEG 摘要称 Russell 3000 总市值升至约 75.6 万亿美元。', url: 'https://www.lseg.com/en/ftse-russell/russell-reconstitution' },
+        { date: '2026-06-23', tag: '机构', title: 'Canton Strategic 推出 CC 锁仓即服务，服务 SV 与 Featured App', body: 'PRNewswire（2026-06-23）：Canton Strategic Holdings（NASDAQ: CNTN）开始提供 locking-as-a-service，帮助超级验证者与 Featured App 建设者满足 CIP-0105（SV 奖励 70% 锁仓）与 CIP-0116（Featured App 各方锁仓）下的 CC 承诺要求。4 月已与 SV 试点；CEO Mark Wendland 称资本高效锁仓有助于长期网络激励。前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-launch-of-locking-service-to-support-network-infrastructure-providers-302807710.html' },
+        { date: '2026-06-23', tag: '生态', title: 'Moonsong Labs 以 Daml 认证服务提供商身份加入 Canton 生态', body: 'GlobeNewswire（2026-06-23）：Moonsong Labs 列入 Canton Network 生态 Service Provider——为银行与资管机构提供 Daml 智能合约、节点部署、CIP-56/CIP-103 工作流与 Global Synchronizer 集成。Canton Foundation 负责人 Viv Diwakar 引述欢迎该伙伴；Moonsong 同步发布面向机构首次部署评估的免费 Canton Readiness Guide（PDF）。', url: 'https://www.globenewswire.com/news-release/2026/06/23/3316007/0/en/Moonsong-Labs-Joins-Canton-Ecosystem-as-a-Service-Provider-Launches-Institutional-Readiness-Guide.html' },
         { date: '2026-06-20', tag: '治理', title: 'OneSwap 锁仓 500 万 CC 维持精选应用资格（CIP-0116）', body: 'OneSwap（@Oneswapcc）宣布按 CIP-0116 锁仓 500 万 CC 以维持 Featured App 资格——非发行方每个 PartyId 的门槛。CantonNews 线报归档了 2026-06-20 的公开帖；锁仓要求与 60 天线性解锁规则见已通过的 CIP-0116 正文。', url: 'https://cantonnews.org/wire/5000000-cc-locked-we-are-proud-2026-06-20' },
         { date: '2026-06-18', tag: '机构', title: 'Canton Strategic（NASDAQ: CNTN）预计纳入 Russell 3000 与 Russell 2000', body: 'PRNewswire（2026-06-18）：Canton Strategic Holdings 称 FTSE Russell 半年度重组初步名单将其列为新增成分——预计 2026-06-26 收盘后进入 Russell 3000 与 Russell 2000（及风格子指数），依据 2026-04-30 排名日数据。CEO Mark Wendland 强调 Canton 对齐战略；前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-expected-to-be-included-in-russell-3000-and-russell-2000-302803818.html' },
         { date: '2026-06-18', tag: '媒体', title: 'Canton 官方博客：Quadrillions 纪要——加密之都正在美国建成', body: 'Canton Network 官方博客摘要 Quadrillions 第 4 集（上）——CFTC 代理主席 Caroline Pham 与 Yuval Rooz 讨论机构 12 个月 Crypto Sprint、从「执法式监管」转向支持创新、代币化抵押品进入清算市场，以及 Canton 在抵押品流动与隐私结算中的角色。Blockworks × Canton 迷你系列；完整节目见 quadrillionspod.com。博客日期 2026-06-18。', url: 'https://www.canton.network/blog/quadrillions-recap-crypto-capital-world' },
