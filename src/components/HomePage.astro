@@ -2,6 +2,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { t, type Locale } from '@/i18n/translations';
 import CoinPrice from '@/components/CoinPrice.astro';
+import GeoSummary from '@/components/GeoSummary.astro';
+import GeoFaq from '@/components/GeoFaq.astro';
 
 interface Props {
   locale: Locale;
@@ -14,7 +16,19 @@ const linkPrefix = locale === 'zh' ? `${base}zh/` : base;
 const latestNews = tr.news.items.slice(0, 3);
 ---
 
-<BaseLayout locale={locale} title={tr.home.title} description={tr.home.subtitle} navCurrent="home">
+<BaseLayout
+  locale={locale}
+  title={tr.home.title}
+  description={tr.home.subtitle}
+  navCurrent="home"
+  faqItems={tr.home.faqItems}
+>
+  <GeoSummary
+    title={tr.home.geoSummaryTitle}
+    bullets={tr.home.geoSummaryBullets}
+    oneLiner={tr.home.geoOneLiner}
+  />
+
   <section class="hero">
     <span class="hero-kicker">{tr.home.heroKicker}</span>
     <h1>{tr.home.title}</h1>
@@ -113,4 +127,6 @@ const latestNews = tr.news.items.slice(0, 3);
       </div>
     </section>
   </div>
+
+  <GeoFaq title={tr.home.faqTitle} items={tr.home.faqItems} />
 </BaseLayout>

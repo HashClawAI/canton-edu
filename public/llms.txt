@@ -1,0 +1,59 @@
+# CC Privacy Club · Canton Network Education
+
+> 非官方 Canton Network 中英文教育站 · https://ccprivacy.club · 维护：HashClaw 社区
+
+## 站点
+- 首页: https://ccprivacy.club/
+- English: https://ccprivacy.club/en/
+- Sitemap: https://ccprivacy.club/sitemap-index.xml
+- Robots: https://ccprivacy.club/robots.txt
+
+## 主要栏目
+
+- [首页（中文默认）](https://ccprivacy.club/) — Canton Network 社区教育站入口
+- [Home (English)](https://ccprivacy.club/en/) — Canton Network education hub
+- [Learning path (EN)](https://ccprivacy.club/learn) — Structured Canton learning steps
+- [学习路径（中文）](https://ccprivacy.club/zh/learn) — Canton 结构化学习路径
+- [Developer docs (EN)](https://ccprivacy.club/docs/canton) — Bilingual Canton docs mirror index
+- [开发者文档（中文）](https://ccprivacy.club/zh/docs/canton) — Canton 官方文档中文镜像索引
+- [Ecosystem (EN)](https://ccprivacy.club/ecosystem) — Featured Canton apps and projects
+- [生态（中文）](https://ccprivacy.club/zh/ecosystem) — Canton 生态项目精选
+- [CIPs (EN)](https://ccprivacy.club/cips) — Canton Improvement Proposals overview
+- [CIPs（中文）](https://ccprivacy.club/zh/cips) — Canton 改进提案概览
+- [News (EN)](https://ccprivacy.club/news) — Canton Network news and updates
+- [动态（中文）](https://ccprivacy.club/zh/news) — Canton 新闻与动态
+- [Research (EN)](https://ccprivacy.club/research) — Reports and research links
+- [研究报告（中文）](https://ccprivacy.club/zh/research) — Canton 研究报告与链接
+- [Community (EN)](https://ccprivacy.club/community) — Forums, Discord, governance
+- [社区（中文）](https://ccprivacy.club/zh/community) — 论坛、Discord 与治理
+- [Resources (EN)](https://ccprivacy.club/resources) — Whitepapers, explorers, exchanges
+- [资源（中文）](https://ccprivacy.club/zh/resources) — 白皮书、浏览器、交易所
+- [Videos (EN)](https://ccprivacy.club/videos) — Curated Canton video list
+- [视频（中文）](https://ccprivacy.club/zh/videos) — Canton 视频精选
+
+## 开发者文档精选（英文路径，站内提供中文版）
+
+- [Choose Your Path](https://ccprivacy.club/docs/canton/appdev-get-started-choose-your-path) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-get-started-choose-your-path
+- [Tokenomics](https://ccprivacy.club/docs/canton/appdev-deep-dives-tokenomics) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-deep-dives-tokenomics
+- [Mental Models for Canton](https://ccprivacy.club/docs/canton/appdev-modules-m1-mental-models) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-modules-m1-mental-models
+- [Module 1: Understanding Canton](https://ccprivacy.club/docs/canton/appdev-modules-m1-understanding-canton) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-modules-m1-understanding-canton
+- [Common Questions](https://ccprivacy.club/docs/canton/appdev-troubleshooting-guide-common-questions) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-troubleshooting-guide-common-questions
+- [App Rewards](https://ccprivacy.club/docs/canton/appdev-app-rewards) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-app-rewards
+- [Token Standard](https://ccprivacy.club/docs/canton/appdev-deep-dives-token-standard) — Documentation Index Fetch the complete documentation index at: https://docs.canton.network/llms.txt …
+  - 中文: https://ccprivacy.club/zh/docs/canton/appdev-deep-dives-token-standard
+
+## 官方参考
+- Canton Network: https://www.canton.network/
+- Official docs: https://docs.canton.network/
+- Official llms.txt: https://docs.canton.network/llms.txt
+
+## 维护
+- GitHub: https://github.com/HashClawAI/canton-edu
+
+Generated: 2026-06-29T11:43:01.401Z

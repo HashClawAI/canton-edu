@@ -1,0 +1,25 @@
+---
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  title: string;
+  items: readonly FaqItem[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<section class="geo-faq" aria-labelledby="geo-faq-heading">
+  <h2 id="geo-faq-heading">{title}</h2>
+  <dl class="geo-faq-list">
+    {items.map(({ q, a }) => (
+      <>
+        <dt>{q}</dt>
+        <dd>{a}</dd>
+      </>
+    ))}
+  </dl>
+</section>

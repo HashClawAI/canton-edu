@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  bullets: readonly string[];
+  oneLiner?: string;
+}
+
+const { title, bullets, oneLiner } = Astro.props;
+---
+
+<section class="geo-summary" aria-labelledby="geo-summary-heading">
+  <h2 id="geo-summary-heading">{title}</h2>
+  {oneLiner ? <p class="geo-one-liner">{oneLiner}</p> : null}
+  <ul>
+    {bullets.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+</section>

@@ -9,16 +9,58 @@ interface Props {
   title: string;
   description: string;
   navCurrent?: 'home' | 'learn' | 'docs' | 'ecosystem' | 'cips' | 'news' | 'videos' | 'research' | 'community' | 'resources';
+  faqItems?: readonly { q: string; a: string }[];
 }
 
-const { locale, title, description, navCurrent = 'home' } = Astro.props;
+const { locale, title, description, navCurrent = 'home', faqItems = [] } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
 const base = import.meta.env.BASE_URL;
+const siteOrigin = Astro.site?.href ?? Astro.url.origin;
+const canonicalPath = Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+const canonicalUrl = new URL(canonicalPath.endsWith('/') ? canonicalPath : `${canonicalPath}/`, siteOrigin).href;
 const homeHref = locale === 'zh' ? base : `${base}en/`;
 const sectionPrefix = locale === 'zh' ? `${base}zh/` : base;
 const ogImagePath = `${base}hashclaw-logo.png`;
-const ogImage = new URL(ogImagePath, Astro.site ?? Astro.url.origin);
+const ogImage = new URL(ogImagePath, siteOrigin);
+
+const jsonLdGraph: Record<string, unknown>[] = [
+  {
+    '@type': 'Organization',
+    '@id': `${siteOrigin}/#organization`,
+    name: tr.siteName,
+    url: siteOrigin,
+    logo: new URL(ogImagePath, siteOrigin).href,
+    description: tr.home.subtitle,
+    sameAs: ['https://github.com/HashClawAI/canton-edu', 'https://www.canton.network/'],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${siteOrigin}/#website`,
+    name: tr.siteName,
+    url: siteOrigin,
+    description: tr.home.subtitle,
+    inLanguage: ['zh-Hans', 'en'],
+    publisher: { '@id': `${siteOrigin}/#organization` },
+  },
+];
+
+if (faqItems.length > 0) {
+  jsonLdGraph.push({
+    '@type': 'FAQPage',
+    '@id': `${canonicalUrl}#faq`,
+    mainEntity: faqItems.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  });
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': jsonLdGraph,
+};
 
 const footerExplore = [
   { href: homeHref, label: tr.nav.home },
@@ -50,6 +92,8 @@ const footerExternal = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content={tr.siteKeywords} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
@@ -61,6 +105,7 @@ const footerExternal = [
     <link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32.png`} />
     <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
     <title>{siteTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class={`locale-${locale}`}>
     <div class="site-layer">
