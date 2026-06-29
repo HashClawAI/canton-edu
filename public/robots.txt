@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ccprivacy.club/sitemap-index.xml
+LLMs: https://ccprivacy.club/llms.txt

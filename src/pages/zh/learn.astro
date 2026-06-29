@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import GeoSummary from '@/components/GeoSummary.astro';
+import GeoFaq from '@/components/GeoFaq.astro';
 import { t } from '@/i18n/translations';
 
 const locale = 'zh';
@@ -7,9 +9,18 @@ const tr = t(locale);
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout locale={locale} title={tr.learn.title} description={tr.learn.intro} navCurrent="learn">
+<BaseLayout
+  locale={locale}
+  title={tr.learn.title}
+  description={tr.learn.intro}
+  navCurrent="learn"
+  faqItems={tr.learn.faqItems}
+>
   <h1 class="page-title">{tr.learn.title}</h1>
   <p class="page-intro">{tr.learn.intro}</p>
+
+  <GeoSummary title={tr.learn.geoSummaryTitle} bullets={tr.learn.geoSummaryBullets} />
+
   <ul class="steps learn-steps">
     <li><strong>{tr.learn.step1Title}</strong><span>{tr.learn.step1Body}</span></li>
     <li><strong>{tr.learn.step2Title}</strong><span>{tr.learn.step2Body}</span></li>
@@ -25,4 +36,6 @@ const base = import.meta.env.BASE_URL;
     <p>{tr.learn.docsCtaBody}</p>
     <a class="btn btn-primary" href={`${base}zh/docs/canton`}>{tr.learn.docsCtaLink}</a>
   </section>
+
+  <GeoFaq title={tr.learn.faqTitle} items={tr.learn.faqItems} />
 </BaseLayout>

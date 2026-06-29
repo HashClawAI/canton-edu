@@ -1716,3 +1716,59 @@ footer.site-footer {
   line-height: 1.6;
   color: rgba(226, 236, 248, 0.45);
 }
+
+/* GEO / AI-search friendly blocks */
+.geo-summary,
+.geo-faq {
+  margin: 2rem 0;
+  padding: 1.25rem 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.geo-summary h2,
+.geo-faq h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.15rem;
+  color: var(--heading);
+}
+
+.geo-one-liner {
+  margin: 0 0 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--heading);
+  font-weight: 500;
+}
+
+.geo-summary ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.geo-summary li + li {
+  margin-top: 0.45rem;
+}
+
+.geo-faq-list {
+  margin: 0;
+}
+
+.geo-faq-list dt {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.geo-faq-list dt:first-child {
+  margin-top: 0;
+}
+
+.geo-faq-list dd {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}

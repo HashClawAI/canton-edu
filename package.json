@@ -13,12 +13,14 @@
     "docs:audit-links": "node scripts/audit-canton-links.mjs",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run chart:build && npm run fa:fetch && astro build",
+    "build": "npm run chart:build && npm run fa:fetch && node scripts/generate-geo-files.mjs && astro build",
+    "geo:generate": "node scripts/generate-geo-files.mjs",
     "preview": "astro preview",
     "debug:pages-dns": "node scripts/debug-pages-dns.mjs",
     "news:rss-scan": "node scripts/news-rss-scan.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.2.0"
   }
 }

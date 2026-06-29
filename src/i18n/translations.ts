@@ -56,6 +56,38 @@ export const translations = {
       cardCommunityTitle: 'Active community',
       cardCommunityBody:
         '98,000+ Discord members, ongoing governance votes, and a Protocol Development Fund open to external builders.',
+      geoSummaryTitle: 'Key takeaways',
+      geoSummaryBullets: [
+        'Canton Network is a privacy-enabled institutional blockchain using DAML smart contracts and Canton Coin (CC).',
+        'CC Privacy Club is an unofficial bilingual education site — not sponsored by Canton Foundation or Digital Asset.',
+        'Use the learning path, mirrored developer docs, CIPs, ecosystem list, and news feed as structured entry points.',
+        'Always verify tokenomics, governance, and technical details against docs.canton.network.',
+      ],
+      geoOneLiner:
+        'Independent Canton Network education in English and Chinese: learning paths, docs mirrors, CIPs, ecosystem, and daily-refreshed news at ccprivacy.club.',
+      faqTitle: 'Frequently asked questions',
+      faqItems: [
+        {
+          q: 'What is CC Privacy Club?',
+          a: 'An open-source, community-maintained education site for Canton Network, DAML, and the institutional blockchain ecosystem. Live at ccprivacy.club.',
+        },
+        {
+          q: 'Is this an official Canton or Digital Asset website?',
+          a: 'No. This site is independent and unofficial. It aggregates educational material and links to primary sources; it is not reviewed or endorsed by Canton Foundation or Digital Asset.',
+        },
+        {
+          q: 'Where should I start learning Canton?',
+          a: 'Begin with the Learning path page, then open the developer docs knowledge base for source-linked notes and bilingual mirrors of docs.canton.network.',
+        },
+        {
+          q: 'What is Canton Coin (CC)?',
+          a: 'CC is Canton Network’s native token with a burn-and-mint equilibrium tied to network usage. See the Learning path and Resources pages for whitepaper links and market data sources.',
+        },
+        {
+          q: 'How often is the site updated?',
+          a: 'GitHub Actions rebuilds and deploys daily around 20:00 China Standard Time, refreshing charts, CIP hot topics, and news timestamps. Narrative pages update via community PRs or the canton-edu Cursor Skill.',
+        },
+      ],
       newsPreviewTitle: 'Latest updates',
       newsPreviewViewAll: 'View all news',
       contributeTitle: 'Help maintain this site',
@@ -99,6 +131,27 @@ export const translations = {
       docsCtaBody:
         'Use the bilingual Canton developer knowledge base for source-linked notes, RAG chunks, and a curated path into the official docs.',
       docsCtaLink: 'Open developer docs',
+      geoSummaryTitle: 'Learning path summary',
+      geoSummaryBullets: [
+        'Step 1–2: network fundamentals and Canton Coin (CC) tokenomics.',
+        'Step 3–4: privacy model and DAML smart contract basics.',
+        'Step 5–7: token standard, building on Canton, and CIP governance.',
+      ],
+      faqTitle: 'Learning FAQ',
+      faqItems: [
+        {
+          q: 'Do I need blockchain experience before Canton?',
+          a: 'Helpful but not required. The path starts with network concepts, then DAML and deployment. Ethereum developers may use the “Canton for Blockchain Developers” docs in the knowledge base.',
+        },
+        {
+          q: 'Where are the official developer docs?',
+          a: 'Primary source: docs.canton.network. This site mirrors selected pages in English and Chinese under Docs → Canton developer docs.',
+        },
+        {
+          q: 'What language are smart contracts written in?',
+          a: 'DAML — a domain-specific language for multi-party agreements. Templates, choices, parties, and signatories are core concepts covered in step 4.',
+        },
+      ],
     },
     docs: {
       title: 'Canton developer docs',
@@ -1123,6 +1176,38 @@ export const translations = {
       cardCIPBody: 'Canton 通过 Canton Improvement Proposals（CIPs）演进——涵盖代币经济、Super Validator 准入、技术标准与协议升级。',
       cardCommunityTitle: '活跃社区',
       cardCommunityBody: 'Discord 98,000+ 成员、持续的治理投票，以及对外部开发者开放的协议发展基金。',
+      geoSummaryTitle: '核心要点摘要',
+      geoSummaryBullets: [
+        'Canton Network 是面向机构金融的隐私增强型区块链，使用 DAML 智能合约与原生代币 Canton Coin（CC）。',
+        'CC Privacy Club（ccprivacy.club）是非官方双语教育站，不受 Canton Foundation 或 Digital Asset 赞助或背书。',
+        '建议从学习路径、开发者文档镜像、CIPs、生态与动态栏目进入，再对照 docs.canton.network 核对细节。',
+        '代币经济、治理与协议细节请以官方一手文档为准；本站内容按「现状」提供。',
+      ],
+      geoOneLiner:
+        '独立 Canton Network 中英文教育站：学习路径、文档镜像、CIP 概览、生态精选与每日构建更新的动态。',
+      faqTitle: '常见问题',
+      faqItems: [
+        {
+          q: 'CC Privacy Club 是什么？',
+          a: '面向 Canton Network、DAML 与机构级区块链生态的开源社区教育站，域名 ccprivacy.club，由 HashClaw 社区维护。',
+        },
+        {
+          q: '这是 Canton 或 Digital Asset 官网吗？',
+          a: '不是。本站为独立非官方教育资源，汇集与整理公开材料并链接一手来源，未经 Canton Foundation 或 Digital Asset 审查或背书。',
+        },
+        {
+          q: '新手从哪里开始学 Canton？',
+          a: '建议先看「学习路径」，再进入「文档」栏目阅读 docs.canton.network 的中英镜像与导读。',
+        },
+        {
+          q: 'Canton Coin（CC）是什么？',
+          a: 'CC 是 Canton Network 原生代币，采用与网络使用量挂钩的燃烧-铸造机制。详见学习路径第 2 步与「资源」页白皮书链接。',
+        },
+        {
+          q: '站点多久更新一次？',
+          a: 'GitHub Actions 每日约北京时间 20:00 触发完整构建与 Pages 部署，刷新走势图、CIP 热门话题与动态时间戳；正文栏目通过社区 PR 或 Cursor Skill 更新。',
+        },
+      ],
       newsPreviewTitle: '最新动态',
       newsPreviewViewAll: '查看全部动态',
       contributeTitle: '参与维护本站',
@@ -1165,6 +1250,27 @@ export const translations = {
       docsCtaBody:
         '使用双语 Canton 开发者知识库查看带来源的学习笔记、RAG 检索块，以及进入官方文档的精选路径。',
       docsCtaLink: '打开开发者文档',
+      geoSummaryTitle: '学习路径摘要',
+      geoSummaryBullets: [
+        '第 1–2 步：网络基础与 Canton Coin（CC）代币机制。',
+        '第 3–4 步：隐私模型与 DAML 智能合约入门。',
+        '第 5–7 步：代币标准、在 Canton 上构建应用与 CIP 治理。',
+      ],
+      faqTitle: '学习常见问题',
+      faqItems: [
+        {
+          q: '学 Canton 需要先有区块链经验吗？',
+          a: '有帮助但不是必须。路径从网络概念讲起，再进入 DAML 与部署。以太坊开发者可在文档库中查阅「Canton for Blockchain Developers」等专题。',
+        },
+        {
+          q: '官方开发者文档在哪里？',
+          a: '一手来源：docs.canton.network。本站「文档」栏目提供精选页面的中英镜像与摘要。',
+        },
+        {
+          q: '智能合约用什么语言写？',
+          a: 'DAML——面向多方协议的领域语言。模板（Template）、选择（Choice）、参与方（Party）与签名方（Signatory）是第 4 步的核心概念。',
+        },
+      ],
     },
     docs: {
       title: 'Canton 开发者文档',
