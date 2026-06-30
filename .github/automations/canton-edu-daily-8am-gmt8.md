@@ -1,4 +1,4 @@
-# Cursor Automation — canton-edu 每日内容更新（08:00 GMT+8）
+# Cursor Automation — canton-edu 每日内容更新（08:15 GMT+8）
 
 在 [cursor.com/automations](https://cursor.com/automations)（或 Cursor IDE → Agents → Automations）创建本任务。GitHub Actions **不能**代替 Cursor 改 `translations.ts`；本 Automation 是**主路径**。
 
@@ -8,8 +8,8 @@
 |------|-----|
 | **Name** | `canton-edu daily content → PR` |
 | **Trigger** | Schedule |
-| **Cron** | `0 8 * * *` |
-| **Timezone** | `Asia/Shanghai`（GMT+8，每天 **08:00**） |
+| **Cron** | `15 8 * * *` |
+| **Timezone** | `Asia/Shanghai`（GMT+8，每天 **08:15** — 在 [PR 合并 Automation](./canton-edu-daily-8am-pr-merge-gmt8.md) 之后） |
 | **Repository** | `HashClawAI/canton-edu`（单仓库，必须勾选以便 push 分支、开 PR） |
 | **Model** | 默认或 `composer-2.5`（需能完成多步 git + 网页检索） |
 
@@ -78,8 +78,8 @@ If `gh pr create` fails (e.g. integration permissions): still push branch, then 
 
 ## 人工审阅与上线
 
-1. 收到 PR 通知 → 看摘要与 diff，核对中英对齐与链接。
-2. **Approve** → **Squash merge** 到 `main`。
+1. **默认由 [PR 合并 Automation](./canton-edu-daily-8am-pr-merge-gmt8.md)（08:00）自动审查并 squash merge。**
+2. 若 Automation 跳过或失败 → 人工打开 PR → 看 diff → **Merge** 到 `main`。
 3. `deploy.yml` 自动部署 GitHub Pages：https://ccprivacy.club/
 
 若积压多条 Automation Draft PR，**不要逐条合并**——应像 [#41](https://github.com/HashClawAI/canton-edu/pull/41) 一样合并为一条去重 PR，并关闭其余。
@@ -88,7 +88,8 @@ If `gh pr create` fails (e.g. integration permissions): still push branch, then 
 
 | 机制 | Cron (UTC) | 约北京时间 | 作用 |
 |------|------------|------------|------|
-| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | 扫描 → 改 `translations.ts` → **开 PR**（无增量则跳过） |
+| **Cursor Automation — PR merge** | `0 8 * * *` Asia/Shanghai | **08:00** | 审查并 **merge** open PR |
+| **Cursor Automation — content** | `15 8 * * *` Asia/Shanghai | **08:15** | 全站扫描 → 有增量才开 PR |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | 定时全量重建；合并到 `main` 也会触发 |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue（辅助） |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | Automation 失败时的备用提醒 |
@@ -99,5 +100,5 @@ If `gh pr create` fails (e.g. integration permissions): still push branch, then 
 |------|------|
 | **PR 未创建** | 检查 Automation 是否绑定仓库 write 权限；或本次无增量（正常跳过） |
 | **连续多条重复 PR** | 在 cursor.com 更新 Prompt 为本文件最新版；合并/关闭未合 open PR |
-| **Self-approval 无法合并** | 需 DrJingLee Approve |
+| **Self-approval 无法合并** | ruleset Required approvals 应已为 0；仍失败时用 `gh pr merge --admin` 或查 Bypass |
 | **无更新** | 正常；Automation 应输出 `No changes` 而非空 PR |
