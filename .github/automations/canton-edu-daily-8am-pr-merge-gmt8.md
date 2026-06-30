@@ -1,6 +1,8 @@
 # Cursor Automation — canton-edu 每日 PR 审查合并（08:00 GMT+8）
 
-在 [cursor.com/automations](https://cursor.com/automations) 创建本任务，与 [内容扫描 Automation](./canton-edu-daily-8am-gmt8.md) **分开**配置。
+> **推荐：** 多数情况用 [canton-edu-daily-8am-gmt8.md](./canton-edu-daily-8am-gmt8.md) **一条 Automation**（Phase 0 合并 + Phase 1 扫描 + Phase 2 同轮 merge）。本文件仅在你想**拆分**「只 merge」与「只扫描」时使用。
+
+在 [cursor.com/automations](https://cursor.com/automations) 创建本任务，与内容扫描 **分开**配置。
 
 ## 创建步骤（一次性）
 
