@@ -236,7 +236,7 @@ export const translations = {
         { id: 'CIP-0089', title: 'Migration to Canton 3.4', type: 'Standards', status: 'Approved', summary: 'Synchronizer migration with downtime to Splice 0.5.0 / Canton 3.4.' },
         { id: 'CIP-0103', title: 'dApp Standard', type: 'Standards', status: 'Approved', summary: 'Standard for building decentralized applications on Canton.' },
         { id: 'CIP-0105', title: 'SV Locking Framework', type: 'Tokenomics', status: 'Approved', summary: 'Voluntary locking of SV rewards with 365-day vesting, increasing governance weight.' },
-        { id: 'CIP-0107', title: '24h Submission Delay', type: 'Standards', status: 'Approved', summary: '24-hour delay for end-user CC transactions for safety.' },
+        { id: 'CIP-0107', title: '24h Submission Delay', type: 'Standards', status: 'Final', summary: '24-hour submission delay between prepare and execute for all CC end-user token-standard operations via ExternalPartyConfigState (final 2026-06-30; approved 2026-03-10).' },
         { id: 'CIP-0112', title: 'Token Standard V2', type: 'Standards', status: 'Approved', summary: 'Canton Network Token Standard V2—privacy, performance, and traditional-accounting improvements for TradFi/DeFi interoperability; backward-compatible evolution of CIP-0056 (approved 2026-06-12).' },
         { id: 'CIP-0119', title: 'Free Transfer-Preapproval Base Duration', type: 'Tokenomics', status: 'Approved', summary: 'Introduces a 90-day free base duration for transfer preapprovals—creation or renewal within that window costs only traffic (including free base traffic), easing exchange onboarding after CIP-0096 removed validator liveness rewards (approved 2026-06-15).' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury (DAT) SV Program', type: 'Tokenomics', status: 'Approved', summary: 'Time-bound SV program for purpose-built public treasury companies that hold CC long-term; quarterly reviews, high AUM bar, weight up to 20 with staged release (approved 2026-04-16).' },
@@ -271,11 +271,25 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-01',
+          tag: 'Institutional',
+          title: 'DTCC DTC tokenization service enters limited production trades (July 2026)',
+          body: 'DTCC press release (May 4, 2026): the Depository Trust & Clearing Corporation plans initial, limited production trades of real-world assets tokenized via DTC’s tokenization service in July 2026, with a broader commercial launch targeted for October 2026. The service covers DTC-custodied assets with the same entitlements and investor protections as traditional form; 50+ firms in the DTCC Industry Working Group span custodians, asset managers, brokers, and venues—including Digital Asset (Canton Network). DTCC’s separate December 2025 partnership with Digital Asset targets tokenized U.S. Treasuries on Canton; July/October dates apply to the broader DTC tokenization service rollout.',
+          url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service',
+        },
+        {
           date: '2026-06-30',
           tag: 'Protocol',
           title: 'Splice 0.6.7 mandatory for MainNet validators; Daml models take effect',
           body: 'Per Canton 3.4→3.5 Phase 3 schedule (Canton Network Forum thread 8777) and official Splice 0.6.7 release notes: all MainNet validator nodes must upgrade to Splice ≥0.6.7 before June 30, 2026—when updated Daml models (including traffic-based app rewards prep per CIP-0104 RewardCouponV2) take effect. Operators below 0.6.7 risk CC transfers and reward collection failing for parties on their node until upgraded. App devs with static splice-amulet dependencies must recompile against the new package versions listed in the release notes. MainNet traffic-reward dry-run begins July 7; live rewards July 28 (tentative Splice 0.6.9).',
           url: 'https://docs.canton.network/global-synchronizer/release-notes/splice',
+        },
+        {
+          date: '2026-06-30',
+          tag: 'Ecosystem',
+          title: 'TermPrime goes live as first fixed-rate, fixed-term financing venue on Canton',
+          body: 'PRNewswire (June 30, 2026): Term Structure Labs launched TermPrime—the first permissioned fixed-rate, fixed-term borrowing/lending venue on Canton for KYB’d institutions trading with whitelisted counterparties under existing credit lines. An early test settled a 7-day CBTC-collateral / CC-borrow position with atomic Canton synchronizer settlement, private notional data, and OTC-style lifecycle controls (margin, liquidation, early repayment). Markets may expand to USDCx and tokenized RWAs; signup at app.termprime.finance.',
+          url: 'https://www.prnewswire.com/news-releases/confidential-fixed-rate-term-financing-for-institutions-termprime-goes-live-on-canton-network-302814489.html',
         },
         {
           date: '2026-06-27',
@@ -1374,7 +1388,7 @@ export const translations = {
         { id: 'CIP-0089', title: '迁移至 Canton 3.4', type: '标准', status: '已通过', summary: '带停机的同步器迁移至 Splice 0.5.0 / Canton 3.4。' },
         { id: 'CIP-0103', title: 'dApp 标准', type: '标准', status: '已通过', summary: '在 Canton 上构建去中心化应用的标准。' },
         { id: 'CIP-0105', title: 'SV 锁仓框架', type: '代币经济', status: '已通过', summary: '超级验证者自愿锁定奖励，365 天线性释放，增加治理权重。' },
-        { id: 'CIP-0107', title: '24 小时提交延迟', type: '标准', status: '已通过', summary: '终端用户 CC 交易的 24 小时安全延迟。' },
+        { id: 'CIP-0107', title: '24 小时提交延迟', type: '标准', status: '最终', summary: '所有 CC 终端用户代币标准操作在 prepare 与 execute 之间引入 24 小时提交延迟，通过 ExternalPartyConfigState 实现（2026-06-30 最终版；2026-03-10 批准）。' },
         { id: 'CIP-0112', title: '代币标准 V2', type: '标准', status: '已通过', summary: 'Canton Network 代币标准 V2——面向隐私、性能与传统会计的改进，提升 TradFi/DeFi 互操作；与 CIP-0056 向后兼容演进（2026-06-12 批准）。' },
         { id: 'CIP-0119', title: '转账预批准免费基础时长', type: '代币经济', status: '已通过', summary: '引入 90 天免费基础时长——在此窗口内创建或续期 transfer preapproval 仅需支付流量费（含免费基础流量），缓解 CIP-0096 取消验证者活跃奖励后交易所 onboarding 的冷启动问题（2026-06-15 批准）。' },
         { id: 'CIP-0114', title: 'Digital Asset Treasury（DAT）SV 计划', type: '代币经济', status: '已通过', summary: '面向以长期持有 CC 为主业的上市「数字资产财库」公司的限时 SV 路径；按持仓与季度审核计权重，设上限与分阶段释放（2026-04-16 批准）。' },
@@ -1408,7 +1422,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-01', tag: '机构', title: 'DTCC DTC 代币化服务进入有限生产交易阶段（2026 年 7 月）', body: 'DTCC 新闻稿（2026-05-04）：美国存管信托与清算公司（DTCC）计划于 2026 年 7 月启动通过 DTC 代币化服务代币化的真实资产初始有限生产交易，更广泛商业上线目标为 2026 年 10 月。服务覆盖 DTC 托管资产并保持与传统形式相同的权益与投资者保护；50+ 家 DTCC 行业工作组成员涵盖托管、资管、经纪与交易场所——含 Digital Asset（Canton Network）。DTCC 2025 年 12 月与 Digital Asset 的独立合作针对 Canton 上代币化美国国债；7 月/10 月时间表适用于更广泛的 DTC 代币化服务 rollout。', url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service' },
         { date: '2026-06-30', tag: '协议', title: 'MainNet 验证者须升级 Splice 0.6.7；Daml 模型今日生效', body: '按 Canton 3.4→3.5 第三阶段日程（Canton Network 论坛帖 8777）及官方 Splice 0.6.7 发布说明：所有 MainNet 验证者节点须在 2026-06-30 前升级至 Splice ≥0.6.7——当日更新后的 Daml 模型（含 CIP-0104 流量型应用奖励预备的 RewardCouponV2）生效。低于 0.6.7 的节点可能导致其托管参与方的 CC 转账与奖励领取中断直至完成升级。静态依赖 splice-amulet 的应用开发者须按发布说明重新编译至新版本包。MainNet 流量奖励 dry-run 7 月 7 日开始；7 月 28 日正式上线（暂定需 Splice 0.6.9）。', url: 'https://docs.canton.network/global-synchronizer/release-notes/splice' },
+        { date: '2026-06-30', tag: '生态', title: 'TermPrime 上线，成为 Canton 首个固定利率、固定期限融资场所', body: 'PRNewswire（2026-06-30）：Term Structure Labs 推出 TermPrime——Canton 上首个面向 KYB 机构、与白名单对手方在既有授信额度下交易的许可型固定利率/固定期限借贷场所。早期测试以 CBTC 抵押、借入 CC 完成 7 日期限结算，具备 Canton 同步器原子结算、名义金额隐私及 OTC 式生命周期控制（保证金、清算、提前还款）。市场或扩展至 USDCx 与代币化 RWA；注册见 app.termprime.finance。', url: 'https://www.prnewswire.com/news-releases/confidential-fixed-rate-term-financing-for-institutions-termprime-goes-live-on-canton-network-302814489.html' },
         { date: '2026-06-27', tag: '协议', title: 'MainNet Logical Synchronizer 升级至协议版本 35 已完成', body: '按 Canton 3.4→3.5 第三阶段日程（Canton Network 论坛帖 8777；MainNet 告警 8800）：全球同步器 MainNet 于 6 月 27 日 13:00 UTC 完成升级至 Canton 协议版本 35（6 月 26 日拓扑冻结后）——Canton 在 CIP-0117 下首次生产环境 Logical Synchronizer 升级（LSU），实现零停机协议迁移。冻结前验证者需 Splice ≥0.6.5；6 月 30 日前须升级至 Splice 0.6.7 以配合流量型应用奖励（MainNet 7 月 28 日上线）。第四阶段 CantonBFT 迁移暂定 7 月 8 日（DevNet）起。', url: 'https://forum.canton.network/t/alert-mainnet-logical-synchronizer-upgrade-june-26-june-27/8800' },
         { date: '2026-06-27', tag: '机构', title: 'Russell 美国指数重组生效；CNTN 列入 Russell 3000 最终新增名单', body: 'FTSE Russell（LSEG）2026 年 6 月半年度重组于 2026-06-26 美股收盘后生效，Russell 3000 新成分自 6 月 29 日开盘起反映。LSEG 公布的 Russell 3000 最终新增名单包含 Canton Strategic Holdings（NASDAQ: CNTN）——确认 6 月 18 日初步公告。重组依据 2026-04-30 排名日数据；LSEG 摘要称 Russell 3000 总市值升至约 75.6 万亿美元。', url: 'https://www.lseg.com/en/ftse-russell/russell-reconstitution' },
         { date: '2026-06-26', tag: '媒体', title: 'IX Asia Indexes 将 CC 纳入 DAICS 前 50 排名第 17；获 Green Coin 标签', body: 'IX Asia Indexes DAICS 2026 上半年审查（Media OutReach，2026-06-26）：Canton Coin（CC）进入数字资产前 50 覆盖名单，排名第 17（截至 5 月 31 日过去 90 日平均市值）——为七项新增之一，替代 Ethena、Aptos、Worldcoin、Polygon、Story 与 Arbitrum。CC 归类为 Cryptocurrency → Infrastructure，并因单位交易能耗较低获 Green Coin 标签（七项之一）。DAICS 覆盖 97.45% 市值；指数变更于 2026-07-24 在 ix-index.com 生效。', url: 'https://hong-kong.media-outreach.com/news/hong-kong/2026/06/26/472873/results-of-the-ix-digital-asset-industry-classification-system-daics-1h-2026-review/' },
