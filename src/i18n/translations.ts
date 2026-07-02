@@ -273,6 +273,20 @@ export const translations = {
         {
           date: '2026-07-01',
           tag: 'Institutional',
+          title: 'Tradeweb executes first real-time tokenized U.S. Treasury trade against USDCx on Canton',
+          body: 'Canton Network press release / Tradeweb (July 1, 2026): Tradeweb completed the first real-time buy-sell of an on-chain U.S. Treasury security against tokenized cash (USDCx) on its platform—with synchronized Canton settlement between the Treasury leg and cash, without traditional market cutoffs or off-ledger cash. Franklin Templeton transferred a tokenized U.S. Treasury to Virtu Financial in exchange for USDCx; participants included Blockdaemon, Digital Asset, Societe Generale, Tradeweb, and Virtu Financial. Digital Asset CBO Kelly Mathieson cited progress toward always-on collateral and capital-markets infrastructure ahead of DTCC Tokenization Services.',
+          url: 'https://www.canton.network/canton-network-press-releases/tradeweb-on-chain-us-treasuries-canton',
+        },
+        {
+          date: '2026-07-01',
+          tag: 'Institutional',
+          title: 'Axiology goes live as Canton Network validator, bridging EU regulated DLT to Canton',
+          body: 'Finextra press release (July 1, 2026): Axiology—EU DLT Pilot Regime–licensed capital-markets infrastructure built on permissioned XRP Ledger code—is now a live validator on Canton. Institutions on Canton can interact with Axiology’s regulated issuance, custody, and settlement venue without bespoke integrations; Axiology continues operating its core platform on its private ledger while exposing Canton as an additional settlement rail. CEO Marius Jurgilas cited connecting with major European institutions; CTO Andrius Košuba noted dual-rail interoperability for regulated finance.',
+          url: 'https://www.finextra.com/pressarticle/110281/axiology-goes-live-on-blockchain-canton',
+        },
+        {
+          date: '2026-07-01',
+          tag: 'Institutional',
           title: 'DTCC DTC tokenization service enters limited production trades (July 2026)',
           body: 'DTCC press release (May 4, 2026): the Depository Trust & Clearing Corporation plans initial, limited production trades of real-world assets tokenized via DTC’s tokenization service in July 2026, with a broader commercial launch targeted for October 2026. The service covers DTC-custodied assets with the same entitlements and investor protections as traditional form; 50+ firms in the DTCC Industry Working Group span custodians, asset managers, brokers, and venues—including Digital Asset (Canton Network). DTCC’s separate December 2025 partnership with Digital Asset targets tokenized U.S. Treasuries on Canton; July/October dates apply to the broader DTC tokenization service rollout.',
           url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service',
@@ -1422,6 +1436,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-01', tag: '机构', title: 'Tradeweb 在 Canton 完成首个实时代币化美国国债兑 USDCx 交易', body: 'Canton Network 新闻稿 / Tradeweb（2026-07-01）：Tradeweb 在其平台完成首个实时买卖链上美国国债兑代币化现金（USDCx）——国债腿与现金腿经 Canton 同步原子结算，无需传统市场截止或链下现金。Franklin Templeton 向 Virtu Financial 转移代币化美国国债换取 USDCx；参与方含 Blockdaemon、Digital Asset、Societe Generale、Tradeweb 与 Virtu Financial。Digital Asset 首席商务官 Kelly Mathieson 称此举推进全天候抵押品与资本市场基础设施，为 DTCC 代币化服务铺路。', url: 'https://www.canton.network/canton-network-press-releases/tradeweb-on-chain-us-treasuries-canton' },
+        { date: '2026-07-01', tag: '机构', title: 'Axiology 上线为 Canton Network 验证者，联通欧盟受监管 DLT 与 Canton', body: 'Finextra 新闻稿（2026-07-01）：Axiology——在许可型 XRP Ledger 代码上构建、获欧盟 DLT Pilot Regime 授权的资本市场基础设施——现已成为 Canton 上的 live validator。Canton 上的机构可对接 Axiology 受监管的发行、托管与结算场所而无需定制集成；Axiology 继续在私有账本运营核心平台，同时将 Canton 作为额外结算通道。CEO Marius Jurgilas 称有助于连接欧洲主要机构；CTO Andrius Košuba 强调受监管金融中的双轨互联。', url: 'https://www.finextra.com/pressarticle/110281/axiology-goes-live-on-blockchain-canton' },
         { date: '2026-07-01', tag: '机构', title: 'DTCC DTC 代币化服务进入有限生产交易阶段（2026 年 7 月）', body: 'DTCC 新闻稿（2026-05-04）：美国存管信托与清算公司（DTCC）计划于 2026 年 7 月启动通过 DTC 代币化服务代币化的真实资产初始有限生产交易，更广泛商业上线目标为 2026 年 10 月。服务覆盖 DTC 托管资产并保持与传统形式相同的权益与投资者保护；50+ 家 DTCC 行业工作组成员涵盖托管、资管、经纪与交易场所——含 Digital Asset（Canton Network）。DTCC 2025 年 12 月与 Digital Asset 的独立合作针对 Canton 上代币化美国国债；7 月/10 月时间表适用于更广泛的 DTC 代币化服务 rollout。', url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service' },
         { date: '2026-06-30', tag: '协议', title: 'MainNet 验证者须升级 Splice 0.6.7；Daml 模型今日生效', body: '按 Canton 3.4→3.5 第三阶段日程（Canton Network 论坛帖 8777）及官方 Splice 0.6.7 发布说明：所有 MainNet 验证者节点须在 2026-06-30 前升级至 Splice ≥0.6.7——当日更新后的 Daml 模型（含 CIP-0104 流量型应用奖励预备的 RewardCouponV2）生效。低于 0.6.7 的节点可能导致其托管参与方的 CC 转账与奖励领取中断直至完成升级。静态依赖 splice-amulet 的应用开发者须按发布说明重新编译至新版本包。MainNet 流量奖励 dry-run 7 月 7 日开始；7 月 28 日正式上线（暂定需 Splice 0.6.9）。', url: 'https://docs.canton.network/global-synchronizer/release-notes/splice' },
         { date: '2026-06-30', tag: '生态', title: 'TermPrime 上线，成为 Canton 首个固定利率、固定期限融资场所', body: 'PRNewswire（2026-06-30）：Term Structure Labs 推出 TermPrime——Canton 上首个面向 KYB 机构、与白名单对手方在既有授信额度下交易的许可型固定利率/固定期限借贷场所。早期测试以 CBTC 抵押、借入 CC 完成 7 日期限结算，具备 Canton 同步器原子结算、名义金额隐私及 OTC 式生命周期控制（保证金、清算、提前还款）。市场或扩展至 USDCx 与代币化 RWA；注册见 app.termprime.finance。', url: 'https://www.prnewswire.com/news-releases/confidential-fixed-rate-term-financing-for-institutions-termprime-goes-live-on-canton-network-302814489.html' },
