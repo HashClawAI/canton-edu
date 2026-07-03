@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-02',
+          tag: 'Community',
+          title: 'Canton Foundation named platinum sponsor of WebX2026 in Tokyo',
+          body: 'CantonNews (July 2, 2026): the Canton Foundation will sponsor WebX2026—Asia’s largest Web3 conference—at platinum level on July 13–14 at The Prince Park Tower Tokyo. The event brings together institutions, projects, investors, government officials, and media; Head of APAC Operations Thomas Chou cited ensuring Canton remains a reliable platform for institutional blockchain applications. WebX is organized annually by CoinPost since 2023.',
+          url: 'https://cantonnews.org/canton-foundation-to-sponsor-webx2026-in-tokyo-as-platinum-partner',
+        },
+        {
+          date: '2026-07-02',
+          tag: 'Ecosystem',
+          title: 'Temple Digital Group profile: $250M volume, Lightspeed engine, and Kaiko data feed',
+          body: 'CantonNews ecosystem profile (July 2, 2026): Temple—Canton’s native exchange for CC, USDCx, and CBTC—reported $250M cumulative volume and 15M+ transactions by July 1, ranking first among 109 Featured Apps (34% of Featured App burn in the snapshot). Lightspeed (April 2026) delivers sub-second matching at 100K+ orders/sec; Virtual Orderbooks let banks and issuers configure private markets. Kaiko added Temple to institutional data feeds (May 2026); Chainlink Data Streams integrated for pricing; HIFI partnership enables bank-account funding.',
+          url: 'https://cantonnews.org/temple-the-trading-engine-at-the-heart-of-canton',
+        },
+        {
+          date: '2026-07-02',
+          tag: 'Ecosystem',
+          title: 'Nexode prediction market goes live on Canton with USDCx trader rewards',
+          body: 'CantonNews (July 2, 2026): Nexode—an on-chain prediction market for real-world event outcomes with private positions and Canton settlement—launched on MainNet with USDCx incentives. New users earn a one-time $5 USDCx welcome reward after five trades (one per wallet, next daily payout). A weekly leaderboard splits $100 USDCx among the top five traders by notional volume (40/25/15/12/8%); wash and self-trades excluded; rewards distributed Mondays 00:00 UTC.',
+          url: 'https://cantonnews.org/nexode-launches-on-canton-with-usdcx-trader-rewards',
+        },
+        {
+          date: '2026-07-02',
+          tag: 'Ecosystem',
+          title: 'Walley wallet adds USDCx bridge and in-app token swaps',
+          body: 'CantonNews (July 2, 2026): Walley—the K2F Labs self-custody Canton wallet—now integrates the USDCx Bridge and supported token swaps in one interface, so users can bridge assets into Canton and swap without leaving the app. Walley supports passkey registration, existing passkeys, and recovery-phrase imports; K2F Labs says further ecosystem integrations are planned. Supported swap pairs, fees, and limits were not specified in the announcement.',
+          url: 'https://cantonnews.org/walley-adds-usdcx-bridge-and-in-app-swaps-for-canton-users',
+        },
+        {
           date: '2026-07-01',
           tag: 'Institutional',
           title: 'Tradeweb executes first real-time tokenized U.S. Treasury trade against USDCx on Canton',
@@ -1436,6 +1464,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-02', tag: '社区', title: 'Canton Foundation 成为 WebX2026 东京大会白金赞助商', body: 'CantonNews（2026-07-02）：Canton Foundation 将以白金赞助商身份参与 WebX2026——亚洲最大 Web3 大会——于 7 月 13–14 日在东京 The Prince Park Tower 举行。活动汇聚机构、项目、投资者、政府官员与媒体；亚太运营负责人 Thomas Chou 强调确保 Canton 作为可靠机构级区块链应用平台。WebX 自 2023 年起由 CoinPost 每年举办。', url: 'https://cantonnews.org/canton-foundation-to-sponsor-webx2026-in-tokyo-as-platinum-partner' },
+        { date: '2026-07-02', tag: '生态', title: 'Temple Digital Group 生态综述：2.5 亿美元成交量、Lightspeed 引擎与 Kaiko 数据', body: 'CantonNews 生态专题（2026-07-02）：Temple——Canton 原生 CC、USDCx 与 CBTC 交易所——截至 7 月 1 日累计成交量 2.5 亿美元、交易 1500 万+ 笔，在 109 个精选应用中排名第一（快照中占精选应用 burn 的 34%）。Lightspeed（2026 年 4 月）实现亚秒级撮合、每秒 10 万+ 订单；Virtual Orderbooks 允许银行与发行方配置私有市场。Kaiko 于 2026 年 5 月将 Temple 纳入机构数据 feed；Chainlink Data Streams 集成定价；HIFI 合作支持银行账户出入金。', url: 'https://cantonnews.org/temple-the-trading-engine-at-the-heart-of-canton' },
+        { date: '2026-07-02', tag: '生态', title: 'Nexode 预测市场上线 Canton，推出 USDCx 交易者奖励', body: 'CantonNews（2026-07-02）：Nexode——链上预测市场，支持真实世界事件结果、私有持仓与 Canton 结算——已在 MainNet 上线并附带 USDCx 激励。新用户完成五笔交易后可获一次性 5 USDCx 欢迎奖励（每钱包一次，下一日 payout 发放）。每周排行榜按名义成交量分配 100 USDCx 给前五名（40/25/15/12/8%）；自成交与刷量不计入；奖励于每周一 00:00 UTC 发放。', url: 'https://cantonnews.org/nexode-launches-on-canton-with-usdcx-trader-rewards' },
+        { date: '2026-07-02', tag: '生态', title: 'Walley 钱包新增 USDCx 桥接与应用内代币兑换', body: 'CantonNews（2026-07-02）：Walley——K2F Labs 自托管 Canton 钱包——现于同一界面集成 USDCx Bridge 与支持代币 swap，用户无需离开应用即可桥接资产入 Canton 并完成兑换。Walley 支持 passkey 注册、已有 passkey 与助记词导入；K2F Labs 称将进一步对接生态伙伴。公告未列明完整 swap 交易对、费用与限额。', url: 'https://cantonnews.org/walley-adds-usdcx-bridge-and-in-app-swaps-for-canton-users' },
         { date: '2026-07-01', tag: '机构', title: 'Tradeweb 在 Canton 完成首个实时代币化美国国债兑 USDCx 交易', body: 'Canton Network 新闻稿 / Tradeweb（2026-07-01）：Tradeweb 在其平台完成首个实时买卖链上美国国债兑代币化现金（USDCx）——国债腿与现金腿经 Canton 同步原子结算，无需传统市场截止或链下现金。Franklin Templeton 向 Virtu Financial 转移代币化美国国债换取 USDCx；参与方含 Blockdaemon、Digital Asset、Societe Generale、Tradeweb 与 Virtu Financial。Digital Asset 首席商务官 Kelly Mathieson 称此举推进全天候抵押品与资本市场基础设施，为 DTCC 代币化服务铺路。', url: 'https://www.canton.network/canton-network-press-releases/tradeweb-on-chain-us-treasuries-canton' },
         { date: '2026-07-01', tag: '机构', title: 'Axiology 上线为 Canton Network 验证者，联通欧盟受监管 DLT 与 Canton', body: 'Finextra 新闻稿（2026-07-01）：Axiology——在许可型 XRP Ledger 代码上构建、获欧盟 DLT Pilot Regime 授权的资本市场基础设施——现已成为 Canton 上的 live validator。Canton 上的机构可对接 Axiology 受监管的发行、托管与结算场所而无需定制集成；Axiology 继续在私有账本运营核心平台，同时将 Canton 作为额外结算通道。CEO Marius Jurgilas 称有助于连接欧洲主要机构；CTO Andrius Košuba 强调受监管金融中的双轨互联。', url: 'https://www.finextra.com/pressarticle/110281/axiology-goes-live-on-blockchain-canton' },
         { date: '2026-07-01', tag: '机构', title: 'DTCC DTC 代币化服务进入有限生产交易阶段（2026 年 7 月）', body: 'DTCC 新闻稿（2026-05-04）：美国存管信托与清算公司（DTCC）计划于 2026 年 7 月启动通过 DTC 代币化服务代币化的真实资产初始有限生产交易，更广泛商业上线目标为 2026 年 10 月。服务覆盖 DTC 托管资产并保持与传统形式相同的权益与投资者保护；50+ 家 DTCC 行业工作组成员涵盖托管、资管、经纪与交易场所——含 Digital Asset（Canton Network）。DTCC 2025 年 12 月与 Digital Asset 的独立合作针对 Canton 上代币化美国国债；7 月/10 月时间表适用于更广泛的 DTC 代币化服务 rollout。', url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service' },
