@@ -299,6 +299,27 @@ export const translations = {
           url: 'https://cantonnews.org/walley-adds-usdcx-bridge-and-in-app-swaps-for-canton-users',
         },
         {
+          date: '2026-06-30',
+          tag: 'Institutional',
+          title: 'Canton blog: HIFI production payments on Canton (Quadrillions Episode 5)',
+          body: 'Official Canton Network blog (June 30, 2026): HIFI’s payments APIs now route USDCx settlement through Canton with the same integration surface as other rails—private interbank settlement, market-maker flows, tokenized cash, and treasury movements without custom Daml or validator ops. Canton supplies subtransaction privacy; HIFI supplies fiat connectivity and compliance. Sumitomo Corporation of America cited confidential permissioned settlement; episode ties to Blockworks × Canton Quadrillions miniseries on stablecoin stack fragmentation.',
+          url: 'https://www.canton.network/blog/from-pilot-to-production-hifi-on-canton',
+        },
+        {
+          date: '2026-06-29',
+          tag: 'Protocol',
+          title: 'Canton blog: Logical Synchronizer Upgrades live on Mainnet (Canton 3.5)',
+          body: 'Official Canton Network blog (June 29, 2026): Logical Synchronizer Upgrades (LSUs) are now live on Mainnet with Canton 3.5—successor synchronizer nodes run in parallel, validators switch automatically via onchain governance, and applications keep the same logical synchronizer identity without export/import cycles or coordinated outages. Canton cites four prior protocol upgrades since 2024 MainNet launch; LSUs underpin upcoming token-standard, BFT, and scaling work under CIP-0117. Legacy synchronizers remain 30 days before decommission.',
+          url: 'https://www.canton.network/blog/logical-synchronizer-upgrades',
+        },
+        {
+          date: '2026-06-24',
+          tag: 'Institutional',
+          title: 'Zenith joins Progmat Tokenized JGB / on-chain repo working group',
+          body: 'GlobeNewswire (June 24, 2026): Zenith—the EVM execution layer on Canton—joined Progmat’s Tokenized JGB / On-chain Repo Working Group under Japan’s Digital Asset Co-Creation Consortium. Members include MUFG, Mizuho, SMBC, State Street Trust, SBI Securities, Japan Exchange Group, and BlackRock Japan, studying tokenized Japanese Government Bond collateral with stablecoin cash legs for T+0, 24/7 repo. Working group kicked off May 2026; report due October 2026 with potential TJGB pilots later in 2026—targeting Japan’s ~$1.6T JGB repo market.',
+          url: 'https://www.globenewswire.com/news-release/2026/06/24/3316769/0/en/Zenith-Joins-Japanese-Megabank-Working-Group-to-Tokenize-1-6-Trillion-JGB-Repo-Market-On-chain.html',
+        },
+        {
           date: '2026-07-01',
           tag: 'Institutional',
           title: 'Tradeweb executes first real-time tokenized U.S. Treasury trade against USDCx on Canton',
@@ -1005,6 +1026,7 @@ export const translations = {
       intro: 'Independent and official analyses of Canton Network — architecture, tokenomics, institutional adoption, and market data. Reports are listed by source; always verify with the original publisher.',
       institutionalTitle: 'Institutional & market research',
       institutional: [
+        { source: 'DailyCoin', title: '$9 Trillion a Month, Flat Price: Inside Canton\'s Paradox', date: 'Jul 2026', desc: 'Commentary on Canton\'s institutional throughput vs. CC price action—Messari/DefiLlama fee share (~42% of tracked Q1 blockchain fees; ~$60M trailing 30 days pre-a16z round), Broadridge repo scale, burn-and-mint issuance (~500M CC/month), and Grayscale ETF filing context. Not investment advice; verify live metrics.', url: 'https://dailycoin.com/9-trillion-a-month-flat-price-inside-cantons-paradox/' },
         { source: 'Blockworks Research', title: 'Canton Network: Wall Street\'s Blockchain', date: 'Mar 2026', desc: 'Deep dive into Canton as infrastructure for regulated institutions — burn-to-mint ratio (0.90), Broadridge $7T+ monthly repo, DTCC tokenization, and 2026 catalysts.', url: 'https://app.blockworksresearch.com/research/canton-network-wall-street-s-blockchain' },
         { source: 'Solus Partners', title: 'Canton Network 2026 Report: Institutional Breakthrough', date: 'Jan 2026', desc: '153M+ total transactions, 819 validators, 37.89B CC in circulation, JPM Coin deployment timeline, and DTCC production roadmap.', url: 'https://mpost.io/solus-partners-drops-landmark-report-on-canton-networks-institutional-breakthrough-what-to-expect-in-2026/' },
         { source: 'Finadium', title: 'Understanding Canton Network and Ethereum for Post Trade', date: 'Jan 2025', desc: 'Compares Canton and Ethereum for securities settlement — interoperability design, privacy model, and a DLT strategy checklist for financial firms.', url: 'https://finadium.com/finadium-report-desc/understanding-the-canton-network-and-ethereum-for-post-trade/' },
@@ -1468,6 +1490,9 @@ export const translations = {
         { date: '2026-07-02', tag: '生态', title: 'Temple Digital Group 生态综述：2.5 亿美元成交量、Lightspeed 引擎与 Kaiko 数据', body: 'CantonNews 生态专题（2026-07-02）：Temple——Canton 原生 CC、USDCx 与 CBTC 交易所——截至 7 月 1 日累计成交量 2.5 亿美元、交易 1500 万+ 笔，在 109 个精选应用中排名第一（快照中占精选应用 burn 的 34%）。Lightspeed（2026 年 4 月）实现亚秒级撮合、每秒 10 万+ 订单；Virtual Orderbooks 允许银行与发行方配置私有市场。Kaiko 于 2026 年 5 月将 Temple 纳入机构数据 feed；Chainlink Data Streams 集成定价；HIFI 合作支持银行账户出入金。', url: 'https://cantonnews.org/temple-the-trading-engine-at-the-heart-of-canton' },
         { date: '2026-07-02', tag: '生态', title: 'Nexode 预测市场上线 Canton，推出 USDCx 交易者奖励', body: 'CantonNews（2026-07-02）：Nexode——链上预测市场，支持真实世界事件结果、私有持仓与 Canton 结算——已在 MainNet 上线并附带 USDCx 激励。新用户完成五笔交易后可获一次性 5 USDCx 欢迎奖励（每钱包一次，下一日 payout 发放）。每周排行榜按名义成交量分配 100 USDCx 给前五名（40/25/15/12/8%）；自成交与刷量不计入；奖励于每周一 00:00 UTC 发放。', url: 'https://cantonnews.org/nexode-launches-on-canton-with-usdcx-trader-rewards' },
         { date: '2026-07-02', tag: '生态', title: 'Walley 钱包新增 USDCx 桥接与应用内代币兑换', body: 'CantonNews（2026-07-02）：Walley——K2F Labs 自托管 Canton 钱包——现于同一界面集成 USDCx Bridge 与支持代币 swap，用户无需离开应用即可桥接资产入 Canton 并完成兑换。Walley 支持 passkey 注册、已有 passkey 与助记词导入；K2F Labs 称将进一步对接生态伙伴。公告未列明完整 swap 交易对、费用与限额。', url: 'https://cantonnews.org/walley-adds-usdcx-bridge-and-in-app-swaps-for-canton-users' },
+        { date: '2026-06-30', tag: '机构', title: 'Canton 官方博客：HIFI 在 Canton 上进入生产级支付（Quadrillions 第 5 集）', body: 'Canton Network 官方博客（2026-06-30）：HIFI 支付 API 现可经与其他通道相同的集成面路由 USDCx 至 Canton 结算——银行间私有结算、做市商流、代币化现金与财库调拨，无需自建 Daml 或验证者运维。Canton 提供子交易级隐私，HIFI 提供法币连通与合规。三井物产美洲公司引述受监管对手方间的保密许可结算；内容与 Blockworks × Canton Quadrillions 迷你系列第 5 集（稳定币栈碎片化）相关。', url: 'https://www.canton.network/blog/from-pilot-to-production-hifi-on-canton' },
+        { date: '2026-06-29', tag: '协议', title: 'Canton 官方博客：Logical Synchronizer 升级已在 MainNet 上线（Canton 3.5）', body: 'Canton Network 官方博客（2026-06-29）：Logical Synchronizer 升级（LSU）随 Canton 3.5 在 MainNet 上线——后继同步器节点并行运行，验证者经链上治理自动切换，应用保持同一逻辑同步器身份，无需导出/导入或协调停机。Canton 称自 2024 MainNet 启动以来已完成四次协议升级；LSU 支撑 CIP-0117 下即将推出的代币标准、BFT 与扩展能力。旧同步器保留 30 天后下线。', url: 'https://www.canton.network/blog/logical-synchronizer-upgrades' },
+        { date: '2026-06-24', tag: '机构', title: 'Zenith 加入 Progmat 代币化 JGB / 链上回购工作组', body: 'GlobeNewswire（2026-06-24）：Zenith——Canton 上的 EVM 执行层——加入 Progmat 在日本数字资产共创联盟（DCC）下设的 Tokenized JGB / On-chain Repo 工作组。成员含 MUFG、瑞穗、三井住友、State Street Trust、SBI 证券、日本交易所集团及 BlackRock Japan，研究以代币化日本国债作抵押、稳定币作现金腿的 T+0、24/7 回购。工作组 2026 年 5 月启动，报告定于 10 月发布，后续或试点 TJGB——目标市场为日本约 1.6 万亿美元 JGB 回购。', url: 'https://www.globenewswire.com/news-release/2026/06/24/3316769/0/en/Zenith-Joins-Japanese-Megabank-Working-Group-to-Tokenize-1-6-Trillion-JGB-Repo-Market-On-chain.html' },
         { date: '2026-07-01', tag: '机构', title: 'Tradeweb 在 Canton 完成首个实时代币化美国国债兑 USDCx 交易', body: 'Canton Network 新闻稿 / Tradeweb（2026-07-01）：Tradeweb 在其平台完成首个实时买卖链上美国国债兑代币化现金（USDCx）——国债腿与现金腿经 Canton 同步原子结算，无需传统市场截止或链下现金。Franklin Templeton 向 Virtu Financial 转移代币化美国国债换取 USDCx；参与方含 Blockdaemon、Digital Asset、Societe Generale、Tradeweb 与 Virtu Financial。Digital Asset 首席商务官 Kelly Mathieson 称此举推进全天候抵押品与资本市场基础设施，为 DTCC 代币化服务铺路。', url: 'https://www.canton.network/canton-network-press-releases/tradeweb-on-chain-us-treasuries-canton' },
         { date: '2026-07-01', tag: '机构', title: 'Axiology 上线为 Canton Network 验证者，联通欧盟受监管 DLT 与 Canton', body: 'Finextra 新闻稿（2026-07-01）：Axiology——在许可型 XRP Ledger 代码上构建、获欧盟 DLT Pilot Regime 授权的资本市场基础设施——现已成为 Canton 上的 live validator。Canton 上的机构可对接 Axiology 受监管的发行、托管与结算场所而无需定制集成；Axiology 继续在私有账本运营核心平台，同时将 Canton 作为额外结算通道。CEO Marius Jurgilas 称有助于连接欧洲主要机构；CTO Andrius Košuba 强调受监管金融中的双轨互联。', url: 'https://www.finextra.com/pressarticle/110281/axiology-goes-live-on-blockchain-canton' },
         { date: '2026-07-01', tag: '机构', title: 'DTCC DTC 代币化服务进入有限生产交易阶段（2026 年 7 月）', body: 'DTCC 新闻稿（2026-05-04）：美国存管信托与清算公司（DTCC）计划于 2026 年 7 月启动通过 DTC 代币化服务代币化的真实资产初始有限生产交易，更广泛商业上线目标为 2026 年 10 月。服务覆盖 DTC 托管资产并保持与传统形式相同的权益与投资者保护；50+ 家 DTCC 行业工作组成员涵盖托管、资管、经纪与交易场所——含 Digital Asset（Canton Network）。DTCC 2025 年 12 月与 Digital Asset 的独立合作针对 Canton 上代币化美国国债；7 月/10 月时间表适用于更广泛的 DTC 代币化服务 rollout。', url: 'https://www.dtcc.com/news/2026/may/04/dtcc-advances-development-of-new-tokenization-service' },
@@ -1599,6 +1624,7 @@ export const translations = {
       intro: '关于 Canton Network 的独立与官方分析——架构、代币经济、机构采用与市场数据。按来源分列；请以原始发布方为准。',
       institutionalTitle: '机构与市场研究',
       institutional: [
+        { source: 'DailyCoin', title: '月处理 9 万亿美元、价格却平坦：Canton 悖论', date: '2026 年 7 月', desc: '评论 Canton 机构吞吐量与 CC 价格表现的分化——Messari/DefiLlama 手续费占比（约占 2026 Q1 跟踪链上费用的 42%；a16z 轮前 30 日约 6000 万美元）、Broadridge 回购规模、燃烧-铸造发行（约每月 5 亿 CC）及 Grayscale ETF 申报背景。非投资建议；请以实时数据为准。', url: 'https://dailycoin.com/9-trillion-a-month-flat-price-inside-cantons-paradox/' },
         { source: 'Blockworks Research', title: 'Canton Network: 华尔街的区块链', date: '2026 年 3 月', desc: '深度分析 Canton 作为监管机构基础设施——燃烧铸造比 0.90、Broadridge 月回购 $7T+、DTCC 代币化与 2026 催化剂。', url: 'https://app.blockworksresearch.com/research/canton-network-wall-street-s-blockchain' },
         { source: 'Solus Partners', title: 'Canton Network 2026 报告：机构突破', date: '2026 年 1 月', desc: '1.53 亿+ 总交易、819 验证者、379 亿 CC 流通、JPM Coin 部署时间线与 DTCC 生产路线图。', url: 'https://mpost.io/solus-partners-drops-landmark-report-on-canton-networks-institutional-breakthrough-what-to-expect-in-2026/' },
         { source: 'Finadium', title: '理解 Canton Network 与以太坊用于交易后结算', date: '2025 年 1 月', desc: '对比 Canton 与以太坊的证券结算——互操作设计、隐私模型、金融机构 DLT 策略清单。', url: 'https://finadium.com/finadium-report-desc/understanding-the-canton-network-and-ethereum-for-post-trade/' },
