@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-03',
+          tag: 'Institutional',
+          title: 'Grayscale names Canton among blockchains poised to benefit from regulatory clarity',
+          body: 'CantonNews (July 3, 2026): Grayscale’s Stack article “The Blockchains that Stand to Benefit From Regulatory Clarity” lists Canton alongside Ethereum, Solana, and BNB Chain as networks likely to attract institutional capital if U.S. digital-asset rules clarify—citing tokenized assets, stablecoins, and institutional DeFi. Context: the Senate Banking Committee advanced the Digital Asset Market Clarity Act 15–9 on May 14, 2026. Grayscale frames Canton as institution-centric infrastructure with selective disclosure—not a price call or adoption guarantee.',
+          url: 'https://cantonnews.org/grayscale-names-canton-among-blockchains-poised-to-benefit-from-regulatory-clarity',
+        },
+        {
+          date: '2026-07-01',
+          tag: 'Technology',
+          title: 'Noves and RedStone integrate institutional price feeds on Canton',
+          body: 'CantonNews (July 1, 2026): Noves—the private data platform serving 150+ Canton participants—partnered with RedStone to add stablecoin and tokenized-fund pricing into the Noves Data Platform for mark-to-market, book close, and cost-basis reporting while preserving Canton privacy. RedStone feeds cover crypto, equities, FX, commodities, and custom NAV; CAPS (Canton Access and Privacy Standard) was submitted as a CIP in April 2026. Early institutional discussions include Hamilton Lane SCOPE, Re reUSD, Fasanara F-ONE, and Spiko T-bill products.',
+          url: 'https://cantonnews.org/noves-and-redstone-partner-to-bring-institutional-price-feeds-to-canton-network',
+        },
+        {
+          date: '2026-06-30',
+          tag: 'Ecosystem',
+          title: 'Canborsa exits beta with expanded RWA perps, 30× leverage, and restructured points',
+          body: 'CantonNews (June 30, 2026): Canborsa—the perpetual RWA exchange on Canton—launched out of beta with Microsoft, Meta, Alphabet, Amazon, and AMD tokenized equities alongside gold, Apple, Nvidia, Tesla, real estate, and crypto. Max leverage rose to 30× (max position $10,000); beta drew 6,000+ users and 10,000+ trades (~$1M volume). Points now scale with volume (1.2×–2.5× tiers) and a 3× first-deposit bonus runs through July 10. Access: app.canborsa.com.',
+          url: 'https://cantonnews.org/canborsa-expands-asset-list-and-boosts-leverage-as-dex-exits-beta',
+        },
+        {
+          date: '2026-06-29',
+          tag: 'Technology',
+          title: 'IntellectEU releases CatalyX Package Manager 2.1 for Canton Daml distribution',
+          body: 'CantonNews (June 29, 2026): IntellectEU shipped CatalyX Package Manager 2.1—a free web registry for discovering, publishing, and distributing Daml packages (DAR files) on Canton with private distribution, access control, version history, and audit records. Host packages on-platform or link to an institution’s own artifactory; v2.1 adds email subscriptions for package updates and simplified node onboarding without storing credentials.',
+          url: 'https://cantonnews.org/intellecteu-launches-catalyx-package-manager-2-1-for-canton-network',
+        },
+        {
           date: '2026-07-02',
           tag: 'Community',
           title: 'Canton Foundation named platinum sponsor of WebX2026 in Tokyo',
@@ -1486,6 +1514,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-03', tag: '机构', title: 'Grayscale 将 Canton 列为监管清晰化受益区块链之一', body: 'CantonNews（2026-07-03）：Grayscale Stack 文章《The Blockchains that Stand to Benefit From Regulatory Clarity》将 Canton 与 Ethereum、Solana、BNB Chain 并列为若美国数字资产规则更清晰，机构资本可能优先流向的网络——聚焦代币化资产、稳定币与机构 DeFi。背景：参议院银行委员会于 2026-05-14 以 15:9 推进 Digital Asset Market Clarity Act。Grayscale 强调 Canton 为机构导向、支持选择性披露的基础设施——非价格预测或采用保证。', url: 'https://cantonnews.org/grayscale-names-canton-among-blockchains-poised-to-benefit-from-regulatory-clarity' },
+        { date: '2026-07-01', tag: '技术', title: 'Noves 与 RedStone 在 Canton 集成机构级价格 feed', body: 'CantonNews（2026-07-01）：服务 150+ Canton 参与者的私有数据平台 Noves 与 RedStone 合作，将稳定币与代币化基金定价纳入 Noves Data Platform，支持按市价计价、关账与成本基础报告，同时保留 Canton 隐私。RedStone 覆盖 crypto、股票、外汇、大宗商品与自定义 NAV；2026 年 4 月提交的 CAPS（Canton Access and Privacy Standard）为正式 CIP。早期机构讨论含 Hamilton Lane SCOPE、Re reUSD、Fasanara F-ONE 与 Spiko 国库券产品。', url: 'https://cantonnews.org/noves-and-redstone-partner-to-bring-institutional-price-feeds-to-canton-network' },
+        { date: '2026-06-30', tag: '生态', title: 'Canborsa 退出 beta：扩展 RWA 永续、30 倍杠杆与积分重构', body: 'CantonNews（2026-06-30）：Canton 永续 RWA 交易所 Canborsa 正式退出 beta，新增 Microsoft、Meta、Alphabet、Amazon、AMD 等代币化股票，并保留黄金、Apple、Nvidia、Tesla、房地产与 crypto。最高杠杆提至 30 倍（单仓上限 1 万美元）；beta 期 6000+ 用户、1 万+ 笔交易（约 100 万美元成交量）。积分按成交量分级（1.2×–2.5×），7 月 10 日前首存享 3 倍加成。入口：app.canborsa.com。', url: 'https://cantonnews.org/canborsa-expands-asset-list-and-boosts-leverage-as-dex-exits-beta' },
+        { date: '2026-06-29', tag: '技术', title: 'IntellectEU 发布 CatalyX Package Manager 2.1，服务 Canton Daml 分发', body: 'CantonNews（2026-06-29）：IntellectEU 推出 CatalyX Package Manager 2.1——免费 Web 注册表，用于在 Canton 上发现、发布与分发 Daml 包（DAR），支持私有分发、访问控制、版本历史与审计记录。可在平台托管或链接机构自有 artifactory；2.1 版新增包更新邮件订阅与简化节点接入流程，且不存储用户凭证。', url: 'https://cantonnews.org/intellecteu-launches-catalyx-package-manager-2-1-for-canton-network' },
         { date: '2026-07-02', tag: '社区', title: 'Canton Foundation 成为 WebX2026 东京大会白金赞助商', body: 'CantonNews（2026-07-02）：Canton Foundation 将以白金赞助商身份参与 WebX2026——亚洲最大 Web3 大会——于 7 月 13–14 日在东京 The Prince Park Tower 举行。活动汇聚机构、项目、投资者、政府官员与媒体；亚太运营负责人 Thomas Chou 强调确保 Canton 作为可靠机构级区块链应用平台。WebX 自 2023 年起由 CoinPost 每年举办。', url: 'https://cantonnews.org/canton-foundation-to-sponsor-webx2026-in-tokyo-as-platinum-partner' },
         { date: '2026-07-02', tag: '生态', title: 'Temple Digital Group 生态综述：2.5 亿美元成交量、Lightspeed 引擎与 Kaiko 数据', body: 'CantonNews 生态专题（2026-07-02）：Temple——Canton 原生 CC、USDCx 与 CBTC 交易所——截至 7 月 1 日累计成交量 2.5 亿美元、交易 1500 万+ 笔，在 109 个精选应用中排名第一（快照中占精选应用 burn 的 34%）。Lightspeed（2026 年 4 月）实现亚秒级撮合、每秒 10 万+ 订单；Virtual Orderbooks 允许银行与发行方配置私有市场。Kaiko 于 2026 年 5 月将 Temple 纳入机构数据 feed；Chainlink Data Streams 集成定价；HIFI 合作支持银行账户出入金。', url: 'https://cantonnews.org/temple-the-trading-engine-at-the-heart-of-canton' },
         { date: '2026-07-02', tag: '生态', title: 'Nexode 预测市场上线 Canton，推出 USDCx 交易者奖励', body: 'CantonNews（2026-07-02）：Nexode——链上预测市场，支持真实世界事件结果、私有持仓与 Canton 结算——已在 MainNet 上线并附带 USDCx 激励。新用户完成五笔交易后可获一次性 5 USDCx 欢迎奖励（每钱包一次，下一日 payout 发放）。每周排行榜按名义成交量分配 100 USDCx 给前五名（40/25/15/12/8%）；自成交与刷量不计入；奖励于每周一 00:00 UTC 发放。', url: 'https://cantonnews.org/nexode-launches-on-canton-with-usdcx-trader-rewards' },
