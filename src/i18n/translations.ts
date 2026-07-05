@@ -978,6 +978,22 @@ export const translations = {
       interviewsTitle: 'Interviews with Yuval Rooz (CEO, Digital Asset)',
       interviews: [
         {
+          title: 'Why Wall Street Is Moving Onchain (And Why Canton Is Different)',
+          channel: 'Coin Bureau Podcast',
+          date: 'Jun 2026',
+          duration: '55 min',
+          summary: 'Yuval Rooz on why Goldman Sachs, DTCC, and other institutions build on Canton — issuer sovereignty, network-of-networks design, no pre-mine tokenomics, tokenized deposits, and what “truly onchain” capital markets require.',
+          youtubeId: 'P9_Kh7FRQlw',
+        },
+        {
+          title: 'Canton Network: Privacy, Institutional DeFi & Onchain Finance',
+          channel: '21shares (Off the Block)',
+          date: 'May 2026',
+          duration: '48 min',
+          summary: 'Digital Asset co-founders Eric Saraniecki and Yuval Rooz on selective privacy, tokenization vs. RWAs, metrics beyond TVL, and why public-chain design patterns fall short for regulated finance.',
+          youtubeId: 'tAGSE9FEC-E',
+        },
+        {
           title: 'Is Canton a Real Blockchain? — Yuval Rooz vs Gluchowski & Haseeb (Unchained)',
           channel: 'Unchained',
           date: 'Apr 2026',
@@ -1621,6 +1637,8 @@ export const translations = {
       intro: '重要采访、圆桌讨论、官方 Quadrillions 播客系列，以及 X 上精选的独立创作者。',
       interviewsTitle: 'Yuval Rooz 采访（Digital Asset CEO）',
       interviews: [
+        { title: '华尔街为何转向链上？Canton 有何不同', channel: 'Coin Bureau Podcast', date: '2026 年 6 月', duration: '55 分钟', summary: 'Yuval Rooz 解读 Goldman Sachs、DTCC 等机构为何选择 Canton——资产发行方主权、网络的网络架构、无预挖代币经济、代币化存款，以及「真正上链」的资本市场需要什么。', youtubeId: 'P9_Kh7FRQlw' },
+        { title: 'Canton Network：隐私、机构 DeFi 与链上金融', channel: '21shares（Off the Block）', date: '2026 年 5 月', duration: '48 分钟', summary: 'Digital Asset 联合创始人 Eric Saraniecki 与 Yuval Rooz 联访：选择性隐私、代币化与 RWA 之别、超越 TVL 的指标，以及公链设计模式为何难以满足受监管金融需求。', youtubeId: 'tAGSE9FEC-E' },
         { title: 'Canton 算「真公链」吗？— Yuval Rooz 对阵 Gluchowski 与 Haseeb（Unchained）', channel: 'Unchained', date: '2026 年 4 月', duration: '', summary: 'Laura Shin 主持：针对 Canton 的公共性与去中心化，Digital Asset 的 Yuval Rooz 与 Alex Gluchowski（Matter Labs）、Haseeb Qureshi（Dragonfly）公开交锋，涉及网络设计、CC 与行业叙事。', youtubeId: '0M3jW-Y-4oA' },
         { title: 'Canton 能否成为全球最大的区块链？', channel: 'Milk Road', date: '2026 年 2 月', duration: '37 分钟', summary: 'Canton 如何将数千亿美元搬上链——代币化国债、Broadridge 回购、JPMorgan、DTCC、代币经济。', youtubeId: 'b_vc9SgQGZo' },
         { title: '为什么 Goldman Sachs 和 DTCC 选择了 Canton', channel: 'DHN Crypto', date: '2026', duration: '29 分钟', summary: 'Goldman Sachs 1.35 亿美元投资、子交易隐私、DAML 可组合性，以及 DTCC 为何选择 Canton 做国债代币化。', youtubeId: '2TO78xsJDIs' },
