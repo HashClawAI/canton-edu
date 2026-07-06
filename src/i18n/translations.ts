@@ -271,6 +271,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-04',
+          tag: 'Analysis',
+          title: 'Zenith publishes Canton Network Signal: June 2026 recap',
+          body: 'CantonNews insight (July 4, 2026): Zenith—the Canton EVM/SVM execution layer and Super Validator—published a June 2026 ecosystem recap covering Digital Asset’s $355M Series F (a16z-led), Zenith’s Progmat tokenized JGB repo working-group invitation, Mastercard stablecoin settlement including Canton, Palladium’s 10M CC Genesis Fund, CIP-0112/0119 approvals, Protocol 3.5 LSUs, 900+ validators (Citadel LLC and Taishin Bank among recent operators), Hacken and Moonsong Labs ecosystem additions, Canborsa/Nexode/Walley launches, and ~$59–60M DefiLlama 30-day fees. Zenith cites H2 2026 tailwinds from institutional capital and Japanese on-chain repo research.',
+          url: 'https://cantonnews.org/insights/canton-network-signal-june-2026-recap-by-zenith',
+        },
+        {
           date: '2026-07-03',
           tag: 'Institutional',
           title: 'Grayscale names Canton among blockchains poised to benefit from regulatory clarity',
@@ -297,6 +304,13 @@ export const translations = {
           title: 'IntellectEU releases CatalyX Package Manager 2.1 for Canton Daml distribution',
           body: 'CantonNews (June 29, 2026): IntellectEU shipped CatalyX Package Manager 2.1—a free web registry for discovering, publishing, and distributing Daml packages (DAR files) on Canton with private distribution, access control, version history, and audit records. Host packages on-platform or link to an institution’s own artifactory; v2.1 adds email subscriptions for package updates and simplified node onboarding without storing credentials.',
           url: 'https://cantonnews.org/intellecteu-launches-catalyx-package-manager-2-1-for-canton-network',
+        },
+        {
+          date: '2026-06-28',
+          tag: 'Network',
+          title: 'Canton leads all blockchains in DefiLlama 30-day revenue at $59.91M',
+          body: 'CantonNews analysis (June 28, 2026): DefiLlama data shows Canton Network generated $59.91 million in trailing-30-day revenue—ranking first among tracked protocols and ahead of Tron ($27.1M) and Ethereum on a net revenue basis. Canton’s full-fee-burn model (traffic purchases, preapproval burns, setup burns, dust expiry, holding fees, and sender change fees) flows entirely to holders with no protocol retention. Seven-day revenue was $12.92M with $1.82M in the latest 24-hour window at publication. Metrics fluctuate with usage—verify live dashboards at defillama.com; not investment advice.',
+          url: 'https://cantonnews.org/canton-network-leads-all-blockchains-in-30-day-revenue',
         },
         {
           date: '2026-07-02',
@@ -411,11 +425,25 @@ export const translations = {
           url: 'https://thedefiant.io/converge/blockchains/canton-network-tops-blockchain-fee-rankings-60m-30-days',
         },
         {
+          date: '2026-06-26',
+          tag: 'Ecosystem',
+          title: 'Hacken joins Canton Network as official ecosystem auditing provider',
+          body: 'Hacken / CantonNews (June 2026): blockchain security firm Hacken is an official Canton Network ecosystem auditing provider—supporting Daml smart contract reviews, application workflows, integration logic, and operational infrastructure for institutions, tokenized asset issuers, and builders. Hacken staff completed Digital Asset Daml Contract Developer and Daml Philosophy certifications and published a Daml design-pattern security analysis (propose-accept, multi-party agreements, delegation, UTXO selective disclosure) for SDK 3.4.11 deployments. Complements existing audit partners such as CredShields on Canton.',
+          url: 'https://hacken.io/network/canton/',
+        },
+        {
           date: '2026-06-25',
           tag: 'Ecosystem',
           title: 'T-RIZE and Chainlink deploy onchain proof of insurance for KDLN on Canton',
           body: 'T-RIZE Group integrated Chainlink oracles into its Kairos Digital Loan Notes (KDLN) program on Canton (live June 24–25, 2026): Talisman Insurance coverage records convert to a Merkle tree anchored on Canton, with Chainlink Data Streams publishing signed registry state. Authorized participants receive Merkle proofs to verify policy inclusion without exposing private details—described as the first onchain proof-of-insurance layer for tokenized private credit on Canton. Chainlink documents the production endpoint in its t-rize-proof-of-insurance external adapter (SmartData).',
           url: 'https://github.com/smartcontractkit/external-adapters-js/blob/main/packages/sources/t-rize-proof-of-insurance/README.md',
+        },
+        {
+          date: '2026-06-25',
+          tag: 'Institutional',
+          title: 'SK Securities signs Edena MOU to expand RWA tokenization via Cantor8 and Canton',
+          body: 'CantonNews (June 25, 2026): SK Securities (South Korea) signed an MOU with Edena Korea to expand digital-asset finance—leveraging Cantor8 and Canton Network infrastructure for RWA tokenization, security token offerings, and regulation-friendly digital finance. Edena Korea’s institutional stack aligns with Cantor8, Canton, and Silverlake Axis. Context: Korea’s token-securities bills (Capital Markets Act / Electronic Securities Act) passed the National Assembly plenary in January 2026. SK Securities CEO Jung Joon-ho cited overseas expansion of tokenized real-asset distribution with investor-protection priorities.',
+          url: 'https://cantonnews.org/sk-securities-to-leverage-cantor8-and-canton-through-edena-mou',
         },
         {
           date: '2026-06-23',
@@ -1530,10 +1558,12 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-04', tag: '分析', title: 'Zenith 发布 Canton Network Signal：2026 年 6 月生态回顾', body: 'CantonNews 洞察（2026-07-04）：Zenith——Canton 的 EVM/SVM 执行层与超级验证者——发布 6 月生态回顾，涵盖 Digital Asset 3.55 亿美元 F 轮融资（a16z 领投）、Zenith 获邀加入 Progmat 代币化 JGB 回购工作组、Mastercard 稳定币结算纳入 Canton、Palladium 1000 万 CC Genesis 基金、CIP-0112/0119 批准、协议 3.5 LSU、900+ 验证者（含 Citadel LLC 与台新银行等新运营商）、Hacken 与 Moonsong Labs 等生态伙伴、Canborsa/Nexode/Walley 上线，以及 DefiLlama 30 日约 5900–6000 万美元手续费。Zenith 认为 2026 下半年机构资本与日本链上回购研究将形成顺风。', url: 'https://cantonnews.org/insights/canton-network-signal-june-2026-recap-by-zenith' },
         { date: '2026-07-03', tag: '机构', title: 'Grayscale 将 Canton 列为监管清晰化受益区块链之一', body: 'CantonNews（2026-07-03）：Grayscale Stack 文章《The Blockchains that Stand to Benefit From Regulatory Clarity》将 Canton 与 Ethereum、Solana、BNB Chain 并列为若美国数字资产规则更清晰，机构资本可能优先流向的网络——聚焦代币化资产、稳定币与机构 DeFi。背景：参议院银行委员会于 2026-05-14 以 15:9 推进 Digital Asset Market Clarity Act。Grayscale 强调 Canton 为机构导向、支持选择性披露的基础设施——非价格预测或采用保证。', url: 'https://cantonnews.org/grayscale-names-canton-among-blockchains-poised-to-benefit-from-regulatory-clarity' },
         { date: '2026-07-01', tag: '技术', title: 'Noves 与 RedStone 在 Canton 集成机构级价格 feed', body: 'CantonNews（2026-07-01）：服务 150+ Canton 参与者的私有数据平台 Noves 与 RedStone 合作，将稳定币与代币化基金定价纳入 Noves Data Platform，支持按市价计价、关账与成本基础报告，同时保留 Canton 隐私。RedStone 覆盖 crypto、股票、外汇、大宗商品与自定义 NAV；2026 年 4 月提交的 CAPS（Canton Access and Privacy Standard）为正式 CIP。早期机构讨论含 Hamilton Lane SCOPE、Re reUSD、Fasanara F-ONE 与 Spiko 国库券产品。', url: 'https://cantonnews.org/noves-and-redstone-partner-to-bring-institutional-price-feeds-to-canton-network' },
         { date: '2026-06-30', tag: '生态', title: 'Canborsa 退出 beta：扩展 RWA 永续、30 倍杠杆与积分重构', body: 'CantonNews（2026-06-30）：Canton 永续 RWA 交易所 Canborsa 正式退出 beta，新增 Microsoft、Meta、Alphabet、Amazon、AMD 等代币化股票，并保留黄金、Apple、Nvidia、Tesla、房地产与 crypto。最高杠杆提至 30 倍（单仓上限 1 万美元）；beta 期 6000+ 用户、1 万+ 笔交易（约 100 万美元成交量）。积分按成交量分级（1.2×–2.5×），7 月 10 日前首存享 3 倍加成。入口：app.canborsa.com。', url: 'https://cantonnews.org/canborsa-expands-asset-list-and-boosts-leverage-as-dex-exits-beta' },
         { date: '2026-06-29', tag: '技术', title: 'IntellectEU 发布 CatalyX Package Manager 2.1，服务 Canton Daml 分发', body: 'CantonNews（2026-06-29）：IntellectEU 推出 CatalyX Package Manager 2.1——免费 Web 注册表，用于在 Canton 上发现、发布与分发 Daml 包（DAR），支持私有分发、访问控制、版本历史与审计记录。可在平台托管或链接机构自有 artifactory；2.1 版新增包更新邮件订阅与简化节点接入流程，且不存储用户凭证。', url: 'https://cantonnews.org/intellecteu-launches-catalyx-package-manager-2-1-for-canton-network' },
+        { date: '2026-06-28', tag: '网络', title: 'Canton 以 5991 万美元领跑 DefiLlama 30 日协议收入', body: 'CantonNews 分析（2026-06-28）：DefiLlama 数据显示 Canton Network 过去 30 日收入约 5991 万美元——在追踪协议中排名第一，净收入口径亦显著领先 Tron（2710 万）与 Ethereum。Canton 采用全额手续费销毁模型（流量购买、预批准销毁、设置销毁、dust 过期、持有费与找零费等），无协议层留存。7 日收入 1292 万美元，发布最近 24 小时约 182 万美元。指标随用量波动——请以 defillama.com 实时数据为准；非投资建议。', url: 'https://cantonnews.org/canton-network-leads-all-blockchains-in-30-day-revenue' },
         { date: '2026-07-02', tag: '社区', title: 'Canton Foundation 成为 WebX2026 东京大会白金赞助商', body: 'CantonNews（2026-07-02）：Canton Foundation 将以白金赞助商身份参与 WebX2026——亚洲最大 Web3 大会——于 7 月 13–14 日在东京 The Prince Park Tower 举行。活动汇聚机构、项目、投资者、政府官员与媒体；亚太运营负责人 Thomas Chou 强调确保 Canton 作为可靠机构级区块链应用平台。WebX 自 2023 年起由 CoinPost 每年举办。', url: 'https://cantonnews.org/canton-foundation-to-sponsor-webx2026-in-tokyo-as-platinum-partner' },
         { date: '2026-07-02', tag: '生态', title: 'Temple Digital Group 生态综述：2.5 亿美元成交量、Lightspeed 引擎与 Kaiko 数据', body: 'CantonNews 生态专题（2026-07-02）：Temple——Canton 原生 CC、USDCx 与 CBTC 交易所——截至 7 月 1 日累计成交量 2.5 亿美元、交易 1500 万+ 笔，在 109 个精选应用中排名第一（快照中占精选应用 burn 的 34%）。Lightspeed（2026 年 4 月）实现亚秒级撮合、每秒 10 万+ 订单；Virtual Orderbooks 允许银行与发行方配置私有市场。Kaiko 于 2026 年 5 月将 Temple 纳入机构数据 feed；Chainlink Data Streams 集成定价；HIFI 合作支持银行账户出入金。', url: 'https://cantonnews.org/temple-the-trading-engine-at-the-heart-of-canton' },
         { date: '2026-07-02', tag: '生态', title: 'Nexode 预测市场上线 Canton，推出 USDCx 交易者奖励', body: 'CantonNews（2026-07-02）：Nexode——链上预测市场，支持真实世界事件结果、私有持仓与 Canton 结算——已在 MainNet 上线并附带 USDCx 激励。新用户完成五笔交易后可获一次性 5 USDCx 欢迎奖励（每钱包一次，下一日 payout 发放）。每周排行榜按名义成交量分配 100 USDCx 给前五名（40/25/15/12/8%）；自成交与刷量不计入；奖励于每周一 00:00 UTC 发放。', url: 'https://cantonnews.org/nexode-launches-on-canton-with-usdcx-trader-rewards' },
@@ -1550,7 +1580,9 @@ export const translations = {
         { date: '2026-06-27', tag: '机构', title: 'Russell 美国指数重组生效；CNTN 列入 Russell 3000 最终新增名单', body: 'FTSE Russell（LSEG）2026 年 6 月半年度重组于 2026-06-26 美股收盘后生效，Russell 3000 新成分自 6 月 29 日开盘起反映。LSEG 公布的 Russell 3000 最终新增名单包含 Canton Strategic Holdings（NASDAQ: CNTN）——确认 6 月 18 日初步公告。重组依据 2026-04-30 排名日数据；LSEG 摘要称 Russell 3000 总市值升至约 75.6 万亿美元。', url: 'https://www.lseg.com/en/ftse-russell/russell-reconstitution' },
         { date: '2026-06-26', tag: '媒体', title: 'IX Asia Indexes 将 CC 纳入 DAICS 前 50 排名第 17；获 Green Coin 标签', body: 'IX Asia Indexes DAICS 2026 上半年审查（Media OutReach，2026-06-26）：Canton Coin（CC）进入数字资产前 50 覆盖名单，排名第 17（截至 5 月 31 日过去 90 日平均市值）——为七项新增之一，替代 Ethena、Aptos、Worldcoin、Polygon、Story 与 Arbitrum。CC 归类为 Cryptocurrency → Infrastructure，并因单位交易能耗较低获 Green Coin 标签（七项之一）。DAICS 覆盖 97.45% 市值；指数变更于 2026-07-24 在 ix-index.com 生效。', url: 'https://hong-kong.media-outreach.com/news/hong-kong/2026/06/26/472873/results-of-the-ix-digital-asset-industry-classification-system-daics-1h-2026-review/' },
         { date: '2026-06-26', tag: '网络', title: 'Canton 以 6020 万美元领跑 DefiLlama 30 日手续费排名', body: 'The Defiant（2026-06-26）：据 DefiLlama，Canton Network 过去 30 日手续费约 6020 万美元——同期 Tron 约 2760 万、Ethereum 约 1130 万。DefiLlama 统计参与者支付的 gas；Canton 吞吐量主要来自机构结算工作流而非零售 DeFi。CEO Yuval Rooz 在 X 提及该里程碑；发布时仪表盘累计手续费约 4.889 亿美元。手续费随网络用量波动——请以 defillama.com 实时数据为准。', url: 'https://thedefiant.io/converge/blockchains/canton-network-tops-blockchain-fee-rankings-60m-30-days' },
+        { date: '2026-06-26', tag: '生态', title: 'Hacken 成为 Canton Network 官方生态审计服务商', body: 'Hacken / CantonNews（2026 年 6 月）：区块链安全公司 Hacken 为 Canton Network 官方生态审计服务商——为机构、代币化资产发行方与开发者提供 Daml 智能合约审查、应用工作流、集成逻辑与运维基础设施安全评估。团队已完成 Digital Asset Daml Contract Developer 与 Daml Philosophy 认证，并发布 Daml 设计模式安全分析（propose-accept、多方协议、委托、UTXO 选择性披露），面向 SDK 3.4.11 部署。与 CredShields 等既有 Canton 审计伙伴形成互补。', url: 'https://hacken.io/network/canton/' },
         { date: '2026-06-25', tag: '生态', title: 'T-RIZE 与 Chainlink 在 Canton 为 KDLN 部署链上保险证明', body: 'T-RIZE Group 将 Chainlink 预言机集成至 Canton 上的 Kairos Digital Loan Notes（KDLN）项目（2026-06-24 至 25 日上线）：Talisman Insurance 承保记录转为 Merkle 树并锚定在 Canton，Chainlink Data Streams 发布签名的注册表状态。授权参与方可通过 Merkle 证明验证保单纳入情况而不暴露隐私细节——被描述为 Canton 上代币化私人信贷的首个链上保险证明层。Chainlink 在 t-rize-proof-of-insurance 外部适配器（SmartData）中记录生产端点。', url: 'https://github.com/smartcontractkit/external-adapters-js/blob/main/packages/sources/t-rize-proof-of-insurance/README.md' },
+        { date: '2026-06-25', tag: '机构', title: 'SK 证券与 Edena 签署 MOU，经 Cantor8 与 Canton 扩展 RWA 代币化', body: 'CantonNews（2026-06-25）：韩国 SK 证券与 Edena Korea 签署 MOU 以扩展数字资产业务——借助 Cantor8 与 Canton Network 基础设施推进 RWA 代币化、证券型代币发行及合规友好的数字金融。Edena Korea 机构栈与 Cantor8、Canton 及 Silverlake Axis 联盟对接。背景：韩国代币证券相关法案（资本市场法/电子证券法）于 2026 年 1 月在本会 plenary 通过。SK 证券 CEO Jung Joon-ho 强调以投资者保护为前提的海外代币化真实资产分销。', url: 'https://cantonnews.org/sk-securities-to-leverage-cantor8-and-canton-through-edena-mou' },
         { date: '2026-06-23', tag: '交易所', title: 'Bithumb 上线 CC/KRW（Canton 主网）', body: '韩国 Bithumb 于 2026-06-23 将 Canton Coin（CC）加入韩元市场——仅支持 Canton 主网，CC/KRW 参考价 234 韩元，并按交易所规则对新币实施临时交易限制。CantonNews 归档了上架公告；存取与确认规则以 Bithumb 官网为准。继 Upbit 之后进一步扩展韩国零售流动性。', url: 'https://cantonnews.org/bithumb-lists-canton-coin-cc-on-korean-won-market' },
         { date: '2026-06-23', tag: '机构', title: 'Canton Strategic 推出 CC 锁仓即服务，服务 SV 与 Featured App', body: 'PRNewswire（2026-06-23）：Canton Strategic Holdings（NASDAQ: CNTN）开始提供 locking-as-a-service，帮助超级验证者与 Featured App 建设者满足 CIP-0105（SV 奖励 70% 锁仓）与 CIP-0116（Featured App 各方锁仓）下的 CC 承诺要求。4 月已与 SV 试点；CEO Mark Wendland 称资本高效锁仓有助于长期网络激励。前瞻性表述与 DA 商标免责声明以原文为准。', url: 'https://www.prnewswire.com/news-releases/canton-strategic-holdings-inc-announces-launch-of-locking-service-to-support-network-infrastructure-providers-302807710.html' },
         { date: '2026-06-23', tag: '生态', title: 'Moonsong Labs 以 Daml 认证服务提供商身份加入 Canton 生态', body: 'GlobeNewswire（2026-06-23）：Moonsong Labs 列入 Canton Network 生态 Service Provider——为银行与资管机构提供 Daml 智能合约、节点部署、CIP-56/CIP-103 工作流与 Global Synchronizer 集成。Canton Foundation 负责人 Viv Diwakar 引述欢迎该伙伴；Moonsong 同步发布面向机构首次部署评估的免费 Canton Readiness Guide（PDF）。', url: 'https://www.globenewswire.com/news-release/2026/06/23/3316007/0/en/Moonsong-Labs-Joins-Canton-Ecosystem-as-a-Service-Provider-Launches-Institutional-Readiness-Guide.html' },
