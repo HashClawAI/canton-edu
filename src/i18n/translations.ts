@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-06',
+          tag: 'Institutional',
+          title: 'DTCC tokenization service set for July 13 soft launch on Canton Network',
+          body: 'CantonNews (July 6, 2026): One week ahead of go-live, DTCC’s tokenization service is scheduled for limited production trades on Canton Network starting July 13, 2026—the first time DTC-custodied U.S. Treasury securities will be minted and traded on a public blockchain in a live production environment. The December 2025 partnership among DTCC, Digital Asset, and Canton uses DTCC’s ComposerX suite; scope may expand based on participant interest, with full rollout targeted mid-October 2026. DTCC co-chairs the Canton Foundation alongside Euroclear; 50+ institutions in the Canton Industry Working Group have shaped the service.',
+          url: 'https://cantonnews.org/seven-days-to-go-dtcc-s-tokenization-service-prepares-for-live-trading-on-canton-network',
+        },
+        {
+          date: '2026-07-06',
+          tag: 'Technology',
+          title: 'IntellectEU launches Canton onboarding package for DTCC tokenization participants',
+          body: 'CantonNews (July 6, 2026): IntellectEU rolled out a bundled onboarding package for DTCC Industry Working Group members preparing for DTCC’s Canton tokenization service—covering validator/SV node operations via CatalyX Blockchain Manager, wallet and custody integration, custom Daml development, tokenomics advisory, and back-office integration while preserving institutional node ownership. The offer follows DTCC’s July limited-production / October full-launch schedule. IntellectEU cites prior Canton work including Société Générale’s November 2025 U.S. digital bond nodes (with Broadridge) and February 2026 cross-border intraday repo on tokenized Gilts with DTCC, LSEG, Euroclear, Citadel Securities, Tradeweb, and Archax.',
+          url: 'https://cantonnews.org/intellecteu-launches-canton-onboarding-package-for-dtcc-tokenization-participants',
+        },
+        {
+          date: '2026-07-04',
+          tag: 'Ecosystem',
+          title: 'Hecto champions merit-based accredited-investor reform ahead of Hecto Vaults',
+          body: 'CantonNews insight (July 4, 2026): Hecto—the Canton-native pre-IPO index issuer—published “Access by merit, not means,” backing the bipartisan Equal Opportunity for All Investors Act (House-passed July 2025; pending Senate) to let individuals qualify as accredited investors via an SEC/FINRA exam rather than a $1M net-worth or $200K income test. Hecto frames upcoming Hecto Vaults (quote-based single-company access via a regulated, bankruptcy-remote structure) as infrastructure for a wider pool of knowledge-qualified participants when access rules and tokenized securities rails converge. Not legal or investment advice.',
+          url: 'https://cantonnews.org/insights/access-by-merit-not-means',
+        },
+        {
+          date: '2026-07-03',
+          tag: 'Institutional',
+          title: 'CryptoBriefing: DTCC to begin limited tokenization production trades in July',
+          body: 'CryptoBriefing (July 3, 2026): DTCC is set to start limited production trading of tokenized real-world assets this month ahead of an October commercial launch of DTC’s tokenization service—developed with 50+ firms including BlackRock, Bank of America, JPMorgan, Goldman Sachs, Nasdaq, Circle, Robinhood, and Kraken. Tokenized DTC-custodied securities retain conventional investor protections; the rollout follows DTCC’s December 2025 SEC no-action letter covering Russell 1000 stocks, major ETFs, and U.S. Treasuries. Separate from—but complementary to—DTCC’s Canton-based U.S. Treasury minting partnership with Digital Asset (July 13 soft launch on Canton).',
+          url: 'https://cryptobriefing.com/dtcc-tokenization-pilot-russell-1000-etfs-treasuries/',
+        },
+        {
           date: '2026-07-04',
           tag: 'Analysis',
           title: 'Zenith publishes Canton Network Signal: June 2026 recap',
@@ -1558,6 +1586,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-06', tag: '机构', title: 'DTCC 代币化服务定于 7 月 13 日在 Canton Network 软启动', body: 'CantonNews（2026-07-06）：距上线一周，DTCC 代币化服务计划于 2026 年 7 月 13 日起在 Canton Network 启动有限生产交易——首次在公开区块链生产环境中铸造并交易 DTC 托管的美国国债。2025 年 12 月 DTCC、Digital Asset 与 Canton 的合作使用 DTCC ComposerX 套件；范围或随参与方兴趣扩展，全面 rollout 目标 2026 年 10 月中旬。DTCC 与 Euroclear 共同担任 Canton Foundation 联席主席；50+ 家机构通过 Canton 行业工作组参与服务设计。', url: 'https://cantonnews.org/seven-days-to-go-dtcc-s-tokenization-service-prepares-for-live-trading-on-canton-network' },
+        { date: '2026-07-06', tag: '技术', title: 'IntellectEU 为 DTCC 代币化参与方推出 Canton 一体化接入包', body: 'CantonNews（2026-07-06）：IntellectEU 面向 DTCC 行业工作组成员推出捆绑式 Canton 接入包，为 DTCC Canton 代币化服务做准备——涵盖经 CatalyX Blockchain Manager 的验证者/SV 节点运维、钱包与托管集成、定制 Daml 开发、代币经济咨询及后台系统集成，同时保留机构节点所有权。方案紧随 DTCC 7 月有限生产与 10 月全面上线时间表。IntellectEU 援引此前 Canton 工作：2025 年 11 月 Société Générale 美国数字债券节点（与 Broadridge）、2026 年 2 月与 DTCC、LSEG、Euroclear、Citadel Securities、Tradeweb、Archax 等在代币化英国国债上的跨境日内回购。', url: 'https://cantonnews.org/intellecteu-launches-canton-onboarding-package-for-dtcc-tokenization-participants' },
+        { date: '2026-07-04', tag: '生态', title: 'Hecto 倡导按能力而非财富认定合格投资者（Hecto Vaults 前瞻）', body: 'CantonNews 洞察（2026-07-04）：Canton 原生 pre-IPO 指数发行方 Hecto 发布《Access by merit, not means》，支持两党《Equal Opportunity for All Investors Act》（众议院 2025 年 7 月通过、参议院审议中）——允许个人通过 SEC/FINRA 考试而非 100 万美元净资产或 20 万美元收入门槛获得合格投资者资格。Hecto 将即将推出的 Hecto Vaults（经受监管、破产隔离结构的单公司报价准入）定位为：当准入规则与代币化证券基础设施汇合时，为更多经知识认证的参与者提供通道。非法律或投资建议。', url: 'https://cantonnews.org/insights/access-by-merit-not-means' },
+        { date: '2026-07-03', tag: '机构', title: 'CryptoBriefing：DTCC 将于 7 月启动代币化资产有限生产交易', body: 'CryptoBriefing（2026-07-03）：DTCC 本月将开始代币化真实资产的有限生产交易，为 10 月 DTC 代币化服务商业上线铺路——与 50+ 机构共同开发，参与方含 BlackRock、美国银行、摩根大通、高盛、Nasdaq、Circle、Robinhood 与 Kraken。代币化 DTC 托管证券保留传统投资者保护； rollout 依据 DTCC 2025 年 12 月 SEC 无异议函，覆盖 Russell 1000 股票、主要 ETF 与美国国债。与 DTCC–Digital Asset 在 Canton 上铸造美国国债的独立合作（7 月 13 日 Canton 软启动）互补而非同一项目。', url: 'https://cryptobriefing.com/dtcc-tokenization-pilot-russell-1000-etfs-treasuries/' },
         { date: '2026-07-04', tag: '分析', title: 'Zenith 发布 Canton Network Signal：2026 年 6 月生态回顾', body: 'CantonNews 洞察（2026-07-04）：Zenith——Canton 的 EVM/SVM 执行层与超级验证者——发布 6 月生态回顾，涵盖 Digital Asset 3.55 亿美元 F 轮融资（a16z 领投）、Zenith 获邀加入 Progmat 代币化 JGB 回购工作组、Mastercard 稳定币结算纳入 Canton、Palladium 1000 万 CC Genesis 基金、CIP-0112/0119 批准、协议 3.5 LSU、900+ 验证者（含 Citadel LLC 与台新银行等新运营商）、Hacken 与 Moonsong Labs 等生态伙伴、Canborsa/Nexode/Walley 上线，以及 DefiLlama 30 日约 5900–6000 万美元手续费。Zenith 认为 2026 下半年机构资本与日本链上回购研究将形成顺风。', url: 'https://cantonnews.org/insights/canton-network-signal-june-2026-recap-by-zenith' },
         { date: '2026-07-03', tag: '机构', title: 'Grayscale 将 Canton 列为监管清晰化受益区块链之一', body: 'CantonNews（2026-07-03）：Grayscale Stack 文章《The Blockchains that Stand to Benefit From Regulatory Clarity》将 Canton 与 Ethereum、Solana、BNB Chain 并列为若美国数字资产规则更清晰，机构资本可能优先流向的网络——聚焦代币化资产、稳定币与机构 DeFi。背景：参议院银行委员会于 2026-05-14 以 15:9 推进 Digital Asset Market Clarity Act。Grayscale 强调 Canton 为机构导向、支持选择性披露的基础设施——非价格预测或采用保证。', url: 'https://cantonnews.org/grayscale-names-canton-among-blockchains-poised-to-benefit-from-regulatory-clarity' },
         { date: '2026-07-01', tag: '技术', title: 'Noves 与 RedStone 在 Canton 集成机构级价格 feed', body: 'CantonNews（2026-07-01）：服务 150+ Canton 参与者的私有数据平台 Noves 与 RedStone 合作，将稳定币与代币化基金定价纳入 Noves Data Platform，支持按市价计价、关账与成本基础报告，同时保留 Canton 隐私。RedStone 覆盖 crypto、股票、外汇、大宗商品与自定义 NAV；2026 年 4 月提交的 CAPS（Canton Access and Privacy Standard）为正式 CIP。早期机构讨论含 Hamilton Lane SCOPE、Re reUSD、Fasanara F-ONE 与 Spiko 国库券产品。', url: 'https://cantonnews.org/noves-and-redstone-partner-to-bring-institutional-price-feeds-to-canton-network' },
