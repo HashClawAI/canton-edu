@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-09',
+          tag: 'Technology',
+          title: 'Turnkey adds Canton key management, Party registration, and transaction signing',
+          body: 'CantonNews (July 9, 2026): Turnkey launched native Canton Network support—generate Canton-compatible keys, register Canton Parties, and sign Canton transactions through one API without custom signing stacks. Keys sit in enclave-backed infrastructure with policy controls and auditability consistent across Turnkey’s multi-chain platform; the flow works on local dev environments and live Canton nodes, with a reference Party-registration implementation. Aimed at tokenized-asset platforms, settlement systems, private-market infrastructure, and multi-party institutional workflows; non-custodial by design so end users retain key control under regulated-app security requirements.',
+          url: 'https://cantonnews.org/turnkey-brings-secure-key-management-and-signing-infrastructure-to-canton-network',
+        },
+        {
+          date: '2026-07-08',
+          tag: 'Infrastructure',
+          title: 'Alchemy Validator-as-a-Service goes live for Canton Network',
+          body: 'Alchemy blog (July 8, 2026): Validator-as-a-Service (VaaS) is now live—a fully managed Canton deployment across DevNet, TestNet, and MainNet. Alchemy provisions and operates participant and validator nodes, keeps upgrades in lockstep with mandatory network releases, handles package deployment and 99.9% SLA monitoring (three-AZ mirroring), and pays Canton Coin network fees on the customer’s behalf so institutions can invoice in fiat without holding CC on balance sheet. Includes managed Ledger API access and Utilities API for CIP-56 tokenization workflows; runs inside the same Alchemy dashboard used for Ethereum, Solana, Base, and 100+ other chains. Bring-your-own-key: customers retain custody throughout.',
+          url: 'https://www.alchemy.com/blog/canton-validator-as-a-service-is-now-live-on-alchemy',
+        },
+        {
           date: '2026-07-07',
           tag: 'Ecosystem',
           title: 'NETSTARS and Canton Foundation sign MOU to explore Web3 payments',
@@ -1594,6 +1608,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-09', tag: '技术', title: 'Turnkey 上线 Canton 密钥管理、Party 注册与交易签名', body: 'CantonNews（2026-07-09）：Turnkey 新增 Canton Network 原生支持——通过单一 API 生成 Canton 兼容密钥、注册 Canton Party 并签署 Canton 交易，无需自建定制签名栈。密钥置于 enclave 基础设施内，策略控制与可审计性与 Turnkey 多链平台一致；流程覆盖本地开发环境与线上 Canton 节点，并提供 Party 注册参考实现。面向代币化资产平台、结算系统、私募市场基础设施与多方机构工作流；非托管设计使用户在受监管应用安全要求下保留密钥控制权。', url: 'https://cantonnews.org/turnkey-brings-secure-key-management-and-signing-infrastructure-to-canton-network' },
+        { date: '2026-07-08', tag: '基础设施', title: 'Alchemy 为 Canton Network 推出 Validator-as-a-Service', body: 'Alchemy 博客（2026-07-08）：Validator-as-a-Service（VaaS）已上线——覆盖 DevNet、TestNet 与 MainNet 的全托管 Canton 部署。Alchemy 负责配置与运维参与节点与验证节点、与强制网络升级同步、包部署及 99.9% SLA 监控（三可用区镜像），并代付 Canton Coin 网络费用，使机构可用法币发票结算、无需在资产负债表持有 CC。含托管 Ledger API 与面向 CIP-56 代币化工作流的 Utilities API；与以太坊、Solana、Base 等 100+ 链共用同一 Alchemy 控制台。自带密钥（BYOK）：客户全程保留托管权。', url: 'https://www.alchemy.com/blog/canton-validator-as-a-service-is-now-live-on-alchemy' },
         { date: '2026-07-07', tag: '生态', title: 'NETSTARS 与 Canton Foundation 签署 MOU，探索 Web3 支付', body: 'CantonNews / NETSTARS（2026-07-07）：日本无现金支付服务商 NETSTARS 与 Canton Foundation 签署谅解备忘录，探索基于 Web3 的支付方案（含稳定币通道），将 NETSTARS 的 StarPay 商户网络与 Canton 注重隐私、互操作与合规的基础设施结合。讨论与 StarPay-X 网关构想一致——在 Web2 无现金支付与 Web3 之间架桥，不将商户锁定于单一链、钱包或服务商；Canton 与 Aptos、Solana Foundation 等同为技术评审伙伴。MOU 仅确立磋商框架，尚不承诺产品上线或商业安排。NETSTARS 运营 StarPay 二维码/移动支付；Canton Foundation 亚太负责人 Thomas Chou 与 CEO 李刚强调在隐私合规前提下探索零售支付应用。', url: 'https://cantonnews.org/netstars-and-canton-foundation-sign-mou-to-explore-web3-payments' },
         { date: '2026-07-06', tag: '机构', title: 'DTCC 代币化服务定于 7 月 13 日在 Canton Network 软启动', body: 'CantonNews（2026-07-06）：距上线一周，DTCC 代币化服务计划于 2026 年 7 月 13 日起在 Canton Network 启动有限生产交易——首次在公开区块链生产环境中铸造并交易 DTC 托管的美国国债。2025 年 12 月 DTCC、Digital Asset 与 Canton 的合作使用 DTCC ComposerX 套件；范围或随参与方兴趣扩展，全面 rollout 目标 2026 年 10 月中旬。DTCC 与 Euroclear 共同担任 Canton Foundation 联席主席；50+ 家机构通过 Canton 行业工作组参与服务设计。', url: 'https://cantonnews.org/seven-days-to-go-dtcc-s-tokenization-service-prepares-for-live-trading-on-canton-network' },
         { date: '2026-07-06', tag: '技术', title: 'IntellectEU 为 DTCC 代币化参与方推出 Canton 一体化接入包', body: 'CantonNews（2026-07-06）：IntellectEU 面向 DTCC 行业工作组成员推出捆绑式 Canton 接入包，为 DTCC Canton 代币化服务做准备——涵盖经 CatalyX Blockchain Manager 的验证者/SV 节点运维、钱包与托管集成、定制 Daml 开发、代币经济咨询及后台系统集成，同时保留机构节点所有权。方案紧随 DTCC 7 月有限生产与 10 月全面上线时间表。IntellectEU 援引此前 Canton 工作：2025 年 11 月 Société Générale 美国数字债券节点（与 Broadridge）、2026 年 2 月与 DTCC、LSEG、Euroclear、Citadel Securities、Tradeweb、Archax 等在代币化英国国债上的跨境日内回购。', url: 'https://cantonnews.org/intellecteu-launches-canton-onboarding-package-for-dtcc-tokenization-participants' },
