@@ -271,6 +271,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-10',
+          tag: 'Technology',
+          title: 'x402 HTTP micropayments go live on Canton MainNet via FTP Tech',
+          body: 'CantonNews (July 10, 2026): FTP Tech shipped the x402 payment standard on Canton MainNet—HTTP APIs can charge per request via the 402 Payment Required flow, with each payment settling on-ledger in Canton Coin. The stack comprises a non-custodial facilitator (verifies settlement without holding buyer/seller funds), a client SDK, and middleware gating resource servers. FTP Tech also offers a Canton Agent Wallet so AI agents hold self-custody CC and pay for x402-gated APIs from their own balance while the facilitator submits transactions and pays gas. Integration is open source under Apache-2.0 for API providers, agent builders, and institutions needing auditable on-ledger settlement.',
+          url: 'https://cantonnews.org/x402-payments-go-live-on-canton-network',
+        },
+        {
           date: '2026-07-09',
           tag: 'Technology',
           title: 'Turnkey adds Canton key management, Party registration, and transaction signing',
@@ -1608,6 +1615,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-10', tag: '技术', title: 'FTP Tech 在 Canton MainNet 上线 x402 HTTP 微支付', body: 'CantonNews（2026-07-10）：FTP Tech 在 Canton MainNet 交付 x402 支付标准——HTTP API 可通过 402 Payment Required 流程按请求计费，每笔支付以 Canton Coin 在链上结算。技术栈含非托管 facilitator（验证结算但不持有买卖双方资金）、客户端 SDK 与资源服务器中间件。FTP Tech 还提供 Canton Agent Wallet，使 AI 智能体自持 CC 并从自有余额支付 x402 门控 API，facilitator 代为提交交易并支付 gas。集成以 Apache-2.0 开源，面向 API 提供方、智能体构建方及需要可审计链上结算的机构。', url: 'https://cantonnews.org/x402-payments-go-live-on-canton-network' },
         { date: '2026-07-09', tag: '技术', title: 'Turnkey 上线 Canton 密钥管理、Party 注册与交易签名', body: 'CantonNews（2026-07-09）：Turnkey 新增 Canton Network 原生支持——通过单一 API 生成 Canton 兼容密钥、注册 Canton Party 并签署 Canton 交易，无需自建定制签名栈。密钥置于 enclave 基础设施内，策略控制与可审计性与 Turnkey 多链平台一致；流程覆盖本地开发环境与线上 Canton 节点，并提供 Party 注册参考实现。面向代币化资产平台、结算系统、私募市场基础设施与多方机构工作流；非托管设计使用户在受监管应用安全要求下保留密钥控制权。', url: 'https://cantonnews.org/turnkey-brings-secure-key-management-and-signing-infrastructure-to-canton-network' },
         { date: '2026-07-08', tag: '基础设施', title: 'Alchemy 为 Canton Network 推出 Validator-as-a-Service', body: 'Alchemy 博客（2026-07-08）：Validator-as-a-Service（VaaS）已上线——覆盖 DevNet、TestNet 与 MainNet 的全托管 Canton 部署。Alchemy 负责配置与运维参与节点与验证节点、与强制网络升级同步、包部署及 99.9% SLA 监控（三可用区镜像），并代付 Canton Coin 网络费用，使机构可用法币发票结算、无需在资产负债表持有 CC。含托管 Ledger API 与面向 CIP-56 代币化工作流的 Utilities API；与以太坊、Solana、Base 等 100+ 链共用同一 Alchemy 控制台。自带密钥（BYOK）：客户全程保留托管权。', url: 'https://www.alchemy.com/blog/canton-validator-as-a-service-is-now-live-on-alchemy' },
         { date: '2026-07-07', tag: '生态', title: 'NETSTARS 与 Canton Foundation 签署 MOU，探索 Web3 支付', body: 'CantonNews / NETSTARS（2026-07-07）：日本无现金支付服务商 NETSTARS 与 Canton Foundation 签署谅解备忘录，探索基于 Web3 的支付方案（含稳定币通道），将 NETSTARS 的 StarPay 商户网络与 Canton 注重隐私、互操作与合规的基础设施结合。讨论与 StarPay-X 网关构想一致——在 Web2 无现金支付与 Web3 之间架桥，不将商户锁定于单一链、钱包或服务商；Canton 与 Aptos、Solana Foundation 等同为技术评审伙伴。MOU 仅确立磋商框架，尚不承诺产品上线或商业安排。NETSTARS 运营 StarPay 二维码/移动支付；Canton Foundation 亚太负责人 Thomas Chou 与 CEO 李刚强调在隐私合规前提下探索零售支付应用。', url: 'https://cantonnews.org/netstars-and-canton-foundation-sign-mou-to-explore-web3-payments' },
