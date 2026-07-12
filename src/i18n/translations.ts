@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-11',
+          tag: 'Protocol',
+          title: 'Digital Asset co-founder outlines CC burning across all Canton synchronizers',
+          body: 'CantonNews (July 11, 2026): Digital Asset co-founder Shaul Kfir outlined a planned tokenomics expansion—every synchronizer on Canton Network would burn Canton Coin and generate validator rewards, not only the Global Synchronizer. Today validators burn CC and earn rewards only when routing through the Global Synchronizer; dedicated private synchronizers sit outside that loop. A formal CIP draft is expected in September 2026, with phased rollout targeted across H1 2027. Burn would scale with volume and throughput per synchronizer rather than a flat fee; existing production private synchronizers would migrate once incentives are live. Minting schedule unchanged—total burn would grow as more synchronizers and usage come online without adding emissions.',
+          url: 'https://cantonnews.org/digital-asset-co-founder-outlines-plan-to-extend-cc-burning-to-every-canton-synchronizer',
+        },
+        {
+          date: '2026-07-10',
+          tag: 'Markets',
+          title: 'OKJ to list CC on July 15 — first Japanese order-book trading for Canton Coin',
+          body: 'CantonNews / OKJ press release (July 10, 2026): Japanese crypto exchange OKJ (OKCoin Japan) will begin supporting Canton Coin on July 15, 2026 at 17:00 JST—exchange order-book trading, brokerage, recurring purchases, and Canton Mainnet deposits/withdrawals. OKJ cites this as the first order-book CC offering by a Japanese crypto asset exchange provider (per company research as of July 10). Supported network: Canton Network; total listed assets rises to 54. CC pays Global Synchronizer fees and funds validator/app rewards on the privacy-enabled institutional Layer 1 developed by Digital Asset.',
+          url: 'https://cantonnews.org/okj-to-add-canton-coin-cc-on-july-15',
+        },
+        {
           date: '2026-07-10',
           tag: 'Technology',
           title: 'x402 HTTP micropayments go live on Canton MainNet via FTP Tech',
@@ -1334,6 +1348,7 @@ export const translations = {
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT (see venue rules)' },
         { name: 'Bithumb', pairs: 'CC/KRW (Canton Mainnet; see venue rules)' },
+        { name: 'OKJ', pairs: 'CC/JPY (order book; Jul 15, 2026 launch)' },
         { name: 'Crypto.com', pairs: 'Canton deposits / withdrawals (app; region rules)' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
@@ -1615,6 +1630,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-11', tag: '协议', title: 'Digital Asset 联合创始人阐述将 CC 燃烧扩展至全部 Canton 同步器', body: 'CantonNews（2026-07-11）：Digital Asset 联合创始人 Shaul Kfir 概述一项计划中的代币经济扩展——Canton Network 上每个同步器都将燃烧 Canton Coin 并产生验证者奖励，而不仅限于 Global Synchronizer。当前验证者仅在经 Global Synchronizer 路由时燃烧 CC 并获得奖励；机构自建的专用同步器处于该经济循环之外。正式 CIP 草案预计 2026 年 9 月发布，分阶段 rollout 目标为 2027 年上半年。燃烧将按各同步器的流量与吞吐缩放，而非固定费用；现有生产中的私有同步器将在激励到位后迁移。铸造日程不变——随更多同步器与用量上线，总燃烧量将增长而不增加排放。', url: 'https://cantonnews.org/digital-asset-co-founder-outlines-plan-to-extend-cc-burning-to-every-canton-synchronizer' },
+        { date: '2026-07-10', tag: '交易所', title: 'OKJ 将于 7 月 15 日上线 CC——日本首家板取引', body: 'CantonNews / OKJ 新闻稿（2026-07-10）：日本加密资产交易所 OKJ（OKCoin Japan）将于 2026 年 7 月 15 日 17:00（日本时间）起支持 Canton Coin——含交易所板取引、贩卖所、定投及 Canton 主网存取。OKJ 称此为日本加密资产交换业者中首次提供板取引 CC（截至 2026-07-10 公司调查）。支持网络：Canton Network；上架币种总数升至 54。CC 用于支付 Global Synchronizer 费用并为验证者与应用开发者提供奖励，运行于 Digital Asset 开发的隐私型机构 Layer 1。', url: 'https://cantonnews.org/okj-to-add-canton-coin-cc-on-july-15' },
         { date: '2026-07-10', tag: '技术', title: 'FTP Tech 在 Canton MainNet 上线 x402 HTTP 微支付', body: 'CantonNews（2026-07-10）：FTP Tech 在 Canton MainNet 交付 x402 支付标准——HTTP API 可通过 402 Payment Required 流程按请求计费，每笔支付以 Canton Coin 在链上结算。技术栈含非托管 facilitator（验证结算但不持有买卖双方资金）、客户端 SDK 与资源服务器中间件。FTP Tech 还提供 Canton Agent Wallet，使 AI 智能体自持 CC 并从自有余额支付 x402 门控 API，facilitator 代为提交交易并支付 gas。集成以 Apache-2.0 开源，面向 API 提供方、智能体构建方及需要可审计链上结算的机构。', url: 'https://cantonnews.org/x402-payments-go-live-on-canton-network' },
         { date: '2026-07-09', tag: '技术', title: 'Turnkey 上线 Canton 密钥管理、Party 注册与交易签名', body: 'CantonNews（2026-07-09）：Turnkey 新增 Canton Network 原生支持——通过单一 API 生成 Canton 兼容密钥、注册 Canton Party 并签署 Canton 交易，无需自建定制签名栈。密钥置于 enclave 基础设施内，策略控制与可审计性与 Turnkey 多链平台一致；流程覆盖本地开发环境与线上 Canton 节点，并提供 Party 注册参考实现。面向代币化资产平台、结算系统、私募市场基础设施与多方机构工作流；非托管设计使用户在受监管应用安全要求下保留密钥控制权。', url: 'https://cantonnews.org/turnkey-brings-secure-key-management-and-signing-infrastructure-to-canton-network' },
         { date: '2026-07-08', tag: '基础设施', title: 'Alchemy 为 Canton Network 推出 Validator-as-a-Service', body: 'Alchemy 博客（2026-07-08）：Validator-as-a-Service（VaaS）已上线——覆盖 DevNet、TestNet 与 MainNet 的全托管 Canton 部署。Alchemy 负责配置与运维参与节点与验证节点、与强制网络升级同步、包部署及 99.9% SLA 监控（三可用区镜像），并代付 Canton Coin 网络费用，使机构可用法币发票结算、无需在资产负债表持有 CC。含托管 Ledger API 与面向 CIP-56 代币化工作流的 Utilities API；与以太坊、Solana、Base 等 100+ 链共用同一 Alchemy 控制台。自带密钥（BYOK）：客户全程保留托管权。', url: 'https://www.alchemy.com/blog/canton-validator-as-a-service-is-now-live-on-alchemy' },
@@ -1951,6 +1968,7 @@ export const translations = {
         { name: 'HTX', pairs: 'CC/USDT' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT（以所内规则为准）' },
         { name: 'Bithumb', pairs: 'CC/KRW（Canton 主网；以所内规则为准）' },
+        { name: 'OKJ', pairs: 'CC/JPY（板取引；2026-07-15 起）' },
         { name: 'Crypto.com', pairs: 'Canton 存取（App，地区规则）' },
         { name: 'Bitpanda', pairs: 'CC/EUR' },
         { name: 'HashKey', pairs: 'CC/USD (HK pro only)' },
