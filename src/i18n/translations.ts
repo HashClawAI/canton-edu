@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-13',
+          tag: 'Ecosystem',
+          title: 'Edel Finance prepares Edel Markets — Canton-native perpetuals for tokenized assets',
+          body: 'CantonNews (July 13, 2026; product announced July 9): Edel Finance is preparing Edel Markets, a Canton-native perpetuals venue for tokenized equities, commodities, and future multi-asset markets—expected later this quarter with a waitlist open. Built on four pillars: private position state, central limit order book execution, native Canton settlement, and API-first infrastructure; orders flow through matching, risk, and margin checks before on-ledger settlement while positions stay visible only to entitled participants. Follows Runway, Edel’s participation platform on Canton (~5,000 private-beta users; Cantex anchor partnership peaked near $100,000 daily volume). Edel Lending supplies collateral; Runway participation; planned Edel Vaults for structured exposure. Team includes Brad Klaas (former BlackRock global head of securities lending).',
+          url: 'https://cantonnews.org/edel-finance-prepares-canton-native-perpetuals-venue-for-tokenized-assets',
+        },
+        {
+          date: '2026-07-13',
+          tag: 'Institutions',
+          title: 'Grayscale names Canton among five networks positioned for tokenized equities',
+          body: 'CantonNews (July 13, 2026; Grayscale research July 9): Head of Research Zach Pandl’s report places Canton alongside Ethereum, Solana, BNB Chain, and Avalanche as networks positioned to benefit from tokenized-equities growth—across three phases: (1) third-party wrappers (>70% of current tokenized-stock market cap on public chains), (2) regulated entitlement systems tied to existing market infrastructure, and (3) issuer-sponsored onchain shares (e.g. Securitize). Canton’s distinct role is phase two: DTCC plans Canton as the first blockchain in its tokenization pilot, minting eligible securities through regulated post-trade rails rather than wrapper SPVs. Grayscale expects all three models to coexist for years—not a price call.',
+          url: 'https://cantonnews.org/grayscale-names-canton-among-five-networks-positioned-for-tokenized-equities',
+        },
+        {
           date: '2026-07-11',
           tag: 'Protocol',
           title: 'Digital Asset co-founder outlines CC burning across all Canton synchronizers',
@@ -1630,6 +1644,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-13', tag: '生态', title: 'Edel Finance 筹备 Edel Markets——Canton 原生代币化资产永续合约场所', body: 'CantonNews（2026-07-13；产品于 7 月 9 日宣布）：Edel Finance 正在筹备 Edel Markets——面向代币化股票、大宗商品及未来多资产市场的 Canton 原生永续合约场所，预计本季度晚些时候上线，等候名单已开放。四大支柱：私有持仓状态、中央限价订单簿撮合、Canton 原生结算与 API 优先基础设施；订单经撮合、风险与保证金检查后链上结算，持仓仅对授权参与者可见。此前已推出 Runway 参与平台（约 5000 私测用户；与 Cantex 锚定合作日成交量峰值近 10 万美元）。Edel Lending 提供抵押层，Runway 提供参与层，计划中的 Edel Vaults 提供结构化敞口。团队含 Brad Klaas（前 BlackRock 全球证券借贷负责人）。', url: 'https://cantonnews.org/edel-finance-prepares-canton-native-perpetuals-venue-for-tokenized-assets' },
+        { date: '2026-07-13', tag: '机构', title: 'Grayscale 将 Canton 列为代币化股票五大受益网络之一', body: 'CantonNews（2026-07-13；Grayscale 研究 7 月 9 日）：研究主管 Zach Pandl 报告将 Canton 与 Ethereum、Solana、BNB Chain、Avalanche 并列为有望受益于代币化股票增长的五大网络——分三阶段：（1）第三方包装器（当前代币化股票市值超 70% 在公链）；（2）与现有市场基础设施对接的受监管权益系统；（3）发行人直接在链上发行/赞助股份（如 Securitize）。Canton 的差异化在第二阶段：DTCC 计划以 Canton 作为代币化试点首条区块链，经受监管的后交易通道铸造合格证券，而非包装 SPV。Grayscale 预期三种模式将并存多年——非价格预测。', url: 'https://cantonnews.org/grayscale-names-canton-among-five-networks-positioned-for-tokenized-equities' },
         { date: '2026-07-11', tag: '协议', title: 'Digital Asset 联合创始人阐述将 CC 燃烧扩展至全部 Canton 同步器', body: 'CantonNews（2026-07-11）：Digital Asset 联合创始人 Shaul Kfir 概述一项计划中的代币经济扩展——Canton Network 上每个同步器都将燃烧 Canton Coin 并产生验证者奖励，而不仅限于 Global Synchronizer。当前验证者仅在经 Global Synchronizer 路由时燃烧 CC 并获得奖励；机构自建的专用同步器处于该经济循环之外。正式 CIP 草案预计 2026 年 9 月发布，分阶段 rollout 目标为 2027 年上半年。燃烧将按各同步器的流量与吞吐缩放，而非固定费用；现有生产中的私有同步器将在激励到位后迁移。铸造日程不变——随更多同步器与用量上线，总燃烧量将增长而不增加排放。', url: 'https://cantonnews.org/digital-asset-co-founder-outlines-plan-to-extend-cc-burning-to-every-canton-synchronizer' },
         { date: '2026-07-10', tag: '交易所', title: 'OKJ 将于 7 月 15 日上线 CC——日本首家板取引', body: 'CantonNews / OKJ 新闻稿（2026-07-10）：日本加密资产交易所 OKJ（OKCoin Japan）将于 2026 年 7 月 15 日 17:00（日本时间）起支持 Canton Coin——含交易所板取引、贩卖所、定投及 Canton 主网存取。OKJ 称此为日本加密资产交换业者中首次提供板取引 CC（截至 2026-07-10 公司调查）。支持网络：Canton Network；上架币种总数升至 54。CC 用于支付 Global Synchronizer 费用并为验证者与应用开发者提供奖励，运行于 Digital Asset 开发的隐私型机构 Layer 1。', url: 'https://cantonnews.org/okj-to-add-canton-coin-cc-on-july-15' },
         { date: '2026-07-10', tag: '技术', title: 'FTP Tech 在 Canton MainNet 上线 x402 HTTP 微支付', body: 'CantonNews（2026-07-10）：FTP Tech 在 Canton MainNet 交付 x402 支付标准——HTTP API 可通过 402 Payment Required 流程按请求计费，每笔支付以 Canton Coin 在链上结算。技术栈含非托管 facilitator（验证结算但不持有买卖双方资金）、客户端 SDK 与资源服务器中间件。FTP Tech 还提供 Canton Agent Wallet，使 AI 智能体自持 CC 并从自有余额支付 x402 门控 API，facilitator 代为提交交易并支付 gas。集成以 Apache-2.0 开源，面向 API 提供方、智能体构建方及需要可审计链上结算的机构。', url: 'https://cantonnews.org/x402-payments-go-live-on-canton-network' },
