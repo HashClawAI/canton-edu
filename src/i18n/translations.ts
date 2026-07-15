@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-14',
+          tag: 'Tokenization',
+          title: 'Temple Digital Group partners with BitGo for qualified custody on Canton tokenized assets',
+          body: 'CantonNews (July 14, 2026): Temple Digital Group and BitGo partnered to pair BitGo Bank and Trust (OCC-chartered digital asset trust bank) qualified custody with Temple’s Canton exchange and RFQ venue for tokenized assets. BitGo institutional clients gain direct capital-markets access through Temple; Temple partners gain regulated custody via BitGo’s Go Network settlement stack. Scope covers tokenized U.S. Treasuries, stocks, commodities, ETFs, vaults, and expanding regulated markets settling on Canton—combining BitGo’s custody/settlement since 2013 with Temple’s leading Canton RFQ infrastructure.',
+          url: 'https://cantonnews.org/temple-digital-group-and-bitgo-partner-to-bring-qualified-custody-to-tokenized-assets-on-canton-network',
+        },
+        {
+          date: '2026-07-13',
+          tag: 'Institutions',
+          title: 'Digital Asset / Canton joins 54-firm UK wholesale tokenisation taskforce',
+          body: 'CantonNews / HM Treasury (July 13, 2026): Digital Asset / Canton is among 54 firms backing HM Treasury Wholesale Digital Markets Champion Chris Woolard’s inaugural report to Chancellor Rachel Reeves—supported by the City of London Corporation with UK regulators and industry bodies (TheCityUK, Investment Association, UK Finance, Innovate Finance). Over 12 months the taskforce will deliver live end-to-end wholesale tokenisation use cases, starting with tokenised repo and nine Action Groups across issuance, secondary markets, collateral, funds, payments, legal/tax, interoperability, and financial-crime compliance—building on DIGIT (UK Digital Gilt). Participants include BlackRock, Goldman Sachs, J.P. Morgan, Morgan Stanley, DTCC, Tradeweb, HSBC, LSEG, and Wintermute.',
+          url: 'https://cantonnews.org/digital-asset-canton-joins-54-firm-uk-wholesale-tokenisation-taskforce',
+        },
+        {
           date: '2026-07-13',
           tag: 'Ecosystem',
           title: 'Edel Finance prepares Edel Markets — Canton-native perpetuals for tokenized assets',
@@ -1644,6 +1658,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-14', tag: '代币化', title: 'Temple Digital Group 与 BitGo 合作，为 Canton 代币化资产提供合格托管', body: 'CantonNews（2026-07-14）：Temple Digital Group 与 BitGo 达成合作，将 BitGo Bank and Trust（OCC 特许数字资产信托银行）合格托管与 Temple 的 Canton 交易所及 RFQ 场所对接。BitGo 机构客户可通过 Temple 直达资本市场；Temple 合作伙伴则获得经 BitGo Go Network 结算栈提供的受监管托管。范围涵盖代币化美国国债、股票、大宗商品、ETF、金库及不断扩展的 Canton 结算受监管市场——结合 BitGo 自 2013 年以来的托管/结算能力与 Temple 领先的 Canton RFQ 基础设施。', url: 'https://cantonnews.org/temple-digital-group-and-bitgo-partner-to-bring-qualified-custody-to-tokenized-assets-on-canton-network' },
+        { date: '2026-07-13', tag: '机构', title: 'Digital Asset / Canton 加入英国 54 家机构批发代币化工作组', body: 'CantonNews / 英国财政部（2026-07-13）：Digital Asset / Canton 为 54 家支持机构之一，参与财政部批发数字市场倡导人 Chris Woolard 向财政大臣 Rachel Reeves 提交的首份报告——由伦敦金融城公司支持，并与英国监管机构及行业机构（TheCityUK、Investment Association、UK Finance、Innovate Finance）协同。未来 12 个月工作组将交付端到端批发代币化实盘用例，首要是代币化回购，并设立九个行动组覆盖发行、二级市场、抵押品、基金、支付、法律/税务、互操作与金融犯罪合规——在 DIGIT（英国数字国债）基础上推进。参与方含 BlackRock、高盛、摩根大通、摩根士丹利、DTCC、Tradeweb、汇丰、LSEG 与 Wintermute。', url: 'https://cantonnews.org/digital-asset-canton-joins-54-firm-uk-wholesale-tokenisation-taskforce' },
         { date: '2026-07-13', tag: '生态', title: 'Edel Finance 筹备 Edel Markets——Canton 原生代币化资产永续合约场所', body: 'CantonNews（2026-07-13；产品于 7 月 9 日宣布）：Edel Finance 正在筹备 Edel Markets——面向代币化股票、大宗商品及未来多资产市场的 Canton 原生永续合约场所，预计本季度晚些时候上线，等候名单已开放。四大支柱：私有持仓状态、中央限价订单簿撮合、Canton 原生结算与 API 优先基础设施；订单经撮合、风险与保证金检查后链上结算，持仓仅对授权参与者可见。此前已推出 Runway 参与平台（约 5000 私测用户；与 Cantex 锚定合作日成交量峰值近 10 万美元）。Edel Lending 提供抵押层，Runway 提供参与层，计划中的 Edel Vaults 提供结构化敞口。团队含 Brad Klaas（前 BlackRock 全球证券借贷负责人）。', url: 'https://cantonnews.org/edel-finance-prepares-canton-native-perpetuals-venue-for-tokenized-assets' },
         { date: '2026-07-13', tag: '机构', title: 'Grayscale 将 Canton 列为代币化股票五大受益网络之一', body: 'CantonNews（2026-07-13；Grayscale 研究 7 月 9 日）：研究主管 Zach Pandl 报告将 Canton 与 Ethereum、Solana、BNB Chain、Avalanche 并列为有望受益于代币化股票增长的五大网络——分三阶段：（1）第三方包装器（当前代币化股票市值超 70% 在公链）；（2）与现有市场基础设施对接的受监管权益系统；（3）发行人直接在链上发行/赞助股份（如 Securitize）。Canton 的差异化在第二阶段：DTCC 计划以 Canton 作为代币化试点首条区块链，经受监管的后交易通道铸造合格证券，而非包装 SPV。Grayscale 预期三种模式将并存多年——非价格预测。', url: 'https://cantonnews.org/grayscale-names-canton-among-five-networks-positioned-for-tokenized-equities' },
         { date: '2026-07-11', tag: '协议', title: 'Digital Asset 联合创始人阐述将 CC 燃烧扩展至全部 Canton 同步器', body: 'CantonNews（2026-07-11）：Digital Asset 联合创始人 Shaul Kfir 概述一项计划中的代币经济扩展——Canton Network 上每个同步器都将燃烧 Canton Coin 并产生验证者奖励，而不仅限于 Global Synchronizer。当前验证者仅在经 Global Synchronizer 路由时燃烧 CC 并获得奖励；机构自建的专用同步器处于该经济循环之外。正式 CIP 草案预计 2026 年 9 月发布，分阶段 rollout 目标为 2027 年上半年。燃烧将按各同步器的流量与吞吐缩放，而非固定费用；现有生产中的私有同步器将在激励到位后迁移。铸造日程不变——随更多同步器与用量上线，总燃烧量将增长而不增加排放。', url: 'https://cantonnews.org/digital-asset-co-founder-outlines-plan-to-extend-cc-burning-to-every-canton-synchronizer' },
