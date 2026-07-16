@@ -271,6 +271,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-15',
+          tag: 'Ecosystem',
+          title: 'Temple Digital Group executes onchain U.S. Treasury repo via DTCC Tokenization Service on Canton',
+          body: 'CantonNews (July 15, 2026): Temple Digital Group participated in one of the first onchain U.S. Treasury repo trades on Canton through DTCC\'s Tokenization Service—financing a tokenized Treasury against Circle USDCx on Temple\'s RFQ platform with atomic delivery-versus-payment settlement on Canton, while legal ownership remained in DTC\'s book-entry framework. Part of DTCC\'s July 15 live production trades using digital twins minted via the Tokenization Service and delivered to participant wallets. Temple now plans to extend from spot Treasuries to repo and intraday financing and carry the same execution/settlement architecture to tokenized equities ahead of the expected October 2026 DTCC service launch.',
+          url: 'https://cantonnews.org/temple-digital-group-executes-onchain-us-treasury-repo-trade-on-canton-network-via-dtcc-tokenization-service',
+        },
+        {
+          date: '2026-07-15',
+          tag: 'Tokenization',
+          title: 'Bloomberg\'s Balchunas confirms Canton in DTCC multi-chain tokenization push',
+          body: 'CantonNews / Eric Balchunas on X (July 15, 2026): Bloomberg ETF analyst Eric Balchunas confirmed DTCC\'s latest tokenization production initiative runs on Canton (public chain) alongside Hyperledger Besu (DTCC private network)—part of DTCC\'s multi-chain strategy for resilience, scalability, and choice. More than 40 firms participate, including BlackRock, Goldman Sachs, and J.P. Morgan; scope covers Microsoft and Circle shares, major ETFs, and U.S. Treasuries. Highlights Canton\'s recurring role in institutional-grade tokenization rather than single-chain lock-in.',
+          url: 'https://cantonnews.org/canton-network-powers-part-of-dtcc-s-multi-chain-tokenization-push-balchunas-says',
+        },
+        {
+          date: '2026-07-15',
+          tag: 'Institutions',
+          title: 'DTCC processes first live production trades using DTC-tokenized assets on Canton and Besu',
+          body: 'DTCC press release (July 15, 2026): DTCC converted securities held at The Depository Trust Company into tokens used in real production trades—the largest tokenization production initiative to date by use cases, asset classes, and participants (>30 firms). Conversions ran on Hyperledger Besu (DTCC private network) and Canton (public network) as part of a multi-chain strategy; assets included Russell 1000 stocks, major ETFs, and U.S. Treasuries for collateral, repo, and equity workflows. Sets the stage for the DTCC Tokenization Service commercial launch in October 2026, seven months after DTC\'s SEC no-action letter. Participants include BlackRock, Goldman Sachs, J.P. Morgan, Vanguard, Virtu Financial, Tradeweb, Temple Digital Group, Digital Asset, Circle, BitGo Bank & Trust, and NYSE.',
+          url: 'https://www.dtcc.com/news/2026/july/15/dtcc-turns-tokenization-into-reality',
+        },
+        {
           date: '2026-07-14',
           tag: 'Tokenization',
           title: 'Temple Digital Group partners with BitGo for qualified custody on Canton tokenized assets',
@@ -1658,6 +1679,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-15', tag: '生态', title: 'Temple Digital Group 经 DTCC 代币化服务在 Canton 完成链上美国国债回购交易', body: 'CantonNews（2026-07-15）：Temple Digital Group 参与 DTCC 代币化服务在 Canton 上首批链上美国国债回购交易之一——在 Temple RFQ 平台以 Circle USDCx 为代币化现金融资代币化国债，Canton 上原子化 DvP 结算，法定所有权仍保留在 DTC 簿记框架内。属 DTCC 7 月 15 日实盘生产交易，使用代币化服务铸造数字孪生并交付至参与方钱包。Temple 计划从现货国债扩展至回购与日内融资，并将同一执行/结算架构延伸至代币化股票，为 2026 年 10 月 DTCC 服务商用上线做准备。', url: 'https://cantonnews.org/temple-digital-group-executes-onchain-us-treasury-repo-trade-on-canton-network-via-dtcc-tokenization-service' },
+        { date: '2026-07-15', tag: '代币化', title: 'Bloomberg 分析师 Balchunas 确认 Canton 参与 DTCC 多链代币化推进', body: 'CantonNews / Eric Balchunas 在 X（2026-07-15）：Bloomberg ETF 分析师 Eric Balchunas 确认 DTCC 最新代币化生产计划同时运行于 Canton（公链）与 Hyperledger Besu（DTCC 私链）——属 DTCC 多链战略，追求韧性、可扩展与可选性。超 40 家机构参与，含 BlackRock、高盛与摩根大通；覆盖 Microsoft 与 Circle 股份、主要 ETF 及美国国债。凸显 Canton 在机构级代币化中的持续角色，而非单链锁定。', url: 'https://cantonnews.org/canton-network-powers-part-of-dtcc-s-multi-chain-tokenization-push-balchunas-says' },
+        { date: '2026-07-15', tag: '机构', title: 'DTCC 在 Canton 与 Besu 上完成首批 DTC 代币化资产实盘生产交易', body: 'DTCC 新闻稿（2026-07-15）：DTCC 将存于 The Depository Trust Company 的证券转换为代币并用于真实生产交易——迄今按用例、资产类别与参与方规模最大的代币化生产计划（超 30 家机构）。转换在 Hyperledger Besu（DTCC 私链）与 Canton（公链）上并行，属多链战略；资产含 Russell 1000 成分股、主要 ETF 与美国国债，用于抵押、回购与股票工作流。为 2026 年 10 月 DTCC 代币化服务商用上线铺路（DTC 获 SEC 不行动函后七个月）。参与方含 BlackRock、高盛、摩根大通、Vanguard、Virtu Financial、Tradeweb、Temple Digital Group、Digital Asset、Circle、BitGo Bank & Trust 与 NYSE。', url: 'https://www.dtcc.com/news/2026/july/15/dtcc-turns-tokenization-into-reality' },
         { date: '2026-07-14', tag: '代币化', title: 'Temple Digital Group 与 BitGo 合作，为 Canton 代币化资产提供合格托管', body: 'CantonNews（2026-07-14）：Temple Digital Group 与 BitGo 达成合作，将 BitGo Bank and Trust（OCC 特许数字资产信托银行）合格托管与 Temple 的 Canton 交易所及 RFQ 场所对接。BitGo 机构客户可通过 Temple 直达资本市场；Temple 合作伙伴则获得经 BitGo Go Network 结算栈提供的受监管托管。范围涵盖代币化美国国债、股票、大宗商品、ETF、金库及不断扩展的 Canton 结算受监管市场——结合 BitGo 自 2013 年以来的托管/结算能力与 Temple 领先的 Canton RFQ 基础设施。', url: 'https://cantonnews.org/temple-digital-group-and-bitgo-partner-to-bring-qualified-custody-to-tokenized-assets-on-canton-network' },
         { date: '2026-07-13', tag: '机构', title: 'Digital Asset / Canton 加入英国 54 家机构批发代币化工作组', body: 'CantonNews / 英国财政部（2026-07-13）：Digital Asset / Canton 为 54 家支持机构之一，参与财政部批发数字市场倡导人 Chris Woolard 向财政大臣 Rachel Reeves 提交的首份报告——由伦敦金融城公司支持，并与英国监管机构及行业机构（TheCityUK、Investment Association、UK Finance、Innovate Finance）协同。未来 12 个月工作组将交付端到端批发代币化实盘用例，首要是代币化回购，并设立九个行动组覆盖发行、二级市场、抵押品、基金、支付、法律/税务、互操作与金融犯罪合规——在 DIGIT（英国数字国债）基础上推进。参与方含 BlackRock、高盛、摩根大通、摩根士丹利、DTCC、Tradeweb、汇丰、LSEG 与 Wintermute。', url: 'https://cantonnews.org/digital-asset-canton-joins-54-firm-uk-wholesale-tokenisation-taskforce' },
         { date: '2026-07-13', tag: '生态', title: 'Edel Finance 筹备 Edel Markets——Canton 原生代币化资产永续合约场所', body: 'CantonNews（2026-07-13；产品于 7 月 9 日宣布）：Edel Finance 正在筹备 Edel Markets——面向代币化股票、大宗商品及未来多资产市场的 Canton 原生永续合约场所，预计本季度晚些时候上线，等候名单已开放。四大支柱：私有持仓状态、中央限价订单簿撮合、Canton 原生结算与 API 优先基础设施；订单经撮合、风险与保证金检查后链上结算，持仓仅对授权参与者可见。此前已推出 Runway 参与平台（约 5000 私测用户；与 Cantex 锚定合作日成交量峰值近 10 万美元）。Edel Lending 提供抵押层，Runway 提供参与层，计划中的 Edel Vaults 提供结构化敞口。团队含 Brad Klaas（前 BlackRock 全球证券借贷负责人）。', url: 'https://cantonnews.org/edel-finance-prepares-canton-native-perpetuals-venue-for-tokenized-assets' },
