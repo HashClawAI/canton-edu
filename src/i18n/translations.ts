@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-17',
+          tag: 'Ecosystem',
+          title: 'Cashen passes 50 platforms onboarded as Canton CC delegation marketplace scales',
+          body: 'CantonNews (July 17, 2026): Cashen—the bilateral marketplace for locked Canton Coin delegations backed by Cumberland DRW company Ergonia—has passed 50 platforms onboarded, a milestone for the Canton Foundation member. The platform connects CC holders with Super Validators and Featured Apps that need locked CC for participation requirements; suppliers delegate CC, earn fixed yield, and retain full custody with no principal credit risk. Deals are bilaterally negotiated with fixed APR, lock period, recall notice, and breach rate; interest accrues per Canton round (~10 minutes) with monthly off-platform settlement (on-chain settlement planned for Phase 2). Cashen reports over 275 million CC locked in live deals and positions itself as a capital-efficient path for CIP-0116 compliance as the validator and Featured App ecosystem grows.',
+          url: 'https://cantonnews.org/cashen-passes-50-platforms-as-canton-network-s-credit-marketplace-gains-traction',
+        },
+        {
+          date: '2026-07-16',
+          tag: 'Institutions',
+          title: 'Hanwha Investment & Securities invests KRW 30 billion in Digital Asset, plans Canton participation',
+          body: 'CantonNews / Hanwha (July 16, 2026): Hanwha Investment & Securities completed a strategic investment of approximately KRW 30 billion (~$21.7M) in Digital Asset Holdings LLC, creator of the Canton Network—deepening an MOU signed in April 2026. Hanwha plans full participation in the Canton ecosystem and practical cooperation with global financial institutions to strengthen its digital-asset and next-generation financial-services competitiveness. Executive VP Son Jong-min said Digital Asset\'s Canton infrastructure would play a key role in advancing Hanwha\'s digital-asset platform. The investment follows Hanwha stakes in Xangle, Kresus, and Securitize as it builds a global digital-finance stack spanning data and infrastructure. English coverage: Seoul Economic Daily (July 16, 2026).',
+          url: 'https://cantonnews.org/hanwha-invests-krw-30-billion-in-digital-asset-holdings-plans-canton-network-participation',
+        },
+        {
           date: '2026-07-15',
           tag: 'Ecosystem',
           title: 'Temple Digital Group executes onchain U.S. Treasury repo via DTCC Tokenization Service on Canton',
@@ -1679,6 +1693,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-17', tag: '生态', title: 'Cashen 平台接入超 50 家，Canton CC 委托信用市场加速扩张', body: 'CantonNews（2026-07-17）：Cashen——由 Cumberland DRW 旗下 Ergonia 支持的 Canton Coin 锁定委托双边市场——已接入超 50 家平台，为 Canton Foundation 成员的重要里程碑。平台连接 CC 持有者与需要锁定 CC 以满足参与要求的超级验证者与精选应用；供应方委托 CC、赚取固定收益并全程保留托管权，无本金信用风险。交易双边协商固定 APR、锁定期、召回通知期与违约率；利息按 Canton 轮次（约 10 分钟）累积，按月链下结算（链上结算计划 Phase 2）。Cashen 称 live 交易中锁定 CC 超 2.75 亿，随着验证者与精选应用生态增长，定位为 CIP-0116 合规的资本高效路径。', url: 'https://cantonnews.org/cashen-passes-50-platforms-as-canton-network-s-credit-marketplace-gains-traction' },
+        { date: '2026-07-16', tag: '机构', title: '韩华投资证券向 Digital Asset 投资 300 亿韩元，计划参与 Canton', body: 'CantonNews / 韩华（2026-07-16）：韩华投资证券完成对 Digital Asset Holdings LLC（Canton Network 创建方）约 300 亿韩元（约 2170 万美元）战略投资——深化 2026 年 4 月签署的 MOU。韩华计划全面参与 Canton 生态并与全球金融机构开展实质合作，强化数字资产与下一代金融服务竞争力。未来战略室副社长 Son Jong-min 称 Digital Asset 的 Canton 基础设施将推动韩华数字资产平台发展。投资前韩华已布局 Xangle、Kresus 与 Securitize，构建涵盖数据与基础设施的全球数字金融栈。英文报道见 Seoul Economic Daily（2026-07-16）。', url: 'https://cantonnews.org/hanwha-invests-krw-30-billion-in-digital-asset-holdings-plans-canton-network-participation' },
         { date: '2026-07-15', tag: '生态', title: 'Temple Digital Group 经 DTCC 代币化服务在 Canton 完成链上美国国债回购交易', body: 'CantonNews（2026-07-15）：Temple Digital Group 参与 DTCC 代币化服务在 Canton 上首批链上美国国债回购交易之一——在 Temple RFQ 平台以 Circle USDCx 为代币化现金融资代币化国债，Canton 上原子化 DvP 结算，法定所有权仍保留在 DTC 簿记框架内。属 DTCC 7 月 15 日实盘生产交易，使用代币化服务铸造数字孪生并交付至参与方钱包。Temple 计划从现货国债扩展至回购与日内融资，并将同一执行/结算架构延伸至代币化股票，为 2026 年 10 月 DTCC 服务商用上线做准备。', url: 'https://cantonnews.org/temple-digital-group-executes-onchain-us-treasury-repo-trade-on-canton-network-via-dtcc-tokenization-service' },
         { date: '2026-07-15', tag: '代币化', title: 'Bloomberg 分析师 Balchunas 确认 Canton 参与 DTCC 多链代币化推进', body: 'CantonNews / Eric Balchunas 在 X（2026-07-15）：Bloomberg ETF 分析师 Eric Balchunas 确认 DTCC 最新代币化生产计划同时运行于 Canton（公链）与 Hyperledger Besu（DTCC 私链）——属 DTCC 多链战略，追求韧性、可扩展与可选性。超 40 家机构参与，含 BlackRock、高盛与摩根大通；覆盖 Microsoft 与 Circle 股份、主要 ETF 及美国国债。凸显 Canton 在机构级代币化中的持续角色，而非单链锁定。', url: 'https://cantonnews.org/canton-network-powers-part-of-dtcc-s-multi-chain-tokenization-push-balchunas-says' },
         { date: '2026-07-15', tag: '机构', title: 'DTCC 在 Canton 与 Besu 上完成首批 DTC 代币化资产实盘生产交易', body: 'DTCC 新闻稿（2026-07-15）：DTCC 将存于 The Depository Trust Company 的证券转换为代币并用于真实生产交易——迄今按用例、资产类别与参与方规模最大的代币化生产计划（超 30 家机构）。转换在 Hyperledger Besu（DTCC 私链）与 Canton（公链）上并行，属多链战略；资产含 Russell 1000 成分股、主要 ETF 与美国国债，用于抵押、回购与股票工作流。为 2026 年 10 月 DTCC 代币化服务商用上线铺路（DTC 获 SEC 不行动函后七个月）。参与方含 BlackRock、高盛、摩根大通、Vanguard、Virtu Financial、Tradeweb、Temple Digital Group、Digital Asset、Circle、BitGo Bank & Trust 与 NYSE。', url: 'https://www.dtcc.com/news/2026/july/15/dtcc-turns-tokenization-into-reality' },
