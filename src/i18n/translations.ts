@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-18',
+          tag: 'Ecosystem',
+          title: 'Silvana launches agentic trading infrastructure for tokenized assets on Canton',
+          body: 'CantonNews (July 18, 2026): Silvana is an agent interaction layer for tokenized assets on Canton Network—abstracting trading logic so developers can build modular apps with autonomous agent workflows. Architecture is chain- and proof-system agnostic, with confidential computing via zero-knowledge proofs and trusted execution environments. Silvana operates as both a Canton validator and developer; its orderbook supports four trading pairs with RFQ, spot, grid, and TWAP strategies. The platform reports 100+ agents built, tested, and deployed and 3,000+ traders onboarded via its Early Bird Programme. Stack includes an Agentic API, agent SDK, Coordination Layer (built on Sui), and Silvascan explorer; documentation at docs.silvana.one. Silvana targets institutional tokenization use cases—provable tokenization, automated compliance, and continuous due diligence—and is running an Edel Finance cETH/EDELx campaign via EarnHub at app.silvana.one.',
+          url: 'https://cantonnews.org/agentic-trading-infrastructure-on-canton-network',
+        },
+        {
+          date: '2026-07-18',
+          tag: 'Tokenization',
+          title: 'HandlPay blog: DTCC’s $100T back office stepping onchain marks consumer Canton inflection',
+          body: 'CantonNews insight / HandlPay (July 18, 2026): HandlPay—Canton-native private payments—frames DTCC’s first limited production trades using DTC-tokenized assets on Canton as the moment “the world’s biggest financial back office” starts moving inventory onchain. The post unpacks downstream retail implications: always-on markets as Russell 1000 stocks and major ETFs join Treasuries on 24/7 settlement rails; programmable T-bill collateral reaching consumer savings and spend-and-earn products; stablecoin legitimacy as repo already settles with USDCx on Canton; faster downstream payouts and off-ramps; and a busier Canton benefiting builders on the same rails where HandlPay routes private payments. Positions consumer onboarding as the next chapter after today’s institutional milestone ahead of the October 2026 DTCC Tokenization Service launch.',
+          url: 'https://cantonnews.org/insights/the-100-trillion-elephant-just-stepped-onchain',
+        },
+        {
           date: '2026-07-17',
           tag: 'Ecosystem',
           title: 'Cashen passes 50 platforms onboarded as Canton CC delegation marketplace scales',
@@ -1693,6 +1707,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-18', tag: '生态', title: 'Silvana 在 Canton 上线代币化资产智能体交易基础设施', body: 'CantonNews（2026-07-18）：Silvana 是 Canton Network 上代币化资产的智能体交互层——抽象交易逻辑，使开发者可构建带自主智能体工作流的模块化应用。架构链与证明系统无关，通过零知识证明与可信执行环境支持机密计算。Silvana 同时作为 Canton 验证者与开发者运营；订单簿支持四个交易对及 RFQ、现货、网格与 TWAP 策略。平台称已构建、测试并部署 100+ 智能体，Early Bird 计划接入 3000+ 交易者。技术栈含 Agentic API、智能体 SDK、协调层（基于 Sui）与 Silvascan 浏览器；文档见 docs.silvana.one。面向机构代币化场景——可证明代币化、自动合规与持续尽调——并与 Edel Finance 在 app.silvana.one 通过 EarnHub 开展 cETH/EDELx 活动。', url: 'https://cantonnews.org/agentic-trading-infrastructure-on-canton-network' },
+        { date: '2026-07-18', tag: '代币化', title: 'HandlPay 博客：DTCC 万亿美元后台上链标志消费级 Canton 拐点', body: 'CantonNews 洞察 / HandlPay（2026-07-18）：Canton 原生隐私支付项目 HandlPay 将 DTCC 在 Canton 上完成首批 DTC 代币化资产有限生产交易，解读为「全球最大金融后台」开始将库存搬上链。文章梳理对零售端的连锁影响：Russell 1000 成分股与主要 ETF 加入 24/7 结算后迈向全天候市场；可编程 T-bill 抵押品触达消费储蓄与 spend-and-earn 产品；Canton 上回购已用 USDCx 结算强化稳定币合法性；下游出金与转账加速；更繁忙的 Canton 利好同链 builder（含 HandlPay 隐私支付路由）。将消费端 onboarding 定位为今日机构里程碑后的下一章，指向 2026 年 10 月 DTCC 代币化服务商用上线。', url: 'https://cantonnews.org/insights/the-100-trillion-elephant-just-stepped-onchain' },
         { date: '2026-07-17', tag: '生态', title: 'Cashen 平台接入超 50 家，Canton CC 委托信用市场加速扩张', body: 'CantonNews（2026-07-17）：Cashen——由 Cumberland DRW 旗下 Ergonia 支持的 Canton Coin 锁定委托双边市场——已接入超 50 家平台，为 Canton Foundation 成员的重要里程碑。平台连接 CC 持有者与需要锁定 CC 以满足参与要求的超级验证者与精选应用；供应方委托 CC、赚取固定收益并全程保留托管权，无本金信用风险。交易双边协商固定 APR、锁定期、召回通知期与违约率；利息按 Canton 轮次（约 10 分钟）累积，按月链下结算（链上结算计划 Phase 2）。Cashen 称 live 交易中锁定 CC 超 2.75 亿，随着验证者与精选应用生态增长，定位为 CIP-0116 合规的资本高效路径。', url: 'https://cantonnews.org/cashen-passes-50-platforms-as-canton-network-s-credit-marketplace-gains-traction' },
         { date: '2026-07-16', tag: '机构', title: '韩华投资证券向 Digital Asset 投资 300 亿韩元，计划参与 Canton', body: 'CantonNews / 韩华（2026-07-16）：韩华投资证券完成对 Digital Asset Holdings LLC（Canton Network 创建方）约 300 亿韩元（约 2170 万美元）战略投资——深化 2026 年 4 月签署的 MOU。韩华计划全面参与 Canton 生态并与全球金融机构开展实质合作，强化数字资产与下一代金融服务竞争力。未来战略室副社长 Son Jong-min 称 Digital Asset 的 Canton 基础设施将推动韩华数字资产平台发展。投资前韩华已布局 Xangle、Kresus 与 Securitize，构建涵盖数据与基础设施的全球数字金融栈。英文报道见 Seoul Economic Daily（2026-07-16）。', url: 'https://cantonnews.org/hanwha-invests-krw-30-billion-in-digital-asset-holdings-plans-canton-network-participation' },
         { date: '2026-07-15', tag: '生态', title: 'Temple Digital Group 经 DTCC 代币化服务在 Canton 完成链上美国国债回购交易', body: 'CantonNews（2026-07-15）：Temple Digital Group 参与 DTCC 代币化服务在 Canton 上首批链上美国国债回购交易之一——在 Temple RFQ 平台以 Circle USDCx 为代币化现金融资代币化国债，Canton 上原子化 DvP 结算，法定所有权仍保留在 DTC 簿记框架内。属 DTCC 7 月 15 日实盘生产交易，使用代币化服务铸造数字孪生并交付至参与方钱包。Temple 计划从现货国债扩展至回购与日内融资，并将同一执行/结算架构延伸至代币化股票，为 2026 年 10 月 DTCC 服务商用上线做准备。', url: 'https://cantonnews.org/temple-digital-group-executes-onchain-us-treasury-repo-trade-on-canton-network-via-dtcc-tokenization-service' },
