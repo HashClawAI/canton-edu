@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-19',
+          tag: 'Institutions',
+          title: 'Herald Business: KB, Shinhan, and Hanwha deepen Canton MOUs as Korea eyes STO/RWA',
+          body: 'The Herald Business (July 19, 2026): Canton Network is accelerating outreach to Korean banks and securities firms as domestic STO and RWA markets near launch. Financial industry sources cited MOUs this year between Digital Asset/Canton Foundation and Hanwha Investment Securities, KB Securities, Shinhan Investment, and Shinhan Asset Management—covering governance participation, Wavebridge-backed DLT trading infrastructure for the domestic capital market, and global distribution of digital financial products. The piece explains Canton’s federated privacy model (600+ participants including JPMorgan, Goldman Sachs, DTCC; ~$9T/month tokenized repo activity cited) and why issuers see Canton as a channel for overseas tokenized products and domestic beneficiary certificates. It also flags open questions: cross-chain interoperability with Ethereum/Solana, and whether Canton’s selective disclosure satisfies Korea’s Electronic Securities Act node requirements ahead of expected STO subordinate rules this month. CC ranked ~#17 on CoinMarketCap as of the report.',
+          url: 'https://biz.heraldcorp.com/article/10812665',
+        },
+        {
+          date: '2026-07-19',
+          tag: 'Ecosystem',
+          title: 'CantonNews publishes Canton Network Starter Guide for new ecosystem participants',
+          body: 'CantonNews (July 19, 2026): A new starter guide walks newcomers through learning Canton without assuming prior crypto or institutional finance depth. Recommended steps include following official Canton Network and Foundation channels, reading CantonNews coverage, using the CantonNews glossary and quizzes at cantonnews.org/learn/canton-explained, asking CantonNews AI for contextual answers (with verification against official docs), completing security training at cantonnews.org/security before connecting wallets, and exploring live analytics at cantonnews.org/network (CC price, validators, transactions, and fees). The guide emphasizes that even daily observers keep learning as the network scales—positioning education and safety as prerequisites before trading or building.',
+          url: 'https://cantonnews.org/insights/canton-network-starter-guide',
+        },
+        {
           date: '2026-07-18',
           tag: 'Institutions',
           title: 'Visa Stablecoin Platform launch adds enterprise layer atop Canton SV role',
@@ -1735,6 +1749,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-19', tag: '机构', title: 'Herald Business：KB、신한、韩华深化 Canton MOU，韩国 STO/RWA 窗口临近', body: 'Herald Business（2026-07-19）：Canton Network 正加速接触韩国银行与证券公司——国内 STO 与 RWA 市场开闸在即。金融圈消息指 Digital Asset/ Canton Foundation 今年与韩华投资证券、KB 证券、신한투자증권、신한자산운용等签署 MOU，涵盖治理参与、与 Wavebridge 共同探索国内资本市场 DLT 交易基础设施，以及数字金融产品的海外竞争力。文章解释 Canton 联邦式隐私架构（600+ 参与者含摩根大通、高盛、DTCC；报道称约 9 万亿美元/月代币化回购活动）及发行方将 Canton 视为海外代币化产品与 domestic 受益凭证流通通道的原因；同时提示跨链（以太坊/Solana）互操作及 Canton 选择性披露能否满足《电子证券法》节点要求仍待观察——STO 下位规则本月有望公布。CC 在 CoinMarketCap 市值排名约第 17（报道时点）。', url: 'https://biz.heraldcorp.com/article/10812665' },
+        { date: '2026-07-19', tag: '生态', title: 'CantonNews 发布 Canton Network 入门指南', body: 'CantonNews（2026-07-19）：新入门指南面向零基础参与者，建议路径包括：关注 Canton Network 与 Foundation 官方渠道、阅读 CantonNews 报道、使用 cantonnews.org/learn/canton-explained 词汇表与测验、通过 cantonnews.org/ai 提问（重要信息仍须对照官方文档核实）、在连接钱包前完成 cantonnews.org/security 安全培训，以及通过 cantonnews.org/network 查看 CC 价格、验证者、交易与费用等实时数据。强调生态快速扩张下持续学习与安全优先，再参与交易或开发。', url: 'https://cantonnews.org/insights/canton-network-starter-guide' },
         { date: '2026-07-18', tag: '机构', title: 'Visa 稳定币平台上线，在 Canton 超级验证者角色之上叠加企业级层', body: 'CantonNews（2026-07-18）：Visa 推出 Visa Stablecoin Platform——面向银行、金融科技与加密服务的企业级稳定币发行、托管、转账与赎回统一环境，首批支持 Open USD（Open Standard）。能力含 mint/burn、Wallet-as-a-Service、银行账户集成、多级审批、审计日志与 allowlist，并连接 Visa 结算、卡与跨境通道；向选定客户有限 beta 开放。对 Canton Network 而言，该平台延续 Visa 2026 稳定币布局——超级验证者身份、与 Brale 在 Canton 上的 SBC 隐私结算 PoC、九链结算试点约 70 亿美元年化 run-rate、经 BVNK 的 Visa Direct，以及 Stripe/Bridge 在 100+ 国家的卡覆盖。CantonNews 将其解读为可与 DTCC、摩根大通、高盛与法巴等 Canton 参与者生态自然衔接的受监管机构级托管层。', url: 'https://cantonnews.org/visa-stablecoin-platform-launch-adds-weight-to-canton-network-s-institutional-momentum' },
         { date: '2026-07-18', tag: '生态', title: 'Ember Protocol 在 Canton 上线——代币化黄金（eXAU）与白银（eXAG）', body: 'Canton Network 在 X（2026-07-18）：Ember Protocol 已在 Canton 上线，用户可通过 eXAU（Ember Gold）与 eXAG（Ember Silver）接触代币化黄金与白银。该上线为 Canton 增加商品背书 RWA 用例，拓展发行方与应用可在链上结算的资产类型。报道指出公告确认可用性，但未披露用户量、成交量或费用等采用指标。', url: 'https://x.com/CantonNetwork/status/2078563706795962555' },
         { date: '2026-07-18', tag: '机构', title: 'CantonNews 深度解读：Q2 2026 日均 228 万笔交易，精选应用 47→107', body: 'CantonNews（2026-07-18）：在 Canton Strategic Q2 生态报告基础上的跟进文章梳理关键指标——Q2 Canton 日均 228 万笔交易（Q1 137 万、Q4 2025 75 万），平均约 26 TPS，并采用修订后的 verdict 方法论（与早期 update 口径可能不一致）。The Tie 引用 Q2 费用 1.91 亿美元；Messari 称 Q1 Canton 占加密费用 42%；burn-to-mint 比 0.662，累计销毁 40 亿 CC（约流通量 10%）。机构亮点含 Franklin Templeton/Virtu 经 Tradeweb 的 USDCx 国债交易、HSBC 代币化存款试点、HIFI/DRW/Marex 链上回购，以及季后 DTCC 生产交易。验证者：Q2 新增约 200；超级验证者 +3（Further AM、法兴、Franklin Templeton）。精选应用增 127% 至 107；Q2 流量 burn 榜首 Temple（2.69 亿 CC）。治理回顾涵盖 CIP-0104/0105/0116/0117 与 6 月 27 日 Protocol 3.5 主网上线。Q3 展望聚焦日本 JGB PoC 与韩国机构上市。', url: 'https://cantonnews.org/canton-network-q2-2026-a-deep-dive-into-transactions-apps-and-validators' },
