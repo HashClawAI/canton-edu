@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-20',
+          tag: 'Markets',
+          title: 'Premia acquires Raven Market, integrating Canton-native derivatives into institutional stack',
+          body: 'CantonNews (July 20, 2026): Premia closed an all-cash acquisition of Raven Market, absorbing the Canton-native institutional derivatives platform—technology, IP, pricing models, and infrastructure—into Premia’s offering. Raven launched on Canton roughly six months ago, progressing from testnet through private beta with ecosystem partners including BitSafe Finance, Chainlink, and Loop before reaching production readiness; it will no longer operate as a standalone product. Premia serves 38 institutional clients with more than $127 million AUM and operates as a Canton validator. Raven engineering and support staff will integrate with Premia’s core platform. Managing Partner Bella Thron said the deal accelerates Premia’s Canton strategy; founder Akshay Sinha said Premia is the right steward for Raven’s IP after proving institutional derivatives on programmable financial infrastructure.',
+          url: 'https://cantonnews.org/premia-acquires-raven-market-in-all-cash-deal-absorbing-canton-native-derivatives-infrastructure',
+        },
+        {
+          date: '2026-07-20',
+          tag: 'Network',
+          title: 'Canton Network surpasses 4.3 billion CC burned since mid-2024 launch',
+          body: 'CantonNews (July 20, 2026): Canton has burned 4.3 billion Canton Coin since launching in mid-2024—more than $500 million of CC destroyed in roughly two years—as daily burns accelerate with institutional scale. The figure aggregates traffic purchases, preapproval burns, setup burns, dust expiry, holding fees, and sender change fees, all burned in full under Canton’s fee model. Digital Asset co-founder Shaul Kfir has outlined extending CC burning beyond the Global Synchronizer to every synchronizer (CIP draft expected September 2026, phased rollout targeted first half 2027), which would bring private synchronizers into the same burn-and-reward loop. Live burn and network stats remain at cantonnews.org/network.',
+          url: 'https://cantonnews.org/canton-network-has-burned-4-3-billion-canton-coin-since-launch',
+        },
+        {
+          date: '2026-07-20',
+          tag: 'Tokenization',
+          title: 'CantonNews insight: after DTCC production trades, credit layer is the next chapter',
+          body: 'CantonNews / Akash Gaurav (July 20, 2026): Following DTCC’s July 15 live production trades with DTC-tokenized U.S. Treasury and equity securities, an insight argues settlement is only the foundation—tokenized assets must next participate in lending, collateral, liquidity, and credit markets on Canton. The piece explains DTCC’s digital-twin architecture (securities remain at DTC while tokenized representations settle on-chain), the Besu-plus-Canton production environment, and the path to the October 2026 DTCC Tokenization Service launch. It frames credit infrastructure (privacy-preserving markets such as Alpend) as the layer that turns tokenized inventory into productive capital rather than static custody—aligned with Palladium Labs’ thesis as institutional assets accumulate on Canton.',
+          url: 'https://cantonnews.org/insights/tokenization-just-entered-production-now-comes-the-next-chapter',
+        },
+        {
+          date: '2026-07-20',
+          tag: 'Institutions',
+          title: 'CantonNews: DTCC confirms DTC-held asset conversions occurred on Canton public network',
+          body: 'CantonNews (July 20, 2026): DTCC named Canton as one of two networks—alongside Hyperledger Besu—where digital conversions of DTC-held assets occurred during its July 15 production tokenization initiative involving real trades. DTCC described Canton as a public network but did not attribute specific trade types (collateral pledge, securities lending, Treasury/repo and equity DvP, DvD, token transfers, CCP margin) to either chain. More than 30 traditional and digital-market firms participated; Digital Asset was among them alongside BlackRock, Circle, CME Group, Goldman Sachs, J.P. Morgan, Microsoft, Nasdaq, NYSE, and Vanguard. The exercise precedes the planned October 2026 DTCC Tokenization Service, which will deliver digital twins of DTC-custodied assets to participant wallets while preserving investor protections.',
+          url: 'https://cantonnews.org/dtcc-says-dtc-held-asset-conversions-occurred-on-canton-and-hyperledger-besu',
+        },
+        {
           date: '2026-07-19',
           tag: 'Institutions',
           title: 'Herald Business: KB, Shinhan, and Hanwha deepen Canton MOUs as Korea eyes STO/RWA',
@@ -1749,6 +1777,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-20', tag: '市场', title: 'Premia 收购 Raven Market，将 Canton 原生衍生品并入机构栈', body: 'CantonNews（2026-07-20）：Premia 以全现金收购 Raven Market，将 Canton 原生机构衍生品平台的技术、知识产权、定价模型与基础设施并入 Premia 机构产品线。Raven 约六个月前在 Canton 上线，经测试网与私测 beta（与 BitSafe Finance、Chainlink、Loop 等生态伙伴合作）达到生产就绪后将不再独立运营。Premia 服务 38 家机构客户、AUM 超 1.27 亿美元，并运营 Canton 验证者；Raven 工程与支持团队将并入 Premia 核心平台。管理合伙人 Bella Thron 称交易加速 Premia 的 Canton 战略；创始人 Akshay Sinha 表示在可编程金融基础设施上验证机构衍生品愿景后，Premia 是 Raven IP 的合适承接方。', url: 'https://cantonnews.org/premia-acquires-raven-market-in-all-cash-deal-absorbing-canton-native-derivatives-infrastructure' },
+        { date: '2026-07-20', tag: '网络', title: 'Canton Network 自 2024 年中上线以来 CC 销毁突破 43 亿枚', body: 'CantonNews（2026-07-20）：自 2024 年中上线以来 Canton 已销毁 43 亿枚 Canton Coin——约两年间销毁价值超 5 亿美元 CC——随机构活动扩大日 burn 加速。数据涵盖流量购买、预授权 burn、setup burn、dust 过期、持有费与找零费等，在 Canton 费用模型下全额销毁。Digital Asset 联合创始人 Shaul Kfir 已概述将 CC 燃烧从 Global Synchronizer 扩展至全部同步器的计划（CIP 草案预计 2026 年 9 月，分阶段 rollout 目标 2027 年上半年），使私有同步器纳入同一 burn-奖励循环。实时 burn 与网络数据见 cantonnews.org/network。', url: 'https://cantonnews.org/canton-network-has-burned-4-3-billion-canton-coin-since-launch' },
+        { date: '2026-07-20', tag: '代币化', title: 'CantonNews 洞察：DTCC 生产交易之后，信用层是下一章', body: 'CantonNews / Akash Gaurav（2026-07-20）：在 DTCC 7 月 15 日使用 DTC 代币化美国国债与股票完成首批实盘生产交易后，该文认为结算只是基础——代币化资产下一步须在 Canton 上参与借贷、抵押、流动性与信用市场。文章解释 DTCC 数字孪生架构（证券仍存于 DTC、代币化表示在链上结算）、Besu 与 Canton 并行的生产环境，以及通向 2026 年 10 月 DTCC 代币化服务商用上线的路径；并将隐私保护信用基础设施（如 Alpend）定位为把代币化库存变为生产性资本而非静态托管的层——与 Palladium Labs 在机构资产涌入 Canton 时的论点一致。', url: 'https://cantonnews.org/insights/tokenization-just-entered-production-now-comes-the-next-chapter' },
+        { date: '2026-07-20', tag: '机构', title: 'CantonNews：DTCC 确认 DTC 托管资产转换发生在 Canton 公网', body: 'CantonNews（2026-07-20）：DTCC 指 7 月 15 日生产代币化计划中，DTC 托管资产的数字转换在 Canton（公网）与 Hyperledger Besu（私链）两条网络上发生并用于真实交易。DTCC 将 Canton 描述为公网，但未将抵押质押、证券借贷、国债/回购与股票 DvP、DvD、代币转移、CCP 保证金等具体交易类型归属任一条链。超 30 家传统与数字市场机构参与；除 Digital Asset 外还包括 BlackRock、Circle、CME Group、高盛、摩根大通、Microsoft、Nasdaq、NYSE 与 Vanguard。该演练为计划 2026 年 10 月推出的 DTCC 代币化服务铺路——向参与方钱包交付 DTC 托管资产的数字孪生并保留投资者保护。', url: 'https://cantonnews.org/dtcc-says-dtc-held-asset-conversions-occurred-on-canton-and-hyperledger-besu' },
         { date: '2026-07-19', tag: '机构', title: 'Herald Business：KB、신한、韩华深化 Canton MOU，韩国 STO/RWA 窗口临近', body: 'Herald Business（2026-07-19）：Canton Network 正加速接触韩国银行与证券公司——国内 STO 与 RWA 市场开闸在即。金融圈消息指 Digital Asset/ Canton Foundation 今年与韩华投资证券、KB 证券、신한투자증권、신한자산운용等签署 MOU，涵盖治理参与、与 Wavebridge 共同探索国内资本市场 DLT 交易基础设施，以及数字金融产品的海外竞争力。文章解释 Canton 联邦式隐私架构（600+ 参与者含摩根大通、高盛、DTCC；报道称约 9 万亿美元/月代币化回购活动）及发行方将 Canton 视为海外代币化产品与 domestic 受益凭证流通通道的原因；同时提示跨链（以太坊/Solana）互操作及 Canton 选择性披露能否满足《电子证券法》节点要求仍待观察——STO 下位规则本月有望公布。CC 在 CoinMarketCap 市值排名约第 17（报道时点）。', url: 'https://biz.heraldcorp.com/article/10812665' },
         { date: '2026-07-19', tag: '生态', title: 'CantonNews 发布 Canton Network 入门指南', body: 'CantonNews（2026-07-19）：新入门指南面向零基础参与者，建议路径包括：关注 Canton Network 与 Foundation 官方渠道、阅读 CantonNews 报道、使用 cantonnews.org/learn/canton-explained 词汇表与测验、通过 cantonnews.org/ai 提问（重要信息仍须对照官方文档核实）、在连接钱包前完成 cantonnews.org/security 安全培训，以及通过 cantonnews.org/network 查看 CC 价格、验证者、交易与费用等实时数据。强调生态快速扩张下持续学习与安全优先，再参与交易或开发。', url: 'https://cantonnews.org/insights/canton-network-starter-guide' },
         { date: '2026-07-18', tag: '机构', title: 'Visa 稳定币平台上线，在 Canton 超级验证者角色之上叠加企业级层', body: 'CantonNews（2026-07-18）：Visa 推出 Visa Stablecoin Platform——面向银行、金融科技与加密服务的企业级稳定币发行、托管、转账与赎回统一环境，首批支持 Open USD（Open Standard）。能力含 mint/burn、Wallet-as-a-Service、银行账户集成、多级审批、审计日志与 allowlist，并连接 Visa 结算、卡与跨境通道；向选定客户有限 beta 开放。对 Canton Network 而言，该平台延续 Visa 2026 稳定币布局——超级验证者身份、与 Brale 在 Canton 上的 SBC 隐私结算 PoC、九链结算试点约 70 亿美元年化 run-rate、经 BVNK 的 Visa Direct，以及 Stripe/Bridge 在 100+ 国家的卡覆盖。CantonNews 将其解读为可与 DTCC、摩根大通、高盛与法巴等 Canton 参与者生态自然衔接的受监管机构级托管层。', url: 'https://cantonnews.org/visa-stablecoin-platform-launch-adds-weight-to-canton-network-s-institutional-momentum' },
