@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-21',
+          tag: 'Institutions',
+          title: 'Digital Asset adds Shinhan Financial Group and SC Ventures to oversubscribed funding round',
+          body: 'CantonNews / PRNewswire (July 21, 2026): Digital Asset expanded its previously announced $355 million round with strategic investments from Shinhan Financial Group and SC Ventures by Standard Chartered, deepening institutional backing for Canton as privacy-enabled infrastructure for regulated capital markets. The June raise was led by a16z crypto with participation from Citadel Securities, HSBC, BNP Paribas, Hanwha Investment & Securities, Tradeweb, and others. The Block reported an additional ~$10 million from the new investors at the same $2 billion equity valuation, bringing the round total to about $365 million. CEO Yuval Rooz said the additions bring global reach and ecosystem connectivity as institutions move from pilots to production; Shinhan is expected to support adoption discussions in South Korea alongside Digital Asset’s Hanwha partnership.',
+          url: 'https://cantonnews.org/digital-asset-adds-shinhan-and-standard-chartered-to-funding-round',
+        },
+        {
+          date: '2026-07-21',
+          tag: 'Ecosystem',
+          title: 'OneSwap v2 goes live on Canton with single-transaction swaps',
+          body: 'CantonNews (July 21, 2026): OneSwap v2 is live on Canton Network—Sats Terminal’s permissionless AMM upgrade adds single-transaction swaps and a built-in platform experience atop the DEX that already supports CC/USDCx and CC/CBTC pairs, CIP-56 tokens, and integrations with Console, Loop, Nightly, Send, and Bron wallets. OneSwap remains among the first retail-accessible trading venues on infrastructure used in DTCC and major-bank settlement pilots; the 0.3% swap fee splits 75% to LPs and 25% to the protocol, with OneSwap Diamonds rewards for early volume. CantonNetwork and @Oneswapcc public posts archived the v2 launch the same day.',
+          url: 'https://cantonnews.org/oneswap-v2-is-live-on-canton',
+        },
+        {
+          date: '2026-07-21',
+          tag: 'Ecosystem',
+          title: 'Ekiden joins Canton Network as a Featured App',
+          body: 'CantonNews (July 21, 2026): Ekiden (@ekidenfi) is now a Canton Network Featured App, bringing institutional derivatives infrastructure to the production ecosystem after earlier testnet deployment at app.cnt.ekiden.fi. The venue combines off-chain central limit order book matching with deferred on-chain settlement via Merkle commitments—positioned as Canton’s derivatives stack for privacy-preserving institutional workflows. Featured App status aligns with CIP-0116 lock requirements for application providers; Ekiden’s mainnet rollout and market-maker programs remain on its public roadmap.',
+          url: 'https://cantonnews.org/ekiden-joins-canton-network-as-a-featured-app',
+        },
+        {
+          date: '2026-07-21',
+          tag: 'Institutions',
+          title: 'Genfinity: CNTN CEO Wendland on DTCC October launch and Canton adoption path',
+          body: 'Genfinity (July 21, 2026): Canton Strategic Holdings CEO Mark Wendland joined Ryan Solomon to discuss CNTN’s role as the first publicly traded Canton Coin ecosystem company and the path from DTCC’s July 13 limited production trades to full commercial tokenized-treasury rollout in October 2026. Wendland framed DTCC’s ~$3.7 quadrillion annual transaction scale as the benchmark for Canton’s institutional test, cited roughly 70% Q1-to-Q2 2026 transaction growth and more than $9 trillion in monthly onchain volume in company disclosures, and highlighted Broadridge intraday repo scaling plus UK and Asian regulatory use cases. The interview also covers CNTN’s locking-as-a-service offering for Super Validators and Featured Apps under CIP-0105 and CIP-0116.',
+          url: 'https://genfinity.io/2026/07/21/canton-strategic-holdings-mark-wendland-dtcc-october-launch/',
+        },
+        {
           date: '2026-07-20',
           tag: 'Markets',
           title: 'Premia acquires Raven Market, integrating Canton-native derivatives into institutional stack',
@@ -1777,6 +1805,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-21', tag: '机构', title: 'Digital Asset 融资再扩容：신한금융集团与渣打 SC Ventures 加入超额认购轮', body: 'CantonNews / PRNewswire（2026-07-21）：Digital Asset 在 6 月由 a16z crypto 领投、Citadel Securities、HSBC、法巴、韩华投资证券、Tradeweb 等参与的 3.55 亿美元融资基础上，新增韩国 신한금융集团与渣打旗下 SC Ventures 战略投资，强化 Canton 作为受监管资本市场隐私型基础设施的机构背书。The Block 报道称新投资者追加约 1000 万美元、股权估值维持 20 亿美元不变，本轮合计约 3.65 亿美元。CEO Yuval Rooz 称新股东带来全球触达与生态连接，机构正从试点走向生产；신한 预计将与 Hanwha 合作一起推动韩国机构采用讨论。', url: 'https://cantonnews.org/digital-asset-adds-shinhan-and-standard-chartered-to-funding-round' },
+        { date: '2026-07-21', tag: '生态', title: 'OneSwap v2 在 Canton 上线，支持单笔交易 swap', body: 'CantonNews（2026-07-21）：Sats Terminal 旗下 permissionless AMM OneSwap v2 已在 Canton MainNet 上线——在既有 CC/USDCx、CC/CBTC 交易对、CIP-56 代币及 Console、Loop、Nightly、Send、Bron 等钱包集成之上，新增单笔交易 swap 与内置平台体验。OneSwap 仍是少数面向零售、却运行在 DTCC 与大型银行结算试点所用基础设施上的交易场所之一；0.3% swap 费中 75% 归 LP、25% 归协议，Early volume 可参与 OneSwap Diamonds 激励。CantonNetwork 与 @Oneswapcc 当日公开帖归档了 v2 上线。', url: 'https://cantonnews.org/oneswap-v2-is-live-on-canton' },
+        { date: '2026-07-21', tag: '生态', title: 'Ekiden 成为 Canton Network 精选应用（Featured App）', body: 'CantonNews（2026-07-21）：Ekiden（@ekidenfi）现已成为 Canton Network Featured App，在早前测试网 app.cnt.ekiden.fi 部署之后，将机构级衍生品基础设施带入生产生态。该场所采用链下中央限价订单簿撮合 + Merkle 承诺延迟链上结算，定位为隐私保护机构工作流下的 Canton 衍生品栈。精选应用身份与 CIP-0116 对应用方的锁仓要求一致；主网上线与做市商计划仍以项目公开路线图为准。', url: 'https://cantonnews.org/ekiden-joins-canton-network-as-a-featured-app' },
+        { date: '2026-07-21', tag: '机构', title: 'Genfinity 专访：CNTN CEO Wendland 谈 DTCC 10 月商用与 Canton 采用路径', body: 'Genfinity（2026-07-21）：Canton Strategic Holdings CEO Mark Wendland 与 Ryan Solomon 对谈 CNTN 作为首家公开上市的 Canton Coin 生态公司定位，以及从 DTCC 7 月 13 日有限生产交易到 2026 年 10 月代币化国债全面商用 rollout 的路径。Wendland 以 DTCC 年化约 3.7 千万亿美元交易量规模为 Canton 机构级考验的参照，引用公司披露中 Q1→Q2 2026 交易约增 70%、链上月交易量超 9 万亿美元等数据，并提及 Broadridge 日内回购扩展及英国、亚洲监管用例。访谈亦涵盖 CNTN 在 CIP-0105/CIP-0116 下为超级验证者与精选应用提供的锁仓即服务。', url: 'https://genfinity.io/2026/07/21/canton-strategic-holdings-mark-wendland-dtcc-october-launch/' },
         { date: '2026-07-20', tag: '市场', title: 'Premia 收购 Raven Market，将 Canton 原生衍生品并入机构栈', body: 'CantonNews（2026-07-20）：Premia 以全现金收购 Raven Market，将 Canton 原生机构衍生品平台的技术、知识产权、定价模型与基础设施并入 Premia 机构产品线。Raven 约六个月前在 Canton 上线，经测试网与私测 beta（与 BitSafe Finance、Chainlink、Loop 等生态伙伴合作）达到生产就绪后将不再独立运营。Premia 服务 38 家机构客户、AUM 超 1.27 亿美元，并运营 Canton 验证者；Raven 工程与支持团队将并入 Premia 核心平台。管理合伙人 Bella Thron 称交易加速 Premia 的 Canton 战略；创始人 Akshay Sinha 表示在可编程金融基础设施上验证机构衍生品愿景后，Premia 是 Raven IP 的合适承接方。', url: 'https://cantonnews.org/premia-acquires-raven-market-in-all-cash-deal-absorbing-canton-native-derivatives-infrastructure' },
         { date: '2026-07-20', tag: '网络', title: 'Canton Network 自 2024 年中上线以来 CC 销毁突破 43 亿枚', body: 'CantonNews（2026-07-20）：自 2024 年中上线以来 Canton 已销毁 43 亿枚 Canton Coin——约两年间销毁价值超 5 亿美元 CC——随机构活动扩大日 burn 加速。数据涵盖流量购买、预授权 burn、setup burn、dust 过期、持有费与找零费等，在 Canton 费用模型下全额销毁。Digital Asset 联合创始人 Shaul Kfir 已概述将 CC 燃烧从 Global Synchronizer 扩展至全部同步器的计划（CIP 草案预计 2026 年 9 月，分阶段 rollout 目标 2027 年上半年），使私有同步器纳入同一 burn-奖励循环。实时 burn 与网络数据见 cantonnews.org/network。', url: 'https://cantonnews.org/canton-network-has-burned-4-3-billion-canton-coin-since-launch' },
         { date: '2026-07-20', tag: '代币化', title: 'CantonNews 洞察：DTCC 生产交易之后，信用层是下一章', body: 'CantonNews / Akash Gaurav（2026-07-20）：在 DTCC 7 月 15 日使用 DTC 代币化美国国债与股票完成首批实盘生产交易后，该文认为结算只是基础——代币化资产下一步须在 Canton 上参与借贷、抵押、流动性与信用市场。文章解释 DTCC 数字孪生架构（证券仍存于 DTC、代币化表示在链上结算）、Besu 与 Canton 并行的生产环境，以及通向 2026 年 10 月 DTCC 代币化服务商用上线的路径；并将隐私保护信用基础设施（如 Alpend）定位为把代币化库存变为生产性资本而非静态托管的层——与 Palladium Labs 在机构资产涌入 Canton 时的论点一致。', url: 'https://cantonnews.org/insights/tokenization-just-entered-production-now-comes-the-next-chapter' },
