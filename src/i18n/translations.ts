@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-23',
+          tag: 'Institutions',
+          title: 'Canton Strategic Holdings sells Gravitas Life Sciences to sharpen Canton focus',
+          body: 'CantonNews (July 23, 2026): Nasdaq-listed Canton Strategic Holdings (CNTN) sold its biotech R&D arm Gravitas Life Sciences to Gravitas Collective Corp. in a board-unanimous deal that closed July 17 and was announced six days later. Management frames the divestiture as aligning corporate structure with its operating strategy—leveraging Canton Coin to support Canton Network’s role in digitizing traditional financial markets—following the June 2026 launch of its locking-as-a-service for Super Validators and Featured Apps under CIP-0105/CIP-0116. With the unrelated biotech business separated, future milestones can be read directly through a Canton-centric lens, adding public-market visibility for a Super Validator and Canton Foundation member already holding billions of CC on its balance sheet.',
+          url: 'https://cantonnews.org/canton-strategic-holdings-sells-gravitas-to-focus-on-canton-network',
+        },
+        {
+          date: '2026-07-23',
+          tag: 'Infrastructure',
+          title: 'Hydra X launches HX Gateway API to accelerate Canton deployments',
+          body: 'CantonNews (July 23, 2026): Hydra X announced in Singapore the HX Gateway API—a REST layer that lets financial institutions and app developers integrate with Canton without specialized Daml expertise. Hydra X claims up to 80% faster go-to-market and 50% shorter deployment time; the API is offered as a hosted service or external deployment for clients with existing validator infrastructure. The product builds on Hydra X’s reported production work tokenizing more than US$100 million in assets for regulated clients on Canton via Digital Asset’s DA Registry. VP of Client Solutions Mark Tang said banks, asset managers, and exchanges can treat Canton integration as a business decision rather than a specialist engineering project—potentially lowering friction as tokenized capital markets move from pilots to production.',
+          url: 'https://cantonnews.org/hydra-x-launches-hx-gateway-api-to-speed-canton-deployments',
+        },
+        {
           date: '2026-07-22',
           tag: 'Institutions',
           title: 'Yuval Rooz on Canton Army Alpha Hour: DTCC production, mainnet extensions, and corporate treasury',
@@ -1819,6 +1833,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-23', tag: '机构', title: 'Canton Strategic Holdings 出售 Gravitas，聚焦 Canton 战略', body: 'CantonNews（2026-07-23）：纳斯达克上市公司 Canton Strategic Holdings（CNTN）将生物科技研发子公司 Gravitas Life Sciences 出售给 Gravitas Collective Corp.，董事会一致批准的交易于 7 月 17 日交割、六日后对外宣布。管理层称剥离与运营战略一致——利用 Canton Coin 支持 Canton Network 在传统金融市场数字化中的角色——并承接 2026 年 6 月在 CIP-0105/CIP-0116 下为超级验证者与精选应用推出的锁仓即服务。与无关生物科技业务分离后，未来里程碑可更直接地从 Canton 视角解读；作为超级验证者与 Canton Foundation 成员、资产负债表已持有数十亿 CC 的上市公司，其公开市场对 Canton 的关注度亦随之提升。', url: 'https://cantonnews.org/canton-strategic-holdings-sells-gravitas-to-focus-on-canton-network' },
+        { date: '2026-07-23', tag: '基础设施', title: 'Hydra X 发布 HX Gateway API，加速 Canton 部署', body: 'CantonNews（2026-07-23）：Hydra X 在新加坡宣布 HX Gateway API——REST 接入层，使金融机构与应用开发者无需专业 Daml 技能即可集成 Canton。Hydra X 称可将上市时间缩短最多 80%、部署周期缩短 50%；产品提供托管服务，或面向已有验证者基础设施的客户外部部署。该 API 基于 Hydra X 在 Canton 上通过 Digital Asset DA Registry 为受监管客户代币化逾 1 亿美元资产的量产经验。客户解决方案副总裁 Mark Tang 表示，银行、资管与交易所可将 Canton 集成视为业务决策而非专项工程——在代币化资本市场从试点走向生产之际，有望降低接入摩擦。', url: 'https://cantonnews.org/hydra-x-launches-hx-gateway-api-to-speed-canton-deployments' },
         { date: '2026-07-22', tag: '机构', title: 'Yuval Rooz 在 Canton Army Alpha Hour：DTCC 生产、主网扩展与企业财资', body: 'CantonNews（2026-07-22）：Digital Asset 联合创始人兼 CEO Yuval Rooz 做客 Canton Army Alpha Hour，将 Canton 定位为单一网络——专用验证者集群改称「主网扩展」（取代 subnet 表述），仍与全网相连，并计划通过即将提出的 CIP 纳入 CC 燃烧经济。他回顾 a16z 领投的超额认购轮（SoFi、Polychain、Coinbase Ventures、신한、SC Ventures 等）；阐述企业费用模型——内部「卫生」账本更新可设年化费用上限（举例约 50 万美元/客户）及可选预付 burn 承诺换取可组合流程折扣；并梳理 DTCC 首批生产交易组合（代币转换、ETF、回购、证券借贷、抵押质押），更广泛参与方接入目标 2026 年 10 月。Rooz 重点谈企业财资：通过服务 4000+ 企业的财资服务商，在付款前持有代币化生息资产（优先美元），审慎使用 AI 辅助工程，以及仍在筹备中的零售音乐资产项目——强调可持续链上活动而非短期投机。', url: 'https://cantonnews.org/from-dtcc-to-corporate-treasury-yuval-rooz-outlines-canton-s-next-phase' },
         { date: '2026-07-22', tag: '基础设施', title: 'Fireblocks 在 CantonNews 发文：DTCC 生产交易后的受监管金融托管栈', body: 'CantonNews 洞察 / Mor Philosoph，Fireblocks（2026-07-22）：阐述机构在 Canton 运营所需——可配置的子交易隐私、跨应用原子结算与企业级钱包/托管控制。Fireblocks 列举 2026 年 2 月起持续深化的支持：双区域验证者节点 + Cantonscan 可见性的 Canton 钱包；与 Digital Asset Registry 应用（日交易 150 万+ 的资产）的 CIP-0103 互操作；CIP-056 CC 转账；Canton 上 USDC；自助代币上架；两步 incoming offer；自带验证者（BYOV）；以及 DVP、抵押、回购生命周期与预授权的 Daml 合约调用。Digital Asset 新发布的 DA Registry 启动台（35+ 平台）可开箱对接 Fireblocks；托管式专用验证者规划中。Digital Asset 网络增长负责人 Eric Saraniecki 引述 Fireblocks 在机构从试点走向实盘（含 DTCC 近期 DTC 代币化生产计划）中的角色。', url: 'https://cantonnews.org/insights/what-it-takes-to-support-regulated-finance-on-canton' },
         { date: '2026-07-21', tag: '机构', title: 'Digital Asset 融资再扩容：신한금융集团与渣打 SC Ventures 加入超额认购轮', body: 'CantonNews / PRNewswire（2026-07-21）：Digital Asset 在 6 月由 a16z crypto 领投、Citadel Securities、HSBC、法巴、韩华投资证券、Tradeweb 等参与的 3.55 亿美元融资基础上，新增韩国 신한금융集团与渣打旗下 SC Ventures 战略投资，强化 Canton 作为受监管资本市场隐私型基础设施的机构背书。The Block 报道称新投资者追加约 1000 万美元、股权估值维持 20 亿美元不变，本轮合计约 3.65 亿美元。CEO Yuval Rooz 称新股东带来全球触达与生态连接，机构正从试点走向生产；신한 预计将与 Hanwha 合作一起推动韩国机构采用讨论。', url: 'https://cantonnews.org/digital-asset-adds-shinhan-and-standard-chartered-to-funding-round' },
