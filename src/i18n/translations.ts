@@ -271,6 +271,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-24',
+          tag: 'Institutions',
+          title: 'Nasdaq pilots tokenized collateral on Canton as Q2 earnings hit records',
+          body: 'CantonNews (July 24, 2026): Nasdaq disclosed on its Q2 2026 earnings call a successful Canton Network tokenized collateral pilot—transmitting tokenized money market funds as collateral through Nasdaq Calypso alongside two leading asset managers. CEO Adena Friedman framed it as proof that Calypso, used by hundreds of firms for collateral management, could evolve into a network moving assets in tokenized form; she said participants left the pilot room calling it a victory (“The money moved”). Future monetization is planned via a new Calypso module upsell for collateral movement. The pilot sits within a broader Nasdaq tokenization push—working with DTCC on post-trade settlement of tokenized shares and with Kraken on tokenized equity issuance with instantaneous settlement (target early 2027). The disclosure accompanied record results: $1.5B net revenue (+15% YoY), index AUM surpassing $1T with $51B quarterly net inflows, and the June 12 SpaceX IPO described as the largest in history ($86B raised).',
+          url: 'https://cantonnews.org/nasdaq-pilots-tokenized-collateral-on-canton-network-as-q2-earnings-hit-record-highs',
+        },
+        {
           date: '2026-07-23',
           tag: 'Institutions',
           title: 'Canton Strategic Holdings sells Gravitas Life Sciences to sharpen Canton focus',
@@ -1833,6 +1840,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-24', tag: '机构', title: 'CantonNews：Nasdaq 在 Canton 试点代币化抵押品，Q2 业绩创新高', body: 'CantonNews（2026-07-24）：Nasdaq 在 2026 年第二季度业绩电话会上披露，已通过 Nasdaq Calypso 平台在 Canton Network 上成功完成代币化抵押品试点——与两家全球领先资管机构一道，将代币化货币市场基金作为抵押品传输。CEO Adena Friedman 将其定位为概念验证：Calypso 已被数百家机构用于抵押品管理，未来可演进为在代币化形态下移动资产的抵押品网络；她称参与者走出试点房间时表示胜利（「钱确实动了」）。公司计划通过新的 Calypso 模块（抵押品移动 upsell）实现未来 monetization。该试点属于 Nasdaq 更广泛的代币化布局——与 DTCC 合作推进代币化股票的后交易结算，并与 Kraken 合作探索即时结算的代币化股权发行模式（目标 2027 年初）。披露同期伴随创纪录业绩：净收入 15 亿美元（同比 +15%）、指数 AUM 首次突破 1 万亿美元（当季净流入 510 亿美元），以及 6 月 12 日 SpaceX IPO（公司称史上最大，募资 860 亿美元）。', url: 'https://cantonnews.org/nasdaq-pilots-tokenized-collateral-on-canton-network-as-q2-earnings-hit-record-highs' },
         { date: '2026-07-23', tag: '机构', title: 'Canton Strategic Holdings 出售 Gravitas，聚焦 Canton 战略', body: 'CantonNews（2026-07-23）：纳斯达克上市公司 Canton Strategic Holdings（CNTN）将生物科技研发子公司 Gravitas Life Sciences 出售给 Gravitas Collective Corp.，董事会一致批准的交易于 7 月 17 日交割、六日后对外宣布。管理层称剥离与运营战略一致——利用 Canton Coin 支持 Canton Network 在传统金融市场数字化中的角色——并承接 2026 年 6 月在 CIP-0105/CIP-0116 下为超级验证者与精选应用推出的锁仓即服务。与无关生物科技业务分离后，未来里程碑可更直接地从 Canton 视角解读；作为超级验证者与 Canton Foundation 成员、资产负债表已持有数十亿 CC 的上市公司，其公开市场对 Canton 的关注度亦随之提升。', url: 'https://cantonnews.org/canton-strategic-holdings-sells-gravitas-to-focus-on-canton-network' },
         { date: '2026-07-23', tag: '基础设施', title: 'Hydra X 发布 HX Gateway API，加速 Canton 部署', body: 'CantonNews（2026-07-23）：Hydra X 在新加坡宣布 HX Gateway API——REST 接入层，使金融机构与应用开发者无需专业 Daml 技能即可集成 Canton。Hydra X 称可将上市时间缩短最多 80%、部署周期缩短 50%；产品提供托管服务，或面向已有验证者基础设施的客户外部部署。该 API 基于 Hydra X 在 Canton 上通过 Digital Asset DA Registry 为受监管客户代币化逾 1 亿美元资产的量产经验。客户解决方案副总裁 Mark Tang 表示，银行、资管与交易所可将 Canton 集成视为业务决策而非专项工程——在代币化资本市场从试点走向生产之际，有望降低接入摩擦。', url: 'https://cantonnews.org/hydra-x-launches-hx-gateway-api-to-speed-canton-deployments' },
         { date: '2026-07-22', tag: '机构', title: 'Yuval Rooz 在 Canton Army Alpha Hour：DTCC 生产、主网扩展与企业财资', body: 'CantonNews（2026-07-22）：Digital Asset 联合创始人兼 CEO Yuval Rooz 做客 Canton Army Alpha Hour，将 Canton 定位为单一网络——专用验证者集群改称「主网扩展」（取代 subnet 表述），仍与全网相连，并计划通过即将提出的 CIP 纳入 CC 燃烧经济。他回顾 a16z 领投的超额认购轮（SoFi、Polychain、Coinbase Ventures、신한、SC Ventures 等）；阐述企业费用模型——内部「卫生」账本更新可设年化费用上限（举例约 50 万美元/客户）及可选预付 burn 承诺换取可组合流程折扣；并梳理 DTCC 首批生产交易组合（代币转换、ETF、回购、证券借贷、抵押质押），更广泛参与方接入目标 2026 年 10 月。Rooz 重点谈企业财资：通过服务 4000+ 企业的财资服务商，在付款前持有代币化生息资产（优先美元），审慎使用 AI 辅助工程，以及仍在筹备中的零售音乐资产项目——强调可持续链上活动而非短期投机。', url: 'https://cantonnews.org/from-dtcc-to-corporate-treasury-yuval-rooz-outlines-canton-s-next-phase' },
