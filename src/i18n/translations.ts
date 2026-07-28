@@ -271,6 +271,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-07-27',
+          tag: 'Ecosystem',
+          title: 'Console ecosystem locks 50M+ CC under CIP-0116 Featured App requirements',
+          body: 'CantonNews (July 27, 2026): The Console ecosystem—Console Wallet, CC View, CCBridge, and CCTag—has locked more than 50 million Canton Coin across its four products, meeting the on-chain capital commitment for Featured App status under CIP-0116. The lock reflects Canton’s market-based Featured App framework (replacing discretionary Foundation designation): non-issuer apps must lock 5 million CC per PartyId. Console Wallet offers passkey-secured self-custody across browser, Mac, and mobile with Canton’s offer-based transfer UX; CCTag provides Canton Name Service ($1 CC subscription handles); CC View is a full ecosystem explorer; and CCBridge routes ERC-20 transfers through Canton’s privacy layer to fresh one-time addresses.',
+          url: 'https://cantonnews.org/console-ecosystem-locks-50-million-cc-under-cip-0116-featured-app-requirements',
+        },
+        {
+          date: '2026-07-27',
+          tag: 'Research',
+          title: 'Palladium Labs publishes State of the Canton Network — H1 2026 report',
+          body: 'CantonNews / Palladium Labs (July 27, 2026): Palladium Labs Research Division released State of the Canton Network – H1 2026—a 51-page report mapping Canton’s shift from institutional pilots to shared-network production across capital markets, payments, and open finance. Snapshot metrics (mostly as of June 30, 2026) include 490+ ecosystem participants, 162K+ active addresses (24h), 655+ validators, 45+ Super Validators, $9T+ monthly volume, $383.56M fees over 180 days, $345.07B RWA value, 38.43B CC circulating, and 118 Featured Apps. The report covers Digital Asset’s $355M round, Broadridge’s $8T+/month repo on Canton, DTCC tokenization, DeFiLlama fee leadership ($57.29M/30 days vs. Tron/Solana/Ethereum), burn-and-mint dynamics post-January halving, wallet ecosystem (Loop, Send, Bron, Cantor8, Console), and an H2 2026 outlook.',
+          url: 'https://cantonnews.org/state-of-the-canton-network-h1-2026-key-findings-from-palladium-labs',
+        },
+        {
+          date: '2026-07-24',
+          tag: 'Governance',
+          title: 'Canton Foundation launches community-maintained Wallet Directory on GitHub',
+          body: 'Canton Network Forum (July 24, 2026): Dave announced the Canton Wallet Directory—a public, community-maintained YAML registry in canton-foundation/wallets documenting which wallets support Canton Coin, CIP-0056 assets, dApp connectivity, pre-approvals, and related features, with optional evidence links and independent verification. Wallet providers self-attest via pull request (no fees or implied endorsement); integrators can compare capabilities transparently. Full instructions in wallets/CONTRIBUTING.md; live table generated via scripts/generate_table.py.',
+          url: 'https://forum.canton.network/t/introducing-the-canton-wallet-directory-add-your-wallet/9006',
+        },
+        {
           date: '2026-07-24',
           tag: 'Institutions',
           title: 'Nasdaq pilots tokenized collateral on Canton as Q2 earnings hit records',
@@ -1385,6 +1406,7 @@ export const translations = {
       intro: 'Independent and official analyses of Canton Network — architecture, tokenomics, institutional adoption, and market data. Reports are listed by source; always verify with the original publisher.',
       institutionalTitle: 'Institutional & market research',
       institutional: [
+        { source: 'Palladium Labs', title: 'State of the Canton Network — H1 2026', date: 'Jul 2026', desc: '51-page ecosystem report (as of June 30, 2026): 490+ participants, 655+ validators, $9T+ monthly volume, $345B RWA, 118 Featured Apps, burn-and-mint economics, Broadridge repo scale, DTCC tokenization, DeFiLlama fee comparison, wallet landscape, and H2 outlook. Full PDF at palladiumlabs.org/research. Not investment advice.', url: 'https://palladiumlabs.org/research/state-of-canton-h1-2026/' },
         { source: 'Tiger Research', title: 'Below the Surface: How Canton Network Is Reshaping Capital Market Infrastructure', date: 'Jul 2026', desc: 'Argues RWA tokenization is only the visible tip—live Broadridge ~$7.7T/month on-chain repo, DTCC Treasury minting, and HK$6B HSBC Orion digital green bonds show infrastructure-layer rebuild underway. Profiles Canton’s Daml privacy, atomic settlement, and BCBS-aligned permissioned model; highlights Asia momentum—Korea’s 2026 STO law (effective Jan 2027), Shinhan Asset Management and Shinhan Securities MOUs with Canton Foundation, JSCC/Nomura/Mizuho JGB collateral PoC, HKFMI CMU integration, and Hydra X MAS structured-product validation. Not investment advice.', url: 'https://reports.tiger-research.com/p/below-the-surface-how-canton-network-eng' },
         { source: 'DailyCoin', title: '$9 Trillion a Month, Flat Price: Inside Canton\'s Paradox', date: 'Jul 2026', desc: 'Commentary on Canton\'s institutional throughput vs. CC price action—Messari/DefiLlama fee share (~42% of tracked Q1 blockchain fees; ~$60M trailing 30 days pre-a16z round), Broadridge repo scale, burn-and-mint issuance (~500M CC/month), and Grayscale ETF filing context. Not investment advice; verify live metrics.', url: 'https://dailycoin.com/9-trillion-a-month-flat-price-inside-cantons-paradox/' },
         { source: 'Blockworks Research', title: 'Canton Network: Wall Street\'s Blockchain', date: 'Mar 2026', desc: 'Deep dive into Canton as infrastructure for regulated institutions — burn-to-mint ratio (0.90), Broadridge $7T+ monthly repo, DTCC tokenization, and 2026 catalysts.', url: 'https://app.blockworksresearch.com/research/canton-network-wall-street-s-blockchain' },
@@ -1503,6 +1525,7 @@ export const translations = {
         { name: 'Canton Network Documentation', url: 'https://docs.canton.network/' },
         { name: 'Canton Wallet SDK — docs & npm (@canton-network/wallet-sdk)', url: 'https://docs.canton.network/sdks-tools/sdks/wallet-sdk' },
         { name: 'Canton Wallet Gateway (GitHub)', url: 'https://github.com/canton-network/wallet-gateway' },
+        { name: 'Canton Wallet Directory (GitHub — community-maintained)', url: 'https://github.com/canton-foundation/wallets' },
         { name: 'Daml / DAML documentation', url: 'https://docs.daml.com/' },
         { name: 'Splice docs (Global Synchronizer app dev)', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice & ops — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
@@ -1847,6 +1870,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-07-27', tag: '生态', title: 'Console 生态在 CIP-0116 下锁定超 5000 万 CC 满足精选应用要求', body: 'CantonNews（2026-07-27）：Console 生态——Console Wallet、CC View、CCBridge 与 CCTag——在四款产品中共锁定超过 5000 万 Canton Coin，满足 CIP-0116 精选应用（Featured App）的链上资本承诺。该锁仓体现 Canton 以市场机制取代 Foundation discretionary 指定的精选应用框架：非发行方应用须按 PartyId 锁定 500 万 CC。Console Wallet 在浏览器、Mac 与移动端提供 passkey 自托管及 Canton offer 式转账 UX；CCTag 提供 Canton Name Service（1 美元 CC 订阅 handle）；CC View 为全生态浏览器；CCBridge 经 Canton 隐私层将 ERC-20 转至一次性新地址。', url: 'https://cantonnews.org/console-ecosystem-locks-50-million-cc-under-cip-0116-featured-app-requirements' },
+        { date: '2026-07-27', tag: '研究', title: 'Palladium Labs 发布《State of the Canton Network — H1 2026》报告', body: 'CantonNews / Palladium Labs（2026-07-27）：Palladium Labs 研究部门发布《State of the Canton Network – H1 2026》——51 页报告，梳理 Canton 从机构试点走向资本市场、支付与开放金融共享网络生产的转变。快照指标（多数截至 2026-06-30）含 490+ 生态参与者、24 小时 16.2 万+ 活跃地址、655+ 验证者、45+ 超级验证者、月交易量 9 万亿美元+、180 日费用 3.8356 亿美元、RWA 价值 3450.7 亿美元、流通 CC 384.3 亿枚、118 个精选应用。报告涵盖 Digital Asset 3.55 亿美元融资、Broadridge 在 Canton 上月 8 万亿美元+ 回购、DTCC 代币化、DeFiLlama 30 日费用领先（5729 万美元 vs Tron/Solana/Ethereum）、1 月减半后 burn-mint 动态、钱包生态（Loop、Send、Bron、Cantor8、Console）及 2026 下半年展望。', url: 'https://cantonnews.org/state-of-the-canton-network-h1-2026-key-findings-from-palladium-labs' },
+        { date: '2026-07-24', tag: '治理', title: 'Canton Foundation 在 GitHub 上线社区维护的钱包目录', body: 'Canton Network Forum（2026-07-24）：Dave 宣布 Canton Wallet Directory——canton-foundation/wallets 中的公开、社区维护 YAML 注册表，记录各钱包对 Canton Coin、CIP-0056 资产、dApp 连接、预授权等功能的支持情况，可选附证据链接与独立验证。钱包方通过 PR 自我声明（无费用、不构成背书）；集成方可透明对比能力。完整说明见 wallets/CONTRIBUTING.md；表格由 scripts/generate_table.py 生成。', url: 'https://forum.canton.network/t/introducing-the-canton-wallet-directory-add-your-wallet/9006' },
         { date: '2026-07-24', tag: '机构', title: 'CantonNews：Nasdaq 在 Canton 试点代币化抵押品，Q2 业绩创新高', body: 'CantonNews（2026-07-24）：Nasdaq 在 2026 年第二季度业绩电话会上披露，已通过 Nasdaq Calypso 平台在 Canton Network 上成功完成代币化抵押品试点——与两家全球领先资管机构一道，将代币化货币市场基金作为抵押品传输。CEO Adena Friedman 将其定位为概念验证：Calypso 已被数百家机构用于抵押品管理，未来可演进为在代币化形态下移动资产的抵押品网络；她称参与者走出试点房间时表示胜利（「钱确实动了」）。公司计划通过新的 Calypso 模块（抵押品移动 upsell）实现未来 monetization。该试点属于 Nasdaq 更广泛的代币化布局——与 DTCC 合作推进代币化股票的后交易结算，并与 Kraken 合作探索即时结算的代币化股权发行模式（目标 2027 年初）。披露同期伴随创纪录业绩：净收入 15 亿美元（同比 +15%）、指数 AUM 首次突破 1 万亿美元（当季净流入 510 亿美元），以及 6 月 12 日 SpaceX IPO（公司称史上最大，募资 860 亿美元）。', url: 'https://cantonnews.org/nasdaq-pilots-tokenized-collateral-on-canton-network-as-q2-earnings-hit-record-highs' },
         { date: '2026-07-23', tag: '机构', title: 'Arqitech、MPCH、Pixelplex 与 sFOX 在 Canton 主网完成 CC–USDC 原子互换', body: 'GlobeNewswire / Arqitech（2026-07-23）：Arqitech、MPCH、Pixelplex 与 sFOX 在 Canton MainNet 上完成多笔实时非托管跨链原子互换，通过 Arqitech 原子互换协议（ASP）将 Canton Coin（CC）与 USDC 互换，各机构全程保留私钥签名控制权。该部署表明受监管机构可在不交出托管的前提下完成安全原子跨链交易——Arqitech 多链平台将 Canton 与比特币、以太坊、Tron 与 Solana 流动性相连。sFOX CEO Javier Martinez 称该里程碑与 sFOX 计划于 2026 年 8 月 1 日起公开交易 CC 的举措相辅相成。ASP 基于 Arqitech 与 Digital Asset 在 Canton 代币标准 V2（CIP-0112，2026 年 6 月获 Canton Foundation 批准）上的合作；客户接入将在未来数周内开放。', url: 'https://www.globenewswire.com/news-release/2026/07/23/3332107/0/en/Institutional-Execution-of-Full-Featured-HTLC-Multi-Chain-Swaps-with-Canton-Using-Arqitech-s-Atomic-Swap-Protocol.html' },
         { date: '2026-07-23', tag: '机构', title: 'Canton Strategic Holdings 出售 Gravitas，聚焦 Canton 战略', body: 'CantonNews（2026-07-23）：纳斯达克上市公司 Canton Strategic Holdings（CNTN）将生物科技研发子公司 Gravitas Life Sciences 出售给 Gravitas Collective Corp.，董事会一致批准的交易于 7 月 17 日交割、六日后对外宣布。管理层称剥离与运营战略一致——利用 Canton Coin 支持 Canton Network 在传统金融市场数字化中的角色——并承接 2026 年 6 月在 CIP-0105/CIP-0116 下为超级验证者与精选应用推出的锁仓即服务。与无关生物科技业务分离后，未来里程碑可更直接地从 Canton 视角解读；作为超级验证者与 Canton Foundation 成员、资产负债表已持有数十亿 CC 的上市公司，其公开市场对 Canton 的关注度亦随之提升。', url: 'https://cantonnews.org/canton-strategic-holdings-sells-gravitas-to-focus-on-canton-network' },
@@ -2036,6 +2062,7 @@ export const translations = {
       intro: '关于 Canton Network 的独立与官方分析——架构、代币经济、机构采用与市场数据。按来源分列；请以原始发布方为准。',
       institutionalTitle: '机构与市场研究',
       institutional: [
+        { source: 'Palladium Labs', title: 'State of the Canton Network — H1 2026', date: '2026 年 7 月', desc: '51 页生态报告（截至 2026-06-30）：490+ 参与者、655+ 验证者、月交易量 9 万亿美元+、RWA 3450 亿美元、118 个精选应用、burn-mint 经济、Broadridge 回购规模、DTCC 代币化、DeFiLlama 费用对比、钱包格局与下半年展望。完整 PDF 见 palladiumlabs.org/research。非投资建议。', url: 'https://palladiumlabs.org/research/state-of-canton-h1-2026/' },
         { source: 'Tiger Research', title: '水面之下：Canton Network 如何重塑资本市场基础设施', date: '2026 年 7 月', desc: '认为 RWA 代币化只是冰山一角——Broadridge 约每月 77 万亿美元链上回购、DTCC 国债铸造、汇丰 Orion 60 亿港元数字绿债等表明基础设施层正在重建。剖析 Canton 的 Daml 隐私、原子结算与符合 BCBS 的许可型架构；重点亚洲动能——韩国 2026 年 STO 立法（2027 年 1 月生效）、新韩资产管理与新韩证券与 Canton Foundation 的 MOU、JSCC/野村/瑞穗 JGB 抵押 PoC、HKFMI CMU 集成及 Hydra X 在 MAS 框架下的结构化产品验证。非投资建议。', url: 'https://reports.tiger-research.com/p/below-the-surface-how-canton-network-eng' },
         { source: 'DailyCoin', title: '月处理 9 万亿美元、价格却平坦：Canton 悖论', date: '2026 年 7 月', desc: '评论 Canton 机构吞吐量与 CC 价格表现的分化——Messari/DefiLlama 手续费占比（约占 2026 Q1 跟踪链上费用的 42%；a16z 轮前 30 日约 6000 万美元）、Broadridge 回购规模、燃烧-铸造发行（约每月 5 亿 CC）及 Grayscale ETF 申报背景。非投资建议；请以实时数据为准。', url: 'https://dailycoin.com/9-trillion-a-month-flat-price-inside-cantons-paradox/' },
         { source: 'Blockworks Research', title: 'Canton Network: 华尔街的区块链', date: '2026 年 3 月', desc: '深度分析 Canton 作为监管机构基础设施——燃烧铸造比 0.90、Broadridge 月回购 $7T+、DTCC 代币化与 2026 催化剂。', url: 'https://app.blockworksresearch.com/research/canton-network-wall-street-s-blockchain' },
@@ -2154,6 +2181,7 @@ export const translations = {
         { name: 'Canton Network 官方文档', url: 'https://docs.canton.network/' },
         { name: 'Canton Wallet SDK — 文档与 npm（@canton-network/wallet-sdk）', url: 'https://docs.canton.network/sdks-tools/sdks/wallet-sdk' },
         { name: 'Canton Wallet Gateway（GitHub）', url: 'https://github.com/canton-network/wallet-gateway' },
+        { name: 'Canton Wallet Directory（GitHub——社区维护）', url: 'https://github.com/canton-foundation/wallets' },
         { name: 'Daml / DAML 文档', url: 'https://docs.daml.com/' },
         { name: 'Splice 文档（Global Synchronizer 应用开发）', url: 'https://docs.dev.global.canton.network.sync.global/' },
         { name: 'Splice 与运维 — docs.dev.sync.global', url: 'https://docs.dev.sync.global/' },
