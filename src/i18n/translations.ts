@@ -271,6 +271,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-01',
+          tag: 'Network',
+          title: 'CantonNews July 2026 recap: live market activity, network growth, and new products',
+          body: 'CantonNews (August 1, 2026): Monthly recap frames July as Canton’s shift from demonstrations to live institutional activity—Tradeweb’s real-time tokenized U.S. Treasury transfer to Virtu for USDCx; DTCC confirming DTC-custodied asset conversions on Canton and Besu; Temple’s DTCC Tokenization Service repo trade and Ember eXAU/eXAG spot listing; Nasdaq’s Calypso tokenized money-market-fund collateral PoC; Shinhan/SC Ventures and Hanwha investments; SBI Digital Practice rebrand; Visa stablecoin platform alongside Foundation General Membership; OKJ’s first Japanese order-book CC market; Palladium H1 2026 report (490+ participants, 655+ validators, $9T+ monthly volume); Canton Strategic Q2 report (2.28M daily txs, Featured Apps 47→107, ~200 new validators, 4.3B CC burned); Console 50M+ CC locks, Cashen 50+ platforms, OneSwap v2, Ekiden Featured App, Premia/Raven, x402, BitSafe Decentralization Manager beta, and Arqitech Token Standard V2 swaps—plus Cantor8’s August 29 London hackathon. Canton enters August with more builders, institutions, and live activity.',
+          url: 'https://cantonnews.org/canton-network-july-2026-recap-live-market-activity-network-growth-and-new-products',
+        },
+        {
           date: '2026-07-31',
           tag: 'Institutions',
           title: 'Temple lists Ember eXAU/eXAG physically backed gold and silver for spot trading on Canton',
@@ -1954,6 +1961,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-01', tag: '网络', title: 'CantonNews 7 月回顾：实盘市场活动、网络增长与新上线产品', body: 'CantonNews（2026-08-01）：月度回顾将 7 月定位为 Canton 从演示走向机构实盘活动的转折——Tradeweb 实时代币化美国国债经 USDCx 转至 Virtu；DTCC 确认 DTC 托管资产在 Canton 与 Besu 上转换；Temple 经 DTCC 代币化服务的回购交易及 Ember eXAU/eXAG 现货上线；Nasdaq Calypso 代币化货币基金抵押 PoC；신한/SC Ventures 与韩华投资；SBI Digital Practice 更名；Visa 稳定币平台与 Foundation 普通成员身份并行；OKJ 日本首家 CC 板取引；Palladium H1 2026 报告（490+ 参与者、655+ 验证者、月交易量 9 万亿美元+）；Canton Strategic Q2 报告（日均 228 万笔交易、精选应用 47→107、约 200 新验证者、CC 销毁 43 亿+）；Console 锁定 5000 万+ CC、Cashen 50+ 平台、OneSwap v2、Ekiden 精选应用、Premia/Raven、x402、BitSafe Decentralization Manager 公测与 Arqitech 代币标准 V2 互换——以及 8 月 29 日 Cantor8 伦敦黑客松。Canton 进入 8 月时 builder、机构与实盘活动均持续增加。', url: 'https://cantonnews.org/canton-network-july-2026-recap-live-market-activity-network-growth-and-new-products' },
         { date: '2026-07-31', tag: '机构', title: 'Temple 在 Canton 上线 Ember eXAU/eXAG 实物黄金与白银现货交易', body: 'CantonNews（2026-07-31）：Temple Digital Group 在 Canton Network 上线 Ember Protocol 发行的 eXAU 黄金与 eXAG 白银现货交易——Temple 首批商品交易对，并称其为 Canton 上首个真正的商品价格发现机制。每枚 eXAU 代表 1 金衡盎司 99.99% 纯 LBMA Good Delivery 黄金，eXAG 代表 1 金衡盎司 99.9% 纯 LBMA Good Delivery 白银，在专业金库全额分配托管，无合成或未分配敞口，储备采用破产隔离结构。Temple 面向寻求隐私、直接金属所有权与 7×24 交易的基金、交易台与财库，而非合成价格敞口——承接 Ember Protocol 7 月 18 日 Canton 上线及 Temple 7 月 30 日商品市场公告。', url: 'https://cantonnews.org/temple-lists-ember-s-physically-backed-gold-and-silver-tokens-on-canton' },
         { date: '2026-07-31', tag: '生态', title: 'Cantor8「Build on Canton」伦敦黑客松定于 2026 年 8 月 29 日', body: 'CantonNews（2026-07-31）：Cantor8 将于 2026 年 8 月 29 日（周六）在伦敦举办其称为 2026 年最大规模线下 Canton Network 黑客松——全天「Build on Canton」活动，与剑桥大学、牛津大学及帝国理工学院区块链社区联合，向高校团队、资深开发者、创始人及首次参与者开放。参与者先学习 Daml 与 Canton 架构，再围绕机构金融、隐私优先工作流、代币化、钱包、注册表、结算与开发者工具构建原型；导师全程支持，无需 prior Canton/Daml 经验。报名需审批，场地向通过者通知。', url: 'https://cantonnews.org/the-biggest-in-person-canton-network-hackathon-of-2026-comes-to-london' },
         { date: '2026-07-30', tag: '技术', title: 'Loop 钱包完成独立安全审计与渗透测试', body: 'Canton Network 论坛 / 5N（2026-07-30）：Loop——Canton 上首个完全多方托管钱包（7 月 22 日公告）——已完成覆盖 Loop 钱包、SDK 与 API 的全套独立安全审计，并对 5N 系统开展渗透测试。5N 将这一里程碑定位为多方托管结构（每位用户同时接入两个 co-validator 节点）与第三方安全审查的结合；公开审计摘要见 docs.fivenorth.io/security/introduction。', url: 'https://forum.canton.network/t/cf-outreach-audit-complete-loop-wallet-sdk-and-apis-are-no/9024' },
