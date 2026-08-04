@@ -271,6 +271,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-04',
+          tag: 'Markets',
+          title: 'Bitrue lists CC/USDT spot trading with Canton Network deposits',
+          body: 'Bitrue / CantonNews (August 3–4, 2026): Bitrue announced CC/USDT spot trading opening August 4 at 09:00 UTC, with CC deposits enabled via Canton Network and withdrawals scheduled from August 5 at 09:00 UTC. The listing expands centralized exchange access to Canton Coin alongside venues such as OKX, Bybit, and Bitget—bridging institutional network utility with retail spot liquidity. Users need a verified Bitrue account and USDT or other base assets in the spot wallet to trade.',
+          url: 'https://www.bitrue.com/blog/canton-cc-listed-bitrue',
+        },
+        {
+          date: '2026-08-03',
+          tag: 'Technology',
+          title: 'CC Space API adds x402 micropayments for AI agents on Canton',
+          body: 'Canton Network Forum / ITRocket & FTP team (August 3, 2026): CC Space—the Canton explorer and production API at cc.itrocket.space—now supports x402 pay-per-request settlement in CC, brought to Canton by the FTP team. AI agents can call the API without signup or API keys, with user-set spend caps; setup via MCP wallet at ftptech.xyz/mcp, agent context at cc.itrocket.space/llms.txt, and API docs at cc.itrocket.space/api-reference.',
+          url: 'https://forum.canton.network/t/cf-outreach-canton-network-data-just-got-directly-acce/9033',
+        },
+        {
+          date: '2026-08-01',
+          tag: 'Technology',
+          title: 'Noders releases go-daml, open-source Go SDK for Canton Ledger API',
+          body: 'Canton Network Forum / Noders (August 1, 2026): Noders published go-daml—an open-source Go SDK for Canton Network’s Ledger API enabling command submission, ledger queries, event streaming, and more without building a custom client. The team uses it in production for AppFactory and other Canton tooling; the repo includes documentation and unit tests, with a demo video on YouTube.',
+          url: 'https://forum.canton.network/t/introducing-go-daml-a-go-sdk-for-building-on-canton-network/9029',
+        },
+        {
           date: '2026-08-01',
           tag: 'Network',
           title: 'CantonNews July 2026 recap: live market activity, network growth, and new products',
@@ -1677,6 +1698,7 @@ export const translations = {
         { name: 'MEXC', pairs: 'CC/USDT' },
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
+        { name: 'Bitrue', pairs: 'CC/USDT (Aug 4, 2026 launch)' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT (see venue rules)' },
         { name: 'Bithumb', pairs: 'CC/KRW (Canton Mainnet; see venue rules)' },
         { name: 'OKJ', pairs: 'CC/JPY (order book; Jul 15, 2026 launch)' },
@@ -1961,6 +1983,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-04', tag: '市场', title: 'Bitrue 上线 CC/USDT 现货交易，支持 Canton Network 充值', body: 'Bitrue / CantonNews（2026-08-03 至 04 日）：Bitrue 宣布 CC/USDT 现货交易于 8 月 4 日 09:00 UTC 开放，CC 可通过 Canton Network 充值，提币自 8 月 5 日 09:00 UTC 起。该上线在 OKX、Bybit、Bitget 等之外再增一条中心化交易所 CC 现货通道——连接机构级网络效用与零售现货流动性。用户需完成 Bitrue 认证并在现货钱包持有 USDT 等基础资产方可交易。', url: 'https://www.bitrue.com/blog/canton-cc-listed-bitrue' },
+        { date: '2026-08-03', tag: '技术', title: 'CC Space API 为 Canton 上 AI 智能体新增 x402 按次 CC 结算', body: 'Canton Network 论坛 / ITRocket 与 FTP 团队（2026-08-03）：CC Space——位于 cc.itrocket.space 的 Canton 浏览器与生产级 API——现已支持 x402 按请求以 CC 结算，由 FTP 团队引入 Canton。AI 智能体可无注册、无 API Key 调用接口，并自行设定支出上限；MCP 钱包配置见 ftptech.xyz/mcp，智能体上下文见 cc.itrocket.space/llms.txt，API 文档见 cc.itrocket.space/api-reference。', url: 'https://forum.canton.network/t/cf-outreach-canton-network-data-just-got-directly-acce/9033' },
+        { date: '2026-08-01', tag: '技术', title: 'Noders 发布 go-daml：Canton Ledger API 开源 Go SDK', body: 'Canton Network 论坛 / Noders（2026-08-01）：Noders 发布 go-daml——面向 Canton Network Ledger API 的开源 Go SDK，支持提交命令、查询账本、流式事件等，无需自建客户端。团队已在 AppFactory 等 Canton 工具中用于生产；仓库含文档与单元测试，YouTube 有演示视频。', url: 'https://forum.canton.network/t/introducing-go-daml-a-go-sdk-for-building-on-canton-network/9029' },
         { date: '2026-08-01', tag: '网络', title: 'CantonNews 7 月回顾：实盘市场活动、网络增长与新上线产品', body: 'CantonNews（2026-08-01）：月度回顾将 7 月定位为 Canton 从演示走向机构实盘活动的转折——Tradeweb 实时代币化美国国债经 USDCx 转至 Virtu；DTCC 确认 DTC 托管资产在 Canton 与 Besu 上转换；Temple 经 DTCC 代币化服务的回购交易及 Ember eXAU/eXAG 现货上线；Nasdaq Calypso 代币化货币基金抵押 PoC；신한/SC Ventures 与韩华投资；SBI Digital Practice 更名；Visa 稳定币平台与 Foundation 普通成员身份并行；OKJ 日本首家 CC 板取引；Palladium H1 2026 报告（490+ 参与者、655+ 验证者、月交易量 9 万亿美元+）；Canton Strategic Q2 报告（日均 228 万笔交易、精选应用 47→107、约 200 新验证者、CC 销毁 43 亿+）；Console 锁定 5000 万+ CC、Cashen 50+ 平台、OneSwap v2、Ekiden 精选应用、Premia/Raven、x402、BitSafe Decentralization Manager 公测与 Arqitech 代币标准 V2 互换——以及 8 月 29 日 Cantor8 伦敦黑客松。Canton 进入 8 月时 builder、机构与实盘活动均持续增加。', url: 'https://cantonnews.org/canton-network-july-2026-recap-live-market-activity-network-growth-and-new-products' },
         { date: '2026-07-31', tag: '机构', title: 'Temple 在 Canton 上线 Ember eXAU/eXAG 实物黄金与白银现货交易', body: 'CantonNews（2026-07-31）：Temple Digital Group 在 Canton Network 上线 Ember Protocol 发行的 eXAU 黄金与 eXAG 白银现货交易——Temple 首批商品交易对，并称其为 Canton 上首个真正的商品价格发现机制。每枚 eXAU 代表 1 金衡盎司 99.99% 纯 LBMA Good Delivery 黄金，eXAG 代表 1 金衡盎司 99.9% 纯 LBMA Good Delivery 白银，在专业金库全额分配托管，无合成或未分配敞口，储备采用破产隔离结构。Temple 面向寻求隐私、直接金属所有权与 7×24 交易的基金、交易台与财库，而非合成价格敞口——承接 Ember Protocol 7 月 18 日 Canton 上线及 Temple 7 月 30 日商品市场公告。', url: 'https://cantonnews.org/temple-lists-ember-s-physically-backed-gold-and-silver-tokens-on-canton' },
         { date: '2026-07-31', tag: '生态', title: 'Cantor8「Build on Canton」伦敦黑客松定于 2026 年 8 月 29 日', body: 'CantonNews（2026-07-31）：Cantor8 将于 2026 年 8 月 29 日（周六）在伦敦举办其称为 2026 年最大规模线下 Canton Network 黑客松——全天「Build on Canton」活动，与剑桥大学、牛津大学及帝国理工学院区块链社区联合，向高校团队、资深开发者、创始人及首次参与者开放。参与者先学习 Daml 与 Canton 架构，再围绕机构金融、隐私优先工作流、代币化、钱包、注册表、结算与开发者工具构建原型；导师全程支持，无需 prior Canton/Daml 经验。报名需审批，场地向通过者通知。', url: 'https://cantonnews.org/the-biggest-in-person-canton-network-hackathon-of-2026-comes-to-london' },
@@ -2346,6 +2371,7 @@ export const translations = {
         { name: 'MEXC', pairs: 'CC/USDT' },
         { name: 'Gate', pairs: 'CC/USDT' },
         { name: 'HTX', pairs: 'CC/USDT' },
+        { name: 'Bitrue', pairs: 'CC/USDT（2026-08-04 起）' },
         { name: 'Upbit', pairs: 'CC/KRW, CC/BTC, CC/USDT（以所内规则为准）' },
         { name: 'Bithumb', pairs: 'CC/KRW（Canton 主网；以所内规则为准）' },
         { name: 'OKJ', pairs: 'CC/JPY（板取引；2026-07-15 起）' },
