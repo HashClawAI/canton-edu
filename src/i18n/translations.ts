@@ -272,6 +272,41 @@ export const translations = {
       items: [
         {
           date: '2026-08-04',
+          tag: 'Technology',
+          title: 'IntellectEU ships CatalyX Daml Coding Assistant on VS Code Marketplace',
+          body: 'Canton Network Forum / IntellectEU (August 4, 2026): First milestone from a Canton Foundation Development grant—CatalyX Daml Coding Assistant is live on the VS Code Marketplace, offering Daml autocompletion from a 7B model fine-tuned on real Daml code. Benchmarks and weights are published (github.com/IntellectEU/daml-fim-benchmark; huggingface.co/intellecteu/daml-fim-7b) so inference can run inside your own network without sending proprietary Daml to third-party APIs. Next grant milestones cover Daml code generation and test generation.',
+          url: 'https://forum.canton.network/t/cf-outreach-gcanton-sharing-the-first-milestone-delivered-wit/9037',
+        },
+        {
+          date: '2026-08-04',
+          tag: 'Institutions',
+          title: '1exchange approved as Canton Network validator for RWA tokenization',
+          body: 'PR Newswire / 1exchange (August 4, 2026): Singapore-regulated real-world asset exchange 1exchange received validator approval on Canton—the privacy-enabled public blockchain built for capital markets. 1exchange will use Canton\'s privacy-preserving infrastructure for future tokenization, listing, and trading of RWAs with enhanced confidentiality and regulatory oversight. Digital Asset CEO Yuval Rooz said the move expands Canton\'s Asia presence and meets growing regional demand for secure, interoperable digital-asset infrastructure.',
+          url: 'https://www.prnewswire.com/apac/news-releases/1exchange-joins-canton-to-leverage-privacy-enabled-blockchain-infrastructure-for-rwa-tokenization-302841857.html',
+        },
+        {
+          date: '2026-08-04',
+          tag: 'Institutions',
+          title: 'FOMO Pay joins Canton as validator for institutional B2B payments',
+          body: 'PR Newswire / FOMO Pay (August 4, 2026): FOMO Pay—a Singapore Major Payment Institution and the country\'s first Digital Payment Token licensee—received validator approval on Canton alongside a growing roster of global financial institutions. Through its validator role FOMO Pay will operate a dedicated node, gaining a private institutional gateway to transact with authorized counterparties and exploring B2B payment and settlement use cases across its multi-chain, multi-rail, multi-currency network serving Southeast Asia, Greater Bay Area, and MENA clients.',
+          url: 'https://www.siamnewsnetwork.net/pr-news/fomo-pay-expands-institutional-blockchain-infrastructure-with-canton-network-validator-approval/',
+        },
+        {
+          date: '2026-08-03',
+          tag: 'Governance',
+          title: 'Franklin Templeton becomes largest asset manager Canton Super Validator',
+          body: 'CantonNews / Franklin Templeton Digital Assets (August 3–4, 2026): Franklin Templeton ($1.79T AUM) announced Super Validator status on Canton—making it the largest asset manager in the role and expanding beyond Benji Technology Platform integration (November 2025) into network governance and infrastructure. CIP-0118 (approved June 10, 2026) defines milestone-based SV weight up to 5: production treasury transactions, 24/7 tokenized-fund create/redeem with on-chain cash delivery, plus volume-based weight for eligible fund flows. Franklin Templeton joins Visa and other institutions operating critical Canton consensus infrastructure.',
+          url: 'https://cantonnews.org/franklin-templeton-becomes-a-canton-super-validator',
+        },
+        {
+          date: '2026-08-03',
+          tag: 'Ecosystem',
+          title: 'Quantstamp proposes open-source DamlCov and DamlFuzz via Canton dev fund',
+          body: 'Canton Network Forum / Quantstamp (August 3, 2026): Quantstamp—which audits Daml/Canton applications—posted two Canton Foundation Development Fund proposals for open-source tooling gaps: DamlCov (line/branch test coverage) and DamlFuzz (property-based fuzzing for Daml contracts). The team seeks ecosystem comments on PRs canton-dev-fund#323 and #52 to demonstrate demand from projects that would use coverage in CI or fuzzing on contracts before security reviews.',
+          url: 'https://forum.canton.network/t/cf-outreach-hey-all-i-am-jon-from-quantstamp-we-audit-daml-c/9031',
+        },
+        {
+          date: '2026-08-04',
           tag: 'Markets',
           title: 'Bitrue lists CC/USDT spot trading with Canton Network deposits',
           body: 'Bitrue / CantonNews (August 3–4, 2026): Bitrue announced CC/USDT spot trading opening August 4 at 09:00 UTC, with CC deposits enabled via Canton Network and withdrawals scheduled from August 5 at 09:00 UTC. The listing expands centralized exchange access to Canton Coin alongside venues such as OKX, Bybit, and Bitget—bridging institutional network utility with retail spot liquidity. Users need a verified Bitrue account and USDT or other base assets in the spot wallet to trade.',
@@ -1983,6 +2018,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-04', tag: '技术', title: 'IntellectEU 在 VS Code 发布 CatalyX Daml 编码助手', body: 'Canton Network 论坛 / IntellectEU（2026-08-04）：Canton Foundation 发展基金首个里程碑——CatalyX Daml Coding Assistant 已上架 VS Code Marketplace，基于 7B 模型在真实 Daml 代码上微调，提供 Daml 自动补全。基准与模型权重已公开（github.com/IntellectEU/daml-fim-benchmark；huggingface.co/intellecteu/daml-fim-7b），可在自有网络内推理，无需将专有 Daml 发送至第三方 API。基金后续里程碑将覆盖 Daml 代码生成与测试生成。', url: 'https://forum.canton.network/t/cf-outreach-gcanton-sharing-the-first-milestone-delivered-wit/9037' },
+        { date: '2026-08-04', tag: '机构', title: '1exchange 获批成为 Canton Network 验证者，服务 RWA 代币化', body: 'PR Newswire / 1exchange（2026-08-04）：新加坡受监管真实世界资产交易所 1exchange 获批成为 Canton——面向资本市场的隐私公链——验证者。1exchange 将利用 Canton 隐私保护基础设施开展未来 RWA 代币化、上市与交易，在合规前提下增强保密性与监管可控性。Digital Asset CEO Yuval Rooz 表示，此举扩展 Canton 在亚洲的布局，满足区域对安全、可互操作数字资产基础设施的日益增长需求。', url: 'https://www.prnewswire.com/apac/news-releases/1exchange-joins-canton-to-leverage-privacy-enabled-blockchain-infrastructure-for-rwa-tokenization-302841857.html' },
+        { date: '2026-08-04', tag: '机构', title: 'FOMO Pay 加入 Canton 成为验证者，拓展机构 B2B 支付', body: 'PR Newswire / FOMO Pay（2026-08-04）：FOMO Pay——新加坡 Major Payment Institution 及该国首家 Digital Payment Token 持牌机构——获批成为 Canton 验证者，与全球金融机构生态并列。通过验证者角色 FOMO Pay 将运行专用节点，获得与授权对手方交易的私有机构网关，并在其覆盖东南亚、大湾区与 MENA 的多链、多轨、多币种网络中探索 B2B 支付与结算用例。', url: 'https://www.siamnewsnetwork.net/pr-news/fomo-pay-expands-institutional-blockchain-infrastructure-with-canton-network-validator-approval/' },
+        { date: '2026-08-03', tag: '治理', title: 'Franklin Templeton 成为最大资产管理公司 Canton 超级验证者', body: 'CantonNews / Franklin Templeton Digital Assets（2026-08-03 至 04 日）：Franklin Templeton（管理规模 1.79 万亿美元）宣布担任 Canton 超级验证者——为迄今最大资产管理机构 SV，并自 2025 年 11 月 Benji Technology Platform 接入后进一步参与网络治理与基础设施运营。CIP-0118（2026-06-10 批准）定义最高 5 权重的里程碑机制：生产环境国库交易、7×24 代币化基金申赎及链上现金交割，另按合格基金流量计额外权重。Franklin Templeton 与 Visa 等机构共同维护 Canton 共识基础设施。', url: 'https://cantonnews.org/franklin-templeton-becomes-a-canton-super-validator' },
+        { date: '2026-08-03', tag: '生态', title: 'Quantstamp 通过 Canton 发展基金提案开源 DamlCov 与 DamlFuzz', body: 'Canton Network 论坛 / Quantstamp（2026-08-03）：Quantstamp——审计 Daml/Canton 应用的团队——针对 Daml 工具链缺口提交两项 Canton Foundation 发展基金提案：DamlCov（行/分支测试覆盖率）与 DamlFuzz（Daml 合约基于属性的模糊测试）。团队希望在 canton-dev-fund PR #323 与 #52 上获得生态评论，以证明项目在 CI 中使用覆盖率或对合约做 fuzzing 的需求。', url: 'https://forum.canton.network/t/cf-outreach-hey-all-i-am-jon-from-quantstamp-we-audit-daml-c/9031' },
         { date: '2026-08-04', tag: '市场', title: 'Bitrue 上线 CC/USDT 现货交易，支持 Canton Network 充值', body: 'Bitrue / CantonNews（2026-08-03 至 04 日）：Bitrue 宣布 CC/USDT 现货交易于 8 月 4 日 09:00 UTC 开放，CC 可通过 Canton Network 充值，提币自 8 月 5 日 09:00 UTC 起。该上线在 OKX、Bybit、Bitget 等之外再增一条中心化交易所 CC 现货通道——连接机构级网络效用与零售现货流动性。用户需完成 Bitrue 认证并在现货钱包持有 USDT 等基础资产方可交易。', url: 'https://www.bitrue.com/blog/canton-cc-listed-bitrue' },
         { date: '2026-08-03', tag: '技术', title: 'CC Space API 为 Canton 上 AI 智能体新增 x402 按次 CC 结算', body: 'Canton Network 论坛 / ITRocket 与 FTP 团队（2026-08-03）：CC Space——位于 cc.itrocket.space 的 Canton 浏览器与生产级 API——现已支持 x402 按请求以 CC 结算，由 FTP 团队引入 Canton。AI 智能体可无注册、无 API Key 调用接口，并自行设定支出上限；MCP 钱包配置见 ftptech.xyz/mcp，智能体上下文见 cc.itrocket.space/llms.txt，API 文档见 cc.itrocket.space/api-reference。', url: 'https://forum.canton.network/t/cf-outreach-canton-network-data-just-got-directly-acce/9033' },
         { date: '2026-08-01', tag: '技术', title: 'Noders 发布 go-daml：Canton Ledger API 开源 Go SDK', body: 'Canton Network 论坛 / Noders（2026-08-01）：Noders 发布 go-daml——面向 Canton Network Ledger API 的开源 Go SDK，支持提交命令、查询账本、流式事件等，无需自建客户端。团队已在 AppFactory 等 Canton 工具中用于生产；仓库含文档与单元测试，YouTube 有演示视频。', url: 'https://forum.canton.network/t/introducing-go-daml-a-go-sdk-for-building-on-canton-network/9029' },
