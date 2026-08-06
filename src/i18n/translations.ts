@@ -271,6 +271,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-05',
+          tag: 'Institutions',
+          title: 'Nano Labs approved as Canton Network validator node',
+          body: 'GlobeNewswire / Nano Labs Ltd. (Nasdaq: NA) (August 5, 2026): Hong Kong–based Web 3.0 infrastructure provider Nano Labs received governance approval to operate a dedicated Canton validator node, joining the network\'s global validator ecosystem. The company will run production node infrastructure and explore institutional digital-asset use cases—settlement, on-chain asset management, and compliant financial workflows—alongside participants such as Goldman Sachs, BNY Mellon, Visa, and DTCC on Canton\'s privacy-enabled institutional stack.',
+          url: 'https://www.globenewswire.com/news-release/2026/08/05/3339096/0/en/Nano-Labs-Approved-as-a-Validator-Node-on-Canton-Network.html',
+        },
+        {
+          date: '2026-08-05',
+          tag: 'Technology',
+          title: 'PartyLayer passes 106,000 npm downloads, publishes 12-month roadmap',
+          body: 'CantonNews / Cayvox Labs (August 5, 2026): PartyLayer—the open-source CIP-0103 wallet connection layer for Canton apps—crossed 106,000 npm package downloads and shared a twelve-month roadmap: automatic Daml code generation, faster connect-in-few-lines onboarding, a proposed "Sign in with Canton" open standard, and mature React Native/mobile tooling. Built on Canton\'s wallet communication standard with Console, Cantor8, Nightly, and 5N Loop supported out of the box; live demos at tokenization.partylayer.xyz and dvp.partylayer.xyz.',
+          url: 'https://cantonnews.org/partylayer-passes-106-000-npm-downloads-and-announces-its-new-roadmap',
+        },
+        {
+          date: '2026-08-04',
+          tag: 'Ecosystem',
+          title: 'Temple Digital Group and RedStone bring oracle feeds to Canton commodity markets',
+          body: 'CantonNews (August 4, 2026): Temple Digital Group partnered with RedStone to supply institutional-grade price feeds for Temple\'s newly launched gold and silver markets on Canton—pairing RedStone oracles (used by BUIDL, ACRED, SCOPE, and $B+ on-chain value across 110+ networks) with Temple\'s central limit order book. The integration supports pricing, reference data, and risk functions so commodity trading on Canton matches traditional exchange-grade market data.',
+          url: 'https://cantonnews.org/temple-digital-group-and-redstone-partner-to-bring-pricing-infrastructure-to-commodity-markets-on-canton',
+        },
+        {
           date: '2026-08-04',
           tag: 'Technology',
           title: 'IntellectEU ships CatalyX Daml Coding Assistant on VS Code Marketplace',
@@ -2018,6 +2039,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-05', tag: '机构', title: 'Nano Labs 获批成为 Canton Network 验证者节点', body: 'GlobeNewswire / Nano Labs Ltd.（纳斯达克：NA）（2026-08-05）：总部位于香港的 Web 3.0 基础设施提供商 Nano Labs 经治理审批获准运行专用 Canton 验证者节点，加入全球验证者生态。公司将运营生产级节点基础设施，并在 Canton 隐私型机构栈上与 Goldman Sachs、BNY Mellon、Visa、DTCC 等参与者共同探索机构数字资产用例——结算、链上资产管理及合规金融工作流。', url: 'https://www.globenewswire.com/news-release/2026/08/05/3339096/0/en/Nano-Labs-Approved-as-a-Validator-Node-on-Canton-Network.html' },
+        { date: '2026-08-05', tag: '技术', title: 'PartyLayer npm 下载突破 10.6 万次，发布 12 个月路线图', body: 'CantonNews / Cayvox Labs（2026-08-05）：PartyLayer——Canton 应用的开源 CIP-0103 钱包连接层——npm 包累计下载量突破 10.6 万次，并公布十二个月路线图：Daml 自动代码生成、数行代码完成接入、拟议的「Sign in with Canton」开放标准，以及 React Native/移动端工具成熟化。基于 Canton 钱包通信标准，开箱支持 Console、Cantor8、Nightly 与 5N Loop；实盘演示见 tokenization.partylayer.xyz 与 dvp.partylayer.xyz。', url: 'https://cantonnews.org/partylayer-passes-106-000-npm-downloads-and-announces-its-new-roadmap' },
+        { date: '2026-08-04', tag: '生态', title: 'Temple Digital Group 与 RedStone 为 Canton 商品市场引入预言机喂价', body: 'CantonNews（2026-08-04）：Temple Digital Group 与 RedStone 合作，为 Temple 在 Canton 新上线的黄金与白银市场提供机构级价格喂价——将 RedStone 预言机（服务 BUIDL、ACRED、SCOPE 等产品，在 110+ 网络保障数十亿美元链上价值）与 Temple 中央限价订单簿对接。该集成支持定价、参考数据与风控功能，使 Canton 上的商品交易具备与传统交易所相当的行情质量。', url: 'https://cantonnews.org/temple-digital-group-and-redstone-partner-to-bring-pricing-infrastructure-to-commodity-markets-on-canton' },
         { date: '2026-08-04', tag: '技术', title: 'IntellectEU 在 VS Code 发布 CatalyX Daml 编码助手', body: 'Canton Network 论坛 / IntellectEU（2026-08-04）：Canton Foundation 发展基金首个里程碑——CatalyX Daml Coding Assistant 已上架 VS Code Marketplace，基于 7B 模型在真实 Daml 代码上微调，提供 Daml 自动补全。基准与模型权重已公开（github.com/IntellectEU/daml-fim-benchmark；huggingface.co/intellecteu/daml-fim-7b），可在自有网络内推理，无需将专有 Daml 发送至第三方 API。基金后续里程碑将覆盖 Daml 代码生成与测试生成。', url: 'https://forum.canton.network/t/cf-outreach-gcanton-sharing-the-first-milestone-delivered-wit/9037' },
         { date: '2026-08-04', tag: '机构', title: '1exchange 获批成为 Canton Network 验证者，服务 RWA 代币化', body: 'PR Newswire / 1exchange（2026-08-04）：新加坡受监管真实世界资产交易所 1exchange 获批成为 Canton——面向资本市场的隐私公链——验证者。1exchange 将利用 Canton 隐私保护基础设施开展未来 RWA 代币化、上市与交易，在合规前提下增强保密性与监管可控性。Digital Asset CEO Yuval Rooz 表示，此举扩展 Canton 在亚洲的布局，满足区域对安全、可互操作数字资产基础设施的日益增长需求。', url: 'https://www.prnewswire.com/apac/news-releases/1exchange-joins-canton-to-leverage-privacy-enabled-blockchain-infrastructure-for-rwa-tokenization-302841857.html' },
         { date: '2026-08-04', tag: '机构', title: 'FOMO Pay 加入 Canton 成为验证者，拓展机构 B2B 支付', body: 'PR Newswire / FOMO Pay（2026-08-04）：FOMO Pay——新加坡 Major Payment Institution 及该国首家 Digital Payment Token 持牌机构——获批成为 Canton 验证者，与全球金融机构生态并列。通过验证者角色 FOMO Pay 将运行专用节点，获得与授权对手方交易的私有机构网关，并在其覆盖东南亚、大湾区与 MENA 的多链、多轨、多币种网络中探索 B2B 支付与结算用例。', url: 'https://www.siamnewsnetwork.net/pr-news/fomo-pay-expands-institutional-blockchain-infrastructure-with-canton-network-validator-approval/' },
