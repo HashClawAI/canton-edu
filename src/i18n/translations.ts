@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-06',
+          tag: 'Institutions',
+          title: 'ISLA joins Canton Foundation as associate member for securities finance standards',
+          body: 'CantonNews / ISLA (August 6, 2026): The International Securities Lending Association (ISLA)—the securities finance industry\'s primary trade body—joined the Canton Foundation as an associate member, bringing lender, borrower, and intermediary voices into Canton\'s governance and standards process. Adrian Dale (Head of Regulation and Market Practice) will join the Collateral Subcommittee focused on collateral mobilisation across the network; Chris Rayner (Senior Associate, Market Infrastructure and Technology) will participate in the Technology Working Group on digital infrastructure and network applications. ISLA said the move reflects its commitment to a competitive, interoperable digital securities finance landscape.',
+          url: 'https://cantonnews.org/isla-joins-canton-foundation-as-associate-member-to-shape-digital-securities-finance-standards',
+        },
+        {
+          date: '2026-08-06',
+          tag: 'Governance',
+          title: 'Digital Asset publishes myth-busting guide to Canton Network architecture and governance',
+          body: 'CantonNews / Digital Asset (August 6, 2026): Digital Asset published a guide addressing ten common misconceptions about Canton Network—clarifying that Canton is fully open-source (not proprietary), globally distributed (not US-centric), and governed independently by the Canton Foundation rather than DA alone. The article explains the Foundation\'s light-touch validator approval process (temporary while demand exceeds sustainable onboarding capacity), DA\'s role as one contributor among many, and how privacy, finality, interoperability, and governance support institutional adoption for tokenized real-world assets.',
+          url: 'https://cantonnews.org/digital-asset-addresses-10-common-canton-network-myths',
+        },
+        {
           date: '2026-08-05',
           tag: 'Institutions',
           title: 'Nano Labs approved as Canton Network validator node',
@@ -2039,6 +2053,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-06', tag: '机构', title: 'ISLA 以准会员身份加入 Canton Foundation，参与证券金融数字标准制定', body: 'CantonNews / ISLA（2026-08-06）：国际证券借贷协会（ISLA）——证券金融行业主要行业组织——以准会员身份加入 Canton Foundation，将出借方、借入方与中介机构的声音纳入 Canton 治理与标准流程。Adrian Dale（监管与市场实践负责人）将加入聚焦网络内抵押品流动的 Collateral Subcommittee；Chris Rayner（市场基础设施与技术高级专员）将参与 Technology Working Group，讨论数字基础设施与网络应用。ISLA 表示此举体现其对竞争性、可互操作数字证券金融格局的承诺。', url: 'https://cantonnews.org/isla-joins-canton-foundation-as-associate-member-to-shape-digital-securities-finance-standards' },
+        { date: '2026-08-06', tag: '治理', title: 'Digital Asset 发布 Canton Network 架构与治理常见误解澄清指南', body: 'CantonNews / Digital Asset（2026-08-06）：Digital Asset 发布指南，回应关于 Canton Network 的十项常见误解——澄清 Canton 完全开源（非专有）、全球分布式（非美国中心），并由 Canton Foundation 独立治理而非仅由 DA 控制。文章解释 Foundation 对验证者的轻量审批流程（在需求超过可持续接入能力期间临时实施）、DA 作为众多贡献者之一的角色，以及隐私、终局性、互操作性与治理如何支撑机构采用代币化真实世界资产。', url: 'https://cantonnews.org/digital-asset-addresses-10-common-canton-network-myths' },
         { date: '2026-08-05', tag: '机构', title: 'Nano Labs 获批成为 Canton Network 验证者节点', body: 'GlobeNewswire / Nano Labs Ltd.（纳斯达克：NA）（2026-08-05）：总部位于香港的 Web 3.0 基础设施提供商 Nano Labs 经治理审批获准运行专用 Canton 验证者节点，加入全球验证者生态。公司将运营生产级节点基础设施，并在 Canton 隐私型机构栈上与 Goldman Sachs、BNY Mellon、Visa、DTCC 等参与者共同探索机构数字资产用例——结算、链上资产管理及合规金融工作流。', url: 'https://www.globenewswire.com/news-release/2026/08/05/3339096/0/en/Nano-Labs-Approved-as-a-Validator-Node-on-Canton-Network.html' },
         { date: '2026-08-05', tag: '技术', title: 'PartyLayer npm 下载突破 10.6 万次，发布 12 个月路线图', body: 'CantonNews / Cayvox Labs（2026-08-05）：PartyLayer——Canton 应用的开源 CIP-0103 钱包连接层——npm 包累计下载量突破 10.6 万次，并公布十二个月路线图：Daml 自动代码生成、数行代码完成接入、拟议的「Sign in with Canton」开放标准，以及 React Native/移动端工具成熟化。基于 Canton 钱包通信标准，开箱支持 Console、Cantor8、Nightly 与 5N Loop；实盘演示见 tokenization.partylayer.xyz 与 dvp.partylayer.xyz。', url: 'https://cantonnews.org/partylayer-passes-106-000-npm-downloads-and-announces-its-new-roadmap' },
         { date: '2026-08-04', tag: '生态', title: 'Temple Digital Group 与 RedStone 为 Canton 商品市场引入预言机喂价', body: 'CantonNews（2026-08-04）：Temple Digital Group 与 RedStone 合作，为 Temple 在 Canton 新上线的黄金与白银市场提供机构级价格喂价——将 RedStone 预言机（服务 BUIDL、ACRED、SCOPE 等产品，在 110+ 网络保障数十亿美元链上价值）与 Temple 中央限价订单簿对接。该集成支持定价、参考数据与风控功能，使 Canton 上的商品交易具备与传统交易所相当的行情质量。', url: 'https://cantonnews.org/temple-digital-group-and-redstone-partner-to-bring-pricing-infrastructure-to-commodity-markets-on-canton' },
