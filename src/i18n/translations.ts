@@ -271,6 +271,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-07',
+          tag: 'Technology',
+          title: 'Zenith demonstrates Canton–EVM atomic swap on feature-complete testnet',
+          body: 'CantonNews (August 7, 2026): Zenith—the Canton EVM execution layer and Super Validator—demonstrated an atomic swap between a CIP-56 asset on Canton and an ERC-20 on Zenith via a Canton-native app on a feature-complete test network, fulfilling a CIP-0091 deliverable. The team built external_call() so Daml contracts can invoke Solidity workflows and return results atomically; end-to-end external calls landed in July on a dev protocol version, with MainNet expected in Canton 3.6 (late Q3 or early Q4 2026) before Zenith EVM follows. Zenith also appointed Head of Product Norbert Vadas to the Canton Development Fund Core Contributors Group and co-founder Heslin Kim to its Voting Committee.',
+          url: 'https://cantonnews.org/zenith-demonstrates-canton-evm-atomic-swap-on-test-network',
+        },
+        {
+          date: '2026-08-07',
+          tag: 'Institutions',
+          title: 'SBI Digital Practice and NodeInfra sign MOU for Japan–Korea Musubi stablecoin rail on Canton',
+          body: 'TechTimes (August 7, 2026): SBI Digital Practice—SBI Group\'s wholly owned Canton subsidiary (formerly SBI Security Solutions)—and South Korean blockchain firm NodeInfra signed an MOU to co-develop the Musubi Project, a stablecoin-based cross-border payment and settlement network linking Japan and Korea on Canton with Daml smart contracts. The bilateral corridor targets Asia\'s busiest trade route with atomic PvP settlement and institutional privacy—distinct from February 2026 SBI Ripple Asia/DSRV XRPL research and complementary to Canton rails such as ClearToken CT Pay. SBIDP will leverage SBI Group banking, securities, and asset-management networks as both jurisdictions advance stablecoin authorization.',
+          url: 'https://www.techtimes.com/articles/323522/20260807/japan-korea-stablecoin-rail-cuts-dollar-out-asias-busiest-trade-corridor.htm',
+        },
+        {
           date: '2026-08-06',
           tag: 'Institutions',
           title: 'ISLA joins Canton Foundation as associate member for securities finance standards',
@@ -297,6 +311,13 @@ export const translations = {
           title: 'PartyLayer passes 106,000 npm downloads, publishes 12-month roadmap',
           body: 'CantonNews / Cayvox Labs (August 5, 2026): PartyLayer—the open-source CIP-0103 wallet connection layer for Canton apps—crossed 106,000 npm package downloads and shared a twelve-month roadmap: automatic Daml code generation, faster connect-in-few-lines onboarding, a proposed "Sign in with Canton" open standard, and mature React Native/mobile tooling. Built on Canton\'s wallet communication standard with Console, Cantor8, Nightly, and 5N Loop supported out of the box; live demos at tokenization.partylayer.xyz and dvp.partylayer.xyz.',
           url: 'https://cantonnews.org/partylayer-passes-106-000-npm-downloads-and-announces-its-new-roadmap',
+        },
+        {
+          date: '2026-08-04',
+          tag: 'Institutions',
+          title: 'BOOSTRY partners with Digital Asset on corporate multi-chain wallet, Canton-first',
+          body: 'CantonNews (August 4, 2026): Japanese digital securities firm BOOSTRY and Digital Asset announced a partnership to launch a corporate multi-chain wallet service by end-2026, with initial development focused on Canton. The wallet targets financial institutions and businesses managing digital assets across networks while connecting to existing financial systems—covering security tokens, stablecoins, and cryptocurrencies under varying regulatory requirements. BOOSTRY plans later expansion to additional chains and key-management methods and to integrate with its E-Wallet, E-Prime security-token platform, and ibet for Fin blockchain network.',
+          url: 'https://cantonnews.org/boostry-plans-canton-multi-chain-wallet-with-digital-asset',
         },
         {
           date: '2026-08-04',
@@ -2053,10 +2074,13 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-07', tag: '技术', title: 'Zenith 在功能完整测试网上演示 Canton–EVM 原子交换', body: 'CantonNews（2026-08-07）：Zenith——Canton EVM 执行层与超级验证者——在功能完整测试网上通过 Canton 原生应用演示 CIP-56 资产与 Zenith 上 ERC-20 之间的原子交换，兑现 CIP-0091 交付项。团队构建 external_call()，使 Daml 合约可调用 Solidity 工作流并原子返回结果；端到端外部调用已于 7 月在开发协议版本落地，MainNet 预计随 Canton 3.6（2026 年 Q3 末或 Q4 初）上线，随后 Zenith EVM 跟进。Zenith 还任命产品负责人 Norbert Vadas 加入 Canton Development Fund Core Contributors Group，联合创始人 Heslin Kim 加入其 Voting Committee。', url: 'https://cantonnews.org/zenith-demonstrates-canton-evm-atomic-swap-on-test-network' },
+        { date: '2026-08-07', tag: '机构', title: 'SBI Digital Practice 与 NodeInfra 签署 MOU，共建日韩 Musubi 稳定币通道', body: 'TechTimes（2026-08-07）：SBI Digital Practice——SBI 集团全资 Canton 子公司（原 SBI Security Solutions）——与韩国区块链公司 NodeInfra 签署 MOU，共同开发 Musubi Project：在 Canton 上以 Daml 智能合约构建连接日本与韩国的稳定币跨境支付与结算网络。该双边走廊瞄准亚洲最繁忙贸易路线，采用原子 PvP 结算与机构隐私架构——与 2026 年 2 月 SBI Ripple Asia/DSRV 的 XRPL 研究不同，并与 ClearToken CT Pay 等 Canton 通道互补。SBIDP 将依托 SBI 集团银行、证券与资产管理网络，随两国稳定币监管推进落地。', url: 'https://www.techtimes.com/articles/323522/20260807/japan-korea-stablecoin-rail-cuts-dollar-out-asias-busiest-trade-corridor.htm' },
         { date: '2026-08-06', tag: '机构', title: 'ISLA 以准会员身份加入 Canton Foundation，参与证券金融数字标准制定', body: 'CantonNews / ISLA（2026-08-06）：国际证券借贷协会（ISLA）——证券金融行业主要行业组织——以准会员身份加入 Canton Foundation，将出借方、借入方与中介机构的声音纳入 Canton 治理与标准流程。Adrian Dale（监管与市场实践负责人）将加入聚焦网络内抵押品流动的 Collateral Subcommittee；Chris Rayner（市场基础设施与技术高级专员）将参与 Technology Working Group，讨论数字基础设施与网络应用。ISLA 表示此举体现其对竞争性、可互操作数字证券金融格局的承诺。', url: 'https://cantonnews.org/isla-joins-canton-foundation-as-associate-member-to-shape-digital-securities-finance-standards' },
         { date: '2026-08-06', tag: '治理', title: 'Digital Asset 发布 Canton Network 架构与治理常见误解澄清指南', body: 'CantonNews / Digital Asset（2026-08-06）：Digital Asset 发布指南，回应关于 Canton Network 的十项常见误解——澄清 Canton 完全开源（非专有）、全球分布式（非美国中心），并由 Canton Foundation 独立治理而非仅由 DA 控制。文章解释 Foundation 对验证者的轻量审批流程（在需求超过可持续接入能力期间临时实施）、DA 作为众多贡献者之一的角色，以及隐私、终局性、互操作性与治理如何支撑机构采用代币化真实世界资产。', url: 'https://cantonnews.org/digital-asset-addresses-10-common-canton-network-myths' },
         { date: '2026-08-05', tag: '机构', title: 'Nano Labs 获批成为 Canton Network 验证者节点', body: 'GlobeNewswire / Nano Labs Ltd.（纳斯达克：NA）（2026-08-05）：总部位于香港的 Web 3.0 基础设施提供商 Nano Labs 经治理审批获准运行专用 Canton 验证者节点，加入全球验证者生态。公司将运营生产级节点基础设施，并在 Canton 隐私型机构栈上与 Goldman Sachs、BNY Mellon、Visa、DTCC 等参与者共同探索机构数字资产用例——结算、链上资产管理及合规金融工作流。', url: 'https://www.globenewswire.com/news-release/2026/08/05/3339096/0/en/Nano-Labs-Approved-as-a-Validator-Node-on-Canton-Network.html' },
         { date: '2026-08-05', tag: '技术', title: 'PartyLayer npm 下载突破 10.6 万次，发布 12 个月路线图', body: 'CantonNews / Cayvox Labs（2026-08-05）：PartyLayer——Canton 应用的开源 CIP-0103 钱包连接层——npm 包累计下载量突破 10.6 万次，并公布十二个月路线图：Daml 自动代码生成、数行代码完成接入、拟议的「Sign in with Canton」开放标准，以及 React Native/移动端工具成熟化。基于 Canton 钱包通信标准，开箱支持 Console、Cantor8、Nightly 与 5N Loop；实盘演示见 tokenization.partylayer.xyz 与 dvp.partylayer.xyz。', url: 'https://cantonnews.org/partylayer-passes-106-000-npm-downloads-and-announces-its-new-roadmap' },
+        { date: '2026-08-04', tag: '机构', title: 'BOOSTRY 与 Digital Asset 合作开发企业多链钱包，优先支持 Canton', body: 'CantonNews（2026-08-04）：日本数字证券公司 BOOSTRY 与 Digital Asset 宣布合作，计划 2026 年底前推出企业多链钱包服务，初期开发聚焦 Canton。钱包面向需跨网络管理数字资产并对接现有金融系统的金融机构与企业——涵盖安全代币、稳定币与加密货币等不同监管要求。BOOSTRY 计划后续扩展至更多链与密钥管理方式，并与 E-Wallet、E-Prime 安全代币平台及 ibet for Fin 区块链网络集成。', url: 'https://cantonnews.org/boostry-plans-canton-multi-chain-wallet-with-digital-asset' },
         { date: '2026-08-04', tag: '生态', title: 'Temple Digital Group 与 RedStone 为 Canton 商品市场引入预言机喂价', body: 'CantonNews（2026-08-04）：Temple Digital Group 与 RedStone 合作，为 Temple 在 Canton 新上线的黄金与白银市场提供机构级价格喂价——将 RedStone 预言机（服务 BUIDL、ACRED、SCOPE 等产品，在 110+ 网络保障数十亿美元链上价值）与 Temple 中央限价订单簿对接。该集成支持定价、参考数据与风控功能，使 Canton 上的商品交易具备与传统交易所相当的行情质量。', url: 'https://cantonnews.org/temple-digital-group-and-redstone-partner-to-bring-pricing-infrastructure-to-commodity-markets-on-canton' },
         { date: '2026-08-04', tag: '技术', title: 'IntellectEU 在 VS Code 发布 CatalyX Daml 编码助手', body: 'Canton Network 论坛 / IntellectEU（2026-08-04）：Canton Foundation 发展基金首个里程碑——CatalyX Daml Coding Assistant 已上架 VS Code Marketplace，基于 7B 模型在真实 Daml 代码上微调，提供 Daml 自动补全。基准与模型权重已公开（github.com/IntellectEU/daml-fim-benchmark；huggingface.co/intellecteu/daml-fim-7b），可在自有网络内推理，无需将专有 Daml 发送至第三方 API。基金后续里程碑将覆盖 Daml 代码生成与测试生成。', url: 'https://forum.canton.network/t/cf-outreach-gcanton-sharing-the-first-milestone-delivered-wit/9037' },
         { date: '2026-08-04', tag: '机构', title: '1exchange 获批成为 Canton Network 验证者，服务 RWA 代币化', body: 'PR Newswire / 1exchange（2026-08-04）：新加坡受监管真实世界资产交易所 1exchange 获批成为 Canton——面向资本市场的隐私公链——验证者。1exchange 将利用 Canton 隐私保护基础设施开展未来 RWA 代币化、上市与交易，在合规前提下增强保密性与监管可控性。Digital Asset CEO Yuval Rooz 表示，此举扩展 Canton 在亚洲的布局，满足区域对安全、可互操作数字资产基础设施的日益增长需求。', url: 'https://www.prnewswire.com/apac/news-releases/1exchange-joins-canton-to-leverage-privacy-enabled-blockchain-infrastructure-for-rwa-tokenization-302841857.html' },
