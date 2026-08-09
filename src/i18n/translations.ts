@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-08',
+          tag: 'Ecosystem',
+          title: 'CantonNews: Send positions Canton Wallet as the retail gateway to institutional rails',
+          body: 'CantonNews / Send (August 8, 2026): Send argues Canton already runs serious financial infrastructure—Broadridge DLR, DTCC tokenization, J.P. Morgan deposit-token plans—while retail access remains early. Through Canton Wallet, Pool Party, CUSD, and USDCx bridging, Send offers passkey login, Sendtags, and unified fund/hold/swap/liquidity flows so everyday users can onboard without seed-phrase friction. The piece explains Canton\'s need-to-know privacy (activity not broadcast by default), why consumer tooling is still forming atop proven institutional volume, and points explorers to send.cantonwallet.com.',
+          url: 'https://cantonnews.org/insights/canton-was-built-for-institutions-retail-send',
+        },
+        {
+          date: '2026-08-08',
+          tag: 'Ecosystem',
+          title: 'OneSwap essay: settlement layers—not tokens—define the next financial stack',
+          body: 'CantonNews / OneSwap (@Oneswapcc) (August 8, 2026): OneSwap publishes a structural essay on why institutional settlement (scoped visibility, embedded compliance, modular finality) and permissionless execution are separating into interoperable layers rather than converging. Canton represents structured settlement; DeFi-style venues like OneSwap become execution interfaces that must respect non-uniform visibility, fragmented liquidity, and contextual finality—not compete purely on speed or TVL. The piece frames layered architecture (settlement, execution, connectivity) and points readers to oneswap.cc as Canton\'s retail-accessible AMM on those rails.',
+          url: 'https://cantonnews.org/insights/the-quiet-rewiring-of-financial-infrastructure-why-settlement-not-tokens-is-the-real-shift',
+        },
+        {
+          date: '2026-08-06',
+          tag: 'Technology',
+          title: 'Early Canton app load tests benchmark CIP-0056 transfers at ~15/s',
+          body: 'Canton Network Forum / dfrnw (August 6, 2026): Developer dfrnw shares early load/performance results from an app-level harness driving real Daml contracts via the Ledger API—benchmarking OpenZeppelin\'s Canton token template through CIP-0056 TransferFactory_Transfer. On a single-participant sandbox: ~15 transfers/s (p50 ~400 ms, p99 ~1.2 s), scaling stalls near 22/s offered; DvP allocation matches plain transfer throughput. Failures under concurrency trace to input-holding contention (CONTRACT_NOT_FOUND), not the factory—actionable for wallet UTXO selection. Attaching factory disclosure blobs costs ~3% throughput but raises p99 ~45%; CIP-0104 traffic cost plumbing returns zero in sandbox. Author invites teams with SLA needs to run JSON-defined workloads.',
+          url: 'https://forum.canton.network/t/load-performance-testing-for-canton-apps-early-results-benchmarking-a-token-standard-registry/9047',
+        },
+        {
+          date: '2026-08-04',
+          tag: 'Community',
+          title: 'Canton Foundation launches Community Tech Partners mentor program on forum',
+          body: 'Canton Network Forum / DevRel (August 4, 2026): The Foundation introduces Community Tech Partners (CTP)—an invite-only volunteer group of infrastructure and Daml experts (Obsidian Systems, Moonsong Labs, LimeChain, Noders, and others) who mentor builders in the App Development category. Partners are marked with a code icon and designation; support covers high-level guidance and architectural pointers but excludes private code audits, commercial SLAs, or free feature development. Ecosystem contributors interested in joining should DM @dunebuggie or @Jatin_Pandya_cf.',
+          url: 'https://forum.canton.network/t/introducing-the-canton-community-tech-partners/9038',
+        },
+        {
           date: '2026-08-07',
           tag: 'Technology',
           title: 'Zenith demonstrates Canton–EVM atomic swap on feature-complete testnet',
@@ -2074,6 +2102,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-08', tag: '生态', title: 'CantonNews：Send 将 Canton Wallet 定位为机构级基础设施的零售入口', body: 'CantonNews / Send（2026-08-08）：Send 指出 Canton 已承载严肃金融基础设施——Broadridge DLR、DTCC 代币化、J.P. Morgan 存款代币计划——而零售接入仍处早期。通过 Canton Wallet、Pool Party、CUSD 与 USDCx 跨链，Send 提供 passkey 登录、Sendtag 与统一的充值/持有/swap/流动性流程，降低日常用户上手摩擦。文章解释 Canton 按需知晓隐私（活动默认不广播）、为何在已验证的机构交易量之上消费层仍在形成，并指向 send.cantonwallet.com。', url: 'https://cantonnews.org/insights/canton-was-built-for-institutions-retail-send' },
+        { date: '2026-08-08', tag: '生态', title: 'OneSwap 长文：定义下一层金融栈的是结算层而非代币', body: 'CantonNews / OneSwap（@Oneswapcc）（2026-08-08）：OneSwap 发布结构性论述——机构结算（范围化可见性、内嵌合规、模块化终局性）与 permissionless 执行正分离为可互操作层而非趋同。Canton 代表结构化结算；OneSwap 等 DeFi 场所成为须尊重非统一可见性、碎片化流动性与情境终局性的执行接口——而非纯拼速度或 TVL。文章框定分层架构（结算、执行、连接）并指向 oneswap.cc 作为上述轨道上的零售可及 AMM。', url: 'https://cantonnews.org/insights/the-quiet-rewiring-of-financial-infrastructure-why-settlement-not-tokens-is-the-real-shift' },
+        { date: '2026-08-06', tag: '技术', title: 'Canton 应用早期压测：CIP-0056 转账约 15 笔/秒', body: 'Canton Network 论坛 / dfrnw（2026-08-06）：开发者 dfrnw 分享应用级压测/性能工具的早期结果——通过 Ledger API 驱动真实 Daml 合约，对 OpenZeppelin Canton 代币模板经 CIP-0056 TransferFactory_Transfer 基准测试。单参与者沙箱：约 15 笔/秒（p50 ~400 ms，p99 ~1.2 s），约 22 笔/秒供给时停止扩展；DvP allocation 与普通转账吞吐相当。并发失败源于输入 holding 争用（CONTRACT_NOT_FOUND），非 factory——对钱包 UTXO 选择策略有参考价值。附加 factory disclosure blob 约损失 3% 吞吐但 p99 升约 45%；沙箱中 CIP-0104 流量成本 plumbing 返回零。作者邀请有 SLA 需求的团队用 JSON 工作负载复测。', url: 'https://forum.canton.network/t/load-performance-testing-for-canton-apps-early-results-benchmarking-a-token-standard-registry/9047' },
+        { date: '2026-08-04', tag: '社区', title: 'Canton Foundation 在论坛启动 Community Tech Partners 导师计划', body: 'Canton Network 论坛 / DevRel（2026-08-04）：Foundation 推出 Community Tech Partners（CTP）——邀请制志愿者技术专家（Obsidian Systems、Moonsong Labs、LimeChain、Noders 等）在 App Development 板块指导 builder。合作伙伴以代码图标与称号标识；支持范围含高层指引与架构建议，不含私有代码审计、商业 SLA 或免费功能开发。有意加入的生态贡献者可 DM @dunebuggie 或 @Jatin_Pandya_cf。', url: 'https://forum.canton.network/t/introducing-the-canton-community-tech-partners/9038' },
         { date: '2026-08-07', tag: '技术', title: 'Zenith 在功能完整测试网上演示 Canton–EVM 原子交换', body: 'CantonNews（2026-08-07）：Zenith——Canton EVM 执行层与超级验证者——在功能完整测试网上通过 Canton 原生应用演示 CIP-56 资产与 Zenith 上 ERC-20 之间的原子交换，兑现 CIP-0091 交付项。团队构建 external_call()，使 Daml 合约可调用 Solidity 工作流并原子返回结果；端到端外部调用已于 7 月在开发协议版本落地，MainNet 预计随 Canton 3.6（2026 年 Q3 末或 Q4 初）上线，随后 Zenith EVM 跟进。Zenith 还任命产品负责人 Norbert Vadas 加入 Canton Development Fund Core Contributors Group，联合创始人 Heslin Kim 加入其 Voting Committee。', url: 'https://cantonnews.org/zenith-demonstrates-canton-evm-atomic-swap-on-test-network' },
         { date: '2026-08-07', tag: '机构', title: 'SBI Digital Practice 与 NodeInfra 签署 MOU，共建日韩 Musubi 稳定币通道', body: 'TechTimes（2026-08-07）：SBI Digital Practice——SBI 集团全资 Canton 子公司（原 SBI Security Solutions）——与韩国区块链公司 NodeInfra 签署 MOU，共同开发 Musubi Project：在 Canton 上以 Daml 智能合约构建连接日本与韩国的稳定币跨境支付与结算网络。该双边走廊瞄准亚洲最繁忙贸易路线，采用原子 PvP 结算与机构隐私架构——与 2026 年 2 月 SBI Ripple Asia/DSRV 的 XRPL 研究不同，并与 ClearToken CT Pay 等 Canton 通道互补。SBIDP 将依托 SBI 集团银行、证券与资产管理网络，随两国稳定币监管推进落地。', url: 'https://www.techtimes.com/articles/323522/20260807/japan-korea-stablecoin-rail-cuts-dollar-out-asias-busiest-trade-corridor.htm' },
         { date: '2026-08-06', tag: '机构', title: 'ISLA 以准会员身份加入 Canton Foundation，参与证券金融数字标准制定', body: 'CantonNews / ISLA（2026-08-06）：国际证券借贷协会（ISLA）——证券金融行业主要行业组织——以准会员身份加入 Canton Foundation，将出借方、借入方与中介机构的声音纳入 Canton 治理与标准流程。Adrian Dale（监管与市场实践负责人）将加入聚焦网络内抵押品流动的 Collateral Subcommittee；Chris Rayner（市场基础设施与技术高级专员）将参与 Technology Working Group，讨论数字基础设施与网络应用。ISLA 表示此举体现其对竞争性、可互操作数字证券金融格局的承诺。', url: 'https://cantonnews.org/isla-joins-canton-foundation-as-associate-member-to-shape-digital-securities-finance-standards' },
