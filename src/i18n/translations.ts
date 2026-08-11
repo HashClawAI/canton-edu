@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-10',
+          tag: 'Analysis',
+          title: 'Canton leads all blockchains in 30-day fee generation at $53.35M (DeFiLlama)',
+          body: 'CantonNews (August 10, 2026): DeFiLlama data shows Canton Network generated $53.35 million in fees over the past 30 days—ranking first among all L1 and L2 blockchains tracked, ahead of Hyperliquid ($32.03M) and Tron ($26.79M). Figures cover traffic purchases, preapproval burns, setup burns, dust expiry, holding fees, and sender change fees; under Canton\'s model every fee is burned in full with no protocol retention. Seven-day fees totaled $10.35M ($1.46M in the latest 24h). The ranking places Canton ahead of Ethereum and Solana in the current fee tier as institutional deployment scales—DTCC tokenization live since July 15 ahead of an October 2026 broader launch, Nasdaq Calypso collateral pilots, and phased JPMorgan Kinexys JPM Coin integration. Full stats at cantonnews.org/network.',
+          url: 'https://cantonnews.org/canton-network-leads-all-blockchains-in-30-day-fee-generation-at-53-35-million',
+        },
+        {
+          date: '2026-08-10',
+          tag: 'Analysis',
+          title: 'CantonNews insight: tokenized deposits vs stablecoins for global payroll FX',
+          body: 'CantonNews (August 10, 2026): A deep-dive contrasts stablecoins (privately issued, GENIUS Act–regulated bearer tokens needing per-currency issuers and thin off-ramp liquidity outside ~8 major currencies) with tokenized deposits (FDIC-insured bank liabilities on-chain, inheriting interbank FX distribution). The piece argues global contractor payouts need bank-grade currency reach—not just crypto-exchange distribution—and highlights Canton as the settlement rail banks converge on: HSBC tokenized-deposit pilots, Lloyds sterling deposits buying tokenized gilts, and JPMorgan Kinexys bringing JPM Coin natively onto Canton through 2026, alongside DTCC, Euroclear, BNY Mellon, LSEG DiSH, and Broadridge. Parallel efforts include The Clearing House\'s 2027 shared deposit network and Swift\'s July 2026 17-bank tokenized cross-border ledger.',
+          url: 'https://cantonnews.org/insights/tokenized-deposits-vs-stablecoins',
+        },
+        {
+          date: '2026-08-10',
+          tag: 'Ecosystem',
+          title: 'Silvana Book blog: private order matching and DvP settlement on Canton',
+          body: 'CantonNews / Silvana (August 10, 2026): Silvana Book—a live private orderbook for tokenized assets on Canton—matches orders off-chain away from public visibility, then settles atomically via Delivery-versus-Payment on Canton while users retain wallet control until finalization. Unlike AMM pools, Silvana offers a private CLOB, direct swaps, RFQ, and grid strategies plus agent tools for automated order and settlement workflows under user-set permissions. Silvana V2 and a redesigned Trading Terminal are live; recent additions include Lattice Wallet integration and EarnHub campaign UX updates (clickable cards, task categories, leaderboard mechanics—points have no guaranteed cash value). Developer API/SDK documentation at silvana.one.',
+          url: 'https://cantonnews.org/insights/silvana-private-trading-on-canton',
+        },
+        {
+          date: '2026-08-08',
+          tag: 'Ecosystem',
+          title: 'Send outlines consumer product stack building on Canton Network',
+          body: 'CantonNews / Send (August 8, 2026): Send explains why it expanded on Canton—operating a second validator since August 2025 and building a connected retail layer atop institutional-grade privacy rails. Live products include Send Canton Wallet (passkey-first holding, sending, bridging), Send Safe multi-sig custody, Pool Party DEX with USDC bridging, an Asset Relayer from Base (SEND, USDC, cbBTC, frxUSD), and Send Connect browser extension for Canton dApps. Roadmap highlights digital cards for stablecoin spending, deeper Send–Canton integration, and evolved rewards beyond early Pool Party drips. Complements Send\'s separate essay on Canton Wallet as the retail gateway to institutional infrastructure.',
+          url: 'https://cantonnews.org/insights/why-send-is-building-on-canton-network',
+        },
+        {
           date: '2026-08-08',
           tag: 'Ecosystem',
           title: 'CantonNews: Send positions Canton Wallet as the retail gateway to institutional rails',
@@ -2102,6 +2130,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-10', tag: '分析', title: 'DeFiLlama：Canton 30 日手续费 5335 万美元，居全球公链第一', body: 'CantonNews（2026-08-10）：DeFiLlama 数据显示 Canton Network 过去 30 日产生 5335 万美元手续费——在追踪的全部 L1/L2 中排名第一，高于 Hyperliquid（3203 万）与 Tron（2679 万）。统计涵盖流量购买、预授权销毁、setup 销毁、dust 过期、holding 费与 sender change 费；Canton 模型下费用全额销毁、协议不留成。近 7 日 1035 万（最近 24 小时 146 万）。当前费率梯队领先 Ethereum 与 Solana，伴随机构部署加速——DTCC 代币化 7 月 15 日有限生产上线、2026 年 10 月 broader launch，Nasdaq Calypso 抵押试点，以及 JPMorgan Kinexys 分阶段接入 JPM Coin。完整数据见 cantonnews.org/network。', url: 'https://cantonnews.org/canton-network-leads-all-blockchains-in-30-day-fee-generation-at-53-35-million' },
+        { date: '2026-08-10', tag: '分析', title: 'CantonNews 深度：代币化存款 vs 稳定币与全球 payroll 外汇可达性', body: 'CantonNews（2026-08-10）：长文对比稳定币（私人发行、GENIUS Act 监管下的 bearer 代币，需逐币种发行方且主要币种外 off-ramp 流动性薄）与代币化存款（链上 FDIC 保险银行存款负债，继承银行间 FX 分发网络）。论点：全球承包商发薪需要银行级货币覆盖——而非仅 crypto 交易所分发——并强调 Canton 为银行汇聚的结算轨道：HSBC 代币化存款试点、Lloyds 英镑存款购买代币化 gilts、JPMorgan Kinexys 2026 年前将 JPM Coin 原生接入 Canton，以及 DTCC、Euroclear、BNY Mellon、LSEG DiSH 与 Broadridge 等。并行努力含 Clearing House 2027 共享存款网络与 Swift 2026 年 7 月 17 银行代币化跨境账本。', url: 'https://cantonnews.org/insights/tokenized-deposits-vs-stablecoins' },
+        { date: '2026-08-10', tag: '生态', title: 'Silvana Book 博客：Canton 上私有撮合与 DvP 结算', body: 'CantonNews / Silvana（2026-08-10）：Silvana Book——Canton 上代币化资产的 live 私有订单簿——在公开市场可见性之外撮合订单，再通过 Delivery-versus-Payment 在 Canton 原子结算，用户在终局前保留钱包控制权。相对 AMM 资金池，Silvana 提供私有 CLOB、直接 swap、RFQ 与网格策略，以及可在用户设定权限下自动化订单与结算流程的智能体工具。Silvana V2 与重设计 Trading Terminal 已上线；近期新增 Lattice Wallet 集成与 EarnHub 活动 UX（可点击活动卡、任务分类、排行榜机制——积分无保证现金价值）。开发者 API/SDK 见 silvana.one。', url: 'https://cantonnews.org/insights/silvana-private-trading-on-canton' },
+        { date: '2026-08-08', tag: '生态', title: 'Send 阐述基于 Canton 的消费层产品栈', body: 'CantonNews / Send（2026-08-08）：Send 解释为何在 Canton 上扩展——自 2025 年 8 月起运营第二个验证者，并在机构级隐私轨道上构建互联零售层。已上线产品含 Send Canton Wallet（passkey 持有/发送/跨链）、Send Safe 多签托管、带 USDC 跨链的 Pool Party DEX、自 Base 的 Asset Relayer（SEND、USDC、cbBTC、frxUSD）以及连接 Canton dApp 的 Send Connect 浏览器扩展。路线图含稳定币消费数字卡、更深 Send–Canton 集成，以及超越早期 Pool Party drip 的奖励演进。与 Send 另文「Canton Wallet 作为机构基础设施零售入口」互为补充。', url: 'https://cantonnews.org/insights/why-send-is-building-on-canton-network' },
         { date: '2026-08-08', tag: '生态', title: 'CantonNews：Send 将 Canton Wallet 定位为机构级基础设施的零售入口', body: 'CantonNews / Send（2026-08-08）：Send 指出 Canton 已承载严肃金融基础设施——Broadridge DLR、DTCC 代币化、J.P. Morgan 存款代币计划——而零售接入仍处早期。通过 Canton Wallet、Pool Party、CUSD 与 USDCx 跨链，Send 提供 passkey 登录、Sendtag 与统一的充值/持有/swap/流动性流程，降低日常用户上手摩擦。文章解释 Canton 按需知晓隐私（活动默认不广播）、为何在已验证的机构交易量之上消费层仍在形成，并指向 send.cantonwallet.com。', url: 'https://cantonnews.org/insights/canton-was-built-for-institutions-retail-send' },
         { date: '2026-08-08', tag: '生态', title: 'OneSwap 长文：定义下一层金融栈的是结算层而非代币', body: 'CantonNews / OneSwap（@Oneswapcc）（2026-08-08）：OneSwap 发布结构性论述——机构结算（范围化可见性、内嵌合规、模块化终局性）与 permissionless 执行正分离为可互操作层而非趋同。Canton 代表结构化结算；OneSwap 等 DeFi 场所成为须尊重非统一可见性、碎片化流动性与情境终局性的执行接口——而非纯拼速度或 TVL。文章框定分层架构（结算、执行、连接）并指向 oneswap.cc 作为上述轨道上的零售可及 AMM。', url: 'https://cantonnews.org/insights/the-quiet-rewiring-of-financial-infrastructure-why-settlement-not-tokens-is-the-real-shift' },
         { date: '2026-08-06', tag: '技术', title: 'Canton 应用早期压测：CIP-0056 转账约 15 笔/秒', body: 'Canton Network 论坛 / dfrnw（2026-08-06）：开发者 dfrnw 分享应用级压测/性能工具的早期结果——通过 Ledger API 驱动真实 Daml 合约，对 OpenZeppelin Canton 代币模板经 CIP-0056 TransferFactory_Transfer 基准测试。单参与者沙箱：约 15 笔/秒（p50 ~400 ms，p99 ~1.2 s），约 22 笔/秒供给时停止扩展；DvP allocation 与普通转账吞吐相当。并发失败源于输入 holding 争用（CONTRACT_NOT_FOUND），非 factory——对钱包 UTXO 选择策略有参考价值。附加 factory disclosure blob 约损失 3% 吞吐但 p99 升约 45%；沙箱中 CIP-0104 流量成本 plumbing 返回零。作者邀请有 SLA 需求的团队用 JSON 工作负载复测。', url: 'https://forum.canton.network/t/load-performance-testing-for-canton-apps-early-results-benchmarking-a-token-standard-registry/9047' },
