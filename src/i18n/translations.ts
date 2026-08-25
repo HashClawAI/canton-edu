@@ -271,6 +271,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-24',
+          tag: 'Technology',
+          title: 'Alpend completes smart contract audit with Halborn Security',
+          body: 'CantonNews (August 24, 2026): Alpend, the credit protocol being developed on Canton Network by Palladium Labs, has completed an independent smart contract audit with Halborn Security, with all identified findings resolved in the final audited commit. Halborn is an enterprise-grade blockchain security firm trusted by major financial institutions and blockchain ecosystem leaders, offering smart contract auditing, penetration testing, and advisory services. For Alpend, the audit is a prerequisite step toward production deployment—as a credit infrastructure protocol on Canton where institutional participants are expected to interact with real capital, independent security review is a baseline requirement rather than an optional exercise.',
+          url: 'https://cantonnews.org/alpend-completes-smart-contract-audit-with-halborn-security',
+        },
+        {
+          date: '2026-08-23',
+          tag: 'Ecosystem',
+          title: 'Canton Development Fund allocates more than 162 million CC across 32 proposals',
+          body: 'CantonNews / Canton Network (August 23, 2026): Canton\'s Development Fund has allocated more than 162 million Canton Coin across 32 approved proposals supporting protocol development, infrastructure, security, and broader ecosystem initiatives. Funding is released as teams complete and pass agreed milestones. A separate Canton Foundation update highlighted support for research, tooling, security work, and shared infrastructure, with funding tied to delivery. The figures were published alongside Palladium Labs\' State of the Canton Network — H1 2026 report, representing a sizeable portfolio of shared work focused on strengthening systems and tools used across Canton.',
+          url: 'https://cantonnews.org/canton-development-fund-allocates-more-than-162-million-cc-across-32-proposals',
+        },
+        {
+          date: '2026-08-23',
+          tag: 'Ecosystem',
+          title: 'R1M seeks Canton Featured App status for Sentinel validator monitoring',
+          body: 'CantonNews (August 23, 2026): R1M has submitted R1M Sentinel for Canton Featured App status as it prepares to add Canton Coin payments to its validator-monitoring service. Sentinel watches registered nodes and sends Telegram alerts when problems appear, with separate settings per network for governance proposals and network updates. The product is live across six chains and 11 networks with approximately 77 monitored nodes and 67 users listed in the Featured App application. R1M is testing CC billing on Canton DevNet—free monitoring remains, while premium users deposit Canton Coin to pay for the service; only customer payments count toward Featured App rewards. As a non-issuer application under CIP-0116, R1M must lock five million CC for the receiving PartyID before the final onchain vote; the team targets Canton MainNet billing activation by early September 2026.',
+          url: 'https://cantonnews.org/r1m-seeks-canton-featured-app-status-for-sentinel',
+        },
+        {
           date: '2026-08-22',
           tag: 'Ecosystem',
           title: 'Canton Network welcomes 10 new validator applicants across finance, agriculture, AI, and retail',
@@ -2362,6 +2383,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-24', tag: '技术', title: 'Alpend 完成 Halborn Security 智能合约审计', body: 'CantonNews（2026-08-24）：Palladium Labs 在 Canton Network 上开发的信贷协议 Alpend 已完成 Halborn Security 独立智能合约审计，最终审计 commit 中所有发现项均已修复。Halborn 为受主要金融机构与区块链生态领导者信任的企业级区块链安全公司，提供智能合约审计、渗透测试与咨询服务。对 Alpend 而言，审计是投产前必要步骤——作为 Canton 上的信贷基础设施协议，机构参与者预期与真实资本交互，独立安全审查是基线要求而非可选环节。', url: 'https://cantonnews.org/alpend-completes-smart-contract-audit-with-halborn-security' },
+        { date: '2026-08-23', tag: '生态', title: 'Canton 发展基金向 32 项提案分配超 1.62 亿 CC', body: 'CantonNews / Canton Network（2026-08-23）：Canton 发展基金已向 32 项获批提案分配超过 1.62 亿 Canton Coin，支持协议开发、基础设施、安全与更广泛的生态倡议；资金在团队完成并通过约定里程碑后释放。Canton Foundation 另发更新强调对研究、工具、安全工作与共享基础设施的支持，资金与交付挂钩。数据与 Palladium Labs《Canton Network 2026 上半年状态报告》一同发布，代表聚焦强化 Canton 所用系统与工具的重要共享工作组合。', url: 'https://cantonnews.org/canton-development-fund-allocates-more-than-162-million-cc-across-32-proposals' },
+        { date: '2026-08-23', tag: '生态', title: 'R1M 为 Sentinel 验证者监控服务申请 Canton Featured App 身份', body: 'CantonNews（2026-08-23）：R1M 已提交 R1M Sentinel 申请 Canton Featured App 身份，准备为其验证者监控服务引入 Canton Coin 支付。Sentinel 监控注册节点并在出现问题时发送 Telegram 告警，可按网络单独设置治理提案与网络更新通知。产品已在 6 条链、11 个网络上运行；Featured App 申请列出约 77 个监控节点与 67 名用户。R1M 在 Canton DevNet 测试 CC 计费——免费监控保留，付费用户存入 CC 支付服务；仅客户支付计入 Featured App 奖励。作为 CIP-0116 下的 non-issuer 应用，R1M 须为接收 PartyID 锁定 500 万 CC 方可进入最终链上投票；团队目标 2026 年 9 月初在 Canton MainNet 激活计费。', url: 'https://cantonnews.org/r1m-seeks-canton-featured-app-status-for-sentinel' },
         { date: '2026-08-22', tag: '生态', title: 'Canton Network 迎来 10 家新验证者申请方，覆盖金融、农业、AI 与零售', body: 'CantonNews（2026-08-22）：10 家机构提交验证者运营商申请，现有参与者可在 8 月 26 日前提出异议，否则将视为隐式批准。申请方横跨金融基础设施、RWA 代币化、AI 支付、数字藏品与零售商业，分布于印尼、泰国、马来西亚、瑞士、英国、日本与阿联酋。 notable 申请方含 Progmat（日本 security-token 平台，代币化 JGB 回购工作组参与者含 MUFG、Mizuho、BlackRock Japan 与 SBI Securities）、Sharegain（英国证券金融 fintech，Digital Asset 赞助）、Aurelis（印尼黄金代币 AUXG，1:1 锚定 LBMA 级托管金）、Ceres Ag Capital（曼谷 RWA 平台，农业与 livestock  fractional co-ownership）、Sigil Trade（马来西亚数字藏品市场）、Aqvero Labs 与 ARBT Agent（印尼 AI agent 支付与跨市场结算层）、Diviko AG（瑞士 Daml 原生 DeFi builder）。Bilah Shop（印尼零售）与 Velvet Sillage（迪拜 luxury fragrance salon）以商业用例收尾。', url: 'https://cantonnews.org/canton-network-welcomes-10-new-validator-applicants-spanning-finance-agriculture-ai-and-retail' },
         { date: '2026-08-22', tag: '生态', title: 'Canton 澄清多资产交易的 Featured App 奖励权重分配', body: 'CantonNews / Tokenomics 委员会（2026-08-22）：Canton 批准针对同一笔交易涉及多个 Featured Asset 的新指引。Featured App 标记计为 1 美元 reward weight（非保证支付）；当多资产因运营原因 bundled 时，可用权重在资产间分配而非各自记录全额。经 Tokenomics 批准的 DvP（delivery-versus-payment）交易采用单独计算——完成交易需双方资产齐备。示例：2 美元交易含两个 Featured Asset 时，标准 bundle 各记 0.50 美元；批准 DvP  venue 可各记 1 美元且 venue 记 2 美元。DvP venue 须说明结算机制、定价、访问控制与 anti-wash-trading 保障，供 Accountability 委员会审查后 Tokenomics 建议。合格资产须符合 CIP-0056、兼容至少两个 live 钱包，且可通过至少一个链上 DvP venue 获取。', url: 'https://cantonnews.org/canton-clarifies-featured-app-rewards-for-multi-asset-transactions' },
         { date: '2026-08-21', tag: '市场', title: 'Canton Coin 在 Bitstamp by Robinhood 上线 CC/USD 与 CC/EUR 市场', body: 'CantonNews / Canton Network（2026-08-21）：Canton Coin 现可在 Bitstamp by Robinhood 交易，为 CC  venue 列表增添老牌交易所。Bitstamp 列出 CC/USD 与 CC/EUR 现货市场（发布时最低订单 10 美元与 10 欧元），并启用 Canton Network 存取（最低提币 10 CC）。Robinhood 于 2025 年 6 月完成 Bitstamp 收购，将其国际业务纳入 Robinhood crypto。两市场在发布时均为 trading-enabled；instant 与 market 订单尚未开放，接入因地区而异，新加坡不可用 CC。', url: 'https://cantonnews.org/canton-coin-goes-live-on-bitstamp-by-robinhood-with-usd-and-eur-markets' },
