@@ -271,6 +271,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-28',
+          tag: 'Ecosystem',
+          title: 'Canton Development Fund adopts rules for AI-assisted proposals',
+          body: 'CantonNews (August 28, 2026): Canton\'s Development Fund has adopted rules for AI-assisted submissions, allowing contributors to use AI tools while remaining responsible for the work they submit. The policy was adopted on August 27 and applies to the Fund\'s GitHub repository. The rules cover funding proposals, milestone submissions, code, and review comments. Contributors must check their work before submitting and be able to explain and defend its claims, budgets, and supporting evidence. AI use does not need to be labelled upfront, but contributors must answer honestly if asked whether AI helped produce a submission. Submissions that appear to contain unreviewed AI output—including invented references or incorrect claims—may be closed; repeated submissions of this kind may lead to a repository block.',
+          url: 'https://cantonnews.org/canton-foundation-development-fund-adopts-rules-for-ai-assisted-proposals',
+        },
+        {
+          date: '2026-08-27',
+          tag: 'Institutions',
+          title: 'Circle\'s USYC seeks Canton Featured App status',
+          body: 'CantonNews (August 27, 2026): Circle\'s USYC has applied for Featured App status on Canton, with Digital Asset sponsoring the application published on August 27. USYC is already live on Canton and serves financial institutions—the token represents an investment in a money-market fund that invests in U.S. Treasury bills and short-term lending backed by U.S. government securities. The application proposes rewards for trading, using USYC as collateral, and issuing or redeeming it in exchange for USDC, Circle\'s U.S. dollar stablecoin. Featured App status would make qualifying activity eligible for Canton Coin rewards.',
+          url: 'https://cantonnews.org/circle-s-usyc-seeks-canton-featured-app-status',
+        },
+        {
+          date: '2026-08-27',
+          tag: 'Technology',
+          title: 'OneSwap goes live inside Slay Money wallet app',
+          body: 'CantonNews (August 27, 2026): OneSwap is now live inside Slay Money—users can swap Canton assets within the app without opening another tab or reconnecting their wallet. Slay Money combines a Canton wallet, trading, and prediction markets in one app; its wallet lets users hold, send, and receive Canton Coin with transfers addressed by a handle, wallet address, or QR code. The integration uses OneSwap\'s developer tools and was announced by both teams on August 27.',
+          url: 'https://cantonnews.org/oneswap-goes-live-inside-slay-money',
+        },
+        {
+          date: '2026-08-27',
+          tag: 'Ecosystem',
+          title: 'HANDL adds EDEL bridge transfers between Base and Canton',
+          body: 'CantonNews (August 27, 2026): HANDL has added EDEL to its in-app bridge, allowing users to move the token between Base and Canton in either direction. Announced on August 27, the addition expands a bridge that already supported $HANDL and USDC. Edel\'s token is known as EDEL on Base and EDELx on Canton; HANDL introduced support for EDELx in July when users gained the ability to receive, hold, and swap it for $HANDL. Edel is preparing the public beta of Edel Markets, its trading platform on Canton; EDELx staking is also planned.',
+          url: 'https://cantonnews.org/handl-adds-edel-transfers-between-base-and-canton',
+        },
+        {
           date: '2026-08-27',
           tag: 'Institutions',
           title: 'Virtu, Tradeweb, and M1X complete first onchain repo with Marshall Islands sovereign digital bond on Canton',
@@ -2502,6 +2530,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-28', tag: '生态', title: 'Canton 发展基金采纳 AI 辅助提案规则', body: 'CantonNews（2026-08-28）：Canton 发展基金已采纳 AI 辅助提交规则，允许贡献者使用 AI 工具，但仍须对所提交内容负责。政策于 8 月 27 日通过，适用于基金 GitHub 仓库，涵盖资助提案、里程碑提交、代码与 review 评论。提交前须自行核查，并能够解释与辩护其主张、预算与支撑证据。AI 使用无需 upfront 标注，但若被问及是否借助 AI 产出，须如实回答。含未审查 AI 输出（如虚构引用或错误主张）的提交可能被关闭；屡次此类提交可能导致仓库封禁。', url: 'https://cantonnews.org/canton-foundation-development-fund-adopts-rules-for-ai-assisted-proposals' },
+        { date: '2026-08-27', tag: '机构', title: 'Circle USYC 申请 Canton Featured App 身份', body: 'CantonNews（2026-08-27）：Circle 的 USYC 已申请 Canton Featured App 身份，Digital Asset 赞助该 8 月 27 日发布的申请。USYC 已在 Canton 上线并服务金融机构——该代币代表投资于持有美国短期国债及美国政府证券支撑短期借贷的货币市场基金。申请提议对交易、以 USYC 作抵押，以及与 Circle 美元稳定币 USDC 的发行/赎回等合格活动给予奖励。Featured App 身份将使 qualifying 活动符合 Canton Coin 奖励资格。', url: 'https://cantonnews.org/circle-s-usyc-seeks-canton-featured-app-status' },
+        { date: '2026-08-27', tag: '技术', title: 'OneSwap 在 Slay Money 钱包应用内上线', body: 'CantonNews（2026-08-27）：OneSwap 现已在 Slay Money 内上线——用户可在应用内 swap Canton 资产，无需另开标签页或重连钱包。Slay Money 将 Canton 钱包、交易与预测市场整合于单一 app；钱包支持持有、发送与接收 Canton Coin，可通过 handle、钱包地址或 QR 码寻址转账。集成使用 OneSwap 开发者工具，两团队于 8 月 27 日联合宣布。', url: 'https://cantonnews.org/oneswap-goes-live-inside-slay-money' },
+        { date: '2026-08-27', tag: '生态', title: 'HANDL 应用内桥新增 EDEL 在 Base 与 Canton 间双向转移', body: 'CantonNews（2026-08-27）：HANDL 已将其应用内桥扩展至 EDEL，支持用户在 Base 与 Canton 间双向转移该代币。8 月 27 日宣布的更新扩展了已支持 $HANDL 与 USDC 的桥。Edel 代币在 Base 为 EDEL、在 Canton 为 EDELx；HANDL 于 7 月引入 EDELx 支持，用户可接收、持有并 swap 为 $HANDL。Edel 正筹备 Canton 交易平台 Edel Markets 公测；EDELx 质押亦在计划中。', url: 'https://cantonnews.org/handl-adds-edel-transfers-between-base-and-canton' },
         { date: '2026-08-27', tag: '机构', title: 'Virtu、Tradeweb 与 M1X 在 Canton 完成马绍尔群岛主权数字债券首笔全链上回购', body: 'Tradeweb / Securities Finance Times（2026-08-27）：Virtu Financial、M1X Global 与 Tradeweb 完成首笔证券 leg 为原生链上发行主权数字债券的全链上回购——USDM1 为马绍尔群岛共和国链上发行的美元计价工具，按 1:1 由短期美国国债在破产隔离托管中支撑。交易在 Tradeweb 上于受监管机构对手方之间 bilateral 执行，Canton Network 上证券交付、cash leg 与返还原子链上结算，无需 prime broker 中介；完整回购与再购周期不到 10 分钟。USDM1 按纽约法结构为全额抵押主权义务，归类为 UCC Article 8 投资证券，符合 ISDA 与 GMRA close-out netting，作抵押时仍付息。机构托管经 Anchorage Digital、BitGo 与 tZERO 提供。此前 Tradeweb 已于 7 月在 Canton 完成代币化美国国债兑 USDCx 回购；8 月网络活动还包括跨链 swap 与原生 USD1 发行。', url: 'https://www.tradeweb.com/newsroom/media-center/in-the-news/first-fully-onchain-repo-transaction-completed-using-sovereign-digital-bond/' },
         { date: '2026-08-27', tag: '生态', title: '16 家机构提交 Canton 验证者申请，社区审阅开放至 9 月 2 日', body: 'CantonNews（2026-08-27）：16 家机构已提交 Canton 验证者运营商申请，社区审阅开放至 2026 年 9 月 2 日。申请于 8 月 26 日发布，覆盖八个司法管辖区，计划含钱包、代币化资产、支付、钱包基础设施、房地产代币化及金融机构服务。日本 BOOSTRY 计划构建 Canton 钱包并帮助日本金融机构接入网络，延续其在 ibet for Fin 数字证券网络上的工作。阿布扎比 3ERA 面向代币化资产创建与交易；Radius Research 聚焦亚洲机构应用。社区成员可在审阅窗口提出异议或请求讨论——截止日无异议则视为批准。MainNet 运营还需网络接入与 sponsoring operator 配合 setup；建议开发者在 dev/test 网络先验证应用。来源：lists.sync.global。', url: 'https://cantonnews.org/sixteen-validator-applications-open-for-canton-review' },
         { date: '2026-08-27', tag: '生态', title: 'Alpend 集成 Temple 订单簿，支持清算时抵押品出售', body: 'CantonNews（2026-08-27）：Alpend 已将 Temple 交易系统与订单簿集成至 Canton 早期接入借贷市场，为清算时的抵押品出售增加 venue。Alpend Market 借款人以资产作贷款担保；若贷款低于抵押要求，经批准清算人可偿还部分债务换取抵押品及风险补偿 bonus，单笔清算量有限制。经 Temple 订单簿路由抵押品出售旨在缩小预期与实际成交价差距、提高清算回收率，并帮助向 Alpend 借贷池供资用户管理风险。', url: 'https://cantonnews.org/alpend-integrates-temple-for-collateral-management-on-canton' },
