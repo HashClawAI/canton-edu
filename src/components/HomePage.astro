@@ -3,7 +3,6 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { t, type Locale } from '@/i18n/translations';
 import CoinPrice from '@/components/CoinPrice.astro';
 import CantonDashboard from '@/components/CantonDashboard.astro';
-import GeoSummary from '@/components/GeoSummary.astro';
 import GeoFaq from '@/components/GeoFaq.astro';
 
 interface Props {
@@ -24,12 +23,6 @@ const latestNews = tr.news.items.slice(0, 3);
   navCurrent="home"
   faqItems={tr.home.faqItems}
 >
-  <GeoSummary
-    title={tr.home.geoSummaryTitle}
-    bullets={tr.home.geoSummaryBullets}
-    oneLiner={tr.home.geoOneLiner}
-  />
-
   <section class="hero">
     <span class="hero-kicker">{tr.home.heroKicker}</span>
     <h1>{tr.home.title}</h1>
@@ -49,37 +42,36 @@ const latestNews = tr.news.items.slice(0, 3);
       chartSubtitle={tr.home.coinPriceChartSubtitle}
       chartBuildHint={tr.home.coinPriceChartBuildHint}
     />
+    <CantonDashboard
+      locale={locale}
+      title={tr.home.dashboardTitle}
+      subtitle={tr.home.dashboardSubtitle}
+      snapshotLabel={tr.home.dashboardSnapshotLabel}
+      modelLabel={tr.home.dashboardModelLabel}
+      sourceLabel={tr.home.dashboardSourceLabel}
+      regimeTransition={tr.home.dashboardRegimeTransition}
+      healthScoreLabel={tr.home.dashboardHealthScoreLabel}
+      compositeTitle={tr.home.dashboardCompositeTitle}
+      compositeWeight={tr.home.dashboardCompositeWeight}
+      kpiTitle={tr.home.dashboardKpiTitle}
+      metricsTitle={tr.home.dashboardMetricsTitle}
+      metricsColMetric={tr.home.dashboardMetricsColMetric}
+      metricsColCurrent={tr.home.dashboardMetricsColCurrent}
+      metricsColTarget={tr.home.dashboardMetricsColTarget}
+      metricsColScore={tr.home.dashboardMetricsColScore}
+      decisionTitle={tr.home.dashboardDecisionTitle}
+      decisionBody={tr.home.dashboardDecisionBody}
+      scenarioTitle={tr.home.dashboardScenarioTitle}
+      scenarioBear={tr.home.dashboardScenarioBear}
+      scenarioBase={tr.home.dashboardScenarioBase}
+      scenarioBull={tr.home.dashboardScenarioBull}
+      scenarioProb={tr.home.dashboardScenarioProb}
+      disclaimer={tr.home.dashboardDisclaimer}
+      indices={tr.home.dashboardIndices}
+      kpis={tr.home.dashboardKpis}
+      metricLabels={tr.home.dashboardMetricLabels}
+    />
   </section>
-
-  <CantonDashboard
-    locale={locale}
-    title={tr.home.dashboardTitle}
-    subtitle={tr.home.dashboardSubtitle}
-    snapshotLabel={tr.home.dashboardSnapshotLabel}
-    modelLabel={tr.home.dashboardModelLabel}
-    sourceLabel={tr.home.dashboardSourceLabel}
-    regimeTransition={tr.home.dashboardRegimeTransition}
-    healthScoreLabel={tr.home.dashboardHealthScoreLabel}
-    compositeTitle={tr.home.dashboardCompositeTitle}
-    compositeWeight={tr.home.dashboardCompositeWeight}
-    kpiTitle={tr.home.dashboardKpiTitle}
-    metricsTitle={tr.home.dashboardMetricsTitle}
-    metricsColMetric={tr.home.dashboardMetricsColMetric}
-    metricsColCurrent={tr.home.dashboardMetricsColCurrent}
-    metricsColTarget={tr.home.dashboardMetricsColTarget}
-    metricsColScore={tr.home.dashboardMetricsColScore}
-    decisionTitle={tr.home.dashboardDecisionTitle}
-    decisionBody={tr.home.dashboardDecisionBody}
-    scenarioTitle={tr.home.dashboardScenarioTitle}
-    scenarioBear={tr.home.dashboardScenarioBear}
-    scenarioBase={tr.home.dashboardScenarioBase}
-    scenarioBull={tr.home.dashboardScenarioBull}
-    scenarioProb={tr.home.dashboardScenarioProb}
-    disclaimer={tr.home.dashboardDisclaimer}
-    indices={tr.home.dashboardIndices}
-    kpis={tr.home.dashboardKpis}
-    metricLabels={tr.home.dashboardMetricLabels}
-  />
 
   <div class="cards cards-4">
     <article class="card">
