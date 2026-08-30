@@ -1,0 +1,666 @@
+---
+import dashboardData from '@/data/canton-dashboard.json';
+import type { Locale } from '@/i18n/translations';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  subtitle: string;
+  snapshotLabel: string;
+  modelLabel: string;
+  sourceLabel: string;
+  regimeTransition: string;
+  healthScoreLabel: string;
+  compositeTitle: string;
+  compositeWeight: string;
+  kpiTitle: string;
+  metricsTitle: string;
+  metricsColMetric: string;
+  metricsColCurrent: string;
+  metricsColTarget: string;
+  metricsColScore: string;
+  decisionTitle: string;
+  decisionBody: string;
+  scenarioTitle: string;
+  scenarioBear: string;
+  scenarioBase: string;
+  scenarioBull: string;
+  scenarioProb: string;
+  disclaimer: string;
+  indices: Record<string, string>;
+  kpis: Record<string, string>;
+  metricLabels: Record<string, string>;
+}
+
+const {
+  locale,
+  title,
+  subtitle,
+  snapshotLabel,
+  modelLabel,
+  sourceLabel,
+  regimeTransition,
+  healthScoreLabel,
+  compositeTitle,
+  compositeWeight,
+  kpiTitle,
+  metricsTitle,
+  metricsColMetric,
+  metricsColCurrent,
+  metricsColTarget,
+  metricsColScore,
+  decisionTitle,
+  decisionBody,
+  scenarioTitle,
+  scenarioBear,
+  scenarioBase,
+  scenarioBull,
+  scenarioProb,
+  disclaimer,
+  indices,
+  kpis,
+  metricLabels,
+} = Astro.props;
+
+const loc = locale === 'zh' ? 'zh-CN' : 'en-US';
+const data = dashboardData;
+const score = data.healthScore.overall;
+const scorePct = Math.min(100, Math.max(0, score));
+const gaugeOffset = 283 - (283 * scorePct) / 100;
+
+function fmtUsd(n: number, digits = 3): string {
+  return `$${n.toLocaleString(loc, { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
+}
+
+function fmtInt(n: number): string {
+  return n.toLocaleString(loc);
+}
+
+function fmtPct(n: number, digits = 1): string {
+  return `${n.toLocaleString(loc, { minimumFractionDigits: digits, maximumFractionDigits: digits })}%`;
+}
+
+function interpolate(template: string, vars: Record<string, string | number>): string {
+  return template.replace(/\{(\w+)\}/g, (_, key) => String(vars[key] ?? ''));
+}
+
+function scoreTone(value: number): 'low' | 'mid' | 'high' {
+  if (value >= 70) return 'high';
+  if (value >= 45) return 'mid';
+  return 'low';
+}
+
+const kpiItems = [
+  { label: kpis.ccPrice, value: fmtUsd(data.kpis.ccPriceUsd) },
+  { label: kpis.burnOffset, value: fmtPct(data.kpis.burnOffsetPct) },
+  { label: kpis.activeParties30d, value: fmtInt(data.kpis.activeParties30d) },
+  { label: kpis.liveValidatorRatio, value: fmtPct(data.kpis.liveValidatorRatioPct) },
+  { label: kpis.activePartyRatio, value: fmtPct(data.kpis.activePartyRatioPct) },
+  { label: kpis.top2Concentration, value: fmtPct(data.kpis.top2ConcentrationPct) },
+  { label: kpis.weightedPrice12m, value: fmtUsd(data.kpis.weightedPrice12mUsd) },
+  { label: kpis.flowAnchor, value: fmtUsd(data.kpis.flowAnchorUsd) },
+];
+
+const scenarioItems = [
+  { key: 'bear', label: scenarioBear, ...data.scenarios.bear },
+  { key: 'base', label: scenarioBase, ...data.scenarios.base },
+  { key: 'bull', label: scenarioBull, ...data.scenarios.bull },
+];
+---
+
+<section class="canton-dashboard" aria-labelledby="canton-dashboard-heading">
+  <div class="dashboard-head">
+    <div>
+      <h2 id="canton-dashboard-heading">{title}</h2>
+      <p class="dashboard-sub">{subtitle}</p>
+      <p class="dashboard-meta">
+        <span>{snapshotLabel}: {data.snapshotDate}</span>
+        <span>{interpolate(modelLabel, { version: data.modelVersion })}</span>
+      </p>
+    </div>
+    <a class="dashboard-source" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">
+      {sourceLabel} ↗
+    </a>
+  </div>
+
+  <div class="dashboard-hero">
+    <div class={`health-score-card tone-${scoreTone(score)}`}>
+      <div class="health-gauge" aria-hidden="true">
+        <svg viewBox="0 0 120 120" role="presentation">
+          <circle class="gauge-track" cx="60" cy="60" r="45" />
+          <circle
+            class="gauge-fill"
+            cx="60"
+            cy="60"
+            r="45"
+            style={`stroke-dashoffset: ${gaugeOffset}`}
+          />
+        </svg>
+      </div>
+      <div class="health-score-body">
+        <span class="health-kicker">{healthScoreLabel}</span>
+        <p class="health-value">{score.toLocaleString(loc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</p>
+        <span class="health-regime">{regimeTransition}</span>
+      </div>
+    </div>
+
+    <div class="dashboard-side">
+      <div class="decision-card">
+        <h3>{decisionTitle}</h3>
+        <p>{decisionBody}</p>
+      </div>
+      <div class="scenario-card">
+        <h3>{scenarioTitle}</h3>
+        <ul class="scenario-list">
+          {scenarioItems.map(({ key, label, probabilityPct, endPriceUsd }) => (
+            <li class={`scenario-item scenario-${key}`}>
+              <span class="scenario-label">{label}</span>
+              <span class="scenario-price">{fmtUsd(endPriceUsd)}</span>
+              <span class="scenario-prob">{interpolate(scenarioProb, { pct: probabilityPct })}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="panel composite-panel">
+      <h3>{compositeTitle}</h3>
+      <ul class="index-list">
+        {data.compositeIndices.map(({ key, score: idxScore, weight }) => (
+          <li class="index-item">
+            <div class="index-head">
+              <span class="index-name">{indices[key] ?? key}</span>
+              <span class="index-meta">
+                <span class="index-score">{idxScore.toFixed(1)}</span>
+                <span class="index-weight">{interpolate(compositeWeight, { weight })}</span>
+              </span>
+            </div>
+            <div class="index-bar" role="presentation">
+              <span class={`index-fill tone-${scoreTone(idxScore)}`} style={`width: ${idxScore}%`} />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="panel kpi-panel">
+      <h3>{kpiTitle}</h3>
+      <dl class="kpi-grid">
+        {kpiItems.map(({ label, value }) => (
+          <div class="kpi-item">
+            <dt>{label}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+
+  <div class="panel metrics-panel">
+    <h3>{metricsTitle}</h3>
+    <div class="metrics-table-wrap">
+      <table class="metrics-table">
+        <thead>
+          <tr>
+            <th scope="col">{metricsColMetric}</th>
+            <th scope="col">{metricsColCurrent}</th>
+            <th scope="col">{metricsColTarget}</th>
+            <th scope="col">{metricsColScore}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.metricScores.map(({ key, current, target, score: metricScore }) => (
+            <tr>
+              <th scope="row">{metricLabels[key] ?? key}</th>
+              <td>{current}</td>
+              <td>{target}</td>
+              <td>
+                <span class={`metric-score tone-${scoreTone(metricScore)}`}>{metricScore.toFixed(1)}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="dashboard-disclaimer">{disclaimer}</p>
+</section>
+
+<style>
+  .canton-dashboard {
+    margin: 2.5rem 0 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 4px);
+    background:
+      radial-gradient(720px 260px at 100% 0%, rgba(15, 118, 110, 0.1), transparent 70%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), var(--surface));
+    box-shadow: var(--shadow-md);
+  }
+
+  .dashboard-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dashboard-head h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    color: var(--heading);
+    letter-spacing: -0.02em;
+  }
+
+  .dashboard-sub {
+    margin: 0.45rem 0 0;
+    max-width: 56ch;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .dashboard-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin: 0.65rem 0 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dashboard-source {
+    align-self: flex-start;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--accent-border);
+    border-radius: var(--radius-sm);
+    background: var(--accent-soft);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .dashboard-source:hover {
+    text-decoration: none;
+    background: rgba(15, 118, 110, 0.14);
+  }
+
+  .dashboard-hero {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    .dashboard-hero {
+      grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+      align-items: stretch;
+    }
+  }
+
+  .health-score-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1.25rem 1rem 1.35rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+
+  .health-score-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 4px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: linear-gradient(90deg, #d97706, #0f766e);
+  }
+
+  .health-score-card.tone-high::before {
+    background: linear-gradient(90deg, #0f766e, #15803d);
+  }
+
+  .health-score-card.tone-mid::before {
+    background: linear-gradient(90deg, #d97706, #0f766e);
+  }
+
+  .health-score-card.tone-low::before {
+    background: linear-gradient(90deg, #dc2626, #d97706);
+  }
+
+  .health-gauge {
+    width: 132px;
+    height: 132px;
+  }
+
+  .health-gauge svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .gauge-track,
+  .gauge-fill {
+    fill: none;
+    stroke-width: 8;
+  }
+
+  .gauge-track {
+    stroke: var(--surface-subtle);
+  }
+
+  .gauge-fill {
+    stroke: var(--accent);
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    transition: stroke-dashoffset 0.4s ease;
+  }
+
+  .health-score-card.tone-high .gauge-fill {
+    stroke: #15803d;
+  }
+
+  .health-score-card.tone-mid .gauge-fill {
+    stroke: #d97706;
+  }
+
+  .health-score-card.tone-low .gauge-fill {
+    stroke: #dc2626;
+  }
+
+  .health-kicker {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .health-value {
+    margin: 0.1rem 0 0;
+    font-size: clamp(2.4rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .health-regime {
+    display: inline-flex;
+    margin-top: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    color: var(--accent-hover);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .dashboard-side {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .decision-card,
+  .scenario-card,
+  .panel {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .decision-card h3,
+  .scenario-card h3,
+  .panel h3 {
+    margin: 0 0 0.65rem;
+    font-size: 0.95rem;
+    color: var(--heading);
+  }
+
+  .decision-card p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .scenario-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .scenario-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.15rem 0.75rem;
+    padding: 0.55rem 0.65rem;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scenario-label {
+    font-weight: 600;
+    color: var(--heading);
+    font-size: 0.88rem;
+  }
+
+  .scenario-price {
+    font-weight: 700;
+    color: var(--heading);
+    font-size: 0.95rem;
+  }
+
+  .scenario-prob {
+    grid-column: 1 / -1;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .scenario-bear .scenario-label {
+    color: #b45309;
+  }
+
+  .scenario-bull .scenario-label {
+    color: #15803d;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 820px) {
+    .dashboard-grid {
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+  }
+
+  .index-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .index-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .index-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  .index-meta {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .index-score {
+    font-weight: 700;
+    color: var(--heading);
+  }
+
+  .index-weight {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .index-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: var(--surface-subtle);
+    overflow: hidden;
+  }
+
+  .index-fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+  }
+
+  .index-fill.tone-high {
+    background: linear-gradient(90deg, #0f766e, #15803d);
+  }
+
+  .index-fill.tone-mid {
+    background: linear-gradient(90deg, #d97706, #0f766e);
+  }
+
+  .index-fill.tone-low {
+    background: linear-gradient(90deg, #dc2626, #d97706);
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 0.85rem;
+    margin: 0;
+  }
+
+  @media (min-width: 560px) {
+    .kpi-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .kpi-item {
+    padding: 0.55rem 0.65rem;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+  }
+
+  .kpi-item dt {
+    margin: 0;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  .kpi-item dd {
+    margin: 0.2rem 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metrics-panel {
+    margin-top: 1rem;
+  }
+
+  .metrics-table-wrap {
+    overflow-x: auto;
+  }
+
+  .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metrics-table th,
+  .metrics-table td {
+    padding: 0.55rem 0.65rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .metrics-table thead th {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    background: var(--surface-subtle);
+  }
+
+  .metrics-table tbody th {
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  .metric-score {
+    display: inline-flex;
+    min-width: 2.5rem;
+    justify-content: center;
+    padding: 0.12rem 0.45rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.82rem;
+  }
+
+  .metric-score.tone-high {
+    background: rgba(21, 128, 61, 0.12);
+    color: #15803d;
+  }
+
+  .metric-score.tone-mid {
+    background: rgba(217, 119, 6, 0.12);
+    color: #b45309;
+  }
+
+  .metric-score.tone-low {
+    background: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+  }
+
+  .dashboard-disclaimer {
+    margin: 1rem 0 0;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+</style>

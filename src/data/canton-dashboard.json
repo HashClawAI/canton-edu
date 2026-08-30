@@ -1,0 +1,51 @@
+{
+  "snapshotDate": "2026-08-30",
+  "modelVersion": "1.0",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1HxVdvG8OUW9BRFQWh5q9_-CFvC2SRIreoLynpZb-YkM/edit?usp=sharing",
+  "healthScore": {
+    "overall": 64.3,
+    "regimeKey": "transition"
+  },
+  "compositeIndices": [
+    { "key": "adoption", "score": 37.2, "weight": 25 },
+    { "key": "tokenEquilibrium", "score": 78.1, "weight": 25 },
+    { "key": "validatorHealth", "score": 75.1, "weight": 20 },
+    { "key": "economicBreadth", "score": 71.9, "weight": 20 },
+    { "key": "faCapital", "score": 60.8, "weight": 10 }
+  ],
+  "kpis": {
+    "ccPriceUsd": 0.119,
+    "weightedPrice12mUsd": 0.121,
+    "burnOffsetPct": 72.6,
+    "activeParties30d": 30870,
+    "activePartyRatioPct": 3.5,
+    "liveValidatorRatioPct": 53.0,
+    "top2ConcentrationPct": 50.5,
+    "transfers30d": 6530000,
+    "transfersPerActiveParty": 211.53,
+    "liveValidators": 696,
+    "registeredValidators": 1314,
+    "activeSvNodes": 44,
+    "targetSvNodes": 60,
+    "circulatingSupply": 39450000000,
+    "featuredApps": 121,
+    "faLockedCc": 1200000000,
+    "flowAnchorUsd": 0.086,
+    "annualTrafficFeesUsd": 702941180
+  },
+  "scenarios": {
+    "bear": { "probabilityPct": 30, "endPriceUsd": 0.062 },
+    "base": { "probabilityPct": 50, "endPriceUsd": 0.119 },
+    "bull": { "probabilityPct": 20, "endPriceUsd": 0.217 }
+  },
+  "metricScores": [
+    { "key": "activePartyRatio", "current": "3.5%", "target": "10.0%", "score": 35.0 },
+    { "key": "transfersPerActiveParty", "current": "211.53", "target": "200.00", "score": 100.0 },
+    { "key": "burnOffset", "current": "72.6%", "target": "100.0%", "score": 72.6 },
+    { "key": "liveValidatorRatio", "current": "53.0%", "target": "70.0%", "score": 75.7 },
+    { "key": "activeSvNodes", "current": "44", "target": "60", "score": 73.3 },
+    { "key": "top2Concentration", "current": "50.5%", "target": "30.0%", "score": 70.7, "lowerIsBetter": true },
+    { "key": "top8Concentration", "current": "70.8%", "target": "60.0%", "score": 73.0, "lowerIsBetter": true },
+    { "key": "faLockedSupply", "current": "3.0%", "target": "5.0%", "score": 60.8 }
+  ]
+}
