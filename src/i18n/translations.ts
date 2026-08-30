@@ -273,6 +273,13 @@ export const translations = {
         {
           date: '2026-08-28',
           tag: 'Ecosystem',
+          title: 'Cantex trading volume passes $200 million',
+          body: 'CantonNews (August 28, 2026): Cantex has surpassed $200 million in reported trading volume—just over eight days after crossing $150 million on August 20. The Canton-native platform lets users trade Canton assets without handing control of funds to the exchange, offering private on-chain accounts, token swaps, and a live record of balances and completed trades. Access expanded on August 25 with Cantex Connect: users send an asset from a compatible Canton wallet and name the desired token in the transfer memo; when the trade completes, the requested asset returns to the same wallet. Connect supports 100+ trading pairs with swaps typically completing in 10–15 seconds.',
+          url: 'https://cantonnews.org/cantex-trading-volume-passes-200-million',
+        },
+        {
+          date: '2026-08-28',
+          tag: 'Ecosystem',
           title: 'Canton Development Fund adopts rules for AI-assisted proposals',
           body: 'CantonNews (August 28, 2026): Canton\'s Development Fund has adopted rules for AI-assisted submissions, allowing contributors to use AI tools while remaining responsible for the work they submit. The policy was adopted on August 27 and applies to the Fund\'s GitHub repository. The rules cover funding proposals, milestone submissions, code, and review comments. Contributors must check their work before submitting and be able to explain and defend its claims, budgets, and supporting evidence. AI use does not need to be labelled upfront, but contributors must answer honestly if asked whether AI helped produce a submission. Submissions that appear to contain unreviewed AI output—including invented references or incorrect claims—may be closed; repeated submissions of this kind may lead to a repository block.',
           url: 'https://cantonnews.org/canton-foundation-development-fund-adopts-rules-for-ai-assisted-proposals',
@@ -2530,6 +2537,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-28', tag: '生态', title: 'Cantex 交易量突破 2 亿美元', body: 'CantonNews（2026-08-28）：Cantex 报告交易量已突破 2 亿美元——距 8 月 20 日跨过 1.5 亿美元仅八天有余。该 Canton 原生平台允许用户在不将资金托管给交易所的前提下交易 Canton 资产，提供私有链上账户、代币 swap 以及余额与成交记录的实时视图。8 月 25 日 Cantex Connect 扩展接入：用户可从兼容 Canton 钱包发送资产并在 transfer memo 指定目标代币；成交后 requested token 返回同一钱包。Connect 支持 100+ 交易对，swap 通常 10–15 秒内完成。', url: 'https://cantonnews.org/cantex-trading-volume-passes-200-million' },
         { date: '2026-08-28', tag: '生态', title: 'Canton 发展基金采纳 AI 辅助提案规则', body: 'CantonNews（2026-08-28）：Canton 发展基金已采纳 AI 辅助提交规则，允许贡献者使用 AI 工具，但仍须对所提交内容负责。政策于 8 月 27 日通过，适用于基金 GitHub 仓库，涵盖资助提案、里程碑提交、代码与 review 评论。提交前须自行核查，并能够解释与辩护其主张、预算与支撑证据。AI 使用无需 upfront 标注，但若被问及是否借助 AI 产出，须如实回答。含未审查 AI 输出（如虚构引用或错误主张）的提交可能被关闭；屡次此类提交可能导致仓库封禁。', url: 'https://cantonnews.org/canton-foundation-development-fund-adopts-rules-for-ai-assisted-proposals' },
         { date: '2026-08-27', tag: '机构', title: 'Circle USYC 申请 Canton Featured App 身份', body: 'CantonNews（2026-08-27）：Circle 的 USYC 已申请 Canton Featured App 身份，Digital Asset 赞助该 8 月 27 日发布的申请。USYC 已在 Canton 上线并服务金融机构——该代币代表投资于持有美国短期国债及美国政府证券支撑短期借贷的货币市场基金。申请提议对交易、以 USYC 作抵押，以及与 Circle 美元稳定币 USDC 的发行/赎回等合格活动给予奖励。Featured App 身份将使 qualifying 活动符合 Canton Coin 奖励资格。', url: 'https://cantonnews.org/circle-s-usyc-seeks-canton-featured-app-status' },
         { date: '2026-08-27', tag: '技术', title: 'OneSwap 在 Slay Money 钱包应用内上线', body: 'CantonNews（2026-08-27）：OneSwap 现已在 Slay Money 内上线——用户可在应用内 swap Canton 资产，无需另开标签页或重连钱包。Slay Money 将 Canton 钱包、交易与预测市场整合于单一 app；钱包支持持有、发送与接收 Canton Coin，可通过 handle、钱包地址或 QR 码寻址转账。集成使用 OneSwap 开发者工具，两团队于 8 月 27 日联合宣布。', url: 'https://cantonnews.org/oneswap-goes-live-inside-slay-money' },
