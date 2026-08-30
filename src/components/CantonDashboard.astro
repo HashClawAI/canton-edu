@@ -8,7 +8,6 @@ interface Props {
   subtitle: string;
   snapshotLabel: string;
   modelLabel: string;
-  sourceLabel: string;
   regimeTransition: string;
   healthScoreLabel: string;
   compositeTitle: string;
@@ -38,7 +37,6 @@ const {
   subtitle,
   snapshotLabel,
   modelLabel,
-  sourceLabel,
   regimeTransition,
   healthScoreLabel,
   compositeTitle,
@@ -118,9 +116,6 @@ const scenarioItems = [
         <span>{interpolate(modelLabel, { version: data.modelVersion })}</span>
       </p>
     </div>
-    <a class="dashboard-source" href={data.sourceUrl} target="_blank" rel="noopener noreferrer">
-      {sourceLabel} ↗
-    </a>
   </div>
 
   <div class="dashboard-hero">
@@ -272,23 +267,6 @@ const scenarioItems = [
     font-size: 0.82rem;
     color: var(--muted);
     font-variant-numeric: tabular-nums;
-  }
-
-  .dashboard-source {
-    align-self: flex-start;
-    padding: 0.45rem 0.85rem;
-    border: 1px solid var(--accent-border);
-    border-radius: var(--radius-sm);
-    background: var(--accent-soft);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .dashboard-source:hover {
-    text-decoration: none;
-    background: rgba(15, 118, 110, 0.14);
   }
 
   .dashboard-hero {
