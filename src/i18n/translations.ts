@@ -323,6 +323,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-08-30',
+          tag: 'Ecosystem',
+          title: 'OKJ launches Canton Coin quiz with 70,000 CC in rewards',
+          body: 'CantonNews (August 30, 2026): Japanese exchange OKJ (OKCoin Japan) opened a ten-question Canton Coin quiz running until September 18, 2026 at 4:00 p.m. JST, with 70,000 CC across two pools. Participants who answer at least seven questions correctly share 60,000 CC (capped at 150 CC per person, prorated by eligible entries); ten qualifiers are also selected for an additional 1,000 CC each. One entry per person; CC distribution requires completing OKJ account opening by September 24 and begins in late September. OKJ also published a beginner\'s guide to Canton Coin and the network. The campaign follows OKJ\'s July 15 launch of CC order-book trading, recurring purchases, and Canton Mainnet deposits and withdrawals—the first Japanese crypto exchange order-book CC market.',
+          url: 'https://cantonnews.org/okj-launches-canton-coin-quiz-with-70-000-cc-in-rewards',
+        },
+        {
+          date: '2026-08-30',
+          tag: 'Tokenization',
+          title: 'BitSafe CBTC goes live on Swap Monster across four Canton markets',
+          body: 'CantonNews (August 30, 2026): BitSafe\'s CBTC—a 1:1 Bitcoin-backed token on Canton—is now live on Swap Monster across four markets: CBTC/CC, CBTC/USDCx, CBTC/EDELx, and CBTC/TRAKXRWA. Swap Monster uses private quotes rather than a public order book: users choose an asset and amount, request prices from eligible traders or selected counterparties, and accept or reject confidential quotes while assets remain in the trader\'s wallet until atomic bilateral settlement on Canton without Swap Monster taking custody. The platform targets institutional participants, currently requires an invitation code, and is offering zero trading fees during the campaign; only CBTC/CC trades are eligible for campaign rewards.',
+          url: 'https://cantonnews.org/bitsafe-s-cbtc-goes-live-on-swap-monster-across-four-canton-markets',
+        },
+        {
+          date: '2026-08-29',
+          tag: 'Technology',
+          title: 'ZeroVaultID activates validator on Canton MainNet',
+          body: 'CantonNews (August 29, 2026): ZeroVaultID—a New York–based compliance-technology firm—brought its validator online on Canton MainNet on August 28, announcing activation the following day. ZeroVaultID is building tools that let institutions share proof of compliance checks such as sanctions screening without exchanging customer identity files: the institution still makes the compliance decision while counterparties verify the result without receiving underlying documents. Its Passport product is designed to show a participant cleared a specific check; Cert Seal links that proof to settlement of a financial transaction. After DevNet tests, the team is selecting one partner for its first MainNet product deployment—starting with one financial instrument where ZeroVaultID compliance proof runs alongside the partner\'s existing controls without changing settlement workflows.',
+          url: 'https://cantonnews.org/zerovaultid-activates-validator-on-canton-mainnet',
+        },
+        {
           date: '2026-08-28',
           tag: 'Ecosystem',
           title: 'Cantex trading volume passes $200 million',
@@ -2641,6 +2662,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-08-30', tag: '生态', title: 'OKJ 推出 Canton Coin 问答，奖池 7 万 CC', body: 'CantonNews（2026-08-30）：日本交易所 OKJ（OKCoin Japan）开放十题 Canton Coin 问答，截至 2026 年 9 月 18 日 16:00（日本时间），总奖池 7 万 CC 分两个池。答对至少七题者可分享 6 万 CC（每人上限 150 CC，按合格人数分摊）；另从合格参与者中抽选 10 人各获 1000 CC。每人限参与一次；领取 CC 须于 9 月 24 日前完成 OKJ 开户，奖励计划 9 月下旬起发放。OKJ 同步发布 Canton Coin 与网络入门指南。该活动紧随 7 月 15 日 OKJ 上线 CC 板取引、定投与 Canton 主网存取——日本加密资产交易所中首家 CC 板取引市场。', url: 'https://cantonnews.org/okj-launches-canton-coin-quiz-with-70-000-cc-in-rewards' },
+        { date: '2026-08-30', tag: '代币化', title: 'BitSafe CBTC 在 Swap Monster 四个 Canton 市场上线', body: 'CantonNews（2026-08-30）：BitSafe 的 CBTC——Canton 上 1:1 比特币背书代币——现已在 Swap Monster 上线四个市场：CBTC/CC、CBTC/USDCx、CBTC/EDELx 与 CBTC/TRAKXRWA。Swap Monster 采用私有报价而非公开订单簿：用户选择资产与数量，向合格交易者或选定对手方询价，在报价保密且资产仍留交易者钱包期间接受或拒绝；接受后在 Canton 上 bilateral 原子结算，Swap Monster 不托管资金。平台面向机构参与者，目前需邀请码，活动期间零交易费；仅 CBTC/CC 市场交易符合活动奖励资格。', url: 'https://cantonnews.org/bitsafe-s-cbtc-goes-live-on-swap-monster-across-four-canton-markets' },
+        { date: '2026-08-29', tag: '技术', title: 'ZeroVaultID 在 Canton MainNet 激活验证者', body: 'CantonNews（2026-08-29）：纽约合规技术公司 ZeroVaultID 于 8 月 28 日在 Canton MainNet 上线验证者，并于次日宣布激活。ZeroVaultID 正在构建工具，使机构可共享制裁筛查等合规检查的证明而无需交换客户身份文件——机构仍自行作出合规决定，对手方可验证结果而不接收底层文档。Passport 产品旨在展示参与者已通过特定检查；Cert Seal 将该证明与金融交易结算关联。DevNet 测试后，团队正为首个 MainNet 产品部署选择一家合作伙伴——从单一金融工具起步，ZeroVaultID 合规证明与合作伙伴现有控制并行运行，不改变结算流程。', url: 'https://cantonnews.org/zerovaultid-activates-validator-on-canton-mainnet' },
         { date: '2026-08-28', tag: '生态', title: 'Cantex 交易量突破 2 亿美元', body: 'CantonNews（2026-08-28）：Cantex 报告交易量已突破 2 亿美元——距 8 月 20 日跨过 1.5 亿美元仅八天有余。该 Canton 原生平台允许用户在不将资金托管给交易所的前提下交易 Canton 资产，提供私有链上账户、代币 swap 以及余额与成交记录的实时视图。8 月 25 日 Cantex Connect 扩展接入：用户可从兼容 Canton 钱包发送资产并在 transfer memo 指定目标代币；成交后 requested token 返回同一钱包。Connect 支持 100+ 交易对，swap 通常 10–15 秒内完成。', url: 'https://cantonnews.org/cantex-trading-volume-passes-200-million' },
         { date: '2026-08-28', tag: '生态', title: 'Canton 发展基金采纳 AI 辅助提案规则', body: 'CantonNews（2026-08-28）：Canton 发展基金已采纳 AI 辅助提交规则，允许贡献者使用 AI 工具，但仍须对所提交内容负责。政策于 8 月 27 日通过，适用于基金 GitHub 仓库，涵盖资助提案、里程碑提交、代码与 review 评论。提交前须自行核查，并能够解释与辩护其主张、预算与支撑证据。AI 使用无需 upfront 标注，但若被问及是否借助 AI 产出，须如实回答。含未审查 AI 输出（如虚构引用或错误主张）的提交可能被关闭；屡次此类提交可能导致仓库封禁。', url: 'https://cantonnews.org/canton-foundation-development-fund-adopts-rules-for-ai-assisted-proposals' },
         { date: '2026-08-27', tag: '机构', title: 'Circle USYC 申请 Canton Featured App 身份', body: 'CantonNews（2026-08-27）：Circle 的 USYC 已申请 Canton Featured App 身份，Digital Asset 赞助该 8 月 27 日发布的申请。USYC 已在 Canton 上线并服务金融机构——该代币代表投资于持有美国短期国债及美国政府证券支撑短期借贷的货币市场基金。申请提议对交易、以 USYC 作抵押，以及与 Circle 美元稳定币 USDC 的发行/赎回等合格活动给予奖励。Featured App 身份将使 qualifying 活动符合 Canton Coin 奖励资格。', url: 'https://cantonnews.org/circle-s-usyc-seeks-canton-featured-app-status' },
