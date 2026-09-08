@@ -323,6 +323,13 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-09-07',
+          tag: 'Technology',
+          title: 'HANDL plans to route all transactions through Canton',
+          body: 'CantonNews (September 7, 2026): HANDL plans to route all of its transactions through Canton to preserve payment privacy as it prepares to begin the countdown to version 2.0. HANDL lets people get paid using social media usernames from X, Telegram, Instagram, WhatsApp, and Google—so senders do not need bank details or wallet addresses—while recipients choose a bank account, e-wallet, or crypto wallet for funds received. Canton is already supported inside the app: users can create a Canton wallet within HANDL or connect an existing one. The new plan would extend Canton\'s role from optional wallet support to the routing layer for every HANDL transaction.',
+          url: 'https://cantonnews.org/handl-plans-to-route-all-transactions-through-canton',
+        },
+        {
           date: '2026-09-06',
           tag: 'Ecosystem',
           title: 'Squid Intents launches multi-chain swaps for Canton',
@@ -2837,6 +2844,7 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-09-07', tag: '技术', title: 'HANDL 计划将所有交易路由至 Canton', body: 'CantonNews（2026-09-07）：HANDL 计划将其全部交易路由至 Canton 以保护支付隐私，并准备启动 2.0 版本倒计时。HANDL 允许用户通过 X、Telegram、Instagram、WhatsApp 与 Google 等社交媒体用户名收款——付款方无需银行信息或钱包地址——收款方可选择银行账户、电子钱包或加密钱包接收资金。应用内已支持 Canton：用户可在 HANDL 内创建 Canton 钱包或连接现有钱包。新计划将把 Canton 从可选钱包支持扩展为每笔 HANDL 交易的路由层。', url: 'https://cantonnews.org/handl-plans-to-route-all-transactions-through-canton' },
         { date: '2026-09-06', tag: '生态', title: 'Squid Intents 为 Canton 上线多链 swap', body: 'CantonNews（2026-09-06）：Squid Intents 已在 Canton 上线，将网络与 30 条链上支持资产连接，用户可通过同一流程 swap 进出 CC、USDCx、CBTC、代币化商品及其他 Canton 部署资产。Squid 合并 swap 与桥接——用户选择发送与接收资产，Squid 处理路由。在 Canton 内，上线为 CC swap 新增流动性，并计划更多 token listing。Send Wallet 已通过 CIP-103（Canton 兼容钱包与应用通用标准）集成 Squid，Canton Foundation 已确认该集成。开发者可通过现成 widget、API 或 SDK 嵌入标准 swap 界面或将路由更深集成至应用。', url: 'https://cantonnews.org/squid-intents-launches-multi-chain-swaps-for-canton' },
         { date: '2026-09-06', tag: '技术', title: 'Ones 发布 Canton 企业账户并确认 MVP 就绪', body: 'CantonNews（2026-09-06）：Ones 推出金融平台并确认 MVP 就绪，面向个人、企业与 AI 智能体——企业账户在 Canton Network 上开发。企业账户旨在将团队管理、卡、工资、支付、发票、支付链接与 treasury 整合于一处，目标是在后台运行区块链基础设施的同时提供熟悉金融产品体验。个人账户将聚焦数字资产与稳定币，采用 EVM 基础设施；点对点借贷正于两类账户并行开发。AI 工具将内嵌于产品——解释活动、辅助对账、标记异常行为，并计划在人工设定权限、限额与可审计记录下协助操作。MVP 就绪后，Ones 已明确 Canton 将支撑企业账户，个人账户、借贷与 AI 构成更广路线图。', url: 'https://cantonnews.org/ones-unveils-canton-business-account-and-confirms-mvp-is-ready' },
         { date: '2026-09-05', tag: '治理', title: 'TreasurySpring 40 亿美元 Canton 计划进入治理投票', body: 'CantonNews（2026-09-05）：TreasurySpring 将其 Fixed Term Funds 引入 Canton 的计划已进入正式治理投票——CIP-0122 请求超级验证者运营商批准 TreasurySpring Management (Jersey) Limited 成为超级验证者申请人。投票于 9 月 4 日开启；9 月 5 日 KST 凌晨后不久检查时，Tradeweb、Digital Asset、Five North 与 MPCH 均已投赞成，尚无反对，CIP 仍标记为 Proposed。TreasurySpring 帮助机构配置短期投资，受泽西监管；每只 Fixed Term Fund 持有单一投资并于设定日期到期，覆盖政府票据与债券、超国家债务及与投行的 reverse repo。提案列明 1000+  onboarded 客户、550+ live FTF 与 120+ 对手方。批准将建立分阶段里程碑——三个月内至少 1000 万美元自有资产负债表 FTF 上 Canton，12 个月内 outstanding 达 40 亿美元——以及客户使用阶段（外部钱包持有、转账、二级市场交易、抵押使用、链上现金购买），注册于 Canton 的基金 envisage 网络记录为主要法律所有权记录。', url: 'https://cantonnews.org/treasuryspring-s-4-billion-canton-plan-enters-governance-vote' },
