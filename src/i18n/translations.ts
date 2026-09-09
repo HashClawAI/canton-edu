@@ -323,6 +323,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-09-08',
+          tag: 'Ecosystem',
+          title: 'Ekiden goes live on Canton Mainnet as first CLOB-based derivatives exchange',
+          body: 'CantonNews (September 8, 2026): Ekiden has launched its mainnet on Canton Network, becoming the first central limit order book (CLOB) derivatives exchange on the network after months of testnet trading. Mainnet opens with controlled access—the top 100 traders from Ekiden\'s testnet leaderboard receive access codes first, with broader onboarding planned in waves. The platform targets professional trading firms, market makers, funds, banks, and institutional desks, combining CLOB and RFQ settlement with PropAMM integration, a trading terminal, and API connectivity. During its first testnet week Ekiden recorded 1,502 active users, 72,000+ trades, and about $8.9 million in volume; it is working with 11 integration partners and 12 market makers as mainnet liquidity expands. Ekiden raised $2 million in a May 2026 seed round; Canton Foundation Head Viv Diwakar welcomed the launch as a catalyst for on-chain derivatives on Canton.',
+          url: 'https://cantonnews.org/ekiden-goes-live-on-canton-mainnet-as-first-clob-based-derivatives-exchange',
+        },
+        {
+          date: '2026-09-08',
+          tag: 'Institutional',
+          title: 'Hanwha positions across three blockchain layers as Korea sets 2027 tokenized securities roadmap',
+          body: 'CantonNews (September 8, 2026): South Korea\'s Financial Services Commission unveiled a three-phase tokenized securities roadmap on September 4, with amended capital-markets and electronic-securities rules taking legal effect on February 4, 2027. Three days later Hanwha Investment and Securities completed a tokenized securities platform on Avalanche—the final piece of a three-layer stack spanning issuance (9.6% stake in Securitize), institutional DvP settlement (roughly 30 billion won committed to Digital Asset and Canton Network), and secondary-market liquidity (Avalanche C-Chain plus Hyperledger Besu). Phase 1 covers privately placed money market funds, bonds, and unlisted stocks in trust structures; Phase 2 would extend to publicly offered securities; Phase 3 envisages on-chain stablecoin settlement. The FSC plans to publish subordinate regulation drafts before end-September on custody licensing, disclosure, and qualifying asset structures.',
+          url: 'https://cantonnews.org/hanwha-positions-across-three-blockchain-layers-as-korea-sets-2027-tokenized-securities-roadmap',
+        },
+        {
           date: '2026-09-07',
           tag: 'Technology',
           title: 'HANDL plans to route all transactions through Canton',
@@ -2844,6 +2858,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-09-08', tag: '生态', title: 'Ekiden 在 Canton 主网上线，成为首个 CLOB 衍生品交易所', body: 'CantonNews（2026-09-08）：Ekiden 已在 Canton Network 主网上线，成为网络首个中央限价订单簿（CLOB）衍生品交易所，此前已在测试网运行数月。主网采用受控开放——测试网排行榜前 100 名交易者优先获得访问码，后续将分批扩大 onboarding。平台面向专业交易公司、做市商、基金、银行与机构交易台，结合 CLOB 与 RFQ 结算、PropAMM 集成、交易终端与 API 连接。测试网首周记录 1502 名活跃用户、7.2 万+ 笔交易与约 890 万美元成交量；正与 11 家集成伙伴及 12 家做市商合作扩展主网流动性。Ekiden 于 2026 年 5 月完成 200 万美元种子轮；Canton Foundation 负责人 Viv Diwakar 称该上线将催化 Canton 链上衍生品生态。', url: 'https://cantonnews.org/ekiden-goes-live-on-canton-mainnet-as-first-clob-based-derivatives-exchange' },
+        { date: '2026-09-08', tag: '机构', title: '韩华布局三层区块链栈，韩国发布 2027 代币化证券路线图', body: 'CantonNews（2026-09-08）：韩国金融委员会（FSC）于 9 月 4 日发布代币化证券三阶段实施路线图，修订后的资本市场法与电子证券法将于 2027 年 2 月 4 日生效。三日后韩华投资证券完成基于 Avalanche 的代币化证券平台——构成覆盖发行（持有 Securitize 9.6% 股权）、机构 DvP 结算（向 Digital Asset 与 Canton Network 承诺约 300 亿韩元）与二级市场流动性（Avalanche C-Chain 加 Hyperledger Besu）的三层基础设施布局。第一阶段涵盖私募货币市场基金、债券与信托结构下未上市股份；第二阶段拟扩展至公开发行证券；第三阶段 envisage 链上稳定币结算。FSC 计划于 9 月底前公布附属法规草案，涉及托管许可、披露标准与合格资产结构。', url: 'https://cantonnews.org/hanwha-positions-across-three-blockchain-layers-as-korea-sets-2027-tokenized-securities-roadmap' },
         { date: '2026-09-07', tag: '技术', title: 'HANDL 计划将所有交易路由至 Canton', body: 'CantonNews（2026-09-07）：HANDL 计划将其全部交易路由至 Canton 以保护支付隐私，并准备启动 2.0 版本倒计时。HANDL 允许用户通过 X、Telegram、Instagram、WhatsApp 与 Google 等社交媒体用户名收款——付款方无需银行信息或钱包地址——收款方可选择银行账户、电子钱包或加密钱包接收资金。应用内已支持 Canton：用户可在 HANDL 内创建 Canton 钱包或连接现有钱包。新计划将把 Canton 从可选钱包支持扩展为每笔 HANDL 交易的路由层。', url: 'https://cantonnews.org/handl-plans-to-route-all-transactions-through-canton' },
         { date: '2026-09-06', tag: '生态', title: 'Squid Intents 为 Canton 上线多链 swap', body: 'CantonNews（2026-09-06）：Squid Intents 已在 Canton 上线，将网络与 30 条链上支持资产连接，用户可通过同一流程 swap 进出 CC、USDCx、CBTC、代币化商品及其他 Canton 部署资产。Squid 合并 swap 与桥接——用户选择发送与接收资产，Squid 处理路由。在 Canton 内，上线为 CC swap 新增流动性，并计划更多 token listing。Send Wallet 已通过 CIP-103（Canton 兼容钱包与应用通用标准）集成 Squid，Canton Foundation 已确认该集成。开发者可通过现成 widget、API 或 SDK 嵌入标准 swap 界面或将路由更深集成至应用。', url: 'https://cantonnews.org/squid-intents-launches-multi-chain-swaps-for-canton' },
         { date: '2026-09-06', tag: '技术', title: 'Ones 发布 Canton 企业账户并确认 MVP 就绪', body: 'CantonNews（2026-09-06）：Ones 推出金融平台并确认 MVP 就绪，面向个人、企业与 AI 智能体——企业账户在 Canton Network 上开发。企业账户旨在将团队管理、卡、工资、支付、发票、支付链接与 treasury 整合于一处，目标是在后台运行区块链基础设施的同时提供熟悉金融产品体验。个人账户将聚焦数字资产与稳定币，采用 EVM 基础设施；点对点借贷正于两类账户并行开发。AI 工具将内嵌于产品——解释活动、辅助对账、标记异常行为，并计划在人工设定权限、限额与可审计记录下协助操作。MVP 就绪后，Ones 已明确 Canton 将支撑企业账户，个人账户、借贷与 AI 构成更广路线图。', url: 'https://cantonnews.org/ones-unveils-canton-business-account-and-confirms-mvp-is-ready' },
