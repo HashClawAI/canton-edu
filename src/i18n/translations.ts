@@ -323,6 +323,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-09-12',
+          tag: 'Governance',
+          title: 'a16z crypto proposed for Canton Super Validator role',
+          body: 'CantonNews (September 12, 2026): A governance draft submitted September 11 would bring a16z crypto into Canton\'s Super Validator programme with a maximum earnable reward weight of 10, tied to milestones agreed with the Canton Foundation. The proposal draws on a16z crypto\'s experience investing in blockchain infrastructure, payments, stablecoins, and developer tools, aiming to strengthen connections between Canton\'s institutional users and the wider crypto developer community. Super Validators operate shared infrastructure and participate in network governance; under the proposed arrangement, a16z crypto would earn its allocation as agreed work completes. Specific commitments, timelines, and commercial details remain confidential until the firm and the Foundation agree to disclose them. Rewards would accumulate in escrow; the Super Validator Accountability Committee would verify milestones and Tokenomics would review associated rewards, with release requiring action by two-thirds of Super Validator operators. The proposal remains a draft awaiting approval.',
+          url: 'https://cantonnews.org/a16z-crypto-proposed-for-canton-super-validator-role',
+        },
+        {
+          date: '2026-09-12',
+          tag: 'Governance',
+          title: 'Shinhan Asset Management secures approval for Canton Super Validator programme',
+          body: 'CantonNews (September 12, 2026): Shinhan Asset Management has won approval for a Canton Super Validator programme focused on institutional adoption in Korea, approved September 11 with a path to earn up to weight 10 in Super Validator rewards. The programme covers tokenized securities, real-world assets, won-denominated settlement assets, and fund administration, with Shinhan Bank, Shinhan Securities, and Shinhan Fund Partners expected to participate alongside the asset manager within Shinhan Financial Group. Milestones, deadlines, and commercial details were agreed privately with the Foundation\'s Tokenomics and Accountability Committees and remain confidential until Shinhan and the Foundation choose to disclose them. Rewards accumulate in escrow pending evidence of completed milestones; once Shinhan has been awarded more than 2.5 in weight, it must operate its own Super Validator node within six months.',
+          url: 'https://cantonnews.org/shinhan-asset-management-secures-approval-for-canton-super-validator-program',
+        },
+        {
+          date: '2026-09-12',
+          tag: 'Ecosystem',
+          title: 'Temple passes one billion CC burned on Canton',
+          body: 'CantonNews (September 12, 2026): Temple Digital Group has passed one billion Canton Coin burned for the Canton Network, with its September 11 update putting cumulative network burn contribution since January at more than $100 million. Burning is how Canton charges for public infrastructure use—fees for settlement, asset transfers, and data synchronisation are paid in CC and permanently removed from circulation. Temple opened for trading January 8 with the CC/USDCx pair, combining private trading with non-custodial wallet support. In July it listed Ember Protocol\'s eXAU and eXAG gold and silver tokens, each representing one troy ounce of allocated bullion in professional custody. The billion-CC milestone arrives eight months after Temple\'s trading launch.',
+          url: 'https://cantonnews.org/temple-passes-one-billion-cc-burned-on-canton',
+        },
+        {
+          date: '2026-09-12',
+          tag: 'Market',
+          title: 'Canton ranks #1 in global 24-hour blockchain fees at $1.58M',
+          body: 'Bitget News / DeFiLlama (September 12, 2026): Canton generated $1,577,496 in 24-hour fees per DeFiLlama, ranking first globally ahead of Robinhood Chain ($936K), Tron ($871K), Solana ($836K), and Ethereum ($703K)—a 1.89% increase from the prior day and the second consecutive day Canton led the chart. Fees are generated predominantly at the chain layer rather than by individual application protocols, indicating broad transaction throughput. Canton\'s seven-day cumulative total stood at $11.19M, reflecting a -4.04% week-over-week decline, so the daily spike represents concentrated on-chain activity rather than a uniform weekly trend.',
+          url: 'https://www.bitgetapp.com/news/detail/12560605829086',
+        },
+        {
           date: '2026-09-11',
           tag: 'Governance',
           title: 'Goldman Sachs proposed as Super Validator on Canton Network',
@@ -3033,6 +3061,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-09-12', tag: '治理', title: 'a16z crypto 被提议担任 Canton 超级验证者', body: 'CantonNews（2026-09-12）：9 月 11 日提交的治理草案拟将 a16z crypto 纳入 Canton 超级验证者计划，在与 Canton Foundation 约定的里程碑下最高可获奖励权重 10。a16z crypto 在区块链基础设施、支付、稳定币与开发者工具方面的投资经验被引用，旨在加强 Canton 机构用户与更广泛的 crypto 开发者社区之间的联系。超级验证者运营共享基础设施并参与网络治理；按拟议安排，a16z crypto 将随约定工作完成逐步获得分配。具体承诺、时间线与商业细节在与 Foundation 共同决定披露前保密。奖励将累积于 escrow；超级验证者问责委员会将验证里程碑，代币经济学委员会审查相关奖励，释放需超级验证者运营商三分之二行动。提案仍为待批草案。', url: 'https://cantonnews.org/a16z-crypto-proposed-for-canton-super-validator-role' },
+        { date: '2026-09-12', tag: '治理', title: 'Shinhan Asset Management 获批 Canton 超级验证者计划', body: 'CantonNews（2026-09-12）：Shinhan Asset Management 已获批聚焦韩国机构采用的 Canton 超级验证者计划，9 月 11 日批准，最高可获超级验证者奖励权重 10。计划涵盖代币化证券、真实世界资产、韩元计价结算资产与基金管理，Shinhan Bank、Shinhan Securities 与 Shinhan Fund Partners 预计与资产管理公司一并参与，隶属 Shinhan Financial Group。里程碑、截止日期与商业细节已与 Foundation 代币经济学与问责委员会私下商定并保密，直至 Shinhan 与 Foundation 决定披露。奖励累积于 escrow，待提交里程碑完成证据；一旦 Shinhan 获分配超过 2.5 权重，须在六个月内运营自有超级验证者节点。', url: 'https://cantonnews.org/shinhan-asset-management-secures-approval-for-canton-super-validator-program' },
+        { date: '2026-09-12', tag: '生态', title: 'Temple 在 Canton 累计燃烧超 10 亿 CC', body: 'CantonNews（2026-09-12）：Temple Digital Group 在 Canton Network 累计燃烧 Canton Coin 已超 10 亿枚，9 月 11 日更新显示自 1 月以来对网络 burn 的累计贡献超 1 亿美元。Burn 是 Canton 对公共基础设施使用收费的方式——结算、资产转移与数据同步等费用以 CC 支付并永久移出流通。Temple 于 1 月 8 日以 CC/USDCx 交易对开放交易，结合私有交易与非托管钱包支持。7 月上线 Ember Protocol 的 eXAU 与 eXAG 金银 token，各代表一金衡盎司专业金库托管分配贵金属。10 亿 CC 里程碑距 Temple 交易 launch 仅八个月。', url: 'https://cantonnews.org/temple-passes-one-billion-cc-burned-on-canton' },
+        { date: '2026-09-12', tag: '市场', title: 'Canton 24 小时链上手续费全球第一，约 158 万美元', body: 'Bitget News / DeFiLlama（2026-09-12）：DeFiLlama 显示 Canton 24 小时手续费 1,577,496 美元，全球第一，领先 Robinhood Chain（93.6 万）、Tron（87.1 万）、Solana（83.6 万）与 Ethereum（70.3 万），较前一日增 1.89%，为连续第二日登顶。手续费主要来自链层而非单一应用协议，表明广泛交易吞吐。Canton 7 日累计约 1119 万美元，周环比 -4.04%，故日度尖峰代表集中链上活动而非均匀周趋势。', url: 'https://www.bitgetapp.com/news/detail/12560605829086' },
         { date: '2026-09-11', tag: '治理', title: 'Goldman Sachs 被提议为 Canton Network 超级验证者', body: 'CantonNews（2026-09-11）：治理 CIP 已提交，拟将 Goldman Sachs and Co. 指定为 Canton 超级验证者，在与 Canton Foundation 约定的里程碑计划下最高可获权重 10。由 Abeetha Pitigala 撰写，当前为 Proposed 状态；伞形计划使 Goldman Sachs 随完成生态承诺逐步获得超级验证者权重，具体里程碑与时间线在与 Foundation 共同决定披露前保密。里程碑未经验证不 mint 奖励；未达期限的未获权重将被移除。Goldman Sachs 已参与 Canton 工作组与试点，并参与 Digital Asset 3.65 亿美元融资轮。批准需超级验证者三分之二投票。', url: 'https://cantonnews.org/goldman-sachs-proposed-as-super-validator-on-canton-network-in-new-governance-proposal' },
         { date: '2026-09-11', tag: '治理', title: '十二家机构获 Canton 主网验证者 allocation', body: 'CantonNews（2026-09-11）：十二家机构在 9 月 9 日 UTC 公布的 9 月 7 日 allocation 批次中获得 Canton 主网验证者节点 allocation，含 Utila、BitSafe 与 Sats Terminal，各一节点。完整名单：SEA CAPITAL、Aqua-Index Holdings Corp.、Velvet Silage、Aqvero Labs、Ceres Ag Capital Ltd、Sats Terminal、Techmonk、Tinkerrer Apps LLP、OneNov、Utila、Bitsafe、Cantield Labs Inc。allocation 在初始运营商批准后、生产 onboarding 前进行；获批后 sponsor 提供凭证。容量为每周 50 个主网验证者，优先已有 devnet 或 testnet 应用并准备生产的项目。', url: 'https://cantonnews.org/twelve-organisations-receive-canton-mainnet-validator-allocations' },
         { date: '2026-09-11', tag: '协议', title: 'Canton 3.5.17 为网络运营商带来修复', body: 'CantonNews（2026-09-11）：Canton 3.5.17 作为 9 月 10 日维护版本发布，修复网络运营商的内存相关崩溃与连接问题。两项修复针对内存耗尽——消息在对端无法快速接收时堆积，以及 tracking 记录创建但未正确关闭。更新亦修复节点 onboarding 与 catch-up 故障，含 rejoin 节点可能无入站连接的情况。其他改动降低入站交易算力需求、增加性能监控选项、统一连接间数据流默认设置并拒绝冲突配置。支持 Canton 协议版本 34 与 35。', url: 'https://cantonnews.org/canton-3-5-17-brings-fixes-for-network-operators' },
