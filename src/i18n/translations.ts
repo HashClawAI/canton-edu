@@ -125,14 +125,18 @@ export const translations = {
       dashboardMetricsColScore: 'Score',
       dashboardDecisionTitle: 'Model readout',
       dashboardDecisionBody:
-        'The model currently treats Canton as a transition-stage network: Burn Offset is improving, but active identity breadth and activity concentration remain the main structural risks. The price forecast is conditional on USD Traffic growth and the market premium over the flow anchor.',
+        'Since the 2026-08-30 snapshot, overall health rose from 64.3 to 72.4. 30-day active party breadth jumped toward the 10% target (≈9.9%), lifting Adoption, while Burn Offset eased slightly to 70.9% and unique-wallet FA lock coverage remains thin (~1% of circulating supply). Concentration and validator liveness are stable-to-slightly better; activity intensity per active party is the main soft spot.',
       dashboardScenarioTitle: '12-month scenario band',
       dashboardScenarioBear: 'Bear',
       dashboardScenarioBase: 'Base',
       dashboardScenarioBull: 'Bull',
       dashboardScenarioProb: '{pct}% probability',
+      dashboardHistoryTitle: 'History comparison',
+      dashboardHistoryScoreTitle: 'Overall Health Score over time',
+      dashboardHistoryCompositeTitle: 'Composite indices: prior vs current',
+      dashboardHistoryDeltaLabel: '{delta} vs {priorDate}',
       dashboardDisclaimer:
-        'Educational model snapshot sourced from CCView, CantonNews, and CIP references. Thresholds are provisional; verify live metrics at ccview.io and official docs. Not financial advice.',
+        'Educational model snapshot sourced from CCView, CC Space, 5N Lighthouse, The Tie, and CoinGecko. Thresholds are provisional; verify live metrics at ccview.io and official docs. Not financial advice.',
       dashboardIndices: {
         adoption: 'Adoption',
         tokenEquilibrium: 'Token equilibrium',
@@ -3028,14 +3032,18 @@ export const translations = {
       dashboardMetricsColScore: '得分',
       dashboardDecisionTitle: '模型解读',
       dashboardDecisionBody:
-        '模型当前将 Canton 视为过渡阶段网络：Burn Offset 在改善，但活跃身份广度与活动集中度仍是主要结构性风险。价格预测取决于 USD Traffic 增长及相对流量锚点的市场溢价。',
+        '相对 2026-08-30 快照，综合健康得分由 64.3 升至 72.4。30 日活跃 Party 占比逼近 10% 目标（约 9.9%），显著抬升采用度；Burn Offset 略回落至 70.9%，且 FA 唯一钱包锁定覆盖仍偏薄（约流通量的 1%）。集中度与验证者在线率持稳略升；每活跃 Party 转账强度是主要短板。',
       dashboardScenarioTitle: '12 个月情景区间',
       dashboardScenarioBear: '悲观',
       dashboardScenarioBase: '基准',
       dashboardScenarioBull: '乐观',
       dashboardScenarioProb: '概率 {pct}%',
+      dashboardHistoryTitle: '历史对比',
+      dashboardHistoryScoreTitle: '综合健康得分走势',
+      dashboardHistoryCompositeTitle: '复合指数：上期 vs 本期',
+      dashboardHistoryDeltaLabel: '较 {priorDate} {delta}',
       dashboardDisclaimer:
-        '教育用途模型快照，数据来自 CCView、CantonNews 与 CIP 参考。阈值均为暂定值；请以 ccview.io 与官方文档核对实时指标。不构成财务建议。',
+        '教育用途模型快照，数据来自 CCView、CC Space、5N Lighthouse、The Tie 与 CoinGecko。阈值均为暂定值；请以 ccview.io 与官方文档核对实时指标。不构成财务建议。',
       dashboardIndices: {
         adoption: '采用度',
         tokenEquilibrium: '代币均衡',

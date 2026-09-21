@@ -25,6 +25,10 @@ interface Props {
   scenarioBase: string;
   scenarioBull: string;
   scenarioProb: string;
+  historyTitle: string;
+  historyScoreTitle: string;
+  historyCompositeTitle: string;
+  historyDeltaLabel: string;
   disclaimer: string;
   indices: Record<string, string>;
   kpis: Record<string, string>;
@@ -54,6 +58,10 @@ const {
   scenarioBase,
   scenarioBull,
   scenarioProb,
+  historyTitle,
+  historyScoreTitle,
+  historyCompositeTitle,
+  historyDeltaLabel,
   disclaimer,
   indices,
   kpis,
@@ -65,6 +73,9 @@ const data = dashboardData;
 const score = data.healthScore.overall;
 const scorePct = Math.min(100, Math.max(0, score));
 const gaugeOffset = 283 - (283 * scorePct) / 100;
+const history = data.history ?? [];
+const prior = history.length >= 2 ? history[history.length - 2] : null;
+const scoreDelta = prior ? score - prior.healthScore : null;
 
 function fmtUsd(n: number, digits = 3): string {
   return `$${n.toLocaleString(loc, { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
@@ -104,6 +115,61 @@ const scenarioItems = [
   { key: 'base', label: scenarioBase, ...data.scenarios.base },
   { key: 'bull', label: scenarioBull, ...data.scenarios.bull },
 ];
+
+const scoreChart = (() => {
+  const W = 520;
+  const H = 200;
+  const pad = { t: 24, r: 20, b: 36, l: 40 };
+  const iw = W - pad.l - pad.r;
+  const ih = H - pad.t - pad.b;
+  const pts = history.map((h, i) => {
+    const x = pad.l + (history.length === 1 ? iw / 2 : (i / (history.length - 1)) * iw);
+    const y = pad.t + ih - (Math.min(100, Math.max(0, h.healthScore)) / 100) * ih;
+    return { ...h, x, y };
+  });
+  const line = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+  const grid = [25, 50, 75, 100].map((v) => ({
+    v,
+    y: pad.t + ih - (v / 100) * ih,
+  }));
+  return { W, H, pad, pts, line, grid };
+})();
+
+const compositeChart = (() => {
+  const keys = data.compositeIndices.map((c) => c.key);
+  const series = history.map((h) => ({
+    date: h.snapshotDate,
+    values: Object.fromEntries(h.compositeIndices.map((c) => [c.key, c.score])),
+  }));
+  const W = 640;
+  const H = 240;
+  const pad = { t: 16, r: 16, b: 48, l: 36 };
+  const iw = W - pad.l - pad.r;
+  const ih = H - pad.t - pad.b;
+  const groupW = iw / Math.max(keys.length, 1);
+  const barW = Math.min(28, (groupW * 0.7) / Math.max(series.length, 1));
+  const colors = ['#94a3b8', '#0f766e'];
+  const bars = keys.flatMap((key, ki) =>
+    series.map((s, si) => {
+      const value = s.values[key] ?? 0;
+      const x =
+        pad.l +
+        ki * groupW +
+        groupW / 2 -
+        (series.length * barW + (series.length - 1) * 4) / 2 +
+        si * (barW + 4);
+      const h = (Math.min(100, Math.max(0, value)) / 100) * ih;
+      const y = pad.t + ih - h;
+      return { key, date: s.date, value, x, y, w: barW, h, color: colors[si % colors.length] };
+    }),
+  );
+  return { W, H, pad, ih, keys, series, bars, colors };
+})();
+
+function fmtDelta(n: number): string {
+  const sign = n > 0 ? '+' : '';
+  return `${sign}${n.toLocaleString(loc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}`;
+}
 ---
 
 <section class="canton-dashboard" aria-labelledby="canton-dashboard-heading">
@@ -136,6 +202,14 @@ const scenarioItems = [
         <span class="health-kicker">{healthScoreLabel}</span>
         <p class="health-value">{score.toLocaleString(loc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</p>
         <span class="health-regime">{regimeTransition}</span>
+        {scoreDelta !== null && prior && (
+          <span class={`health-delta ${scoreDelta >= 0 ? 'up' : 'down'}`}>
+            {interpolate(historyDeltaLabel, {
+              delta: fmtDelta(scoreDelta),
+              priorDate: prior.snapshotDate,
+            })}
+          </span>
+        )}
       </div>
     </div>
 
@@ -192,6 +266,115 @@ const scenarioItems = [
       </dl>
     </div>
   </div>
+
+  {history.length >= 2 && (
+    <div class="panel history-panel">
+      <h3>{historyTitle}</h3>
+      <div class="history-charts">
+        <figure class="history-chart">
+          <figcaption>{historyScoreTitle}</figcaption>
+          <svg
+            class="score-history-svg"
+            viewBox={`0 0 ${scoreChart.W} ${scoreChart.H}`}
+            role="img"
+            aria-label={historyScoreTitle}
+          >
+            {scoreChart.grid.map(({ v, y }) => (
+              <g>
+                <line
+                  class="chart-grid"
+                  x1={scoreChart.pad.l}
+                  x2={scoreChart.W - scoreChart.pad.r}
+                  y1={y}
+                  y2={y}
+                />
+                <text class="chart-axis" x={scoreChart.pad.l - 8} y={y + 4} text-anchor="end">
+                  {v}
+                </text>
+              </g>
+            ))}
+            <path class="score-history-line" d={scoreChart.line} />
+            {scoreChart.pts.map((p) => (
+              <g>
+                <circle class="score-history-dot" cx={p.x} cy={p.y} r="5.5" />
+                <text class="chart-value" x={p.x} y={p.y - 12} text-anchor="middle">
+                  {p.healthScore.toFixed(1)}
+                </text>
+                <text class="chart-label" x={p.x} y={scoreChart.H - 12} text-anchor="middle">
+                  {p.snapshotDate}
+                </text>
+              </g>
+            ))}
+          </svg>
+        </figure>
+
+        <figure class="history-chart">
+          <figcaption>{historyCompositeTitle}</figcaption>
+          <svg
+            class="composite-history-svg"
+            viewBox={`0 0 ${compositeChart.W} ${compositeChart.H}`}
+            role="img"
+            aria-label={historyCompositeTitle}
+          >
+            {[25, 50, 75, 100].map((v) => {
+              const y = compositeChart.pad.t + compositeChart.ih - (v / 100) * compositeChart.ih;
+              return (
+                <g>
+                  <line
+                    class="chart-grid"
+                    x1={compositeChart.pad.l}
+                    x2={compositeChart.W - compositeChart.pad.r}
+                    y1={y}
+                    y2={y}
+                  />
+                  <text class="chart-axis" x={compositeChart.pad.l - 8} y={y + 4} text-anchor="end">
+                    {v}
+                  </text>
+                </g>
+              );
+            })}
+            {compositeChart.bars.map((b) => (
+              <rect
+                class="composite-bar"
+                x={b.x}
+                y={b.y}
+                width={b.w}
+                height={Math.max(b.h, 1)}
+                fill={b.color}
+                rx="3"
+              >
+                <title>{`${indices[b.key] ?? b.key} · ${b.date}: ${b.value.toFixed(1)}`}</title>
+              </rect>
+            ))}
+            {compositeChart.keys.map((key, i) => {
+              const groupW =
+                (compositeChart.W - compositeChart.pad.l - compositeChart.pad.r) /
+                compositeChart.keys.length;
+              const x = compositeChart.pad.l + i * groupW + groupW / 2;
+              return (
+                <text
+                  class="chart-label"
+                  x={x}
+                  y={compositeChart.H - 14}
+                  text-anchor="middle"
+                >
+                  {indices[key] ?? key}
+                </text>
+              );
+            })}
+          </svg>
+          <ul class="history-legend">
+            {compositeChart.series.map((s, i) => (
+              <li>
+                <span class="legend-swatch" style={`background: ${compositeChart.colors[i]}`} />
+                {s.date}
+              </li>
+            ))}
+          </ul>
+        </figure>
+      </div>
+    </div>
+  )}
 
   <div class="panel metrics-panel">
     <h3>{metricsTitle}</h3>
@@ -388,6 +571,22 @@ const scenarioItems = [
     font-weight: 600;
   }
 
+  .health-delta {
+    display: block;
+    margin-top: 0.55rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .health-delta.up {
+    color: #15803d;
+  }
+
+  .health-delta.down {
+    color: #b45309;
+  }
+
   .dashboard-side {
     display: grid;
     gap: 1rem;
@@ -577,6 +776,98 @@ const scenarioItems = [
 
   .metrics-panel {
     margin-top: 1rem;
+  }
+
+  .history-panel {
+    margin-top: 1rem;
+  }
+
+  .history-charts {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 900px) {
+    .history-charts {
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: start;
+    }
+  }
+
+  .history-chart {
+    margin: 0;
+  }
+
+  .history-chart figcaption {
+    margin: 0 0 0.55rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  .score-history-svg,
+  .composite-history-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+  }
+
+  .chart-grid {
+    stroke: var(--border);
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+  }
+
+  .chart-axis,
+  .chart-label,
+  .chart-value {
+    fill: var(--muted);
+    font-size: 11px;
+  }
+
+  .chart-value {
+    fill: var(--heading);
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .score-history-line {
+    fill: none;
+    stroke: #0f766e;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .score-history-dot {
+    fill: #0f766e;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+
+  .history-legend {
+    list-style: none;
+    margin: 0.65rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.1rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .history-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .legend-swatch {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 2px;
   }
 
   .metrics-table-wrap {
