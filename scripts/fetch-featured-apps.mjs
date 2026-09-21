@@ -436,23 +436,52 @@ async function fetchFromLighthouseOnly() {
   return { apps, source: 'lighthouse' };
 }
 
+/**
+ * Prefer fresh remote data; if every source fails, keep the committed snapshot so
+ * `npm run build` / Pages deploy still succeeds without API keys.
+ */
+function keepExistingSnapshot(reason) {
+  if (!fs.existsSync(OUT)) {
+    throw new Error(`${reason}; and no existing ${path.relative(process.cwd(), OUT)} to keep.`);
+  }
+  let existing;
+  try {
+    existing = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+  } catch (err) {
+    throw new Error(`${reason}; existing snapshot is unreadable (${err.message}).`);
+  }
+  const total = existing.total ?? existing.apps?.length ?? 0;
+  if (!total) {
+    throw new Error(`${reason}; existing snapshot has no apps.`);
+  }
+  console.warn(
+    `${reason}; keeping existing featured-apps snapshot (${total} apps, source=${existing.source ?? 'unknown'}, fetchedAt=${existing.fetchedAt ?? 'n/a'}).`,
+  );
+}
+
 async function main() {
   const ccviewKey = process.env.CCVIEW_API_KEY?.trim();
   let result;
-  if (ccviewKey) {
-    result = await fetchFromCcview(ccviewKey);
-  } else {
-    try {
-      result = await fetchFromCcviewLockingPage();
-    } catch (err) {
-      console.warn(`CC View locking scrape failed (${err.message}); falling back to Lighthouse only.`);
-      result = await fetchFromLighthouseOnly();
+  try {
+    if (ccviewKey) {
+      result = await fetchFromCcview(ccviewKey);
+    } else {
+      try {
+        result = await fetchFromCcviewLockingPage();
+      } catch (err) {
+        console.warn(`CC View locking scrape failed (${err.message}); falling back to Lighthouse only.`);
+        result = await fetchFromLighthouseOnly();
+      }
     }
+  } catch (err) {
+    keepExistingSnapshot(`Featured-apps refresh failed (${err.message})`);
+    return;
   }
 
   const { apps, source } = result;
   if (!apps.length) {
-    throw new Error('No featured apps returned — refusing to overwrite data file.');
+    keepExistingSnapshot('No featured apps returned from live sources');
+    return;
   }
 
   const payload = {
