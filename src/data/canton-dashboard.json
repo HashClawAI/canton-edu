@@ -1,50 +1,100 @@
 {
-  "snapshotDate": "2026-08-30",
-  "modelVersion": "1.0",
+  "snapshotDate": "2026-09-21",
+  "modelVersion": "1.1",
+  "sources": [
+    "https://ccview.io/",
+    "https://cc.itrocket.space/analytics",
+    "https://lighthouse.cantonloop.com/featured-app-locking",
+    "https://canton.thetie.io/",
+    "https://api.coingecko.com/api/v3/simple/price?ids=canton-network&vs_currencies=usd"
+  ],
   "healthScore": {
-    "overall": 64.3,
+    "overall": 72.4,
     "regimeKey": "transition"
   },
   "compositeIndices": [
-    { "key": "adoption", "score": 37.2, "weight": 25 },
-    { "key": "tokenEquilibrium", "score": 78.1, "weight": 25 },
-    { "key": "validatorHealth", "score": 75.1, "weight": 20 },
-    { "key": "economicBreadth", "score": 71.9, "weight": 20 },
-    { "key": "faCapital", "score": 60.8, "weight": 10 }
+    { "key": "adoption", "score": 87.7, "weight": 25 },
+    { "key": "tokenEquilibrium", "score": 70.9, "weight": 25 },
+    { "key": "validatorHealth", "score": 78.1, "weight": 20 },
+    { "key": "economicBreadth", "score": 75.1, "weight": 20 },
+    { "key": "faCapital", "score": 20.7, "weight": 10 }
   ],
   "kpis": {
-    "ccPriceUsd": 0.119,
-    "weightedPrice12mUsd": 0.121,
-    "burnOffsetPct": 72.6,
-    "activeParties30d": 30870,
-    "activePartyRatioPct": 3.5,
-    "liveValidatorRatioPct": 53.0,
-    "top2ConcentrationPct": 50.5,
-    "transfers30d": 6530000,
-    "transfersPerActiveParty": 211.53,
-    "liveValidators": 696,
-    "registeredValidators": 1314,
-    "activeSvNodes": 44,
+    "ccPriceUsd": 0.117,
+    "weightedPrice12mUsd": 0.119,
+    "burnOffsetPct": 70.9,
+    "activeParties30d": 87590,
+    "activePartyRatioPct": 9.9,
+    "liveValidatorRatioPct": 53.3,
+    "top2ConcentrationPct": 48.2,
+    "transfers30d": 4510000,
+    "transfersPerActiveParty": 51.49,
+    "liveValidators": 734,
+    "registeredValidators": 1376,
+    "registeredParties": 888457,
+    "activeSvNodes": 48,
     "targetSvNodes": 60,
-    "circulatingSupply": 39450000000,
-    "featuredApps": 121,
-    "faLockedCc": 1200000000,
-    "flowAnchorUsd": 0.086,
-    "annualTrafficFeesUsd": 702941180
+    "circulatingSupply": 39650000000,
+    "featuredApps": 126,
+    "faLockedCc": 410840000,
+    "flowAnchorUsd": 0.075,
+    "annualTrafficFeesUsd": 609550000
   },
   "scenarios": {
-    "bear": { "probabilityPct": 30, "endPriceUsd": 0.062 },
-    "base": { "probabilityPct": 50, "endPriceUsd": 0.119 },
-    "bull": { "probabilityPct": 20, "endPriceUsd": 0.217 }
+    "bear": { "probabilityPct": 30, "endPriceUsd": 0.061 },
+    "base": { "probabilityPct": 50, "endPriceUsd": 0.117 },
+    "bull": { "probabilityPct": 20, "endPriceUsd": 0.21 }
   },
   "metricScores": [
-    { "key": "activePartyRatio", "current": "3.5%", "target": "10.0%", "score": 35.0 },
-    { "key": "transfersPerActiveParty", "current": "211.53", "target": "200.00", "score": 100.0 },
-    { "key": "burnOffset", "current": "72.6%", "target": "100.0%", "score": 72.6 },
-    { "key": "liveValidatorRatio", "current": "53.0%", "target": "70.0%", "score": 75.7 },
-    { "key": "activeSvNodes", "current": "44", "target": "60", "score": 73.3 },
-    { "key": "top2Concentration", "current": "50.5%", "target": "30.0%", "score": 70.7, "lowerIsBetter": true },
-    { "key": "top8Concentration", "current": "70.8%", "target": "60.0%", "score": 73.0, "lowerIsBetter": true },
-    { "key": "faLockedSupply", "current": "3.0%", "target": "5.0%", "score": 60.8 }
+    { "key": "activePartyRatio", "current": "9.9%", "target": "10.0%", "score": 98.6 },
+    { "key": "transfersPerActiveParty", "current": "51.49", "target": "200.00", "score": 25.7 },
+    { "key": "burnOffset", "current": "70.9%", "target": "100.0%", "score": 70.9 },
+    { "key": "liveValidatorRatio", "current": "53.3%", "target": "70.0%", "score": 76.2 },
+    { "key": "activeSvNodes", "current": "48", "target": "60", "score": 80.0 },
+    { "key": "top2Concentration", "current": "48.2%", "target": "30.0%", "score": 74.0, "lowerIsBetter": true },
+    { "key": "top8Concentration", "current": "69.5%", "target": "60.0%", "score": 76.3, "lowerIsBetter": true },
+    { "key": "faLockedSupply", "current": "1.0%", "target": "5.0%", "score": 20.7 }
+  ],
+  "history": [
+    {
+      "snapshotDate": "2026-08-30",
+      "modelVersion": "1.0",
+      "healthScore": 64.3,
+      "compositeIndices": [
+        { "key": "adoption", "score": 37.2, "weight": 25 },
+        { "key": "tokenEquilibrium", "score": 78.1, "weight": 25 },
+        { "key": "validatorHealth", "score": 75.1, "weight": 20 },
+        { "key": "economicBreadth", "score": 71.9, "weight": 20 },
+        { "key": "faCapital", "score": 60.8, "weight": 10 }
+      ],
+      "kpis": {
+        "ccPriceUsd": 0.119,
+        "burnOffsetPct": 72.6,
+        "activeParties30d": 30870,
+        "activePartyRatioPct": 3.5,
+        "liveValidatorRatioPct": 53.0,
+        "top2ConcentrationPct": 50.5
+      }
+    },
+    {
+      "snapshotDate": "2026-09-21",
+      "modelVersion": "1.1",
+      "healthScore": 72.4,
+      "compositeIndices": [
+        { "key": "adoption", "score": 87.7, "weight": 25 },
+        { "key": "tokenEquilibrium", "score": 70.9, "weight": 25 },
+        { "key": "validatorHealth", "score": 78.1, "weight": 20 },
+        { "key": "economicBreadth", "score": 75.1, "weight": 20 },
+        { "key": "faCapital", "score": 20.7, "weight": 10 }
+      ],
+      "kpis": {
+        "ccPriceUsd": 0.117,
+        "burnOffsetPct": 70.9,
+        "activeParties30d": 87590,
+        "activePartyRatioPct": 9.9,
+        "liveValidatorRatioPct": 53.3,
+        "top2ConcentrationPct": 48.2
+      }
+    }
   ]
 }
