@@ -4,4 +4,5 @@
 
 | 文稿 | 说明 |
 |------|------|
-| [alpha-school-next-gen-education.md](./alpha-school-next-gen-education.md) | 以美国 Alpha School 为主线，谈下一代教育；文风偏朴实 |
+| [alpha-school-next-gen-education.md](./alpha-school-next-gen-education.md) | 长文：以美国 Alpha School 为主线，谈下一代教育；文风偏朴实 |
+| [alpha-school-parent-group-short.md](./alpha-school-parent-group-short.md) | 短版：适合家校群转发 / 公众号快读，约 900 字 |
