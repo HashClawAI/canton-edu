@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-09-24',
+          tag: 'Technology',
+          title: 'Local Traffic Management goes live on Canton mainnet for validators and wallets',
+          body: 'Canton Network Forum / Digital Asset (September 24, 2026): Local Traffic Management is now available on mainnet for validator operators and wallet providers. Validators can attribute synchronizer traffic spend to individual parties and optionally reject submissions when a user\'s traffic balance cannot cover the cost—separating per-account accounting from a shared node balance. Wallet teams gain a TrafficService on the Ledger API (gRPC and JSON) to meter end-user usage and cap spend per account. Configuration, API reference, and a rollout runbook are published at docs.canton.network under production operations.',
+          url: 'https://forum.canton.network/t/local-traffic-management-now-live-on-mainnet/9225',
+        },
+        {
+          date: '2026-09-24',
+          tag: 'Ecosystem',
+          title: 'CC Space cuts alert pricing and expands monitoring triggers on Canton',
+          body: 'Canton Network Forum / ITRocket (September 24, 2026): CC Space alerts now cost 5 credits per delivery, down from 50—roughly 1.5 cents per notification at typical CC pricing—so operators can add more triggers and channels without rationing. Coverage spans validator and Super Validator health, traffic runway and balance spikes, Featured App compliance and reward activity, party balance thresholds, and governance proposals with vote outcomes. Credits come from CC users convert themselves, capping spend at topped-up balances. Delivery channels include web, email, Telegram, Slack, PagerDuty, and webhooks at cc.itrocket.space.',
+          url: 'https://forum.canton.network/t/cc-space-alerts-more-triggers-more-channels-lower-cost/9223',
+        },
+        {
+          date: '2026-09-24',
+          tag: 'Ecosystem',
+          title: 'CCView refresh highlights traffic MB/s, USD fees, and local party labels',
+          body: 'Canton Network Forum (September 24, 2026): CCView updated its home dashboard to lead with traffic measured in megabytes per second—argued as a clearer usage signal than TPS alone—and USD-denominated fees with purchased traffic split from consumed so auto top-ups do not read as usage. Fees sit beside rewards paid to show subsidy and coverage at a glance; burn-mint equilibrium (BME) sits under the CC price with premium above. Users can also assign local party labels stored in the browser that follow parties across the explorer and CC Trace.',
+          url: 'https://forum.canton.network/t/ccview-update-traffic-fees-and-labeling-features/9217',
+        },
+        {
+          date: '2026-09-24',
+          tag: 'Institutional',
+          title: 'RedStone earns ISO/IEC 27001:2022 certification for oracle operations',
+          body: 'Canton Network Forum / RedStone (September 24, 2026): RedStone completed ISO/IEC 27001:2022 certification following a late-August audit, validating its information-security management for TradFi and enterprise oracle work—including feeds used across Canton commodity and institutional integrations such as Temple markets and Noves pricing. SGS United Kingdom Ltd conducted and issued the certificate. RedStone asked ecosystem partners to amplify the milestone on social channels; full announcement at redstone.finance.',
+          url: 'https://forum.canton.network/t/redstone-achieves-iso-iec-27001-2022-certification-announcement/9216',
+        },
+        {
           date: '2026-09-23',
           tag: 'Infrastructure',
           title: 'Canton Network receives 60 validator applications in largest batch to date',
@@ -3342,6 +3370,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-09-24', tag: '技术', title: 'Canton 主网上线 Local Traffic Management，面向验证者与钱包', body: 'Canton Network 论坛 / Digital Asset（2026-09-24）：Local Traffic Management 已在主网向验证者运营方与钱包提供商开放。验证者可将同步器流量消耗归因到单个 party，并可选在用户流量余额不足以覆盖提交成本时拒绝交易——将按账户记账与共享节点余额分离。钱包团队可通过 Ledger API（gRPC 与 JSON）上的 TrafficService 计量终端用户用量并按账户封顶支出。配置、API 参考与上线手册见 docs.canton.network 生产运维文档。', url: 'https://forum.canton.network/t/local-traffic-management-now-live-on-mainnet/9225' },
+        { date: '2026-09-24', tag: '生态', title: 'CC Space 下调告警价格并扩展 Canton 监控触发器', body: 'Canton Network 论坛 / ITRocket（2026-09-24）：CC Space 告警现为每次投递 5 积分（原 50），按典型 CC 价格约 1.5 美分/条，运营方可增加触发器与通道而无需省着用。覆盖验证者与超级验证者健康、流量 runway 与余额尖峰、Featured App 合规与奖励活动、party 余额阈值，以及治理提案与投票结果。积分来自用户自行兑换的 CC，支出不超过充值余额。投递通道含 Web、Email、Telegram、Slack、PagerDuty 与 webhook，见 cc.itrocket.space。', url: 'https://forum.canton.network/t/cc-space-alerts-more-triggers-more-channels-lower-cost/9223' },
+        { date: '2026-09-24', tag: '生态', title: 'CCView 更新突出流量 MB/s、USD 费用与本地 party 标签', body: 'Canton Network 论坛（2026-09-24）：CCView 首页改版，以 MB/s 展示流量（团队称比 TPS 更能反映真实用量），并以 USD 计价费用；购买流量与消耗分开显示，避免自动充值被误读为用量。费用与已发奖励并列，便于一眼看补贴与覆盖；CC 价格下方展示 BME，上方为溢价。用户还可在浏览器本地为 party 打标签，标签在浏览器与 CC Trace 中跟随该 party。', url: 'https://forum.canton.network/t/ccview-update-traffic-fees-and-labeling-features/9217' },
+        { date: '2026-09-24', tag: '机构', title: 'RedStone 获 ISO/IEC 27001:2022 认证，强化预言机安全框架', body: 'Canton Network 论坛 / RedStone（2026-09-24）：RedStone 在 8 月下旬审计完成后取得 ISO/IEC 27001:2022 认证，验证其面向 TradFi 与企业客户的预言机信息安全管理——包括 Canton 商品与机构集成中使用的 feed（如 Temple 市场、Noves 定价等）。SGS United Kingdom Ltd 执行审计并签发证书。RedStone 请生态伙伴在社媒传播该里程碑；完整说明见 redstone.finance 博客。', url: 'https://forum.canton.network/t/redstone-achieves-iso-iec-27001-2022-certification-announcement/9216' },
         { date: '2026-09-23', tag: '基础设施', title: 'Canton Network 收到 60 份验证者申请，为迄今最大批次', body: 'CantonNews（2026-09-23）：60 家机构提交 Canton Network 验证者运营申请——为网络历史上最大单批——现有参与者可在 9 月 30 日前提出异议，否则将视为默许批准。批次涵盖机构金融、专业验证者基础设施、AI 智能体平台、流动性管理与供应链构建者，覆盖东南亚、新加坡、欧洲与美洲。韩国大型券商 Mirae Asset Securities 申请直接参与 Canton 基础设施；其母公司此前已与 Canton Foundation 等开展区块链合作。基础设施侧包括 KairosLayer（60+ PoS 网络）、Nadium（90+ 协议）、TEMBARA、IronLighthouse、AKARSA、Ankr Labs 与 VantaCore 等。应用构建者含 Kore AI（MCP 智能体结算）、Lauros FinLabs（自主国库智能体）、Rome Protocol（评估 Solana 上 EVM 与 Canton 集成）、Fernix Vault Markets、Lyrix Liquids 与 Brightloop Engagement Cloud 等。部分印尼团队再次承诺发布 Daml 模板与印尼语文档；若干申请以占位描述公开。', url: 'https://cantonnews.org/canton-network-receives-60-new-validator-applications-in-largest-batch-to-date' },
         { date: '2026-09-23', tag: '技术', title: 'Temple 发布 Lightspeed 2.0 撮合引擎，提升 Canton 交易容量', body: 'CantonNews（2026-09-23）：Temple 为 Canton 交易栈发布 Lightspeed 2.0 重大撮合引擎升级，目标日处理超 8500 万笔订单、每秒结算交易量提升最高约 29 倍、撮合延迟可低至 3.6 毫秒，以在 Q4 接入更多资产、流动性与账户扩展带宽。更新体验已在 Temple 网站开放；公司称容量提升是为 Temple 场所及 Virtual Orderbooks 等 Canton 集成承载更高活跃度。', url: 'https://cantonnews.org/temple-launches-lightspeed-2-0-matching-engine-for-higher-trading-capacity' },
         { date: '2026-09-23', tag: '生态', title: 'OneSwap 预告 Canton 网络 memecoin 发射台 OnePump', body: 'CantonNews（2026-09-23）：OneSwap 宣布 OnePump——Pump.fun 风格的 memecoin 发射台即将登陆 Canton Network。团队称从创建代币、添加流动性到在 OneSwap 上线交易可在两分钟内完成；Canton 无公开 mempool，降低抢跑；流动性自动锁定，部署方无法在吸引买家后抽池。OnePump 在 OneSwap 既有 Canton DEX（Loop Wallet、Edel Finance、HandlPay 等集成）之上增加创建层，新代币可立即在同基础设施交易。产品仍在开发，已开放候补名单。', url: 'https://cantonnews.org/oneswap-s-onepump-is-coming-soon-to-canton-network' },
