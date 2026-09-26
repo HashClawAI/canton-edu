@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-09-25',
+          tag: 'Governance',
+          title: 'T-RIZE joins Canton Foundation Collateral Subcommittee with DTCC and ISDA',
+          body: 'CantonNews (September 25, 2026): T-RIZE Group has joined the Canton Foundation Collateral Subcommittee chaired by DTCC, working alongside ISDA, BNY, Euroclear, Broadridge, and global banks on standards for collateral mobility on Canton. T-RIZE will contribute to Cross-Application Collateral Mobility and Tokenised Repo and Financing workstreams, bringing Canadian tokenisation infrastructure experience from production Canton deployments. CEO Madani Boukalba framed the appointment as bridging on-chain issuance to repo and collateral workflows institutions can rely on—following live tokenised repo at institutional scale on Canton.',
+          url: 'https://cantonnews.org/t-rize-joins-canton-foundation-collateral-subcommittee-alongside-dtcc-isda-bny-and-euroclear',
+        },
+        {
+          date: '2026-09-25',
+          tag: 'Institutional',
+          title: 'Digital Asset CEO hints at imminent Canton "first print" in $100T-scale market',
+          body: 'CantonNews (September 25, 2026): Digital Asset co-founder and CEO Yuval Rooz followed a September 16 post—describing a market worth more than $100 trillion moving to Canton—with "Hopefully next week first print." CantonNews reads the figure as consistent with DTCC-scale securities inventory and notes July production trades already occurred on Canton as DTCC tokenisation work advances; Rooz\'s teaser appears distinct from the DTCC Tokenization Service commercial launch targeted for October 2026. The wording suggests an execution milestone rather than another pilot announcement, though no transaction details were confirmed at publication.',
+          url: 'https://cantonnews.org/digital-asset-ceo-hints-at-major-canton-network-milestone-next-week',
+        },
+        {
+          date: '2026-09-25',
+          tag: 'Institutional',
+          title: 'Nasdaq links Calypso collateral management to Canton in always-on markets push',
+          body: 'CantonNews (September 25, 2026): Nasdaq President Tal Cohen told Autonomous\'s Future of Commerce conference that Nasdaq is connecting its Calypso collateral management platform to Canton Network and other layer-one chains as part of an always-on market strategy. Cohen cited July\'s Vanguard–Wellington test trade and outlined real-time IM/VM views, scenario analysis, and round-the-clock collateral mobility as goals, alongside planned 23/5 equity trading from December 6, the Nasdaq Equity Token with Payward/Kraken distribution, and a $3–6 billion serviceable market target by 2030. Cohen emphasized permissioned assets atop interoperable network infrastructure rather than parallel on-chain and off-chain silos, with Nasdaq acting as tokenisation agent or technology provider rather than digital-asset custodian.',
+          url: 'https://cantonnews.org/nasdaq-connects-calypso-collateral-management-to-canton-network-as-it-builds-toward-always-on-markets',
+        },
+        {
+          date: '2026-09-25',
+          tag: 'Institutional',
+          title: 'Fireblocks details Citadel Securities Canton wallet flow in DTCC July 15 tokenisation event',
+          body: 'CantonNews (September 25, 2026): Fireblocks disclosed infrastructure Citadel Securities used during DTCC\'s live July 15, 2026 tokenisation production event: tokenised US Treasury entitlements on Canton held in Fireblocks wallets, transfers to DTC-registered counterparties including BNP Paribas and Société Générale wallets, and posting to CME as collateral. Fireblocks supplied validator access, DTCC allow-list onboarding, policy-governed wallets, and reporting; Dan Doherty of Citadel Securities credited the partnership for smooth execution. The disclosure lands as DTCC prepares an October 2026 commercial launch of its Tokenization Service—following a July programme spanning collateral pledge, lending, repo and equity DvP, and CCP margin workflows across Besu and Canton.',
+          url: 'https://cantonnews.org/fireblocks-details-how-citadel-securities-used-canton-network-in-dtcc-s-july-15-tokenization-event',
+        },
+        {
           date: '2026-09-24',
           tag: 'Technology',
           title: 'Local Traffic Management goes live on Canton mainnet for validators and wallets',
@@ -3370,6 +3398,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-09-25', tag: '治理', title: 'T-RIZE 加入 Canton Foundation 抵押品小组委员会，与 DTCC、ISDA 等并列', body: 'CantonNews（2026-09-25）：T-RIZE Group 加入由 DTCC 主席的 Canton Foundation Collateral Subcommittee，与 ISDA、BNY、Euroclear、Broadridge 及全球银行共同制定 Canton 抵押品流动标准。T-RIZE 将参与 Cross-Application Collateral Mobility 与 Tokenised Repo and Financing 工作流，带来加拿大团队在 Canton 生产环境代币化基础设施经验。CEO Madani Boukalba 称任命旨在把链上发行与机构可依赖的回购、抵押品流程衔接——在 Canton 上已有机构级代币化回购规模运行的背景下。', url: 'https://cantonnews.org/t-rize-joins-canton-foundation-collateral-subcommittee-alongside-dtcc-isda-bny-and-euroclear' },
+        { date: '2026-09-25', tag: '机构', title: 'Digital Asset CEO 暗示 Canton 或迎万亿美元级市场「首笔成交」', body: 'CantonNews（2026-09-25）：Digital Asset 联合创始人兼 CEO Yuval Rooz 在 9 月 16 日发文称超 100 万亿美元规模市场将迁至 Canton 后，跟帖写道「Hopefully next week first print」。报道将该规模与 DTCC 托管证券体量对照，并指 Canton 上已有 7 月生产交易推进 DTCC 代币化工作；Rooz 暗示的里程碑似与 2026 年 10 月 DTCC Tokenization Service 商业上线不同。措辞更接近执行节点而非新试点公告，发稿时未确认交易细节。', url: 'https://cantonnews.org/digital-asset-ceo-hints-at-major-canton-network-milestone-next-week' },
+        { date: '2026-09-25', tag: '机构', title: 'Nasdaq 将 Calypso 抵押品管理接入 Canton，推进全天候市场战略', body: 'CantonNews（2026-09-25）：Nasdaq 总裁 Tal Cohen 在 Autonomous Future of Commerce 上表示，Nasdaq 正把 Calypso 抵押品管理平台连接至 Canton Network 及其他一层链，作为全天候市场战略一部分。Cohen 援引 7 月 Vanguard–Wellington 测试交易，并阐述实时初始/变动保证金视图、情景分析与 7×24 抵押品调度目标，同时规划 12 月 6 日起 23/5 股票交易、与 Payward/Kraken 合作的 Nasdaq Equity Token，以及 2030 年 30–60 亿美元可服务市场目标。Cohen 强调在可互操作网络之上采用许可资产与合规治理，而非链上链下平行体系；Nasdaq 以代币化代理或技术提供商角色参与，而非自持数字资产托管。', url: 'https://cantonnews.org/nasdaq-connects-calypso-collateral-management-to-canton-network-as-it-builds-toward-always-on-markets' },
+        { date: '2026-09-25', tag: '机构', title: 'Fireblocks 披露 Citadel Securities 在 DTCC 7·15 代币化活动中的 Canton 钱包流程', body: 'CantonNews（2026-09-25）：Fireblocks 说明 Citadel Securities 在 DTCC 2026 年 7 月 15 日 live 代币化生产活动中使用的 Canton 基础设施：在 Fireblocks 钱包持有 Canton 上代币化美国国债权益、转移至 BNP Paribas 与 Société Générale 等 DTC 注册对手方钱包，并质押至 CME 作为抵押品。Fireblocks 提供验证者接入、DTCC 白名单 onboarding、策略管控钱包与报表；Citadel Securities 的 Dan Doherty 称合作保障当日顺利执行。披露时点临近 DTCC 计划 2026 年 10 月商业上线的 Tokenization Service——此前 7 月项目覆盖抵押质押、借贷、回购与股票 DvP 及 CCP 保证金流程，横跨 Besu 与 Canton。', url: 'https://cantonnews.org/fireblocks-details-how-citadel-securities-used-canton-network-in-dtcc-s-july-15-tokenization-event' },
         { date: '2026-09-24', tag: '技术', title: 'Canton 主网上线 Local Traffic Management，面向验证者与钱包', body: 'Canton Network 论坛 / Digital Asset（2026-09-24）：Local Traffic Management 已在主网向验证者运营方与钱包提供商开放。验证者可将同步器流量消耗归因到单个 party，并可选在用户流量余额不足以覆盖提交成本时拒绝交易——将按账户记账与共享节点余额分离。钱包团队可通过 Ledger API（gRPC 与 JSON）上的 TrafficService 计量终端用户用量并按账户封顶支出。配置、API 参考与上线手册见 docs.canton.network 生产运维文档。', url: 'https://forum.canton.network/t/local-traffic-management-now-live-on-mainnet/9225' },
         { date: '2026-09-24', tag: '生态', title: 'CC Space 下调告警价格并扩展 Canton 监控触发器', body: 'Canton Network 论坛 / ITRocket（2026-09-24）：CC Space 告警现为每次投递 5 积分（原 50），按典型 CC 价格约 1.5 美分/条，运营方可增加触发器与通道而无需省着用。覆盖验证者与超级验证者健康、流量 runway 与余额尖峰、Featured App 合规与奖励活动、party 余额阈值，以及治理提案与投票结果。积分来自用户自行兑换的 CC，支出不超过充值余额。投递通道含 Web、Email、Telegram、Slack、PagerDuty 与 webhook，见 cc.itrocket.space。', url: 'https://forum.canton.network/t/cc-space-alerts-more-triggers-more-channels-lower-cost/9223' },
         { date: '2026-09-24', tag: '生态', title: 'CCView 更新突出流量 MB/s、USD 费用与本地 party 标签', body: 'Canton Network 论坛（2026-09-24）：CCView 首页改版，以 MB/s 展示流量（团队称比 TPS 更能反映真实用量），并以 USD 计价费用；购买流量与消耗分开显示，避免自动充值被误读为用量。费用与已发奖励并列，便于一眼看补贴与覆盖；CC 价格下方展示 BME，上方为溢价。用户还可在浏览器本地为 party 打标签，标签在浏览器与 CC Trace 中跟随该 party。', url: 'https://forum.canton.network/t/ccview-update-traffic-fees-and-labeling-features/9217' },
