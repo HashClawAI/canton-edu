@@ -327,6 +327,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-02',
+          tag: 'Institutions',
+          title: 'Lloyds and Visa settle $750,000 in live USDC cross-border pilot using Canton node',
+          body: 'The Block (October 1, 2026): Lloyds Banking Group and Visa completed a seven-day live pilot settling $750,000 of payment obligations with USDC—the first stablecoin settlement trial between Visa and a major UK banking group, Lloyds said. Lloyds purchased USDC through UK-regulated exchange Archax, booked the volume through its Corporate Markets branch in Jersey, and transferred settlement funds to Visa in the United States. Funds reached Visa in under an hour, including over a weekend, while traditional cross-border settlement can take a day or more outside banking hours. The test covered inter-institution settlement rather than retail customer payments. Lloyds operated its own node on Canton Network, using configurable privacy features, while Visa supported settlement on a separate public blockchain—highlighting cross-network interoperability alongside Visa’s broader multi-chain stablecoin settlement program.',
+          url: 'https://www.theblock.co/news/business/2026-10-01-lloyds-visa-settle-750000-using-usdc-in-live-cross-border-pilot-417378',
+        },
+        {
+          date: '2026-10-02',
+          tag: 'Institutions',
+          title: 'SBI DigiTrust, NICE and DSRV test Japan–Korea stablecoin QR travel payments',
+          body: 'DigitalToday / SBI Group (October 1, 2026): SBI DigiTrust signed a tripartite MOU with South Korea’s NICE Information & Telecommunication and blockchain infrastructure firm DSRV on September 30 to verify stablecoin-based remittances and QR retail payments between Japan and South Korea, targeting completion by end-December 2026. The scenario focuses on Japanese tourists paying at NICE-affiliated merchants in Korea via QR codes, with work covering fund flows from Japanese users to Korean merchants, payment instructions, and system integration. NICE brings a merchant network spanning roughly 1.2 million outlets; DSRV leads technical design including node and RPC infrastructure. Partners have not named a stablecoin, blockchain, or commercial launch date—the exercise is feasibility testing, distinct from SBI’s separate Canton-based Project Musubi institutional settlement work with Nodeinfra announced in August.',
+          url: 'https://www.digitaltoday.co.kr/en/view/109620/dsrv-nice-information-telecommunication-sbi-test-korea-japan-stablecoin-payments',
+        },
+        {
+          date: '2026-10-02',
+          tag: 'Ecosystem',
+          title: 'CCView publishes September 2026 Canton Pulse network and tokenomics recap',
+          body: 'Canton Network Forum (October 2, 2026): CCView shared September’s Canton Pulse—a monthly recap of network activity, Canton Coin economics, and governance developments, with underlying metrics also available on CCView’s operational dashboard (traffic usage, burn-mint equilibrium, and related market data). The September 2026 report highlights roughly 35.0 million transactions, multiple CIP activations including CIP-0056 and CIP-0105 implementations, and several proposals moving through vote during the month. The forum post links the full written report at ccview.io/reports/september-2026 for readers who want month-over-month context on validators, featured apps, and tokenomics trends rather than day-by-day headlines alone.',
+          url: 'https://forum.canton.network/t/september-canton-pulse-network-token-governance-highlights/9263',
+        },
+        {
           date: '2026-10-01',
           tag: 'Technology',
           title: 'Titan launches its Canton testnet after opening its waitlist',
@@ -3832,6 +3853,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-02', tag: '机构', title: 'Lloyds 与 Visa 完成 75 万美元 USDC 跨境 live 试点，Lloyds 使用 Canton 节点', body: 'The Block（2026-10-01）：Lloyds Banking Group 与 Visa 完成为期七天的 live 试点，以 USDC 结算 75 万美元支付义务——Lloyds 称此为 Visa 与英国大型银行集团间首次稳定币结算试验。Lloyds 经英国受监管交易所 Archax 购买 USDC，通过泽西 Corporate Markets 分支记账并将结算资金转至美国 Visa；资金在一小时内到账（含周末），而传统跨境结算在非银行时段可能需一天以上。试点针对机构间结算而非零售客户支付。Lloyds 在 Canton Network 运行自有节点并采用可配置隐私能力，Visa 则在另一公链完成结算，展示跨网络互操作及 Visa 更广泛的多链稳定币结算计划背景。', url: 'https://www.theblock.co/news/business/2026-10-01-lloyds-visa-settle-750000-using-usdc-in-live-cross-border-pilot-417378' },
+        { date: '2026-10-02', tag: '机构', title: 'SBI DigiTrust 与 NICE、DSRV 测试日韩 stablecoin QR 旅行支付', body: 'DigitalToday / SBI Group（2026-10-01）：SBI DigiTrust 于 9 月 30 日与韩国 NICE Information & Telecommunication 及区块链基础设施公司 DSRV 签署三方 MOU，验证日韩 stablecoin 汇款与 QR 零售支付，目标 2026 年 12 月底前完成。场景聚焦日本旅客在韩国 NICE 商户扫码支付，工作涵盖资金从日本用户到韩国商户的流转、支付指令与各公司系统对接；NICE 覆盖约 120 万商户网络，DSRV 负责节点与 RPC 等技术设计。合作方尚未指定 stablecoin、区块链或商业上线日期——属可行性验证，与 SBI 8 月与 Nodeinfra 宣布的 Canton 机构结算项目 Project Musubi 为不同路线。', url: 'https://www.digitaltoday.co.kr/en/view/109620/dsrv-nice-information-telecommunication-sbi-test-korea-japan-stablecoin-payments' },
+        { date: '2026-10-02', tag: '生态', title: 'CCView 发布 2026 年 9 月 Canton Pulse 网络与代币经济月报', body: 'Canton Network Forum（2026-10-02）：CCView 分享 9 月 Canton Pulse——汇总当月网络活动、Canton Coin 经济与治理进展，相关指标亦可在 CCView 运营仪表盘实时查看（流量使用、burn-mint 均衡等）。9 月报告要点包括约 3500 万笔交易、多项 CIP 激活（含 CIP-0056、CIP-0105 等）及若干提案进入投票阶段。论坛帖链至 ccview.io/reports/september-2026 全文，供读者获取验证者、Featured App 与代币经济趋势的月度对比，而非仅依赖单日新闻标题。', url: 'https://forum.canton.network/t/september-canton-pulse-network-token-governance-highlights/9263' },
         { date: '2026-10-01', tag: '技术', title: 'Titan 在开放 waitlist 后上线 Canton 测试网', body: 'CantonNews（2026-10-01）：Titan 在 Canton 上线测试网，距 9 月 24 日开放 waitlist 约一周。用户可在测试环境体验其强调私有订单簿的永续合约交易应用；公告未给出 MainNet 上线日期、生产市场清单或参与奖励，当前仅为测试网发布而非 MainNet 交易开放。', url: 'https://cantonnews.org/titan-launches-its-canton-testnet-after-opening-its-waitlist' },
         { date: '2026-10-01', tag: '技术', title: 'Canton 开启 MainNet 迁移至 CantonBFT 的治理投票', body: 'CantonNews（2026-10-01）：Canton 超级验证者就 MainNet 迁移至 CantonBFT 投票，拟于 10 月 10 日 13:00 UTC 执行升级。10 月 1 日检查时提案六票赞成、零票反对，投票于 10 月 8 日 11:00 UTC 前截止；若通过，配置变更目标 10 月 9 日 11:00 UTC 生效，迁移本身于 10 月 10 日 13:00 UTC 进行——批准时间表不等于迁移已完成。新同步器将使用协议版本 35，并含 10 月 9 日拓扑冻结等准备步骤。', url: 'https://cantonnews.org/canton-opens-mainnet-vote-for-cantonbft-migration' },
         { date: '2026-10-01', tag: '机构', title: 'Yuval Rooz 在首尔强调机构实际采用是韩国数字资产机会核心', body: 'CantonNews（2026-10-01）：Digital Asset CEO Yuval Rooz 在首尔 RealFi X Asia（10 月 1 日）强调，机构是否把区块链用于日常业务比单纯监管清晰度或代币化规模更能衡量 adoption；他以日本为例说明规则先行后，大型银行与 JSCC 参与抵押管理才带动更多机构跟进。对韩国，他指出消费者已熟悉数字资产、金融科技与海外股票，若监管与机构参与同步推进 adoption 可能更快——属展望而非已宣布的韩国部署。他亦主张用资产实际流转与使用衡量进展，而非仅看代币化总量。', url: 'https://cantonnews.org/yuval-rooz-puts-institutional-use-at-the-centre-of-korea-s-digital-asset-opportunity' },
