@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-03',
+          tag: 'Markets',
+          title: 'Cantex passes $300 million in cumulative trading volume on Canton',
+          body: 'CantonNews (October 2, 2026): Cantex has reached $300 million in total trading volume on Canton, adding roughly $100 million since its $200 million milestone in August—a 50% step up in cumulative traded notional. Volume counts completed swaps over time and is separate from liquidity held in pools. The exchange uses pooled liquidity so users trade Canton assets without ceding custody, with both legs settling atomically and details visible only to entitled parties. Cantex Connect lets compatible wallets swap by sending a transfer that names the desired asset; filled swaps return proceeds to the same wallet, while unfilled transfers stay pending and can be cancelled. Connect supports 100+ pairs with typical completion in 10–15 seconds, giving wallet providers a path into Cantex without a bespoke integration.',
+          url: 'https://cantonnews.org/cantex-passes-300-million-in-trading-volume-on-canton',
+        },
+        {
+          date: '2026-10-03',
+          tag: 'Institutions',
+          title: 'Swap.monster joins DTCC Digital Assets Solutions Industry Working Group',
+          body: 'CantonNews / Swap.monster (October 2, 2026): Swap.monster—the institutional RFQ marketplace on Canton—has joined the Depository Trust & Clearing Corporation’s DTC Digital Assets Solutions Industry Working Group (IWG), a forum for dialogue and alignment around the DTCC Tokenization Service and evolving digital market infrastructure. The IWG lists more than 100 members across traditional finance and digital markets. Swap.monster uses request-for-quote rather than a public order book: institutions post orders, choose visible counterparties, compare quotes, and settle atomically on Canton. The platform is built by the team behind Node.monster, which operates validator infrastructure across 30+ networks including Canton.',
+          url: 'https://cantonnews.org/swap-monster-joins-the-dtc-digital-assets-solutions-industry-working-group',
+        },
+        {
+          date: '2026-10-03',
+          tag: 'Technology',
+          title: 'Primus Labs and HashCloak seek Canton Development Fund backing for private-data proofs',
+          body: 'CantonNews (October 2, 2026): Primus Labs and HashCloak have requested 1,303,500 CC from the Canton Development Fund for a 14-week project to verify facts drawn from private web data without exposing the underlying information. A Canton application would check a cryptographic proof instead of receiving raw data—supporting financial or identity checks where confidentiality must hold. HashCloak would build verification tooling; Primus would connect it to its existing proof-generation stack, with an example showing developers how to consume results on Canton. The teams previously collaborated on private-data verification for Aztec; this submission is a separate Canton funding request with its own milestones and open-source deliverables. The proposal remains open and is not yet approved; nothing is live on MainNet.',
+          url: 'https://cantonnews.org/primus-labs-and-hashcloak-seek-funding-for-private-data-verification-on-canton',
+        },
+        {
+          date: '2026-10-03',
+          tag: 'Technology',
+          title: 'Canal applies for Featured App status after controlled iSOL MainNet pilot',
+          body: 'CantonNews (October 2, 2026): Canal has applied for Canton Featured App status with iSOL—a SOL-backed asset—as its first working product. ICE Labs is building cross-network asset bridges; the application describes at least 14 days of controlled MainNet pilot covering SOL deposits, iSOL issuance, and redemption, with redemption complete only when underlying SOL reaches the destination wallet on Solana. Rocky wallet connectivity and related flows are listed as supported; broader commercial use is targeted for mid-to-late October 2026 subject to Featured App activation and partner readiness. Canal’s site still labels iSOL in development with demo reserve figures; approval and reward-integration testing remain outstanding. Future roadmap items such as cBNB and yield-bearing SOL products are separate and not established as available.',
+          url: 'https://cantonnews.org/canal-seeks-canton-featured-app-status-after-controlled-isol-pilot',
+        },
+        {
+          date: '2026-10-03',
+          tag: 'Markets',
+          title: 'CanTra seeks Featured App status for art-linked digital securities on Canton',
+          body: 'CantonNews (October 2, 2026): CanTra has applied for Featured App status ahead of a digital security linked to Francis Bacon’s Three Studies for Portrait of George Dyer (1963), with a planned minimum investment of €100 for eligible retail, professional, and qualified investors after KYC and eligibility review. CanTra operates as a tied agent of BaFin-regulated Black Manta Capital Partners within the ARTEX ecosystem covering origination, issuance, and secondary infrastructure. Canton is intended to host wallets, subscriptions, allocations, transfers, and settlement with private holdings and authorized oversight; future plans include CC-denominated purchases. The offering page lists October 8 as a tentative close while the Featured App application schedules security creation and transfer for October 29—dates remain plans, not confirmation of issuance. C7 and 7RIDGE support the request; approval is not confirmed.',
+          url: 'https://cantonnews.org/cantra-seeks-canton-featured-app-status-for-art-linked-securities',
+        },
+        {
           date: '2026-10-02',
           tag: 'Institutions',
           title: 'Lloyds and Visa settle $750,000 in live USDC cross-border pilot using Canton node',
@@ -3853,6 +3888,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-03', tag: '市场', title: 'Cantex 在 Canton 上累计成交量突破 3 亿美元', body: 'CantonNews（2026-10-02）：Cantex 在 Canton 上累计成交量达 3 亿美元，较 8 月 2 亿美元里程碑再增约 1 亿（名义增长 50%）。成交量为历史已完成 swap 名义额累计，与流动性池内托管资金分开统计。交易所通过池化流动性让用户在不交出 custody 的情况下交易 Canton 资产，双腿 atomic 结算且细节仅对有权方可见。Cantex Connect 允许兼容钱包通过指定目标资产的转账发起 swap：成交后资产回到同一钱包，未成交则保持 pending 可取消；支持 100+ 交易对，通常 10–15 秒完成，便于钱包方接入而无需单独集成。', url: 'https://cantonnews.org/cantex-passes-300-million-in-trading-volume-on-canton' },
+        { date: '2026-10-03', tag: '机构', title: 'Swap.monster 加入 DTCC 数字资产解决方案行业工作组（IWG）', body: 'CantonNews / Swap.monster（2026-10-02）：Canton 上的机构 RFQ 市场 Swap.monster 已加入 DTCC 的 DTC Digital Assets Solutions Industry Working Group（IWG），该论坛围绕 DTCC Tokenization Service 与数字市场基础设施演进开展对话与对齐。IWG 成员逾 100 家，覆盖传统金融与数字市场。Swap.monster 采用询价而非公开订单簿：机构发布订单、选择可见对手方、比较报价并在 Canton 上 atomic 结算；由在 30+ 网络（含 Canton）运营验证者基础设施的 Node.monster 团队构建。', url: 'https://cantonnews.org/swap-monster-joins-the-dtc-digital-assets-solutions-industry-working-group' },
+        { date: '2026-10-03', tag: '技术', title: 'Primus Labs 与 HashCloak 申请开发基金，建设私有网页数据的链上证明验证', body: 'CantonNews（2026-10-02）：Primus Labs 与 HashCloak 向 Canton Development Fund 申请 1,303,500 CC，用于 14 周项目：在不暴露原始网页数据的前提下，让 Canton 应用仅验证密码学证明——适用于需保密的金融或身份类检查。HashCloak 负责验证工具，Primus 对接其既有证明生成栈并交付可复用开源示例与文档。团队曾在 Aztec 隐私数据验证上合作；本次为独立 Canton 资助申请，尚未获批，MainNet 无上线功能。', url: 'https://cantonnews.org/primus-labs-and-hashcloak-seek-funding-for-private-data-verification-on-canton' },
+        { date: '2026-10-03', tag: '技术', title: 'Canal 在受控 iSOL MainNet 试点后申请 Featured App 状态', body: 'CantonNews（2026-10-02）：ICE Labs 旗下 Canal 以 SOL 背书资产 iSOL 为首个产品申请 Canton Featured App，申请描述至少 14 天受控 MainNet 试点（SOL 存入、iSOL 发行与赎回），赎回仅在底层 SOL 到达 Solana 侧目标钱包时完成。Rocky 钱包等集成已列入支持；更广泛商用目标为 2026 年 10 月中下旬，取决于 Featured App 激活与伙伴就绪。官网仍将 iSOL 标为开发中且储备为演示数据；奖励集成测试与批准均未确认。cBNB、SOL 生息等路线图产品为独立计划，不代表已可用。', url: 'https://cantonnews.org/canal-seeks-canton-featured-app-status-after-controlled-isol-pilot' },
+        { date: '2026-10-03', tag: '市场', title: 'CanTra 申请 Featured App，计划发行 Francis Bacon 三联画关联数字证券', body: 'CantonNews（2026-10-02）：CanTra 在 Francis Bacon《Three Studies for Portrait of George Dyer》（1963）关联数字证券发行前申请 Featured App，拟最低投资 100 欧元，面向经 KYC 与适格性评估的零售、专业及合格投资者。CanTra 作为 BaFin 监管 Black Manta Capital Partners 的 tied agent，隶属涵盖 origination、发行与二级市场的 ARTEX 生态；Canton 拟承载钱包、认购、分配、转让与结算，持仓对投资者私有、对授权方可审计，并规划未来以 CC 购买证券。发行页暂定 10 月 8 日截止、申请中拟 10 月 29 日创建并转移证券——均为计划非完成确认。C7 与 7RIDGE 支持申请，尚未批准。', url: 'https://cantonnews.org/cantra-seeks-canton-featured-app-status-for-art-linked-securities' },
         { date: '2026-10-02', tag: '机构', title: 'Lloyds 与 Visa 完成 75 万美元 USDC 跨境 live 试点，Lloyds 使用 Canton 节点', body: 'The Block（2026-10-01）：Lloyds Banking Group 与 Visa 完成为期七天的 live 试点，以 USDC 结算 75 万美元支付义务——Lloyds 称此为 Visa 与英国大型银行集团间首次稳定币结算试验。Lloyds 经英国受监管交易所 Archax 购买 USDC，通过泽西 Corporate Markets 分支记账并将结算资金转至美国 Visa；资金在一小时内到账（含周末），而传统跨境结算在非银行时段可能需一天以上。试点针对机构间结算而非零售客户支付。Lloyds 在 Canton Network 运行自有节点并采用可配置隐私能力，Visa 则在另一公链完成结算，展示跨网络互操作及 Visa 更广泛的多链稳定币结算计划背景。', url: 'https://www.theblock.co/news/business/2026-10-01-lloyds-visa-settle-750000-using-usdc-in-live-cross-border-pilot-417378' },
         { date: '2026-10-02', tag: '机构', title: 'SBI DigiTrust 与 NICE、DSRV 测试日韩 stablecoin QR 旅行支付', body: 'DigitalToday / SBI Group（2026-10-01）：SBI DigiTrust 于 9 月 30 日与韩国 NICE Information & Telecommunication 及区块链基础设施公司 DSRV 签署三方 MOU，验证日韩 stablecoin 汇款与 QR 零售支付，目标 2026 年 12 月底前完成。场景聚焦日本旅客在韩国 NICE 商户扫码支付，工作涵盖资金从日本用户到韩国商户的流转、支付指令与各公司系统对接；NICE 覆盖约 120 万商户网络，DSRV 负责节点与 RPC 等技术设计。合作方尚未指定 stablecoin、区块链或商业上线日期——属可行性验证，与 SBI 8 月与 Nodeinfra 宣布的 Canton 机构结算项目 Project Musubi 为不同路线。', url: 'https://www.digitaltoday.co.kr/en/view/109620/dsrv-nice-information-telecommunication-sbi-test-korea-japan-stablecoin-payments' },
         { date: '2026-10-02', tag: '生态', title: 'CCView 发布 2026 年 9 月 Canton Pulse 网络与代币经济月报', body: 'Canton Network Forum（2026-10-02）：CCView 分享 9 月 Canton Pulse——汇总当月网络活动、Canton Coin 经济与治理进展，相关指标亦可在 CCView 运营仪表盘实时查看（流量使用、burn-mint 均衡等）。9 月报告要点包括约 3500 万笔交易、多项 CIP 激活（含 CIP-0056、CIP-0105 等）及若干提案进入投票阶段。论坛帖链至 ccview.io/reports/september-2026 全文，供读者获取验证者、Featured App 与代币经济趋势的月度对比，而非仅依赖单日新闻标题。', url: 'https://forum.canton.network/t/september-canton-pulse-network-token-governance-highlights/9263' },
