@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-04',
+          tag: 'Institutions',
+          title: 'CantonNews maps what even a small DTC custody slice would mean on-chain',
+          body: 'CantonNews (October 4, 2026): With DTCC’s tokenization service entering commercial operation this month, an analysis uses DTC’s reported $114+ trillion in 2025 custody assets as a scale reference—not a forecast—and walks through illustrative shares (0.1%–5%) of that stock. The piece contrasts DTC’s custody total with Canton’s reported monthly transaction flow, notes DTCC’s initial eligible set (US Treasuries, Russell 1000 names, major-index ETFs) and dual-network launch on Canton and Hyperledger Besu, and cites July 15 production collateral workflows (including Citadel Securities tokenized Treasuries posted to CME via Fireblocks). It argues Canton fee burn tracks activity and traffic purchases rather than notional settled, so October adoption by IWG firms—not headline percentages—will test whether tokenization volume follows.',
+          url: 'https://cantonnews.org/what-a-slice-of-114-trillion-looks-like-on-chain',
+        },
+        {
+          date: '2026-10-04',
+          tag: 'Governance',
+          title: 'LSEG Super Validator hosted reward weight moves to MainNet implementation vote',
+          body: 'CantonNews (October 4, 2026): London Stock Exchange Group’s approved Super Validator program reached a separate on-chain implementation vote after MPC-Holding-Inc submitted an October 2 request to add LSEG’s hosted reward weight on MainNet. The proposal would raise MPCH’s weight to 55, assuming Marex’s implementation vote first lifts MPCH from 35 to 45 and then adds LSEG’s weight of 10; MPCH remained at 35 when checked October 4. Voting closes October 9 at 15:43 UTC with a target effective time of October 10 at 15:44 UTC. CIP-0124 was approved September 22—this vote implements the hosted arrangement rather than re-deciding program approval or confirming LSEG runs its own Super Validator; milestone rewards still require verified delivery and further Super Validator authorization.',
+          url: 'https://cantonnews.org/lseg-s-canton-super-validator-plan-moves-to-an-implementation-vote',
+        },
+        {
+          date: '2026-10-04',
+          tag: 'Governance',
+          title: 'Eight Canton apps clear Tokenomics review for Featured App status',
+          body: 'CantonNews (October 4, 2026): Meridiant, Rocky Wallet, Jubilee, Selay Wallet, Wintip, SyncVotes, Nocturnal Wallet, and BETH cleared Canton’s Tokenomics review following an October 2 decision and Featured App Accountability Committee recommendations—making them ready for Super Validator on-chain approval, not yet activated. Operators listed to bring applications to vote include the Canton Foundation (first six), MPCH (Nocturnal Wallet), and Five North (BETH). Featured App status still requires a separate Super Validator vote; the Tokenomics notice confirms committee approval only and is not an endorsement of products by the Foundation or other parties.',
+          url: 'https://cantonnews.org/eight-canton-apps-clear-tokenomics-review-for-featured-app-status',
+        },
+        {
+          date: '2026-10-04',
+          tag: 'Markets',
+          title: 'Edel targets next week for EDEL staking with Canton Coin rewards',
+          body: 'CantonNews (October 4, 2026): Edel’s October 3 update targets the following week for EDEL holders to stake tokens and earn Canton Coin, advancing a roadmap that on October 1 outlined CC yield, lower trading fees, and reward multipliers for stakers with tier details due later. The team frames Canton as both infrastructure and a revenue source, with staking intended to route part of that activity to holders. This remains a forward timetable—not confirmation staking is open—and neither post specifies an exact opening date, yield rate, or the network where EDEL must be staked; participation terms and an opening announcement are still required.',
+          url: 'https://cantonnews.org/edel-targets-next-week-for-edel-staking-with-cc-rewards',
+        },
+        {
           date: '2026-10-03',
           tag: 'Markets',
           title: 'Cantex passes $300 million in cumulative trading volume on Canton',
@@ -3888,6 +3916,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-04', tag: '机构', title: 'CantonNews 解读：DTC 托管规模下一小部分上链意味着什么', body: 'CantonNews（2026-10-04）：在 DTCC 代币化服务本月进入商业运营之际，一篇分析以 DTC 2025 年逾 114 万亿美元托管资产为量级参照（非预测），推演 0.1%–5% 等示意占比对应的规模，并对比 DTC 存量与 Canton 月度交易流量口径差异。文章回顾 DTCC 初期合格资产（美债、Russell 1000、主要指数 ETF）及 Canton 与 Hyperledger Besu 双链启动，引用 7 月 15 日生产环境抵押流程（含 Fireblocks 记录的 Citadel Securities 代币化美债经 CME 抵押案例），并指出 Canton 费用 burn 更依赖交易活动与 traffic 购买而非结算名义额——10 月 IWG 成员从测试转向常规使用的情况将检验代币化体量是否跟进。', url: 'https://cantonnews.org/what-a-slice-of-114-trillion-looks-like-on-chain' },
+        { date: '2026-10-04', tag: '治理', title: 'LSEG 超级验证者托管 reward weight 进入 MainNet 实施投票', body: 'CantonNews（2026-10-04）：LSEG 已获批的超级验证者计划在 MPC-Holding-Inc 10 月 2 日提交请求后，进入单独的链上实施投票，拟在 MainNet 增加 LSEG 托管 reward weight。提案将把 MPCH 权重提至 55——前提是 Marex 实施票先将 MPCH 从 35 提至 45 再加 LSEG 权重 10；10 月 4 日检查时 MPCH 仍为 35。投票 10 月 9 日 15:43 UTC 截止，目标生效 10 月 10 日 15:44 UTC。CIP-0124 已于 9 月 22 日通过，本次为托管安排落地而非重新表决计划或确认 LSEG 自建超级验证者；里程碑奖励仍须交付验证与超级验证者进一步授权。', url: 'https://cantonnews.org/lseg-s-canton-super-validator-plan-moves-to-an-implementation-vote' },
+        { date: '2026-10-04', tag: '治理', title: '八款 Canton 应用通过 Tokenomics 审查，待 Featured App 链上批准', body: 'CantonNews（2026-10-04）：Meridiant、Rocky Wallet、Jubilee、Selay Wallet、Wintip、SyncVotes、Nocturnal Wallet 与 BETH 在 10 月 2 日决定及 Featured App Accountability Committee 建议下通过 Tokenomics 审查，具备进入超级验证者链上批准流程的条件，尚未激活。拟发起投票方包括 Canton Foundation（前六款）、MPCH（Nocturnal Wallet）与 Five North（BETH）。Featured App 状态仍需单独超级验证者投票；Tokenomics 通告仅确认委员会批准，不代表 Foundation 或其他方对产品背书。', url: 'https://cantonnews.org/eight-canton-apps-clear-tokenomics-review-for-featured-app-status' },
+        { date: '2026-10-04', tag: '市场', title: 'Edel 目标下周开放 EDEL 质押并发放 Canton Coin 奖励', body: 'CantonNews（2026-10-04）：Edel 10 月 3 日更新称目标在接下来一周让 EDEL 持有人质押并赚取 Canton Coin，推进 10 月 1 日已概述的 CC 收益、更低交易费与质押者奖励倍数路线（tier 细则仍待公布）。团队将 Canton 视为基础设施与收入来源，质押拟将部分活动收益导向持有人。仍为时间表而非确认已开放——未给出确切开放日、收益率或 EDEL 须质押的网络；参与条款与正式开放公告仍待发布。', url: 'https://cantonnews.org/edel-targets-next-week-for-edel-staking-with-cc-rewards' },
         { date: '2026-10-03', tag: '市场', title: 'Cantex 在 Canton 上累计成交量突破 3 亿美元', body: 'CantonNews（2026-10-02）：Cantex 在 Canton 上累计成交量达 3 亿美元，较 8 月 2 亿美元里程碑再增约 1 亿（名义增长 50%）。成交量为历史已完成 swap 名义额累计，与流动性池内托管资金分开统计。交易所通过池化流动性让用户在不交出 custody 的情况下交易 Canton 资产，双腿 atomic 结算且细节仅对有权方可见。Cantex Connect 允许兼容钱包通过指定目标资产的转账发起 swap：成交后资产回到同一钱包，未成交则保持 pending 可取消；支持 100+ 交易对，通常 10–15 秒完成，便于钱包方接入而无需单独集成。', url: 'https://cantonnews.org/cantex-passes-300-million-in-trading-volume-on-canton' },
         { date: '2026-10-03', tag: '机构', title: 'Swap.monster 加入 DTCC 数字资产解决方案行业工作组（IWG）', body: 'CantonNews / Swap.monster（2026-10-02）：Canton 上的机构 RFQ 市场 Swap.monster 已加入 DTCC 的 DTC Digital Assets Solutions Industry Working Group（IWG），该论坛围绕 DTCC Tokenization Service 与数字市场基础设施演进开展对话与对齐。IWG 成员逾 100 家，覆盖传统金融与数字市场。Swap.monster 采用询价而非公开订单簿：机构发布订单、选择可见对手方、比较报价并在 Canton 上 atomic 结算；由在 30+ 网络（含 Canton）运营验证者基础设施的 Node.monster 团队构建。', url: 'https://cantonnews.org/swap-monster-joins-the-dtc-digital-assets-solutions-industry-working-group' },
         { date: '2026-10-03', tag: '技术', title: 'Primus Labs 与 HashCloak 申请开发基金，建设私有网页数据的链上证明验证', body: 'CantonNews（2026-10-02）：Primus Labs 与 HashCloak 向 Canton Development Fund 申请 1,303,500 CC，用于 14 周项目：在不暴露原始网页数据的前提下，让 Canton 应用仅验证密码学证明——适用于需保密的金融或身份类检查。HashCloak 负责验证工具，Primus 对接其既有证明生成栈并交付可复用开源示例与文档。团队曾在 Aztec 隐私数据验证上合作；本次为独立 Canton 资助申请，尚未获批，MainNet 无上线功能。', url: 'https://cantonnews.org/primus-labs-and-hashcloak-seek-funding-for-private-data-verification-on-canton' },
