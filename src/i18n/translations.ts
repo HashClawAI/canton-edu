@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-12',
+          tag: 'Institutions',
+          title: 'Canton weekly recap: SoFi, LSEG, Ripple, and $7.5 trillion in repo',
+          body: 'CantonNews (October 12, 2026): A week-in-review from October 5–11 ties SoFi adding CC for retail customers to Marex and LSEG Super Validator hosted weights taking effect on MPCH (55 combined), Broadridge reporting $7.5 trillion in September repo on Canton, Development Fund payouts, validator batches, Featured App locks, AI wallet connectors, Cantex listings, and a draft to extend CC burn across all MainNet synchronizers. DTCC’s end-of-October tokenization launch and HackCanton judging deadlines sit on the watch list.',
+          url: 'https://cantonnews.org/canton-weekly-recap-sofi-lseg-ripple-and-7-5-trillion-in-repo',
+        },
+        {
+          date: '2026-10-12',
+          tag: 'Institutions',
+          title: 'Digital Asset named Gold Sponsor of DC Fintech Week 2026',
+          body: 'CantonNews (October 12, 2026): Digital Asset, developer of Canton Network, is a Gold Sponsor of DC Fintech Week 2026 in Washington, D.C., October 13–16, hosted by Fintech Thinks DC. The forum convenes government, industry, and technology leaders on digital assets, payments, and policy. The sponsorship puts Canton in front of rule-setters for tokenized markets; the announcement did not list Digital Asset speakers or sessions. Registration and agenda details are at dcfintechweek.org.',
+          url: 'https://cantonnews.org/digital-asset-named-gold-sponsor-of-dc-fintech-week-2026-as-canton-network-engages-washington',
+        },
+        {
+          date: '2026-10-12',
+          tag: 'Markets',
+          title: 'HANDL burns 23.48 million tokens as fee-linked program begins',
+          body: 'CantonNews (October 12, 2026): HANDL completed an October 10 burn of 23,479,410 $HANDL on Base, launching an Accelerated Burn Program that scales burns from net protocol fees—Q3 2026 fees of $39,915 at a $0.0034 reference price imply roughly 11.74 million tokens, doubled by an initial 200% multiplier with treasury support. Multipliers step down permanently as lifetime fee milestones are reached; the long-term plan targets funding burns with 50% of protocol fees. $HANDL also trades on Canton via bridge and HANDL/CC pairs on OneSwap, Cantex, and Tradecraft.',
+          url: 'https://cantonnews.org/handl-burns-23-48-million-tokens-as-fee-linked-program-begins',
+        },
+        {
+          date: '2026-10-12',
+          tag: 'Technology',
+          title: 'BitGo restores normal Canton service after upgrade maintenance',
+          body: 'CantonNews (October 12, 2026): BitGo closed its Canton maintenance notice on October 10 at 14:45 UTC after the network-wide Logical Synchronizer Upgrade for the planned CantonBFT migration—CantonBFT replaces CometBFT as the shared ordering layer. The window included a 24-hour configuration freeze from October 9–10 UTC during which new Canton wallets could not be initialised through BitGo while ordinary transfers were expected to continue, plus a brief transaction pause at migration. BitGo customers can treat the status page resolution as end of upgrade-related restrictions.',
+          url: 'https://cantonnews.org/bitgo-restores-normal-canton-service-after-upgrade-maintenance',
+        },
+        {
+          date: '2026-10-12',
+          tag: 'Institutions',
+          title: 'LSEG Canton Super Validator reward allocation takes effect',
+          body: 'CantonNews (October 12, 2026): London Stock Exchange Group\'s hosted Super Validator reward allocation is active after an October 10 network update added LSEG\'s weight of 10 through MPCH at 15:44 UTC—raising MPCH\'s combined MainNet reward weight from 45 to 55 under approved CIP-0124 following September 22 program approval and an October 2 implementation vote. Rewards accrue to Canton\'s unclaimed pool until LSEG proves milestones and Super Validators assign minting; missed deliverable deadlines can remove remaining associated weight.',
+          url: 'https://cantonnews.org/lseg-s-canton-super-validator-reward-allocation-takes-effect',
+        },
+        {
           date: '2026-10-10',
           tag: 'Ecosystem',
           title: 'CantonNews ecosystem roundup: lending beta, listings, AI wallets, and portfolio tools',
@@ -4387,6 +4422,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-12', tag: '机构', title: 'Canton 周报：SoFi、LSEG、Ripple 与 7.5 万亿美元回购', body: 'CantonNews（2026-10-12）：10 月 5–11 日综述串联 SoFi 向零售客户提供 CC、Marex 与 LSEG 托管 Super Validator 权重在 MPCH 生效（合计 55）、Broadridge 称 9 月 Canton 回购处理 7.5 万亿美元、Development Fund 拨付、验证者批次、Featured App 锁仓、AI 钱包连接器、Cantex 挂牌及将 CC 销毁扩展至全部 MainNet 同步器的草案等。文末列出 DTCC 10 月底代币化上线与 HackCanton 评审截止等待观察事项。', url: 'https://cantonnews.org/canton-weekly-recap-sofi-lseg-ripple-and-7-5-trillion-in-repo' },
+        { date: '2026-10-12', tag: '机构', title: 'Digital Asset 成为 DC Fintech Week 2026 金牌赞助商', body: 'CantonNews（2026-10-12）：Canton Network 开发方 Digital Asset 为 2026 年 10 月 13–16 日华盛顿特区 DC Fintech Week（Fintech Thinks DC 主办）金牌赞助商——论坛汇聚政府、产业与科技领袖讨论数字资产、支付与政策。赞助使 Canton 进入代币化市场规则制定者视野；公告未列 Digital Asset 具体演讲或场次，报名与议程见 dcfintechweek.org。', url: 'https://cantonnews.org/digital-asset-named-gold-sponsor-of-dc-fintech-week-2026-as-canton-network-engages-washington' },
+        { date: '2026-10-12', tag: '市场', title: 'HANDL 启动费用挂钩销毁计划，首轮销毁 2348 万枚', body: 'CantonNews（2026-10-12）：HANDL 于 10 月 10 日在 Base 销毁 23,479,410 枚 $HANDL，启动 Accelerated Burn Program——以 2026 年第三季度净协议费 39,915 美元、参考价 0.0034 美元估算约 1174 万枚，经初始 200% 倍数与金库支持翻倍至约 2348 万枚。随终身费用里程碑永久下调倍数；长期目标为用 50% 协议费资助销毁。$HANDL 亦经桥接在 Canton 交易，OneSwap、Cantex 与 Tradecraft 有 HANDL/CC 对。', url: 'https://cantonnews.org/handl-burns-23-48-million-tokens-as-fee-linked-program-begins' },
+        { date: '2026-10-12', tag: '技术', title: 'BitGo 在 CantonBFT 升级维护后恢复正常服务', body: 'CantonNews（2026-10-12）：BitGo 于 10 月 10 日 14:45 UTC 关闭 Canton 维护通知——此前因全网 Logical Synchronizer 升级（计划迁移至 CantonBFT，以 CantonBFT 替代 CometBFT 作为共享排序层）自 10 月 9 日开启。10 月 9–10 日 UTC 配置冻结期间 BitGo 无法初始化新 Canton 钱包，普通转账预期继续；迁移本身仅有短暂交易暂停。状态页已解决即表示升级相关限制结束。', url: 'https://cantonnews.org/bitgo-restores-normal-canton-service-after-upgrade-maintenance' },
+        { date: '2026-10-12', tag: '机构', title: 'LSEG Canton Super Validator 奖励分配在 MainNet 生效', body: 'CantonNews（2026-10-12）：伦敦证券交易所集团托管 Super Validator 奖励分配在 10 月 10 日 15:44 UTC 网络更新后生效——经 MPCH 增加 weight 10，MPCH 合计 MainNet 奖励权重由 45 升至 55（CIP-0124，9 月 22 日计划批准、10 月 2 日实施投票）。奖励先入未领取池，待 LSEG 证明里程碑并经 Super Validator 分配铸造；未按期交付可移除剩余关联权重。', url: 'https://cantonnews.org/lseg-s-canton-super-validator-reward-allocation-takes-effect' },
         { date: '2026-10-10', tag: '生态', title: 'CantonNews 生态综述：借贷测试、新挂牌、AI 钱包与组合工具', body: 'CantonNews（2026-10-10）：综述串联十五项近期应用层更新——含 Kintsu 在 testnet 的抵押借贷与策展金库私人测试、Edel 与 Modulo 挂牌、Canborsa 储蓄、Tradecraft 与 Unhedged 活动、CCTools 组合历史、Grofty、SoFi CC 入口、Nuxaris cBNB 路由、HANDL 与 FTP Tech 的 AI 钱包连接器及 Zenith testnet 警示等。部分已上线，其余仍邀请制或 MainNet 前阶段。文章索引既有 CantonNews 报道与社交帖，非单一新协议发布。', url: 'https://cantonnews.org/canton-s-ecosystem-update-new-markets-lending-and-ai-wallets' },
         { date: '2026-10-10', tag: '市场', title: 'Nuxaris 经 Cashen 锁仓 2500 万 CC，cBNB 申请 Featured App', body: 'CantonNews（2026-10-10）：Nuxaris 通过 Cashen 市场为 cBNB（BNB Chain 上 1:1 储备的 BNB 映射资产）锁仓 2500 万 CC，并申请 Featured App 以在 Nuxaris Trade 之外扩大交易。OneSwap 已有 CC/cBNB 池；Cantex 与 Cancore 已签挂牌协议，Tradecraft 确认挂牌计划取决于 Featured App 批准。奖励分成拟将净发行方奖励的 60–70% 给产生合格第三方转账与交易的场所，不含 Nuxaris 自有桥、钱包、发行与赎回流量。', url: 'https://cantonnews.org/nuxaris-locks-25-million-cc-as-cbnb-seeks-featured-app-status' },
         { date: '2026-10-10', tag: '治理', title: 'Canton Development Fund 批准 BitDynamics 120 万 CC 改进 Splice', body: 'CantonNews（2026-10-10）：BitDynamics 获 120 万 CC 批准，用于增强 Super Validator、验证者、钱包与应用共用的 Splice——含 Development Fund 奖励券转 CC 前可配置延迟、选定转账的交易成本监控、经标准 token 转账购买 traffic、简化数据访问、Super Validator onboarding 改进及 CC 销毁与未用 mint 额度支持。两笔各 60 万 CC 里程碑目标分别在批准后 2 与 6 个月交付；部分 grant 控制与监控代码已合并。同批公告调整 Daml Code Assistant 里程碑顺序，并将参考钱包外部安全审计排入最终里程碑。', url: 'https://cantonnews.org/canton-development-fund-approves-1-2-million-cc-for-bitdynamics' },
