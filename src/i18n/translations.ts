@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-13',
+          tag: 'Institutions',
+          title: 'DRW and Marex execute first OTC swap on Canton via Derivnex and tokenized iBoxx index',
+          body: 'CantonNews (October 13, 2026): DRW and Marex completed a total return swap on Derivnex referencing S&P Dow Jones Indices\' iBoxx USD Liquid Investment Grade Index—tokenized on Canton by Kaiko with official index values for valuation. Derivnex and Canton Network describe it as the first OTC swap on Canton and the first OTC derivative to reference a fully tokenized index on DLT; smart contracts carry CDM-modeled terms for lifecycle management. The announcement did not disclose notional, maturity, or margin terms; only the benchmark was tokenized—not underlying bonds—and on-chain cash or collateral settlement is described as future work.',
+          url: 'https://cantonnews.org/s-p-dow-jones-indices-and-kaiko-power-the-first-otc-swap-on-canton-executed-by-drw-and-marex',
+        },
+        {
+          date: '2026-10-13',
+          tag: 'Markets',
+          title: 'Cashen surpasses 500 million CC in live locking deals',
+          body: 'CantonNews (October 13, 2026): Cashen—the bilateral marketplace where Featured Apps and Super Validators source locked Canton Coin—reported more than 500 million CC in active locking deals, roughly $63.8 million at an on-chain CC price near $0.1275. That is up from 215 million CC at end-June launch and about 330 million on September 8; the platform added roughly 170 million CC in the five weeks after September 8. Cashen cites 75+ institutions onboarded, about 1.26% of circulating CC committed, and a 5.07% average deal APR for suppliers.',
+          url: 'https://cantonnews.org/cashen-passes-500-million-locked-canton-coin-worth-over-60-million',
+        },
+        {
+          date: '2026-10-13',
+          tag: 'Markets',
+          title: 'CertiK Skynet ranks Canton first in Q3 2026 network fee comparison',
+          body: 'CantonNews (October 13, 2026): CertiK Skynet\'s latest blockchain fee comparison places Canton first among tracked networks with more than $155 million in recorded fees during Q3 2026 and a median daily fee total of $1.71 million across July–September. The article separates Skynet\'s fee methodology from Splice burn-and-mint rewards data on CantonNews dashboards and notes Skynet\'s figures reflect on-chain fee activity rather than headline CC price or market cap.',
+          url: 'https://cantonnews.org/canton-s-q3-fees-top-155-million-in-certik-s-comparison',
+        },
+        {
+          date: '2026-10-13',
+          tag: 'Technology',
+          title: 'Fairmint and Blockworks seek 2.4 million CC for shared Canton asset data feed',
+          body: 'CantonNews (October 13, 2026): Fairmint and Blockworks applied to the Canton Development Fund for 2.4 million CC to deliver a shared Canton Asset Data Feed covering Fairmint private-company equity and a second publisher\'s asset class, with Blockworks required to use both feeds in production for milestone acceptance. The request opened October 12 and is pending approval, with four months\' delivery and twelve months\' maintenance in the proposed scope.',
+          url: 'https://cantonnews.org/fairmint-and-blockworks-seek-2-4-million-cc-for-shared-canton-asset-data',
+        },
+        {
+          date: '2026-10-13',
+          tag: 'Ecosystem',
+          title: 'Canton daily: Canborsa DevNet lending prototype, Alpend October 20 deadline, Splice 0.9.1 on DevNet',
+          body: 'CantonNews (October 13, 2026): A six-item digest highlights Alpend\'s October 20 deadline for migrations and Ascent I claims; Canborsa\'s HackCanton lending prototype on DevNet (USDCx lenders, CC or CBTC collateral via Loop Wallet—not MainNet); CC Space\'s renewed Featured App application; Splice 0.9.1 clearing DevNet Super Validator upgrades; Unhedged adding Bahasa Indonesia; and CCTools listing 500+ ecosystem entries.',
+          url: 'https://cantonnews.org/canton-today-alpend-s-deadline-canborsa-lending-and-four-more-updates',
+        },
+        {
           date: '2026-10-12',
           tag: 'Institutions',
           title: 'Canton weekly recap: SoFi, LSEG, Ripple, and $7.5 trillion in repo',
@@ -4422,6 +4457,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-13', tag: '机构', title: 'DRW 与 Marex 经 Derivnex 在 Canton 完成首笔 OTC 互换，参照 Kaiko 代币化 iBoxx 指数', body: 'CantonNews（2026-10-13）：DRW 与 Marex 在 Derivnex 上完成总收益互换，参照 S&P Dow Jones Indices 的 iBoxx USD Liquid Investment Grade Index——由 Kaiko 在 Canton 上代币化并提供官方指数值用于估值。Derivnex 与 Canton Network 称其为 Canton 上首笔 OTC 互换及首笔参照完全代币化指数的 OTC 衍生品；智能合约以 CDM 建模条款承载全生命周期管理。公告未披露名义规模、期限或保证金条款；仅基准被代币化而非指数内债券，链上现金或抵押品结算仍属后续功能。', url: 'https://cantonnews.org/s-p-dow-jones-indices-and-kaiko-power-the-first-otc-swap-on-canton-executed-by-drw-and-marex' },
+        { date: '2026-10-13', tag: '市场', title: 'Cashen 活跃锁仓 CC 突破 5 亿枚', body: 'CantonNews（2026-10-13）：Cashen——Featured App 与 Super Validator 采购锁仓 CC 的双边市场——称活跃锁仓协议中 CC 超 5 亿枚，按约 0.1275 美元链上 CC 价格约合 6380 万美元。较 6 月底上线时的 2.15 亿枚与 9 月 8 日约 3.3 亿枚显著增长；9 月 8 日后五周内新增约 1.7 亿枚 CC。Cashen 称已接入 75+ 机构、约占流通 CC 1.26%，供应商平均协议年化约 5.07%。', url: 'https://cantonnews.org/cashen-passes-500-million-locked-canton-coin-worth-over-60-million' },
+        { date: '2026-10-13', tag: '市场', title: 'CertiK Skynet 比较中 Canton Q3 2026 网络费用居首', body: 'CantonNews（2026-10-13）：CertiK Skynet 最新区块链费用比较将 Canton 列在跟踪网络首位——2026 年第三季度记录费用超 1.55 亿美元，7–9 月中位日费用约 171 万美元。文章区分 Skynet 费用口径与 CantonNews 仪表盘上的 Splice 销毁/铸造奖励数据，并说明 Skynet 数字反映链上费用活动而非 CC  headline 价格或市值。', url: 'https://cantonnews.org/canton-s-q3-fees-top-155-million-in-certik-s-comparison' },
+        { date: '2026-10-13', tag: '技术', title: 'Fairmint 与 Blockworks 申请 240 万 CC 共建 Canton 资产数据 feed', body: 'CantonNews（2026-10-13）：Fairmint 与 Blockworks 向 Canton Development Fund 申请 240 万 CC，交付共享 Canton Asset Data Feed——覆盖 Fairmint 私营公司股权及第二发布方资产类别；Blockworks 须在产环境同时使用两条 feed 方算里程碑验收。申请于 10 月 12 日开启、待批准，拟议范围含四个月交付与十二个月维护。', url: 'https://cantonnews.org/fairmint-and-blockworks-seek-2-4-million-cc-for-shared-canton-asset-data' },
+        { date: '2026-10-13', tag: '生态', title: 'Canton 日报：Canborsa DevNet 借贷原型、Alpend 10 月 20 日截止、DevNet 部署 Splice 0.9.1', body: 'CantonNews（2026-10-13）：六条摘要包括 Alpend 10 月 20 日迁移与 Ascent I 申领截止；Canborsa 在 HackCanton 于 DevNet 测试借贷原型（USDCx 出借、CC 或 CBTC 抵押经 Loop Wallet——非 MainNet）；CC Space 更新 Featured App 申请；Splice 0.9.1 完成 DevNet Super Validator 升级门槛；Unhedged 新增印尼语；CCTools 目录收录 500+ 生态条目。', url: 'https://cantonnews.org/canton-today-alpend-s-deadline-canborsa-lending-and-four-more-updates' },
         { date: '2026-10-12', tag: '机构', title: 'Canton 周报：SoFi、LSEG、Ripple 与 7.5 万亿美元回购', body: 'CantonNews（2026-10-12）：10 月 5–11 日综述串联 SoFi 向零售客户提供 CC、Marex 与 LSEG 托管 Super Validator 权重在 MPCH 生效（合计 55）、Broadridge 称 9 月 Canton 回购处理 7.5 万亿美元、Development Fund 拨付、验证者批次、Featured App 锁仓、AI 钱包连接器、Cantex 挂牌及将 CC 销毁扩展至全部 MainNet 同步器的草案等。文末列出 DTCC 10 月底代币化上线与 HackCanton 评审截止等待观察事项。', url: 'https://cantonnews.org/canton-weekly-recap-sofi-lseg-ripple-and-7-5-trillion-in-repo' },
         { date: '2026-10-12', tag: '机构', title: 'Digital Asset 成为 DC Fintech Week 2026 金牌赞助商', body: 'CantonNews（2026-10-12）：Canton Network 开发方 Digital Asset 为 2026 年 10 月 13–16 日华盛顿特区 DC Fintech Week（Fintech Thinks DC 主办）金牌赞助商——论坛汇聚政府、产业与科技领袖讨论数字资产、支付与政策。赞助使 Canton 进入代币化市场规则制定者视野；公告未列 Digital Asset 具体演讲或场次，报名与议程见 dcfintechweek.org。', url: 'https://cantonnews.org/digital-asset-named-gold-sponsor-of-dc-fintech-week-2026-as-canton-network-engages-washington' },
         { date: '2026-10-12', tag: '市场', title: 'HANDL 启动费用挂钩销毁计划，首轮销毁 2348 万枚', body: 'CantonNews（2026-10-12）：HANDL 于 10 月 10 日在 Base 销毁 23,479,410 枚 $HANDL，启动 Accelerated Burn Program——以 2026 年第三季度净协议费 39,915 美元、参考价 0.0034 美元估算约 1174 万枚，经初始 200% 倍数与金库支持翻倍至约 2348 万枚。随终身费用里程碑永久下调倍数；长期目标为用 50% 协议费资助销毁。$HANDL 亦经桥接在 Canton 交易，OneSwap、Cantex 与 Tradecraft 有 HANDL/CC 对。', url: 'https://cantonnews.org/handl-burns-23-48-million-tokens-as-fee-linked-program-begins' },
