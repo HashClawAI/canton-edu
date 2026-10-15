@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-14',
+          tag: 'Tokenization',
+          title: 'Hecto launches Neoprime token for pre-IPO exposure on Canton',
+          body: 'CantonNews (October 14, 2026): Hecto introduced Neoprime ($NEOPRIME), a Canton token designed to give holders exposure to a basket of private companies in defence, advanced manufacturing, robotics, and related finance—names cited on the Canton Forum include Anduril, Shield AI, Prometheus, Figure AI, and Erebor Bank. Cantex plans to list the asset; HECTO already trades there. The product extends Hecto\'s August roadmap beyond Predictions V2 and Vaults toward themed share-backed baskets; product terms govern economic exposure and eligibility rather than direct equity rights in each company.',
+          url: 'https://cantonnews.org/hecto-introduces-neoprime-for-pre-ipo-exposure-on-canton',
+        },
+        {
+          date: '2026-10-14',
+          tag: 'Institutions',
+          title: 'Canton daily: Meritz tokenization agreement, Zebec C8 wallet, SBC Featured Asset bid',
+          body: 'CantonNews (October 14, 2026): An eleven-item digest from October 13–14 highlights Meritz Securities signing with the Canton Foundation to explore tokenizing Korean financial assets; Zebec integrating Cantor8\'s C8 Enterprise Wallet with payroll and payments; Stable Coin Company seeking Featured Asset status for Brale-issued SBC; new MainNet validator allocations (Canborsa, Bron Foundation, ChainHub, Prometheum among 24 distinct names); Splice 0.8.4 ready for MainNet and 0.9.0 for TestNet; plus Canborsa Trading Arena payouts, Unhedged\'s preview of AI compute markets, dAppBooster in the HackCanton Starter Pack, and Universal Burn authors clarifying dedicated-synchronizer fee visibility. Cashen\'s 500 million CC lock and the DRW–Marex Derivnex swap were covered in separate October 13 articles.',
+          url: 'https://cantonnews.org/canton-today-meritz-s-tokenization-plans-zebec-s-wallet-move-and-nine-more-updates',
+        },
+        {
           date: '2026-10-13',
           tag: 'Institutions',
           title: 'DRW and Marex execute first OTC swap on Canton via Derivnex and tokenized iBoxx index',
@@ -4457,6 +4471,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-14', tag: '代币化', title: 'Hecto 在 Canton 推出 Neoprime，面向 pre-IPO 敞口', body: 'CantonNews（2026-10-14）：Hecto 发布 Neoprime（$NEOPRIME）——Canton 代币，旨在让持有者获得一篮子未上市私营公司敞口，聚焦国防、先进制造、机器人及相关金融；Canton Forum 介绍中提及 Anduril、Shield AI、Prometheus、Figure AI 与 Erebor Bank 等名称。Cantex 计划挂牌，HECTO 已在该所交易。产品延续 Hecto 8 月路线（Predictions V2、Vaults 之外的主题化股份支持篮子）；经济敞口与合格性由产品条款决定，不等同于各公司直接股权。', url: 'https://cantonnews.org/hecto-introduces-neoprime-for-pre-ipo-exposure-on-canton' },
+        { date: '2026-10-14', tag: '机构', title: 'Canton 日报：Meritz 代币化协议、Zebec 接入 C8 钱包、SBC 申请 Featured Asset', body: 'CantonNews（2026-10-14）：10 月 13–14 日十一条摘要包括 Meritz Securities 与 Canton Foundation 签约探索韩国金融资产代币化；Zebec 将 Cantor8 C8 Enterprise Wallet 接入薪酬与支付；Stable Coin Company 为 Brale 发行的 SBC 申请 Featured Asset；新一批 MainNet 验证者分配（Canborsa、Bron Foundation、ChainHub、Prometheum 等 24 个不同机构名）；Splice 0.8.4 就绪 MainNet、0.9.0 就绪 TestNet；以及 Canborsa Trading Arena 发放、Unhedged 预览 AI 算力市场、dAppBooster 纳入 HackCanton Starter Pack、Universal Burn 作者澄清专用同步器费用可见性等。Cashen 5 亿 CC 锁仓与 DRW–Marex Derivnex 互换已在 10 月 13 日单独报道中覆盖。', url: 'https://cantonnews.org/canton-today-meritz-s-tokenization-plans-zebec-s-wallet-move-and-nine-more-updates' },
         { date: '2026-10-13', tag: '机构', title: 'DRW 与 Marex 经 Derivnex 在 Canton 完成首笔 OTC 互换，参照 Kaiko 代币化 iBoxx 指数', body: 'CantonNews（2026-10-13）：DRW 与 Marex 在 Derivnex 上完成总收益互换，参照 S&P Dow Jones Indices 的 iBoxx USD Liquid Investment Grade Index——由 Kaiko 在 Canton 上代币化并提供官方指数值用于估值。Derivnex 与 Canton Network 称其为 Canton 上首笔 OTC 互换及首笔参照完全代币化指数的 OTC 衍生品；智能合约以 CDM 建模条款承载全生命周期管理。公告未披露名义规模、期限或保证金条款；仅基准被代币化而非指数内债券，链上现金或抵押品结算仍属后续功能。', url: 'https://cantonnews.org/s-p-dow-jones-indices-and-kaiko-power-the-first-otc-swap-on-canton-executed-by-drw-and-marex' },
         { date: '2026-10-13', tag: '市场', title: 'Cashen 活跃锁仓 CC 突破 5 亿枚', body: 'CantonNews（2026-10-13）：Cashen——Featured App 与 Super Validator 采购锁仓 CC 的双边市场——称活跃锁仓协议中 CC 超 5 亿枚，按约 0.1275 美元链上 CC 价格约合 6380 万美元。较 6 月底上线时的 2.15 亿枚与 9 月 8 日约 3.3 亿枚显著增长；9 月 8 日后五周内新增约 1.7 亿枚 CC。Cashen 称已接入 75+ 机构、约占流通 CC 1.26%，供应商平均协议年化约 5.07%。', url: 'https://cantonnews.org/cashen-passes-500-million-locked-canton-coin-worth-over-60-million' },
         { date: '2026-10-13', tag: '市场', title: 'CertiK Skynet 比较中 Canton Q3 2026 网络费用居首', body: 'CantonNews（2026-10-13）：CertiK Skynet 最新区块链费用比较将 Canton 列在跟踪网络首位——2026 年第三季度记录费用超 1.55 亿美元，7–9 月中位日费用约 171 万美元。文章区分 Skynet 费用口径与 CantonNews 仪表盘上的 Splice 销毁/铸造奖励数据，并说明 Skynet 数字反映链上费用活动而非 CC  headline 价格或市值。', url: 'https://cantonnews.org/canton-s-q3-fees-top-155-million-in-certik-s-comparison' },
