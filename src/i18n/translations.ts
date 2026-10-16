@@ -327,6 +327,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-15',
+          tag: 'Institutions',
+          title: 'Circle validator application outlines native USDC issuance on Canton',
+          body: 'CantonNews (October 15, 2026): Circle Internet Group\'s pending validator application describes plans to issue native USDC on Canton alongside existing xReserve-backed USDCx (live since December 2025). Native USDC would be Circle-issued and reserve-backed directly, unlike USDCx created when USDC is locked in xReserve on Ethereum. An October 14 batch notice gives participants until October 21, 2026 to object—otherwise applications are implicitly approved; that deadline governs validator review, not a USDC launch date. Cancore already routes USDCx to Ethereum USDC; Kraken and Kora use USDCx today. Wallet, exchange, and app support would determine when institutions can settle in native USDC on Canton.',
+          url: 'https://cantonnews.org/circle-s-validator-application-sets-out-native-usdc-plans-for-canton',
+        },
+        {
+          date: '2026-10-15',
+          tag: 'Ecosystem',
+          title: 'Canton daily: Alpend October 20 deadline, Kora $150M volume, HackCanton S4',
+          body: 'CantonNews (October 15, 2026): An eight-item digest from October 14–15 reminds Alpend users to migrate pre-upgrade positions and claim Ascent I rewards by October 20 (independent actions; unclaimed rewards forfeit after the deadline). Alpend CC, USDCx, and CBTC markets joined DeFiLlama\'s Canton yield dashboard for supply-rate comparisons. Kora v2 reported more than $150 million cumulative volume and 2,500+ traders; Cancore passed 125,000 lifetime trades. Neoprime\'s first completed investment is Erebor (BVI debenture structure, not direct equity). Isolate Markets cleared validator review; CCPedia launched a Dev Fund Navigator; HackCanton Season 4 registration opened; ZeroVaultID tested compliance clearance signing on MainNet with AWS KMS.',
+          url: 'https://cantonnews.org/canton-today-alpend-s-october-20-deadline-kora-s-150-million-milestone-and-six-more-updates',
+        },
+        {
+          date: '2026-10-15',
+          tag: 'Technology',
+          title: 'Canton 3.6.2 patch speeds Ledger API offset lookups for ACS commitments',
+          body: 'Canton Network docs (October 15, 2026): Canton 3.6.2 fixes a slow Ledger API query in 3.6.1 that could time out SQL and stall ACS commitment-processor initialization—especially for Super Validators and high-volume validators. The server now resolves event sequential id ranges with two index lookups on lapi_update_meta instead of aggregating every row in the offset range, so large update streams initialize faster without changing API results. Compatible with protocol versions 34–36; no migration required.',
+          url: 'https://docs.canton.network/global-synchronizer/release-notes/canton-releases/3-6-2',
+        },
+        {
           date: '2026-10-14',
           tag: 'Tokenization',
           title: 'Hecto launches Neoprime token for pre-IPO exposure on Canton',
@@ -4471,6 +4492,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-15', tag: '机构', title: 'Circle 验证者申请披露 Canton 原生 USDC 发行计划', body: 'CantonNews（2026-10-15）：Circle Internet Group 待批验证者申请描述在 Canton 发行原生 USDC 的计划，与现有 xReserve 支持的 USDCx（2025 年 12 月上线）并存。原生 USDC 由 Circle 直接发行并以储备资产支持，不同于用户在以太坊 xReserve 锁定 USDC 后在 Canton 铸造的 USDCx。10 月 14 日批次通知称参与者可在 2026 年 10 月 21 日前提出异议，否则申请默许通过——该截止针对验证者审查，非 USDC 上线日。Cancore 已提供 USDCx 与以太坊 USDC 互换；Kraken 与 Kora 已使用 USDCx。钱包、交易所与应用是否支持将决定机构何时能在 Canton 以原生 USDC 结算。', url: 'https://cantonnews.org/circle-s-validator-application-sets-out-native-usdc-plans-for-canton' },
+        { date: '2026-10-15', tag: '生态', title: 'Canton 日报：Alpend 10 月 20 日截止、Kora 1.5 亿美元成交量、HackCanton S4', body: 'CantonNews（2026-10-15）：10 月 14–15 日八条摘要提醒 Alpend 用户须在 10 月 20 日前迁移升级前仓位并申领 Ascent I 奖励（两项独立操作，逾期未领奖励作废）。Alpend 的 CC、USDCx 与 CBTC 市场已列入 DeFiLlama Canton 收益仪表盘以便比较供应利率。Kora v2 称累计成交量超 1.5 亿美元、交易者 2500+；Cancore 终身成交超 12.5 万笔。Neoprime 首笔完成投资为 Erebor（英属维尔京群岛 debenture 结构，非直接股权）。Isolate Markets 通过验证者审查；CCPedia 上线 Dev Fund Navigator；HackCanton 第四季开放注册；ZeroVaultID 在 MainNet 以 AWS KMS 测试合规 clearance 签名。', url: 'https://cantonnews.org/canton-today-alpend-s-october-20-deadline-kora-s-150-million-milestone-and-six-more-updates' },
+        { date: '2026-10-15', tag: '技术', title: 'Canton 3.6.2 补丁优化 Ledger API 偏移查询，加速 ACS 承诺初始化', body: 'Canton Network 文档（2026-10-15）：Canton 3.6.2 修复 3.6.1 中可能导致 SQL 超时并拖慢 ACS commitment 处理器初始化的慢 Ledger API 查询——Super Validator 与高流量验证者尤易受影响。服务器现通过对 lapi_update_meta 的两次索引查找解析 event sequential id 范围，而非聚合偏移范围内每一行，使大型 update stream 更快完成初始化且 API 结果不变。兼容协议版本 34–36；无需迁移。', url: 'https://docs.canton.network/global-synchronizer/release-notes/canton-releases/3-6-2' },
         { date: '2026-10-14', tag: '代币化', title: 'Hecto 在 Canton 推出 Neoprime，面向 pre-IPO 敞口', body: 'CantonNews（2026-10-14）：Hecto 发布 Neoprime（$NEOPRIME）——Canton 代币，旨在让持有者获得一篮子未上市私营公司敞口，聚焦国防、先进制造、机器人及相关金融；Canton Forum 介绍中提及 Anduril、Shield AI、Prometheus、Figure AI 与 Erebor Bank 等名称。Cantex 计划挂牌，HECTO 已在该所交易。产品延续 Hecto 8 月路线（Predictions V2、Vaults 之外的主题化股份支持篮子）；经济敞口与合格性由产品条款决定，不等同于各公司直接股权。', url: 'https://cantonnews.org/hecto-introduces-neoprime-for-pre-ipo-exposure-on-canton' },
         { date: '2026-10-14', tag: '机构', title: 'Canton 日报：Meritz 代币化协议、Zebec 接入 C8 钱包、SBC 申请 Featured Asset', body: 'CantonNews（2026-10-14）：10 月 13–14 日十一条摘要包括 Meritz Securities 与 Canton Foundation 签约探索韩国金融资产代币化；Zebec 将 Cantor8 C8 Enterprise Wallet 接入薪酬与支付；Stable Coin Company 为 Brale 发行的 SBC 申请 Featured Asset；新一批 MainNet 验证者分配（Canborsa、Bron Foundation、ChainHub、Prometheum 等 24 个不同机构名）；Splice 0.8.4 就绪 MainNet、0.9.0 就绪 TestNet；以及 Canborsa Trading Arena 发放、Unhedged 预览 AI 算力市场、dAppBooster 纳入 HackCanton Starter Pack、Universal Burn 作者澄清专用同步器费用可见性等。Cashen 5 亿 CC 锁仓与 DRW–Marex Derivnex 互换已在 10 月 13 日单独报道中覆盖。', url: 'https://cantonnews.org/canton-today-meritz-s-tokenization-plans-zebec-s-wallet-move-and-nine-more-updates' },
         { date: '2026-10-13', tag: '机构', title: 'DRW 与 Marex 经 Derivnex 在 Canton 完成首笔 OTC 互换，参照 Kaiko 代币化 iBoxx 指数', body: 'CantonNews（2026-10-13）：DRW 与 Marex 在 Derivnex 上完成总收益互换，参照 S&P Dow Jones Indices 的 iBoxx USD Liquid Investment Grade Index——由 Kaiko 在 Canton 上代币化并提供官方指数值用于估值。Derivnex 与 Canton Network 称其为 Canton 上首笔 OTC 互换及首笔参照完全代币化指数的 OTC 衍生品；智能合约以 CDM 建模条款承载全生命周期管理。公告未披露名义规模、期限或保证金条款；仅基准被代币化而非指数内债券，链上现金或抵押品结算仍属后续功能。', url: 'https://cantonnews.org/s-p-dow-jones-indices-and-kaiko-power-the-first-otc-swap-on-canton-executed-by-drw-and-marex' },
