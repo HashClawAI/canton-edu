@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-16',
+          tag: 'Institutions',
+          title: 'DTCC overview: Canton live at tokenization launch with 25 securities and 2027 roadmap',
+          body: 'CantonNews (October 16, 2026): DTCC published a one-page Tokenization Service overview confirming Canton as one of two blockchains live at launch—the only public network, with CIP-56 tokens—alongside DTCC\'s private Besu (ERC-20). Launch remains targeted for October 2026, with Digital Asset CEO Yuval Rooz citing end-of-October timing. Day-one scope lists 25 securities across Russell 1000 names, ETFs, and Treasuries (~$30 trillion available to tokenize, 1:1 DTC backing), business-day conversions with a 15-minute target, and 24/7 peer-to-peer transfers between DTC-registered wallets on the same network. Treasury servicing and distributions start on-chain with fiat paid to traditional accounts. The 2027 roadmap adds Stellar and Circle\'s Arc, expanded eligibility, SSO and maker-checker controls, consolidated stock records, and on-chain netting with digital cash—subject to DTCC\'s SEC no-action letter.',
+          url: 'https://cantonnews.org/dtcc-details-its-tokenization-service-canton-live-at-launch-25-securities-and-a-2027-roadmap',
+        },
+        {
+          date: '2026-10-16',
+          tag: 'Ecosystem',
+          title: 'Canton daily: Canborsa $50M volume, Zenith ERC3643, 3,000-validator cap',
+          body: 'CantonNews (October 16, 2026): A nine-item digest from October 15–16 reports Canborsa passing $50 million cumulative perpetual volume with CC collateral across markets and its CC Collateral Competition rewards paid to top traders; Zenith joining the ERC3643 Association as it builds an Ethereum-compatible layer on Canton; Loop Wallet\'s October 15 migration deadline for Cantonloop users; engineering confirmation of a 3,000-validator ceiling and 100 nodes per week onboarding pace; five apps (Canborsa, OnRails cSOL, CanTra, Veridic, Hellomoon aSOL Bridge) cleared for Super Validator Featured App votes; Universal Burn submitted as CIP-0129; Canton 3.6.2 and Splice 0.9.2 releases; Peaceful Studio Canton .NET SDK 0.7.0 for Canton 3.6; and an October 21 Taipei lecture with Canton Foundation APAC institutional partnerships lead Teagan Buckley.',
+          url: 'https://cantonnews.org/canton-today-canborsa-s-50-million-milestone-zenith-s-standards-move-and-network-upgrades',
+        },
+        {
+          date: '2026-10-16',
+          tag: 'Markets',
+          title: 'USDXLR adds Alpend lending and OneSwap USDXLR/CC trading on Canton',
+          body: 'CantonNews (October 16, 2026): Excellar\'s USDXLR stablecoin gained two Canton integrations announced October 15—supply lending on Alpend with an advertised 10% bonus APY paid in CC atop variable borrow-driven interest, and a USDXLR/CC pair on OneSwap for single-transaction swaps. Excellar\'s transparency page showed ~329,667 tokens circulating with ~97.2% on Canton as of October 16. Alpend mainnet beta remains invitation-only with deposit caps and liquidity-dependent withdrawals; direct Excellar redemption stays limited to approved institutional accounts. The routes give holders on-network ways to earn or rotate into CC without first bridging through another dollar token.',
+          url: 'https://cantonnews.org/usdxlr-expands-stablecoin-lending-and-trading-on-canton',
+        },
+        {
+          date: '2026-10-16',
+          tag: 'Technology',
+          title: 'Cancore rolls out dedicated bot accounts for automated Canton trading',
+          body: 'CantonNews (October 16, 2026): Cancore introduced separate bot accounts so automated strategies trade from an isolated balance and private key rather than the owner\'s main wallet or assistant-approved one-off trades. Each owner can create up to five bots from a recovery-phrase Cancore wallet; bots pay their own CC fees, cannot trade with the owner or sibling bots, and share an hourly new-order limit with the owner. Wallet controls stop new activity (canceling open orders except in-flight trades) or withdraw funds back to the owner; compromised keys cannot be rotated. Access is rolling out—currently limited per Cancore\'s developer guide—with My bots appearing in settings when enabled.',
+          url: 'https://cantonnews.org/cancore-introduces-separate-bot-accounts-for-automated-trading-on-canton',
+        },
+        {
           date: '2026-10-15',
           tag: 'Institutions',
           title: 'Circle validator application outlines native USDC issuance on Canton',
@@ -4492,6 +4520,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-16', tag: '机构', title: 'DTCC 一页概览：代币化上线 Canton 与 Besu 双网、25 只证券与 2027 路线图', body: 'CantonNews（2026-10-16）：DTCC 发布 Tokenization Service 一页概览，确认上线时两条链可用——Canton 为唯一公链、代币采用 CIP-56；Besu 为 DTCC 私链（ERC-20）。商业上线仍指向 2026 年 10 月，Digital Asset CEO Yuval Rooz 提及 10 月底窗口。首日范围含 Russell 1000、ETF 与国债共 25 只可代币化证券（约 30 万亿美元可转换规模、1:1 DTC 背书）、工作日转换目标 15 分钟内完成，以及同链 DTC 注册钱包间 7×24 点对点转移。国债分派与到期从链上处理、法币仍入传统账户。2027 路线图拟增 Stellar 与 Circle Arc、扩大合格资产、SSO 与 maker-checker、合并账簿记录及链上轧差与数字现金——受 SEC no-action letter 约束。', url: 'https://cantonnews.org/dtcc-details-its-tokenization-service-canton-live-at-launch-25-securities-and-a-2027-roadmap' },
+        { date: '2026-10-16', tag: '生态', title: 'Canton 日报：Canborsa 5000 万永续成交量、Zenith 加入 ERC3643、验证者上限 3000', body: 'CantonNews（2026-10-16）：10 月 15–16 日九条摘要包括 Canborsa 累计永续成交超 5000 万美元、全市场支持 CC 抵押且 CC Collateral Competition 已向前十发放奖励；Zenith 加入 ERC3643 Association 并推进 Canton 上以太坊兼容层；Loop Wallet 对 Cantonloop 用户的 10 月 15 日迁移截止；工程确认验证者总量上限 3000、每周最多 onboarding 100 节点；Canborsa、OnRails cSOL、CanTra、Veridic、Hellomoon aSOL Bridge 五应用进入 Super Validator Featured App 链上投票；Universal Burn 以 CIP-0129 提交；Canton 3.6.2 与 Splice 0.9.2 发布；Peaceful Studio 推出面向 Canton 3.6 的 .NET SDK 0.7.0；以及 10 月 21 日台北政大与 Canton Foundation 亚太机构合作负责人 Teagan Buckley 的讲座。', url: 'https://cantonnews.org/canton-today-canborsa-s-50-million-milestone-zenith-s-standards-move-and-network-upgrades' },
+        { date: '2026-10-16', tag: '市场', title: 'USDXLR 在 Canton 接入 Alpend 借贷与 OneSwap USDXLR/CC 交易', body: 'CantonNews（2026-10-16）：Excellar 的 USDXLR 稳定币于 10 月 15 日新增两项 Canton 集成——在 Alpend 供应借贷并宣传 10% 年化 CC 奖励（叠加借款驱动的浮动利息），以及在 OneSwap 上线 USDXLR/CC 单笔 swap 交易对。Excellar 透明度页显示 10 月 16 日流通约 329,667 枚、约 97.2% 在 Canton。Alpend MainNet beta 仍邀请制并有存款上限，赎回依赖池流动性；直接向 Excellar 赎回仍限合格机构账户。新路径让持有者在网内赚取收益或换入 CC，而无需先经其他美元稳定币桥接。', url: 'https://cantonnews.org/usdxlr-expands-stablecoin-lending-and-trading-on-canton' },
+        { date: '2026-10-16', tag: '技术', title: 'Cancore 推出独立 bot 账户，用于 Canton 自动化交易', body: 'CantonNews（2026-10-16）：Cancore 发布独立 bot 账户，使自动化策略在隔离余额与私钥下交易，而非使用主钱包或助手逐笔审批。每位所有者最多可从带恢复短语的 Cancore 钱包创建五个 bot；bot 自行支付 CC 网络费，不可与所有者或其他 bot 对敲，并与所有者共享每小时新单上限。钱包可停止新单（取消未成交委托，进行中的除外）或将资金提回主钱包；私钥泄露后无法轮换。功能分阶段开放——当前按开发者指南限制访问——启用后 My bots 出现在设置中。', url: 'https://cantonnews.org/cancore-introduces-separate-bot-accounts-for-automated-trading-on-canton' },
         { date: '2026-10-15', tag: '机构', title: 'Circle 验证者申请披露 Canton 原生 USDC 发行计划', body: 'CantonNews（2026-10-15）：Circle Internet Group 待批验证者申请描述在 Canton 发行原生 USDC 的计划，与现有 xReserve 支持的 USDCx（2025 年 12 月上线）并存。原生 USDC 由 Circle 直接发行并以储备资产支持，不同于用户在以太坊 xReserve 锁定 USDC 后在 Canton 铸造的 USDCx。10 月 14 日批次通知称参与者可在 2026 年 10 月 21 日前提出异议，否则申请默许通过——该截止针对验证者审查，非 USDC 上线日。Cancore 已提供 USDCx 与以太坊 USDC 互换；Kraken 与 Kora 已使用 USDCx。钱包、交易所与应用是否支持将决定机构何时能在 Canton 以原生 USDC 结算。', url: 'https://cantonnews.org/circle-s-validator-application-sets-out-native-usdc-plans-for-canton' },
         { date: '2026-10-15', tag: '生态', title: 'Canton 日报：Alpend 10 月 20 日截止、Kora 1.5 亿美元成交量、HackCanton S4', body: 'CantonNews（2026-10-15）：10 月 14–15 日八条摘要提醒 Alpend 用户须在 10 月 20 日前迁移升级前仓位并申领 Ascent I 奖励（两项独立操作，逾期未领奖励作废）。Alpend 的 CC、USDCx 与 CBTC 市场已列入 DeFiLlama Canton 收益仪表盘以便比较供应利率。Kora v2 称累计成交量超 1.5 亿美元、交易者 2500+；Cancore 终身成交超 12.5 万笔。Neoprime 首笔完成投资为 Erebor（英属维尔京群岛 debenture 结构，非直接股权）。Isolate Markets 通过验证者审查；CCPedia 上线 Dev Fund Navigator；HackCanton 第四季开放注册；ZeroVaultID 在 MainNet 以 AWS KMS 测试合规 clearance 签名。', url: 'https://cantonnews.org/canton-today-alpend-s-october-20-deadline-kora-s-150-million-milestone-and-six-more-updates' },
         { date: '2026-10-15', tag: '技术', title: 'Canton 3.6.2 补丁优化 Ledger API 偏移查询，加速 ACS 承诺初始化', body: 'Canton Network 文档（2026-10-15）：Canton 3.6.2 修复 3.6.1 中可能导致 SQL 超时并拖慢 ACS commitment 处理器初始化的慢 Ledger API 查询——Super Validator 与高流量验证者尤易受影响。服务器现通过对 lapi_update_meta 的两次索引查找解析 event sequential id 范围，而非聚合偏移范围内每一行，使大型 update stream 更快完成初始化且 API 结果不变。兼容协议版本 34–36；无需迁移。', url: 'https://docs.canton.network/global-synchronizer/release-notes/canton-releases/3-6-2' },
