@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-17',
+          tag: 'Ecosystem',
+          title: 'Canton daily: Canborsa AI assistant, OneSwap fee refunds, SV voting-app fund vote',
+          body: 'CantonNews (October 17, 2026): Six updates from October 15–16 cover Canborsa expanding its in-app AI to answer prices, funding, orders, balances, positions, and P/L in 13 languages (typed or spoken, with trading via assistant still planned); OneSwap automatically refunding network fees on selected v2 swaps; Console Wallet 2.4.1 mobile WalletConnect improvements; a 21-day Development Fund vote on Digital Asset\'s 1 million CC request to build Super Validator delegation voting (one vote per node, separate ops from governance); Canton Strategic Holdings on MSCI\'s non-operating-company watchlist ahead of a November 11 list and November 30 methodology effective date (not a confirmed index removal); and ETF Opportunities Trust setting November 13 as the effective date for a registration amendment related to the proposed REX-Osprey Canton Coin ETF (registration timing, not SEC approval or launch).',
+          url: 'https://cantonnews.org/canton-today-canborsa-s-ai-update-a-governance-vote-and-a-november-watchlist',
+        },
+        {
+          date: '2026-10-17',
+          tag: 'Markets',
+          title: 'Temple hits $641M in 30-day DEX volume per CertiK snapshot',
+          body: 'CantonNews (October 17, 2026): CertiK\'s October 15 snapshot shows Temple\'s latest 30-day trading volume at $641 million versus $265 million in the prior 30 days—a 141.7% rise with Temple\'s share of Canton DEX volume at 57% (from 13%). That differs from Temple\'s September 30 cumulative $1 billion milestone. Since January\'s CC/USDCx launch, Temple added Lightspeed features, Ember eXAU/eXAG metals, a CBTC/eXAU pair, Virtual Orderbooks for institutions, and Lightspeed 2.0 capacity upgrades; volume growth reflects activity in the measured window, not guaranteed liquidity for any specific trade size.',
+          url: 'https://cantonnews.org/temple-reaches-641-million-in-30-day-trading-volume',
+        },
+        {
+          date: '2026-10-16',
+          tag: 'Analysis',
+          title: 'Canton Strategic Holdings Q3: 129 Featured Apps, lower TPS/fees, burn ratio 0.69',
+          body: 'CantonNews (October 16, 2026): Canton Strategic Holdings\' Q3 ecosystem review (through September 30) counts Featured Applications up from 107 to 129 while average activity fell from 26 to 15 TPS and Q3 fees were $157 million (down 18% from Q2). The burn-to-mint ratio rose from 0.65 to 0.69 (~69 CC burned per 100 minted). Trading venues led burns—Temple 609.4M CC, Cantor8 Digik/Cache 216.9M, Kora 112.1M. Six Super Validator program approvals included a16z crypto, LSEG, Marex, Paxos, Shinhan Asset Management, and TreasurySpring. Highlights cite DTCC July production tests, USDM1 sovereign-bond repo, MUFG JGB pilot, Broadridge DLX, CIP-0104 traffic-based rewards transition, and 62.2M CC Development Fund disbursements by August 24. CSH is a network participant holding CC and operating as a Super Validator.',
+          url: 'https://cantonnews.org/canton-s-q3-more-apps-lower-fee-totals-and-a-higher-burn-ratio',
+        },
+        {
+          date: '2026-10-16',
+          tag: 'Institutions',
+          title: 'Meritz Securities MOU with Canton Foundation targets Korean tokenization and collateral',
+          body: 'CantonNews (October 16, 2026): Meritz Securities signed an October 14 MOU with the Canton Foundation at Meritz headquarters in Seoul to explore tokenizing Korean financial assets, institutional privacy-enabled infrastructure, and cross-border uses including sovereign-grade debt and HQLA collateral movement between trading and clearing venues—exploration under the agreement, not launched services. The deal follows Shinhan Asset Management\'s September Super Validator approval (CIP-0121, first Korean financial institution in the role) and June–September coordination on Korean institutional access; Meritz\'s MOU and Shinhan\'s SV program are separate tracks.',
+          url: 'https://cantonnews.org/meritz-securities-and-canton-foundation-explore-tokenizing-korean-financial-assets',
+        },
+        {
           date: '2026-10-16',
           tag: 'Institutions',
           title: 'DTCC overview: Canton live at tokenization launch with 25 securities and 2027 roadmap',
@@ -4520,6 +4548,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-17', tag: '生态', title: 'Canton 日报：Canborsa AI 助手、OneSwap 费用退款、Super Validator 投票应用 Dev Fund 表决', body: 'CantonNews（2026-10-17）：10 月 15–16 日六条更新包括 Canborsa 应用内 AI 扩展至价格、资金费率、订单、余额、仓位与盈亏问答（支持 13 种语言、文字或语音；经助手下单仍规划中）；OneSwap 对选定 v2 swap 自动退还网络费；Console Wallet 2.4.1 移动端 WalletConnect 改进；Digital Asset 申请 100 万 CC 建设 Super Validator 委托投票应用的 21 日 Development Fund 表决（每节点一票、治理与运维分离）；Canton Strategic Holdings 进入 MSCI 非运营公司筛查 watchlist，11 月 11 日公布名单、11 月 30 日方法论生效（非确认剔除指数）；ETF Opportunities Trust 将 REX-Osprey Canton Coin ETF 相关注册修正案生效日定为 11 月 13 日（注册时间表，非 SEC 批准或上市）。', url: 'https://cantonnews.org/canton-today-canborsa-s-ai-update-a-governance-vote-and-a-november-watchlist' },
+        { date: '2026-10-17', tag: '市场', title: 'CertiK 快照：Temple 30 日 DEX 成交量达 6.41 亿美元', body: 'CantonNews（2026-10-17）：CertiK 10 月 15 日快照显示 Temple 最近 30 日成交量 6.41 亿美元，较前 30 日 2.65 亿美元增 141.7%，占 Canton DEX 成交量份额由 13% 升至 57%。该指标不同于 9 月 30 日累计 10 亿美元里程碑。自 1 月 CC/USDCx 上线以来，Temple 陆续推出 Lightspeed、Ember eXAU/eXAG 贵金属、CBTC/eXAU 交易对、面向机构的 Virtual Orderbooks 与 Lightspeed 2.0 容量升级；成交量反映统计窗口内活动，不保证任意规模交易的即时流动性。', url: 'https://cantonnews.org/temple-reaches-641-million-in-30-day-trading-volume' },
+        { date: '2026-10-16', tag: '分析', title: 'Canton Strategic Holdings Q3：129 个 Featured App、TPS/费用下降、销毁比 0.69', body: 'CantonNews（2026-10-16）：Canton Strategic Holdings 第三季度生态回顾（截至 9 月 30 日）显示 Featured Application 由 107 增至 129，平均活动由 26 TPS 降至 15 TPS，Q3 费用 1.57 亿美元（较 Q2 降 18%）。销毁/铸造比由 0.65 升至 0.69（约每铸造 100 CC 销毁 69 CC）。交易场所主导销毁——Temple 6.094 亿 CC、Cantor8 Digik/Cache 2.169 亿、Kora 1.121 亿。六项 Super Validator 计划批准含 a16z crypto、LSEG、Marex、Paxos、Shinhan Asset Management 与 TreasurySpring。亮点涵盖 DTCC 7 月生产测试、USDM1 主权债 repo、MUFG 日本国债试点、Broadridge DLX、CIP-0104 流量奖励过渡及 8 月 24 日前 Dev Fund 累计 6220 万 CC 拨付。CSH 为持有 CC 并运营 Super Validator 的网络参与方。', url: 'https://cantonnews.org/canton-s-q3-more-apps-lower-fee-totals-and-a-higher-burn-ratio' },
+        { date: '2026-10-16', tag: '机构', title: 'Meritz Securities 与 Canton Foundation 签 MOU，探索韩国代币化与抵押品', body: 'CantonNews（2026-10-16）：Meritz Securities 于 10 月 14 日在首尔总部与 Canton Foundation 签署 MOU，探索韩国金融资产代币化、机构隐私基础设施及跨境用途——含主权级债务与高流动性资产（HQLA）抵押在交易与清算场所间流转；属协议下探索，非已上线服务。此前 Shinhan Asset Management 于 9 月获 Super Validator 批准（CIP-0121，首家韩国金融机构），并与 6–9 月韩国机构接入协调相呼应；Meritz MOU 与 Shinhan SV 计划为并行路径。', url: 'https://cantonnews.org/meritz-securities-and-canton-foundation-explore-tokenizing-korean-financial-assets' },
         { date: '2026-10-16', tag: '机构', title: 'DTCC 一页概览：代币化上线 Canton 与 Besu 双网、25 只证券与 2027 路线图', body: 'CantonNews（2026-10-16）：DTCC 发布 Tokenization Service 一页概览，确认上线时两条链可用——Canton 为唯一公链、代币采用 CIP-56；Besu 为 DTCC 私链（ERC-20）。商业上线仍指向 2026 年 10 月，Digital Asset CEO Yuval Rooz 提及 10 月底窗口。首日范围含 Russell 1000、ETF 与国债共 25 只可代币化证券（约 30 万亿美元可转换规模、1:1 DTC 背书）、工作日转换目标 15 分钟内完成，以及同链 DTC 注册钱包间 7×24 点对点转移。国债分派与到期从链上处理、法币仍入传统账户。2027 路线图拟增 Stellar 与 Circle Arc、扩大合格资产、SSO 与 maker-checker、合并账簿记录及链上轧差与数字现金——受 SEC no-action letter 约束。', url: 'https://cantonnews.org/dtcc-details-its-tokenization-service-canton-live-at-launch-25-securities-and-a-2027-roadmap' },
         { date: '2026-10-16', tag: '生态', title: 'Canton 日报：Canborsa 5000 万永续成交量、Zenith 加入 ERC3643、验证者上限 3000', body: 'CantonNews（2026-10-16）：10 月 15–16 日九条摘要包括 Canborsa 累计永续成交超 5000 万美元、全市场支持 CC 抵押且 CC Collateral Competition 已向前十发放奖励；Zenith 加入 ERC3643 Association 并推进 Canton 上以太坊兼容层；Loop Wallet 对 Cantonloop 用户的 10 月 15 日迁移截止；工程确认验证者总量上限 3000、每周最多 onboarding 100 节点；Canborsa、OnRails cSOL、CanTra、Veridic、Hellomoon aSOL Bridge 五应用进入 Super Validator Featured App 链上投票；Universal Burn 以 CIP-0129 提交；Canton 3.6.2 与 Splice 0.9.2 发布；Peaceful Studio 推出面向 Canton 3.6 的 .NET SDK 0.7.0；以及 10 月 21 日台北政大与 Canton Foundation 亚太机构合作负责人 Teagan Buckley 的讲座。', url: 'https://cantonnews.org/canton-today-canborsa-s-50-million-milestone-zenith-s-standards-move-and-network-upgrades' },
         { date: '2026-10-16', tag: '市场', title: 'USDXLR 在 Canton 接入 Alpend 借贷与 OneSwap USDXLR/CC 交易', body: 'CantonNews（2026-10-16）：Excellar 的 USDXLR 稳定币于 10 月 15 日新增两项 Canton 集成——在 Alpend 供应借贷并宣传 10% 年化 CC 奖励（叠加借款驱动的浮动利息），以及在 OneSwap 上线 USDXLR/CC 单笔 swap 交易对。Excellar 透明度页显示 10 月 16 日流通约 329,667 枚、约 97.2% 在 Canton。Alpend MainNet beta 仍邀请制并有存款上限，赎回依赖池流动性；直接向 Excellar 赎回仍限合格机构账户。新路径让持有者在网内赚取收益或换入 CC，而无需先经其他美元稳定币桥接。', url: 'https://cantonnews.org/usdxlr-expands-stablecoin-lending-and-trading-on-canton' },
