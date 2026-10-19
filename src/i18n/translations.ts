@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-18',
+          tag: 'Ecosystem',
+          title: 'OnePump adds Citizen Cards and queue game ahead of Canton launchpad',
+          body: 'CantonNews (October 18, 2026): OnePump—the planned OneSwap memecoin launchpad still on a waitlist—expanded its pre-launch campaign on October 16 with personalised Citizen Cards (creature, name, and queue number; some legendary), referral rankings, daily Diamond rolls, and social quests. Top-100 waitlist participants are slated to receive Pumplands private-group invites plus three share codes each; top 10 may get physical rewards. Cards are campaign badges, not an announced tradable NFT line. The piece contrasts Robinhood Chain’s July 2026 memecoin-heavy DEX volume and Pump.fun’s multi-billion-dollar weekly activity with Canton’s institutional rails, arguing a fair launch could onboard retail users who then explore wallets, swaps, and other apps—while noting proof will come only after funded markets and repeat usage, not signup mechanics alone.',
+          url: 'https://cantonnews.org/onepump-s-citizen-cards-what-collectible-communities-could-bring-to-canton',
+        },
+        {
+          date: '2026-10-18',
+          tag: 'Governance',
+          title: 'Thirteen Development Fund proposals enter 21-day votes',
+          body: 'CantonNews (October 18, 2026): Thirteen Canton Development Fund requests opened 21-day funding votes on October 16, spanning shared vault standards, Privy wallet signing, validator traffic purchases, liquidity and supply oracles, ledger event streams, Merkle attestation, access controls, and accounting tooling. Passage needs at least 51% of eligible binding voters; other reactions are non-binding. Highlights include Mystic Finance\'s up-to-2 million CC vault-standard bid (Cashen endorsed October 16), Fairmint\'s 3.5 million CC Privy toolkit with more than half tied to verified MainNet integrations, and Finoa Consensus Services\' open-source traffic-purchase app. Several grants link payouts to adoption by other teams. CIP-0082 funds the pool from 5% of future CC issuance; September 2026–September 2027 targets 80% of budget to published RFPs.',
+          url: 'https://cantonnews.org/inside-canton-s-development-fund-as-13-proposals-go-to-a-vote',
+        },
+        {
           date: '2026-10-17',
           tag: 'Ecosystem',
           title: 'Canton daily: Canborsa AI assistant, OneSwap fee refunds, SV voting-app fund vote',
@@ -4548,6 +4562,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-18', tag: '生态', title: 'OnePump 候补推出 Citizen Cards 与排队玩法，为 Canton 发射台预热', body: 'CantonNews（2026-10-18）：OnePump——OneSwap 规划中的 memecoin 发射台，产品仍为候补状态——于 10 月 16 日扩展预热活动：个性化 Citizen Cards（生物形象、名称与排队序号，含部分传奇稀有度）、邀请排名、每日 Diamonds 抽取与社交任务。候补前 100 名拟获 Pumplands 私密社群邀请码及每人 3 个分享码；前 10 名或有实体奖励。卡片为活动徽章，非已宣布的可交易 NFT 系列。文章对照 Robinhood Chain 2026 年 7 月 memecoin 占 DEX 成交量比重与 Pump.fun 单周数十亿美元级活动，指出 Canton 机构基础设施下公平发射或能吸引零售用户学习钱包、swap 与其他应用——但需待上线后有资金市场与回访使用方可验证，而非仅看注册玩法。', url: 'https://cantonnews.org/onepump-s-citizen-cards-what-collectible-communities-could-bring-to-canton' },
+        { date: '2026-10-18', tag: '治理', title: '13 项 Canton Development Fund 提案进入 21 日表决', body: 'CantonNews（2026-10-18）：13 项 Canton Development Fund 申请于 10 月 16 日开启 21 日资助表决，涵盖共享 vault 标准、Privy 钱包签名、验证者 traffic 购买、流动性与供给验证 oracle、账本事件流、Merkle 证明侧车、访问控制与会计审计工具等。通过需获 eligible binding 选民至少 51% 赞成；其他社区表态不具约束力。亮点包括 Mystic Finance 最高 200 万 CC 的 vault 标准提案（Cashen 于 10 月 16 日背书）、Fairmint 350 万 CC Privy 工具包（超半数取决于经核验的 MainNet 集成），以及 Finoa Consensus Services 的开源 traffic 购买应用。多项资助将部分付款与第三方采用挂钩。CIP-0082 从未来 CC 发行中划拨 5% 入池；2026 年 9 月至 2027 年 9 月目标将预算 80% 投向已发布 RFP。', url: 'https://cantonnews.org/inside-canton-s-development-fund-as-13-proposals-go-to-a-vote' },
         { date: '2026-10-17', tag: '生态', title: 'Canton 日报：Canborsa AI 助手、OneSwap 费用退款、Super Validator 投票应用 Dev Fund 表决', body: 'CantonNews（2026-10-17）：10 月 15–16 日六条更新包括 Canborsa 应用内 AI 扩展至价格、资金费率、订单、余额、仓位与盈亏问答（支持 13 种语言、文字或语音；经助手下单仍规划中）；OneSwap 对选定 v2 swap 自动退还网络费；Console Wallet 2.4.1 移动端 WalletConnect 改进；Digital Asset 申请 100 万 CC 建设 Super Validator 委托投票应用的 21 日 Development Fund 表决（每节点一票、治理与运维分离）；Canton Strategic Holdings 进入 MSCI 非运营公司筛查 watchlist，11 月 11 日公布名单、11 月 30 日方法论生效（非确认剔除指数）；ETF Opportunities Trust 将 REX-Osprey Canton Coin ETF 相关注册修正案生效日定为 11 月 13 日（注册时间表，非 SEC 批准或上市）。', url: 'https://cantonnews.org/canton-today-canborsa-s-ai-update-a-governance-vote-and-a-november-watchlist' },
         { date: '2026-10-17', tag: '市场', title: 'CertiK 快照：Temple 30 日 DEX 成交量达 6.41 亿美元', body: 'CantonNews（2026-10-17）：CertiK 10 月 15 日快照显示 Temple 最近 30 日成交量 6.41 亿美元，较前 30 日 2.65 亿美元增 141.7%，占 Canton DEX 成交量份额由 13% 升至 57%。该指标不同于 9 月 30 日累计 10 亿美元里程碑。自 1 月 CC/USDCx 上线以来，Temple 陆续推出 Lightspeed、Ember eXAU/eXAG 贵金属、CBTC/eXAU 交易对、面向机构的 Virtual Orderbooks 与 Lightspeed 2.0 容量升级；成交量反映统计窗口内活动，不保证任意规模交易的即时流动性。', url: 'https://cantonnews.org/temple-reaches-641-million-in-30-day-trading-volume' },
         { date: '2026-10-16', tag: '分析', title: 'Canton Strategic Holdings Q3：129 个 Featured App、TPS/费用下降、销毁比 0.69', body: 'CantonNews（2026-10-16）：Canton Strategic Holdings 第三季度生态回顾（截至 9 月 30 日）显示 Featured Application 由 107 增至 129，平均活动由 26 TPS 降至 15 TPS，Q3 费用 1.57 亿美元（较 Q2 降 18%）。销毁/铸造比由 0.65 升至 0.69（约每铸造 100 CC 销毁 69 CC）。交易场所主导销毁——Temple 6.094 亿 CC、Cantor8 Digik/Cache 2.169 亿、Kora 1.121 亿。六项 Super Validator 计划批准含 a16z crypto、LSEG、Marex、Paxos、Shinhan Asset Management 与 TreasurySpring。亮点涵盖 DTCC 7 月生产测试、USDM1 主权债 repo、MUFG 日本国债试点、Broadridge DLX、CIP-0104 流量奖励过渡及 8 月 24 日前 Dev Fund 累计 6220 万 CC 拨付。CSH 为持有 CC 并运营 Super Validator 的网络参与方。', url: 'https://cantonnews.org/canton-s-q3-more-apps-lower-fee-totals-and-a-higher-burn-ratio' },
