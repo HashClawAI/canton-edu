@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-19',
+          tag: 'Markets',
+          title: 'BitSafe launches BETH on Canton with BETH–USDCx live on Temple',
+          body: 'CantonNews (October 19, 2026): BitSafe brought BETH—its 1:1 ETH-backed wrapped asset on Canton—to market with BETH–USDCx trading live on Temple from October 19 for approved Temple Digital Group participants (Bron, Console, Send, and Loop wallets listed). Direct mint and redeem from Ethereum remains a separate BitSafe onboarding path with operator-governed bridge controls; secondary trading does not require minting new supply each swap. BETH cleared Tokenomics review on October 2 ahead of Five North\'s Featured App vote but the announcement covers product launch, not governance approval. Canton also hosts onRails cETH on Swap Monster—distinct tokens with separate venues and wallets.',
+          url: 'https://cantonnews.org/bitsafe-launches-beth-with-trading-live-on-temple',
+        },
+        {
+          date: '2026-10-19',
+          tag: 'Governance',
+          title: 'Five North sponsors CIP-0129 universal burn; Cumberland endorses',
+          body: 'CantonNews (October 19, 2026): Five North founder Yiannis Varelas told the CIP list the team will sponsor CIP-0129 (Universal Burn and Synchronizer Pricing), moving the proposal toward a Super Validator vote after months of discussion. Cumberland endorsed the framework while noting pricing and implementation details remain open. If approved, authors target Q1 2027 to require all MainNet synchronizers to burn CC for production traffic—with interim dedicated-synchronizer discounts voted case by case—and Q3 2027 for volume and commitment-based pricing via a follow-on CIP. The change would extend Canton\'s burn economy beyond the Global Synchronizer to dedicated synchronizer workloads whose licence fees currently leave the ecosystem.',
+          url: 'https://cantonnews.org/canton-s-universal-burn-plan-moves-forward-as-five-north-sponsors-cip-0129',
+        },
+        {
+          date: '2026-10-19',
+          tag: 'Ecosystem',
+          title: 'Canton daily: CCTools pair discovery, R13N rewards fund, Hub access wave',
+          body: 'CantonNews (October 19, 2026): Updates since the October 17 roundup include CCTools adding spot-pool discovery for CC pairs with USDCx, CBTC, and cETH on Tradecraft plus CC/USDC.B on Pool-Party without executing trades in-app; Qasara\'s StrategyForge automated-trading pilot on Temple, Tradecraft, and Cantex with user-set loss limits; R13N Labs revising its Reward Engine Development Fund bid so 56.67% of up to 3,636,363.64 CC ties to verified MainNet adoption milestones; and The Hub opening another invitation-code onboarding wave for its X-linked social layer. Tritemius lists a CC–Bitcoin Lightning trading competition for October 19–November 30.',
+          url: 'https://cantonnews.org/canton-today-trading-tools-a-rewards-proposal-and-new-community-access',
+        },
+        {
+          date: '2026-10-19',
+          tag: 'Technology',
+          title: 'Cayvox Labs open-sources Payvol payment workflow layer for Canton',
+          body: 'CantonNews (October 19, 2026): Cayvox Labs introduced Payvol—open-source infrastructure linking payment requests (QR, links, NFC), wallet authorization, participant-node settlement observation, and invoice reconciliation without custodial funds. Six modular components (Request, Verify, Route, Observe, Reconcile, Connect) ship partly on npm; Connect for ERP hooks remains in development. The launch complements PartyLayer wallet connectivity and follows Cayvox\'s separate September Development Fund resubmission for production hardening—this article covers the product architecture, not an approved grant.',
+          url: 'https://cantonnews.org/cayvox-labs-introduces-payvol-an-open-source-payment-infrastructure-for-canton-network',
+        },
+        {
           date: '2026-10-18',
           tag: 'Ecosystem',
           title: 'OnePump adds Citizen Cards and queue game ahead of Canton launchpad',
@@ -4562,6 +4590,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-19', tag: '市场', title: 'BitSafe 在 Canton 上线 BETH，Temple 开放 BETH–USDCx 交易', body: 'CantonNews（2026-10-19）：BitSafe 推出 BETH——Canton 上 1:1 以太坊背书包装资产——10 月 19 日起 Temple 上 BETH–USDCx 对已向获批 Temple Digital Group 用户开放（公告列 Bron、Console、Send 与 Loop 钱包）。经以太坊直接铸造/赎回为独立 BitSafe 准入流程，多 operator 桥接治理；二级市场交易不必每笔都铸造新供应。BETH 于 10 月 2 日通过 Tokenomics 审查、Five North Featured App 投票前，但本文报道产品上线而非治理批准。Canton 另有 onRails cETH 在 Swap Monster 交易——不同 token、不同场所与钱包。', url: 'https://cantonnews.org/bitsafe-launches-beth-with-trading-live-on-temple' },
+        { date: '2026-10-19', tag: '治理', title: 'Five North 赞助 CIP-0129 通用销毁，Cumberland 表态支持', body: 'CantonNews（2026-10-19）：Five North 创始人 Yiannis Varelas 在 CIP 邮件列表宣布团队将赞助 CIP-0129（Universal Burn and Synchronizer Pricing），经数月讨论后推进至 Super Validator 表决。Cumberland 支持框架同时指出定价与实施细节仍待完善。若通过，作者目标 2027 年一季度要求 MainNet 全部 synchronizer 为生产流量销毁 CC——专用 synchronizer 过渡期折扣由 SV 逐案表决——2027 年三季度以后续 CIP 引入用量与承诺折扣。变更将把 Canton 销毁经济从 Global Synchronizer 扩展到目前许可费流出生态的专用 synchronizer 工作负载。', url: 'https://cantonnews.org/canton-s-universal-burn-plan-moves-forward-as-five-north-sponsors-cip-0129' },
+        { date: '2026-10-19', tag: '生态', title: 'Canton 日报：CCTools 交易对发现、R13N 奖励资助、The Hub 邀请波次', body: 'CantonNews（2026-10-19）：自 10 月 17 日 roundup 以来的更新包括 CCTools 为 Tradecraft 上 CC 与 USDCx、CBTC、cETH 及 Pool-Party 上 CC/USDC.B 现货池增加发现视图（不在应用内执行成交）；Qasara StrategyForge 在 Temple、Tradecraft 与 Cantex 的自动化交易试点（用户设亏损上限）；R13N Labs 修订 Reward Engine Development Fund 申请，最高 3,636,363.64 CC 中 56.67% 与经核验 MainNet 采用里程碑挂钩；The Hub 再开一轮邀请码 onboarding（X 档案链上身份社交层）。Tritemius 列 10 月 19 日至 11 月 30 日 CC–Bitcoin Lightning 交易赛。', url: 'https://cantonnews.org/canton-today-trading-tools-a-rewards-proposal-and-new-community-access' },
+        { date: '2026-10-19', tag: '技术', title: 'Cayvox Labs 开源 Payvol，统一 Canton 支付请求与对账流程', body: 'CantonNews（2026-10-19）：Cayvox Labs 发布 Payvol——开源基础设施，串联支付请求（二维码、链接、NFC）、钱包授权、participant 节点结算观测与发票对账，不托管用户资金。六个模块（Request、Verify、Route、Observe、Reconcile、Connect）部分已发 npm；对接 ERP 的 Connect 仍在开发。发布与 PartyLayer 钱包连接互补；9 月 Cayvox 另向 Development Fund 重提交生产加固申请——本文介绍产品架构，非已批准资助。', url: 'https://cantonnews.org/cayvox-labs-introduces-payvol-an-open-source-payment-infrastructure-for-canton-network' },
         { date: '2026-10-18', tag: '生态', title: 'OnePump 候补推出 Citizen Cards 与排队玩法，为 Canton 发射台预热', body: 'CantonNews（2026-10-18）：OnePump——OneSwap 规划中的 memecoin 发射台，产品仍为候补状态——于 10 月 16 日扩展预热活动：个性化 Citizen Cards（生物形象、名称与排队序号，含部分传奇稀有度）、邀请排名、每日 Diamonds 抽取与社交任务。候补前 100 名拟获 Pumplands 私密社群邀请码及每人 3 个分享码；前 10 名或有实体奖励。卡片为活动徽章，非已宣布的可交易 NFT 系列。文章对照 Robinhood Chain 2026 年 7 月 memecoin 占 DEX 成交量比重与 Pump.fun 单周数十亿美元级活动，指出 Canton 机构基础设施下公平发射或能吸引零售用户学习钱包、swap 与其他应用——但需待上线后有资金市场与回访使用方可验证，而非仅看注册玩法。', url: 'https://cantonnews.org/onepump-s-citizen-cards-what-collectible-communities-could-bring-to-canton' },
         { date: '2026-10-18', tag: '治理', title: '13 项 Canton Development Fund 提案进入 21 日表决', body: 'CantonNews（2026-10-18）：13 项 Canton Development Fund 申请于 10 月 16 日开启 21 日资助表决，涵盖共享 vault 标准、Privy 钱包签名、验证者 traffic 购买、流动性与供给验证 oracle、账本事件流、Merkle 证明侧车、访问控制与会计审计工具等。通过需获 eligible binding 选民至少 51% 赞成；其他社区表态不具约束力。亮点包括 Mystic Finance 最高 200 万 CC 的 vault 标准提案（Cashen 于 10 月 16 日背书）、Fairmint 350 万 CC Privy 工具包（超半数取决于经核验的 MainNet 集成），以及 Finoa Consensus Services 的开源 traffic 购买应用。多项资助将部分付款与第三方采用挂钩。CIP-0082 从未来 CC 发行中划拨 5% 入池；2026 年 9 月至 2027 年 9 月目标将预算 80% 投向已发布 RFP。', url: 'https://cantonnews.org/inside-canton-s-development-fund-as-13-proposals-go-to-a-vote' },
         { date: '2026-10-17', tag: '生态', title: 'Canton 日报：Canborsa AI 助手、OneSwap 费用退款、Super Validator 投票应用 Dev Fund 表决', body: 'CantonNews（2026-10-17）：10 月 15–16 日六条更新包括 Canborsa 应用内 AI 扩展至价格、资金费率、订单、余额、仓位与盈亏问答（支持 13 种语言、文字或语音；经助手下单仍规划中）；OneSwap 对选定 v2 swap 自动退还网络费；Console Wallet 2.4.1 移动端 WalletConnect 改进；Digital Asset 申请 100 万 CC 建设 Super Validator 委托投票应用的 21 日 Development Fund 表决（每节点一票、治理与运维分离）；Canton Strategic Holdings 进入 MSCI 非运营公司筛查 watchlist，11 月 11 日公布名单、11 月 30 日方法论生效（非确认剔除指数）；ETF Opportunities Trust 将 REX-Osprey Canton Coin ETF 相关注册修正案生效日定为 11 月 13 日（注册时间表，非 SEC 批准或上市）。', url: 'https://cantonnews.org/canton-today-canborsa-s-ai-update-a-governance-vote-and-a-november-watchlist' },
