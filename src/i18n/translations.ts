@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-20',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Ekiden upgrade window, wallet-check grant, HackCanton final 12',
+          body: 'CantonNews (October 20, 2026): Ekiden asked users to close positions, cancel orders, and withdraw Funding and Trading Account balances before October 21 12:00 UTC ahead of an upgrade running until roughly October 22 00:00 UTC—XP, referrals, and volume history should persist. FTP\'s wallet transaction-verification tools won Development Fund Tech & Ops approval for up to 430,000 CC (190,000 engineering plus adoption-linked tranches); wallets could compare locally computed transaction fingerprints to signing requests. CIP-0129 Universal Burn entered formal Super Validator voting October 19; Grofty DEX applied for Featured App status separate from Grofty Wallet. HackCanton Season 3 named 12 finalists for an October 21 14:00 UTC final; BitSafe documented Alpend shared lending controls for a 700,000 CC adoption milestone. Canton 3.6.3 patches slow DB lookups; Blockdaemon scheduled Splice 0.9.3 maintenance October 22; MainNet Splice 0.9.0–0.9.2 install was postponed after test issues.',
+          url: 'https://cantonnews.org/canton-roundup-ekiden-s-upgrade-deadline-wallet-checks-and-hackcanton-s-finalists',
+        },
+        {
+          date: '2026-10-20',
+          tag: 'Markets',
+          title: 'NEOPRIME debenture token begins CC trading on Cantex',
+          body: 'CantonNews (October 20, 2026): NEOPRIME—Neoprime\'s private-industrial exposure token on Hecto infrastructure—went live against CC on Cantex October 20, following Hecto\'s October 14 introduction. First completed backing is Erebor; Shield AI and Anduril were still being secured at launch. Holders receive a British Virgin Islands debenture claim on Neoprime\'s investment vehicle rather than direct shares; Hecto describes issuance when market price exceeds underlying value per token and planned IPO-exit proceeds for buybacks. NEOPRIME is Hecto\'s first private-market-exposure (PMX) product to reach trading, distinct from HECTO utility token and Predictions/Vaults lines.',
+          url: 'https://cantonnews.org/neoprime-goes-live-on-cantex-with-private-company-exposure',
+        },
+        {
+          date: '2026-10-20',
+          tag: 'Governance',
+          title: 'Super Validators vote on CIP-0127 automated CC lock enforcement',
+          body: 'CantonNews (October 20, 2026): Voting opened on CIP-0127 to automate Featured App and Super Validator Canton Coin locking—Digital Asset sponsoring, Cumberland DRW endorsing, announced October 19, still unapproved. Featured App shortfalls would suspend reward privileges immediately with a default seven-day window to restore locks before losing status; Super Validator shortfalls would reduce reward weight on detection with a 30-day recovery path before permanence. The proposal supports replacing or transferring lock providers without changing totals, builds on existing frameworks, and would roll out in stages after MainNet feature delivery—not a new lock requirement for every validator or wallet user.',
+          url: 'https://cantonnews.org/canton-votes-on-automating-cc-locks-for-super-validators-and-featured-apps',
+        },
+        {
+          date: '2026-10-20',
+          tag: 'Ecosystem',
+          title: 'Canton daily: Universal Burn repo entry, Pinnaccle cETH, Venues quote checks',
+          body: 'CantonNews (October 20, 2026): Five North offered official Universal Burn sponsorship as CIP-0129 entered the repository October 19; The Hub proposed completing Tokenomics review before the Featured App CC lock with a 30-day post-review window. onRails cETH added on Pinnaccle for market swaps and recurring purchases; Canton Venues reported 99.7% of 15,772 hourly quote checks within 0.01% of Tradecraft, Cantex, and OneSwap answers on CC pools ≥$20k (developer-reported, not executed-trade guarantees). FTP requested 660,000 CC for an open-source grant-review assistant; The Hub sought DvP recognition for creator-ticket purchases after an October 10 MainNet test; OnePump listed 7,834 waitlist entries; BitSafe offered o1Labs testing help for private ledger attestation.',
+          url: 'https://cantonnews.org/canton-today-universal-burn-sponsorship-ceth-on-pinnaccle-and-builder-proposals',
+        },
+        {
+          date: '2026-10-20',
+          tag: 'Institutions',
+          title: 'Kaiko joins UK Wholesale Digital Markets taskforce Secondary group',
+          body: 'CantonNews (October 20, 2026): Kaiko joined HM Treasury Wholesale Digital Markets Champion Chris Woolard\'s UK tokenization taskforce October 19 in the Secondary markets action group—alongside July roster firms including Digital Asset / Canton in Collateral & Prudential Standards—supplying Data On-Ramp licensed prices into on-chain apps and Data Off-Ramp standardized activity for valuation, risk, and reporting. Kaiko already serves Canton Foundation\'s Collateral Sub-Committee and signed index values for DRW–Marex\'s October 13 Derivnex total-return swap referencing its tokenized iBoxx USD Liquid Investment Grade Index on Canton.',
+          url: 'https://cantonnews.org/kaiko-joins-uk-tokenization-taskforce-to-support-secondary-markets',
+        },
+        {
           date: '2026-10-19',
           tag: 'Markets',
           title: 'BitSafe launches BETH on Canton with BETH–USDCx live on Temple',
@@ -4590,6 +4625,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-20', tag: '生态', title: 'Canton roundup：Ekiden 升级窗口、钱包验签资助、HackCanton 决赛 12 队', body: 'CantonNews（2026-10-20）：Ekiden 要求用户在 10 月 21 日 12:00 UTC 前平仓、撤单并将 Funding 与 Trading 账户资产提回 Canton Party，以迎接约至 10 月 22 日 00:00 UTC 的升级——XP、邀请与成交量记录应保留。FTP 钱包交易验证工具在 Development Fund Tech & Ops 表决通过，预算最高 430,000 CC（190,000 工程加与采用挂钩部分）；钱包可将本地计算的 transaction fingerprint 与待签请求比对。CIP-0129 Universal Burn 于 10 月 19 日进入 Super Validator 正式表决；Grofty DEX 单独申请 Featured App（与已有 Grofty Wallet 区分）。HackCanton 第三季 10 月 21 日 14:00 UTC 决赛公布 12 支入围队；BitSafe 提交 Alpend 共享借贷控制证据以申领 700,000 CC 采用里程碑。Canton 3.6.3 修复慢数据库查询；Blockdaemon 排定 10 月 22 日 Splice 0.9.3 维护；MainNet 安装 Splice 0.9.0–0.9.2 因测试问题推迟。', url: 'https://cantonnews.org/canton-roundup-ekiden-s-upgrade-deadline-wallet-checks-and-hackcanton-s-finalists' },
+        { date: '2026-10-20', tag: '市场', title: 'NEOPRIME 私募敞口 debenture 在 Cantex 开启 CC 交易', body: 'CantonNews（2026-10-20）：NEOPRIME——Hecto 基础设施上 Neoprime 的私营工业主题敞口代币——10 月 20 日在 Cantex 对 CC 上线交易，承接 10 月 14 日 Hecto 发布。首笔完成 backing 为 Erebor；Shield AI 与 Anduril 当时仍在推进。持有者为英属维尔京群岛 debenture 对 Neoprime 投资工具的 contractual claim，非直接持股；Hecto 说明可在市价高于每 token 底层价值时增发，并规划 IPO 退出所得用于回购。NEOPRIME 为 Hecto 首个进入交易的 private-market-exposure（PMX）产品，区别于 HECTO 效用代币及 Predictions/Vaults 线。', url: 'https://cantonnews.org/neoprime-goes-live-on-cantex-with-private-company-exposure' },
+        { date: '2026-10-20', tag: '治理', title: 'Super Validator 就 CIP-0127 自动化 CC 锁仓执法表决', body: 'CantonNews（2026-10-20）：CIP-0127 表决开启，拟自动化 Featured App 与 Super Validator 的 Canton Coin 锁仓——Digital Asset 赞助、Cumberland DRW 背书，10 月 19 日公告，尚未批准。Featured App 缺口将立即暂停奖励资格，默认七日内补足否则永久失去 status；Super Validator 缺口将即时降低 reward weight，30 日恢复窗口后未补足则永久化。提案支持在不改变总额下更换或转移 lock provider，基于现有框架分阶段在 MainNet 功能就绪后 rollout——并非要求所有验证者或钱包用户新增锁仓。', url: 'https://cantonnews.org/canton-votes-on-automating-cc-locks-for-super-validators-and-featured-apps' },
+        { date: '2026-10-20', tag: '生态', title: 'Canton 日报：Universal Burn 入库、Pinnaccle cETH、Venues 报价校验', body: 'CantonNews（2026-10-20）：Five North 提出正式赞助 Universal Burn，CIP-0129 于 10 月 19 日进入仓库；The Hub 提议 Featured App 在 Tokenomics 审查通过后再锁 CC，审查后 30 日期限。onRails cETH 在 Pinnaccle 支持市价 swap 与定投；Canton Venues 称 15,772 次 hourly 报价校验中 99.7% 与 Tradecraft、Cantex、OneSwap 在 ≥2 万美元 CC 池报价相差在 0.01% 内（开发者自报，非成交保证）。FTP 申请 660,000 CC 开源 grant-review 助手；The Hub 在 10 月 10 日 MainNet 测试后寻求 creator ticket 的 DvP 认定；OnePump 公布 7,834 候补登记；BitSafe 愿协助 o1Labs 测试私有账本 attestation。', url: 'https://cantonnews.org/canton-today-universal-burn-sponsorship-ceth-on-pinnaccle-and-builder-proposals' },
+        { date: '2026-10-20', tag: '机构', title: 'Kaiko 加入英国 Wholesale Digital Markets 任务组 Secondary 组', body: 'CantonNews（2026-10-20）：Kaiko 于 10 月 19 日加入 HM Treasury Wholesale Digital Markets Champion Chris Woolard 英国代币化任务组 Secondary 市场行动组——7 月名单含 Digital Asset / Canton（Collateral & Prudential Standards）——提供 Data On-Ramp 将许可价格接入链上应用，Data Off-Ramp 将链上活动标准化供估值、风险与报告。Kaiko 已参与 Canton Foundation Collateral Sub-Committee，并为 10 月 13 日 DRW–Marex 在 Derivnex 上参照其 Canton 代币化 iBoxx USD Liquid Investment Grade 指数的总收益互换提供官方指数值。', url: 'https://cantonnews.org/kaiko-joins-uk-tokenization-taskforce-to-support-secondary-markets' },
         { date: '2026-10-19', tag: '市场', title: 'BitSafe 在 Canton 上线 BETH，Temple 开放 BETH–USDCx 交易', body: 'CantonNews（2026-10-19）：BitSafe 推出 BETH——Canton 上 1:1 以太坊背书包装资产——10 月 19 日起 Temple 上 BETH–USDCx 对已向获批 Temple Digital Group 用户开放（公告列 Bron、Console、Send 与 Loop 钱包）。经以太坊直接铸造/赎回为独立 BitSafe 准入流程，多 operator 桥接治理；二级市场交易不必每笔都铸造新供应。BETH 于 10 月 2 日通过 Tokenomics 审查、Five North Featured App 投票前，但本文报道产品上线而非治理批准。Canton 另有 onRails cETH 在 Swap Monster 交易——不同 token、不同场所与钱包。', url: 'https://cantonnews.org/bitsafe-launches-beth-with-trading-live-on-temple' },
         { date: '2026-10-19', tag: '治理', title: 'Five North 赞助 CIP-0129 通用销毁，Cumberland 表态支持', body: 'CantonNews（2026-10-19）：Five North 创始人 Yiannis Varelas 在 CIP 邮件列表宣布团队将赞助 CIP-0129（Universal Burn and Synchronizer Pricing），经数月讨论后推进至 Super Validator 表决。Cumberland 支持框架同时指出定价与实施细节仍待完善。若通过，作者目标 2027 年一季度要求 MainNet 全部 synchronizer 为生产流量销毁 CC——专用 synchronizer 过渡期折扣由 SV 逐案表决——2027 年三季度以后续 CIP 引入用量与承诺折扣。变更将把 Canton 销毁经济从 Global Synchronizer 扩展到目前许可费流出生态的专用 synchronizer 工作负载。', url: 'https://cantonnews.org/canton-s-universal-burn-plan-moves-forward-as-five-north-sponsors-cip-0129' },
         { date: '2026-10-19', tag: '生态', title: 'Canton 日报：CCTools 交易对发现、R13N 奖励资助、The Hub 邀请波次', body: 'CantonNews（2026-10-19）：自 10 月 17 日 roundup 以来的更新包括 CCTools 为 Tradecraft 上 CC 与 USDCx、CBTC、cETH 及 Pool-Party 上 CC/USDC.B 现货池增加发现视图（不在应用内执行成交）；Qasara StrategyForge 在 Temple、Tradecraft 与 Cantex 的自动化交易试点（用户设亏损上限）；R13N Labs 修订 Reward Engine Development Fund 申请，最高 3,636,363.64 CC 中 56.67% 与经核验 MainNet 采用里程碑挂钩；The Hub 再开一轮邀请码 onboarding（X 档案链上身份社交层）。Tritemius 列 10 月 19 日至 11 月 30 日 CC–Bitcoin Lightning 交易赛。', url: 'https://cantonnews.org/canton-today-trading-tools-a-rewards-proposal-and-new-community-access' },
