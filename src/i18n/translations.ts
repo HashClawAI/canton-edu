@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-21',
+          tag: 'Governance',
+          title: 'Universal Burn vote passes; implementation and pricing still ahead',
+          body: 'CantonNews (October 21, 2026): Digital Asset CEO Yuval Rooz announced the Super Validator vote on CIP-0129 Universal Burn passed October 21—following Five North sponsorship and Cumberland DRW endorsement, with affirmative replies from Proof Group and Digital Asset in the public thread. The framework would extend CC burn-and-reward mechanics to dedicated synchronizers that today pay licence fees without the same traffic burn model, while Global Synchronizer pricing stays unchanged; authors target Q1 2027 universal burn rollout and Q3 2027 volume or commitment pricing via a follow-on CIP. GitHub still listed "Proposed" at check time; Rooz\'s announcement is the passed-vote source—not a live fee change yet.',
+          url: 'https://cantonnews.org/canton-s-universal-burn-vote-passes-with-implementation-still-ahead',
+        },
+        {
+          date: '2026-10-21',
+          tag: 'Institutions',
+          title: 'Temple opens institutional cash RFQ on Canton',
+          body: 'CantonNews (October 21, 2026): Temple Digital Group opened cash RFQ trading for approved institutional clients on Canton October 21—participants specify asset, size, and settlement terms, receive firm quotes from selected dealers, and execute with atomic settlement. Cash covers digital assets, tokenized commodities, and equities with assets remaining in custody until fill; fixed-income (tokenized Treasuries quoted by yield) and repo financing are planned as assets and counterparties become available. Access is through Temple\'s contact process, not open retail screens—building on July\'s DTCC Tokenization Service Treasury-repo precedent with DRW, HIFI, and Marex.',
+          url: 'https://cantonnews.org/temple-opens-cash-rfq-on-canton-with-treasuries-and-repo-to-follow',
+        },
+        {
+          date: '2026-10-21',
+          tag: 'Institutions',
+          title: 'Tradecraft ATS plans order-book venue for tokenized securities',
+          body: 'CantonNews (October 21, 2026): Texture Capital and Obsidian Systems are building Tradecraft ATS—a planned Canton alternative trading system matching tokenized shares, debt, and fund interests against USDCx with continuous order-book matching rather than Tradecraft\'s existing pool swaps; securities and USDCx stay in subscriber wallets until atomic execution. Texture operates as an SEC-registered broker-dealer per FINRA records; Tradecraft ATS already appears on the SEC ATS list as of September 30. The venue has not launched; Tradecraft\'s live exchange received Canton DvP recognition October 2 separately from ATS regulatory duties.',
+          url: 'https://cantonnews.org/tradecraft-ats-plans-a-canton-market-for-tokenized-securities',
+        },
+        {
+          date: '2026-10-21',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Modulo rewards shift, Edel $10M volume, Developer Hub V3',
+          body: 'CantonNews (October 21, 2026): Modulo ends subscription rewards October 31 while shifting benefits to traffic credits and discounts; Selay Swap Season begins October 26 with 60% Cantex swap-fee rebates weekly in CC. Grofty added Cantex Connect in its DEX; Edel reported surpassing $10 million on-chain stock-token volume including Nvidia- and SpaceX-linked Cantex listings; Pinnaccle secured a 5 million CC Featured App lock via Cashen. Canton Foundation launched Developer Hub V3 with AI assistant navigation, browsable CIP and Dev Fund proposals, and a tool directory; Splice 0.9.3 and Canton 3.6.3 are deployment-ready. Cancore and Nuxaris filed settlement-recognition requests; Obsidian sought 3.67 million CC for Python codegen and milestone-review tooling; Wallet Gateway Milestone 6 amendment proposes Blockdaemon as delivery partner.',
+          url: 'https://cantonnews.org/canton-roundup-modulo-s-rewards-change-edel-s-10-million-milestone-and-developer-updates',
+        },
+        {
+          date: '2026-10-21',
+          tag: 'Markets',
+          title: 'Ekiden seeks DvP recognition while broadening collateral options',
+          body: 'CantonNews (October 21, 2026): Ekiden\'s October 20 Accountability Committee application seeks recognition for collateral-to-USDCx exchanges—including forced liquidation and withdrawal shortfalls—and a planned isolated-margin settlement flow still being implemented (distinct from documented cross-margin today). Initial collateral onboarding targets include USD1, USDCx, BENJI, USYC, and gold-backed eXAU—not confirmed live options yet. Obligations remain USDCx-denominated perpetual exposure; atomic settlement would link collateral transfer and payment. Separate from Ekiden\'s gold and silver market additions—collateral backing differs from price-reference markets.',
+          url: 'https://cantonnews.org/ekiden-seeks-settlement-recognition-as-it-expands-trading-collateral',
+        },
+        {
           date: '2026-10-20',
           tag: 'Ecosystem',
           title: 'Canton roundup: Ekiden upgrade window, wallet-check grant, HackCanton final 12',
@@ -4625,6 +4660,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-21', tag: '治理', title: 'Universal Burn 表决通过；落地与定价仍待推进', body: 'CantonNews（2026-10-21）：Digital Asset CEO Yuval Rooz 宣布 CIP-0129 Universal Burn 的 Super Validator 表决于 10 月 21 日通过——承接 Five North 赞助与 Cumberland DRW 背书，公开线程中 Proof Group 与 Digital Asset 亦回复赞成。框架拟将 CC 销毁与奖励机制延伸至今日以 licence 费为主、未纳入同等 traffic burn 的 dedicated synchronizer，Global Synchronizer 定价不变；作者目标 Q1 2027 全面 burn 上线、Q3 2027 通过后续 CIP 推进用量或承诺定价。核查时 GitHub 仍标 Proposed；以 Rooz 公告为通过依据——尚未构成已生效费率变更。', url: 'https://cantonnews.org/canton-s-universal-burn-vote-passes-with-implementation-still-ahead' },
+        { date: '2026-10-21', tag: '机构', title: 'Temple 在 Canton 向机构开放现金 RFQ', body: 'CantonNews（2026-10-21）：Temple Digital Group 于 10 月 21 日为获批机构客户在 Canton 开放 cash RFQ——参与方指定资产、规模与结算条款，向选定做市商索取 firm quote 并以原子化结算成交。现金市场涵盖数字资产、代币化大宗商品与股票，成交前资产仍留托管；固定收益（按收益率报价的代币化国债）与 repo 融资将在资产与对手方就绪后跟进。接入经 Temple 联系流程，非开放零售界面——延续 7 月 DTCC 代币化服务国债 repo 先例（DRW、HIFI、Marex）。', url: 'https://cantonnews.org/temple-opens-cash-rfq-on-canton-with-treasuries-and-repo-to-follow' },
+        { date: '2026-10-21', tag: '机构', title: 'Tradecraft ATS 规划 Canton 代币化证券订单簿场所', body: 'CantonNews（2026-10-21）：Texture Capital 与 Obsidian Systems 共建 Tradecraft ATS——拟在 Canton 以连续订单簿撮合代币化股票、债务与基金权益对 USDCx，区别于 Tradecraft 现有资金池 swap；证券与 USDCx 在原子执行前留于订阅者钱包。Texture 在 FINRA 记录中为 SEC 注册经纪商；Tradecraft ATS 截至 9 月 30 日已出现在 SEC ATS 名单。场所尚未上线；Tradecraft 现货交易所于 10 月 2 日获 Canton DvP 认定，与 ATS 监管职责分开。', url: 'https://cantonnews.org/tradecraft-ats-plans-a-canton-market-for-tokenized-securities' },
+        { date: '2026-10-21', tag: '生态', title: 'Canton roundup：Modulo 奖励调整、Edel 千万美元成交量、Developer Hub V3', body: 'CantonNews（2026-10-21）：Modulo 于 10 月 31 日结束订阅奖励并转向 traffic credits 与折扣；Selay Swap Season 10 月 26 日启动，每周返还 Cantex swap 手续费的 60%（CC）。Grofty DEX 集成 Cantex Connect；Edel 称链上 stock-token 成交量突破 1000 万美元（含 Cantex 上 Nvidia、SpaceX 关联 token）；Pinnaccle 经 Cashen 完成 500 万 CC Featured App 锁仓。Canton Foundation 发布 Developer Hub V3（AI 助手导航、可浏览 CIP 与 Dev Fund 提案及工具目录）；Splice 0.9.3 与 Canton 3.6.3 已具备部署条件。Cancore 与 Nuxaris 提交 settlement 认定申请；Obsidian 申请 367 万 CC 用于 Python 代码生成与里程碑审查工具；Wallet Gateway 里程碑 6 修正案提议 Blockdaemon 为交付伙伴。', url: 'https://cantonnews.org/canton-roundup-modulo-s-rewards-change-edel-s-10-million-milestone-and-developer-updates' },
+        { date: '2026-10-21', tag: '市场', title: 'Ekiden 申请 DvP 认定并扩展抵押品选项', body: 'CantonNews（2026-10-21）：Ekiden 10 月 20 日向 Accountability Committee 申请认定 collateral 换 USDCx 流程——含强制平仓与提现缺口——以及仍在实现的 isolated-margin 结算流（与文档中的 cross-margin 不同）。初期 onboarding 目标含 USD1、USDCx、BENJI、USYC 与 gold-backed eXAU，非已确认上线选项。永续敞口仍以 USDCx 计价；原子结算将抵押品转移与付款绑定。与 Ekiden 新增金银市场无关——抵押 backing 与价格参考市场是两回事。', url: 'https://cantonnews.org/ekiden-seeks-settlement-recognition-as-it-expands-trading-collateral' },
         { date: '2026-10-20', tag: '生态', title: 'Canton roundup：Ekiden 升级窗口、钱包验签资助、HackCanton 决赛 12 队', body: 'CantonNews（2026-10-20）：Ekiden 要求用户在 10 月 21 日 12:00 UTC 前平仓、撤单并将 Funding 与 Trading 账户资产提回 Canton Party，以迎接约至 10 月 22 日 00:00 UTC 的升级——XP、邀请与成交量记录应保留。FTP 钱包交易验证工具在 Development Fund Tech & Ops 表决通过，预算最高 430,000 CC（190,000 工程加与采用挂钩部分）；钱包可将本地计算的 transaction fingerprint 与待签请求比对。CIP-0129 Universal Burn 于 10 月 19 日进入 Super Validator 正式表决；Grofty DEX 单独申请 Featured App（与已有 Grofty Wallet 区分）。HackCanton 第三季 10 月 21 日 14:00 UTC 决赛公布 12 支入围队；BitSafe 提交 Alpend 共享借贷控制证据以申领 700,000 CC 采用里程碑。Canton 3.6.3 修复慢数据库查询；Blockdaemon 排定 10 月 22 日 Splice 0.9.3 维护；MainNet 安装 Splice 0.9.0–0.9.2 因测试问题推迟。', url: 'https://cantonnews.org/canton-roundup-ekiden-s-upgrade-deadline-wallet-checks-and-hackcanton-s-finalists' },
         { date: '2026-10-20', tag: '市场', title: 'NEOPRIME 私募敞口 debenture 在 Cantex 开启 CC 交易', body: 'CantonNews（2026-10-20）：NEOPRIME——Hecto 基础设施上 Neoprime 的私营工业主题敞口代币——10 月 20 日在 Cantex 对 CC 上线交易，承接 10 月 14 日 Hecto 发布。首笔完成 backing 为 Erebor；Shield AI 与 Anduril 当时仍在推进。持有者为英属维尔京群岛 debenture 对 Neoprime 投资工具的 contractual claim，非直接持股；Hecto 说明可在市价高于每 token 底层价值时增发，并规划 IPO 退出所得用于回购。NEOPRIME 为 Hecto 首个进入交易的 private-market-exposure（PMX）产品，区别于 HECTO 效用代币及 Predictions/Vaults 线。', url: 'https://cantonnews.org/neoprime-goes-live-on-cantex-with-private-company-exposure' },
         { date: '2026-10-20', tag: '治理', title: 'Super Validator 就 CIP-0127 自动化 CC 锁仓执法表决', body: 'CantonNews（2026-10-20）：CIP-0127 表决开启，拟自动化 Featured App 与 Super Validator 的 Canton Coin 锁仓——Digital Asset 赞助、Cumberland DRW 背书，10 月 19 日公告，尚未批准。Featured App 缺口将立即暂停奖励资格，默认七日内补足否则永久失去 status；Super Validator 缺口将即时降低 reward weight，30 日恢复窗口后未补足则永久化。提案支持在不改变总额下更换或转移 lock provider，基于现有框架分阶段在 MainNet 功能就绪后 rollout——并非要求所有验证者或钱包用户新增锁仓。', url: 'https://cantonnews.org/canton-votes-on-automating-cc-locks-for-super-validators-and-featured-apps' },
