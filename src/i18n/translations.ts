@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-22',
+          tag: 'Institutions',
+          title: 'T-RIZE integrates Chainlink CCIP for bidirectional Canton transfers',
+          body: 'CantonNews (October 22, 2026): T-RIZE completed Chainlink Cross-Chain Interoperability Protocol integration so eligible tokenized investments can move between Canton and supported Ethereum-compatible networks while preserving each instrument\'s ownership, investor permissions, custody rules, and obligations—the receiving application must satisfy the same controls. The work extends June proof-of-insurance on Canton and builds on Chainlink\'s July 14 CCIP Canton support; CCIP carries cross-chain messages rather than taking asset custody. Primary source: T-RIZE October 21 integration announcement.',
+          url: 'https://cantonnews.org/t-rize-adds-chainlink-ccip-for-asset-transfers-to-and-from-canton',
+        },
+        {
+          date: '2026-10-22',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Dev Fund vault and SV-rights wins, a16z vote, wallet demos',
+          body: 'CantonNews (October 22, 2026): Since the October 21 roundup—Mystic\'s shared tokenized-vault standard won up to 2 million CC (500k design/CIP, 500k software, 1M adoption); IntellectEU with Digital Asset won up to 4 million CC to record Super Validator reward-right owners and weights on-ledger. Governance opened to add a16z\'s escrowed weight 10 to MPC-Holding-Inc (vote closes October 27 07:20 UTC). Tokenomics Committee recommended DFNS minting weight 0.6→0 and Taurus active 3→1.8. Unhedged added Tron USDT funding and outlined Binder50 PSA-10 card index markets; MahaWallet demoed QRIS rupiah top-ups and bank withdrawals. Korea TTA reliability sandbox cleared milestone one (330k CC); Certora published Canton audit guidance; Foundation opened Tokenomics and Marketing chair nominations (October 31) and a November 5 Mumbai builders evening.',
+          url: 'https://cantonnews.org/canton-roundup-new-funding-approvals-wallet-access-and-governance-votes',
+        },
+        {
+          date: '2026-10-22',
+          tag: 'Institutions',
+          title: 'Progmat plans Canton sandbox for tokenized JGBs, deposits, and stablecoins',
+          body: 'CantonNews (October 22, 2026): Progmat\'s Digital Asset Co-Creation Consortium—69 banks, asset managers, and securities firms—will move toward a Canton test environment pairing tokenized Japanese government bonds with tokenized bank deposits and stablecoins for repo-style settlement, collateral, and cross-border/off-hours scenarios while keeping book-entry JGB legal status via synchronized accounts. Target conditional November 2026 kickoff with test tokens only; spring 2027 interim report planned—extends the August MUFG–Digital Asset–Progmat JGB repo PoC and opens beyond the original working group subject to sandbox terms and costs.',
+          url: 'https://cantonnews.org/progmat-plans-canton-tests-for-tokenized-japanese-government-bonds',
+        },
+        {
+          date: '2026-10-22',
+          tag: 'Institutions',
+          title: 'Circle and S&P Global approved as Canton validator operators',
+          body: 'CantonNews (October 22, 2026): Circle and S&P Global are among 40 validator applications implicitly approved in the October 21 batch—Circle reiterating native USDC plans distinct from December 2025 USDCx via xReserve; S&P Global citing application development on Canton following DRW–Marex\'s October 13 Derivnex swap referencing Kaiko-tokenized S&P DJI iBoxx USD Liquid Investment Grade Index values. Approval clears the application stage only; each operator still needs MainNet allocation, Super Validator sponsor onboarding credential, and node setup before live participation—ordinary validator status is separate from Super Validator governance.',
+          url: 'https://cantonnews.org/circle-and-s-p-global-receive-canton-validator-approval',
+        },
+        {
+          date: '2026-10-22',
+          tag: 'Institutions',
+          title: 'Canton Foundation expands Taiwan work with training-first MOU',
+          body: 'CantonNews (October 22, 2026): At an October 21 Taipei briefing, Canton Foundation outlined cooperation with Taiwan Digital Assets and Future Capital Markets Association, Institute for Information Industry (FinTech Center MOU for courses and practical digital-finance work), Taiwan Financial Services Roundtable, and Taiwan Blockchain Association—priorities include talent development, connecting tokenized Taiwanese assets to global markets, and cross-border standards. APAC lead Thomas Chou encouraged institutions to start from workflows and counterparties rather than validators alone; Taishin Bank joined as a validator operator in June. Reporting via CryptoCity; plans are cooperation announcements, not a new listed product.',
+          url: 'https://cantonnews.org/canton-foundation-puts-training-at-the-centre-of-its-taiwan-expansion',
+        },
+        {
           date: '2026-10-21',
           tag: 'Governance',
           title: 'Universal Burn vote passes; implementation and pricing still ahead',
@@ -4660,6 +4695,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-22', tag: '机构', title: 'T-RIZE 集成 Chainlink CCIP，支持 Canton 双向跨链资产转移', body: 'CantonNews（2026-10-22）：T-RIZE 完成 Chainlink 跨链互操作协议（CCIP）集成，使符合条件的代币化投资可在 Canton 与支持的部分以太坊兼容网络间双向转移，同时保留各工具的 ownership、投资者权限、托管规则与持续义务——接收方应用亦须满足相同控制。工作延伸 6 月 Canton 上的 proof-of-insurance，并基于 Chainlink 7 月 14 日 CCIP 对 Canton 的支持；CCIP 传递跨链消息而非托管底层资产。主要来源：T-RIZE 10 月 21 日集成公告。', url: 'https://cantonnews.org/t-rize-adds-chainlink-ccip-for-asset-transfers-to-and-from-canton' },
+        { date: '2026-10-22', tag: '生态', title: 'Canton roundup：Dev Fund 批准 vault 与 SV 权益项目、a16z 表决、钱包演示', body: 'CantonNews（2026-10-22）：自 10 月 21 日 roundup 以来——Mystic 共享代币化 vault 标准获批最高 200 万 CC（50 万设计/CIP、50 万软件、100 万采用）；IntellectEU 与 Digital Asset 获批最高 400 万 CC，在账本记录 Super Validator 奖励权益 owner 与 weight。治理开启将 a16z escrow weight 10 加入 MPC-Holding-Inc（表决 10 月 27 日 07:20 UTC 截止）。Tokenomics Committee 建议 DFNS minting weight 0.6→0、Taurus active 3→1.8。Unhedged 新增 Tron USDT 入金并概述 Binder50 PSA-10 卡牌指数市场；MahaWallet 演示 QRIS 印尼盾充值与银行提现。韩国 TTA 可靠性 sandbox 通过里程碑一（33 万 CC）；Certora 发布 Canton 审计指南；Foundation 开放 Tokenomics 与 Marketing 主席提名（10 月 31 日）及 11 月 5 日孟买 builders 晚间活动。', url: 'https://cantonnews.org/canton-roundup-new-funding-approvals-wallet-access-and-governance-votes' },
+        { date: '2026-10-22', tag: '机构', title: 'Progmat 规划 Canton sandbox 测试代币化 JGB、存款与稳定币', body: 'CantonNews（2026-10-22）：Progmat 数字资产共创联盟（69 家银行、资管与券商）将推进 Canton 测试环境，把代币化日本国债与代币化银行存款、稳定币配对，用于 repo 式结算、抵押品及跨境/非营业时段场景，同时通过同步账户保持 book-entry JGB 法律地位。目标有条件 2026 年 11 月启动（仅 test token）；计划 2027 年春 interim 报告——延伸 8 月 MUFG–Digital Asset–Progmat JGB repo PoC，并在 sandbox 条款与费用下向原工作组外开放。', url: 'https://cantonnews.org/progmat-plans-canton-tests-for-tokenized-japanese-government-bonds' },
+        { date: '2026-10-22', tag: '机构', title: 'Circle 与 S&P Global 获批成为 Canton 验证者运营商', body: 'CantonNews（2026-10-22）：Circle 与 S&P Global 列入 10 月 21 日批次 40 项验证者申请默许批准——Circle 重申 native USDC 计划，区别于 2025 年 12 月经 xReserve 的 USDCx；S&P Global 称在 Canton 上构建应用，承接 10 月 13 日 DRW–Marex 在 Derivnex 上参照 Kaiko 代币化 S&P DJI iBoxx USD Liquid Investment Grade 指数值的总收益互换。批准仅完成申请阶段；各运营商仍需 MainNet allocation、Super Validator 赞助 onboarding 凭证与节点部署方可上线——普通验证者身份与 Super Validator 治理分开。', url: 'https://cantonnews.org/circle-and-s-p-global-receive-canton-validator-approval' },
+        { date: '2026-10-22', tag: '机构', title: 'Canton Foundation 以培训为核心扩展台湾合作', body: 'CantonNews（2026-10-22）：Foundation 10 月 21 日台北说明会与台湾数字资产与未来资本市场协会、资讯工业策进会（FinTech Center MOU 涵盖课程与实践数字金融）、台湾金融服务圆桌与台湾区块链协会合作——重点含人才培养、连接台湾代币化资产与全球市场及跨境标准。亚太负责人 Thomas Chou 建议机构从 workflow 与对手方入手，而非仅以验证者为起点；Taishin Bank 于 6 月以验证者身份加入。报道来源 CryptoCity；属合作计划公告，非新挂牌产品。', url: 'https://cantonnews.org/canton-foundation-puts-training-at-the-centre-of-its-taiwan-expansion' },
         { date: '2026-10-21', tag: '治理', title: 'Universal Burn 表决通过；落地与定价仍待推进', body: 'CantonNews（2026-10-21）：Digital Asset CEO Yuval Rooz 宣布 CIP-0129 Universal Burn 的 Super Validator 表决于 10 月 21 日通过——承接 Five North 赞助与 Cumberland DRW 背书，公开线程中 Proof Group 与 Digital Asset 亦回复赞成。框架拟将 CC 销毁与奖励机制延伸至今日以 licence 费为主、未纳入同等 traffic burn 的 dedicated synchronizer，Global Synchronizer 定价不变；作者目标 Q1 2027 全面 burn 上线、Q3 2027 通过后续 CIP 推进用量或承诺定价。核查时 GitHub 仍标 Proposed；以 Rooz 公告为通过依据——尚未构成已生效费率变更。', url: 'https://cantonnews.org/canton-s-universal-burn-vote-passes-with-implementation-still-ahead' },
         { date: '2026-10-21', tag: '机构', title: 'Temple 在 Canton 向机构开放现金 RFQ', body: 'CantonNews（2026-10-21）：Temple Digital Group 于 10 月 21 日为获批机构客户在 Canton 开放 cash RFQ——参与方指定资产、规模与结算条款，向选定做市商索取 firm quote 并以原子化结算成交。现金市场涵盖数字资产、代币化大宗商品与股票，成交前资产仍留托管；固定收益（按收益率报价的代币化国债）与 repo 融资将在资产与对手方就绪后跟进。接入经 Temple 联系流程，非开放零售界面——延续 7 月 DTCC 代币化服务国债 repo 先例（DRW、HIFI、Marex）。', url: 'https://cantonnews.org/temple-opens-cash-rfq-on-canton-with-treasuries-and-repo-to-follow' },
         { date: '2026-10-21', tag: '机构', title: 'Tradecraft ATS 规划 Canton 代币化证券订单簿场所', body: 'CantonNews（2026-10-21）：Texture Capital 与 Obsidian Systems 共建 Tradecraft ATS——拟在 Canton 以连续订单簿撮合代币化股票、债务与基金权益对 USDCx，区别于 Tradecraft 现有资金池 swap；证券与 USDCx 在原子执行前留于订阅者钱包。Texture 在 FINRA 记录中为 SEC 注册经纪商；Tradecraft ATS 截至 9 月 30 日已出现在 SEC ATS 名单。场所尚未上线；Tradecraft 现货交易所于 10 月 2 日获 Canton DvP 认定，与 ATS 监管职责分开。', url: 'https://cantonnews.org/tradecraft-ats-plans-a-canton-market-for-tokenized-securities' },
