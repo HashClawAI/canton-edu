@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-10-23',
+          tag: 'Institutions',
+          title: 'CantonNews: CC utility narrative strengthens after Universal Burn approval',
+          body: 'CantonNews (October 23, 2026): Joseph Razo frames Canton Coin\'s next chapter as institutional adoption, DeFi growth, and the October 21 Super Validator approval of CIP-0129 Universal Burn converge—dedicated synchronizers would eventually burn CC at Global Synchronizer list prices (Q1 2027 target) with volume or commitment pricing in a follow-on CIP around Q3 2027, while Global Synchronizer fees already destroy CC today. The piece ties July tokenized U.S. Treasury vs USDCx trading, DTCC\'s July production trades with 30+ firms, Q3 ecosystem fee totals above $155 million (not all DTCC-driven), Meritz Securities\' Korea expansion agreement, and DTCC Tokenization Service\'s late-October launch with 25 initial securities on Canton plus a private chain. Foundation plans an October 26 X Space on CIP-0129 with authors Shaul Kfir and Bc1pxxx—not live fee changes yet.',
+          url: 'https://cantonnews.org/canton-coin-is-becoming-more-than-just-a-token',
+        },
+        {
+          date: '2026-10-22',
+          tag: 'Analysis',
+          title: 'CantonNews essay: decentralization on Canton is multidimensional, not binary',
+          body: 'CantonNews (October 22, 2026): TUNDE argues decentralization should be evaluated across infrastructure operators, governance, participation rules, and software maintenance—not reduced to validator counts alone. Canton\'s Global Synchronizer uses distributed consensus among permissioned Super Validators while MainNet onboarding stays invite-only; published governance needs a nine-of-thirteen SV threshold, so Digital Asset\'s two node identities cannot unilaterally pass changes. The essay separates ecosystem association from independent consensus operation and asks what would happen if a major technical contributor exited—multi-operator architecture and open-source releases suggest continued operation paths, but not necessarily uninterrupted development. Opinion and analysis, not a network announcement.',
+          url: 'https://cantonnews.org/decentralization-isn-t-all-or-nothing-rethinking-power-and-control-in-canton-network',
+        },
+        {
           date: '2026-10-22',
           tag: 'Institutions',
           title: 'T-RIZE integrates Chainlink CCIP for bidirectional Canton transfers',
@@ -4695,6 +4709,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-10-23', tag: '机构', title: 'CantonNews：Universal Burn 通过后 CC 效用叙事升温', body: 'CantonNews（2026-10-23）：Joseph Razo 将 Canton Coin 下一阶段概括为机构采用、DeFi 扩张与 10 月 21 日 Super Validator 批准 CIP-0129 Universal Burn 的交汇——dedicated synchronizer 最终将按 Global Synchronizer 标价销毁 CC（目标 2027 年一季度），用量或承诺定价拟于约 2027 年三季度后续 CIP 推进；Global Synchronizer 费用今日已在销毁 CC。文章串联 7 月代币化美国国债对 USDCx 交易、DTCC 7 月与 30 余家机构的 production 交易、三季度生态费用合计超 1.55 亿美元（并非全部由 DTCC 贡献）、Meritz Securities 韩国扩张协议，以及 DTCC Tokenization Service 10 月底在 Canton 与私有链上首发 25 只证券。Foundation 计划 10 月 26 日 X Space 与作者 Shaul Kfir、Bc1pxxx 解读 CIP-0129——尚未构成已生效费率变更。', url: 'https://cantonnews.org/canton-coin-is-becoming-more-than-just-a-token' },
+        { date: '2026-10-22', tag: '分析', title: 'CantonNews 评论：Canton 上的去中心化是多维而非二元', body: 'CantonNews（2026-10-22）：TUNDE 认为去中心化应分别从基础设施运营者、治理、参与规则与软件维护评估——不能简化为验证者数量。Canton Global Synchronizer 在 permissioned Super Validator 间使用分布式共识，MainNet onboarding 仍为邀请制；公开治理需十三 Super Validator 中九票，Digital Asset 两个节点身份无法单方面通过变更。文章区分生态关联与独立共识运营，并追问若主要技术贡献者退出会如何——多运营者架构与开源发布暗示可持续运行路径，但不保证开发维护不间断。属观点分析，非网络公告。', url: 'https://cantonnews.org/decentralization-isn-t-all-or-nothing-rethinking-power-and-control-in-canton-network' },
         { date: '2026-10-22', tag: '机构', title: 'T-RIZE 集成 Chainlink CCIP，支持 Canton 双向跨链资产转移', body: 'CantonNews（2026-10-22）：T-RIZE 完成 Chainlink 跨链互操作协议（CCIP）集成，使符合条件的代币化投资可在 Canton 与支持的部分以太坊兼容网络间双向转移，同时保留各工具的 ownership、投资者权限、托管规则与持续义务——接收方应用亦须满足相同控制。工作延伸 6 月 Canton 上的 proof-of-insurance，并基于 Chainlink 7 月 14 日 CCIP 对 Canton 的支持；CCIP 传递跨链消息而非托管底层资产。主要来源：T-RIZE 10 月 21 日集成公告。', url: 'https://cantonnews.org/t-rize-adds-chainlink-ccip-for-asset-transfers-to-and-from-canton' },
         { date: '2026-10-22', tag: '生态', title: 'Canton roundup：Dev Fund 批准 vault 与 SV 权益项目、a16z 表决、钱包演示', body: 'CantonNews（2026-10-22）：自 10 月 21 日 roundup 以来——Mystic 共享代币化 vault 标准获批最高 200 万 CC（50 万设计/CIP、50 万软件、100 万采用）；IntellectEU 与 Digital Asset 获批最高 400 万 CC，在账本记录 Super Validator 奖励权益 owner 与 weight。治理开启将 a16z escrow weight 10 加入 MPC-Holding-Inc（表决 10 月 27 日 07:20 UTC 截止）。Tokenomics Committee 建议 DFNS minting weight 0.6→0、Taurus active 3→1.8。Unhedged 新增 Tron USDT 入金并概述 Binder50 PSA-10 卡牌指数市场；MahaWallet 演示 QRIS 印尼盾充值与银行提现。韩国 TTA 可靠性 sandbox 通过里程碑一（33 万 CC）；Certora 发布 Canton 审计指南；Foundation 开放 Tokenomics 与 Marketing 主席提名（10 月 31 日）及 11 月 5 日孟买 builders 晚间活动。', url: 'https://cantonnews.org/canton-roundup-new-funding-approvals-wallet-access-and-governance-votes' },
         { date: '2026-10-22', tag: '机构', title: 'Progmat 规划 Canton sandbox 测试代币化 JGB、存款与稳定币', body: 'CantonNews（2026-10-22）：Progmat 数字资产共创联盟（69 家银行、资管与券商）将推进 Canton 测试环境，把代币化日本国债与代币化银行存款、稳定币配对，用于 repo 式结算、抵押品及跨境/非营业时段场景，同时通过同步账户保持 book-entry JGB 法律地位。目标有条件 2026 年 11 月启动（仅 test token）；计划 2027 年春 interim 报告——延伸 8 月 MUFG–Digital Asset–Progmat JGB repo PoC，并在 sandbox 条款与费用下向原工作组外开放。', url: 'https://cantonnews.org/progmat-plans-canton-tests-for-tokenized-japanese-government-bonds' },
