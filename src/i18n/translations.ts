@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-03',
+          tag: 'Regulation',
+          title: 'SEC Corp Fin staff call Canton Coin a digital commodity in no-action letter',
+          body: 'CantonNews (November 3, 2026): The SEC Division of Corporation Finance said Canton Coin is a “digital commodity” under its March 2026 crypto assets framework and will not recommend enforcement if CC is minted programmatically by Super Validators, Validators and application providers as described in Digital Asset’s October 30 request—without registration under Section 5 of the Securities Act or Section 12(g) of the Exchange Act. Staff highlight representations that CC value ties to network operation and supply/demand rather than managerial profit expectations, and that Canton has no “central party” under the interpretation. The response is an enforcement posture only, not a legal conclusion; different facts could change outcomes. Primary staff letter dated November 3, 2026 at sec.gov.',
+          url: 'https://cantonnews.org/sec-staff-view-canton-coin-as-a-digital-commodity-in-no-action-letter',
+        },
+        {
+          date: '2026-11-03',
+          tag: 'Ecosystem',
+          title: 'Wells Fargo receives a Canton MainNet validator allocation',
+          body: 'CantonNews (November 3, 2026): The Canton Foundation Tokenomics Working Group’s November 2 MainNet allocation notice awards Wells Fargo capacity to operate a production validator—moving the bank from an earlier batch of 16 applicants that invited comments. An allocation is onboarding rights, not proof a node is live or tied to a named product; the notice lists Wells Fargo three times while saying each organization received one allocation, without explanation. Next evidence would be confirmation the bank has deployed software or disclosed intended use cases.',
+          url: 'https://cantonnews.org/wells-fargo-receives-a-canton-mainnet-validator-allocation',
+        },
+        {
+          date: '2026-11-02',
+          tag: 'Institutions',
+          title: 'Société Générale details $10M tokenized Treasury collateral acceptance on Canton',
+          body: 'CantonNews (November 2, 2026): Société Générale says its Prime Services & Clearing division accepted $10 million in tokenized US Treasuries as eligible collateral on Canton using DTCC Tokenization Service soft-launch assets—the on-chain transfer was reflected in existing back-office and collateral systems under its governance controls. The release adds operational detail to prior CIP-0115 collateral milestones but does not specify trade timing versus the July 15 milestone record, name a counterparty, or describe a completed repo financing. The bank plans recurring collateral movements, more eligible tokenized securities, and eventually on-chain agency/principal repo subject to approvals. Bank press release November 2, 2026.',
+          url: 'https://cantonnews.org/soci-t-g-n-rale-details-10-million-tokenized-treasury-collateral-move-on-canton',
+        },
+        {
+          date: '2026-11-02',
+          tag: 'Ecosystem',
+          title: 'Fairmint introduces onchain shareholder-record services for public companies',
+          body: 'CantonNews (November 2, 2026): Fairmint announced October 28 onchain transfer-agent services for public issuers—appointing Fairmint TA LLC would move the master securityholder file onto Canton via Open Cap Table Protocol while preserving shareholder rights, distinct from custodial or synthetic exposure structures SEC staff outlined in January. SEC transfer-agent FAQ staff views say registered agents may use distributed ledgers if recordkeeping rules are met; registration is not endorsement. No public-company migration is named yet; migration requires issuer authorization and handover from the incumbent transfer agent.',
+          url: 'https://cantonnews.org/fairmint-introduces-onchain-shareholder-record-services-for-public-companies',
+        },
+        {
+          date: '2026-11-01',
+          tag: 'Technology',
+          title: 'Canton 3.7 makes repair tools and key exports opt-in by default',
+          body: 'CantonNews (November 1, 2026): Canton 3.7.0 (October 29) switches participant repair commands and key export off by default so operators must explicitly enable sensitive capabilities; repairs can mutate stored ledger state and exports can remove keys from custody. Canton 3.7.1 (October 30) adds a configurable delay before Google Cloud key-version destruction (default 30 days). Protocol version 37 ships in the software but MainNet adoption follows separate synchronizer votes—for example the November 7 upgrade targets protocol version 36, not 37. Hybrid Party Replication groundwork appears in 3.7.0 notes with fuller support promised later.',
+          url: 'https://cantonnews.org/canton-3-7-puts-extra-safeguards-around-repairs-and-key-exports',
+        },
+        {
           date: '2026-10-31',
           tag: 'Technology',
           title: 'Canton Foundation approves Ligero grant for private token supply proofs',
@@ -4940,6 +4975,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-03', tag: '监管', title: 'SEC 公司金融部在 no-action 函中将 Canton Coin 视为数字商品', body: 'CantonNews（2026-11-03）：美国 SEC 公司金融部在 2026 年 3 月加密资产框架下称 Canton Coin 为「数字商品」，并依据 Digital Asset 10 月 30 日来函所述事实，若 CC 由 Super Validator、Validator 与应用提供方按描述方式程序化铸造，将不建议执法行动——无需按《证券法》第 5 条或《交易法》第 12(g) 条注册。工作人员强调 CC 价值与网络程序化运行及供需相关、而非依赖他人管理努力获利预期，且 Canton 在解释下无「central party」。回应仅表达执法立场，不构成法律结论；事实不同可能得出不同结论。主要 staff 函日期 2026 年 11 月 3 日，见 sec.gov。', url: 'https://cantonnews.org/sec-staff-view-canton-coin-as-a-digital-commodity-in-no-action-letter' },
+        { date: '2026-11-03', tag: '生态', title: 'Wells Fargo 获 Canton MainNet 验证者分配', body: 'CantonNews（2026-11-03）：Canton Foundation Tokenomics Working Group 11 月 2 日 MainNet 分配通知授予 Wells Fargo 运营生产验证者的容量——较早前 16 家申请批次（曾开放评论）再进一步。分配是 onboarding 资格，不等于节点已上线或已绑定具体产品；通知称每家机构获一份分配，却三次列出 Wells Fargo 且未解释。下一步证据将是银行部署软件或披露拟议用途的确认。', url: 'https://cantonnews.org/wells-fargo-receives-a-canton-mainnet-validator-allocation' },
+        { date: '2026-11-02', tag: '机构', title: '法国兴业银行披露在 Canton 接受 1000 万美元代币化国债抵押', body: 'CantonNews（2026-11-02）：法国兴业银行称 Prime Services & Clearing 在 Canton 接受 1000 万美元 DTCC Tokenization Service 软启动阶段代币化美国国债作为合格抵押品——链上转移在其现有后台与抵押品系统中入账，并处于该行治理与风控框架内。声明为既有 CIP-0115 抵押里程碑补充操作细节，未说明与 7 月 15 日里程碑记录是否为同一笔交易、未点名对手方，亦未描述已完成 repo 融资。银行计划推进循环抵押流转、评估更多合格代币化证券，并在审批允许下探索链上 agency/principal repo。银行新闻稿 2026 年 11 月 2 日。', url: 'https://cantonnews.org/soci-t-g-n-rale-details-10-million-tokenized-treasury-collateral-move-on-canton' },
+        { date: '2026-11-02', tag: '生态', title: 'Fairmint 为上市公司推出链上股东名册过户代理服务', body: 'CantonNews（2026-11-02）：Fairmint 于 10 月 28 日宣布面向上市公司的链上过户代理服务——发行人任命 Fairmint TA LLC 后，可通过 Open Cap Table Protocol 将 master securityholder file 迁至 Canton 并保留股东权利，区别于 SEC 工作人员 1 月说明中的托管权益或合成敞口结构。过户代理 FAQ 的工作人员观点称注册代理在满足记录规则前提下可使用分布式账本；注册本身非 SEC 背书。尚无已完成的上市公司迁移案例；迁移需发行人授权并完成自现任过户代理的交接。', url: 'https://cantonnews.org/fairmint-introduces-onchain-shareholder-record-services-for-public-companies' },
+        { date: '2026-11-01', tag: '技术', title: 'Canton 3.7 默认关闭修复工具与密钥导出', body: 'CantonNews（2026-11-01）：Canton 3.7.0（10 月 29 日）将 participant 修复命令与密钥导出默认关闭，运营方须显式启用敏感能力；修复可变更已存账本状态，导出可能将密钥移出托管。Canton 3.7.1（10 月 30 日）为 Google Cloud 密钥版本销毁增加可配置等待期（默认 30 天）。协议版本 37 随软件发布，MainNet 采用仍依赖单独 synchronizer 升级——例如 11 月 7 日升级目标为协议版本 36 而非 37。3.7.0 说明含 Hybrid Party Replication 基础工作，完整支持留待后续 3.7 版本。', url: 'https://cantonnews.org/canton-3-7-puts-extra-safeguards-around-repairs-and-key-exports' },
         { date: '2026-10-31', tag: '技术', title: 'Canton Foundation 批准 Ligero 私有代币供应量零知识证明拨款', body: 'CantonNews（2026-10-31）：Foundation 批准资助 Ligero 构建开源 ZK Supply Cap Prover，使兼容发行方（CIP-0056/CIP-0112）在不暴露持有人余额的情况下证明流通量未超声明上限——属开发批准，非 MainNet 已上线工具。Tech & Ops 于 10 月 29 日通过；拨款记录 10 月 30 日合并。上限 1000 万 CC：约 154 万 CC 用于规格、实现、测试与外部验证，约 84.6% 与累计生产采用挂钩（100 万/1 亿/10 亿/1000 亿美元资产价值档位；早期档位须无关联独立发行方；CC 不计入采用资产价值）。Noves 参与验证；Financial Privacy Inc. 承诺与 QEDIT 审阅首项设计里程碑。证明在链下生成，不增加链上发行强制；最大档位支付前须完成安全审计。', url: 'https://cantonnews.org/canton-approves-ligero-grant-for-private-token-supply-proofs' },
         { date: '2026-10-31', tag: '机构', title: '指南：Canton 应用背后的托管、数据与基础设施分工', body: 'CantonNews（2026-10-31）：说明机构使用 Canton 应用前的五类工作——托管（Fireblocks 钱包/审批工具与持牌托管角色区分；BitGo CC 托管及链外 Go Network 结算）、市场数据（Kaiko Data Off-Ramp 向 RWA.xyz 等订阅方分发 Broadridge DLR repo 统计）、工程（Moonsong 构建/节点/集成）、网络运营（participant 验证者、Global Synchronizer 排序与 Super Validator 运营方，及可选私有 synchronizer）、研究（SIFMA 受监管结算网络模拟数据结论，Digital Asset、Swift、Sullivan & Cromwell、Deloitte 参与，纽约联储创新中心为技术观察方——非联储背书）。背景引用 Canton Army 10 月 8 日地图中 375 家相关机构。', url: 'https://cantonnews.org/beyond-banks-the-custody-data-and-infrastructure-behind-canton' },
         { date: '2026-10-30', tag: '生态', title: '指南：从钱包到 swap、背书资产与支付的 Canton 应用流程', body: 'CantonNews（2026-10-30）：结合 Canton Army 10 月 25 日应用地图说明常见路径——Loop 式钱包审阅/签名且不共享密钥；Cantex Connect 经 memo、preapproval 与原子结算 swap（未成交可取消 pending 转账）；BitSafe BETH 铸造/赎回与 Temple 二级市场交易须分别满足账户检查；ACME Lend beta 池化借贷含抵押监控与清算；HandlPay 经用户名或链接路由（加密支付可用、卡支付暂禁、银行转账将上线，Canton 经邀请制应用内钱包或外部兼容钱包）。Kaiko Data On-Ramp 提供参考价；Featured App 状态关乎 CC 奖励资格，与产品接入及锁仓规则分开。', url: 'https://cantonnews.org/how-canton-s-app-ecosystem-works-from-wallets-to-markets' },
