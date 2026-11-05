@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-04',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: DLA Piper joins Foundation as Cancore passes $100M volume',
+          body: 'CantonNews (November 4, 2026): Developments from November 2–3 include DLA Piper named an Associate Member on November 2, expected to contribute to the Collateral Subcommittee and legal/regulatory standards work. Cancore reports cumulative trading volume above $100 million since mainnet launch across six listed networks including Canton and Ethereum, without per-chain breakdown. Obsidian Systems and FTP opened a vote on a combined 2.4 million CC proposal to build grant-milestone review software—1.4M CC for development and up to 1M CC for reports reviewers mark useful, with maintenance funded separately. IntellectEU signed off on Concordia’s third delivery for weighted voting and contract-consistency checks; the review confirms acceptance but gives no payment date.',
+          url: 'https://cantonnews.org/canton-roundup-dla-piper-joins-the-foundation-and-cancore-passes-100-million-in-volume',
+        },
+        {
+          date: '2026-11-04',
+          tag: 'Ecosystem',
+          title: 'Supanova opens Canton’s first memecoin launchpad',
+          body: 'CantonNews (November 4, 2026): Supanova launched a memecoin launchpad on Canton November 3 so individuals and communities can create tokens and trade in the same app, priced in CC, with email/Google/Apple sign-in and no browser extension. Its liquidity dashboard on November 4 showed 9.73 million CC in 24-hour volume, about $247,600 in pool value and 15 loaded pools across 87 listed markets. One example token ($QUADRILLIONS) graduated within a day with roughly $494,500 in 24-hour volume. Memecoins are speculative with sharp price moves and thin liquidity; Supanova’s disclosures cover copied identities, technology failures and lost access—listing or graduation is not an endorsement.',
+          url: 'https://cantonnews.org/supanova-launches-canton-s-first-memecoin-launchpad',
+        },
+        {
+          date: '2026-11-04',
+          tag: 'Ecosystem',
+          title: 'Exodus proposes prepaid card and wallet milestones for Canton Super Validator weight',
+          body: 'CantonNews (November 4, 2026): Exodus Movement’s November 2 application seeks staged release of Super Validator reward weight (10 units held back initially) tied to three services: a Monavate-issued virtual prepaid card (Cantonaut) for spending Canton-held assets; XO Swap Canton settlement requiring $10 million cumulative cross-network swaps; and Exodus wallet support for swap/deposit/receive plus a self-custodial card settling on Canton in real time, requiring $15 million in wallet transfers. Each milestone pairs a live product with public launch, Super Validator evidence review and two-thirds weight assignment; missed deadlines forfeit that portion under Exodus’s proposed terms—no customer launch date is set.',
+          url: 'https://cantonnews.org/exodus-proposes-a-prepaid-card-and-wallet-support-for-canton',
+        },
+        {
+          date: '2026-11-04',
+          tag: 'Regulation',
+          title: 'Canton Network highlights SEC no-action relief on Canton Coin as digital commodity',
+          body: 'Canton Network press release (November 4, 2026): Digital Asset’s public summary of SEC Division of Corporation Finance no-action relief states staff will not recommend enforcement if Canton Coin is minted programmatically by Super Validators, Validators and application providers without Securities Act Section 5 or Exchange Act Section 12(g) registration, based on submitted facts. The release cites Canton’s lack of a central party controlling participation or rewards, pre-existing functional network at token launch, no ICO/pre-mine and initial earning through infrastructure and application contributions. Staff positions are enforcement posture only—not legal conclusions—and the relief is described as the first since the March 2026 interpretive release and August 2026 Regulation Crypto Assets proposal.',
+          url: 'https://www.canton.network/canton-network-press-releases/sec-recognizes-canton-coin-as-a-digital-commodity-providing-additional-regulatory-clarity-for-institutional-adoption',
+        },
+        {
           date: '2026-11-03',
           tag: 'Regulation',
           title: 'SEC Corp Fin staff call Canton Coin a digital commodity in no-action letter',
@@ -4975,6 +5003,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-04', tag: '生态', title: 'Canton 综述：DLA Piper 加入 Foundation，Cancore 交易量突破 1 亿美元', body: 'CantonNews（2026-11-04）：11 月 2–3 日动态包括 DLA Piper 于 11 月 2 日成为 Associate Member，预期参与 Collateral Subcommittee 及法律/监管标准工作。Cancore 称主网上线以来累计交易量超 1 亿美元，覆盖包括 Canton 与 Ethereum 在内的六个网络，未给出分链占比。Obsidian Systems 与 FTP 就合计 240 万 CC 的 grant 里程碑审查软件提案开启投票——140 万 CC 用于开发、至多 100 万 CC 用于审查员认定有用的报告，维护另计。IntellectEU 对 Concordia 第三项交付（加权投票与合约一致性检查）签字验收；审查确认接受但未给出付款日期。', url: 'https://cantonnews.org/canton-roundup-dla-piper-joins-the-foundation-and-cancore-passes-100-million-in-volume' },
+        { date: '2026-11-04', tag: '生态', title: 'Supanova 上线 Canton 首个 memecoin 发射台', body: 'CantonNews（2026-11-04）：Supanova 于 11 月 3 日在 Canton 推出 memecoin 发射台，个人与社区可在同一应用内发币并以 CC 计价交易，支持邮箱/Google/Apple 登录、无需浏览器扩展。11 月 4 日流动性仪表盘显示 24 小时成交量 973 万 CC、池价值约 24.76 万美元、15 个已加载池、目录列 87 个市场。示例代币 $QUADRILLIONS 一日内毕业，24 小时成交量约 49.45 万美元。Memecoin 高度投机、波动大且流动性可能不足；Supanova 风险披露涵盖仿冒身份、技术故障与账户丢失——上线或毕业不代表背书或安全审查。', url: 'https://cantonnews.org/supanova-launches-canton-s-first-memecoin-launchpad' },
+        { date: '2026-11-04', tag: '生态', title: 'Exodus 提议预付卡与钱包里程碑以换取 Canton Super Validator 权重', body: 'CantonNews（2026-11-04）：Exodus Movement 11 月 2 日申请将 Super Validator 奖励权重（初始全部 10 单位暂扣）分阶段释放，绑定三项服务：与 Monavate 合作的虚拟预付卡 Cantonaut 用于消费 Canton 资产；XO Swap 接入 Canton 结算，要求累计跨链互换达 1000 万美元；Exodus 钱包支持互换/存取并以 Canton 实时结算的自托管卡，要求钱包转账达 1500 万美元。各里程碑需可运行产品、公开发布、Super Validator 审证及三分之二权重分配；按 Exodus 条款若错过截止则该部分权重作废——未给出用户可用日期。', url: 'https://cantonnews.org/exodus-proposes-a-prepaid-card-and-wallet-support-for-canton' },
+        { date: '2026-11-04', tag: '监管', title: 'Canton Network 发布稿强调 SEC 对 Canton Coin 数字商品 no-action 救济', body: 'Canton Network 新闻稿（2026-11-04）：Digital Asset 对 SEC 公司金融部 no-action 救济的公开摘要称，基于提交事实，若 CC 由 Super Validator、Validator 与应用提供方程序化铸造，工作人员将不建议就未按《证券法》第 5 条或《交易法》第 12(g) 条注册提起执法。稿中强调无 central party 控制参与或奖励、代币推出时网络已可运行、无 ICO/预挖且最初通过基础设施与应用贡献获得。Staff 立场仅为执法姿态而非法律结论；稿称此为 2026 年 3 月解释性发布与 8 月 Regulation Crypto Assets 提案以来首例此类救济表述。', url: 'https://www.canton.network/canton-network-press-releases/sec-recognizes-canton-coin-as-a-digital-commodity-providing-additional-regulatory-clarity-for-institutional-adoption' },
         { date: '2026-11-03', tag: '监管', title: 'SEC 公司金融部在 no-action 函中将 Canton Coin 视为数字商品', body: 'CantonNews（2026-11-03）：美国 SEC 公司金融部在 2026 年 3 月加密资产框架下称 Canton Coin 为「数字商品」，并依据 Digital Asset 10 月 30 日来函所述事实，若 CC 由 Super Validator、Validator 与应用提供方按描述方式程序化铸造，将不建议执法行动——无需按《证券法》第 5 条或《交易法》第 12(g) 条注册。工作人员强调 CC 价值与网络程序化运行及供需相关、而非依赖他人管理努力获利预期，且 Canton 在解释下无「central party」。回应仅表达执法立场，不构成法律结论；事实不同可能得出不同结论。主要 staff 函日期 2026 年 11 月 3 日，见 sec.gov。', url: 'https://cantonnews.org/sec-staff-view-canton-coin-as-a-digital-commodity-in-no-action-letter' },
         { date: '2026-11-03', tag: '生态', title: 'Wells Fargo 获 Canton MainNet 验证者分配', body: 'CantonNews（2026-11-03）：Canton Foundation Tokenomics Working Group 11 月 2 日 MainNet 分配通知授予 Wells Fargo 运营生产验证者的容量——较早前 16 家申请批次（曾开放评论）再进一步。分配是 onboarding 资格，不等于节点已上线或已绑定具体产品；通知称每家机构获一份分配，却三次列出 Wells Fargo 且未解释。下一步证据将是银行部署软件或披露拟议用途的确认。', url: 'https://cantonnews.org/wells-fargo-receives-a-canton-mainnet-validator-allocation' },
         { date: '2026-11-02', tag: '机构', title: '法国兴业银行披露在 Canton 接受 1000 万美元代币化国债抵押', body: 'CantonNews（2026-11-02）：法国兴业银行称 Prime Services & Clearing 在 Canton 接受 1000 万美元 DTCC Tokenization Service 软启动阶段代币化美国国债作为合格抵押品——链上转移在其现有后台与抵押品系统中入账，并处于该行治理与风控框架内。声明为既有 CIP-0115 抵押里程碑补充操作细节，未说明与 7 月 15 日里程碑记录是否为同一笔交易、未点名对手方，亦未描述已完成 repo 融资。银行计划推进循环抵押流转、评估更多合格代币化证券，并在审批允许下探索链上 agency/principal repo。银行新闻稿 2026 年 11 月 2 日。', url: 'https://cantonnews.org/soci-t-g-n-rale-details-10-million-tokenized-treasury-collateral-move-on-canton' },
