@@ -1,49 +1,56 @@
 # Scheduled agent run — canton-edu（定时 Agent → 摘要 → 人工上线）
 
-## 主路径：Cursor Automation（推荐）
+## 主路径：一条 Cursor Automation（推荐）
 
-**每天 08:00 北京时间（GMT+8）** 由 Cursor Cloud Agent 自动扫描并开 PR。
+**每天 08:00 北京时间** — 合并积压 PR → 扫描内容 → 有增量则开 PR → **同轮 merge**（当日部署）。
 
-1. 打开 [cursor.com/automations](https://cursor.com/automations) → **New automation**
+1. [cursor.com/automations](https://cursor.com/automations) → **New automation**
 2. 按 [.github/automations/canton-edu-daily-8am-gmt8.md](./automations/canton-edu-daily-8am-gmt8.md) 填写：
+   - Name：`canton-edu daily update → merge + PR`
    - Schedule：`0 8 * * *`，Timezone：`Asia/Shanghai`
    - Repository：`HashClawAI/canton-edu`
-   - Prompt：复制该文件中的 **Automation 指令** 整段
-3. **Run now** 试跑 → 确认 PR 能创建 → 启用定时
-4. **Prompt 更新时**：修改仓库内 `canton-edu-daily-8am-gmt8.md` 后，须在 cursor.com 对应 Automation **重新粘贴** Prompt（不会自动同步）
+   - Prompt：复制该文件 **Automation 指令** 整段
+3. **Run now** 试跑 → 确认 Phase 0/1/2 行为 → 启用定时
+4. **Prompt 更新时**：改仓库内 md 后须在 cursor.com **重新粘贴**
 
-Automation 已配置**去重规则**：已有 open content PR 时跳过；`translations.ts` 中 URL 已存在则不重复添加；无增量时不 commit、不开 PR。积压多条重复 PR 时合并为一条 batch PR（见 #41 范例）。
+三阶段分工（同一 Prompt 内顺序执行）：
 
-GitHub Actions **不会**代替 Cursor 改文案；下面 CI 仅作 RSS 候选、部署与**备用提醒**。
+| Phase | 作用 |
+|-------|------|
+| **0** | 审查并 squash merge 已有 open PR（去重 content PR） |
+| **1** | 拉最新 `main`，扫描 `translations.ts`，有增量才开 PR |
+| **2** | 若刚开了 content PR 且 build 已过 → 同轮 merge → 触发部署 |
 
-## 在 Cursor IDE 里手动跑（复制给 Agent）
+**可选拆分：** 若不想合并+扫描同一条任务，见 [canton-edu-daily-8am-pr-merge-gmt8.md](./automations/canton-edu-daily-8am-pr-merge-gmt8.md)（仅 merge，08:00）+ 内容扫描改 08:15。
+
+GitHub Actions **不会**代替 Cursor 改文案；CI 仅 RSS 候选、部署与备用提醒。
+
+## 在 Cursor IDE 里手动跑
 
 ```text
 在仓库 canton-edu 执行 skill「canton-edu-scheduled-publish」：
-1. 从 main 拉最新并新建分支 content/scheduled-今天日期
-2. 结合 canton-edu-updater 与 canton-edu-news-daily，对各模块做有依据的增量更新（translations.ts 英中成对、数组对齐）
-3. npm run build 必须通过
-4. 提交并 push，用 gh 创建 PR（非 merge），PR 描述写完整摘要
-5. 不要合并 PR；等我审完再合并
+1. 先 gh 合并可 merge 的 open content PR（或人工确认无积压）
+2. main 拉最新，分支 content/scheduled-今天日期
+3. canton-edu-updater + canton-edu-news-daily 增量更新 translations.ts（英中成对）
+4. npm run build 通过 → push → gh pr create
+5. 审查通过后 merge（或交给次日 08:00 Automation）
 ```
 
-## 人工上线
+## 人工兜底
 
-1. 打开 GitHub 上的 **PR**，看摘要与 diff。  
-2. 确认无误后 **Approve** → **Merge 到 `main`** → 触发 **Deploy to GitHub Pages**。  
-3. 合并后可关闭当日 `[content run]` / `[news scan]` Issue（若适用）。
+Automation Phase 0/2 merge 失败 → 人工 Review PR → Merge 到 `main` → `deploy.yml` 部署 https://ccprivacy.club/
 
 ## PR 模板
 
-创建 PR 时可选：`?template=content_update.md`
+`?template=content_update.md`
 
 ## 定时节奏
 
-| 机制 | Cron (UTC) | 约北京时间 | 作用 |
-|------|------------|------------|------|
-| **Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | **全站扫描 → 有增量才开 PR** |
-| `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | 定时全量重建；合并到 `main` 也会触发 |
+| 机制 | Cron | 约北京时间 | 作用 |
+|------|------|------------|------|
+| **Cursor Automation（合并+扫描）** | `0 8 * * *` Asia/Shanghai | **08:00** | merge → scan → PR → merge |
+| `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | GitHub Pages |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
-| `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | Automation 失败时的备用提醒 |
+| `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 失败备用提醒 |
 
-可选本机 LaunchAgent：见 `~/.cursor/skills/canton-edu-news-daily/scripts/com.user.canton-edu-news-reminder.plist`（默认 20:00 北京时间）。
+可选本机 LaunchAgent：`~/.cursor/skills/canton-edu-news-daily/scripts/com.user.canton-edu-news-reminder.plist`（默认 20:00 北京时间）。
