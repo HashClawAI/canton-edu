@@ -148,7 +148,7 @@ const compositeChart = (() => {
   const ih = H - pad.t - pad.b;
   const groupW = iw / Math.max(keys.length, 1);
   const barW = Math.min(28, (groupW * 0.7) / Math.max(series.length, 1));
-  const colors = ['#94a3b8', '#0f766e'];
+  const colors = ['#cbd5e1', '#94a3b8', '#0f766e'];
   const bars = keys.flatMap((key, ki) =>
     series.map((s, si) => {
       const value = s.values[key] ?? 0;
