@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-06',
+          tag: 'Institutions',
+          title: 'CantonNews essay: SEC commodity view, AI wallet MCP, and CNTN onchain trades converge',
+          body: 'CantonNews (November 6, 2026): A thematic review ties three November milestones—SEC Corporation Finance staff treating Canton Coin as a digital commodity with qualified no-action comfort on programmatic minting (November 3 response; network disclosed November 4), FTP Tech’s hosted Model Context Protocol letting assistants such as ChatGPT and Claude interact with Canton through connected wallets (November 4), and Nasdaq-listed CNTN completing first tokenized share trades on Canton via Fairmint TA, TSV/Tradecraft, Flowdesk and DRW Cumberland (November 4). The piece argues the combination moves institutional tokenization from demos toward operational equity and assistant-mediated workflows, while noting staff positions depend on presented facts and trade values were not disclosed.',
+          url: 'https://cantonnews.org/canton-network-is-making-history-and-wall-street-is-watching',
+        },
+        {
+          date: '2026-11-06',
+          tag: 'Institutions',
+          title: 'Morgan Stanley tokenizes US equities and Treasuries via DTCC service linked to Canton',
+          body: 'CantonNews (November 6, 2026): Morgan Stanley said in a November 3 post it converted US equities and Treasury securities into tokenized form through DTCC’s Tokenization Service—among signatories when DTS launched October 28—but did not name securities, amounts, dates or which integration (Canton versus private Besu) was used. DTS maps DTC custody entitlements into registered digital wallets while underlying assets remain at DTC; Morgan Stanley’s statement adds conversion evidence beyond signed access agreements. Separate October reporting cited Q1 2027 targets for tokenized equities on the bank’s alternative trading system; the November post does not reschedule that goal. Citadel and Société Générale disclosures remain the public examples tying Canton to DTCC-related collateral flows.',
+          url: 'https://cantonnews.org/morgan-stanley-uses-dtcc-tokenization-service-connected-to-canton-and-besu',
+        },
+        {
+          date: '2026-11-06',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Bitkub Thailand education, six Foundation members, APIs and wallets',
+          body: 'CantonNews (November 6, 2026): November 4 updates include Bitkub’s Canton Foundation collaboration on Thailand education beyond its existing CC/THB market; six new Foundation members (Granite River Trading, Altus, Doppler Finance, Diviko AG, otcDigital, Grofty Labs). USD1 submitted a Featured App request after August native Canton launch; Canborsa opened a trading/market-data API plus Confluo linking with read-and-spot keys; Cancore published an AI-assistant bot-trading guide using dedicated bot accounts with enforced limits; Rocky Wallet added Quadrillions transfers with Supanova; Supanova posted a beta-listing service notice; The Hub introduced Reels. Membership and applications do not imply every listed product is live on MainNet.',
+          url: 'https://cantonnews.org/canton-roundup-bitkub-s-thailand-plans-six-new-members-and-trading-tools',
+        },
+        {
+          date: '2026-11-06',
+          tag: 'Technology',
+          title: 'CatalyX Blockchain Manager 2.0 consolidates validator ops, keys and apps',
+          body: 'CantonNews (November 6, 2026): IntellectEU’s November 4 overview of CatalyX Blockchain Manager 2.0 describes a rebuilt console/API replacing 1.x—operators define a validator once, provision participant/validator/wallet/identity services, run Canton commands in-browser, connect custody via Wallet Gateway (DFNS and BitGo named) while signing stays with configured KMS on Azure/AWS, and optionally host parties across multiple participants for resilience. Sandbox DevNet validators can be created by name; Marketplace listings include Package Manager and Daml Coding Assistant. Version 2.0.2 release notes date to October 16; 1.x customers need a fresh install with migration support—distinct from earlier CatalyX Tokenization Explorer updates.',
+          url: 'https://cantonnews.org/how-catalyx-2-0-brings-canton-operations-into-one-console',
+        },
+        {
           date: '2026-11-05',
           tag: 'Governance',
           title: 'Featured App Guidance 2.0b takes effect with 1:1 marker rules and $0.79 cap',
@@ -5045,6 +5073,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-06', tag: '机构', title: 'CantonNews 评论：SEC 商品认定、AI 钱包 MCP 与 CNTN 链上成交交汇', body: 'CantonNews（2026-11-06）：专题稿串联 11 月三项里程碑——SEC 公司金融部将 Canton Coin 视为数字商品并对符合条件的程序化铸造给予 no-action 执法态度（11 月 3 日函；网络 11 月 4 日披露）、FTP Tech 托管 Model Context Protocol 使 ChatGPT、Claude 等助手经连接钱包与 Canton 交互（11 月 4 日）、纳斯达克上市公司 CNTN 经 Fairmint TA、TSV/Tradecraft、Flowdesk 与 DRW Cumberland 在 Canton 完成首批代币化股票交易（11 月 4 日）。文章认为组合推动机构代币化由演示走向股权与助手驱动工作流，并指出工作人员立场依赖所呈现事实且未披露交易金额。', url: 'https://cantonnews.org/canton-network-is-making-history-and-wall-street-is-watching' },
+        { date: '2026-11-06', tag: '机构', title: '摩根士丹利经 DTCC 代币化服务转换美股与国债，基础设施含 Canton', body: 'CantonNews（2026-11-06）：摩根士丹利 11 月 3 日发文称已通过 DTCC Tokenization Service 将美股与美国国债转为代币化形式——该行在 10 月 28 日上线时为签约方之一——但未披露证券品种、金额、日期或实际使用的集成（Canton 或私有 Besu）。DTS 将 DTC 托管权益映射至注册数字钱包，底层资产仍在 DTC；该行声明为已签约之外的实际转换证据。另据报道其另类交易系统支持代币化股票的目标为 2027 年第一季；11 月发文未调整该时间表。Citadel 与法国兴业银行披露仍是公开案例中与 Canton 相关的 DTCC 抵押流转示例。', url: 'https://cantonnews.org/morgan-stanley-uses-dtcc-tokenization-service-connected-to-canton-and-besu' },
+        { date: '2026-11-06', tag: '生态', title: 'Canton 综述：Bitkub 泰国教育、六家新成员、API 与钱包更新', body: 'CantonNews（2026-11-06）：11 月 4 日动态包括 Bitkub 与 Canton Foundation 在泰国开展教育合作（在既有 CC/THB 市场之外）；六家新 Foundation 成员（Granite River Trading、Altus、Doppler Finance、Diviko AG、otcDigital、Grofty Labs）。USD1 在 8 月原生上线 Canton 后提交 Featured App 申请；Canborsa 开放交易/行情 API 及 Confluo 只读+现货密钥连接；Cancore 发布 AI 助手 bot 交易指南，使用独立 bot 账户并强制限额；Rocky Wallet 增加 Quadrillions 转账并与 Supanova 合作；Supanova 发布 beta 上市服务说明；The Hub 推出 Reels。成员身份与申请不意味着所列产品均已 MainNet 上线。', url: 'https://cantonnews.org/canton-roundup-bitkub-s-thailand-plans-six-new-members-and-trading-tools' },
+        { date: '2026-11-06', tag: '技术', title: 'CatalyX Blockchain Manager 2.0 整合验证者运维、密钥与应用部署', body: 'CantonNews（2026-11-06）：IntellectEU 11 月 4 日对 CatalyX Blockchain Manager 2.0 的概述称以重建控制台/API 替代 1.x——运营方一次定义验证者即可配置 participant/validator/wallet/identity 服务、在浏览器执行 Canton 命令、经 Wallet Gateway（点名 DFNS、BitGo）连接托管而签名保留在 Azure/AWS KMS，并可多 participant 托管同一 party 以提高韧性。沙盒模式可按名称创建 DevNet 验证者；Marketplace 首批含 Package Manager 与 Daml Coding Assistant。2.0.2 发行说明日期为 10 月 16 日；1.x 客户需全新安装并由 IntellectEU 协助迁移——与此前 Tokenization Explorer 更新为不同产品线。', url: 'https://cantonnews.org/how-catalyx-2-0-brings-canton-operations-into-one-console' },
         { date: '2026-11-05', tag: '治理', title: 'Featured App Guidance 2.0b 生效：1:1 marker 规则与 0.79 美元奖励上限', body: 'Canton 论坛（2026-11-05）：Featured App Guidance v2.0b 于美东 9:00（14:00 UTC）生效，与 Super Validator 将 Featured App 每 reward weight 奖励上限从 1.50 美元降至 0.79 美元的表决同步。自该时刻起，marker 须与对应 burn 1:1、在 burn 后两个 reward round 内提交，且仅在验证者 traffic 余额低于过去 24 小时总 traffic 消耗时 burn 可计 marker；Featured Asset party 须按指引中的 asset 权重标记。Accountability Committee 自 14:00 UTC 起衡量 marker-to-burn 比率；超过 103% 的应用可在无进一步警告下暂停，最早 11 月 6 日审查。应用应在截止前更新 marker 自动化，活动模式重大变化应提前联系 Accountability。', url: 'https://forum.canton.network/t/featured-app-guidance-v2-0b-november-5-2026/9459' },
         { date: '2026-11-05', tag: '生态', title: 'Canton 批准四项 Development Fund 拨款：托管复制、traffic、治理与 Daml Shell', body: 'CantonNews（2026-11-05）：11 月 4 日四项 Development Fund 提案获批——资助后台基础设施而非面向消费者的已上线功能。Digital Asset 在线 party replication 获 1800 万 CC 基础（含采用奖励最高 2070 万 CC），目标在不暂停交易的情况下新增托管节点。Finoa 开源 traffic 购买应用获 299.5 万 CC，支持钱包签名给验证者充值。Digital Asset Super Validator 治理委托应用获 100 万 CC（每节点一票；仍须 CIP 接受）。Daml Shell 走向 Apache 2.0 开源获 528 万 CC 基础（约八个月）及条件早交付奖金。批准合并 PR；生产落地依赖交付软件、审计与里程碑验收。', url: 'https://cantonnews.org/canton-approves-four-grants-to-make-its-infrastructure-easier-to-use' },
         { date: '2026-11-05', tag: '市场', title: 'Circle 披露 9 月 30 日持有 3.799 亿枚 CC，公允价值约 4799 万美元', body: 'CantonNews（2026-11-05）：Circle 11 月 4 日发布的第三季度文件显示，截至 2026 年 9 月 30 日持有 379,921,930 枚 Canton Coin，公允价值 4798.7 万美元——为附注 7 数字资产表中按公允价值计量的最大单项——成本基础 1995.6 万美元。相较 6 月 30 日 384,446,370 枚 CC、公允价值 5430.6 万美元，持仓减少 4,524,440 枚（约 1.2%），记录价值下降约 11.6%；数量与公允价值变动衡量不同维度。披露为资产负债表快照，不等于新近购入 4800 万美元 CC，亦与 Circle 在 Canton 部署验证者及原生 USDC 计划分开。主要来源：Circle 季报数字资产附注。', url: 'https://cantonnews.org/circle-reports-379-9-million-canton-coin-worth-47-99-million' },
