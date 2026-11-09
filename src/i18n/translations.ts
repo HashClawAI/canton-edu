@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-08',
+          tag: 'Analysis',
+          title: 'CantonNews analysis: DTCC go-live did not move CC beyond bitcoin correlation',
+          body: 'CantonNews (November 8, 2026): A data review asks why CC barely reacted after DTCC\'s October 28 tokenization go-live on Canton and the October 30 HSBC–Franklin Templeton–Tradeweb–Fireblocks Uber weekend-liquidity pilot disclosure. Relative to bitcoin, CC moved about 1% more on go-live day—within a typical 2% daily gap and far below the roughly 10% CC-specific jump on the December 17, 2025 DTCC partnership announcement. The piece attributes muted fee impact to Canton charging for transaction data traffic rather than notional value, free per-node traffic (~14 MB/day), DTCC\'s separate private Besu integration burning no CC, and daily CC issuance far exceeding occasional institutional traffic purchases—the DTCC validator bought traffic once on October 26 (787,155 CC, about $79,000) while network-wide daily burn for traffic averaged about 15 million CC with little post-launch change. Temple, Kora, Cantor8 and Obsidian still dominate burns. Since August, CC has largely moved with broader crypto markets; the essay is analytical, not investment advice.',
+          url: 'https://cantonnews.org/dtcc-a-100-trillion-custodian-came-to-canton-cc-didn-t-move-an-inch',
+        },
+        {
+          date: '2026-11-08',
+          tag: 'Ecosystem',
+          title: 'Supanova applies for Featured App rewards on memecoin pairs with CBTC and CETH',
+          body: 'CantonNews (November 8, 2026): Supanova filed November 7 to extend its existing Featured App arrangements to proposed memecoin trading pairs against other featured Canton assets—naming CBTC and CETH as examples (MEME/CBTC and MEME/CETH are placeholders, not a specific new token ticker). The request seeks recognition as a Featured Asset-Moving App for eligible activity when users trade memecoins against featured assets rather than only CC-priced bonding-curve and pool markets launched November 3. Application-stage rewards would accrue on the payment-side featured asset, not as promised returns to memecoin buyers; Supanova says it does not share rewards with traders and would keep its existing CC lock unchanged. Approval and which markets go live remain undecided.',
+          url: 'https://cantonnews.org/supanova-seeks-app-rewards-for-new-memecoin-trading-pairs',
+        },
+        {
           date: '2026-11-07',
           tag: 'Governance',
           title: 'Foundation proposes removing 27.75 escrowed Super Validator weight across eight firms',
@@ -5101,6 +5115,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-08', tag: '分析', title: 'CantonNews 分析：DTCC 上线后 CC 仍主要随比特币波动', body: 'CantonNews（2026-11-08）：数据稿追问为何 DTCC 10 月 28 日在 Canton 代币化服务上线及 10 月 30 日披露 HSBC、Franklin Templeton、Tradeweb、Fireblocks 与 Uber 周末流动性试点后，CC 反应平淡。相对比特币，上线当日 CC 仅多涨约 1%——处于常见约 2% 日内差幅内，远低于 2025 年 12 月 17 日 DTCC 合作宣布时约 10% 的 CC 独立涨幅。文章归因于 Canton 按交易数据流量而非名义价值收费、每节点约 14 MB/日免费流量、DTCC 私有 Besu 集成不燃烧 CC，以及日增供给远超机构偶发 traffic 购买——DTCC 验证者 10 月 26 日仅购 traffic 一次（787,155 CC、约 7.9 万美元），全网 traffic 日均燃烧约 1500 万 CC 且上线后变化不大，Temple、Kora、Cantor8、Obsidian 仍占主导。8 月以来 CC 多与加密大盘联动；本文为分析而非投资建议。', url: 'https://cantonnews.org/dtcc-a-100-trillion-custodian-came-to-canton-cc-didn-t-move-an-inch' },
+        { date: '2026-11-08', tag: '生态', title: 'Supanova 申请 memecoin 兑 CBTC、CETH 对的 Featured App 奖励', body: 'CantonNews（2026-11-08）：Supanova 11 月 7 日申请在既有 Featured App 安排上扩展，为 memecoin 兑其他 featured Canton 资产（示例 CBTC、CETH；MEME/CBTC、MEME/CETH 为占位符而非新代币代码）的交易对申请奖励。意在获 Featured Asset-Moving App 认定，覆盖用户以 featured 资产而非仅 CC 计价的 bonding-curve 与池市场（11 月 3 日发射台上线）交易 memecoin 时的合格活动。申请阶段奖励记在支付侧 featured 资产，不承诺 memecoin 买家回报；Supanova 称不与交易者分享奖励且现有 CC 锁仓不变。是否批准及实际上线哪些市场对仍待定。', url: 'https://cantonnews.org/supanova-seeks-app-rewards-for-new-memecoin-trading-pairs' },
         { date: '2026-11-07', tag: '治理', title: 'Foundation 提议削减八家机构共 27.75 点暂扣 Super Validator 权重', body: 'CantonNews（2026-11-07）：Canton Foundation 提议在里程碑截止与缩减期过后未经验证完成的情况下，削减 YZi Labs（10）、Zodia（5）、Blockdaemon（4）、Ledger（3）、BitGo（2）、Republic（2）、Talos（1）与 Zero Hash（0.75）共 27.75 点暂扣 Super Validator 奖励权重——11 月 6 日首次宣布。受影响机构有 30 个日历日提交证据供复议；CIP-0111 要求 Super Validator 链下审查与链上表决后方可改配置。通知与已批 CIP-0127 CC 锁仓设计分开，未称八家全部退出 Canton 或关停产品。Foundation 亦将对已累积但未铸造的奖励另行建议，保留销毁未铸造份额的可能性。', url: 'https://cantonnews.org/canton-proposes-removing-escrowed-reward-weight-across-eight-organisations' },
         { date: '2026-11-07', tag: '生态', title: 'Canton 综述：585 万 CC 应用奖励实施、The Hub 开放注册与交易里程碑', body: 'CantonNews（2026-11-07）：11 月 6 日宣布、11 月 7 日复核——Digital Asset 与 Obsidian 申请 585 万 CC 实施 10 月通过的 CIP-0104 流量型应用奖励（235 万 CC 与 350 万 CC 含维护；拨款批准与 MainNet 激活仍为独立步骤）。The Hub 取消仅邀请码注册。Supanova 在 11 月 3 日上线后称 2000 万 CC 成交量但未说明统计窗口；11 月 6 日公告称 MainNet 升级准备期间新钱包创建暂不可用。Canborsa 统计 Trading Arena 第二季首周竞争成交量 667.17 万美元、551 名交易者；Tradecraft 报告 14 日超 240 万美元——数字不可相加。Tokenomics 放行 Stable Coin Inc. Featured App 申请进入 SV 链上表决；Canton Strategic Holdings 提交经确认的 2,977,563.3066 CC 分配计算并申请 10 月 15 日审查的额外 1.375 权重。Certora Package Analyzer 论坛帖（11 月 5 日晚）指引开发者做依赖映射，11 月 19 日有演练。', url: 'https://cantonnews.org/canton-roundup-app-reward-funding-open-access-and-trading-milestones' },
         { date: '2026-11-07', tag: '机构', title: 'Broadridge Canton DLR 10 月回购结算量 7.6 万亿美元', body: 'CantonNews（2026-11-07）：Broadridge 11 月 6 日发布称基于 Canton 的 Distributed Ledger Repo 平台 2026 年 10 月结算回购协议 7.6 万亿美元，日均约 3450 亿美元；9 月为月度 7.5 万亿美元、日均 3590 亿美元——按四舍五入数据，月度总量约升 1.3%、日均约降 3.9%。指标衡量经 DLR 的交易流量，非某时点 Canton 上持有资产。新闻稿将规模与其更广的 DLX 代币化平台联系。回购以证券作抵押短期融资；DLR 2023 年迁移至 Canton 并支持日内回购。', url: 'https://cantonnews.org/broadridge-s-canton-based-repo-platform-settles-7-6-trillion-in-october' },
