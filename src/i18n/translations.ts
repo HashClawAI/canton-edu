@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-10',
+          tag: 'Ecosystem',
+          title: 'Upflam opens public signup for Canton payments, invoices and WooCommerce',
+          body: 'CantonNews (November 10, 2026): Upflam removed invitation-only access on November 9 for its Canton payments platform—individuals and organisations can create wallets and use payment links, invoices, website buttons, donations, scheduled AutoPay transfers and team workspaces with shared traffic balances. A WooCommerce plugin, domain purchases in CC or USDCx via Upflam Cloud, 0.1% incoming-payment fees and wallet options (24-word, macOS Secure Enclave, multisig) are live; fiat ramps, Shopify and CLI or AI-agent tooling remain planned—separate from September’s privacy-pool proposal.',
+          url: 'https://cantonnews.org/upflam-opens-its-canton-payments-platform-to-the-public',
+        },
+        {
+          date: '2026-11-10',
+          tag: 'Institutions',
+          title: 'Progmat and Digital Asset sign MOU for Canton tokenized Japanese government bonds',
+          body: 'CantonNews (November 10, 2026): Progmat and Digital Asset signed a memorandum to build Canton support into Progmat’s digital-asset platform with tokenized JGB transactions and settlement first—linking onchain positions to Japan’s book-entry transfer registers, preserving legal settlement finality while enabling programmatic repo and collateral workflows, plus node-access services for banks and brokers. Work follows the 69-firm Digital Asset Co-Creation Consortium, October interim findings on synchronised management accounts, and the MUFG–Progmat–Digital Asset August DvP demo; demonstrations and commercialization remain ahead.',
+          url: 'https://cantonnews.org/progmat-and-digital-asset-sign-canton-agreement-for-japanese-government-bonds',
+        },
+        {
+          date: '2026-11-10',
+          tag: 'Tokenization',
+          title: 'Cashen unveils cashBTC, a BitGo-custodied BTC token planned for Canton Q1 2027',
+          body: 'CantonNews (November 10, 2026): Cashen introduced cashBTC for Bitcoin-backed settlement, trading and collateral on Canton—proposed 1:1 backing with mint after reserve deposit and burn before redemption, Cashen International (BVI) as issuer, Cayman trust with Leeward as trustee and BitGo Bank & Trust custody in segregated cold storage. Direct mint and redeem would stay institution-only with AML onboarding; wallets, venues and lending markets could integrate the issued token. A public reserve dashboard is described but not yet linked; launch target Q1 2027, extending Cashen’s CC locking business and collateral workstream participation.',
+          url: 'https://cantonnews.org/cashen-unveils-cashbtc-a-bitcoin-token-for-canton-planned-for-q1-2027',
+        },
+        {
+          date: '2026-11-05',
+          tag: 'Markets',
+          title: 'EDX opens institutional CBTC/USD spot with BitSafe; Granite River supplies liquidity',
+          body: 'CantonNews (November 5, 2026): EDX Markets launched CBTC/USD spot trading November 5 with BitSafe’s one-for-one Bitcoin-backed Canton token—eligible institutional clients get a dollar venue with Granite River Trading as launch liquidity provider, described as CBTC’s first centralised-exchange listing versus existing in-network markets such as Swap Monster. EDX outlined coming-weeks CBTC/USD perpetuals, later CBTC/BTC spot and planned CC collateral for the perp market; access stays institutional and depth is not guaranteed.',
+          url: 'https://cantonnews.org/edx-opens-cbtc-usd-trading-with-bitsafe-for-institutional-clients',
+        },
+        {
+          date: '2026-11-05',
+          tag: 'Governance',
+          title: 'Nomura and BOOSTRY proposed for escrowed Super Validator weight up to 10',
+          body: 'CantonNews (November 5, 2026): A governance draft would let Nomura Group and BOOSTRY earn up to 10 Super Validator reward weight by delivering confidential milestones—escrowed until Tokenomics Working Group review and two-thirds of Super Validator operators release rewards and assign ongoing weight. Public aims cite regulated access, institutional settlement, collateral integration and production activity without disclosed deliverable dates; SBI offered sponsorship while the draft still carries a placeholder CIP number and needs approval before describing participation as active.',
+          url: 'https://cantonnews.org/nomura-and-boostry-proposed-for-canton-super-validator-role',
+        },
+        {
           date: '2026-11-09',
           tag: 'Technology',
           title: 'CantonNews essay: the case for one network, one economy under CIP-0129',
@@ -5150,6 +5185,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-10', tag: '生态', title: 'Upflam 向公开放注册 Canton 支付、发票与 WooCommerce 接入', body: 'CantonNews（2026-11-10）：Upflam 11 月 9 日起取消邀请制，个人与机构可注册钱包并使用支付链接、发票、网站按钮、捐赠、AutoPay 定时转账与共享 traffic 的团队工作区。WooCommerce 插件、以 CC 或 USDCx 经 Upflam Cloud 购域名、0.1% 收款手续费及多种钱包形态（24 词助记词、macOS Secure Enclave、多签）已上线；法币出入金、Shopify 及 CLI/AI 代理工具仍规划中——与 9 月隐私池提案分开。', url: 'https://cantonnews.org/upflam-opens-its-canton-payments-platform-to-the-public' },
+        { date: '2026-11-10', tag: '机构', title: 'Progmat 与 Digital Asset 签署 MOU，推进 Canton 代币化日本国债', body: 'CantonNews（2026-11-10）：Progmat 与 Digital Asset 签署备忘录，在 Progmat 数字资产平台内建设 Canton 支持，优先代币化 JGB 交易与结算——链上头寸对接日本账簿过户登记、在保持法定结算终局性的同时支持可编程回购与抵押流程，并为银行与券商提供节点接入服务。工作承接 69 家机构的 Digital Asset 共创联盟、10 月中期关于同步管理账户的结论及 8 月 MUFG–Progmat–Digital Asset DvP 演示；商业服务仍待演示与商业化。', url: 'https://cantonnews.org/progmat-and-digital-asset-sign-canton-agreement-for-japanese-government-bonds' },
+        { date: '2026-11-10', tag: '代币化', title: 'Cashen 发布 cashBTC，计划 2027 年 Q1 在 Canton 上线 BitGo 托管 BTC 代币', body: 'CantonNews（2026-11-10）：Cashen 推出面向 Canton 结算、交易与抵押的 cashBTC——拟 1:1 支撑，储备入账后铸造、赎回前销毁；发行方为 Cashen International（BVI），开曼信托 Leeward 受托，BitGo Bank & Trust 分账冷托管。直接铸造/赎回限机构 AML 入驻；钱包、场所与借贷市场可集成已发行代币。公开储备看板已描述但未链上展示；目标 2027 年 Q1 上线，延伸其 CC 锁仓业务与抵押工作组参与。', url: 'https://cantonnews.org/cashen-unveils-cashbtc-a-bitcoin-token-for-canton-planned-for-q1-2027' },
+        { date: '2026-11-05', tag: '市场', title: 'EDX 与 BitSafe 开通机构 CBTC/USD 现货，Granite River 做市', body: 'CantonNews（2026-11-05）：EDX Markets 11 月 5 日上线 BitSafe 一比一 Bitcoin 背书 Canton 代币 CBTC/USD 现货——合资格机构客户获得美元交易场所，Granite River Trading 为上线做市商，称为 CBTC 首个中心化交易所挂牌（相对 Swap Monster 等网内市场）。EDX 预告数周内 CBTC/USD 永续、后续 CBTC/BTC 现货及永续市场拟接受 CC 抵押；访问仍限机构，深度不作保证。', url: 'https://cantonnews.org/edx-opens-cbtc-usd-trading-with-bitsafe-for-institutional-clients' },
+        { date: '2026-11-05', tag: '治理', title: 'Nomura 与 BOOSTRY 提案：最高 10 点暂扣 Super Validator 权重', body: 'CantonNews（2026-11-05）：治理草案拟让野村集团与 BOOSTRY 以未公开里程碑换取最高 10 点 Super Validator 奖励权重——暂扣至 Tokenomics 工作组审查且三分之二 SV 运营商释放奖励并配置持续权重。公开目标提及合规准入、机构结算、抵押整合与生产活动，未披露交付时间表；SBI 表示愿赞助，草案仍用占位 CIP 编号，须批准后方可视为参与生效。', url: 'https://cantonnews.org/nomura-and-boostry-proposed-for-canton-super-validator-role' },
         { date: '2026-11-09', tag: '技术', title: 'CantonNews 长文：CIP-0129 下的「一网一经济」', body: 'CantonNews（2026-11-09）：长文梳理 10 月 23 日 SV 批准后的 CIP-0129「Universal Burn and Synchronizer Pricing」——全球同步器以 CC 燃烧 traffic 并分配奖励，而专用同步器长期以商业许可费为主的经济割裂，以及提案如何在不强推全部应用上全球同步器的前提下对齐生产负载。涵盖注册、通过全球同步器的 paymaster 购 traffic 与燃烧、用量对账、聚合上报以归属奖励、专用同步器按吞吐量的示意性量价曲线、可选 CC 抵押的承诺折扣，与分阶段落地（约 2027 年 Q1 全面燃烧、Q3 定价细则 CIP），并强调运营商诚信上报的信任假设及专用同步器奖励分发仍属后续工程——非已生效费率变更。引用 CCTools 近 7/30 日燃烧约占计划增发 55–58% 作背景，非流通量收缩证明。', url: 'https://cantonnews.org/the-case-for-one-network-one-economy-cip-0129' },
         { date: '2026-11-09', tag: '代币化', title: 'OpenAssets 与 Digital Asset 合作将 DA Registry 引入 Canton', body: 'CantonNews（2026-11-09）：OpenAssets 与 Digital Asset 11 月 5 日宣布合作，助机构在 Canton 发行与管理代币化资产——OpenAssets 提供发行、结算、合规与分销平台，并作为 DA Registry（在 Canton 上创建、转移与管理资产，含可配置持有人白/黑名单及与身份与 AML 挂钩的转移审批）的实施伙伴。方案结合 OpenAssets 市场基建与 Canton 隐私及原子结算；公告未点名首个上线客户或日期。文中 CNTN 首笔代币化股票交易仅作交易场所、持有人资格与登记需求的独立背景，非 OpenAssets 已部署证据。', url: 'https://cantonnews.org/openassets-partners-with-digital-asset-to-bring-tokenization-tools-to-canton' },
         { date: '2026-11-09', tag: '技术', title: 'AnChain.AI 申请 160 万 CC 建设 Canton 隐私友好欺诈调查工具', body: 'CantonNews（2026-11-09）：AnChain.AI 11 月 8 日提交发展基金申请，拟 24 周耗资 160 万 CC 构建只读 Canton 调查工具，从运营商已有权查看的交易记录组装案件卷宗——对高频支付、超额金额或快速转出等模式告警，提示人工复核而非定罪。AI 可摘要证据或关闭仅用模板；工具不签名、不划资产、不改权限，默认关闭外部 AI 调用。约 62.5%（100 万 CC）与采用里程碑挂钩，含第 16 周至少一家独立机构在 MainNet 调查流程中使用、第 24 周两家各连续 30 天运行；连接器与规则引擎拟开源。申请仍待 champion，尚未声称生产级 Canton 集成。', url: 'https://cantonnews.org/anchain-ai-seeks-1-6-million-cc-for-canton-fraud-investigation-tools' },
