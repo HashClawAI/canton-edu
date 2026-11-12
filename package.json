@@ -17,7 +17,9 @@
     "geo:generate": "node scripts/generate-geo-files.mjs",
     "preview": "astro preview",
     "debug:pages-dns": "node scripts/debug-pages-dns.mjs",
-    "news:rss-scan": "node scripts/news-rss-scan.mjs"
+    "news:rss-scan": "node scripts/news-rss-scan.mjs",
+    "square:digest": "node scripts/binance-square-daily-digest.mjs",
+    "square:digest:publish": "node scripts/binance-square-daily-digest.mjs --publish"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

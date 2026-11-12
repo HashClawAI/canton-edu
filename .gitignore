@@ -6,6 +6,8 @@ dist
 *.log
 # RSS scan output (CI / local triage; do not commit)
 news-candidates.md
+# Local Binance Square digest drafts (may contain full post body)
+artifacts/binance-square/
 .env
 .env.*
 docs/education/canton-dev/.translate-cache/
