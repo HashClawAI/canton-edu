@@ -26,8 +26,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const TRANSLATIONS = path.join(ROOT, 'src', 'i18n', 'translations.ts');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts', 'binance-square');
-const SITE_NEWS = 'https://ccprivacy.club/zh/news';
-const SITE_HOME = 'https://ccprivacy.club/';
+const DIGEST_TITLE = 'Canton生态快报';
 
 function shanghaiYmd(d = new Date()) {
   return new Intl.DateTimeFormat('en-CA', {
@@ -144,32 +143,50 @@ function selectItems(all, endYmd, days) {
   return all.filter((it) => allowed.has(it.date));
 }
 
-function buildDigest(items, endYmd, days) {
-  const title = 'Canton 生态一览';
-
-  const lines = [];
-  lines.push(
-    `以下为 CC Privacy Club（ccprivacy.club）根据公开一手/可信来源整理的 Canton Network 动态摘要，共 ${items.length} 条。`,
+/** Strip outlet branding, source labels, and any URLs from item body copy. */
+function sanitizeBody(body) {
+  let s = String(body ?? '');
+  s = s.replace(/^CantonNews(?:（[^）]*）|\([^)]*\))[：:]\s*/i, '');
+  s = s.replace(/\bCantonNews\b/gi, '');
+  s = s.replace(/CC\s*Privacy\s*Club/gi, '');
+  s = s.replace(/ccprivacy\.club/gi, '');
+  s = s.replace(/https?:\/\/\S+/gi, '');
+  s = s.replace(/\bwww\.\S+/gi, '');
+  // Bare hostnames / RPC endpoints (e.g. ostia.devnet.romeprotocol.xyz)
+  s = s.replace(
+    /\b(?:[a-z0-9-]+\.)+(?:com|org|net|io|xyz|app|dev|info|co|ai|fi|cc|club|network|finance|exchange)(?:\/\S*)?/gi,
+    '',
   );
-  lines.push('');
-  lines.push(`完整双语站：${SITE_HOME}`);
-  lines.push(`中文动态页：${SITE_NEWS}`);
-  lines.push('');
+  s = s.replace(/(?:来源|出处|原文|链接|Source|URL)\s*[：:]\s*/gi, '');
+  s = s.replace(/\(\s*[;，,]\s*/g, '(');
+  s = s.replace(/\(\s*\)/g, '');
+  s = s.replace(/[ \t]{2,}/g, ' ');
+  s = s.replace(/\s+([，。；、）】])/g, '$1');
+  s = s.replace(/\n{3,}/g, '\n\n');
+  return s.trim();
+}
+
+function sanitizeTitle(title) {
+  return sanitizeBody(title);
+}
+
+function buildDigest(items) {
+  const lines = [];
 
   for (const it of items) {
-    lines.push(`【${it.tag}】${it.title}`);
-    lines.push(`日期：${it.date}`);
-    lines.push(it.body);
-    if (it.url) lines.push(`来源：${it.url}`);
+    const title = sanitizeTitle(it.title);
+    const body = sanitizeBody(it.body);
+    if (!title && !body) continue;
+    lines.push(`【${it.tag}】${title}`);
+    if (it.date) lines.push(it.date);
+    if (body) lines.push(body);
     lines.push('');
   }
 
-  lines.push('——');
-  lines.push(
-    '免责声明：CC Privacy Club 为非官方社区教育站，内容可能经人工与 AI 辅助汇集，不构成投资/法律建议；请以官方文档与一手公告为准。Canton Foundation / Digital Asset 未对本站背书。',
-  );
-
-  return { title, bodyTextOnly: lines.join('\n').trim() + '\n' };
+  return {
+    title: DIGEST_TITLE,
+    bodyTextOnly: lines.join('\n').trim() + '\n',
+  };
 }
 
 function writeArtifact(endYmd, payload) {
@@ -253,7 +270,7 @@ async function main() {
     return;
   }
 
-  const digest = buildDigest(items, endYmd, args.days);
+  const digest = buildDigest(items);
   const ledgerKey = args.days === 1 ? endYmd : `${endYmd}_d${args.days}`;
   const prior = ledger.posts?.[ledgerKey];
 
