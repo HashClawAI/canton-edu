@@ -20,7 +20,7 @@
 | **0** | 审查并 squash merge 已有 open PR（去重 content PR） |
 | **1** | 拉最新 `main`，扫描 `translations.ts`，有增量才开 PR |
 | **2** | 若刚开了 content PR 且 build 已过 → 同轮 merge → 触发部署 |
-| **3** | 用 ZH `news.items` **每条发一条**币安广场短贴（`Canton生态快报`；`npm run square:digest:publish`；需 `BINANCE_SQUARE_OPENAPI_KEY`） |
+| **3** | 用 ZH `news.items` **每条发一条**币安广场短贴（`【Canton生态讯息】`+标题+正文；`npm run square:digest:publish`；需 `BINANCE_SQUARE_OPENAPI_KEY`） |
 
 **可选拆分：** 若不想合并+扫描同一条任务，见 [canton-edu-daily-8am-pr-merge-gmt8.md](./automations/canton-edu-daily-8am-pr-merge-gmt8.md)（仅 merge，08:00）+ 内容扫描改 08:15。
 

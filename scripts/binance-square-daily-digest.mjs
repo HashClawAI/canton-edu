@@ -27,7 +27,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const TRANSLATIONS = path.join(ROOT, 'src', 'i18n', 'translations.ts');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts', 'binance-square');
-const SERIES_LABEL = 'Canton生态快报';
+const SERIES_LABEL = 'Canton生态讯息';
 const POST_GAP_MS = 1500;
 
 function shanghaiYmd(d = new Date()) {
@@ -181,9 +181,7 @@ function sanitizeTitle(title) {
 function buildShortPost(it) {
   const title = sanitizeTitle(it.title);
   const body = sanitizeBody(it.body);
-  const lines = [SERIES_LABEL, ''];
-  lines.push(`【${it.tag}】${title}`);
-  if (it.date) lines.push(it.date);
+  const lines = [`【${SERIES_LABEL}】${title}`];
   if (body) lines.push(body);
   return lines.join('\n').trim() + '\n';
 }

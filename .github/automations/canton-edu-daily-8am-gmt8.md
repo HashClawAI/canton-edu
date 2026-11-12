@@ -96,7 +96,7 @@ Do **not** merge non-content feat PRs in Phase 2 unless they were the only open 
 
 ## Phase 3 — Binance Square 短贴（每条新闻一条）
 
-Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's content). Publishes **one short Square post per** ZH `news.items` row (series label `Canton生态快报`; **no** external links / CantonNews / ccprivacy branding).
+Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's content). Publishes **one short Square post per** ZH `news.items` row (prefix `【Canton生态讯息】` + title, then body; no tag/date; **no** external links / CantonNews / ccprivacy branding).
 
 ### Auth
 - Prefer env `BINANCE_SQUARE_OPENAPI_KEY` (Automation secrets).
