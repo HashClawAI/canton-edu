@@ -1,6 +1,6 @@
 # Cursor Automation — canton-edu 每日更新（合并 + 扫描，08:00 GMT+8）
 
-在 [cursor.com/automations](https://cursor.com/automations) 创建**一条**任务即可：**先合并积压 PR，再扫描开新 PR**（可选同轮合并刚开的 PR）。GitHub Actions **不能**代替 Cursor 改 `translations.ts`。
+在 [cursor.com/automations](https://cursor.com/automations) 创建**一条**任务即可：**先合并积压 PR，再扫描开新 PR**（可选同轮合并刚开的 PR），再发**币安广场长文日报**。GitHub Actions **不能**代替 Cursor 改 `translations.ts`。
 
 > **可选拆分：** 若希望合并与扫描分开调度，见 [canton-edu-daily-8am-pr-merge-gmt8.md](./canton-edu-daily-8am-pr-merge-gmt8.md)（08:00 仅 merge）+ 本文件 Phase 1 单独跑（08:15）。
 
@@ -22,7 +22,7 @@
 ## Automation 指令（复制到 Prompt 框）
 
 ```text
-You maintain HashClawAI/canton-edu (deploys to https://ccprivacy.club/). Each run has **three phases in order** — do not skip Phase 0.
+You maintain HashClawAI/canton-edu (deploys to https://ccprivacy.club/). Each run has **four phases in order** — do not skip Phase 0.
 
 ---
 
@@ -94,11 +94,38 @@ Do **not** merge non-content feat PRs in Phase 2 unless they were the only open 
 
 ---
 
+## Phase 3 — Binance Square 长文日报（站内增量同步广场）
+
+Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's content). Publishes **one** Chinese long article from ZH `news.items`.
+
+### Auth
+- Prefer env `BINANCE_SQUARE_OPENAPI_KEY` (Automation secrets).
+- Else local file `~/.config/binance-square/openapi-key`.
+- **Never** print the full key; never commit it; never pass `--key`.
+
+### When to publish
+1. `git checkout main && git pull origin main`
+2. Dry-run first (default = **latest ZH news date not yet in ledger** — scan days often label items as yesterday):
+   `npm run square:digest`
+3. If JSON says `skipped: true` → note reason and stop Phase 3.
+4. If dry-run shows items → publish:
+   `npm run square:digest:publish`
+5. Ledger at `~/.config/binance-square/ccprivacy-digest-ledger.json` blocks re-post of the same news date; only use `--force` if human explicitly asks.
+6. Report Square `shareLink` / `id` + digest date in the final table. Do **not** rewrite titles/bodies by hand — the script owns the format.
+
+### When to skip Phase 3
+- Missing API key → skip with reason (do not invent content).
+- All ZH news dates already in ledger → skip.
+- Dry-run empty / parse error → skip and report.
+
+---
+
 ## Hard stops
 - Force-push to `main`
 - Open duplicate content PR while one is still open after Phase 0
 - Merge without build when PR touches build-affecting paths
 - Merge overlapping content PRs without closing duplicates
+- Paste or log the full Binance Square API key
 
 ## Final reply (markdown)
 | Phase | Result |
@@ -106,6 +133,7 @@ Do **not** merge non-content feat PRs in Phase 2 unless they were the only open 
 | 0 merge | PR #n merged / closed / skipped — reason |
 | 1 scan | PR opened / skipped — reason |
 | 2 merge | merged / skipped — reason |
+| 3 Square | published link / skipped — reason |
 Include deploy URL if merged.
 ```
 
@@ -119,7 +147,7 @@ Include deploy URL if merged.
 
 | 机制 | Cron | 约北京时间 | 作用 |
 |------|------|------------|------|
-| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | merge 积压 → 扫描 → 开 PR → 可选同轮 merge |
+| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | merge 积压 → 扫描 → 开 PR → 可选同轮 merge → 币安广场长文日报 |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | GitHub Pages |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 失败备用提醒 |
@@ -132,3 +160,5 @@ Include deploy URL if merged.
 | 连续重复 PR | 更新 Prompt 为本文件最新版 |
 | Merge 被 rules 拦截 | Required approvals 应为 0；或 `gh pr merge --admin` |
 | 无更新 | 正常；应输出 `No changes` |
+| Phase 3 Missing Square key | 在 Automation secrets 配置 `BINANCE_SQUARE_OPENAPI_KEY`，或本机 `~/.config/binance-square/openapi-key` |
+| Phase 3 当日无新闻 | 正常 skip；有增量站内更新但日期不是今天时，可用 `--date` 人工补发 |

@@ -6,7 +6,7 @@
 
 | 文件 | 调度 | 说明 |
 |------|------|------|
-| **[canton-edu-daily-8am-gmt8.md](./canton-edu-daily-8am-gmt8.md)** | `0 8 * * *` · `Asia/Shanghai` | **08:00** Phase 0 合并积压 PR → Phase 1 内容扫描开 PR → Phase 2 同轮 merge（当日上线） |
+| **[canton-edu-daily-8am-gmt8.md](./canton-edu-daily-8am-gmt8.md)** | `0 8 * * *` · `Asia/Shanghai` | **08:00** Phase 0 合并 → Phase 1 扫描开 PR → Phase 2 同轮 merge → Phase 3 币安广场长文日报 |
 
 在 cursor.com 只建 **一个** Automation，Name 如 `canton-edu daily update → merge + PR`，Prompt 复制上表文件中的 **Automation 指令**。
 
