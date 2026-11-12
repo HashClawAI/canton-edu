@@ -145,10 +145,7 @@ function selectItems(all, endYmd, days) {
 }
 
 function buildDigest(items, endYmd, days) {
-  const title =
-    days === 1
-      ? `CC Privacy Club 日报 · ${endYmd}`
-      : `CC Privacy Club 日报 · ${endYmd}（近 ${days} 日）`;
+  const title = 'Canton 生态一览';
 
   const lines = [];
   lines.push(
