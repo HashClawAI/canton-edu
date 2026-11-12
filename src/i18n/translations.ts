@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-11',
+          tag: 'Governance',
+          title: 'CIP-0130 approves Nomura Group / BOOSTRY Super Validator participation up to 10 weight',
+          body: 'CantonNews (November 11, 2026): CIP-0130 passed November 10 with 11 votes in favour and two non-votes, approving a single Super Validator participation framework for Nomura Group and BOOSTRY—not separate 10-weight slots per entity. Up to 10 reward weight in total can be earned through verified milestones under sponsorship from SBI Digital Asset and endorsement from Tradeweb; rewards remain escrowed until evidence and governance steps release them. BOOSTRY is 51% owned by Nomura Holdings; the arrangement supersedes the November 5 draft still listed under the earlier proposed-for-role article but does not by itself prove milestones are complete or weight is already minted.',
+          url: 'https://cantonnews.org/nomura-and-boostry-win-approval-for-canton-super-validator-participation',
+        },
+        {
+          date: '2026-11-11',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Send wallet restored, Cancore adds Base and Supanova launches Thesis',
+          body: 'CantonNews (November 11, 2026): November 10 digest—Send restored its Canton Wallet on a new validator after October’s outage, asking users to approve a one-time passkey security upgrade with no fee or asset movement while keeping addresses unchanged. Cancore added Base as a seventh connection alongside Canton, Ethereum, Arbitrum, BNB Chain, Robinhood Chain and TRON for atomic cross-network swaps. Supanova launched Thesis, a holder-written rationale field on its memecoin launchpad. Developer notes include Development Fund merger of the 12.95 million CC QuickStart uplift, Canton .NET SDK 0.8.0 for Canton 3.7 / Splice 0.10.0, and open votes on ChainSafe Daml test patterns (621,000 CC) plus Triple Play Labs private eligibility credentials (up to 7.15 million CC).',
+          url: 'https://cantonnews.org/canton-roundup-send-returns-cancore-adds-base-and-supanova-launches-thesis',
+        },
+        {
+          date: '2026-11-11',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: free Daml courses, Supanova launch count and governance votes',
+          body: 'CantonNews (November 11, 2026): Roundup for November 9–10—Canton Foundation opened free self-paced Developer Certification courses (Daml newcomer, app developer and Daml 2→3 paths; exams $150 with fee waivers available). CanTrustAI announced free model tiers, signup credits and x402 payments; Supanova reported 350 token launches on November 9 with bot-rating work planned. Cancore published October metrics ($42.7M volume, 127,772 trades, $312,600 protocol revenue). Governance includes Nomura / BOOSTRY CIP-0130 entering vote on November 10 and several Development Fund items (Fairmint–Blockworks asset data feed, Eunoia Ethereum-facing tooling, OS Ledger monitoring, Digital Asset–Obsidian CIP-0127 locking implementation) at various stages.',
+          url: 'https://cantonnews.org/canton-roundup-developer-courses-app-updates-and-new-funding-votes',
+        },
+        {
+          date: '2026-11-11',
+          tag: 'Technology',
+          title: 'Draft paymaster proposal sets first Universal Burn operating model on dedicated synchronizers',
+          body: 'CantonNews (November 11, 2026): A November 10 draft builds on October’s CIP-0129 framework by describing how dedicated synchronizers could pay for recorded traffic via post-hoc CC burns on the Global Synchronizer—a first concrete Universal Burn flow before automated trustless enforcement. The model has dedicated synchronizers report data processed in ten-minute intervals, operators and a designated paymaster apply pricing, the paymaster burns CC afterward, and burn-generated coupons feed validator and featured-app rewards (requiring a Featured App right for applicable featured rewards). It remains discussion-stage engineering, not live dedicated-synchronizer billing.',
+          url: 'https://cantonnews.org/new-canton-paymaster-proposal-sets-out-the-first-step-toward-universal-burn',
+        },
+        {
+          date: '2026-11-11',
+          tag: 'Technology',
+          title: 'Rome Protocol introduces Ostia, a ZK EVM on Canton DevNet',
+          body: 'CantonNews (November 11, 2026): Rome Protocol publicly introduced Ostia on November 9—a ZK EVM that has run on Canton DevNet since October 22 where ZisK proves each EVM block before a confirming participant commits it atomically with linked Canton actions (chain id 770101, test coin tROME, RPC at ostia.devnet.romeprotocol.xyz). Builders can deploy Solidity with Foundry or Hardhat, bridge test assets to Canton twins, and open Canton accounts via wallet signatures. Rome currently operates all Ostia services; documentation warns balances can reset and must not carry real value.',
+          url: 'https://cantonnews.org/rome-introduces-ostia-a-zk-evm-on-canton-devnet',
+        },
+        {
           date: '2026-11-10',
           tag: 'Ecosystem',
           title: 'Upflam opens public signup for Canton payments, invoices and WooCommerce',
@@ -5185,6 +5220,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-11', tag: '治理', title: 'CIP-0130 批准 Nomura Group / BOOSTRY Super Validator 参与框架，最高 10 点权重', body: 'CantonNews（2026-11-11）：CIP-0130 于 11 月 10 日以 11 票赞成、2 票未投通过，批准野村集团与 BOOSTRY 共用一套 Super Validator 参与框架——非各获独立 10 点权重。在 SBI Digital Asset 赞助、Tradeweb 背书下，可通过经验证里程碑合计赚取最高 10 点奖励权重；奖励仍暂扣至证据与治理步骤释放。BOOSTRY 由野村控股 51% 持股；安排取代 11 月 5 日「拟申请」报道的草案状态，本身不证明里程碑已完成或权重已铸造。', url: 'https://cantonnews.org/nomura-and-boostry-win-approval-for-canton-super-validator-participation' },
+        { date: '2026-11-11', tag: '生态', title: 'Canton 周报：Send 恢复钱包、Cancore 接入 Base、Supanova 上线 Thesis', body: 'CantonNews（2026-11-11）：11 月 10 日速览——Send 在新验证者上恢复 Canton Wallet，请用户下次登录以 passkey 批准一次性安全升级，无费用、不划转资产且地址不变，承接 10 月中断说明。Cancore 新增 Base，与 Canton、Ethereum、Arbitrum、BNB Chain、Robinhood Chain、TRON 共七条连接，支持原子跨网兑换。Supanova 上线 Thesis，供持有者在 memecoin 发射台补充持仓理由。开发者侧包括发展基金合并 1295 万 CC QuickStart 提升提案、面向 Canton 3.7 / Splice 0.10.0 的 Canton .NET SDK 0.8.0，以及 ChainSafe Daml 测试模式（62.1 万 CC）与 Triple Play Labs 私有合格凭证（最高 715 万 CC）等开放表决。', url: 'https://cantonnews.org/canton-roundup-send-returns-cancore-adds-base-and-supanova-launches-thesis' },
+        { date: '2026-11-11', tag: '生态', title: 'Canton 周报：免费 Daml 课程、Supanova 发射数据与治理表决', body: 'CantonNews（2026-11-11）：11 月 9–10 日汇总——Canton Foundation 开放免费自学 Developer Certification（Daml 入门、应用开发与 Daml 2→3 路径；考试 150 美元，部分生态可获费用减免）。CanTrustAI 宣布免费模型档位、注册赠额与 x402 支付；Supanova 称 11 月 9 日累计 350 次代币发射并规划反机器人评分。Cancore 公布 10 月数据（交易量 4270 万美元、127,772 笔成交、协议收入 31.26 万美元）。治理含 Nomura / BOOSTRY CIP-0130 于 11 月 10 日进入表决，及 Fairmint–Blockworks 资产数据馈送、Eunoia 以太坊兼容工具、OS Ledger 监控、Digital Asset–Obsidian CIP-0127 锁仓实现等多项发展基金处于不同阶段。', url: 'https://cantonnews.org/canton-roundup-developer-courses-app-updates-and-new-funding-votes' },
+        { date: '2026-11-11', tag: '技术', title: '草案 paymaster 提案描绘专用同步器 Universal Burn 首步运作模式', body: 'CantonNews（2026-11-11）：11 月 10 日草案在 10 月通过的 CIP-0129 框架上说明专用同步器如何通过在 Global Synchronizer 事后燃烧 CC 为已记录 traffic 付费——在自动化、去信任执行可用之前的首批可操作建议。专用同步器按十分钟区间上报处理数据，运营商与指定 paymaster 计价后燃烧 CC，燃烧产生优惠券归属验证者与应用奖励（适用 featured 奖励须 Featured App 权利）。仍为讨论阶段工程，非已生效的专用同步器计费。', url: 'https://cantonnews.org/new-canton-paymaster-proposal-sets-out-the-first-step-toward-universal-burn' },
+        { date: '2026-11-11', tag: '技术', title: 'Rome Protocol 发布 Ostia：Canton DevNet 上的 ZK EVM', body: 'CantonNews（2026-11-11）：Rome Protocol 11 月 9 日公开 Ostia——自 10 月 22 日起运行于 Canton DevNet 的 ZK EVM，由 ZisK 证明每个 EVM 区块后，确认方 participant 将其与关联 Canton 操作原子提交（chain id 770101，测试币 tROME，RPC ostia.devnet.romeprotocol.xyz）。开发者可用 Foundry/Hardhat 部署 Solidity、桥接测试资产至 Canton twin，并以钱包签名开通 Canton 账户。当前 Rome 运营全部 Ostia 服务；文档警告余额可能重置，不得承载真实价值。', url: 'https://cantonnews.org/rome-introduces-ostia-a-zk-evm-on-canton-devnet' },
         { date: '2026-11-10', tag: '生态', title: 'Upflam 向公开放注册 Canton 支付、发票与 WooCommerce 接入', body: 'CantonNews（2026-11-10）：Upflam 11 月 9 日起取消邀请制，个人与机构可注册钱包并使用支付链接、发票、网站按钮、捐赠、AutoPay 定时转账与共享 traffic 的团队工作区。WooCommerce 插件、以 CC 或 USDCx 经 Upflam Cloud 购域名、0.1% 收款手续费及多种钱包形态（24 词助记词、macOS Secure Enclave、多签）已上线；法币出入金、Shopify 及 CLI/AI 代理工具仍规划中——与 9 月隐私池提案分开。', url: 'https://cantonnews.org/upflam-opens-its-canton-payments-platform-to-the-public' },
         { date: '2026-11-10', tag: '机构', title: 'Progmat 与 Digital Asset 签署 MOU，推进 Canton 代币化日本国债', body: 'CantonNews（2026-11-10）：Progmat 与 Digital Asset 签署备忘录，在 Progmat 数字资产平台内建设 Canton 支持，优先代币化 JGB 交易与结算——链上头寸对接日本账簿过户登记、在保持法定结算终局性的同时支持可编程回购与抵押流程，并为银行与券商提供节点接入服务。工作承接 69 家机构的 Digital Asset 共创联盟、10 月中期关于同步管理账户的结论及 8 月 MUFG–Progmat–Digital Asset DvP 演示；商业服务仍待演示与商业化。', url: 'https://cantonnews.org/progmat-and-digital-asset-sign-canton-agreement-for-japanese-government-bonds' },
         { date: '2026-11-10', tag: '代币化', title: 'Cashen 发布 cashBTC，计划 2027 年 Q1 在 Canton 上线 BitGo 托管 BTC 代币', body: 'CantonNews（2026-11-10）：Cashen 推出面向 Canton 结算、交易与抵押的 cashBTC——拟 1:1 支撑，储备入账后铸造、赎回前销毁；发行方为 Cashen International（BVI），开曼信托 Leeward 受托，BitGo Bank & Trust 分账冷托管。直接铸造/赎回限机构 AML 入驻；钱包、场所与借贷市场可集成已发行代币。公开储备看板已描述但未链上展示；目标 2027 年 Q1 上线，延伸其 CC 锁仓业务与抵押工作组参与。', url: 'https://cantonnews.org/cashen-unveils-cashbtc-a-bitcoin-token-for-canton-planned-for-q1-2027' },
