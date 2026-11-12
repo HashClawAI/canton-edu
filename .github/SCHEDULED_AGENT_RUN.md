@@ -49,7 +49,8 @@ Automation Phase 0/2 merge 失败 → 人工 Review PR → Merge 到 `main` → 
 
 | 机制 | Cron | 约北京时间 | 作用 |
 |------|------|------------|------|
-| **Cursor Automation（合并+扫描+广场）** | `0 8 * * *` Asia/Shanghai | **08:00** | merge → scan → PR → merge → Binance Square 短贴 |
+| **Cursor Automation（合并+扫描）** | `0 8 * * *` Asia/Shanghai | **08:00** | merge → scan → PR → merge（Prompt 含 Phase 3 时也会尝试广场） |
+| **本机 LaunchAgent（广场短贴）** | 每天 **08:30** | **08:30** | `com.hashclaw.canton-edu-square-digest`：拉 `main` 后 `npm run square:digest:publish`（用本机 `~/.config/binance-square/openapi-key`） |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | GitHub Pages |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 失败备用提醒 |
