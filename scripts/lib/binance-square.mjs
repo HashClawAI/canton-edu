@@ -1,5 +1,5 @@
 /**
- * Minimal Binance Square OpenAPI client (text / long article only).
+ * Minimal Binance Square OpenAPI client (short text + long article).
  * Key: BINANCE_SQUARE_OPENAPI_KEY or ~/.config/binance-square/openapi-key
  */
 import fs from 'node:fs';
@@ -41,27 +41,33 @@ export function resolveApiKey() {
 
 export function readLedger() {
   if (!fs.existsSync(LEDGER_FILE)) {
-    return { posts: {} };
+    return { items: {}, posts: {} };
   }
   try {
     const raw = JSON.parse(fs.readFileSync(LEDGER_FILE, 'utf8'));
-    if (!raw || typeof raw !== 'object') return { posts: {} };
-    if (!raw.posts || typeof raw.posts !== 'object') return { posts: {} };
-    return raw;
+    if (!raw || typeof raw !== 'object') return { items: {}, posts: {} };
+    return {
+      items: raw.items && typeof raw.items === 'object' ? raw.items : {},
+      posts: raw.posts && typeof raw.posts === 'object' ? raw.posts : {},
+    };
   } catch {
-    return { posts: {} };
+    return { items: {}, posts: {} };
   }
 }
 
 export function writeLedger(ledger) {
   fs.mkdirSync(CONFIG_DIR, { recursive: true, mode: 0o700 });
-  fs.writeFileSync(LEDGER_FILE, `${JSON.stringify(ledger, null, 2)}\n`, {
+  const out = {
+    items: ledger.items ?? {},
+    posts: ledger.posts ?? {},
+  };
+  fs.writeFileSync(LEDGER_FILE, `${JSON.stringify(out, null, 2)}\n`, {
     mode: 0o600,
   });
   fs.chmodSync(LEDGER_FILE, 0o600);
 }
 
-export async function publishArticle(apiKey, { title, bodyTextOnly }) {
+async function contentAdd(apiKey, body) {
   const res = await fetch(`${BASE_URL_V1}/content/add`, {
     method: 'POST',
     headers: {
@@ -69,11 +75,7 @@ export async function publishArticle(apiKey, { title, bodyTextOnly }) {
       'Content-Type': 'application/json',
       clienttype: 'binanceSkill',
     },
-    body: JSON.stringify({
-      contentType: 2,
-      title,
-      bodyTextOnly,
-    }),
+    body: JSON.stringify(body),
   });
 
   const raw = await res.text();
@@ -95,4 +97,25 @@ export async function publishArticle(apiKey, { title, bodyTextOnly }) {
   }
 
   return json.data;
+}
+
+/** Short Square post (contentType=1). */
+export async function publishShortPost(apiKey, { bodyTextOnly }) {
+  return contentAdd(apiKey, {
+    contentType: 1,
+    bodyTextOnly,
+  });
+}
+
+/** Long article (contentType=2). Kept for ad-hoc use. */
+export async function publishArticle(apiKey, { title, bodyTextOnly }) {
+  return contentAdd(apiKey, {
+    contentType: 2,
+    title,
+    bodyTextOnly,
+  });
+}
+
+export function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

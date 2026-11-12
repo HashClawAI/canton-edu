@@ -20,7 +20,7 @@
 | **0** | 审查并 squash merge 已有 open PR（去重 content PR） |
 | **1** | 拉最新 `main`，扫描 `translations.ts`，有增量才开 PR |
 | **2** | 若刚开了 content PR 且 build 已过 → 同轮 merge → 触发部署 |
-| **3** | 用 ZH `news.items` 生成并发布币安广场**长文日报**（`npm run square:digest:publish`；需 `BINANCE_SQUARE_OPENAPI_KEY`） |
+| **3** | 用 ZH `news.items` **每条发一条**币安广场短贴（`Canton生态快报`；`npm run square:digest:publish`；需 `BINANCE_SQUARE_OPENAPI_KEY`） |
 
 **可选拆分：** 若不想合并+扫描同一条任务，见 [canton-edu-daily-8am-pr-merge-gmt8.md](./automations/canton-edu-daily-8am-pr-merge-gmt8.md)（仅 merge，08:00）+ 内容扫描改 08:15。
 
@@ -49,7 +49,7 @@ Automation Phase 0/2 merge 失败 → 人工 Review PR → Merge 到 `main` → 
 
 | 机制 | Cron | 约北京时间 | 作用 |
 |------|------|------------|------|
-| **Cursor Automation（合并+扫描+广场）** | `0 8 * * *` Asia/Shanghai | **08:00** | merge → scan → PR → merge → Binance Square 长文日报 |
+| **Cursor Automation（合并+扫描+广场）** | `0 8 * * *` Asia/Shanghai | **08:00** | merge → scan → PR → merge → Binance Square 短贴 |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | GitHub Pages |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 失败备用提醒 |

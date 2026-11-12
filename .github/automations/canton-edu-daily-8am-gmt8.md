@@ -1,6 +1,6 @@
 # Cursor Automation — canton-edu 每日更新（合并 + 扫描，08:00 GMT+8）
 
-在 [cursor.com/automations](https://cursor.com/automations) 创建**一条**任务即可：**先合并积压 PR，再扫描开新 PR**（可选同轮合并刚开的 PR），再发**币安广场长文日报**。GitHub Actions **不能**代替 Cursor 改 `translations.ts`。
+在 [cursor.com/automations](https://cursor.com/automations) 创建**一条**任务即可：**先合并积压 PR，再扫描开新 PR**（可选同轮合并刚开的 PR），再发**币安广场短贴**（一条新闻一帖）。GitHub Actions **不能**代替 Cursor 改 `translations.ts`。
 
 > **可选拆分：** 若希望合并与扫描分开调度，见 [canton-edu-daily-8am-pr-merge-gmt8.md](./canton-edu-daily-8am-pr-merge-gmt8.md)（08:00 仅 merge）+ 本文件 Phase 1 单独跑（08:15）。
 
@@ -94,9 +94,9 @@ Do **not** merge non-content feat PRs in Phase 2 unless they were the only open 
 
 ---
 
-## Phase 3 — Binance Square 长文日报（站内增量同步广场）
+## Phase 3 — Binance Square 短贴（每条新闻一条）
 
-Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's content). Publishes **one** Chinese long article from ZH `news.items`.
+Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's content). Publishes **one short Square post per** ZH `news.items` row (series label `Canton生态快报`; **no** external links / CantonNews / ccprivacy branding).
 
 ### Auth
 - Prefer env `BINANCE_SQUARE_OPENAPI_KEY` (Automation secrets).
@@ -105,17 +105,17 @@ Runs **after** Phase 2 (or after Phase 1 skip if `main` already has today's cont
 
 ### When to publish
 1. `git checkout main && git pull origin main`
-2. Dry-run first (default = **latest ZH news date not yet in ledger** — scan days often label items as yesterday):
+2. Dry-run first (default = **latest ZH news date with unposted URLs**):
    `npm run square:digest`
 3. If JSON says `skipped: true` → note reason and stop Phase 3.
-4. If dry-run shows items → publish:
+4. If dry-run shows short posts → publish:
    `npm run square:digest:publish`
-5. Ledger at `~/.config/binance-square/ccprivacy-digest-ledger.json` blocks re-post of the same news date; only use `--force` if human explicitly asks.
-6. Report Square `shareLink` / `id` + digest date in the final table. Do **not** rewrite titles/bodies by hand — the script owns the format.
+5. Ledger at `~/.config/binance-square/ccprivacy-digest-ledger.json` tracks **per news URL**; only use `--force` if human explicitly asks.
+6. Report each Square `shareLink` / `id` + news date in the final table. Do **not** rewrite bodies by hand — the script owns the format.
 
 ### When to skip Phase 3
 - Missing API key → skip with reason (do not invent content).
-- All ZH news dates already in ledger → skip.
+- All selected item URLs already in ledger → skip.
 - Dry-run empty / parse error → skip and report.
 
 ---
@@ -147,7 +147,7 @@ Include deploy URL if merged.
 
 | 机制 | Cron | 约北京时间 | 作用 |
 |------|------|------------|------|
-| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | merge 积压 → 扫描 → 开 PR → 可选同轮 merge → 币安广场长文日报 |
+| **本 Cursor Automation** | `0 8 * * *` Asia/Shanghai | **08:00** | merge 积压 → 扫描 → 开 PR → 可选同轮 merge → 币安广场短贴 |
 | `deploy.yml` | `0 12 * * *` + push `main` | ~20:00 + 合并即部署 | GitHub Pages |
 | `daily-canton-news-scan.yml` | `0 12 * * *` | ~20:00 | RSS 候选 Issue |
 | `scheduled-content-agent-reminder.yml` | `30 12 * * *` | ~20:30 | 失败备用提醒 |
