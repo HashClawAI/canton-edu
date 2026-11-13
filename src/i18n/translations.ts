@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-12',
+          tag: 'Governance',
+          title: 'Draft CIP would let Super Validators delegate governance votes to a separate Canton identity',
+          body: 'CantonNews (November 12, 2026): Digital Asset’s Raymond Roestenburg submitted a November 11 draft Canton Improvement Proposal so a Super Validator operator can authorize another Canton party to submit that node’s governance votes via a dedicated voting app and CIP-0103-compatible wallets—one vote per node unchanged, with operator and delegate sharing the same vote (latest counts after the existing waiting period). The scope excludes extra seats, split delegations or reward-weight changes; operators can revoke delegations while keeping node keys separate from voting keys. The work follows an earlier approved 1 million CC governance-app grant but still needs Super Validator software adoption before any operator can appoint a delegate.',
+          url: 'https://cantonnews.org/canton-draft-would-let-super-validators-delegate-their-governance-votes',
+        },
+        {
+          date: '2026-11-12',
+          tag: 'Technology',
+          title: 'Fairmint wins Development Fund approval for 3.5 million CC Canton Privy signing toolkit',
+          body: 'CantonNews (November 12, 2026): Fairmint’s 3.5 million CC Development Fund proposal passed its technical and operations vote on November 10, funding an open-source SDK so applications that already use Privy for login and embedded wallets can sign and execute prepared Canton transactions via browser approval or policy-managed server keys without rebuilding Canton connectivity. Milestones allocate 900,000 CC to a stable release with DevNet demo and docs, 600,000 CC to a Wallet Gateway Privy component plus external documentation trial, and up to 2 million CC tied to verified independent MainNet integrators (up to 600,000 CC each, capped at three) plus maintenance start—first delivery estimated about two months after approval, not proof the toolkit is live today.',
+          url: 'https://cantonnews.org/fairmint-wins-approval-for-a-3-5-million-cc-privy-toolkit-on-canton',
+        },
+        {
+          date: '2026-11-12',
+          tag: 'Institutions',
+          title: 'CapConnect+ enters Super Validator vote with CIP-0131 commercial-paper DvP on Canton',
+          body: 'CantonNews (November 12, 2026): CapConnect+ opened a November 10 Super Validator vote under CIP-0131 to bring corporate commercial-paper issuance and cash payment onto Canton via delivery-versus-payment on DiSH or compatible on-chain cash—building on a platform that reported more than $46.11 billion in facilitated issuance since early 2025 on legacy settlement, not yet on Canton. Tradeweb sponsors and MPCH endorses; up to five reward weight units tie to first production settlement with at least $100 million aggregate on-chain issuance (six months), two US CP-market participants live (nine months), and cumulative Canton-settled volume at $1B, $5B and $10B with event-count floors. The public CIP does not name the anchor issuer Walmart helped develop the platform with.',
+          url: 'https://cantonnews.org/capconnect-enters-canton-vote-with-a-plan-for-corporate-debt-settlement',
+        },
+        {
+          date: '2026-11-12',
+          tag: 'Ecosystem',
+          title: 'Ibex receives 500,000 CC Genesis Fund grant to extend Canton trading via Alpend credit',
+          body: 'CantonNews (November 12, 2026): Ibex announced November 11 a 500,000 CC Palladium Labs Genesis Fund grant to develop new Canton trading products, with Alpend confirming credit-market support for leverage and related offerings atop Ibex’s private perpetual-futures design (position size, leverage and liquidation details hidden from other traders). The post extends prior beta work such as cETH perpetuals; it announces funding and a planned Ibex–Alpend connection, not the launch schedule or terms for borrowed liquidity.',
+          url: 'https://cantonnews.org/ibex-announces-500-000-cc-grant-as-it-plans-new-canton-trading-products',
+        },
+        {
           date: '2026-11-11',
           tag: 'Governance',
           title: 'CIP-0130 approves Nomura Group / BOOSTRY Super Validator participation up to 10 weight',
@@ -5220,6 +5248,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-12', tag: '治理', title: '草案 CIP 拟允许 Super Validator 将治理投票委托给独立 Canton 身份', body: 'CantonNews（2026-11-12）：Digital Asset 的 Raymond Roestenburg 于 11 月 11 日提交草案 CIP，使 Super Validator 运营商可授权另一 Canton party 通过专用投票应用与 CIP-0103 兼容钱包代为提交该节点治理票——每节点一票不变，运营商与受托人共享同一票权（最新票在既有等待期后生效）。范围不包括新增席位、拆分委托或奖励权重变更；运营商可撤销委托并将节点密钥与投票密钥分离。工作承接此前批准的 100 万 CC 治理应用资助，但仍须 Super Validator 采用升级软件后运营商方可任命受托人。', url: 'https://cantonnews.org/canton-draft-would-let-super-validators-delegate-their-governance-votes' },
+        { date: '2026-11-12', tag: '技术', title: 'Fairmint 获批 350 万 CC 发展基金资助 Canton Privy 签名工具包', body: 'CantonNews（2026-11-12）：Fairmint 350 万 CC 发展基金提案于 11 月 10 日通过技术与运营表决，资助开源 SDK，使已用 Privy 登录与内嵌钱包的应用可通过浏览器批准或策略化服务端密钥签署并执行已准备的 Canton 交易，无需从头搭建 Canton 连接。里程碑分配 90 万 CC 给稳定版发布、DevNet 演示与文档，60 万 CC 给 Wallet Gateway Privy 组件及外部文档试用，最高 200 万 CC 与经核验的独立 MainNet 集成方挂钩（每家最高 60 万 CC、至多三家）及维护启动——首批交付估计在批准后约两个月，本身不证明工具包已上线。', url: 'https://cantonnews.org/fairmint-wins-approval-for-a-3-5-million-cc-privy-toolkit-on-canton' },
+        { date: '2026-11-12', tag: '机构', title: 'CapConnect+ 以 CIP-0131 进入 Super Validator 表决，拟在 Canton 上 DvP 结算商业票据', body: 'CantonNews（2026-11-12）：CapConnect+ 于 11 月 10 日开启 Super Validator 表决（CIP-0131），拟通过 DiSH 或兼容链上现金在 Canton 上以交付对付（DvP）同步结算企业商业票据发行与现金支付——平台自 2025 年初全面投产以来称已促成逾 461.1 亿美元发行，仍在传统结算上，非已在 Canton 结算。Tradeweb 赞助、MPCH 背书；最高 5 点奖励权重关联首次生产结算（六个月内链上累计发行至少 1 亿美元）、两家美国 CP 市场参与者投产（九个月）及 Canton 结算累计 10 亿、50 亿、100 亿美元档位（含结算笔数门槛）。公开 CIP 未点名锚定发行人；沃尔玛曾参与平台开发。', url: 'https://cantonnews.org/capconnect-enters-canton-vote-with-a-plan-for-corporate-debt-settlement' },
+        { date: '2026-11-12', tag: '生态', title: 'Ibex 获 50 万 CC Genesis Fund 资助，拟经 Alpend 信贷扩展 Canton 交易产品', body: 'CantonNews（2026-11-12）：Ibex 于 11 月 11 日宣布获 Palladium Labs Genesis Fund 50 万 CC，用于开发新 Canton 交易产品；Alpend 确认将通过信贷市场支持杠杆及相关产品，叠加 Ibex 私有永续合约设计（对他人隐藏仓位规模、杠杆与清算水平）。公告承接此前 beta 工作（如 cETH 永续）；仅宣布资金与 Ibex–Alpend 连接计划，未给出新产品上线时间或借贷条款。', url: 'https://cantonnews.org/ibex-announces-500-000-cc-grant-as-it-plans-new-canton-trading-products' },
         { date: '2026-11-11', tag: '治理', title: 'CIP-0130 批准 Nomura Group / BOOSTRY Super Validator 参与框架，最高 10 点权重', body: 'CantonNews（2026-11-11）：CIP-0130 于 11 月 10 日以 11 票赞成、2 票未投通过，批准野村集团与 BOOSTRY 共用一套 Super Validator 参与框架——非各获独立 10 点权重。在 SBI Digital Asset 赞助、Tradeweb 背书下，可通过经验证里程碑合计赚取最高 10 点奖励权重；奖励仍暂扣至证据与治理步骤释放。BOOSTRY 由野村控股 51% 持股；安排取代 11 月 5 日「拟申请」报道的草案状态，本身不证明里程碑已完成或权重已铸造。', url: 'https://cantonnews.org/nomura-and-boostry-win-approval-for-canton-super-validator-participation' },
         { date: '2026-11-11', tag: '生态', title: 'Canton 周报：Send 恢复钱包、Cancore 接入 Base、Supanova 上线 Thesis', body: 'CantonNews（2026-11-11）：11 月 10 日速览——Send 在新验证者上恢复 Canton Wallet，请用户下次登录以 passkey 批准一次性安全升级，无费用、不划转资产且地址不变，承接 10 月中断说明。Cancore 新增 Base，与 Canton、Ethereum、Arbitrum、BNB Chain、Robinhood Chain、TRON 共七条连接，支持原子跨网兑换。Supanova 上线 Thesis，供持有者在 memecoin 发射台补充持仓理由。开发者侧包括发展基金合并 1295 万 CC QuickStart 提升提案、面向 Canton 3.7 / Splice 0.10.0 的 Canton .NET SDK 0.8.0，以及 ChainSafe Daml 测试模式（62.1 万 CC）与 Triple Play Labs 私有合格凭证（最高 715 万 CC）等开放表决。', url: 'https://cantonnews.org/canton-roundup-send-returns-cancore-adds-base-and-supanova-launches-thesis' },
         { date: '2026-11-11', tag: '生态', title: 'Canton 周报：免费 Daml 课程、Supanova 发射数据与治理表决', body: 'CantonNews（2026-11-11）：11 月 9–10 日汇总——Canton Foundation 开放免费自学 Developer Certification（Daml 入门、应用开发与 Daml 2→3 路径；考试 150 美元，部分生态可获费用减免）。CanTrustAI 宣布免费模型档位、注册赠额与 x402 支付；Supanova 称 11 月 9 日累计 350 次代币发射并规划反机器人评分。Cancore 公布 10 月数据（交易量 4270 万美元、127,772 笔成交、协议收入 31.26 万美元）。治理含 Nomura / BOOSTRY CIP-0130 于 11 月 10 日进入表决，及 Fairmint–Blockworks 资产数据馈送、Eunoia 以太坊兼容工具、OS Ledger 监控、Digital Asset–Obsidian CIP-0127 锁仓实现等多项发展基金处于不同阶段。', url: 'https://cantonnews.org/canton-roundup-developer-courses-app-updates-and-new-funding-votes' },
