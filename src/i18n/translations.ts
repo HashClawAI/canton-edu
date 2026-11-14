@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-13',
+          tag: 'Tokenization',
+          title: 'SBI and Cambodia’s central bank plan Canton trial for tokenized government bonds',
+          body: 'CantonNews (November 13, 2026): SBI Holdings and Cambodia’s National Bank of Cambodia signed an MOU for a proof of concept tokenizing Cambodian government bonds with Canton Network as the planned infrastructure—aiming at smaller-ticket retail access through local financial institutions. NBC would register bondholders as tokens move; SBI Bank (Cambodia) joins NBC on technical verification. Interim results and a demonstration are slated for the Black Swan Summit in Phnom Penh on November 15–16 (summit agenda cites an onchain government-bond transfer demo using Canton). A separate November 13 MOU covers a Japan–Cambodia remittance POC with JPYSC stablecoin settlement—payments alongside the bond work, not proof either service is live.',
+          url: 'https://cantonnews.org/sbi-and-cambodia-s-central-bank-plan-canton-trial-for-tokenized-government-bonds',
+        },
+        {
+          date: '2026-11-13',
+          tag: 'Technology',
+          title: 'Fairmint and Blockworks’ 2.4 million CC Canton asset-data proposal passes committee vote',
+          body: 'CantonNews (November 13, 2026): Fairmint and Blockworks’ single shared 2.4 million CC Development Fund proposal for a Canton Asset Data Feed passed its committee vote on November 13—moving past review but not itself delivering the feeds. Milestone one (1 million CC) funds specification, publish/verify tooling and Fairmint’s private-company equity feed with Blockworks validation; milestone two (1.4 million CC) adds a second asset-class publisher with Blockworks using both feeds in production plus a 12-month maintenance commitment. Daily snapshots would anchor to Canton records for correction traceability; aggregates avoid exposing individual positions. Payment remains tied to milestone acceptance; the second publisher was unnamed in the reviewed proposal.',
+          url: 'https://cantonnews.org/fairmint-and-blockworks-2-4-million-cc-asset-data-proposal-passes-vote',
+        },
+        {
+          date: '2026-11-13',
+          tag: 'Technology',
+          title: 'Noves seeks 5.25 million CC for open-source Canton accounting subledger',
+          body: 'CantonNews (November 13, 2026): Noves submitted a November 11 Development Fund request for 5.25 million CC to build and maintain open-source accounting software that turns authorised Canton transaction data into journal entries, reconciliations, period closes and exports to main ledgers—replacing its earlier 3.5 million CC proposal as one revised award, not two. The ask allocates 1.8 million CC to engineering and public release, 2.45 million CC to verified adoption (four organisations closing real periods with at least one QuickBooks/Xero production import, rising to ten orgs with four completing three consecutive monthly closes), and 1 million CC for maintenance. Apache 2.0 release with optional on-ledger commitments is planned; approval is still pending.',
+          url: 'https://cantonnews.org/noves-seeks-5-25-million-cc-to-turn-canton-activity-into-accounting-records',
+        },
+        {
+          date: '2026-11-13',
+          tag: 'Ecosystem',
+          title: 'Cauri Wallet now charges CC transfer fees based on Canton traffic',
+          body: 'CantonNews (November 13, 2026): Lithium Digital’s Cauri Wallet began passing network fees to users after a November 10 fee guide and November 11 community notice—fees are paid in CC even when sending other assets, sized to each transaction’s Global Synchronizer traffic rather than transfer amount. Cauri-to-Cauri sends generally cost less than sends to wallets on other validators; fragmented ledger UTXOs can raise data volume versus fewer pieces. Cauri previously absorbed validator traffic costs paid by burning CC; the shift cites sustainability and Featured App Guidance 2.0b wallet requirements—not a flat percentage fee.',
+          url: 'https://cantonnews.org/cauri-introduces-transfer-fees-what-canton-wallet-users-now-pay-for',
+        },
+        {
+          date: '2026-11-13',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: Tritemius wallet update, The Hub at 1,000 members, validator notices',
+          body: 'CantonNews (November 13, 2026): Roundup of November 11 developments—Tritemius TestFlight adds cETH, HANDL, Edel tokenized tickers and Lightning one-click or personal-node options (Lightning separate from Canton settlement). The Hub reported 1,000 members on its Canton SocialFi platform. MainNet allocation notices name Circle Internet Group and Upflam plus AUM–Digik, HostDeFi Validator Collective and Noah HQ (allocation ≠ node live; no USDC-on-Canton date). Five operator approvals: Canborsa, Carbazena, GateKeeper, Initiativ and Talwex. R13N’s Reward Engine reopened for up to 3,636,363.64 CC after the prior vote drew no binding ballots. Memora described CAPS-based SOL reserve checks before SOLx minting—design detail, not verified live reserves.',
+          url: 'https://cantonnews.org/canton-roundup-tritemius-updates-its-wallet-the-hub-reaches-1-000-members',
+        },
+        {
           date: '2026-11-12',
           tag: 'Governance',
           title: 'Draft CIP would let Super Validators delegate governance votes to a separate Canton identity',
@@ -5248,6 +5283,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-13', tag: '代币化', title: 'SBI 与柬埔寨央行拟在 Canton 上试点代币化国债', body: 'CantonNews（2026-11-13）：SBI Holdings 与柬埔寨国家银行（NBC）签署 MOU，开展柬埔寨政府债券代币化概念验证，计划以 Canton Network 为基础设施——目标是通过当地金融机构以更小面额扩大零售参与。NBC 在代币转移时登记持有人；SBI Bank (Cambodia) 与 NBC 合作进行技术验证。中期成果与演示定于 11 月 15–16 日金边 Black Swan Summit（议程含使用 Canton 的链上国债转移演示）。另于 11 月 13 日签署的日本–柬埔寨汇款 POC 采用 JPYSC 稳定币结算——与债券工作并列的支付维度，均不证明已上线服务。', url: 'https://cantonnews.org/sbi-and-cambodia-s-central-bank-plan-canton-trial-for-tokenized-government-bonds' },
+        { date: '2026-11-13', tag: '技术', title: 'Fairmint 与 Blockworks 240 万 CC Canton 资产数据提案通过委员会表决', body: 'CantonNews（2026-11-13）：Fairmint 与 Blockworks 共享的 240 万 CC Canton Asset Data Feed 发展基金提案于 11 月 13 日通过委员会表决——越过审阅阶段，本身不交付 feed。里程碑一（100 万 CC）资助规格、发布/校验工具及 Fairmint 私营公司股权 feed（Blockworks 验证）；里程碑二（140 万 CC）增加第二资产类别发布方且 Blockworks 在产环境使用两条 feed，含 12 个月维护承诺。日快照拟锚定 Canton 记录以便追溯更正；聚合数据不暴露个人持仓。付款仍与里程碑验收挂钩；审阅版提案未点名第二发布方。', url: 'https://cantonnews.org/fairmint-and-blockworks-2-4-million-cc-asset-data-proposal-passes-vote' },
+        { date: '2026-11-13', tag: '技术', title: 'Noves 申请 525 万 CC 构建开源 Canton 会计子分类账', body: 'CantonNews（2026-11-13）：Noves 于 11 月 11 日提交 525 万 CC 发展基金申请，建设并维护开源会计软件，将经授权的 Canton 交易数据转为日记账、对账、期间关账及导出至总账——取代此前 350 万 CC 提案，属一次修订资助而非两项。分配 180 万 CC 给工程与公开发布、245 万 CC 给经验证的采用（四家机构完成真实期间关账且至少一家导入 QuickBooks/Xero 生产账套，目标升至十家且四家完成连续三个月关账）、100 万 CC 给维护。计划 Apache 2.0 发布并可选择链上承诺；尚未批准。', url: 'https://cantonnews.org/noves-seeks-5-25-million-cc-to-turn-canton-activity-into-accounting-records' },
+        { date: '2026-11-13', tag: '生态', title: 'Cauri 钱包按 Canton 流量向用户收取 CC 转账费', body: 'CantonNews（2026-11-13）：Lithium Digital 的 Cauri Wallet 在 11 月 10 日费用指南与 11 月 11 日社区公告后改由用户承担网络费——即使发送其他资产也以 CC 支付，按每笔交易 Global Synchronizer 流量计费而非转账金额。Cauri 用户间发送通常低于发送至其他验证者钱包；账本 UTXO 碎片可能增加数据量。Cauri 此前代付验证者燃烧 CC 购买的流量；调整理由为可持续性及 Featured App Guidance 2.0b 对钱包的要求——非固定比例手续费。', url: 'https://cantonnews.org/cauri-introduces-transfer-fees-what-canton-wallet-users-now-pay-for' },
+        { date: '2026-11-13', tag: '生态', title: 'Canton 周报：Tritemius 钱包更新、The Hub 千名成员、验证者通告', body: 'CantonNews（2026-11-13）：11 月 11 日动态汇总——Tritemius TestFlight 增加 cETH、HANDL、Edel 代币化代码及 Lightning 一键或自建节点选项（Lightning 与 Canton 结算分离）。The Hub 称其 Canton SocialFi 平台达 1000 名成员。MainNet 分配通告点名 Circle Internet Group、Upflam 及 AUM–Digik、HostDeFi Validator Collective、Noah HQ（分配≠节点已运行；未给出 Canton 上 USDC 上线日）。五家运营商获批：Canborsa、Carbazena、GateKeeper、Initiativ、Talwex。R13N Reward Engine 在上一轮无约束票后重开表决，最高约 363.6 万 CC。Memora 描述 mint SOLx 前以 CAPS 校验 SOL 储备——设计说明，非已验证链上储备。', url: 'https://cantonnews.org/canton-roundup-tritemius-updates-its-wallet-the-hub-reaches-1-000-members' },
         { date: '2026-11-12', tag: '治理', title: '草案 CIP 拟允许 Super Validator 将治理投票委托给独立 Canton 身份', body: 'CantonNews（2026-11-12）：Digital Asset 的 Raymond Roestenburg 于 11 月 11 日提交草案 CIP，使 Super Validator 运营商可授权另一 Canton party 通过专用投票应用与 CIP-0103 兼容钱包代为提交该节点治理票——每节点一票不变，运营商与受托人共享同一票权（最新票在既有等待期后生效）。范围不包括新增席位、拆分委托或奖励权重变更；运营商可撤销委托并将节点密钥与投票密钥分离。工作承接此前批准的 100 万 CC 治理应用资助，但仍须 Super Validator 采用升级软件后运营商方可任命受托人。', url: 'https://cantonnews.org/canton-draft-would-let-super-validators-delegate-their-governance-votes' },
         { date: '2026-11-12', tag: '技术', title: 'Fairmint 获批 350 万 CC 发展基金资助 Canton Privy 签名工具包', body: 'CantonNews（2026-11-12）：Fairmint 350 万 CC 发展基金提案于 11 月 10 日通过技术与运营表决，资助开源 SDK，使已用 Privy 登录与内嵌钱包的应用可通过浏览器批准或策略化服务端密钥签署并执行已准备的 Canton 交易，无需从头搭建 Canton 连接。里程碑分配 90 万 CC 给稳定版发布、DevNet 演示与文档，60 万 CC 给 Wallet Gateway Privy 组件及外部文档试用，最高 200 万 CC 与经核验的独立 MainNet 集成方挂钩（每家最高 60 万 CC、至多三家）及维护启动——首批交付估计在批准后约两个月，本身不证明工具包已上线。', url: 'https://cantonnews.org/fairmint-wins-approval-for-a-3-5-million-cc-privy-toolkit-on-canton' },
         { date: '2026-11-12', tag: '机构', title: 'CapConnect+ 以 CIP-0131 进入 Super Validator 表决，拟在 Canton 上 DvP 结算商业票据', body: 'CantonNews（2026-11-12）：CapConnect+ 于 11 月 10 日开启 Super Validator 表决（CIP-0131），拟通过 DiSH 或兼容链上现金在 Canton 上以交付对付（DvP）同步结算企业商业票据发行与现金支付——平台自 2025 年初全面投产以来称已促成逾 461.1 亿美元发行，仍在传统结算上，非已在 Canton 结算。Tradeweb 赞助、MPCH 背书；最高 5 点奖励权重关联首次生产结算（六个月内链上累计发行至少 1 亿美元）、两家美国 CP 市场参与者投产（九个月）及 Canton 结算累计 10 亿、50 亿、100 亿美元档位（含结算笔数门槛）。公开 CIP 未点名锚定发行人；沃尔玛曾参与平台开发。', url: 'https://cantonnews.org/capconnect-enters-canton-vote-with-a-plan-for-corporate-debt-settlement' },
