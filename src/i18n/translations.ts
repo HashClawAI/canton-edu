@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-14',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: Edel reports token theft, Cantex adds 2FA, Console Wallet restores services',
+          body: 'CantonNews (November 14, 2026): Roundup of November 12–13 developments—Edel reported roughly $300,000 in stolen EDEL tokens on November 12, working with authorities and exchanges; a same-day follow-up said stolen tokens were sold or blocked but did not prove full recovery. Cantex added optional two-factor authentication on withdrawals, transfers, pre-approvals and bridge flows. Console Wallet said it was fully operational after a precautionary suspension following suspicious activity the prior week. Canton 3.7.3 (November 12) fixes a sequencer resource leak and tightens party-replication checks with operator-facing upgrade notes. Development Fund votes merged Obsidian Systems’ 1.27 million CC Python codegen proposal and Financial Privacy Inc.’s 4.59 million CC TEE co-validator plan. Tokenomics published November 12 flagged MEXC’s Featured Application as non-compliant with CIP-0116 locking and recommended pausing status, with GSF named for the on-chain vote.',
+          url: 'https://cantonnews.org/canton-roundup-edel-reports-token-theft-cantex-adds-2fa-and-console-wallet-restores-services',
+        },
+        {
+          date: '2026-11-14',
+          tag: 'Ecosystem',
+          title: 'OnePump launches on Canton with 52 markets on its memecoin launchpad',
+          body: 'CantonNews (November 14, 2026): OneSwap’s OnePump memecoin launchpad is live on Canton—token creation, bonding-curve trading in CC, then graduation into OneSwap liquidity pools after reserve targets. When checked November 14 the public Trenches dashboard showed 52 markets and one graduate; JOSE was named the first graduate with 250,000 CC bonded. Stated creator fees are 0.5% on-curve and 0.2% post-graduation, claimable from 1 CC. The launch follows Supanova’s earlier November memecoin route and prior Citizen Cards community building; dashboard counts are snapshots—not trading volume or user totals. Memecoin risk and liquidity disclaimers apply.',
+          url: 'https://cantonnews.org/onepump-launches-on-canton-with-52-markets-listed-on-its-launchpad',
+        },
+        {
           date: '2026-11-13',
           tag: 'Tokenization',
           title: 'SBI and Cambodia’s central bank plan Canton trial for tokenized government bonds',
@@ -5283,6 +5297,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-14', tag: '生态', title: 'Canton 周报：Edel 通报代币被盗、Cantex 可选 2FA、Console Wallet 恢复服务', body: 'CantonNews（2026-11-14）：11 月 12–13 日动态汇总——Edel 于 11 月 12 日通报约 30 万美元 EDEL 被盗并与监管方及交易所协作；同日跟进称被盗代币已出售或被冻结，未证明全额追回。Cantex 对提款、转账、预批准与跨链交易新增可选双因素认证。Console Wallet 称在前一周可疑活动后 precautionary 暂停后已全面恢复运行。Canton 3.7.3（11 月 12 日）修复 sequencer 资源泄漏并收紧 party replication 检查，运营商须阅读升级说明。发展基金表决合并 Obsidian Systems 127 万 CC Python 代码生成提案与 Financial Privacy Inc. 459 万 CC TEE 联合验证者方案。Tokenomics 于 11 月 12 日发布称 MEXC Featured Application 不符合 CIP-0116 锁仓要求并建议暂停，GSF 被指名参与链上表决。', url: 'https://cantonnews.org/canton-roundup-edel-reports-token-theft-cantex-adds-2fa-and-console-wallet-restores-services' },
+        { date: '2026-11-14', tag: '生态', title: 'OnePump 在 Canton 上线 memecoin 发射台，仪表盘显示 52 个市场', body: 'CantonNews（2026-11-14）：OneSwap 旗下 OnePump memecoin 发射台已在 Canton 上线——代币创建、以 CC 在 bonding curve 上交易，达到储备后毕业进入 OneSwap 流动性池。11 月 14 日核查时公开 Trenches 仪表盘显示 52 个市场、一名毕业生；JOSE 被称作首个毕业生，绑定 25 万 CC。公布的创作者分成：曲线上 0.5%、毕业后 0.2%，从 1 CC 起可领取。上线承接 Supanova 更早的 memecoin 路径及此前 Citizen Cards 社区建设；仪表盘计数为快照，非交易量或用户数。适用 memecoin 波动与流动性风险披露。', url: 'https://cantonnews.org/onepump-launches-on-canton-with-52-markets-listed-on-its-launchpad' },
         { date: '2026-11-13', tag: '代币化', title: 'SBI 与柬埔寨央行拟在 Canton 上试点代币化国债', body: 'CantonNews（2026-11-13）：SBI Holdings 与柬埔寨国家银行（NBC）签署 MOU，开展柬埔寨政府债券代币化概念验证，计划以 Canton Network 为基础设施——目标是通过当地金融机构以更小面额扩大零售参与。NBC 在代币转移时登记持有人；SBI Bank (Cambodia) 与 NBC 合作进行技术验证。中期成果与演示定于 11 月 15–16 日金边 Black Swan Summit（议程含使用 Canton 的链上国债转移演示）。另于 11 月 13 日签署的日本–柬埔寨汇款 POC 采用 JPYSC 稳定币结算——与债券工作并列的支付维度，均不证明已上线服务。', url: 'https://cantonnews.org/sbi-and-cambodia-s-central-bank-plan-canton-trial-for-tokenized-government-bonds' },
         { date: '2026-11-13', tag: '技术', title: 'Fairmint 与 Blockworks 240 万 CC Canton 资产数据提案通过委员会表决', body: 'CantonNews（2026-11-13）：Fairmint 与 Blockworks 共享的 240 万 CC Canton Asset Data Feed 发展基金提案于 11 月 13 日通过委员会表决——越过审阅阶段，本身不交付 feed。里程碑一（100 万 CC）资助规格、发布/校验工具及 Fairmint 私营公司股权 feed（Blockworks 验证）；里程碑二（140 万 CC）增加第二资产类别发布方且 Blockworks 在产环境使用两条 feed，含 12 个月维护承诺。日快照拟锚定 Canton 记录以便追溯更正；聚合数据不暴露个人持仓。付款仍与里程碑验收挂钩；审阅版提案未点名第二发布方。', url: 'https://cantonnews.org/fairmint-and-blockworks-2-4-million-cc-asset-data-proposal-passes-vote' },
         { date: '2026-11-13', tag: '技术', title: 'Noves 申请 525 万 CC 构建开源 Canton 会计子分类账', body: 'CantonNews（2026-11-13）：Noves 于 11 月 11 日提交 525 万 CC 发展基金申请，建设并维护开源会计软件，将经授权的 Canton 交易数据转为日记账、对账、期间关账及导出至总账——取代此前 350 万 CC 提案，属一次修订资助而非两项。分配 180 万 CC 给工程与公开发布、245 万 CC 给经验证的采用（四家机构完成真实期间关账且至少一家导入 QuickBooks/Xero 生产账套，目标升至十家且四家完成连续三个月关账）、100 万 CC 给维护。计划 Apache 2.0 发布并可选择链上承诺；尚未批准。', url: 'https://cantonnews.org/noves-seeks-5-25-million-cc-to-turn-canton-activity-into-accounting-records' },
