@@ -327,6 +327,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-15',
+          tag: 'Ecosystem',
+          title: 'Altus joins Canton Foundation to contribute institutional integration expertise',
+          body: 'CantonNews (November 15, 2026): Altus (formerly B-Harvest) has joined the Canton Foundation, with a November 15 spotlight highlighting its practice of embedding engineers inside client organisations. The firm plans to share implementation perspectives on internal controls, compliance, and system integration for institutions adopting Canton—building on its earlier membership announcement, not a separate new programme.',
+          url: 'https://cantonnews.org/altus-joins-canton-foundation-to-contribute-institutional-integration-expertise',
+        },
+        {
+          date: '2026-11-15',
+          tag: 'Technology',
+          title: 'OpenZeppelin’s Canton library and four app designs pass development-fund review',
+          body: 'CantonNews (November 15, 2026): OpenZeppelin’s Canton Development Fund work passed committee review—a Daml contracts library (available now) plus reference designs for a private exchange with atomic DvP, lending, cross-chain stablecoin payments with reserve/attestation controls, and confidential sealed-bid auctions aligned with Canton’s privacy model. Digital Asset reviewed and approved the architecture specs; the library is not yet security-audited (audits planned next). Designs are builder references, not launched consumer apps.',
+          url: 'https://cantonnews.org/openzeppelin-s-canton-library-and-four-app-designs-pass-development-fund-review',
+        },
+        {
+          date: '2026-11-15',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: Canborsa adds Anthropic-linked markets, The Tie tracks CC burns, builder votes open',
+          body: 'CantonNews (November 15, 2026): Roundup for November 13–14 (cutoff November 14, 20:01 UTC)—Canborsa listed ANT and ANTH perp markets with up to 10x leverage (non-equity exposure to Anthropic-linked tickers, not share ownership). The Tie cites 4.49 billion CC burned year-to-date through November 11 from traffic payments on the Global Synchronizer. New Development Fund votes cover DamlFuzz local contract testing, a party-aware Daml upgrade/vetting planner, Canton Index milestones 1–2 (888,000 CC combined, milestone 1 resubmitted with private source until milestone 4), plus Kann Audits security proposals noted in the full article.',
+          url: 'https://cantonnews.org/canton-roundup-canborsa-adds-markets-the-tie-tracks-cc-burns-and-builder-votes-open',
+        },
+        {
           date: '2026-11-14',
           tag: 'Ecosystem',
           title: 'Canton Roundup: Edel reports token theft, Cantex adds 2FA, Console Wallet restores services',
@@ -5297,6 +5318,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-15', tag: '生态', title: 'Altus 加入 Canton Foundation，贡献机构集成与合规实施经验', body: 'CantonNews（2026-11-15）：区块链工程公司 Altus（原 B-Harvest）已加入 Canton Foundation；Foundation 于 11 月 15 日专题强调其将工程师派驻客户组织的做法，计划分享内控、合规与系统集成的实施视角，帮助机构采用 Canton——承接早前入会公告，非另起新项目。', url: 'https://cantonnews.org/altus-joins-canton-foundation-to-contribute-institutional-integration-expertise' },
+        { date: '2026-11-15', tag: '技术', title: 'OpenZeppelin Canton 合约库与四类应用设计通过发展基金审阅', body: 'CantonNews（2026-11-15）：OpenZeppelin 的 Canton 发展基金工作通过委员会审阅——含已可获取的 Daml 合约库，以及私有交易所（原子 DvP）、借贷、跨链稳定币支付（储备/证明控制）与符合 Canton 隐私模型的保密密封拍卖四类参考设计。Digital Asset 审阅并批准架构规格；库尚未安全审计（下一阶段计划审计）。设计供构建者参考，非已对消费者开放的应用。', url: 'https://cantonnews.org/openzeppelin-s-canton-library-and-four-app-designs-pass-development-fund-review' },
+        { date: '2026-11-15', tag: '生态', title: 'Canton 周报：Canborsa 新增 Anthropic 关联市场、The Tie 公布 CC 燃烧、开发者表决开放', body: 'CantonNews（2026-11-15）：11 月 13–14 日汇总（截止 11 月 14 日 20:01 UTC）——Canborsa 上线 ANT、ANTH 永续，最高 10 倍杠杆（与 Anthropic 关联的行情敞口，非股权）。The Tie 称截至 11 月 11 日年内 Global Synchronizer 流量致燃烧 CC 合计 49 亿枚。新发展基金表决含 DamlFuzz 本地合约测试、按 party 的 Daml 升级/审查规划器、Canton Index 里程碑 1–2（合计 88.8 万 CC，里程碑 1 重提且源码至里程碑 4 前私有），及 Kann Audits 安全提案等，详见原文。', url: 'https://cantonnews.org/canton-roundup-canborsa-adds-markets-the-tie-tracks-cc-burns-and-builder-votes-open' },
         { date: '2026-11-14', tag: '生态', title: 'Canton 周报：Edel 通报代币被盗、Cantex 可选 2FA、Console Wallet 恢复服务', body: 'CantonNews（2026-11-14）：11 月 12–13 日动态汇总——Edel 于 11 月 12 日通报约 30 万美元 EDEL 被盗并与监管方及交易所协作；同日跟进称被盗代币已出售或被冻结，未证明全额追回。Cantex 对提款、转账、预批准与跨链交易新增可选双因素认证。Console Wallet 称在前一周可疑活动后 precautionary 暂停后已全面恢复运行。Canton 3.7.3（11 月 12 日）修复 sequencer 资源泄漏并收紧 party replication 检查，运营商须阅读升级说明。发展基金表决合并 Obsidian Systems 127 万 CC Python 代码生成提案与 Financial Privacy Inc. 459 万 CC TEE 联合验证者方案。Tokenomics 于 11 月 12 日发布称 MEXC Featured Application 不符合 CIP-0116 锁仓要求并建议暂停，GSF 被指名参与链上表决。', url: 'https://cantonnews.org/canton-roundup-edel-reports-token-theft-cantex-adds-2fa-and-console-wallet-restores-services' },
         { date: '2026-11-14', tag: '生态', title: 'OnePump 在 Canton 上线 memecoin 发射台，仪表盘显示 52 个市场', body: 'CantonNews（2026-11-14）：OneSwap 旗下 OnePump memecoin 发射台已在 Canton 上线——代币创建、以 CC 在 bonding curve 上交易，达到储备后毕业进入 OneSwap 流动性池。11 月 14 日核查时公开 Trenches 仪表盘显示 52 个市场、一名毕业生；JOSE 被称作首个毕业生，绑定 25 万 CC。公布的创作者分成：曲线上 0.5%、毕业后 0.2%，从 1 CC 起可领取。上线承接 Supanova 更早的 memecoin 路径及此前 Citizen Cards 社区建设；仪表盘计数为快照，非交易量或用户数。适用 memecoin 波动与流动性风险披露。', url: 'https://cantonnews.org/onepump-launches-on-canton-with-52-markets-listed-on-its-launchpad' },
         { date: '2026-11-13', tag: '代币化', title: 'SBI 与柬埔寨央行拟在 Canton 上试点代币化国债', body: 'CantonNews（2026-11-13）：SBI Holdings 与柬埔寨国家银行（NBC）签署 MOU，开展柬埔寨政府债券代币化概念验证，计划以 Canton Network 为基础设施——目标是通过当地金融机构以更小面额扩大零售参与。NBC 在代币转移时登记持有人；SBI Bank (Cambodia) 与 NBC 合作进行技术验证。中期成果与演示定于 11 月 15–16 日金边 Black Swan Summit（议程含使用 Canton 的链上国债转移演示）。另于 11 月 13 日签署的日本–柬埔寨汇款 POC 采用 JPYSC 稳定币结算——与债券工作并列的支付维度，均不证明已上线服务。', url: 'https://cantonnews.org/sbi-and-cambodia-s-central-bank-plan-canton-trial-for-tokenized-government-bonds' },
