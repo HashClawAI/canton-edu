@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-16',
+          tag: 'Institutions',
+          title: 'CantonNews essay: how Canton’s data stack is evolving beyond raw ledger access',
+          body: 'CantonNews (November 16, 2026): A long-form review traces Canton data infrastructure from Global Synchronizer launch (July 1, 2024) through network APIs—Ledger, Scan, Validator—and third-party indexers, analytics vendors, credit/collateral benchmarking, and permission-aware reporting for institutional markets. It contrasts observable on-chain activity with liquidity, collateral quality, and counterparty risk questions privacy-enabled finance still needs answered, and frames an emerging opportunity for specialised financial intelligence without claiming any single feed is production-complete today.',
+          url: 'https://cantonnews.org/the-evolution-of-canton-data-infrastructure',
+        },
+        {
+          date: '2026-11-16',
+          tag: 'Institutions',
+          title: 'Canton Strategic reports $3.05M Q3 revenue and first positive adjusted EBITDA',
+          body: 'CantonNews (November 16, 2026): Nasdaq-listed Canton Strategic Holdings (CNTN) reported $3,051,232 revenue for the quarter ended September 30—up 104% from Q2—as network validation ($1.50M; 13.23M CC earned, active SV weight 6.5 vs 0.5 at June 30) and locking-as-a-service ($1.47M) completed their first full revenue quarter. Operating income turned positive at $340,591; adjusted EBITDA was $610,414 (non-GAAP). Net loss was $35.08M, driven largely by a $54.65M unrealized digital-asset loss despite holding ~3.83B CC (fair value $482.15M vs $523.35M at June 30). Sources: company Q3 release and 10-Q filings.',
+          url: 'https://cantonnews.org/canton-strategic-doubles-quarterly-revenue-to-3-05-million',
+        },
+        {
+          date: '2026-11-16',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: Wallet Gateway 1.14, SDK releases, funding votes and community campaigns',
+          body: 'CantonNews (November 16, 2026): Roundup from November 15–16 (cutoff ~14:28 UTC)—Digital Asset shipped Wallet Gateway 1.14.0 (RBAC tokens, clearer signing-rejection reasons, API-key revoke confirmation), Wallet SDK 1.7.0 (Token Standard V2 transfers/allocations) and dApp SDK 1.10.0. Canborsa added Solana and Tron funding rails (guide still catching up on fee/limit tables). Tenderly’s revised transaction-testing proposal seeks $421,520.63 over 24 months; weekly spot volume across Temple, Cantex, Rocky and Tradecraft was $137.6M (Temple ~91%). Canton cites 6.17B CC cumulative burn via CantonScan; Canborsa’s “Road to 1 Million” creator campaign runs November 16–December 16.',
+          url: 'https://cantonnews.org/canton-roundup-wallet-upgrades-developer-funding-and-community-campaigns',
+        },
+        {
+          date: '2026-11-16',
+          tag: 'Technology',
+          title: 'PartyLayer crosses 200,000 npm downloads, expands wallet toolkit and mobile package',
+          body: 'CantonNews (November 16, 2026): Cayvox Labs’ PartyLayer—open-source CIP-0103 wallet connectivity for Canton apps—passed 200,000 cumulative npm downloads (up from 106,000 in August), with PartyLayer.xyz citing ~100k unique visitors and 2M requests in 30 days. Recent releases include React 3.4 / SDK 0.22.1, 14-language UI, transfer review components, wallet-based sign-in hooks with a PostgreSQL reference, AI-assistant API docs, and React Native 2.0 separating native from browser wallet code; November 15 corrective release notes public test counts on GitHub.',
+          url: 'https://cantonnews.org/partylayer-passes-200-000-npm-downloads-as-canton-developer-toolkit-expands',
+        },
+        {
+          date: '2026-11-16',
+          tag: 'Institutions',
+          title: 'Nomura, NRI and BOOSTRY explore linking securities systems to Canton onchain markets',
+          body: 'CantonNews (November 16, 2026): Nomura Holdings, Nomura Research Institute and BOOSTRY (51% Nomura-owned) announced plans to jointly explore connecting financial institutions’ existing securities systems with onchain markets, with Canton Network central to the work. NRI is developing a service to bridge legacy finance IT with onchain infrastructure; BOOSTRY says its institutional Canton wallet entered production in September 2026. The release is an exploration MOU-style step—not live production connectivity for end clients—and sits alongside prior CIP-0130 Super Validator approval for Nomura/BOOSTRY, which remains milestone-gated.',
+          url: 'https://cantonnews.org/nomura-nri-and-boostry-plan-canton-links-for-financial-firms',
+        },
+        {
           date: '2026-11-15',
           tag: 'Ecosystem',
           title: 'Altus joins Canton Foundation to contribute institutional integration expertise',
@@ -5318,6 +5353,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-16', tag: '机构', title: 'CantonNews 长文：Canton 数据基础设施如何从账本访问走向金融情报', body: 'CantonNews（2026-11-16）：长文梳理 Canton 数据栈自 2024 年 7 月 1 日 Global Synchronizer 与 CC 上线以来，经 Ledger/Scan/Validator API 与第三方索引、分析、信用与抵押基准、权限感知报表的演进；对比可观测链上活动与机构市场仍须回答的流动性、抵押质量与对手方风险问题，勾勒隐私金融场景下专业化金融情报的成形空间——未宣称任一 feed 今日已全面投产。', url: 'https://cantonnews.org/the-evolution-of-canton-data-infrastructure' },
+        { date: '2026-11-16', tag: '机构', title: 'Canton Strategic 报告 Q3 收入 305 万美元，首次季度调整后 EBITDA 为正', body: 'CantonNews（2026-11-16）：纳斯达克上市公司 Canton Strategic Holdings（CNTN）截至 9 月 30 日季度收入 3,051,232 美元，较 Q2 增约 104%——验证服务 150 万美元（当季赚取 1323 万 CC，active SV 权重由 6 月 30 日 0.5 升至 9 月 30 日 6.5）与锁仓即服务 147 万美元完成首个完整创收季度。经营利润 340,591 美元转正；调整后 EBITDA 610,414 美元（非 GAAP）。净亏损 3508 万美元，主要来自数字资产未实现亏损 5465 万美元；持有约 38.38 亿 CC（公允价值 4.8215 亿美元，低于 6 月末 5.2335 亿美元）。来源：公司 Q3 业绩与 10-Q。', url: 'https://cantonnews.org/canton-strategic-doubles-quarterly-revenue-to-3-05-million' },
+        { date: '2026-11-16', tag: '生态', title: 'Canton 周报：Wallet Gateway 1.14、SDK 发布、资助表决与社区活动', body: 'CantonNews（2026-11-16）：11 月 15–16 日汇总（截止约 14:28 UTC）——Digital Asset 发布 Wallet Gateway 1.14.0（RBAC 令牌、更清晰签名拒绝原因、API 密钥撤销确认）、Wallet SDK 1.7.0（Token Standard V2 转账/分配）与 dApp SDK 1.10.0。Canborsa 接入 Solana、Tron 出入金（公开指南费率/限额表仍待更新）。Tenderly 修订交易测试提案申请 24 个月 421,520.63 美元；Temple、Cantex、Rocky、Tradecraft 周现货量 1.376 亿美元（Temple 约 91%）。Canton 引 CantonScan 称累计燃烧 CC 61.7 亿枚；Canborsa「Road to 1 Million」创作者活动 11 月 16 日至 12 月 16 日。', url: 'https://cantonnews.org/canton-roundup-wallet-upgrades-developer-funding-and-community-campaigns' },
+        { date: '2026-11-16', tag: '技术', title: 'PartyLayer npm 累计下载突破 20 万次，扩展钱包工具包与移动端', body: 'CantonNews（2026-11-16）：Cayvox Labs 的 PartyLayer——Canton 应用开源 CIP-0103 钱包连接层——npm 累计下载超 20 万次（8 月为 10.6 万）；partylayer.xyz 称 30 日内约 10 万独立访客、200 万次请求。近期版本含 React 3.4/SDK 0.22.1、14 语言界面、转账审核组件、钱包登录 hooks 与 PostgreSQL 参考实现、AI 助手 API 文档，以及将原生与浏览器钱包代码分离的 React Native 2.0；11 月 15 日修正版在 GitHub 公开测试计数。', url: 'https://cantonnews.org/partylayer-passes-200-000-npm-downloads-as-canton-developer-toolkit-expands' },
+        { date: '2026-11-16', tag: '机构', title: '野村、NRI 与 BOOSTRY 探索将证券系统与 Canton 链上市场对接', body: 'CantonNews（2026-11-16）：野村控股、野村综合研究所与野村控股持股 51% 的 BOOSTRY 宣布拟联合探索，帮助金融机构将既有证券系统与链上市场连接，Canton Network 处于方案核心。NRI 开发连接传统金融 IT 与链上基础设施的服务；BOOSTRY 称其机构 Canton 钱包已于 2026 年 9 月投入生产运营。公告属探索/谅解阶段——非面向终端客户的已上线联通——并与此前 CIP-0130 批准的野村/BOOSTRY Super Validator 框架并列，后者仍按里程碑暂扣权重。', url: 'https://cantonnews.org/nomura-nri-and-boostry-plan-canton-links-for-financial-firms' },
         { date: '2026-11-15', tag: '生态', title: 'Altus 加入 Canton Foundation，贡献机构集成与合规实施经验', body: 'CantonNews（2026-11-15）：区块链工程公司 Altus（原 B-Harvest）已加入 Canton Foundation；Foundation 于 11 月 15 日专题强调其将工程师派驻客户组织的做法，计划分享内控、合规与系统集成的实施视角，帮助机构采用 Canton——承接早前入会公告，非另起新项目。', url: 'https://cantonnews.org/altus-joins-canton-foundation-to-contribute-institutional-integration-expertise' },
         { date: '2026-11-15', tag: '技术', title: 'OpenZeppelin Canton 合约库与四类应用设计通过发展基金审阅', body: 'CantonNews（2026-11-15）：OpenZeppelin 的 Canton 发展基金工作通过委员会审阅——含已可获取的 Daml 合约库，以及私有交易所（原子 DvP）、借贷、跨链稳定币支付（储备/证明控制）与符合 Canton 隐私模型的保密密封拍卖四类参考设计。Digital Asset 审阅并批准架构规格；库尚未安全审计（下一阶段计划审计）。设计供构建者参考，非已对消费者开放的应用。', url: 'https://cantonnews.org/openzeppelin-s-canton-library-and-four-app-designs-pass-development-fund-review' },
         { date: '2026-11-15', tag: '生态', title: 'Canton 周报：Canborsa 新增 Anthropic 关联市场、The Tie 公布 CC 燃烧、开发者表决开放', body: 'CantonNews（2026-11-15）：11 月 13–14 日汇总（截止 11 月 14 日 20:01 UTC）——Canborsa 上线 ANT、ANTH 永续，最高 10 倍杠杆（与 Anthropic 关联的行情敞口，非股权）。The Tie 称截至 11 月 11 日年内 Global Synchronizer 流量致燃烧 CC 合计 49 亿枚。新发展基金表决含 DamlFuzz 本地合约测试、按 party 的 Daml 升级/审查规划器、Canton Index 里程碑 1–2（合计 88.8 万 CC，里程碑 1 重提且源码至里程碑 4 前私有），及 Kann Audits 安全提案等，详见原文。', url: 'https://cantonnews.org/canton-roundup-canborsa-adds-markets-the-tie-tracks-cc-burns-and-builder-votes-open' },
