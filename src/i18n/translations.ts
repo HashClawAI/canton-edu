@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-17',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: CIP-0132 paymaster vote, Supanova on Grofty Lens, validator recovery tests',
+          body: 'CantonNews (November 17, 2026): Roundup from November 16–17 (cutoff ~06:31 UTC)—CIP-0132 opened for governance voting November 16 (Digital Asset sponsor, Five North endorser) as the first technical Universal Burn paymaster phase for dedicated synchronizers: measure traffic, designated paymaster burns CC, record reward-eligible activity—still trust-based without enforced traffic caps. Grofty Lens added every Supanova AMM/CC pair with USD and CC quotes and trade links. Maintainers are validating a recovery runbook for MainNet validators that fell out of consensus after missing the minimum Splice version for a Logical Synchronizer Upgrade; Splice MainNet 0.10.0 / TestNet 0.10.1 / DevNet 0.10.2 readiness notices published. Also: Walnut’s fourth DPM Trace adoption-review milestone, NFT-profile sponsorship notes, and a Seoul Canton developer meetup.',
+          url: 'https://cantonnews.org/canton-roundup-paymaster-vote-supanova-market-data-and-validator-updates',
+        },
+        {
+          date: '2026-11-17',
+          tag: 'Ecosystem',
+          title: 'Palladium Labs brands Adula as the separate Canton home for ONE credit asset',
+          body: 'CantonNews (November 17, 2026): Palladium Labs announced November 16 that Adula is the dedicated identity and governance path for ONE—a privacy-native CDP protocol on Canton—while Alpend continues private lending and borrowing. Underlying mechanics are unchanged; Alpend still describes ONE as a CC-collateral, overcollateralized dollar-targeted debt instrument. Public ONE pages still list USDCx↔ONE swaps in open private beta while CC-collateral minting remains marked coming soon with whitelist signup—Adula branding clarifies protocol separation, not a live minting launch or migration timetable.',
+          url: 'https://cantonnews.org/alpend-introduces-adula-as-a-separate-home-for-one',
+        },
+        {
           date: '2026-11-16',
           tag: 'Institutions',
           title: 'CantonNews essay: how Canton’s data stack is evolving beyond raw ledger access',
@@ -5353,6 +5367,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-17', tag: '生态', title: 'Canton 周报：CIP-0132 付费中间人表决、Grofty Lens 接入 Supanova、验证者恢复测试', body: 'CantonNews（2026-11-17）：11 月 16–17 日汇总（截止约 06:31 UTC）——CIP-0132 于 11 月 16 日开启治理表决（Digital Asset 赞助、Five North 背书），为专用同步器的 Universal Burn 首阶段付费中间人模型：计量流量、指定 paymaster 燃烧 CC、记录可计奖励活动——现阶段仍依赖运营方与 paymaster 申报，尚未强制流量上限。Grofty Lens 新增全部 Supanova AMM/CC 交易对，展示美元与 CC 报价及交易链接。维护者正验证 MainNet 验证者在未达 Logical Synchronizer 升级所需最低 Splice 版本后失共识的恢复手册；已发布 Splice MainNet 0.10.0 / TestNet 0.10.1 / DevNet 0.10.2 就绪通告。另含 Walnut 第四份 DPM Trace 采用审阅里程碑、NFT 头像赞助说明及首尔 Canton 开发者聚会。', url: 'https://cantonnews.org/canton-roundup-paymaster-vote-supanova-market-data-and-validator-updates' },
+        { date: '2026-11-17', tag: '生态', title: 'Palladium Labs 将 Adula 定位为 ONE 信贷资产的独立 Canton 协议', body: 'CantonNews（2026-11-17）：Palladium Labs 于 11 月 16 日宣布 Adula 为 ONE——Canton 上隐私原生 CDP 协议——的独立身份与治理路径，Alpend 继续专注私有借贷市场；底层机制未改，Alpend 仍将 ONE 描述为以 CC 超额抵押、锚定美元的债务工具。公开 ONE 页面仍将 USDCx↔ONE 兑换列为开放内测、CC 抵押铸造标为即将推出并开放白名单——Adula 品牌重在厘清协议分工，非抵押铸造全面上线或迁移时间表。', url: 'https://cantonnews.org/alpend-introduces-adula-as-a-separate-home-for-one' },
         { date: '2026-11-16', tag: '机构', title: 'CantonNews 长文：Canton 数据基础设施如何从账本访问走向金融情报', body: 'CantonNews（2026-11-16）：长文梳理 Canton 数据栈自 2024 年 7 月 1 日 Global Synchronizer 与 CC 上线以来，经 Ledger/Scan/Validator API 与第三方索引、分析、信用与抵押基准、权限感知报表的演进；对比可观测链上活动与机构市场仍须回答的流动性、抵押质量与对手方风险问题，勾勒隐私金融场景下专业化金融情报的成形空间——未宣称任一 feed 今日已全面投产。', url: 'https://cantonnews.org/the-evolution-of-canton-data-infrastructure' },
         { date: '2026-11-16', tag: '机构', title: 'Canton Strategic 报告 Q3 收入 305 万美元，首次季度调整后 EBITDA 为正', body: 'CantonNews（2026-11-16）：纳斯达克上市公司 Canton Strategic Holdings（CNTN）截至 9 月 30 日季度收入 3,051,232 美元，较 Q2 增约 104%——验证服务 150 万美元（当季赚取 1323 万 CC，active SV 权重由 6 月 30 日 0.5 升至 9 月 30 日 6.5）与锁仓即服务 147 万美元完成首个完整创收季度。经营利润 340,591 美元转正；调整后 EBITDA 610,414 美元（非 GAAP）。净亏损 3508 万美元，主要来自数字资产未实现亏损 5465 万美元；持有约 38.38 亿 CC（公允价值 4.8215 亿美元，低于 6 月末 5.2335 亿美元）。来源：公司 Q3 业绩与 10-Q。', url: 'https://cantonnews.org/canton-strategic-doubles-quarterly-revenue-to-3-05-million' },
         { date: '2026-11-16', tag: '生态', title: 'Canton 周报：Wallet Gateway 1.14、SDK 发布、资助表决与社区活动', body: 'CantonNews（2026-11-16）：11 月 15–16 日汇总（截止约 14:28 UTC）——Digital Asset 发布 Wallet Gateway 1.14.0（RBAC 令牌、更清晰签名拒绝原因、API 密钥撤销确认）、Wallet SDK 1.7.0（Token Standard V2 转账/分配）与 dApp SDK 1.10.0。Canborsa 接入 Solana、Tron 出入金（公开指南费率/限额表仍待更新）。Tenderly 修订交易测试提案申请 24 个月 421,520.63 美元；Temple、Cantex、Rocky、Tradecraft 周现货量 1.376 亿美元（Temple 约 91%）。Canton 引 CantonScan 称累计燃烧 CC 61.7 亿枚；Canborsa「Road to 1 Million」创作者活动 11 月 16 日至 12 月 16 日。', url: 'https://cantonnews.org/canton-roundup-wallet-upgrades-developer-funding-and-community-campaigns' },
