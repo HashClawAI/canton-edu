@@ -327,6 +327,20 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-18',
+          tag: 'Technology',
+          title: 'Palladium Labs open-sources canton-oracle-kit for Chainlink Data Streams on Canton',
+          body: 'CantonNews (November 18, 2026): Palladium Labs released canton-oracle-kit v1.0.0 under Apache 2.0—Daml contracts and tooling that verify Chainlink Data Streams signed reports, enforce freshness and deviation rules, and include an example Node.js pusher/updater. The kit wires Chainlink’s verifier to a price store (positive prices, age limits, pending state on large moves) and reflects the oracle path Alpend uses on MainNet; the application operator retains admin and direct-write authority over feeds and the store. Requires Data Streams access, a Chainlink-issued VerifierConfig, and currently targets V3 crypto reports (docs cite Daml SDK 3.4.11 / Canton 3.4.x).',
+          url: 'https://cantonnews.org/palladium-labs-open-sources-chainlink-oracle-kit-for-canton-developers',
+        },
+        {
+          date: '2026-11-18',
+          tag: 'Technology',
+          title: 'ChainSafe operates Canton DevNet endpoints for OpenZeppelin contract development',
+          body: 'CantonNews (November 18, 2026): ChainSafe announced November 16 it deploys and maintains Canton DevNet API services for OpenZeppelin—package-upload endpoints for Daml DARs and Ledger API read/write access so the team can test its Canton Contracts library and reference designs on a live development network. The arrangement follows development-fund review of OpenZeppelin’s library and four application blueprints (exchange, lending, payments, auctions); it extends beyond LocalNet sandbox testing but does not by itself signify MainNet launch or completed security audits.',
+          url: 'https://cantonnews.org/chainsafe-provides-canton-devnet-infrastructure-for-openzeppelin',
+        },
+        {
           date: '2026-11-17',
           tag: 'Ecosystem',
           title: 'Canton Roundup: CIP-0132 paymaster vote, Supanova on Grofty Lens, validator recovery tests',
@@ -5367,6 +5381,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-18', tag: '技术', title: 'Palladium Labs 开源 canton-oracle-kit，对接 Canton 上 Chainlink Data Streams', body: 'CantonNews（2026-11-18）：Palladium Labs 以 Apache 2.0 发布 canton-oracle-kit v1.0.0——含 Daml 合约与工具，用于校验 Chainlink Data Streams 签名报告、执行新鲜度与偏离阈值规则，并附带 Node.js 示例 pusher/updater。套件将 Chainlink 验证合约与价格库相连（正价格、时效、大幅波动时进入 pending 状态），并称该路径为 Alpend 在 MainNet 使用的预言机方案；应用运营方仍保留对 feed 映射与价格库的管理及直接写入权限。需 Data Streams 权限、Chainlink 签发的 VerifierConfig，当前面向 V3 加密资产报告（文档标注 Daml SDK 3.4.11 / Canton 3.4.x）。', url: 'https://cantonnews.org/palladium-labs-open-sources-chainlink-oracle-kit-for-canton-developers' },
+        { date: '2026-11-18', tag: '技术', title: 'ChainSafe 为 OpenZeppelin 运营 Canton DevNet 节点与 API 端点', body: 'CantonNews（2026-11-18）：ChainSafe 于 11 月 16 日宣布为 OpenZeppelin 部署并维护 Canton DevNet API——含 Daml DAR 包上传端点及 Ledger API 读写，供团队在正式开发网上测试 Canton Contracts 库与参考设计。承接发展基金审阅通过的合约库及交易所、借贷、支付、拍卖四类蓝图；较 LocalNet 沙盒进一步贴近联调环境，但公告本身不代表 MainNet 应用上线或安全审计已完成。', url: 'https://cantonnews.org/chainsafe-provides-canton-devnet-infrastructure-for-openzeppelin' },
         { date: '2026-11-17', tag: '生态', title: 'Canton 周报：CIP-0132 付费中间人表决、Grofty Lens 接入 Supanova、验证者恢复测试', body: 'CantonNews（2026-11-17）：11 月 16–17 日汇总（截止约 06:31 UTC）——CIP-0132 于 11 月 16 日开启治理表决（Digital Asset 赞助、Five North 背书），为专用同步器的 Universal Burn 首阶段付费中间人模型：计量流量、指定 paymaster 燃烧 CC、记录可计奖励活动——现阶段仍依赖运营方与 paymaster 申报，尚未强制流量上限。Grofty Lens 新增全部 Supanova AMM/CC 交易对，展示美元与 CC 报价及交易链接。维护者正验证 MainNet 验证者在未达 Logical Synchronizer 升级所需最低 Splice 版本后失共识的恢复手册；已发布 Splice MainNet 0.10.0 / TestNet 0.10.1 / DevNet 0.10.2 就绪通告。另含 Walnut 第四份 DPM Trace 采用审阅里程碑、NFT 头像赞助说明及首尔 Canton 开发者聚会。', url: 'https://cantonnews.org/canton-roundup-paymaster-vote-supanova-market-data-and-validator-updates' },
         { date: '2026-11-17', tag: '生态', title: 'Palladium Labs 将 Adula 定位为 ONE 信贷资产的独立 Canton 协议', body: 'CantonNews（2026-11-17）：Palladium Labs 于 11 月 16 日宣布 Adula 为 ONE——Canton 上隐私原生 CDP 协议——的独立身份与治理路径，Alpend 继续专注私有借贷市场；底层机制未改，Alpend 仍将 ONE 描述为以 CC 超额抵押、锚定美元的债务工具。公开 ONE 页面仍将 USDCx↔ONE 兑换列为开放内测、CC 抵押铸造标为即将推出并开放白名单——Adula 品牌重在厘清协议分工，非抵押铸造全面上线或迁移时间表。', url: 'https://cantonnews.org/alpend-introduces-adula-as-a-separate-home-for-one' },
         { date: '2026-11-16', tag: '机构', title: 'CantonNews 长文：Canton 数据基础设施如何从账本访问走向金融情报', body: 'CantonNews（2026-11-16）：长文梳理 Canton 数据栈自 2024 年 7 月 1 日 Global Synchronizer 与 CC 上线以来，经 Ledger/Scan/Validator API 与第三方索引、分析、信用与抵押基准、权限感知报表的演进；对比可观测链上活动与机构市场仍须回答的流动性、抵押质量与对手方风险问题，勾勒隐私金融场景下专业化金融情报的成形空间——未宣称任一 feed 今日已全面投产。', url: 'https://cantonnews.org/the-evolution-of-canton-data-infrastructure' },
