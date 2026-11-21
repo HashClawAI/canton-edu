@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-20',
+          tag: 'Markets',
+          title: 'Fairmint TSV plans Canton venue for issuer-sponsored shares with Tradecraft AMM',
+          body: 'CantonNews (November 20, 2026): Fairmint announced Fairmint TSV LLC, a wholly owned venue operator that has not begun trading—the initial securities, participants and launch date remain TBD. The plan connects Tradecraft liquidity pools to issuer-authorised shares with Fairmint TA LLC (SEC-registered transfer agent) maintaining the official ownership record; Ethereum is planned after Canton. It is separate from the existing TSV LLC market that already completed CNTN trades on November 4 (Five North, DRW Cumberland, Flowdesk). The new venue intends to rely on the SEC’s September 2026 Innovation Exemption subject to a 30-day operating notice and operational readiness—AMM technology does not waive securities access or shareholder-rights requirements.',
+          url: 'https://cantonnews.org/fairmint-plans-canton-venue-for-tokenized-shares-with-tradecraft-as-first-amm',
+        },
+        {
+          date: '2026-11-20',
+          tag: 'Ecosystem',
+          title: 'Canton Foundation spotlights Diviko AG on self-custody, multisig vaults and cross-chain routes',
+          body: 'CantonNews (November 20, 2026): The Foundation’s member spotlight on Diviko AG—the Swiss wallet and financial-app builder first named among six new members on November 4—highlights local signing external parties, multisignature vault thresholds enforced on Canton, atomic swaps, and an EVM bridge with wrapped tokens. The post says Diviko already operates MainNet applications and will contribute interoperability and standards perspectives; September validator-operator approval concerned onboarding prep, not every listed product being consumer-ready today.',
+          url: 'https://cantonnews.org/diviko-joins-canton-foundation-with-focus-on-self-custody-and-interoperability',
+        },
+        {
+          date: '2026-11-20',
+          tag: 'Ecosystem',
+          title: 'Kiwoom, CSDBR and Ironlight among seven validator applications in objection window',
+          body: 'CantonNews (November 20, 2026): Canton’s November 18 validator notice lists seven submissions open for concerns through November 25—implicit approval if none are raised. Kiwoom Securities seeks a node-service-provider-operated validator for tokenization and institutional workflow tests; Brazil’s CSDBR plans a Canton PoC for CVM; Ironlight Technologies targets tokenized-securities settlement infrastructure (distinct from IronLighthouse). Cradle Capital (BETH/mint-redemption), Da Nang Fintech Lab (VYBE Trade receivables), edgeflare BV (commercial node services) and Circle Internet Group (native USDC application—previously reported) round out the batch. Listing is not proof each node is live or a Super Validator appointment.',
+          url: 'https://cantonnews.org/kiwoom-csdbr-and-ironlight-feature-in-canton-validator-application-batch',
+        },
+        {
+          date: '2026-11-20',
+          tag: 'Institutions',
+          title: 'Talos, Marex and Broadridge plan after-hours financing for DTC-tokenized Treasuries on Canton',
+          body: 'CantonNews (November 20, 2026): Canton’s November 18 statement and a joint announcement describe an integration under construction—not a completed financing deal—linking Talos RFQ trading, Marex prime brokerage and Broadridge DLX settlement/records so institutions could finance US Treasuries tokenized via DTCC’s October 28 Tokenization Service beyond conventional hours. Atomic settlement is the intended design; launch timing and measured volume were not disclosed. The workflow builds on DTCC’s one-for-one DTC-backed tokens on Canton and Besu rather than replacing institutional operating systems.',
+          url: 'https://cantonnews.org/talos-marex-and-broadridge-plan-tokenized-treasury-financing-on-canton',
+        },
+        {
           date: '2026-11-19',
           tag: 'Technology',
           title: 'Stratalink PoLi Oracle records signed liquidity scores on Canton MainNet',
@@ -5423,6 +5451,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-20', tag: '市场', title: 'Fairmint TSV 拟在 Canton 以 Tradecraft AMM 运营发行人赞助代币化股票场所', body: 'CantonNews（2026-11-20）：Fairmint 宣布全资子公司 Fairmint TSV LLC 为计划中的交易场所，尚未开始交易——首批证券、参与方与上线日待定。方案以 Tradecraft 流动性池对接经发行人授权的股票，由 SEC 注册过户代理 Fairmint TA LLC 维护官方股东名册；以太坊规划在 Canton 之后。与已于 11 月 4 日完成 CNTN 交易的既有 TSV LLC 场所以及 Five North、DRW Cumberland、Flowdesk 参与的交易相区分。新场所拟依据 2026 年 9 月 SEC Innovation Exemption，须满足 30 日运营通知与运营就绪——AMM 技术不免除证券准入与股东权利条件。', url: 'https://cantonnews.org/fairmint-plans-canton-venue-for-tokenized-shares-with-tradecraft-as-first-amm' },
+        { date: '2026-11-20', tag: '生态', title: 'Canton Foundation 专题介绍 Diviko AG 的自托管、多签金库与跨链路径', body: 'CantonNews（2026-11-20）：Foundation 对 Diviko AG——瑞士钱包与金融应用构建方，已于 11 月 4 日列入六家新成员——的专题强调本地签名外部 party、在 Canton 上强制执行的多签金库阈值、原子交换及带封装代币的 EVM 桥。文章称 Diviko 已在 MainNet 运营应用并将贡献互操作与标准视角；9 月验证者运营方批准涉及入驻准备，不表示所列产品均已面向终端用户上线。', url: 'https://cantonnews.org/diviko-joins-canton-foundation-with-focus-on-self-custody-and-interoperability' },
+        { date: '2026-11-20', tag: '生态', title: 'Kiwoom、CSDBR 与 Ironlight 等七份验证者申请进入异议期', body: 'CantonNews（2026-11-20）：Canton 11 月 18 日通告列出七份申请，异议期至 11 月 25 日——无异议则视为默许。Kiwoom Securities 拟经节点服务商运营验证者以测试代币化与机构工作流；巴西 CSDBR 计划向 CVM 提交 Canton PoC；Ironlight Technologies 瞄准代币化证券结算基础设施（与 IronLighthouse 区分）。另有 Cradle Capital（BETH/铸造赎回）、岘港 Fintech Lab（VYBE Trade 应收账款）、edgeflare BV（商业节点服务）及 Circle Internet Group（原生 USDC 应用，此前已报道）。上榜不代表各节点已运行或已获 Super Validator 任命。', url: 'https://cantonnews.org/kiwoom-csdbr-and-ironlight-feature-in-canton-validator-application-batch' },
+        { date: '2026-11-20', tag: '机构', title: 'Talos、Marex 与 Broadridge 规划 DTC 代币化国债在 Canton 的盘后融资工作流', body: 'CantonNews（2026-11-20）：Canton 11 月 18 日声明与联合公告描述在建集成——非已完成的融资交易——连接 Talos RFQ 交易、Marex 主经纪与 Broadridge DLX 结算/账务，使机构有望在传统时段之外为经 DTCC 10 月 28 日代币化服务铸造的美国国债融资。设计意图为原子结算；未披露上线时间与实测规模。工作流建立在 DTCC 于 Canton 与 Besu 上一对一锚定 DTC 证券的代币之上，而非替代机构既有运营系统。', url: 'https://cantonnews.org/talos-marex-and-broadridge-plan-tokenized-treasury-financing-on-canton' },
         { date: '2026-11-19', tag: '技术', title: 'Stratalink PoLi Oracle 在 Canton MainNet 记录签名流动性评分', body: 'CantonNews（2026-11-19）：IntellectEU 于 11 月 17 日发布的案例称，Stratalink Labs 的 Proof of Liquidity（PoLi）Oracle 自 2026 年 10 月起在 MainNet 运行，基于两家场所的 BTC、ETH、SOL 与 CC 实时订单簿计算流动性评分、签署证明并写入 Canton，链上合规校验可在数秒内完成。IntellectEU 负责 Daml 层，CatalyX 提供验证者托管。PoLi 衡量市场深度而非托管储备证明；外部用户经自有验证者请求证明仍为规划阶段，公开材料未称已对外开放。', url: 'https://cantonnews.org/stratalink-s-poli-oracle-records-liquidity-scores-on-canton-mainnet' },
         { date: '2026-11-19', tag: '技术', title: 'Digital Asset 梳理 covalidation 在 Loop、T-RIZE、Bron 等产品的采用', body: 'CantonNews / Digital Asset（2026-11-19）：covalidation 将 Canton 账户（party）托管在多家独立运营方，经阈值（如 2-of-3）共同确认交易，避免单点宕机或单节点被攻破即可单独确认，同时保留隐私。Five North Loop 称为首个每位新参与者均多托管的钱包（DA 与 MPCH 为运营方）；T-RIZE 与 Bron 披露已上线多托管；DA、MPCH、Kiln 等为早期 covalidation 服务商。能力源自 2026 年 5 月 Covalidation Service 发布，由 DA 协调服务商合约与恢复流程，客户仍掌控拓扑与 DAR。', url: 'https://cantonnews.org/digital-asset-outlines-covalidation-adoption-across-canton-wallets-and-apps' },
         { date: '2026-11-19', tag: '生态', title: 'Supanova V2 强调移动端交易与 CC 入金路径', body: 'CantonNews（2026-11-19）：Supanova 于 11 月 17 日发布 V2（启动板 11 月 3 日开放），突出桥接 CC、手机交易与发币。指南列三种入金：交易所转 CC、经 Squid 从 USDC/USDT/ETH 桥接、或向 Party ID 转账；资金须从 Funding 划至 Trading 方可买入。创建代币 25 CC，交易费 1%（创作者得 80%），绑定曲线累计筹资达 25 万 CC 后毕业至 Supa AMM。Meme 币具投机性，毕业不保证流动性或价格。', url: 'https://cantonnews.org/supanova-introduces-v2-with-mobile-trading-and-cc-funding-routes' },
