@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-22',
+          tag: 'Governance',
+          title: 'Press revisits CIP-0129 Universal Burn after Canton’s November 21 builder walkthrough',
+          body: 'The Crypto Times (November 22, 2026): Coverage follows Canton Network’s November 21 social update explaining CIP-0129 from an app builder’s perspective—production traffic on every MainNet synchronizer would eventually burn Canton Coin at Global Synchronizer list prices, dedicated synchronizer launches become permissionless without licence negotiations, and apps and validators earn rewards under the same rules as on the Global Synchronizer with operator-reported aggregate traffic. The piece restates the October Super Validator approval, tentative Q1 2027 Phase 1 universal burn and Q3 2027 volume or commitment pricing CIP, optional paymasters, and in-house dedicated deployments still burning for production traffic. It also notes SEC staff’s November no-action view that programmatic CC minting by validators and apps need not register as securities—not a live fee change today.',
+          url: 'https://www.cryptotimes.io/2026/11/22/canton-network-standardizes-mainnet-fees-with-universal-burn-proposal/',
+        },
+        {
+          date: '2026-11-21',
+          tag: 'Technology',
+          title: 'Zenith EVM Testnet pilots Cosmos IBC transfer to Ethereum Sepolia',
+          body: 'Zenith / CantonNews wire (November 21, 2026): Zenith Foundation said the public Zenith EVM Testnet can send a test token to Ethereum Sepolia through a Cosmos-built IBC pilot connecting Zenith to 15 external testnets including Sepolia, Tempo, Arc, and Besu environments—exploring routes beyond Canton-native Gateway atomic transfers between Canton and Zenith. Gateway remains the enshrined path for atomic asset moves between Canton parties and Zenith EVM; IBC is an early interoperability experiment, not production mainnet bridging. Testnet ZTH has no monetary value; builders should verify official RPC and docs before connecting wallets.',
+          url: 'https://docs.zenith.network/zenith-testnet',
+        },
+        {
+          date: '2026-11-21',
+          tag: 'Governance',
+          title: 'MainNet scheduled to upgrade to Splice 0.10.1 on November 23',
+          body: 'CantonNews events calendar (November 2026): Canton Foundation lists a MainNet upgrade to Splice 0.10.1 on November 23, 2026 (exact UTC time to be confirmed). Validators must run at least Splice 0.10.0 ahead of the cutover; the entry follows readiness notices for Splice MainNet 0.10.0, TestNet 0.10.1, and DevNet 0.10.2 cited in recent operator roundups. Scheduled upgrades can affect consensus participants that lag minimum versions—operators should follow official release notes and maintenance communications, not assume automatic participation without upgrading images.',
+          url: 'https://cantonnews.org/events',
+        },
+        {
+          date: '2026-11-18',
+          tag: 'Technology',
+          title: 'Canton 3.7.4 maintenance release speeds indexer init and pruning',
+          body: 'Canton release notes (November 18, 2026): Canton 3.7.4 is a maintenance release that reduces Ledger API indexer memory and time after synchronizer onboarding (internal tests cite roughly 90 seconds to initialize after importing topology with 10 million parties), speeds contract pruning with simpler queries and temporary tables, and fixes DB connection locks, CantonBFT P2P connections, and logical synchronizer upgrades. Breaking changes affect disabling a DAR, minimum ledger time bounds (commands too far ahead of ledger time now reject with INVALID_FIELD), and alpha sequencer channel pool and TTL defaults. Participant nodes run a new string-interning index migration on startup, lengthening upgrade windows.',
+          url: 'https://docs.canton.network/global-synchronizer/release-notes/canton-releases/3-7-4',
+        },
+        {
           date: '2026-11-20',
           tag: 'Markets',
           title: 'Fairmint TSV plans Canton venue for issuer-sponsored shares with Tradecraft AMM',
@@ -5451,6 +5479,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-22', tag: '治理', title: '媒体在 Canton 11 月 21 日 builder 解读后重述 CIP-0129 Universal Burn', body: 'The Crypto Times（2026-11-22）：报道承接 Canton Network 11 月 21 日社交媒体对 CIP-0129 的应用开发者视角说明——MainNet 上各 synchronizer 的生产流量最终将按 Global Synchronizer 标价销毁 Canton Coin，专用 synchronizer 可无许可启动、无需商业许可谈判，应用与验证者按与全球同步器相同的规则获得奖励，并由运营商上报聚合流量。文章回顾 10 月 Super Validator 批准、暂定 2027 年一季度 Phase 1 全面燃烧与三季度用量或承诺定价 CIP、可选 paymaster，以及机构自用专用部署仍为生产流量销毁。并提及 SEC 职员 11 月无行动函认为验证者与应用的程序化 CC 铸造无需按证券注册——非今日已生效的费率变更。', url: 'https://www.cryptotimes.io/2026/11/22/canton-network-standardizes-mainnet-fees-with-universal-burn-proposal/' },
+        { date: '2026-11-21', tag: '技术', title: 'Zenith EVM 测试网试点经 Cosmos IBC 向以太坊 Sepolia 发送测试代币', body: 'Zenith / CantonNews 快讯（2026-11-21）：Zenith Foundation 称公开 Zenith EVM 测试网可通过 Cosmos 构建的 IBC 试点向以太坊 Sepolia 发送测试代币，连接包括 Sepolia、Tempo、Arc、Besu 等 15 条外部测试网——探索超出 Canton 与 Zenith 间 Gateway 原子转移的互联路径。Gateway 仍为 Canton party 与 Zenith EVM 间原子资产转移的内建方案；IBC 为早期互操作实验，非生产主网跨链。测试网 ZTH 无货币价值；开发者接入前应核对官方 RPC 与文档。', url: 'https://docs.zenith.network/zenith-testnet' },
+        { date: '2026-11-21', tag: '治理', title: 'MainNet 计划于 11 月 23 日升级至 Splice 0.10.1', body: 'CantonNews 活动日历（2026 年 11 月）：Canton Foundation 列出 MainNet 将于 2026 年 11 月 23 日升级至 Splice 0.10.1（UTC 具体时间待定）。切换前验证者须至少运行 Splice 0.10.0；条目承接近期运营周报中引用的 Splice MainNet 0.10.0、TestNet 0.10.1 与 DevNet 0.10.2 就绪通告。计划升级可影响未达最低版本的共识参与者——运营方应遵循官方发行说明与维护通知，勿在未升级镜像的情况下假定可自动参与。', url: 'https://cantonnews.org/events' },
+        { date: '2026-11-18', tag: '技术', title: 'Canton 3.7.4 维护版加速索引器初始化与修剪', body: 'Canton 发行说明（2026-11-18）：Canton 3.7.4 为维护版本，降低 synchronizer 接入后 Ledger API 索引器的内存与时间（内部测试称导入含千万 party 拓扑后初始化约 90 秒），以更简单查询与临时表加速合约修剪，并修复数据库连接锁、CantonBFT P2P 连接与逻辑 synchronizer 升级问题。破坏性变更涉及禁用 DAR、最小账本时间上限（超前过多的命令将以 INVALID_FIELD 拒绝）及 alpha sequencer 通道池与 TTL 默认值。Participant 启动时执行新的字符串内化表索引迁移，会略微拉长升级窗口。', url: 'https://docs.canton.network/global-synchronizer/release-notes/canton-releases/3-7-4' },
         { date: '2026-11-20', tag: '市场', title: 'Fairmint TSV 拟在 Canton 以 Tradecraft AMM 运营发行人赞助代币化股票场所', body: 'CantonNews（2026-11-20）：Fairmint 宣布全资子公司 Fairmint TSV LLC 为计划中的交易场所，尚未开始交易——首批证券、参与方与上线日待定。方案以 Tradecraft 流动性池对接经发行人授权的股票，由 SEC 注册过户代理 Fairmint TA LLC 维护官方股东名册；以太坊规划在 Canton 之后。与已于 11 月 4 日完成 CNTN 交易的既有 TSV LLC 场所以及 Five North、DRW Cumberland、Flowdesk 参与的交易相区分。新场所拟依据 2026 年 9 月 SEC Innovation Exemption，须满足 30 日运营通知与运营就绪——AMM 技术不免除证券准入与股东权利条件。', url: 'https://cantonnews.org/fairmint-plans-canton-venue-for-tokenized-shares-with-tradecraft-as-first-amm' },
         { date: '2026-11-20', tag: '生态', title: 'Canton Foundation 专题介绍 Diviko AG 的自托管、多签金库与跨链路径', body: 'CantonNews（2026-11-20）：Foundation 对 Diviko AG——瑞士钱包与金融应用构建方，已于 11 月 4 日列入六家新成员——的专题强调本地签名外部 party、在 Canton 上强制执行的多签金库阈值、原子交换及带封装代币的 EVM 桥。文章称 Diviko 已在 MainNet 运营应用并将贡献互操作与标准视角；9 月验证者运营方批准涉及入驻准备，不表示所列产品均已面向终端用户上线。', url: 'https://cantonnews.org/diviko-joins-canton-foundation-with-focus-on-self-custody-and-interoperability' },
         { date: '2026-11-20', tag: '生态', title: 'Kiwoom、CSDBR 与 Ironlight 等七份验证者申请进入异议期', body: 'CantonNews（2026-11-20）：Canton 11 月 18 日通告列出七份申请，异议期至 11 月 25 日——无异议则视为默许。Kiwoom Securities 拟经节点服务商运营验证者以测试代币化与机构工作流；巴西 CSDBR 计划向 CVM 提交 Canton PoC；Ironlight Technologies 瞄准代币化证券结算基础设施（与 IronLighthouse 区分）。另有 Cradle Capital（BETH/铸造赎回）、岘港 Fintech Lab（VYBE Trade 应收账款）、edgeflare BV（商业节点服务）及 Circle Internet Group（原生 USDC 应用，此前已报道）。上榜不代表各节点已运行或已获 Super Validator 任命。', url: 'https://cantonnews.org/kiwoom-csdbr-and-ironlight-feature-in-canton-validator-application-batch' },
