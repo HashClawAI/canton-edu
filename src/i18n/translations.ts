@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-23',
+          tag: 'Governance',
+          title: 'MainNet, TestNet, and DevNet line up parallel Splice weekly upgrades',
+          body: 'CC Space operations calendar / CCPEDIA (November 23, 2026): Canton’s November 23 maintenance window schedules routine weekly Splice releases—MainNet to 0.10.1 (validators must already run at least 0.10.0), TestNet to 0.10.2, and DevNet to 0.10.3—matching Foundation SV calendar entries mirrored on CantonNews. Release notes for 0.10.1 upgrade Canton to 3.7.2, pin PostgreSQL init images to 18.6, and add optional token-standard wallet sweeps; published cutover times may still read TBC until SV confirms. Operators on images below minimum versions risk missing consensus until they upgrade.',
+          url: 'https://cc.itrocket.space/updates',
+        },
+        {
+          date: '2026-11-22',
+          tag: 'Technology',
+          title: 'Canton Development Fund approves 14.3 million CC for locking rules and developer tools',
+          body: 'CantonNews (November 22, 2026): The Canton Development Fund merged two grants totalling 14.3 million CC—9.5 million CC for Digital Asset and Obsidian to implement CIP-0127 coin-locking enforcement (compatibility work, Featured App locking, Super Validator automation, with the final under-lock penalty staged after on-ledger reward-weight recording) and 4.8 million CC for BitDynamics to extend DevKit so teams can describe multi-synchronizer local networks in config and test apps end to end. The DevKit tranche reserves 2.448 million CC (51%) for adoption milestones paying 612,000 CC per external project that demonstrates use of delivered tools—up to four projects to earn the full adoption budget.',
+          url: 'https://cantonnews.org/canton-development-fund-approves-14-3-million-cc-for-locking-rules-and-developer-tools',
+        },
+        {
+          date: '2026-11-22',
+          tag: 'Institutions',
+          title: 'Progmat takes its Canton bond sandbox plan to Japan’s finance ministry study group',
+          body: 'CantonNews (November 22, 2026): Progmat presented to a Ministry of Finance study group on November 20 how its Digital Asset Co-Creation Consortium would use Canton Testnet to issue and manage test JGBs, tokenized bank deposits, and stablecoins, with external repo and collateral platforms connected so dealers can trial simultaneous bond-and-cash legs, intraday financing, and cross-border collateral workflows. The hearing documents proposed division of labour—Progmat supplies the token sandbox while market infrastructures plug in demonstration stacks—but does not report live government-bond trades. It builds on the consortium’s October sandbox outline and November Digital Asset MOU for tJGB connectivity.',
+          url: 'https://cantonnews.org/progmat-takes-its-canton-bond-sandbox-plan-to-japan-s-finance-ministry-study-group',
+        },
+        {
+          date: '2026-11-22',
+          tag: 'Markets',
+          title: 'Broadridge DLR crosses $120 trillion in cumulative repo par value',
+          body: 'CantonNews / RWA.xyz (November 22, 2026): Broadridge’s Canton-based Distributed Ledger Repo platform’s published cumulative par-value series crossed $120 trillion on November 20—$119.82 trillion the prior day and $120.27 trillion after—based on 346 daily observations from June 16, 2025 through November 20. That session recorded $442.72 billion in daily par value (largest in the series since April 1), $405.04 billion in turnover, and 9,854 trades; par value, turnover, and trade count are separate measures on Kaiko’s Broadridge feed. Cumulative totals add each day’s face value even when collateral rolls across successive repos.',
+          url: 'https://cantonnews.org/broadridge-dlr-crosses-120-trillion-in-cumulative-repo-par-value',
+        },
+        {
+          date: '2026-11-22',
+          tag: 'Markets',
+          title: 'aSOL begins trading on Cantex and OneSwap',
+          body: 'CantonNews (November 22, 2026): The SOL-representative Canton token aSOL listed for trading on Cantex November 19 and on Cantor8’s OneSwap November 20—giving traders venue liquidity separate from HelloMoon/Cantor8 issuance paths described in parallel announcements (C8 Registry with ACME Markets vs Cantor8 issuance). Cantex says aSOL is one-for-one SOL-backed and that qualified participants may redeem for SOL, distinct from secondary sales on AMM venues. The asset surfaced earlier in October Featured App deliberations as the HelloMoon aSOL bridge; listings do not by themselves resolve redemption legal responsibility.',
+          url: 'https://cantonnews.org/asol-begins-trading-on-cantex-and-oneswap',
+        },
+        {
           date: '2026-11-22',
           tag: 'Governance',
           title: 'Press revisits CIP-0129 Universal Burn after Canton’s November 21 builder walkthrough',
@@ -5479,6 +5514,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-23', tag: '治理', title: 'MainNet、TestNet 与 DevNet 同日排定 Splice 周常升级', body: 'CC Space 运营日历 / CCPEDIA（2026-11-23）：Canton 11 月 23 日维护窗口排定例行 Splice 周更——MainNet 升至 0.10.1（验证者须已运行至少 0.10.0）、TestNet 升至 0.10.2、DevNet 升至 0.10.3——与 Foundation SV 日程及 CantonNews 镜像一致。0.10.1 发行说明含 Canton 3.7.2 升级、PostgreSQL init 镜像固定至 18.6 及钱包 sweep 可选 token-standard 转账；公布时间可能仍为 TBC，直至 SV 确认。镜像未达最低版本的运营方在升级前可能无法参与共识。', url: 'https://cc.itrocket.space/updates' },
+        { date: '2026-11-22', tag: '技术', title: 'Canton Development Fund 批准 1430 万 CC 用于锁定规则与开发者工具', body: 'CantonNews（2026-11-22）：Canton Development Fund 合并两项资助共 1430 万 CC——950 万 CC 由 Digital Asset 与 Obsidian 落实 CIP-0127 代币锁定（兼容工作、Featured App 锁定、Super Validator 自动化，最终低锁定惩罚待链上记录奖励权重后分阶段上线）；480 万 CC 由 BitDynamics 扩展 DevKit，使团队可在配置中描述多 synchronizer 本地网络并联调应用。DevKit 部分预留 244.8 万 CC（51%）作采用里程碑，每有一个外部项目证明使用交付工具即发 61.2 万 CC，至多四个项目可领满采用预算。', url: 'https://cantonnews.org/canton-development-fund-approves-14-3-million-cc-for-locking-rules-and-developer-tools' },
+        { date: '2026-11-22', tag: '机构', title: 'Progmat 向日本财务省研究会提交 Canton 国债 sandbox 方案', body: 'CantonNews（2026-11-22）：Progmat 11 月 20 日向财务省研究会说明 Digital Asset 共创联盟拟在 Canton Testnet 发行与管理测试用 JGB、代币化银行存款与稳定币，并连接外部 repo 与抵押品平台，供交易商试用国债与现金同步交割、日内融资与跨境抵押工作流。材料厘清分工——Progmat 提供代币 sandbox、市场基础设施接入演示栈——但未报告已完成的 live 国债交易。承接 10 月 sandbox 轮廓与 11 月与 Digital Asset 的 tJGB 连接 MOU。', url: 'https://cantonnews.org/progmat-takes-its-canton-bond-sandbox-plan-to-japan-s-finance-ministry-study-group' },
+        { date: '2026-11-22', tag: '市场', title: 'Broadridge DLR 累计 repo 面值突破 12 万亿美元', body: 'CantonNews / RWA.xyz（2026-11-22）：Broadridge 基于 Canton 的 Distributed Ledger Repo 平台公布的累计面值序列于 11 月 20 日突破 12 万亿美元——前一日 11.982 万亿、当日 12.027 万亿——数据覆盖 2025-06-16 至 2026-11-20 共 346 个交易日。该日面值 4427.2 亿美元（为 4 月 1 日以来系列最高）、换手 4050.4 亿美元、9854 笔成交；Kaiko Broadridge 馈送中面值、换手与笔数为独立指标。累计序列按日加总面值，抵押品跨多笔 repo 滚动仍会计入。', url: 'https://cantonnews.org/broadridge-dlr-crosses-120-trillion-in-cumulative-repo-par-value' },
+        { date: '2026-11-22', tag: '市场', title: 'aSOL 在 Cantex 与 OneSwap 开始交易', body: 'CantonNews（2026-11-22）：代表 SOL 的 Canton 代币 aSOL 于 11 月 19 日在 Cantex、11 月 20 日在 Cantor8 的 OneSwap 上线交易——为交易者提供与 HelloMoon/Cantor8 不同发行路径（C8 Registry 与 ACME Markets 合作 vs Cantor8 自行发行）相独立的场所流动性。Cantex 称 aSOL 与 SOL 1:1 背书且合格参与方可赎回 SOL，与 AMM 二级市场买卖不同。资产曾在 10 月 Featured App 审议中以 HelloMoon aSOL bridge 出现；上线本身不解决赎回法律责任归属。', url: 'https://cantonnews.org/asol-begins-trading-on-cantex-and-oneswap' },
         { date: '2026-11-22', tag: '治理', title: '媒体在 Canton 11 月 21 日 builder 解读后重述 CIP-0129 Universal Burn', body: 'The Crypto Times（2026-11-22）：报道承接 Canton Network 11 月 21 日社交媒体对 CIP-0129 的应用开发者视角说明——MainNet 上各 synchronizer 的生产流量最终将按 Global Synchronizer 标价销毁 Canton Coin，专用 synchronizer 可无许可启动、无需商业许可谈判，应用与验证者按与全球同步器相同的规则获得奖励，并由运营商上报聚合流量。文章回顾 10 月 Super Validator 批准、暂定 2027 年一季度 Phase 1 全面燃烧与三季度用量或承诺定价 CIP、可选 paymaster，以及机构自用专用部署仍为生产流量销毁。并提及 SEC 职员 11 月无行动函认为验证者与应用的程序化 CC 铸造无需按证券注册——非今日已生效的费率变更。', url: 'https://www.cryptotimes.io/2026/11/22/canton-network-standardizes-mainnet-fees-with-universal-burn-proposal/' },
         { date: '2026-11-21', tag: '技术', title: 'Zenith EVM 测试网试点经 Cosmos IBC 向以太坊 Sepolia 发送测试代币', body: 'Zenith / CantonNews 快讯（2026-11-21）：Zenith Foundation 称公开 Zenith EVM 测试网可通过 Cosmos 构建的 IBC 试点向以太坊 Sepolia 发送测试代币，连接包括 Sepolia、Tempo、Arc、Besu 等 15 条外部测试网——探索超出 Canton 与 Zenith 间 Gateway 原子转移的互联路径。Gateway 仍为 Canton party 与 Zenith EVM 间原子资产转移的内建方案；IBC 为早期互操作实验，非生产主网跨链。测试网 ZTH 无货币价值；开发者接入前应核对官方 RPC 与文档。', url: 'https://docs.zenith.network/zenith-testnet' },
         { date: '2026-11-21', tag: '治理', title: 'MainNet 计划于 11 月 23 日升级至 Splice 0.10.1', body: 'CantonNews 活动日历（2026 年 11 月）：Canton Foundation 列出 MainNet 将于 2026 年 11 月 23 日升级至 Splice 0.10.1（UTC 具体时间待定）。切换前验证者须至少运行 Splice 0.10.0；条目承接近期运营周报中引用的 Splice MainNet 0.10.0、TestNet 0.10.1 与 DevNet 0.10.2 就绪通告。计划升级可影响未达最低版本的共识参与者——运营方应遵循官方发行说明与维护通知，勿在未升级镜像的情况下假定可自动参与。', url: 'https://cantonnews.org/events' },
