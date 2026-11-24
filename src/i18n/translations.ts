@@ -328,6 +328,20 @@ export const translations = {
       items: [
         {
           date: '2026-11-23',
+          tag: 'Technology',
+          title: 'Launchnodes opens DamlBox self-service portal for hosted Canton DevNet nodes',
+          body: 'CantonNews (November 23, 2026): Launchnodes launched DamlBox—a $650-per-month self-service portal where Daml teams upload DAR files, auto-provision parties, and reach a hosted DevNet participant through the JSON Ledger API without operating their own node. Sign-up is email-based; Launchnodes runs the validator, authentication, and API endpoints while developers retain contract logic. The product scope is DevNet only—marketing describes redeploying to TestNet and MainNet later, but hosted TestNet/MainNet nodes are not part of this launch—so production assets and end users stay off DevNet.',
+          url: 'https://cantonnews.org/launchnodes-launches-damlbox-a-self-service-canton-devnet-portal',
+        },
+        {
+          date: '2026-11-23',
+          tag: 'Ecosystem',
+          title: 'DEXTools lists Supanova Canton pairs as FAAC ties launchpad rewards to memecoin buybacks',
+          body: 'CantonNews (November 23, 2026): DEXTools added Supanova Canton trading pairs November 19 with charts, holders, liquidity, and trade history for tokens that graduated from the launchpad. Separately, Canton’s Featured App Accountability Committee November 19 notice backed provisional asset-moving status for the launchpad and Asset Issuer status for its registrar under one condition: 100% of asset rewards from the venue and issuer must buy back and burn the platform’s memecoins—distinct from Supanova’s 1% trading fees and creator shares. The designations advance to Super Validator voting without a stated buyback amount or schedule.',
+          url: 'https://cantonnews.org/dextools-adds-supanova-trading-pairs-as-canton-committee-sets-reward-terms',
+        },
+        {
+          date: '2026-11-23',
           tag: 'Governance',
           title: 'MainNet, TestNet, and DevNet line up parallel Splice weekly upgrades',
           body: 'CC Space operations calendar / CCPEDIA (November 23, 2026): Canton’s November 23 maintenance window schedules routine weekly Splice releases—MainNet to 0.10.1 (validators must already run at least 0.10.0), TestNet to 0.10.2, and DevNet to 0.10.3—matching Foundation SV calendar entries mirrored on CantonNews. Release notes for 0.10.1 upgrade Canton to 3.7.2, pin PostgreSQL init images to 18.6, and add optional token-standard wallet sweeps; published cutover times may still read TBC until SV confirms. Operators on images below minimum versions risk missing consensus until they upgrade.',
@@ -5514,6 +5528,8 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-23', tag: '技术', title: 'Launchnodes 上线 DamlBox 自助门户，托管 Canton DevNet 节点', body: 'CantonNews（2026-11-23）：Launchnodes 推出 DamlBox——月费 650 美元的自助门户，Daml 团队可上传 DAR、自动创建 party，并经 JSON Ledger API 访问托管 DevNet participant，无需自建节点。注册以邮箱为主；Launchnodes 运营验证者、认证与 API 端点，开发者保留合约逻辑。产品范围仅限 DevNet——宣传称后续再部署至 TestNet 与 MainNet，但此次未含托管 TestNet/MainNet 节点——生产资产与终端用户不应使用 DevNet。', url: 'https://cantonnews.org/launchnodes-launches-damlbox-a-self-service-canton-devnet-portal' },
+        { date: '2026-11-23', tag: '生态', title: 'DEXTools 收录 Supanova Canton 交易对，FAAC 将启动板奖励与 meme 回购挂钩', body: 'CantonNews（2026-11-23）：DEXTools 于 11 月 19 日为 Supanova Canton 交易对提供图表、持有人、流动性与成交历史，便于跟踪自启动板毕业的代币。另，Featured App Accountability Committee 11 月 19 日通告在单一条件下背书启动板临时资产流转地位与其资产登记方的 Asset Issuer 地位：场所与登记方产生的资产奖励须 100% 用于回购并销毁平台 meme 币——与 Supanova 1% 交易费及创作者分成分开核算。认定进入 Super Validator 表决，未给出回购金额或时间表。', url: 'https://cantonnews.org/dextools-adds-supanova-trading-pairs-as-canton-committee-sets-reward-terms' },
         { date: '2026-11-23', tag: '治理', title: 'MainNet、TestNet 与 DevNet 同日排定 Splice 周常升级', body: 'CC Space 运营日历 / CCPEDIA（2026-11-23）：Canton 11 月 23 日维护窗口排定例行 Splice 周更——MainNet 升至 0.10.1（验证者须已运行至少 0.10.0）、TestNet 升至 0.10.2、DevNet 升至 0.10.3——与 Foundation SV 日程及 CantonNews 镜像一致。0.10.1 发行说明含 Canton 3.7.2 升级、PostgreSQL init 镜像固定至 18.6 及钱包 sweep 可选 token-standard 转账；公布时间可能仍为 TBC，直至 SV 确认。镜像未达最低版本的运营方在升级前可能无法参与共识。', url: 'https://cc.itrocket.space/updates' },
         { date: '2026-11-22', tag: '技术', title: 'Canton Development Fund 批准 1430 万 CC 用于锁定规则与开发者工具', body: 'CantonNews（2026-11-22）：Canton Development Fund 合并两项资助共 1430 万 CC——950 万 CC 由 Digital Asset 与 Obsidian 落实 CIP-0127 代币锁定（兼容工作、Featured App 锁定、Super Validator 自动化，最终低锁定惩罚待链上记录奖励权重后分阶段上线）；480 万 CC 由 BitDynamics 扩展 DevKit，使团队可在配置中描述多 synchronizer 本地网络并联调应用。DevKit 部分预留 244.8 万 CC（51%）作采用里程碑，每有一个外部项目证明使用交付工具即发 61.2 万 CC，至多四个项目可领满采用预算。', url: 'https://cantonnews.org/canton-development-fund-approves-14-3-million-cc-for-locking-rules-and-developer-tools' },
         { date: '2026-11-22', tag: '机构', title: 'Progmat 向日本财务省研究会提交 Canton 国债 sandbox 方案', body: 'CantonNews（2026-11-22）：Progmat 11 月 20 日向财务省研究会说明 Digital Asset 共创联盟拟在 Canton Testnet 发行与管理测试用 JGB、代币化银行存款与稳定币，并连接外部 repo 与抵押品平台，供交易商试用国债与现金同步交割、日内融资与跨境抵押工作流。材料厘清分工——Progmat 提供代币 sandbox、市场基础设施接入演示栈——但未报告已完成的 live 国债交易。承接 10 月 sandbox 轮廓与 11 月与 Digital Asset 的 tJGB 连接 MOU。', url: 'https://cantonnews.org/progmat-takes-its-canton-bond-sandbox-plan-to-japan-s-finance-ministry-study-group' },
