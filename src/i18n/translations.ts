@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-24',
+          tag: 'Ecosystem',
+          title: 'GRT joins Canton Foundation with market-making and liquidity expertise',
+          body: 'CantonNews (November 24, 2026): The Foundation’s November 24 spotlight on Granite River Trading (GRT) frames its Member role around market structure, liquidity and operating digital-asset markets—building on the November 4 batch that first named GRT among six new members. GRT describes itself as a proprietary desk quoting across CEX and DEX venues with market-making and OTC execution for issuers and institutions. A concrete Canton tie is GRT’s November 5 EDX CBTC/USD liquidity role: BitSafe supplies CBTC, EDX lists the institutional spot venue, and GRT quotes—distinct from being a validator operator. Membership does not by itself change EDX access rules or CBTC redemption terms.',
+          url: 'https://cantonnews.org/grt-joins-canton-foundation-with-market-making-and-liquidity-expertise',
+        },
+        {
+          date: '2026-11-24',
+          tag: 'Ecosystem',
+          title: 'Canton Roundup: The Tie counts 954,000 accounts and Canborsa sees $24.3M in perpetuals volume',
+          body: 'CantonNews (November 24, 2026): The Tie’s November 22 figures put Canton at 954,000 accounts as of November 19—about ten times the 94,000 count a year earlier (accounts, not unique users or transaction frequency). Canton Venues tracked $24.3 million in Canborsa perpetual futures volume over the 30 days in that update. The roundup also notes FTP’s wallet “verify before sign” milestone one received a positive reviewer assessment November 22 with code merged and Wallet SDK adoption while its acceptance vote remained open; Tritemius returned to normal service after infrastructure maintenance; and the Foundation’s November 23 Splice schedule (MainNet 0.10.1, TestNet 0.10.2, DevNet 0.10.3) was confirmed as of November 23 04:05 UTC.',
+          url: 'https://cantonnews.org/canton-roundup-the-tie-counts-954-000-accounts-and-canborsa-sees-24-3m-in-perpetuals-volume',
+        },
+        {
+          date: '2026-11-24',
+          tag: 'Governance',
+          title: 'Canton removes four units of reward weight reserved for Blockdaemon',
+          body: 'CantonNews (November 24, 2026): All 13 Super Validators voted to strip four escrowed reward-weight units tied to Blockdaemon’s expired CIP-0094 bonuses from the MPC-Holding Super Validator node, lowering its weight from 65 to 61 effective November 18 on MainNet. The lapsed milestones covered transaction volume through Blockdaemon products (up to two units on 10M-transaction steps, 270-day window) and institutional-wallet adoption (up to two units on $500M asset steps, 180-day window). The November 7 Foundation notice had named Blockdaemon among eight organisations with proposed escrow removals; configuration records merged November 19 on MainNet and November 22 on TestNet/DevNet with the same November 18 effective date—distinct from Blockdaemon exiting Canton or product shutdown.',
+          url: 'https://cantonnews.org/canton-removes-four-units-of-reward-weight-reserved-for-blockdaemon',
+        },
+        {
+          date: '2026-11-24',
+          tag: 'Institutions',
+          title: 'Can Canton’s data infrastructure support institutional financial decisions?',
+          body: 'CantonNews (November 24, 2026): A TUNDE analysis contrasts expanding Canton data layers—indexing, analytics, market data, oracles and emerging benchmarks such as KC&C liquidity and borrowing-cost indicators—with what lenders need for collateral acceptance, liquidation recovery and borrower assessment. It separates quoted market value from liquidation value under depth, price impact and timing constraints, and stresses that permissioned privacy, standardized definitions, independently validated benchmarks and stress-tested history are still required before institutions could rely on these signals for credit decisions. The piece follows the November 16 infrastructure timeline article without claiming any single feed is a complete underwriting or risk-rating system today.',
+          url: 'https://cantonnews.org/can-canton-s-data-infrastructure-support-institutional-financial-decisions',
+        },
+        {
           date: '2026-11-23',
           tag: 'Technology',
           title: 'Launchnodes opens DamlBox self-service portal for hosted Canton DevNet nodes',
@@ -5528,6 +5556,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-24', tag: '生态', title: 'GRT 以做市与流动性专长加入 Canton Foundation', body: 'CantonNews（2026-11-24）：Foundation 11 月 24 日专题聚焦 Granite River Trading（GRT）的 Member 角色——市场结构、流动性与数字资产市场运营视角——承接 11 月 4 日六家新成员批次中的首次点名。GRT 自称自营交易台，在中心化与去中心化场所报价，并为发行方与机构提供做市与 OTC 执行。具体 Canton 关联为其 11 月 5 日担任 EDX CBTC/USD 流动性方：BitSafe 提供 CBTC、EDX 提供机构现货场所、GRT 报价——与验证者运营角色相区分。成员身份本身不改变 EDX 准入或 CBTC 赎回条款。', url: 'https://cantonnews.org/grt-joins-canton-foundation-with-market-making-and-liquidity-expertise' },
+        { date: '2026-11-24', tag: '生态', title: 'Canton 周报：The Tie 统计 95.4 万账户，Canborsa 永续 30 日成交 2430 万美元', body: 'CantonNews（2026-11-24）：The Tie 11 月 22 日数据称截至 11 月 19 日 Canton 约 95.4 万账户——约为一年前 9.4 万的十倍（统计账户数，非独立用户数或交易频次）。Canton Venues 在同期更新中统计 Canborsa 永续期货 30 日成交量约 2430 万美元。周报另述 FTP 钱包「签名前校验」里程碑一于 11 月 22 日获评审正面反馈且代码已合并、Wallet SDK 采用中，接受表决仍开放；Tritemius 基础设施维护后恢复正常；Foundation 11 月 23 日 Splice 日程（MainNet 0.10.1、TestNet 0.10.2、DevNet 0.10.3）已于 11 月 23 日 04:05 UTC 确认。', url: 'https://cantonnews.org/canton-roundup-the-tie-counts-954-000-accounts-and-canborsa-sees-24-3m-in-perpetuals-volume' },
+        { date: '2026-11-24', tag: '治理', title: 'Canton 移除为 Blockdaemon 预留的四单位奖励权重', body: 'CantonNews（2026-11-24）：13 名 Super Validator 全票通过，自 MainNet 11 月 18 日起从 MPC-Holding 节点剥离与 Blockdaemon 已过期 CIP-0094 奖励挂钩的四单位托管权重，总权重由 65 降至 61。失效里程碑涵盖经 Blockdaemon 产品与基础设施的交易量（每千万笔可计半单位，270 日期限）及机构钱包采用（每 5 亿美元资产可计半单位，180 日期限）。11 月 7 日 Foundation 通告曾将 Blockdaemon 列入八家拟移除托管权重机构；MainNet 配置记录于 11 月 19 日合并，TestNet/DevNet 于 11 月 22 日合并，生效日均为 11 月 18 日——不意味着 Blockdaemon 退出 Canton 或产品关停。', url: 'https://cantonnews.org/canton-removes-four-units-of-reward-weight-reserved-for-blockdaemon' },
+        { date: '2026-11-24', tag: '机构', title: 'Canton 数据基础设施能否支撑机构金融决策？', body: 'CantonNews（2026-11-24）：TUNDE 分析对比 Canton 日益丰富的数据层——索引、分析、行情、预言机及 KC&C 等新兴流动性与借贷成本基准——与贷款人接受抵押、清算回收与借款人评估所需信息之间的差距；区分报价市值与受深度、价格冲击与时间约束下的清算价值，并强调在机构可依这些信号做信贷决策之前，仍须具备权限隐私、统一口径、独立验证基准与压力测试历史。文章承接 11 月 16 日基础设施时间线综述，未宣称任一 feed 今日已是完整核保或评级体系。', url: 'https://cantonnews.org/can-canton-s-data-infrastructure-support-institutional-financial-decisions' },
         { date: '2026-11-23', tag: '技术', title: 'Launchnodes 上线 DamlBox 自助门户，托管 Canton DevNet 节点', body: 'CantonNews（2026-11-23）：Launchnodes 推出 DamlBox——月费 650 美元的自助门户，Daml 团队可上传 DAR、自动创建 party，并经 JSON Ledger API 访问托管 DevNet participant，无需自建节点。注册以邮箱为主；Launchnodes 运营验证者、认证与 API 端点，开发者保留合约逻辑。产品范围仅限 DevNet——宣传称后续再部署至 TestNet 与 MainNet，但此次未含托管 TestNet/MainNet 节点——生产资产与终端用户不应使用 DevNet。', url: 'https://cantonnews.org/launchnodes-launches-damlbox-a-self-service-canton-devnet-portal' },
         { date: '2026-11-23', tag: '生态', title: 'DEXTools 收录 Supanova Canton 交易对，FAAC 将启动板奖励与 meme 回购挂钩', body: 'CantonNews（2026-11-23）：DEXTools 于 11 月 19 日为 Supanova Canton 交易对提供图表、持有人、流动性与成交历史，便于跟踪自启动板毕业的代币。另，Featured App Accountability Committee 11 月 19 日通告在单一条件下背书启动板临时资产流转地位与其资产登记方的 Asset Issuer 地位：场所与登记方产生的资产奖励须 100% 用于回购并销毁平台 meme 币——与 Supanova 1% 交易费及创作者分成分开核算。认定进入 Super Validator 表决，未给出回购金额或时间表。', url: 'https://cantonnews.org/dextools-adds-supanova-trading-pairs-as-canton-committee-sets-reward-terms' },
         { date: '2026-11-23', tag: '治理', title: 'MainNet、TestNet 与 DevNet 同日排定 Splice 周常升级', body: 'CC Space 运营日历 / CCPEDIA（2026-11-23）：Canton 11 月 23 日维护窗口排定例行 Splice 周更——MainNet 升至 0.10.1（验证者须已运行至少 0.10.0）、TestNet 升至 0.10.2、DevNet 升至 0.10.3——与 Foundation SV 日程及 CantonNews 镜像一致。0.10.1 发行说明含 Canton 3.7.2 升级、PostgreSQL init 镜像固定至 18.6 及钱包 sweep 可选 token-standard 转账；公布时间可能仍为 TBC，直至 SV 确认。镜像未达最低版本的运营方在升级前可能无法参与共识。', url: 'https://cc.itrocket.space/updates' },
