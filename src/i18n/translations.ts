@@ -327,6 +327,27 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-25',
+          tag: 'Ecosystem',
+          title: 'C8 Wallet and Cauri Wallet open signups without invite codes',
+          body: 'CantonNews (November 25, 2026): New Canton users can start directly with either wallet—changes the teams made separately in late November. Cauri removed its Discord invitation requirement on November 23; users now go straight to the Cauri site to create a wallet. Cantor8’s November 24 C8 Wallet announcement drops both invites and registration codes so anyone can open the app directly. The updates affect onboarding only—neither announcement changes custody model, supported assets, or network fee rules.',
+          url: 'https://cantonnews.org/c8-wallet-and-cauri-wallet-open-signups-without-invite-codes',
+        },
+        {
+          date: '2026-11-25',
+          tag: 'Ecosystem',
+          title: 'Canton roundup: Splice upgrade clears a threshold and four spot venues trade $124.4 million',
+          body: 'CantonNews (November 25, 2026): A November 24 operator notice said two-thirds of Super Validator nodes—including GSF’s—had upgraded to Splice 0.10.1, clearing other MainNet validator operators to proceed without a firm completion date for the remainder. Canton Venues put weekly spot turnover at $124.4 million for November 16–22 (down 9.6%): Temple 91.0%, Cantex 7.7%, Rocky 1.1%, Tradecraft 0.2%; Kora joined the tracker after the week. Canborsa added SOXL and KORU markets with up to 10× leverage. Zenith reported one IBCX test round trip to Ethereum Sepolia in 88 seconds and back in 71 seconds. Supanova Quick Buy, Wallet Gateway 1.15, CantonGrid 0.4.0, and three Development Fund requests (Inveena Friel, Upflam, dpm-disclose) are also summarized.',
+          url: 'https://cantonnews.org/canton-roundup-splice-upgrade-clears-a-threshold-and-four-spot-venues-trade-124-4-million',
+        },
+        {
+          date: '2026-11-24',
+          tag: 'Markets',
+          title: 'Canton roundup: cBNB liquidity review, new FX markets and Loop’s token list',
+          body: 'CantonNews (November 24, 2026): Canton’s Featured App Accountability Committee backed Nuxaris cBNB for Featured Asset status and set December 7 to review liquidity across three venues—falling short could start revocation, separate from Nuxaris’ earlier 25 million CC lock. Canborsa listed EUR and USDJPY perpetuals; Kora opened a dashboard for volume, inflows, depth, and spreads; OneSwap reported bridge liquidity in OnePump’s first week sufficient to buy five million CC. Loop opened its shared token list to public issuer submissions and updated swap quote guidance; Console Wallet v1.15.1 adds manual or automatic CC traffic top-ups; C8 Wallet added transaction push notifications. Circle received one more MainNet validator allocation without an operating date; committee notices also recommended pausing status for named SatsTerminal, Obligate, and Interstice parties. CantonGrid v0.3.0/v0.4 alpha and Gloam’s 800,000 CC exchange-deposit proposal round out the edition through November 22.',
+          url: 'https://cantonnews.org/canton-roundup-cbnb-liquidity-review-new-fx-markets-and-loop-s-token-list',
+        },
+        {
           date: '2026-11-24',
           tag: 'Ecosystem',
           title: 'GRT joins Canton Foundation with market-making and liquidity expertise',
@@ -5556,6 +5577,9 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-25', tag: '生态', title: 'C8 Wallet 与 Cauri Wallet 开放注册，无需邀请码', body: 'CantonNews（2026-11-25）：新用户可直接从任一钱包起步——两家团队于 11 月下旬分别调整。Cauri 于 11 月 23 日取消须先经 Discord 获取邀请码的流程，用户现可直接访问 Cauri 网站创建钱包。Cantor8 11 月 24 日宣布 C8 Wallet 取消邀请与注册码，任何人可直接打开应用。变更仅影响入门流程——未改变托管模式、支持资产或网络费规则。', url: 'https://cantonnews.org/c8-wallet-and-cauri-wallet-open-signups-without-invite-codes' },
+        { date: '2026-11-25', tag: '生态', title: 'Canton 周报：Splice 升级达门槛，四家现货场所周成交 1.244 亿美元', body: 'CantonNews（2026-11-25）：11 月 24 日运营通告称超三分之二 Super Validator 节点（含 GSF）已升级至 Splice 0.10.1，其余 MainNet 验证者运营方可跟进，未给出全部节点完成日期。Canton Venues 统计 11 月 16–22 日现货周成交 1.244 亿美元（环比降 9.6%）：Temple 91.0%、Cantex 7.7%、Rocky 1.1%、Tradecraft 0.2%；Kora 于统计周后纳入追踪。Canborsa 新增 SOXL、KORU 市场，最高 10 倍杠杆。Zenith 报告单次 IBCX 测试往返以太坊 Sepolia 去程 88 秒、回程 71 秒。另汇总 Supanova Quick Buy、Wallet Gateway 1.15、CantonGrid 0.4.0 及 Development Fund 三项申请（Inveena Friel、Upflam、dpm-disclose）。', url: 'https://cantonnews.org/canton-roundup-splice-upgrade-clears-a-threshold-and-four-spot-venues-trade-124-4-million' },
+        { date: '2026-11-24', tag: '市场', title: 'Canton 周报：cBNB 流动性审查、外汇新市场与 Loop 代币列表', body: 'CantonNews（2026-11-24）：Featured App Accountability Committee 认可 Nuxaris cBNB 的 Featured Asset 地位并定于 12 月 7 日审查三家场所流动性——未达标或启动撤销流程，与早前 2500 万 CC 锁仓为不同问题。Canborsa 上线 EUR、USDJPY 永续；Kora 开放成交量、净流入、深度与价差面板；OneSwap 称 OnePump 首周桥接流动性足以购入 500 万 CC。Loop 向发行方开放共享代币列表公开展示申请并更新兑换报价说明；Console Wallet v1.15.1 支持手动或自动 CC 流量充值；C8 Wallet 增加交易推送。Circle 再获一笔 MainNet 验证者配额且无运营日期；委员会通告亦建议暂停 SatsTerminal、Obligate、Interstice 相关方地位。CantonGrid v0.3.0/v0.4 alpha 与 Gloam 80 万 CC 交易所入金提案收录至 11 月 22 日。', url: 'https://cantonnews.org/canton-roundup-cbnb-liquidity-review-new-fx-markets-and-loop-s-token-list' },
         { date: '2026-11-24', tag: '生态', title: 'GRT 以做市与流动性专长加入 Canton Foundation', body: 'CantonNews（2026-11-24）：Foundation 11 月 24 日专题聚焦 Granite River Trading（GRT）的 Member 角色——市场结构、流动性与数字资产市场运营视角——承接 11 月 4 日六家新成员批次中的首次点名。GRT 自称自营交易台，在中心化与去中心化场所报价，并为发行方与机构提供做市与 OTC 执行。具体 Canton 关联为其 11 月 5 日担任 EDX CBTC/USD 流动性方：BitSafe 提供 CBTC、EDX 提供机构现货场所、GRT 报价——与验证者运营角色相区分。成员身份本身不改变 EDX 准入或 CBTC 赎回条款。', url: 'https://cantonnews.org/grt-joins-canton-foundation-with-market-making-and-liquidity-expertise' },
         { date: '2026-11-24', tag: '生态', title: 'Canton 周报：The Tie 统计 95.4 万账户，Canborsa 永续 30 日成交 2430 万美元', body: 'CantonNews（2026-11-24）：The Tie 11 月 22 日数据称截至 11 月 19 日 Canton 约 95.4 万账户——约为一年前 9.4 万的十倍（统计账户数，非独立用户数或交易频次）。Canton Venues 在同期更新中统计 Canborsa 永续期货 30 日成交量约 2430 万美元。周报另述 FTP 钱包「签名前校验」里程碑一于 11 月 22 日获评审正面反馈且代码已合并、Wallet SDK 采用中，接受表决仍开放；Tritemius 基础设施维护后恢复正常；Foundation 11 月 23 日 Splice 日程（MainNet 0.10.1、TestNet 0.10.2、DevNet 0.10.3）已于 11 月 23 日 04:05 UTC 确认。', url: 'https://cantonnews.org/canton-roundup-the-tie-counts-954-000-accounts-and-canborsa-sees-24-3m-in-perpetuals-volume' },
         { date: '2026-11-24', tag: '治理', title: 'Canton 移除为 Blockdaemon 预留的四单位奖励权重', body: 'CantonNews（2026-11-24）：13 名 Super Validator 全票通过，自 MainNet 11 月 18 日起从 MPC-Holding 节点剥离与 Blockdaemon 已过期 CIP-0094 奖励挂钩的四单位托管权重，总权重由 65 降至 61。失效里程碑涵盖经 Blockdaemon 产品与基础设施的交易量（每千万笔可计半单位，270 日期限）及机构钱包采用（每 5 亿美元资产可计半单位，180 日期限）。11 月 7 日 Foundation 通告曾将 Blockdaemon 列入八家拟移除托管权重机构；MainNet 配置记录于 11 月 19 日合并，TestNet/DevNet 于 11 月 22 日合并，生效日均为 11 月 18 日——不意味着 Blockdaemon 退出 Canton 或产品关停。', url: 'https://cantonnews.org/canton-removes-four-units-of-reward-weight-reserved-for-blockdaemon' },
