@@ -327,6 +327,41 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-26',
+          tag: 'Markets',
+          title: 'Kora passes $500 million in total trading volume on Canton',
+          body: 'CantonNews (November 26, 2026): Kora’s November 24 announcement counts more than $500 million exchanged on its Canton venue from the first request-for-quote swaps through the open spot order book—up from a $150 million milestone in October. Lifetime volume spans RFQ and posted-order trading; Canton Venues added Kora to its tracker the same day with $8–9 million daily spot volume, second only to Temple among tracked venues. The tracker lists five spot assets (CBTC, cETH, eXAU, eXAG, CC). Kora joined after the November 16–22 weekly comparison that used a different venue set.',
+          url: 'https://cantonnews.org/kora-passes-500-million-in-total-trading-volume-on-canton',
+        },
+        {
+          date: '2026-11-26',
+          tag: 'Technology',
+          title: 'Canton Foundation seeks quotes for four independent security audits',
+          body: 'CantonNews (November 26, 2026): The Foundation’s November 24 call invites audit firms to quote—within 14 calendar days—on four Development Fund proposal 410 scopes: ISS/BFT Orderer messaging order, Logical Synchronizer Migration, Crypto API, and grouped Ledger plus JSON application APIs (milestones 1, 2, 3, and 6 of an 11-area programme). Firms use a confidential scope request form and submit effort estimates, team CVs, availability, sample reports, and conflict disclosures; the Technology & Operations Security Subcommittee selects auditors with core contributors including Digital Asset.',
+          url: 'https://cantonnews.org/canton-foundation-seeks-quotes-for-four-independent-security-audits',
+        },
+        {
+          date: '2026-11-26',
+          tag: 'Technology',
+          title: 'Rome moves Ostia to Canton TestNet and opens a bridge app',
+          body: 'CantonNews (November 26, 2026): Rome Protocol shifted Ostia from Canton DevNet to TestNet on November 21 and documented the deployment plus a dedicated bridge app on November 23. Developers can run Ethereum-compatible Solidity on Ostia with execution verified on Canton (chain ID 770101, single prover, faucet test tROME); the bridge supports test transfers to Ethereum Sepolia via an EVM wallet while Rome test parties handle the Canton side—users cannot yet connect personal Canton wallets on the bridge page. Deployment record lists Daml package 0.5.0; MainNet remains listed as future work after the October 22 DevNet launch.',
+          url: 'https://cantonnews.org/rome-moves-ostia-to-canton-testnet-and-opens-a-bridge-app',
+        },
+        {
+          date: '2026-11-26',
+          tag: 'Governance',
+          title: 'Canton opens vote on 5.85 million CC for traffic-based app rewards',
+          body: 'CantonNews (November 26, 2026): A Development Fund vote opened November 24 on Digital Asset and Obsidian Systems’ joint request for 5.85 million CC to implement the approved CIP-0104 rewards amendment in Splice, enable it on MainNet, and maintain the software—roughly six months of work split 2.35 million CC (Digital Asset) and 3.5 million CC including maintenance (Obsidian). Super Validators already approved the amendment; applicants note the original activity-recording build was never switched on for MainNet. The vote runs 21 days and needs ≥51% of eligible Technology & Operations voters; MainNet activation would follow a successful grant.',
+          url: 'https://cantonnews.org/canton-opens-vote-on-5-85-million-cc-for-traffic-based-app-rewards',
+        },
+        {
+          date: '2026-11-26',
+          tag: 'Markets',
+          title: 'Temple opens trading in onRails cSOL to all clients',
+          body: 'CantonNews (November 26, 2026): Temple Digital Group opened onRails’ cSOL—a token described as backed one-for-one by SOL with non-custodial Canton settlement—to all clients per a November 23 listing announcement naming onRails as partner. The listing adds Solana exposure beside Temple’s existing bitcoin, gold, and stablecoin spot book; onRails cited more than $2 billion venue volume across those markets before cSOL. This is distinct from Cantex and OneSwap’s earlier-November aSOL markets—ticker and venue both matter when comparing Solana-linked Canton tokens.',
+          url: 'https://cantonnews.org/temple-opens-trading-in-onrails-csol-to-all-clients',
+        },
+        {
           date: '2026-11-25',
           tag: 'Ecosystem',
           title: 'C8 Wallet and Cauri Wallet open signups without invite codes',
@@ -5577,6 +5612,11 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-26', tag: '市场', title: 'Kora 在 Canton 累计交易额突破 5 亿美元', body: 'CantonNews（2026-11-26）：Kora 11 月 24 日公告统计其在 Canton 场所自首批询价（RFQ）换汇至开放现货订单簿以来累计成交逾 5 亿美元——10 月曾报 1.5 亿美元节点。累计含 RFQ 与挂单成交；同日 Canton Venues 将 Kora 纳入追踪，日现货约 800–900 万美元，在已追踪场所中仅次于 Temple。追踪列五类现货资产（CBTC、cETH、eXAU、eXAG、CC）；Kora 于 11 月 16–22 周度对比所用场所集合关闭后才纳入。', url: 'https://cantonnews.org/kora-passes-500-million-in-total-trading-volume-on-canton' },
+        { date: '2026-11-26', tag: '技术', title: 'Canton Foundation 就四项独立安全审计征集报价', body: 'CantonNews（2026-11-26）：Foundation 11 月 24 日通告邀请审计机构在 14 个自然日内就 Development Fund 提案 410 的四项范围报价：ISS/BFT Orderer 消息排序、Logical Synchronizer Migration、Crypto API，以及 Ledger 与 JSON 应用 API 合并范围（11 项安全审查中的第 1、2、3、6 里程碑）。机构通过保密范围申请表提交工作量、团队履历、可交付时间、样例报告与利益冲突说明；Technology & Operations Security 子委员会会同核心贡献方（含 Digital Asset）遴选审计方。', url: 'https://cantonnews.org/canton-foundation-seeks-quotes-for-four-independent-security-audits' },
+        { date: '2026-11-26', tag: '技术', title: 'Rome 将 Ostia 迁至 Canton TestNet 并上线桥接应用', body: 'CantonNews（2026-11-26）：Rome Protocol 11 月 21 日将 Ostia 从 Canton DevNet 迁至 TestNet，并于 11 月 23 日记录部署并开放专用桥接应用。开发者可在 Ostia 运行经 Canton 验证的以太坊兼容 Solidity（链 ID 770101、单证明者、faucet 发放测试 tROME）；桥接支持经 EVM 钱包向以太坊 Sepolia 的测试转账，Canton 侧由 Rome 测试 party 处理——用户尚无法在桥接页连接个人 Canton 钱包。部署记录标注 Daml 包 0.5.0；10 月 22 日 DevNet 首发后 MainNet 仍列为后续工作。', url: 'https://cantonnews.org/rome-moves-ostia-to-canton-testnet-and-opens-a-bridge-app' },
+        { date: '2026-11-26', tag: '治理', title: 'Canton 就 585 万 CC 流量型应用奖励实现开启投票', body: 'CantonNews（2026-11-26）：Development Fund 于 11 月 24 日就 Digital Asset 与 Obsidian Systems 联合申请 585 万 CC 开启表决——在 Splice 中落实已批准的 CIP-0104 奖励修正案、在 MainNet 启用并维护软件，工期约六个月，分配 235 万 CC（Digital Asset）与 350 万 CC 含维护（Obsidian）。Super Validator 已批准修正案；申请人称早期活动记录版本从未在 MainNet 启用。投票期 21 天，须获 Technology & Operations 合格选民 ≥51% 支持；拨款通过后 MainNet 上线为后续实施步骤。', url: 'https://cantonnews.org/canton-opens-vote-on-5-85-million-cc-for-traffic-based-app-rewards' },
+        { date: '2026-11-26', tag: '市场', title: 'Temple 向全体客户开放 onRails cSOL 交易', body: 'CantonNews（2026-11-26）：Temple Digital Group 据 11 月 23 日与 onRails 合作的上市通告，向全体客户开放 onRails cSOL——宣称与 SOL 1:1 背书、非托管且在 Canton 结算。上市在既有比特币、黄金与稳定币现货簿上增加 Solana 敞口；onRails 引述 cSOL 上线前该场所上述市场累计成交逾 20 亿美元。与 11 月上旬 Cantex、OneSwap 的 aSOL 市场不同——查市场时须区分代码与场所。', url: 'https://cantonnews.org/temple-opens-trading-in-onrails-csol-to-all-clients' },
         { date: '2026-11-25', tag: '生态', title: 'C8 Wallet 与 Cauri Wallet 开放注册，无需邀请码', body: 'CantonNews（2026-11-25）：新用户可直接从任一钱包起步——两家团队于 11 月下旬分别调整。Cauri 于 11 月 23 日取消须先经 Discord 获取邀请码的流程，用户现可直接访问 Cauri 网站创建钱包。Cantor8 11 月 24 日宣布 C8 Wallet 取消邀请与注册码，任何人可直接打开应用。变更仅影响入门流程——未改变托管模式、支持资产或网络费规则。', url: 'https://cantonnews.org/c8-wallet-and-cauri-wallet-open-signups-without-invite-codes' },
         { date: '2026-11-25', tag: '生态', title: 'Canton 周报：Splice 升级达门槛，四家现货场所周成交 1.244 亿美元', body: 'CantonNews（2026-11-25）：11 月 24 日运营通告称超三分之二 Super Validator 节点（含 GSF）已升级至 Splice 0.10.1，其余 MainNet 验证者运营方可跟进，未给出全部节点完成日期。Canton Venues 统计 11 月 16–22 日现货周成交 1.244 亿美元（环比降 9.6%）：Temple 91.0%、Cantex 7.7%、Rocky 1.1%、Tradecraft 0.2%；Kora 于统计周后纳入追踪。Canborsa 新增 SOXL、KORU 市场，最高 10 倍杠杆。Zenith 报告单次 IBCX 测试往返以太坊 Sepolia 去程 88 秒、回程 71 秒。另汇总 Supanova Quick Buy、Wallet Gateway 1.15、CantonGrid 0.4.0 及 Development Fund 三项申请（Inveena Friel、Upflam、dpm-disclose）。', url: 'https://cantonnews.org/canton-roundup-splice-upgrade-clears-a-threshold-and-four-spot-venues-trade-124-4-million' },
         { date: '2026-11-24', tag: '市场', title: 'Canton 周报：cBNB 流动性审查、外汇新市场与 Loop 代币列表', body: 'CantonNews（2026-11-24）：Featured App Accountability Committee 认可 Nuxaris cBNB 的 Featured Asset 地位并定于 12 月 7 日审查三家场所流动性——未达标或启动撤销流程，与早前 2500 万 CC 锁仓为不同问题。Canborsa 上线 EUR、USDJPY 永续；Kora 开放成交量、净流入、深度与价差面板；OneSwap 称 OnePump 首周桥接流动性足以购入 500 万 CC。Loop 向发行方开放共享代币列表公开展示申请并更新兑换报价说明；Console Wallet v1.15.1 支持手动或自动 CC 流量充值；C8 Wallet 增加交易推送。Circle 再获一笔 MainNet 验证者配额且无运营日期；委员会通告亦建议暂停 SatsTerminal、Obligate、Interstice 相关方地位。CantonGrid v0.3.0/v0.4 alpha 与 Gloam 80 万 CC 交易所入金提案收录至 11 月 22 日。', url: 'https://cantonnews.org/canton-roundup-cbnb-liquidity-review-new-fx-markets-and-loop-s-token-list' },
