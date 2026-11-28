@@ -327,6 +327,34 @@ export const translations = {
       titlePageSuffix: ' — page {page} of {total}',
       items: [
         {
+          date: '2026-11-27',
+          tag: 'Institutions',
+          title: 'ABN AMRO Clearing, Deloitte and IBM join ten Canton validator applicants',
+          body: 'CantonNews (November 27, 2026): ABN AMRO Clearing Bank N.V., Deloitte Consulting Services LLP and IBM Digital Assets are among ten validator-operator applicants in Canton’s latest notice—participants have until December 2 to raise concerns or request discussion, after which implicit approval applies if none are raised. ABN AMRO Clearing cites clearing across 150+ venues and wants to connect institutional clients to Canton market infrastructure via experience running private ledger nodes. Deloitte seeks a dedicated TestNet validator for a client securities-issuance prototype in the Fireblocks sandbox with enterprise-integration learnings. IBM Digital Assets describes TestNet integration testing, product development and client PoCs toward connecting Canton to IBM Digital Asset Haven. The batch also includes 3ERA, Corrente Labs, Glafka Capital (DIFC), Greenfield Capital Labs, Lavora Network, Pro Delegators and VALIDARIOS; approval is onboarding path only—MainNet deployment still requires a separate Foundation allocation.',
+          url: 'https://cantonnews.org/abn-amro-clearing-deloitte-and-ibm-join-ten-canton-validator-applicants',
+        },
+        {
+          date: '2026-11-27',
+          tag: 'Ecosystem',
+          title: 'Supanova adds community takeovers and holder airdrops on its launchpad',
+          body: 'CantonNews (November 27, 2026): Supanova opened two reward-routing paths beyond the original memecoin creator. A community takeover lets an adopting group claim the creator share—described as 70% of a token’s trading fees in the November 25 announcement (e.g. 7 CC of a 10 CC fee). Holder airdrops went live November 26, with QUADRILLIONS named as the first example; payouts depend on creator choice and carry no fixed schedule or per-holder amount. Takeovers reassign who claims future fee income; airdrops optionally pass creator income to holders and can apply without a control change—Supanova did not state QUADRILLIONS was taken over. Fee shares arise only when trading generates fees; memecoin liquidity and volatility disclaimers apply.',
+          url: 'https://cantonnews.org/supanova-adds-community-takeovers-and-airdrops-for-token-holders',
+        },
+        {
+          date: '2026-11-27',
+          tag: 'Institutions',
+          title: 'CapConnect+ MainNet vote would raise host minting weight from 61 to 66',
+          body: 'CantonNews (November 27, 2026): Super Validators are voting on a MainNet configuration change that would increase MPC-Holding-Inc’s hosted minting weight from 61 to 66 units for CapConnect+—separate DevNet and TestNet votes are listed in the same notice. The proposal implements weight room approved under CIP-0131 (up to five units tied to CapConnect+ deliverables) but does not by itself prove all five units are earned or coins minted; 61/66 reflect the host’s total weight including non–CapConnect+ allocations. Milestones link production DvP settlement within six months, two US commercial-paper market participants live within nine months, and cumulative Canton-settled issuance at $1B (nine months), $5B (twelve months) and $10B (eighteen months), with 120 and 200 settlement-event floors on the upper tiers. Votes are scheduled to close December 1 at 11:21 UTC with a December 2 effective time if passed.',
+          url: 'https://cantonnews.org/capconnect-weight-goes-to-a-mainnet-vote-under-canton-s-approved-validator-plan',
+        },
+        {
+          date: '2026-11-27',
+          tag: 'Technology',
+          title: 'VertexPoint wins 1.25 million CC Development Fund grant for mobile wallet tools',
+          body: 'CantonNews (November 27, 2026): VertexPoint Labs LLC (TrustedPoint) received Development Fund approval for 1.25 million CC to build Canton mobile wallet tooling—the vote closed at 60% in favour (merged November 25). The grant funds a phone signing provider for Canton Wallet Gateway approvals and native Swift (iOS) and Kotlin (Android) kits so apps can connect without building integrations from scratch; only 250,000 CC (20%) is tied to the two engineering milestones, while up to 750,000 CC rewards MainNet adoption by up to five Featured Apps at 150,000 CC each. Under the phone-signing stream the user’s key stays on-device and existing gateway apps need no changes; Kotlin/Swift kits connect apps without holding user keys. Milestones run in parallel for about six months, with merge-into-wallet-repo and adoption payouts due within 18 months of approval—funding approval is not a consumer rollout date.',
+          url: 'https://cantonnews.org/vertexpoint-wins-1-25-million-cc-grant-for-canton-mobile-wallet-tools',
+        },
+        {
           date: '2026-11-26',
           tag: 'Markets',
           title: 'Kora passes $500 million in total trading volume on Canton',
@@ -5612,6 +5640,10 @@ export const translations = {
       paginationNext: '下一页',
       titlePageSuffix: ' — 第 {page} / {total} 页',
       items: [
+        { date: '2026-11-27', tag: '机构', title: 'ABN AMRO Clearing、Deloitte 与 IBM 等十家申请 Canton 验证者运营资格', body: 'CantonNews（2026-11-27）：ABN AMRO Clearing Bank N.V.、Deloitte Consulting Services LLP 与 IBM Digital Assets 等十家机构进入 Canton 最新验证者运营方申请通告——参与方可在 12 月 2 日前提出异议或申请讨论，未提出则按流程视为默许。ABN AMRO Clearing 称覆盖 150 余家交易场所的清算执行，拟借运营私有账本节点经验将机构客户接入 Canton 市场基础设施。Deloitte 申请专用 TestNet 验证者，在 Fireblocks 沙箱内为客户证券发行原型测试并沉淀企业系统集成经验。IBM Digital Assets 描述 TestNet 集成测试、产品开发与客户概念验证，目标将 Canton 连接至 IBM Digital Asset Haven。同批尚有 3ERA、Corrente Labs、Glafka Capital（DIFC）、Greenfield Capital Labs、Lavora Network、Pro Delegators 与 VALIDARIOS；批准仅为入驻路径，MainNet 部署仍须 Foundation 单独分配配额。', url: 'https://cantonnews.org/abn-amro-clearing-deloitte-and-ibm-join-ten-canton-validator-applicants' },
+        { date: '2026-11-27', tag: '生态', title: 'Supanova 在发射台增加社区接管与持有者空投', body: 'CantonNews（2026-11-27）：Supanova 在原始 memecoin 创作者分成之外开放两条奖励路径。社区接管允许接管方认领创作者分成——11 月 25 日通告称其为代币交易费的 70%（例如 10 CC 手续费中 7 CC）。持有者空投于 11 月 26 日上线，QUADRILLIONS 为首个示例；发放取决于创作者选择，无固定周期或单人金额。接管改变未来手续费归属；空投可将创作者收入分给持有者，且可不伴随控制权变更——Supanova 未称 QUADRILLIONS 已被接管。分成仅在产生交易费时出现；适用 memecoin 流动性与波动风险披露。', url: 'https://cantonnews.org/supanova-adds-community-takeovers-and-airdrops-for-token-holders' },
+        { date: '2026-11-27', tag: '机构', title: 'CapConnect+ MainNet 表决拟将托管节点铸造权重由 61 提至 66', body: 'CantonNews（2026-11-27）：Super Validator 正在表决 MainNet 配置变更，拟将 MPC-Holding-Inc 托管的 CapConnect+ 相关铸造权重由 61 单位升至 66——同通告另列 DevNet 与 TestNet 投票。提案落实 CIP-0131 已批准的权重空间（最高 5 点挂钩 CapConnect+ 交付物），本身不证明五点均已赚取或已铸币；61/66 为托管节点总权重，含非 CapConnect+ 部分。里程碑含六个月内首次生产 DvP 结算、九个月内两家美国商业票据市场参与者投产，以及九/十二/十八个月内 Canton 结算累计发行达 10 亿、50 亿、100 亿美元（上两档另需 120、200 次结算事件）。投票定于 12 月 1 日 11:21 UTC 截止，通过则 12 月 2 日生效。', url: 'https://cantonnews.org/capconnect-weight-goes-to-a-mainnet-vote-under-canton-s-approved-validator-plan' },
+        { date: '2026-11-27', tag: '技术', title: 'VertexPoint 获 125 万 CC 发展基金资助移动钱包工具', body: 'CantonNews（2026-11-27）：VertexPoint Labs LLC（TrustedPoint）获 Development Fund 批准 125 万 CC 建设 Canton 移动钱包工具——表决以 60% 赞成通过（11 月 25 日合并）。资助手机签名提供方（经 Canton Wallet Gateway 批准交易）及原生 Swift（iOS）、Kotlin（Android）工具包，便于应用对接而无需自建集成；仅 25 万 CC（20%）绑定两项工程里程碑，最高 75 万 CC 按每家 Featured App 在 MainNet 采用各 15 万 CC、至多五家计奖。手机签名流中用户密钥保留在设备，既有 gateway 应用无需改动；Kotlin/Swift 套件连接应用但不托管用户密钥。两路工程并行约六个月，并入钱包仓库与采用类付款须在批准后 18 个月内完成——拨款批准非面向消费者的上线日期。', url: 'https://cantonnews.org/vertexpoint-wins-1-25-million-cc-grant-for-canton-mobile-wallet-tools' },
         { date: '2026-11-26', tag: '市场', title: 'Kora 在 Canton 累计交易额突破 5 亿美元', body: 'CantonNews（2026-11-26）：Kora 11 月 24 日公告统计其在 Canton 场所自首批询价（RFQ）换汇至开放现货订单簿以来累计成交逾 5 亿美元——10 月曾报 1.5 亿美元节点。累计含 RFQ 与挂单成交；同日 Canton Venues 将 Kora 纳入追踪，日现货约 800–900 万美元，在已追踪场所中仅次于 Temple。追踪列五类现货资产（CBTC、cETH、eXAU、eXAG、CC）；Kora 于 11 月 16–22 周度对比所用场所集合关闭后才纳入。', url: 'https://cantonnews.org/kora-passes-500-million-in-total-trading-volume-on-canton' },
         { date: '2026-11-26', tag: '技术', title: 'Canton Foundation 就四项独立安全审计征集报价', body: 'CantonNews（2026-11-26）：Foundation 11 月 24 日通告邀请审计机构在 14 个自然日内就 Development Fund 提案 410 的四项范围报价：ISS/BFT Orderer 消息排序、Logical Synchronizer Migration、Crypto API，以及 Ledger 与 JSON 应用 API 合并范围（11 项安全审查中的第 1、2、3、6 里程碑）。机构通过保密范围申请表提交工作量、团队履历、可交付时间、样例报告与利益冲突说明；Technology & Operations Security 子委员会会同核心贡献方（含 Digital Asset）遴选审计方。', url: 'https://cantonnews.org/canton-foundation-seeks-quotes-for-four-independent-security-audits' },
         { date: '2026-11-26', tag: '技术', title: 'Rome 将 Ostia 迁至 Canton TestNet 并上线桥接应用', body: 'CantonNews（2026-11-26）：Rome Protocol 11 月 21 日将 Ostia 从 Canton DevNet 迁至 TestNet，并于 11 月 23 日记录部署并开放专用桥接应用。开发者可在 Ostia 运行经 Canton 验证的以太坊兼容 Solidity（链 ID 770101、单证明者、faucet 发放测试 tROME）；桥接支持经 EVM 钱包向以太坊 Sepolia 的测试转账，Canton 侧由 Rome 测试 party 处理——用户尚无法在桥接页连接个人 Canton 钱包。部署记录标注 Daml 包 0.5.0；10 月 22 日 DevNet 首发后 MainNet 仍列为后续工作。', url: 'https://cantonnews.org/rome-moves-ostia-to-canton-testnet-and-opens-a-bridge-app' },
